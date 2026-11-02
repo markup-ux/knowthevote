@@ -35,8 +35,14 @@
     position: sticky;
     top: 0;
     z-index: 2;
-    background: var(--paper);
-    border-bottom: 1px solid var(--line);
+    background: #0a3161;
+    border-bottom: 5px solid #bf0a30;
+  }
+  header::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #fff;
   }
   .bar {
     display: flex;
@@ -46,16 +52,18 @@
     padding: 14px 0 12px;
   }
   .brand {
+    color: #fff;
     font-family: Georgia, "Palatino Linotype", serif;
     font-size: 22px;
     text-decoration: none;
     letter-spacing: -0.03em;
     white-space: nowrap;
   }
-  .brand span { color: var(--muted); font-family: "Segoe UI", sans-serif; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin-left: 10px; }
+  .brand span { color: #d6e4f5; font-family: "Segoe UI", sans-serif; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin-left: 10px; }
   nav { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; }
-  nav a { text-decoration: none; color: var(--muted); white-space: nowrap; }
-  nav a:hover { color: var(--ink); }
+  nav a { text-decoration: none; color: #f4f7fb; white-space: nowrap; }
+  nav a:hover { color: #fff; text-decoration: underline; text-decoration-color: #bf0a30; text-underline-offset: 3px; }
+  .brand:focus-visible, nav a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
   .hero { padding: 40px 0 28px; scroll-margin-top: 96px; }
   h1 {
     font-family: Georgia, "Palatino Linotype", serif;
@@ -159,19 +167,260 @@
   .fact p { margin: 0; }
   footer {
     margin-top: 28px;
-    padding: 28px 0 48px;
-    border-top: 1px solid var(--ink);
-    color: #3a342c;
+    background: #0a3161;
+    border-top: 5px solid #bf0a30;
+    color: #f4f7fb;
     font-size: 14px;
   }
+  footer::before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #fff;
+  }
+  footer .wrap { padding: 28px 0 48px; }
   footer p { margin: 0 0 10px; }
-  footer a { text-decoration: underline; }
+  footer a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #bf0a30;
+    text-underline-offset: 3px;
+  }
+  footer a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .finder { margin-top: 28px; max-width: 720px; }
+  .finder form { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
+  .finder label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 650;
+    color: var(--muted);
+  }
+  .finder input {
+    font: inherit;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    width: 8.5rem;
+    padding: 10px 12px;
+    border: 1px solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+  }
+  .finder input.num, .finder input.street { letter-spacing: 0; }
+  .finder input.num { width: 8rem; }
+  .finder input.street { width: min(100%, 18rem); }
+  .finder h2 {
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4vw, 44px);
+    letter-spacing: -0.03em;
+    margin: 8px 0 0;
+  }
+  .where { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--ink); }
+  .where-card { margin-top: 18px; }
+  .where-card h3 {
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin: 0;
+  }
+  .where-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .where-actions a {
+    text-decoration: none;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 14px;
+  }
+  .where-actions a.quiet { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .finder button {
+    font: inherit;
+    font-size: 16px;
+    padding: 13px 16px;
+    background: var(--ink);
+    color: var(--paper);
+    border: 1px solid var(--ink);
+    cursor: pointer;
+  }
+  .zip-note { margin: 14px 0 0; color: var(--muted); font-size: 15px; }
+  .ballot-block { margin-top: 28px; }
+  .ballot-block h3 { font-size: 28px; margin: 0; }
+  .ballot-block .share, .ballot-block .seat-note { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+  .seat { margin-top: 16px; }
+  .seat h4 {
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0;
+  }
+  .person {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: baseline;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+  }
+  .person strong {
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .retain {
+    columns: 2;
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .retain li {
+    break-inside: avoid;
+    padding: 7px 18px 7px 0;
+    border-top: 1px solid var(--line);
+  }
+  #zip-result:empty { display: none; }
+  #zip-result { margin-top: 8px; }
+  #zip-result .candidate {
+    grid-template-columns: 112px 1fr;
+    gap: 16px 18px;
+    margin-top: 0;
+    padding: 18px 0;
+  }
+  #zip-result .avatar, #zip-result .mono {
+    width: 112px;
+    height: 140px;
+    font-size: 36px;
+  }
+  #zip-result .candidate h3 { font-size: 26px; }
+  #zip-result .bio { font-size: 16px; }
+  .sample-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+    gap: 32px;
+    align-items: start;
+    margin-top: 8px;
+  }
+  .steps { list-style: none; margin: 0; padding: 0; }
+  .steps li { border-top: 1px solid var(--line); }
+  .steps button {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 12px 8px 12px 2rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .steps button::before {
+    content: counter(step);
+    counter-increment: step;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-family: Georgia, "Palatino Linotype", serif;
+  }
+  .steps { counter-reset: step; }
+  .steps button.is-on { background: var(--chip); }
+  .sheet-switch { display: flex; gap: 18px; margin: 0 0 8px; }
+  .sheet-switch button, .sheet-move button {
+    font: inherit;
+    background: transparent;
+    color: var(--muted);
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: 6px 0;
+    cursor: pointer;
+  }
+  .sheet-switch button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+  .sheet {
+    background: #fff;
+    color: #161616;
+    border: 1px solid var(--ink);
+    max-height: 640px;
+    overflow: auto;
+    padding: 16px 16px 20px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .sheet.green { background: #e5efe4; }
+  .sheet-head { margin: 0 0 8px; text-align: center; }
+  .sheet-head strong {
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+  }
+  .sheet-head span { display: block; font-size: 14px; }
+  .sheet-instruct { margin: 0 0 12px; font-size: 13px; line-height: 1.35; }
+  .sheet .mini-oval {
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    margin: 0 3px;
+    border: 1.5px solid #161616;
+    border-radius: 50%;
+    background: #161616;
+    vertical-align: -1px;
+  }
+  .contest { padding: 8px 6px 10px; border-top: 1px solid #161616; }
+  .contest.is-current { background: rgba(28, 25, 21, 0.06); }
+  .sheet.green .contest.is-current { background: rgba(28, 25, 21, 0.05); }
+  .contest h3 {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .contest .detail, .contest .vote-for { margin: 2px 0 0; font-size: 14px; font-weight: 700; }
+  .choice {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 8px;
+    width: 100%;
+    margin: 7px 0 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .oval {
+    width: 18px;
+    height: 13px;
+    margin-top: 4px;
+    border: 2px solid #161616;
+    border-radius: 50%;
+  }
+  .choice[aria-pressed="true"] .oval { background: #161616; }
+  .who-name, .who-line, .who-party { display: block; }
+  .who-name { font-size: 17px; font-weight: 700; }
+  .who-line, .who-party { font-size: 14px; font-weight: 400; }
+  .write-field { display: block; margin: 2px 0 4px 34px; }
+  .write-field input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #161616;
+    background: transparent;
+    font: inherit;
+    font-size: 16px;
+    color: inherit;
+  }
+  .contest.note { font-size: 14px; }
+  .sheet-move { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+  .sheet-move button { border: 1px solid var(--ink); color: var(--ink); padding: 8px 12px; }
+  #sample-status { flex: 1; margin: 0; color: var(--muted); font-size: 14px; }
   @media (max-width: 800px) {
-    .races, .facts { grid-template-columns: 1fr; }
+    .races, .facts, .sample-layout { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {
     .candidate { grid-template-columns: 1fr; gap: 14px; }
     .avatar, .mono { width: 100%; height: 280px; }
+    .retain { columns: 1; }
   }
 </style>
 </head>
@@ -186,7 +435,9 @@
       <a href="#sos">Secretary of state</a>
       <a href="#comptroller">Comptroller</a>
       <a href="#treasurer">Treasurer</a>
-      <a href="#local">Your ballot</a>
+      <a href="#sample">The ballot</a>
+      <a href="#where">Where to vote</a>
+      <a href="#zip">Your ballot</a>
     </nav>
   </div>
 </header>
@@ -195,8 +446,40 @@
   <div class="wrap hero">
     <p class="kicker">Illinois · General election · Tuesday, November 3, 2026</p>
     <h1>Know who you're voting for.</h1>
-    <p class="deck">Six offices are on every ballot in the state. Leaders lists the printed candidates, what the job does, and what each campaign says it will do.</p>
+    <p class="deck">Six offices are on every ballot in the state. Leaders lists the printed candidates, what the job does, and what each campaign says it will do. Enter a ZIP code for the district races on that ballot.</p>
     <p class="when">Polls are open 6 a.m. to 7 p.m. If you are in line by 7, you can still vote. This is not an endorsement and not a government site.</p>
+    <div class="finder" id="zip">
+      <form id="zip-form">
+        <div>
+          <label for="zip-code">ZIP code</label>
+          <input id="zip-code" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="60614" required>
+        </div>
+        <button type="submit">Show this ballot</button>
+      </form>
+      <p class="zip-note">A ZIP code can cross a district line. This shows every district that covers a real part of that ZIP. Your precinct uses only one. Sheriff, clerk, county board, and local questions come from the county clerk and are not in this list.</p>
+    </div>
+    <div class="finder where" id="where">
+      <p class="kicker">Where to vote</p>
+      <h2>Find your polling place.</h2>
+      <p class="zip-note">Election Day is Tuesday, November 3. Polls are open 6 a.m. to 7 p.m. If you are in line by 7, you can still vote. The State Board of Elections assigns the precinct polling place from the home address, not from a ZIP code alone.</p>
+      <form id="where-form">
+        <div>
+          <label for="where-number">Street number</label>
+          <input id="where-number" class="num" name="number" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-street">Street name</label>
+          <input id="where-street" class="street" name="street" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-zip">ZIP code</label>
+          <input id="where-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="60614" required>
+        </div>
+        <button type="submit">Find this address</button>
+      </form>
+      <div id="where-result" aria-live="polite"></div>
+    </div>
+    <div id="zip-result" aria-live="polite"></div>
     <div class="races">
       <a href="#senate"><strong>U.S. Senate</strong><span>Open seat. Dick Durbin is retiring.</span></a>
       <a href="#governor"><strong>Governor</strong><span>Joint ticket with lieutenant governor. Pritzker is seeking a third term.</span></a>
@@ -206,6 +489,39 @@
       <a href="#treasurer"><strong>Treasurer</strong><span>Invests state money. Frerichs is the incumbent.</span></a>
     </div>
   </div>
+
+  <section class="block" id="sample">
+    <div class="wrap">
+      <p class="kicker">How you vote</p>
+      <h2>What the ballot looks like.</h2>
+      <p class="sub" id="sample-lead">Illinois ballots are paper sheets you mark, or a touchscreen that prints one. Darken the oval to the left of a name. This sample uses the real statewide candidates. It is not a precinct ballot.</p>
+      <div class="sample-layout">
+        <div>
+          <ol class="steps" id="sample-steps">
+            <li><button type="button" data-step="mark">Darken the oval to the left of one choice. The line at the top of the sheet says the same thing.</button></li>
+            <li><button type="button" data-step="ticket">Governor and lieutenant governor share one oval. The two names are a single ticket.</button></li>
+            <li><button type="button" data-step="next">The next office is farther down the sheet. On a touchscreen, Next and Back move one contest at a time.</button></li>
+            <li><button type="button" data-step="green">Judges up for retention are on a separate green ballot. Each question is yes or no. No judge on that sheet is running against another judge.</button></li>
+            <li><button type="button" data-step="cast">Marking two ovals for one office means that office is not counted. If you spoil the sheet, ask an election judge for another. A scanner reads the ovals. A touchscreen prints the sheet after you review it.</button></li>
+          </ol>
+          <p class="zip-note">Your county draws the order of the parties, so the printed order may differ. Sheriff, clerk, county board, and local questions come after these offices. Enter a ZIP above to put your district and judges on this sample.</p>
+        </div>
+        <div>
+          <div class="sheet-switch">
+            <button type="button" id="show-white" aria-pressed="true">Candidate ballot</button>
+            <button type="button" id="show-green" aria-pressed="false">Green retention ballot</button>
+          </div>
+          <div id="sample-candidates" class="sheet"></div>
+          <div id="sample-green" class="sheet green" hidden></div>
+          <div class="sheet-move">
+            <button type="button" id="contest-back">Back</button>
+            <p id="sample-status"></p>
+            <button type="button" id="contest-next">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="block" id="read">
     <div class="wrap">
@@ -490,39 +806,6 @@
     </div>
   </section>
 
-  <section class="block" id="local">
-    <div class="wrap">
-      <p class="kicker">Your address decides the rest</p>
-      <h2>What else is on the ballot.</h2>
-      <p class="sub">Congress, the General Assembly, county offices, and judges change with your address. Look up the specimen ballot for your precinct. The State Board of Elections polling-place search is at <a href="https://www.elections.il.gov/VotingAndRegistrationSystems/PollingPlaceSearch.aspx">elections.il.gov</a>.</p>
-      <div class="facts">
-        <div class="fact">
-          <h3>U.S. House</h3>
-          <p>All 17 Illinois districts. You vote in one. Five sitting members did not run again, so several seats have no incumbent.</p>
-        </div>
-        <div class="fact">
-          <h3>State House</h3>
-          <p>All 118 districts, two-year terms. Many Chicago-area seats have only one name on the ballot.</p>
-        </div>
-        <div class="fact">
-          <h3>State Senate</h3>
-          <p>39 of 59 districts this year. Terms are staggered. If your district is not up, it will not be on your ballot.</p>
-        </div>
-        <div class="fact">
-          <h3>County and schools</h3>
-          <p>Clerk, treasurer, sheriff, county board, and regional superintendent of schools appear in many counties. Some of those are uncontested.</p>
-        </div>
-        <div class="fact">
-          <h3>Judges</h3>
-          <p>A few contested appellate and circuit seats, plus retention questions. Retention is not a race against another person. A judge needs three-fifths of the vote on that question to stay.</p>
-        </div>
-        <div class="fact">
-          <h3>Local questions</h3>
-          <p>Some counties and cities have sales-tax or other propositions. Read the full question on the specimen ballot. A yes vote adopts that tax or proposal.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -532,5 +815,683 @@
     <p>Photos: Chicago Sun-Times 2026 voter guide, except Michael Frerichs (Wikimedia Commons, 2026) and Max Solomon (campaign site, maxsolomon.info). No separate photo is included for Christian Mitchell, Aaron Del Mar, or Carolyn Schofield. Compiled November 2, 2026.</p>
   </div>
 </footer>
+<script>
+(function () {
+  var form = document.getElementById("zip-form");
+  var input = document.getElementById("zip-code");
+  var out = document.getElementById("zip-result");
+  var whereForm = document.getElementById("where-form");
+  var whereNumber = document.getElementById("where-number");
+  var whereStreet = document.getElementById("where-street");
+  var whereZip = document.getElementById("where-zip");
+  var whereOut = document.getElementById("where-result");
+  var POLL_URL = "https://ova.elections.il.gov/PollingPlaceLookup.aspx";
+  var EARLY_URL = "https://www.elections.il.gov/VotingAndRegistrationSystems/EarlyVotingLocationsSearch.aspx";
+  var REG_URL = "https://ova.elections.il.gov/RegistrationLookup.aspx";
+  var AUTH_URL = "https://www.elections.il.gov/ElectionOperations/ElectionAuthorities.aspx";
+  var data = null;
+  var profiles = {};
+  var SUBCIRCUIT = { cook: 1, 3: 1, 7: 1, 12: 1, 16: 1, 17: 1, 18: 1, 19: 1, 22: 1 };
+
+  function el(tag, cls, text) {
+    var node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
+  function ordinal(n) {
+    n = Number(n);
+    var teen = n % 100;
+    var suf = teen >= 11 && teen <= 13 ? "th" : ({ 1: "st", 2: "nd", 3: "rd" }[n % 10] || "th");
+    return n + suf;
+  }
+
+  function pillClass(party) {
+    if (party === "Republican") return "r";
+    if (party === "Democratic") return "d";
+    if (party === "Independent") return "i";
+    return "o";
+  }
+
+  function displayName(person) {
+    if (person.m && person.m.length) return person.n + " and " + person.m.join(" and ");
+    return person.n;
+  }
+
+  function profileKey(name) {
+    return String(name || "")
+      .replace(/J\.B\./g, "JB")
+      .replace(/Jr\./g, "Jr")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function externalLink(href, label) {
+    var link = el("a", "", label);
+    link.href = href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    return link;
+  }
+
+  function hasProfile(profile) {
+    return !!(profile.bio || profile.stance || profile.photo || profile.site || profile.official || profile.donate || (profile.points && profile.points.length));
+  }
+
+  function addPerson(parent, person) {
+    var profile = profiles[profileKey(person.n)] || {};
+    if (!hasProfile(profile)) {
+      var row = el("div", "person");
+      row.appendChild(el("strong", "", displayName(person)));
+      if (person.p) row.appendChild(el("span", "pill " + pillClass(person.p), person.p));
+      row.appendChild(el("span", "seat-note", "No campaign page was found."));
+      parent.appendChild(row);
+      return;
+    }
+    var card = el("article", "candidate");
+    if (profile.photo) {
+      var img = el("img", "avatar");
+      img.src = profile.photo;
+      img.alt = "Photo of " + person.n;
+      card.appendChild(img);
+    } else {
+      var letter = (person.n || "?").trim().charAt(0).toUpperCase();
+      card.appendChild(el("div", "mono", letter));
+    }
+    var body = el("div");
+    var who = el("div", "who");
+    who.appendChild(el("h3", "", displayName(person)));
+    if (person.p) who.appendChild(el("span", "pill " + pillClass(person.p), person.p));
+    body.appendChild(who);
+    if (profile.role) body.appendChild(el("p", "role", profile.role));
+    if (profile.bio) body.appendChild(el("p", "bio", profile.bio));
+    if (profile.stance) {
+      var stanceLead = profile.stanceFrom === "official" ? "From the official page: " : "From the campaign site: ";
+      body.appendChild(el("p", "bio", stanceLead + profile.stance));
+    }
+    if (profile.points && profile.points.length) {
+      if (profile.source !== "Guide") body.appendChild(el("p", "role", "Listed on the campaign site"));
+      var list = el("ul");
+      profile.points.forEach(function (point) { list.appendChild(el("li", "", point)); });
+      body.appendChild(list);
+    } else if (!profile.bio && !profile.stance) {
+      body.appendChild(el("p", "role", "No campaign description is on file for this name."));
+    } else if (profile.source !== "Guide" && !profile.stance) {
+      body.appendChild(el("p", "role", "No 2026 issue list was found on a campaign site."));
+    }
+    if (profile.site || profile.official || profile.donate) {
+      var links = el("p", "links");
+      var parts = [];
+      if (profile.site) parts.push(externalLink(profile.site, profile.siteLabel || "Campaign site"));
+      if (profile.official) parts.push(externalLink(profile.official, profile.officialLabel || "Official site"));
+      if (profile.donate) parts.push(externalLink(profile.donate, "Donate"));
+      parts.forEach(function (part, index) {
+        if (index) links.appendChild(document.createTextNode(" · "));
+        links.appendChild(part);
+      });
+      body.appendChild(links);
+    }
+    card.appendChild(body);
+    parent.appendChild(card);
+  }
+
+  function visibleParts(list) {
+    var ranked = (list || []).filter(function (pair) { return pair[1] >= 10; });
+    if (!ranked.length) return [];
+    var main = ranked.filter(function (pair) { return pair[1] >= 50; });
+    if (!main.length) main = [ranked[0]];
+    var small = ranked.filter(function (pair) {
+      return main.every(function (item) { return item[0] !== pair[0]; });
+    });
+    return main.concat(small);
+  }
+
+  function shareText(share) {
+    if (share >= 980) return "";
+    return "About " + Math.round(share / 10) + "% of the land in this ZIP.";
+  }
+
+  function addOffice(parent, title, people, share, note) {
+    var block = el("div", "ballot-block");
+    block.appendChild(el("h3", "", title));
+    var shareLine = shareText(share);
+    if (shareLine) block.appendChild(el("p", "share", shareLine));
+    if (note) block.appendChild(el("p", "seat-note", note));
+    if (!people || !people.length) {
+      block.appendChild(el("p", "seat-note", "No active candidate is on the state list for this district."));
+    } else {
+      people.slice().sort(function (a, b) {
+        var rank = { Republican: 0, Democratic: 1 };
+        var ar = Object.prototype.hasOwnProperty.call(rank, a.p) ? rank[a.p] : 2;
+        var br = Object.prototype.hasOwnProperty.call(rank, b.p) ? rank[b.p] : 2;
+        if (ar !== br) return ar - br;
+        if (a.p !== b.p) return a.p < b.p ? -1 : 1;
+        return a.n < b.n ? -1 : a.n > b.n ? 1 : 0;
+      }).forEach(function (person) { addPerson(block, person); });
+    }
+    parent.appendChild(block);
+  }
+
+  function crossed(zipRow) {
+    return ["cd", "sen", "hs"].some(function (key) {
+      return visibleParts(zipRow[key]).length > 1;
+    });
+  }
+
+  function addChamber(parent, zipRow, key, titleFor, rows, emptyNote) {
+    visibleParts(zipRow[key]).forEach(function (pair) {
+      var id = String(pair[0]);
+      var people = rows[id];
+      if (!people && emptyNote) {
+        var block = el("div", "ballot-block");
+        block.appendChild(el("h3", "", titleFor(pair[0])));
+        var shareLine = shareText(pair[1]);
+        if (shareLine) block.appendChild(el("p", "share", shareLine));
+        block.appendChild(el("p", "seat-note", emptyNote(pair[0])));
+        parent.appendChild(block);
+        return;
+      }
+      addOffice(parent, titleFor(pair[0]), people || [], pair[1]);
+    });
+  }
+
+  function addSchools(parent, counties) {
+    var seen = {};
+    counties.forEach(function (county) {
+      (data.schools[county] || []).forEach(function (person) {
+        if (!seen[person.title]) seen[person.title] = [];
+        if (!seen[person.title].some(function (item) { return item.n === person.n && item.p === person.p; })) {
+          seen[person.title].push(person);
+        }
+      });
+    });
+    Object.keys(seen).forEach(function (title) {
+      addOffice(parent, title, seen[title], 1000);
+    });
+  }
+
+  function addCourt(parent, bundle, retainHeading) {
+    if (!bundle) return;
+    (bundle.race || []).forEach(function (seat) {
+      var block = el("div", "ballot-block");
+      block.appendChild(el("h3", "", seat.title));
+      seat.people.forEach(function (person) { addPerson(block, person); });
+      parent.appendChild(block);
+    });
+    var names = [];
+    (bundle.retain || []).forEach(function (seat) {
+      seat.people.forEach(function (person) { names.push(person.n); });
+    });
+    if (!names.length) return;
+    var block = el("div", "ballot-block");
+    block.appendChild(el("h3", "", retainHeading));
+    block.appendChild(el("p", "seat-note", "Each name is a separate yes or no question. A judge needs three-fifths of the vote on that question to stay."));
+    var list = el("ul", "retain");
+    names.forEach(function (name) { list.appendChild(el("li", "", name)); });
+    block.appendChild(list);
+    parent.appendChild(block);
+  }
+
+  function render(zip) {
+    var row = data.zips[zip];
+    out.replaceChildren();
+    if (!row) {
+      out.appendChild(el("p", "zip-error", "That ZIP is not in this Illinois lookup. PO Box ZIPs often are not. Use a street address in the State Board of Elections polling-place search."));
+      var link = el("p", "zip-note");
+      var a = el("a", "", "elections.il.gov polling-place search");
+      a.href = "https://www.elections.il.gov/VotingAndRegistrationSystems/PollingPlaceSearch.aspx";
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      link.appendChild(a);
+      out.appendChild(link);
+      return;
+    }
+
+    var intro = el("div", "ballot-block");
+    intro.appendChild(el("p", "kicker", "ZIP " + zip));
+    intro.appendChild(el("h3", "", row.co && row.co.length ? row.co.map(function (county) { return county + " County"; }).join(" and ") : "Districts in this ZIP"));
+    if (crossed(row)) {
+      intro.appendChild(el("p", "seat-note", "This ZIP covers more than one district. The list includes each one that takes at least 1% of the land. Your precinct ballot uses only one."));
+    }
+    if (!row.cd.length) {
+      intro.appendChild(el("p", "seat-note", "This ZIP is not on the Census district map, so Congress and the General Assembly are not shown. Judges follow the county when that is known."));
+    }
+    out.appendChild(intro);
+
+    var state = el("div", "ballot-block");
+    state.appendChild(el("h3", "", "On every Illinois ballot"));
+    data.statewide.forEach(function (office) {
+      var seat = el("div", "seat");
+      var heading = el("h4", "");
+      var jump = el("a", "", office.title);
+      jump.href = office.href;
+      heading.appendChild(jump);
+      seat.appendChild(heading);
+      office.people.forEach(function (person) { addPerson(seat, person); });
+      state.appendChild(seat);
+    });
+    out.appendChild(state);
+
+    addChamber(out, row, "cd", function (n) { return "U.S. House, " + ordinal(n) + " District"; }, data.congress);
+    addChamber(out, row, "sen", function (n) { return "State Senate, " + ordinal(n) + " District"; }, data.senate, function () {
+      return "This seat is not on the ballot this year. Senate terms are staggered.";
+    });
+    addChamber(out, row, "hs", function (n) { return "State House, " + ordinal(n) + " District"; }, data.house);
+
+    if (row.co && row.co.length) {
+      if (row.co.length > 1) {
+        var countyNote = el("p", "seat-note");
+        countyNote.textContent = "This ZIP is listed in more than one county. Judge and school races are shown for each.";
+        out.appendChild(countyNote);
+      }
+      addSchools(out, row.co);
+      var circuits = [];
+      var appellates = [];
+      row.co.forEach(function (county) {
+        var circuit = data.countyCircuit[county];
+        var appellate = String(data.countyAppellate[county]);
+        if (circuits.indexOf(circuit) === -1) circuits.push(circuit);
+        if (appellates.indexOf(appellate) === -1) appellates.push(appellate);
+      });
+      appellates.forEach(function (id) {
+        addCourt(out, data.appellate[id], ordinal(id) + " Appellate Court retention");
+      });
+      circuits.forEach(function (id) {
+        var heading = id === "cook" ? "Cook County Circuit Court retention" : ordinal(id) + " Circuit Court retention";
+        addCourt(out, data.circuit[String(id)], heading);
+        if (SUBCIRCUIT[id]) {
+          out.appendChild(el("p", "seat-note", "Some ballots in this circuit also include a subcircuit judge. A ZIP code cannot tell which one. Check your specimen ballot for that seat."));
+        }
+      });
+    }
+
+    var source = el("p", "zip-note");
+    source.appendChild(document.createTextNode("Active names from the Illinois State Board of Elections list as of " + data.asOf + " Removed and withdrawn candidates are left off. Photos, short descriptions, and links are taken from the candidate’s own site or Ballotpedia when a page could be checked. A missing photo, issue list, or donate link was not filled in. Districts are matched from 2020 Census maps, which are the maps still used in 2026. "));
+    var sourceLink = el("a", "", "Candidate list");
+    sourceLink.href = data.source;
+    sourceLink.target = "_blank";
+    sourceLink.rel = "noopener noreferrer";
+    source.appendChild(sourceLink);
+    source.appendChild(document.createTextNode(". "));
+    var poll = el("a", "", "Polling-place search");
+    poll.href = "https://www.elections.il.gov/VotingAndRegistrationSystems/PollingPlaceSearch.aspx";
+    poll.target = "_blank";
+    poll.rel = "noopener noreferrer";
+    source.appendChild(poll);
+    source.appendChild(document.createTextNode("."));
+    out.appendChild(source);
+    showSample(row, zip);
+  }
+
+  var sampleIndex = 0;
+  var sampleSheet = "white";
+  var WRITE_IN = { "Governor and lieutenant governor": 1, "Comptroller": 1, "Treasurer": 1 };
+
+  function byParty(people) {
+    return (people || []).slice().sort(function (a, b) {
+      var rank = { Republican: 0, Democratic: 1 };
+      var ar = Object.prototype.hasOwnProperty.call(rank, a.p) ? rank[a.p] : 2;
+      var br = Object.prototype.hasOwnProperty.call(rank, b.p) ? rank[b.p] : 2;
+      if (ar !== br) return ar - br;
+      if ((a.p || "") !== (b.p || "")) return a.p < b.p ? -1 : 1;
+      return a.n < b.n ? -1 : a.n > b.n ? 1 : 0;
+    });
+  }
+
+  function contest(office, detail, vote, people, writeIn) {
+    return { kind: "race", office: office, detail: detail || "", vote: vote, people: byParty(people), writeIn: !!writeIn };
+  }
+
+  function yesNo(question) {
+    return { kind: "yesno", office: question, detail: "", vote: "(Vote yes or no)", people: [{ n: "YES" }, { n: "NO" }] };
+  }
+
+  function mainPart(list) {
+    var parts = visibleParts(list);
+    var big = parts.filter(function (pair) { return pair[1] >= 50; });
+    return (big[0] || parts[0] || null);
+  }
+
+  function statewideContests() {
+    var titles = {
+      "U.S. Senate": ["FOR UNITED STATES SENATOR", ""],
+      "Governor and lieutenant governor": ["FOR GOVERNOR AND LIEUTENANT GOVERNOR", ""],
+      "Attorney general": ["FOR ATTORNEY GENERAL", ""],
+      "Secretary of state": ["FOR SECRETARY OF STATE", ""],
+      "Comptroller": ["FOR COMPTROLLER", ""],
+      "Treasurer": ["FOR TREASURER", ""]
+    };
+    if (data && data.statewide) {
+      return data.statewide.map(function (office) {
+        var pair = titles[office.title] || [office.title.toUpperCase(), ""];
+        return contest(pair[0], pair[1], "(Vote for one)", office.people, !!WRITE_IN[office.title]);
+      });
+    }
+    return [
+      contest("FOR UNITED STATES SENATOR", "", "(Vote for one)", [
+        { n: "Don Tracy", p: "Republican" },
+        { n: "Juliana Stratton", p: "Democratic" },
+        { n: "Whitfield Harrington Jr", p: "American Center Party" }
+      ]),
+      contest("FOR GOVERNOR AND LIEUTENANT GOVERNOR", "", "(Vote for one)", [
+        { n: "Darren Bailey", p: "Republican", m: ["Aaron B. Del Mar"] },
+        { n: "JB Pritzker", p: "Democratic", m: ["Christian Mitchell"] },
+        { n: "Collin Corbett", p: "Independent", m: ["Carolyn Schofield"] }
+      ], true),
+      contest("FOR ATTORNEY GENERAL", "", "(Vote for one)", [
+        { n: "Robert W. Fioretti", p: "Republican" },
+        { n: "Kwame Raoul", p: "Democratic" }
+      ]),
+      contest("FOR SECRETARY OF STATE", "", "(Vote for one)", [
+        { n: "Diane M. Harris", p: "Republican" },
+        { n: "Alexi Giannoulias", p: "Democratic" }
+      ]),
+      contest("FOR COMPTROLLER", "", "(Vote for one)", [
+        { n: "Bryan Drew", p: "Republican" },
+        { n: "Margaret Croke", p: "Democratic" }
+      ], true),
+      contest("FOR TREASURER", "", "(Vote for one)", [
+        { n: "Max Solomon", p: "Republican" },
+        { n: "Michael W. Frerichs", p: "Democratic" }
+      ], true)
+    ];
+  }
+
+  function sampleModel(row, zip) {
+    var contests = statewideContests();
+    var retentions = [];
+    var lead = "Illinois ballots are paper sheets you mark, or a touchscreen that prints one. Darken the oval to the left of a name. This sample uses the real statewide candidates. It is not a precinct ballot.";
+    if (!row) {
+      retentions.push(yesNo("SHALL the judge named on your green ballot be retained in office as JUDGE OF THE CIRCUIT COURT?"));
+      return { lead: lead, contests: contests, retentions: retentions, retentionNote: "This question shows the pattern. Enter a ZIP to fill in the judges for that county." };
+    }
+    lead = "Sample for ZIP " + zip + ". Where the ZIP crosses a line, this sheet uses the district that covers the most land. Your precinct uses only one.";
+    function addDistrict(list, rows, office, detail) {
+      var part = mainPart(list);
+      if (!part || !rows[String(part[0])] || !rows[String(part[0])].length) return;
+      contests.push(contest(office, detail(part[0]), "(Vote for one)", rows[String(part[0])], false));
+    }
+    addDistrict(row.cd, data.congress, "FOR REPRESENTATIVE IN CONGRESS", function (n) { return ordinal(n).toUpperCase() + " CONGRESSIONAL DISTRICT"; });
+    addDistrict(row.sen, data.senate, "FOR STATE SENATOR", function (n) { return ordinal(n).toUpperCase() + " LEGISLATIVE DISTRICT"; });
+    addDistrict(row.hs, data.house, "FOR REPRESENTATIVE IN THE GENERAL ASSEMBLY", function (n) { return ordinal(n).toUpperCase() + " REPRESENTATIVE DISTRICT"; });
+    if (row.co && row.co.length) {
+      var school = (data.schools[row.co[0]] || [])[0];
+      if (school) {
+        var group = data.schools[row.co[0]].filter(function (person) { return person.title === school.title; });
+        contests.push(contest("FOR REGIONAL SUPERINTENDENT OF SCHOOLS", school.title.replace(/^Regional superintendent of schools, /i, "").toUpperCase(), "(Vote for one)", group, false));
+      }
+      var circuit = data.countyCircuit[row.co[0]];
+      var appellate = String(data.countyAppellate[row.co[0]]);
+      var circuitBundle = data.circuit[String(circuit)];
+      var appealBundle = data.appellate[appellate];
+      var races = (circuitBundle && circuitBundle.race) || [];
+      races.slice(0, 2).forEach(function (seat) {
+        contests.push(contest("FOR JUDGE OF THE CIRCUIT COURT", seat.title.toUpperCase(), "(Vote for one)", seat.people, false));
+      });
+      var moreRaces = Math.max(0, races.length - 2);
+      function retainQuestion(name, court) {
+        return "SHALL " + name + " be retained in office as " + court + "?";
+      }
+      var courtName = circuit === "cook"
+        ? "JUDGE OF THE CIRCUIT COURT OF COOK COUNTY"
+        : "JUDGE OF THE CIRCUIT COURT " + ordinal(circuit).toUpperCase() + " JUDICIAL CIRCUIT";
+      var appealName = "JUDGE OF THE APPELLATE COURT " + ordinal(appellate).toUpperCase() + " JUDICIAL DISTRICT";
+      var all = [];
+      if (appealBundle) appealBundle.retain.forEach(function (seat) { seat.people.forEach(function (person) { all.push(retainQuestion(person.n, appealName)); }); });
+      if (circuitBundle) circuitBundle.retain.forEach(function (seat) { seat.people.forEach(function (person) { all.push(retainQuestion(person.n, courtName)); }); });
+      if (!all.length) retentions.push(yesNo("SHALL the judge named on your green ballot be retained in office as JUDGE OF THE CIRCUIT COURT?"));
+      all.slice(0, 3).forEach(function (question) { retentions.push(yesNo(question)); });
+      var extra = all.length - retentions.length;
+      var whiteNote = "County offices and public questions follow on the same sheet.";
+      if (moreRaces) whiteNote += " " + moreRaces + " more judge contests are on the full ballot.";
+      return { lead: lead, contests: contests, retentions: retentions, whiteNote: whiteNote, retentionNote: extra > 0 ? "The green ballot continues with " + extra + " more judges." : "" };
+    }
+    retentions.push(yesNo("SHALL the judge named on your green ballot be retained in office as JUDGE OF THE CIRCUIT COURT?"));
+    return { lead: lead, contests: contests, retentions: retentions, retentionNote: "Judge names follow the county. This ZIP did not match one." };
+  }
+
+  function choiceButton(id, value, lines, party) {
+    var btn = el("button", "choice");
+    btn.type = "button";
+    btn.dataset.contest = id;
+    btn.dataset.value = value;
+    btn.setAttribute("aria-pressed", "false");
+    var mark = el("span", "oval");
+    mark.setAttribute("aria-hidden", "true");
+    btn.appendChild(mark);
+    var text = el("span", "");
+    lines.forEach(function (line, index) {
+      text.appendChild(el("span", index === 0 ? "who-name" : "who-line", line));
+    });
+    if (party) text.appendChild(el("span", "who-party", party));
+    btn.appendChild(text);
+    return btn;
+  }
+
+  function fillSheet(root, items, head, instruction, tail) {
+    root.replaceChildren();
+    var banner = el("div", "sheet-head");
+    banner.appendChild(el("strong", "", head));
+    banner.appendChild(el("span", "", "November 3, 2026 · Sample, not a precinct ballot"));
+    root.appendChild(banner);
+    var intro = el("p", "sheet-instruct");
+    intro.appendChild(document.createTextNode("To vote, darken the oval to the left of your choice, like this "));
+    intro.appendChild(el("span", "mini-oval"));
+    intro.appendChild(document.createTextNode(". " + instruction));
+    root.appendChild(intro);
+    items.forEach(function (item, index) {
+      var block = el("div", "contest");
+      block.appendChild(el("h3", "", item.office));
+      if (item.detail) block.appendChild(el("p", "detail", item.detail));
+      if (item.vote) block.appendChild(el("p", "vote-for", item.vote));
+      (item.people || []).forEach(function (person) {
+        var lines = [person.n];
+        (person.m || []).forEach(function (mate) { lines.push("and " + mate); });
+        block.appendChild(choiceButton("c" + index, person.n, lines, person.p || ""));
+      });
+      if (item.writeIn) {
+        block.appendChild(choiceButton("c" + index, "write-in", ["Write-in"], ""));
+        var field = el("label", "write-field");
+        var input = document.createElement("input");
+        input.type = "text";
+        input.setAttribute("aria-label", "Write-in name");
+        input.placeholder = "Write a name";
+        field.appendChild(input);
+        block.appendChild(field);
+      }
+      root.appendChild(block);
+    });
+    if (tail) root.appendChild(el("p", "contest note", tail));
+  }
+
+  function showSample(row, zip) {
+    var model = sampleModel(row, zip);
+    document.getElementById("sample-lead").textContent = model.lead;
+    fillSheet(
+      document.getElementById("sample-candidates"),
+      model.contests,
+      "OFFICIAL BALLOT",
+      "To cast a write-in vote, darken the oval to the left of the blank line and write the name. Governor, comptroller, and treasurer have a write-in line.",
+      model.whiteNote || "County offices and public questions follow on the same sheet. They are not shown here."
+    );
+    var greenItems = model.retentions.slice();
+    fillSheet(
+      document.getElementById("sample-green"),
+      greenItems,
+      "BALLOT FOR JUDICIAL CANDIDATES SEEKING RETENTION IN OFFICE",
+      "Vote on the proposition for any judge listed. No judge listed is running against any other judge. The only question is whether each judge shall be retained. A judge needs three-fifths of the vote on that question to stay.",
+      model.retentionNote
+    );
+    sampleIndex = 0;
+    focusContest(0);
+  }
+
+  function sheetRoot() {
+    return document.getElementById(sampleSheet === "white" ? "sample-candidates" : "sample-green");
+  }
+
+  function focusContest(index) {
+    var nodes = sheetRoot().querySelectorAll(".contest:not(.note)");
+    if (!nodes.length) return;
+    if (index < 0) index = 0;
+    if (index >= nodes.length) index = nodes.length - 1;
+    sampleIndex = index;
+    Array.prototype.forEach.call(nodes, function (node, i) {
+      node.classList.toggle("is-current", i === index);
+    });
+    var title = nodes[index].querySelector("h3");
+    document.getElementById("sample-status").textContent = "Contest " + (index + 1) + " of " + nodes.length + (title ? ": " + title.textContent : "");
+    if (index > 0) nodes[index].scrollIntoView({ block: "nearest" });
+  }
+
+  function setSheet(name) {
+    sampleSheet = name;
+    document.getElementById("sample-candidates").hidden = name !== "white";
+    document.getElementById("sample-green").hidden = name !== "green";
+    document.getElementById("show-white").setAttribute("aria-pressed", name === "white" ? "true" : "false");
+    document.getElementById("show-green").setAttribute("aria-pressed", name === "green" ? "true" : "false");
+    focusContest(0);
+  }
+
+  document.getElementById("sample-candidates").addEventListener("click", onChoice);
+  document.getElementById("sample-green").addEventListener("click", onChoice);
+  function onChoice(event) {
+    var btn = event.target.closest(".choice");
+    if (!btn) return;
+    var turnOff = btn.getAttribute("aria-pressed") === "true";
+    var contestNode = btn.closest(".contest");
+    var buttons = contestNode.querySelectorAll(".choice");
+    Array.prototype.forEach.call(buttons, function (other) { other.setAttribute("aria-pressed", "false"); });
+    if (!turnOff) btn.setAttribute("aria-pressed", "true");
+  }
+  document.getElementById("contest-next").addEventListener("click", function () { focusContest(sampleIndex + 1); });
+  document.getElementById("contest-back").addEventListener("click", function () { focusContest(sampleIndex - 1); });
+  document.getElementById("show-white").addEventListener("click", function () { setSheet("white"); });
+  document.getElementById("show-green").addEventListener("click", function () { setSheet("green"); });
+  document.getElementById("sample-steps").addEventListener("click", function (event) {
+    var btn = event.target.closest("button");
+    if (!btn) return;
+    Array.prototype.forEach.call(document.querySelectorAll("#sample-steps button"), function (other) {
+      other.classList.toggle("is-on", other === btn);
+    });
+    var step = btn.dataset.step;
+    if (step === "green") {
+      setSheet("green");
+      return;
+    }
+    setSheet("white");
+    if (step === "ticket") focusContest(1);
+    else if (step === "next") focusContest(2);
+    else focusContest(0);
+  });
+  showSample(null, null);
+
+  function countyLine(zip) {
+    var row = data && data.zips ? data.zips[zip] : null;
+    if (!row || !row.co || !row.co.length) return "";
+    if (row.co.length === 1) return "This ZIP is in " + row.co[0] + " County.";
+    return "This ZIP is listed in " + row.co.join(" and ") + " counties.";
+  }
+
+  function showWhere(number, street, zip) {
+    whereOut.replaceChildren();
+    var card = el("div", "where-card");
+    card.appendChild(el("p", "kicker", "Polling place"));
+    card.appendChild(el("h3", "", number + " " + street + ", " + zip));
+    var county = countyLine(zip);
+    var lead = "The State Board of Elections lookup is the list that assigns this address. It asks for the ZIP first, then the street number, then the street name from its own list.";
+    if (county) lead = county + " " + lead;
+    card.appendChild(el("p", "zip-note", lead));
+    var steps = el("ol");
+    [
+      "Open the polling-place lookup.",
+      "Enter ZIP " + zip + " and submit.",
+      "Enter street number " + number + ".",
+      "Choose the street that matches " + street + ". The list may abbreviate it."
+    ].forEach(function (step) { steps.appendChild(el("li", "", step)); });
+    card.appendChild(steps);
+    if (county && county.indexOf("Cook") !== -1) {
+      card.appendChild(el("p", "zip-note", "Cook County includes Chicago and the suburbs. They do not share one set of polling places. Chicago also keeps Election Day vote centers open. Use the address lookup for the assigned place."));
+    }
+    var actions = el("div", "where-actions");
+    actions.appendChild(externalLink(POLL_URL, "Polling-place lookup"));
+    actions.appendChild(externalLink(EARLY_URL, "Early voting and vote centers"));
+    var reg = externalLink(REG_URL, "Registration check");
+    reg.classList.add("quiet");
+    actions.appendChild(reg);
+    var auth = externalLink(AUTH_URL, "County election office");
+    auth.classList.add("quiet");
+    actions.appendChild(auth);
+    card.appendChild(actions);
+    card.appendChild(el("p", "zip-note", "The registration check asks for your name and date of birth on the State Board site. This page does not collect them. Early voting and vote centers are a separate list from the precinct polling place."));
+    whereOut.appendChild(card);
+  }
+
+  whereForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var number = (whereNumber.value || "").trim().replace(/\s+/g, " ");
+    var street = (whereStreet.value || "").trim().replace(/\s+/g, " ");
+    var zip = (whereZip.value || "").replace(/\D/g, "").slice(0, 5);
+    whereZip.value = zip;
+    if (!number || !street || zip.length !== 5) {
+      whereOut.replaceChildren(el("p", "zip-error", "Enter a street number, a street name, and a 5-digit ZIP code."));
+      return;
+    }
+    if (!input.value) input.value = zip;
+    var draw = function () { showWhere(number, street, zip); };
+    if (data) {
+      draw();
+      return;
+    }
+    whereOut.replaceChildren(el("p", "zip-note", "Checking the county for this ZIP."));
+    fetch("ballot.json")
+      .then(function (response) {
+        if (!response.ok) throw new Error("missing");
+        return response.json();
+      })
+      .then(function (json) {
+        data = json;
+        draw();
+      })
+      .catch(function () { draw(); });
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var zip = (input.value || "").replace(/\D/g, "").slice(0, 5);
+    input.value = zip;
+    if (zip.length !== 5) {
+      out.replaceChildren(el("p", "zip-error", "Enter a 5-digit ZIP code."));
+      return;
+    }
+    var run = function () { render(zip); };
+    if (data) {
+      run();
+      return;
+    }
+    out.replaceChildren(el("p", "zip-note", "Loading the candidate list."));
+    Promise.all([
+      fetch("ballot.json").then(function (response) {
+        if (!response.ok) throw new Error("missing");
+        return response.json();
+      }),
+      fetch("profiles.json").then(function (response) {
+        return response.ok ? response.json() : {};
+      }).catch(function () { return {}; })
+    ])
+      .then(function (pair) {
+        data = pair[0];
+        profiles = pair[1] || {};
+        run();
+      })
+      .catch(function () {
+        out.replaceChildren(el("p", "zip-error", "The ballot file did not load. Open this page from the site folder, not as a loose file."));
+      });
+  });
+})();
+</script>
 </body>
 </html>
