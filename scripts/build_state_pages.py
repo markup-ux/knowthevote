@@ -484,6 +484,7 @@ def page(data):
     <p class="kicker">%s · General election · Tuesday, November 3, 2026</p>
     <h1>Know who you're voting for.</h1>
     <p class="deck">%s</p>
+    <p class="note deck">Leaders.vote is still collecting candidate information, so some entries currently show only a name.</p>
     <p class="when">%s This page does not call a race.</p>
     %s
     <div class="races">%s</div>
@@ -565,6 +566,7 @@ def index_page(states):
     <p class="deck">Select your state to explore candidates, understand the responsibilities of each elected office, and learn about candidates' priorities when published on their official websites.</p>
     <p class="deck">You can also enter your street address to access your state's official election-office lookup. Your address is never stored on Leaders.vote.</p>
     <p class="deck">Independent. Informational. No endorsements. Leaders.vote is not affiliated with any government agency.</p>
+    <p class="note deck">Leaders.vote is still collecting candidate information, so some entries currently show only a name.</p>
     <div id="us-slot"></div>
     <p class="sub">Each state is colored by the party ahead in that state's top statewide race. The colors are the same ones used for a county on a state map. A blank state has not reported votes. This map does not call a race.</p>
     <div class="result-legend">
