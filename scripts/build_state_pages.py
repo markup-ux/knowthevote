@@ -251,6 +251,7 @@ def footer(state_name, guide):
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
+<script src="live.js"></script>
 <script src="state.js"></script>
 </body>
 </html>
@@ -587,6 +588,7 @@ def index_page(states):
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
+<script src="live.js"></script>
 <script>
 fetch("preview/us.svg").then(function (response) { return response.text(); }).then(function (markup) {
   var start = markup.indexOf("<svg");
@@ -709,10 +711,10 @@ fetch("preview/us.svg").then(function (response) { return response.text(); }).th
     status.appendChild(document.createTextNode("Unofficial totals from the Associated Press, published by NBC News. This map does not call a race."));
   }
   function loadLeads() {
-    fetch("preview/leads.json?t=" + Date.now()).then(function (response) { return response.json(); }).then(paintLeads).catch(function () {});
+    leadersLive("preview/leads.json").then(paintLeads).catch(function () {});
   }
   loadLeads();
-  setInterval(loadLeads, 60000);
+  setInterval(loadLeads, LIVE_EVERY);
 });
 </script>
 </body>

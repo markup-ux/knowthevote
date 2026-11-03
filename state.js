@@ -224,7 +224,7 @@
       });
     }
     return Promise.all([
-      fetch("preview/states/" + code + ".json?t=" + Date.now()).then(function (response) { return response.json(); }),
+      leadersLive("preview/states/" + code + ".json"),
       fetch("photos/found.json").then(function (response) { return response.ok ? response.json() : {}; }).catch(function () { return {}; })
     ]);
   }).then(function (pair) {
@@ -330,9 +330,8 @@
   }
 
   setInterval(function () {
-    fetch("preview/states/" + code + ".json?t=" + Date.now())
-      .then(function (response) { return response.json(); })
+    leadersLive("preview/states/" + code + ".json")
       .then(function (json) { fillPhotos(json); show(json); })
       .catch(function () {});
-  }, 60000);
+  }, LIVE_EVERY);
 })();

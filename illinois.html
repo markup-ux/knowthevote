@@ -1966,6 +1966,7 @@
   });
 })();
 </script>
+<script src="live.js"></script>
 <script>
 (function () {
   var PARTIES = {
@@ -2197,11 +2198,7 @@
   }
 
   function loadFeed() {
-    fetch("results.json?t=" + Date.now())
-      .then(function (response) {
-        if (!response.ok) throw new Error("missing");
-        return response.json();
-      })
+    leadersLive("results.json")
       .then(showFeed)
       .catch(function () {
         if (!feed) statusEl.textContent = "The results file did not load.";
@@ -2223,7 +2220,7 @@
         });
       });
       loadFeed();
-      setInterval(loadFeed, 60000);
+      setInterval(loadFeed, LIVE_EVERY);
     })
     .catch(function () {
       statusEl.textContent = "The Illinois map did not load.";

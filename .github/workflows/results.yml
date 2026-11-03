@@ -8,24 +8,23 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: live-results
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Refresh unofficial totals
+      - name: Follow the NBC update interval
         run: |
-          python scripts/build_results.py
-          python scripts/build_leads.py --fetch
-          python scripts/build_preview.py --results
-      - name: Publish the totals file
-        run: |
-          git diff --quiet -- results.json preview/leads.json preview/states && exit 0
           git config user.name "leaders-results"
           git config user.email "actions@leaders.vote"
-          git add results.json preview/leads.json preview/states
-          git commit -m "Update unofficial election totals."
-          git push
+          python scripts/live_results.py
