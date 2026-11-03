@@ -63,7 +63,84 @@
   nav { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; }
   nav a { text-decoration: none; color: #f4f7fb; white-space: nowrap; }
   nav a:hover { color: #fff; text-decoration: underline; text-decoration-color: #bf0a30; text-underline-offset: 3px; }
-  .brand:focus-visible, nav a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .brand:focus-visible, nav a:focus-visible, .lang-button:focus-visible, .lang-menu button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .bar-top { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; }
+  .lang { position: relative; display: flex; align-items: center; }
+  .lang-button {
+    position: relative;
+    background: transparent;
+    color: #f4f7fb;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 6px 28px 6px 10px;
+    cursor: pointer;
+  }
+  .lang-button::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: translateY(-75%) rotate(45deg);
+  }
+  .lang-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    z-index: 3;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #0a3161;
+    border-bottom: 5px solid #bf0a30;
+  }
+  .lang-menu::before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #fff;
+  }
+  .lang-menu button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 8px 14px;
+    border: 0;
+    background: transparent;
+    color: #f4f7fb;
+    font: inherit;
+    font-size: 15px;
+    line-height: 1.3;
+    text-align: left;
+    cursor: pointer;
+  }
+  .lang-menu button:hover,
+  .lang-menu button[aria-selected="true"] {
+    background: #bf0a30;
+    color: #fff;
+  }
+  .lang-note { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  iframe.skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame, .goog-tooltip, .goog-te-spinner-pos { display: none !important; }
+  body { top: 0 !important; position: static !important; }
+  #google_translate_element { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+  .goog-text-highlight, font { background: transparent !important; box-shadow: none !important; }
   .hero { padding: 40px 0 28px; scroll-margin-top: 96px; }
   h1 {
     font-family: Georgia, "Palatino Linotype", serif;
@@ -427,7 +504,41 @@
 <body id="top">
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top">Leaders</a>
+    <div class="bar-top">
+      <a class="brand notranslate" href="#top" translate="no">Leaders</a>
+      <div class="lang notranslate" translate="no">
+        <span class="visually-hidden">Language</span>
+        <select id="lang" class="visually-hidden" aria-hidden="true" tabindex="-1">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-CN">中文</option>
+          <option value="pl">Polski</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ko">한국어</option>
+          <option value="tl">Tagalog</option>
+          <option value="ar">العربية</option>
+          <option value="ur">اردو</option>
+          <option value="uk">Українська</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="fr">Français</option>
+        </select>
+        <button type="button" class="lang-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">English</button>
+        <ul id="lang-list" class="lang-menu" role="listbox" aria-label="Translate this page" hidden>
+          <li role="none"><button type="button" role="option" data-lang="en" aria-selected="true">English</button></li>
+          <li role="none"><button type="button" role="option" data-lang="es">Español</button></li>
+          <li role="none"><button type="button" role="option" data-lang="zh-CN">中文</button></li>
+          <li role="none"><button type="button" role="option" data-lang="pl">Polski</button></li>
+          <li role="none"><button type="button" role="option" data-lang="hi">हिन्दी</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ko">한국어</button></li>
+          <li role="none"><button type="button" role="option" data-lang="tl">Tagalog</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ar">العربية</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ur">اردو</button></li>
+          <li role="none"><button type="button" role="option" data-lang="uk">Українська</button></li>
+          <li role="none"><button type="button" role="option" data-lang="vi">Tiếng Việt</button></li>
+          <li role="none"><button type="button" role="option" data-lang="fr">Français</button></li>
+        </ul>
+      </div>
+    </div>
     <nav>
       <a href="#senate">Senate</a>
       <a href="#governor">Governor</a>
@@ -444,6 +555,7 @@
 
 <main>
   <div class="wrap hero">
+    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record. A street address you type is not sent for translation.</p>
     <p class="kicker">Illinois · General election · Tuesday, November 3, 2026</p>
     <h1>Know who you're voting for.</h1>
     <p class="deck">Six offices are on every ballot in the state. Leaders lists the printed candidates, what the job does, and what each campaign says it will do. Enter a ZIP code for the district races on that ballot.</p>
@@ -509,14 +621,14 @@
         <div>
           <div class="sheet-switch">
             <button type="button" id="show-white" aria-pressed="true">Candidate ballot</button>
-            <button type="button" id="show-green" aria-pressed="false">Green retention ballot</button>
+            <button type="button" id="show-green" class="notranslate" translate="no" data-phrase="green" aria-pressed="false">Green retention ballot</button>
           </div>
           <div id="sample-candidates" class="sheet"></div>
           <div id="sample-green" class="sheet green" hidden></div>
           <div class="sheet-move">
-            <button type="button" id="contest-back">Back</button>
+            <button type="button" id="contest-back" class="notranslate" translate="no" data-phrase="back">Back</button>
             <p id="sample-status"></p>
-            <button type="button" id="contest-next">Next</button>
+            <button type="button" id="contest-next" class="notranslate" translate="no" data-phrase="next">Next</button>
           </div>
         </div>
       </div>
@@ -537,7 +649,7 @@
           <p>These are the candidates printed on county specimen ballots. Primary losers and candidates removed in July are not listed. On this site the order is Republican, then Democratic, then any other party. Your precinct ballot may list them differently.</p>
         </div>
         <div class="fact">
-          <h3>Write-ins</h3>
+          <h3 class="notranslate" translate="no" data-phrase="writeins">Write-ins</h3>
           <p>Governor, comptroller, and treasurer include a write-in line. A write-in counts only if that person filed. This guide covers the printed names.</p>
         </div>
         <div class="fact">
@@ -870,7 +982,9 @@
   }
 
   function externalLink(href, label) {
-    var link = el("a", "", label);
+    var hostLabel = /\./.test(label || "");
+    var link = el("a", hostLabel ? "notranslate" : "", label);
+    if (hostLabel) link.setAttribute("translate", "no");
     link.href = href;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
@@ -903,7 +1017,9 @@
     }
     var body = el("div");
     var who = el("div", "who");
-    who.appendChild(el("h3", "", displayName(person)));
+    var name = el("h3", "notranslate", displayName(person));
+    name.setAttribute("translate", "no");
+    who.appendChild(name);
     if (person.p) who.appendChild(el("span", "pill " + pillClass(person.p), person.p));
     body.appendChild(who);
     if (profile.role) body.appendChild(el("p", "role", profile.role));
@@ -1030,7 +1146,11 @@
     block.appendChild(el("h3", "", retainHeading));
     block.appendChild(el("p", "seat-note", "Each name is a separate yes or no question. A judge needs three-fifths of the vote on that question to stay."));
     var list = el("ul", "retain");
-    names.forEach(function (name) { list.appendChild(el("li", "", name)); });
+    names.forEach(function (name) {
+      var item = el("li", "notranslate", name);
+      item.setAttribute("translate", "no");
+      list.appendChild(item);
+    });
     block.appendChild(list);
     parent.appendChild(block);
   }
@@ -1047,6 +1167,7 @@
       a.rel = "noopener noreferrer";
       link.appendChild(a);
       out.appendChild(link);
+      if (window.leadersRefreshLang) window.leadersRefreshLang();
       return;
     }
 
@@ -1124,6 +1245,7 @@
     source.appendChild(document.createTextNode("."));
     out.appendChild(source);
     showSample(row, zip);
+    if (window.leadersRefreshLang) window.leadersRefreshLang();
   }
 
   var sampleIndex = 0;
@@ -1264,7 +1386,12 @@
     btn.appendChild(mark);
     var text = el("span", "");
     lines.forEach(function (line, index) {
-      text.appendChild(el("span", index === 0 ? "who-name" : "who-line", line));
+      var writeIn = line === "Write-in";
+      var keep = writeIn || (line !== "YES" && line !== "NO");
+      var span = el("span", (index === 0 ? "who-name" : "who-line") + (keep ? " notranslate" : ""), line);
+      if (keep) span.setAttribute("translate", "no");
+      if (writeIn) span.setAttribute("data-phrase", "writein");
+      text.appendChild(span);
     });
     if (party) text.appendChild(el("span", "who-party", party));
     btn.appendChild(text);
@@ -1297,6 +1424,9 @@
         var field = el("label", "write-field");
         var input = document.createElement("input");
         input.type = "text";
+        input.className = "notranslate";
+        input.setAttribute("translate", "no");
+        input.setAttribute("data-phrase", "writefield");
         input.setAttribute("aria-label", "Write-in name");
         input.placeholder = "Write a name";
         field.appendChild(input);
@@ -1400,18 +1530,31 @@
     whereOut.replaceChildren();
     var card = el("div", "where-card");
     card.appendChild(el("p", "kicker", "Polling place"));
-    card.appendChild(el("h3", "", number + " " + street + ", " + zip));
+    var place = el("h3", "notranslate", number + " " + street + ", " + zip);
+    place.setAttribute("translate", "no");
+    card.appendChild(place);
     var county = countyLine(zip);
     var lead = "The State Board of Elections lookup is the list that assigns this address. It asks for the ZIP first, then the street number, then the street name from its own list.";
     if (county) lead = county + " " + lead;
     card.appendChild(el("p", "zip-note", lead));
     var steps = el("ol");
-    [
-      "Open the polling-place lookup.",
-      "Enter ZIP " + zip + " and submit.",
-      "Enter street number " + number + ".",
-      "Choose the street that matches " + street + ". The list may abbreviate it."
-    ].forEach(function (step) { steps.appendChild(el("li", "", step)); });
+    function stepLine(parts) {
+      var item = el("li", "");
+      parts.forEach(function (part) {
+        if (typeof part === "string") {
+          item.appendChild(document.createTextNode(part));
+          return;
+        }
+        var secret = el("span", "notranslate", part.secret);
+        secret.setAttribute("translate", "no");
+        item.appendChild(secret);
+      });
+      steps.appendChild(item);
+    }
+    stepLine(["Open the polling-place lookup."]);
+    stepLine(["Enter ZIP " + zip + " and submit."]);
+    stepLine(["Enter street number", { secret: " " + number }, "."]);
+    stepLine(["Choose the street that matches", { secret: " " + street + " " }, ". The list may abbreviate it."]);
     card.appendChild(steps);
     if (county && county.indexOf("Cook") !== -1) {
       card.appendChild(el("p", "zip-note", "Cook County includes Chicago and the suburbs. They do not share one set of polling places. Chicago also keeps Election Day vote centers open. Use the address lookup for the assigned place."));
@@ -1428,6 +1571,7 @@
     card.appendChild(actions);
     card.appendChild(el("p", "zip-note", "The registration check asks for your name and date of birth on the State Board site. This page does not collect them. Early voting and vote centers are a separate list from the precinct polling place."));
     whereOut.appendChild(card);
+    if (window.leadersRefreshLang) window.leadersRefreshLang();
   }
 
   whereForm.addEventListener("submit", function (event) {
@@ -1438,6 +1582,7 @@
     whereZip.value = zip;
     if (!number || !street || zip.length !== 5) {
       whereOut.replaceChildren(el("p", "zip-error", "Enter a street number, a street name, and a 5-digit ZIP code."));
+      if (window.leadersRefreshLang) window.leadersRefreshLang();
       return;
     }
     if (!input.value) input.value = zip;
@@ -1465,6 +1610,7 @@
     input.value = zip;
     if (zip.length !== 5) {
       out.replaceChildren(el("p", "zip-error", "Enter a 5-digit ZIP code."));
+      if (window.leadersRefreshLang) window.leadersRefreshLang();
       return;
     }
     var run = function () { render(zip); };
@@ -1489,8 +1635,239 @@
       })
       .catch(function () {
         out.replaceChildren(el("p", "zip-error", "The ballot file did not load. Open this page from the site folder, not as a loose file."));
+        if (window.leadersRefreshLang) window.leadersRefreshLang();
       });
   });
+})();
+</script>
+<div id="google_translate_element" aria-hidden="true"></div>
+<script>
+(function () {
+  var select = document.getElementById("lang");
+  var note = document.getElementById("lang-note");
+  var langButton = document.querySelector(".lang-button");
+  var langMenu = document.getElementById("lang-list");
+
+  function syncLangMenu() {
+    var code = select.value || "en";
+    var current = select.options[select.selectedIndex];
+    if (langButton && current) langButton.textContent = current.text;
+    if (!langMenu) return;
+    Array.prototype.forEach.call(langMenu.querySelectorAll("[data-lang]"), function (item) {
+      item.setAttribute("aria-selected", item.getAttribute("data-lang") === code ? "true" : "false");
+    });
+  }
+
+  function closeLangMenu() {
+    if (!langMenu || !langButton) return;
+    langMenu.hidden = true;
+    langButton.setAttribute("aria-expanded", "false");
+  }
+
+  if (langButton && langMenu) {
+    langButton.addEventListener("click", function () {
+      var open = langMenu.hidden;
+      langMenu.hidden = !open;
+      langButton.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    langMenu.addEventListener("click", function (event) {
+      var item = event.target.closest("[data-lang]");
+      if (!item) return;
+      select.value = item.getAttribute("data-lang");
+      syncLangMenu();
+      closeLangMenu();
+      select.dispatchEvent(new Event("change"));
+    });
+    document.addEventListener("click", function (event) {
+      if (!event.target.closest(".lang")) closeLangMenu();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeLangMenu();
+    });
+  }
+  var KEY = "leaders-lang";
+  var pending = null;
+  var ready = false;
+  var waiters = [];
+
+  document.querySelectorAll(".who h3, .links a").forEach(function (node) {
+    if (node.tagName === "A" && node.textContent.indexOf(".") === -1) return;
+    node.classList.add("notranslate");
+    node.setAttribute("translate", "no");
+  });
+
+  function readCookie() {
+    var match = document.cookie.match(/(?:^|; )googtrans=([^;]+)/);
+    if (!match) return "";
+    var parts = decodeURIComponent(match[1]).split("/");
+    return parts[2] || "";
+  }
+
+  function writeCookie(code) {
+    var host = location.hostname;
+    var domains = [""];
+    if (host && host !== "localhost" && host !== "127.0.0.1") domains.push(host, "." + host);
+    domains.forEach(function (domain) {
+      if (code && code !== "en") {
+        document.cookie = "googtrans=/en/" + code + ";path=/" + (domain ? ";domain=" + domain : "");
+        return;
+      }
+      document.cookie = "googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/" + (domain ? ";domain=" + domain : "");
+    });
+  }
+
+  function savedLang() {
+    var fromCookie = readCookie();
+    if (fromCookie && select.querySelector('option[value="' + fromCookie + '"]')) return fromCookie;
+    try {
+      var stored = localStorage.getItem(KEY) || "en";
+      if (select.querySelector('option[value="' + stored + '"]')) return stored;
+    } catch (error) {}
+    return "en";
+  }
+
+  var PHRASES = {
+    en: { green: "Green retention ballot", writein: "Write-in", writeins: "Write-ins", writeName: "Write a name", writeLabel: "Write-in name", back: "Back", next: "Next" },
+    es: { green: "Papeleta verde de retención", writein: "Voto por escrito", writeins: "Votos por escrito", writeName: "Escriba un nombre", writeLabel: "Nombre del voto por escrito", back: "Atrás", next: "Siguiente" },
+    "zh-CN": { green: "绿色留任选票", writein: "另填候选人", writeins: "另填候选人", writeName: "填写姓名", writeLabel: "另填姓名", back: "返回", next: "下一步" },
+    pl: { green: "Zielona karta utrzymania sędziego", writein: "Głos dopisany", writeins: "Głosy dopisane", writeName: "Wpisz nazwisko", writeLabel: "Nazwisko dopisane", back: "Wstecz", next: "Dalej" },
+    hi: { green: "Green retention ballot", writein: "Write-in", writeins: "Write-ins", writeName: "Write a name", writeLabel: "Write-in name", back: "पीछे", next: "आगे" },
+    ko: { green: "녹색 유임 투표용지", writein: "기표 외 후보", writeins: "기표 외 투표", writeName: "이름을 쓰세요", writeLabel: "기표 외 이름", back: "뒤로", next: "다음" },
+    tl: { green: "Green retention ballot", writein: "Write-in", writeins: "Write-ins", writeName: "Isulat ang pangalan", writeLabel: "Pangalan sa write-in", back: "Bumalik", next: "Susunod" },
+    ar: { green: "Green retention ballot", writein: "Write-in", writeins: "Write-ins", writeName: "Write a name", writeLabel: "Write-in name", back: "رجوع", next: "التالي" },
+    ur: { green: "Green retention ballot", writein: "Write-in", writeins: "Write-ins", writeName: "Write a name", writeLabel: "Write-in name", back: "واپس", next: "آگے" },
+    uk: { green: "Зелений бюлетень щодо залишення", writein: "Вписаний кандидат", writeins: "Вписані голоси", writeName: "Впишіть ім’я", writeLabel: "Вписане ім’я", back: "Назад", next: "Далі" },
+    vi: { green: "Phiếu xanh giữ chức thẩm phán", writein: "Bỏ phiếu ghi tên", writeins: "Bỏ phiếu ghi tên", writeName: "Viết tên", writeLabel: "Tên ghi thêm", back: "Quay lại", next: "Tiếp" },
+    fr: { green: "Bulletin vert de maintien", writein: "Vote par écrit", writeins: "Votes par écrit", writeName: "Écrire un nom", writeLabel: "Nom du vote par écrit", back: "Retour", next: "Suivant" }
+  };
+
+  function fixOfficeNames(code) {
+    if (code !== "es") return;
+    var nodes = [];
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) nodes.push(node);
+    nodes.forEach(function (text) {
+      var parent = text.parentElement;
+      if (!parent || parent.closest(".notranslate, .lang, #google_translate_element")) return;
+      if (text.nodeValue.indexOf("Ministro de justicia") === -1 && text.nodeValue.indexOf("ministro de justicia") === -1) return;
+      text.nodeValue = text.nodeValue.replace(/Ministro de justicia/g, "Procurador general").replace(/ministro de justicia/g, "procurador general");
+    });
+  }
+
+  function showNote(on) {
+    if (!note) return;
+    note.hidden = !on;
+  }
+
+  window.leadersApplyPhrases = function (code) {
+    var pack = PHRASES[code] || PHRASES.en;
+    document.querySelectorAll("[data-phrase]").forEach(function (node) {
+      var key = node.getAttribute("data-phrase");
+      if (key === "writefield") {
+        node.placeholder = pack.writeName;
+        node.setAttribute("aria-label", pack.writeLabel);
+        return;
+      }
+      if (pack[key]) node.textContent = pack[key];
+    });
+  };
+
+  function combo() {
+    return document.querySelector(".goog-te-combo");
+  }
+
+  function apply(code) {
+    var box = combo();
+    if (!box) return false;
+    document.documentElement.lang = code === "en" ? "en" : code;
+    box.value = code === "en" ? "" : code;
+    box.dispatchEvent(new Event("change"));
+    window.leadersApplyPhrases(code);
+    setTimeout(function () { fixOfficeNames(code); }, 700);
+    setTimeout(function () { fixOfficeNames(code); }, 2200);
+    return true;
+  }
+
+  window.leadersRefreshLang = function () {
+    var code = select.value || "en";
+    if (code === "en" || !combo()) return;
+    clearTimeout(pending);
+    pending = setTimeout(function () {
+      var box = combo();
+      if (!box) return;
+      box.value = "";
+      box.dispatchEvent(new Event("change"));
+      setTimeout(function () { apply(code); }, 280);
+    }, 40);
+  };
+
+  function finishWaiters() {
+    var queued = waiters.splice(0);
+    queued.forEach(function (done) { done(); });
+  }
+
+  function loadWidget(done) {
+    if (ready && combo()) {
+      done();
+      return;
+    }
+    waiters.push(done);
+    if (document.getElementById("google-translate-script")) return;
+    window.googleTranslateElementInit = function () {
+      new google.translate.TranslateElement({
+        pageLanguage: "en",
+        autoDisplay: false,
+        includedLanguages: "es,zh-CN,pl,hi,ko,tl,ar,ur,uk,vi,fr"
+      }, "google_translate_element");
+      var waits = 0;
+      var timer = setInterval(function () {
+        waits += 1;
+        if (combo() || waits > 40) {
+          clearInterval(timer);
+          ready = !!combo();
+          finishWaiters();
+        }
+      }, 50);
+    };
+    var script = document.createElement("script");
+    script.id = "google-translate-script";
+    script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.onerror = function () {
+      select.value = "en";
+      showNote(false);
+      waiters = [];
+    };
+    document.body.appendChild(script);
+  }
+
+  var initial = savedLang();
+  select.value = initial;
+  syncLangMenu();
+  showNote(initial !== "en");
+  if (initial !== "en") writeCookie(initial);
+
+  select.addEventListener("change", function () {
+    var code = select.value || "en";
+    try { localStorage.setItem(KEY, code); } catch (error) {}
+    writeCookie(code);
+    if (code === "en") {
+      location.reload();
+      return;
+    }
+    showNote(true);
+    window.leadersApplyPhrases(code);
+    loadWidget(function () { apply(code); });
+  });
+
+  window.leadersApplyPhrases(initial);
+  if (initial !== "en") loadWidget(function () { apply(initial); });
+  var fixTimer = 0;
+  window.addEventListener("scroll", function () {
+    if ((select.value || "en") === "en") return;
+    clearTimeout(fixTimer);
+    fixTimer = setTimeout(function () { fixOfficeNames(select.value); }, 500);
+  }, { passive: true });
 })();
 </script>
 </body>
