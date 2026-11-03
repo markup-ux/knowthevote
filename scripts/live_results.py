@@ -1,7 +1,9 @@
 """Copy NBC totals on NBC's own 15-second interval.
 
 Writes the results branch, not the site branch, so a new total does not
-wait for a full site rebuild. The pages read that branch directly.
+wait for a full site rebuild. Each snapshot is also published at a new
+branch named for that 15-second slot. GitHub caches one address for five
+minutes, so the page reads the new address instead of the shared file.
 """
 import json
 import os
@@ -184,12 +186,47 @@ def publish():
         cwd=ROOT,
     )
     quiet = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT)
-    if quiet.returncode == 0:
+    if quiet.returncode != 0:
+        subprocess.check_call(["git", "commit", "-m", "Update unofficial election totals."], cwd=ROOT)
+        subprocess.check_call(["git", "push", "--set-upstream", "origin", "results"], cwd=ROOT)
+        print("pushed results")
+    else:
         print("unchanged")
+    point_bucket()
+
+
+def point_bucket():
+    bucket = int(time.time() // INTERVAL) * INTERVAL
+    name = "t%d" % bucket
+    if name == point_bucket.previous:
         return
-    subprocess.check_call(["git", "commit", "-m", "Update unofficial election totals."], cwd=ROOT)
-    subprocess.check_call(["git", "push", "--set-upstream", "origin", "results"], cwd=ROOT)
-    print("pushed results")
+    created = subprocess.run(
+        ["git", "push", "origin", "HEAD:refs/heads/%s" % name],
+        cwd=ROOT,
+    )
+    if created.returncode != 0:
+        print("bucket push failed", name)
+        return
+    point_bucket.previous = name
+    print("bucket", name)
+    listed = subprocess.run(
+        ["git", "ls-remote", "--heads", "origin", "refs/heads/t*"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    cutoff = bucket - 40 * INTERVAL
+    stale = []
+    for line in (listed.stdout or "").splitlines():
+        ref = line.split()[-1]
+        short = ref.rsplit("/", 1)[-1]
+        if short.startswith("t") and short[1:].isdigit() and int(short[1:]) < cutoff:
+            stale.append(":" + ref)
+    if stale:
+        subprocess.run(["git", "push", "origin"] + stale, cwd=ROOT)
+
+
+point_bucket.previous = ""
 
 
 def main():
