@@ -251,7 +251,7 @@ def footer(state_name, guide):
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
-<script src="live.js?v=15"></script>
+<script src="live.js?v=16"></script>
 <script src="state.js"></script>
 </body>
 </html>
@@ -588,7 +588,7 @@ def index_page(states):
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
-<script src="live.js?v=15"></script>
+<script src="live.js?v=16"></script>
 <script>
 fetch("preview/us.svg").then(function (response) { return response.text(); }).then(function (markup) {
   var start = markup.indexOf("<svg");

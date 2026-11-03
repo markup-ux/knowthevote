@@ -3,8 +3,8 @@ var LIVE_LAG = 20000;
 var LIVE_LOOKBACK = 12;
 
 function leadersLive(path) {
-  var step = LIVE_EVERY;
-  var start = Math.floor((Date.now() - LIVE_LAG) / step) * step;
+  var step = 15;
+  var start = Math.floor((Date.now() - LIVE_LAG) / 1000 / step) * step;
   var urls = [];
   var i;
   for (i = 0; i < LIVE_LOOKBACK; i++) {
