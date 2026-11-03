@@ -1,0 +1,671 @@
+{
+  "code": "ny",
+  "ballotSource": "https://elections.ny.gov/system/files/documents/2026/10/accessible-2026-general-ballot-certification-10.7.2026.pdf",
+  "where": {
+    "url": "https://voterlookup.elections.ny.gov/",
+    "label": "New York poll site search"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one.",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. New York's certified ballot pairs the governor and lieutenant governor on one ticket, and the voter chooses one pair."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one.",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. The office describes New York's attorney general as the state's chief lawyer and law enforcement officer."
+    }
+  },
+  "people": {
+    "bruce blakeman": {
+      "role": "Nassau County executive running for governor.",
+      "bio": "His campaign describes him as a lifelong New Yorker who has also served as a Port Authority commissioner. It says that as county executive he hired more police officers and did not raise county property or sales taxes.",
+      "issues": [
+        "He says public safety is the center of the campaign, including opposition to sanctuary policies and work with federal immigration officers to remove people he calls criminals.",
+        "He says he blocked scheduled property-tax increases in Nassau County and would seek relief for homeowners and renters as governor.",
+        "His site names Madison County Sheriff Todd Hood as his lieutenant governor running mate and describes Hood as a career law-enforcement officer."
+      ],
+      "site": "https://www.blakemanfornewyork.com/",
+      "siteLabel": "blakemanfornewyork.com",
+      "donate": "https://secure.winred.com/blakeman-for-new-york/donate-now",
+      "source": "https://www.blakemanfornewyork.com/"
+    },
+    "saritha komatireddy": {
+      "role": "Former federal prosecutor running for attorney general.",
+      "bio": "Her campaign says that after the September 11 attacks she went to law school and spent more than a decade prosecuting terrorism, cybercrime, drug trafficking, and corruption cases. It says she later served as chief of staff at the Drug Enforcement Administration and is a mother of four.",
+      "issues": [
+        "She says the attorney general should enforce the law by prosecuting crime, and that safety is the office's first job.",
+        "She says she would get people who are homeless or sick off the street in a humane way.",
+        "She says she would go after corruption and fraud, and that she would work with police and district attorneys on repeat offenders, hate crimes, and fentanyl cases."
+      ],
+      "site": "https://sarithafornewyork.com/",
+      "siteLabel": "sarithafornewyork.com",
+      "donate": "",
+      "source": "https://sarithafornewyork.com/"
+    },
+    "letitia james": {
+      "role": "Attorney general of New York since 2019, seeking another term.",
+      "bio": "Her campaign says she has used the office to lower costs for working families, hold powerful interests accountable, and protect New Yorkers' rights and safety. It says that work has included suits against the Trump administration over rights and funding for health care, public schools, and jobs.",
+      "issues": [
+        "The site lists public safety, jobs and affordability, consumer protection, and health care as her priorities.",
+        "She says the office should keep challenging powerful interests that she argues are trying to control government.",
+        "She ties that work to protecting funding for health care, public education, and jobs."
+      ],
+      "site": "https://jamesforny.com/",
+      "siteLabel": "jamesforny.com",
+      "donate": "https://secure.actblue.com/donate/web_ms_tish_20260326",
+      "source": "https://jamesforny.com/"
+    },
+    "kathy hochul": {
+      "role": "Governor of New York, seeking another term.",
+      "bio": "Her campaign calls her New York's first mom governor and says she has focused on putting money back in people's pockets, lowering costs, and keeping New Yorkers safe. She is running with New York City Council Speaker Adrienne Adams.",
+      "issues": [
+        "She points to inflation refund checks, a larger child tax credit, middle-class tax cuts, and work toward universal child care and lower auto insurance costs.",
+        "She highlights free school meals, a ban on cell phones during the school day, and gun laws she says are meant to make streets and subways safer.",
+        "She says the ticket would keep lowering costs, invest in community safety, and protect New York from what she calls MAGA extremism."
+      ],
+      "site": "https://kathyhochul.com/",
+      "siteLabel": "kathyhochul.com",
+      "donate": "https://secure.actblue.com/donate/kch_web_2026",
+      "source": "https://kathyhochul.com/about/"
+    },
+    "nicholas lalota": {
+      "role": "U.S. representative for New York's 1st District.",
+      "bio": "His campaign says he was born on Long Island, graduated from the Naval Academy, and served 11 years as a Navy surface warfare officer before returning to local and state government. It says voters first elected him to this district in 2022.",
+      "issues": [
+        "He says he is focused on border security, support for law enforcement, and a stronger military.",
+        "He says he has pushed for a larger state-and-local tax deduction and for tax relief on tips, overtime, and for seniors.",
+        "He also highlights Long Island water quality and bringing federal money back for local infrastructure and public safety."
+      ],
+      "site": "https://www.nicklalota.com/",
+      "siteLabel": "nicklalota.com",
+      "donate": "https://secure.winred.com/lalota-for-congress/donate-today",
+      "source": "https://www.nicklalota.com/meet-nick"
+    },
+    "andrew garbarino": {
+      "role": "U.S. representative for New York's 2nd District.",
+      "bio": "His campaign says he has represented the district since 2021 and chairs the House Homeland Security Committee. It also says he is vice chair of a Financial Services subcommittee on capital markets.",
+      "issues": [
+        "He says he led the push for permanent funding of the World Trade Center Health Program.",
+        "He says a tax law he supported raised the state-and-local tax deduction cap from $10,000 to $40,000 and ended federal tax on tips.",
+        "He also points to an expanded child tax credit, a new deduction for seniors, and a policing bill he says passed the House."
+      ],
+      "site": "https://garbarinoforny.com/",
+      "siteLabel": "garbarinoforny.com",
+      "donate": "https://secure.winred.com/garbarino-victory-fund/action-donate-now",
+      "source": "https://garbarinoforny.com/"
+    },
+    "thomas suozzi": {
+      "role": "U.S. representative for New York's 3rd District.",
+      "bio": "His campaign says he is a lawyer and accountant who was mayor of Glen Cove and Nassau County executive before serving in Congress, and that he co-chairs the Problem Solvers Caucus. It says he sits on the Ways and Means Committee.",
+      "issues": [
+        "His affordability plan says he would roll back tariffs he argues are raising prices on groceries, cars, and building materials, and seek trade deals that bring manufacturing jobs back.",
+        "He says he would rein in federal spending to ease pressure on interest rates and speed permits for energy projects, including clean energy, gas, and nuclear.",
+        "He says he would extend health-insurance tax credits, make long-term care more affordable, and offer a payment to new parents."
+      ],
+      "site": "https://suozziforcongress.com/",
+      "siteLabel": "suozziforcongress.com",
+      "donate": "https://secure.actblue.com/donate/ts_web",
+      "source": "https://suozziforcongress.com/tom-suozzis-five-point-american-affordability-plan/"
+    },
+    "laura gillen": {
+      "role": "U.S. representative for New York's 4th District.",
+      "bio": "Her campaign says she is a lawyer, a mother of four, and the former supervisor of the Town of Hempstead who grew up in Baldwin and is raising her family in Rockville Centre. It says she won the seat in 2024.",
+      "issues": [
+        "She says she is committed to keeping families safe, growing the economy, and making Nassau County a place where people can afford a home or a business.",
+        "She says her first term has focused on working across the aisle to lower the cost of living and bring federal investment back to the county."
+      ],
+      "site": "https://lauragillen.com/",
+      "siteLabel": "lauragillen.com",
+      "donate": "https://secure.actblue.com/donate/laura-gillen-website",
+      "source": "https://lauragillen.com/meet-laura/"
+    },
+    "grace meng": {
+      "role": "U.S. representative for New York's 6th District.",
+      "bio": "Her campaign says she was born and raised in Queens as the daughter of immigrants, worked as a public-interest lawyer, and served in the state Assembly before entering Congress in 2013. It says she is the first Asian American member of Congress from New York and chairs the Congressional Asian Pacific American Caucus.",
+      "issues": [
+        "She says she defends access to abortion, contraception, and IVF, and that she has led legislation on menstrual products.",
+        "She says she uses her seat on the Appropriations Committee to steer federal money toward women, families, and communities.",
+        "Her issues page also groups her work under health care, gun laws, housing, education, and immigration."
+      ],
+      "site": "https://www.gracefornewyork.com/",
+      "siteLabel": "gracefornewyork.com",
+      "donate": "https://secure.actblue.com/donate/grace-meng-2",
+      "source": "https://www.gracefornewyork.com/issues"
+    },
+    "hakeem jeffries": {
+      "role": "House Democratic leader representing New York's 8th District.",
+      "bio": "His campaign says he has represented the Brooklyn-based district since 2013 and was elected House Democratic leader in 2023, the first person of color to lead a major party in Congress. It says the district includes neighborhoods such as East New York, Brownsville, Bedford-Stuyvesant, Canarsie, and Coney Island.",
+      "issues": [
+        "He says he is working to lower child care, health care, education, and prescription costs, including a $35 monthly insulin cap for people on Medicare.",
+        "He supports universal background checks and a ban on assault weapons, and he highlights a law that made gun trafficking a federal crime.",
+        "He says he wants more affordable and public housing, better-paying jobs through infrastructure and manufacturing investment, and protection of abortion access."
+      ],
+      "site": "https://hakeemjeffries.com/",
+      "siteLabel": "hakeemjeffries.com",
+      "donate": "https://secure.actblue.com/donate/jeffries-homepage-donate",
+      "source": "https://hakeemjeffries.com/issues/"
+    },
+    "alexandria ocasio-cortez": {
+      "role": "U.S. representative for New York's 14th District.",
+      "bio": "Her campaign says she was born in the Bronx to a small-business owner and a mother who cleaned homes after moving from Puerto Rico, later worked restaurant shifts while her family faced medical bills, and won the seat in 2018. It says she was the youngest woman ever elected to Congress at the time.",
+      "issues": [
+        "She calls for Medicare for All so health care is not tied to a job and so the government can bargain down drug and medical prices.",
+        "She says housing should be treated as a right, with more affordable and public housing and protections for current tenants.",
+        "She supports a Green New Deal built around clean-energy jobs, and she says undocumented immigrants should have a path to full membership in the country and that ICE should be abolished."
+      ],
+      "site": "https://www.ocasiocortez.com/",
+      "siteLabel": "ocasiocortez.com",
+      "donate": "https://secure.actblue.com/donate/ocasio2020",
+      "source": "https://ocasiocortez.com/platform"
+    },
+    "nicole malliotakis": {
+      "role": "U.S. representative for New York's 11th District.",
+      "bio": "Her campaign says she was elected in 2020 and serves as an assistant Republican whip and on the Ways and Means Committee. She says her focus is the cost of living, government accountability, law enforcement, the border, and opposition to socialism.",
+      "issues": [
+        "She says a 2025 tax law she worked on raised the state-and-local tax deduction so most households in the district can deduct local taxes, and ended federal tax on most tips and overtime.",
+        "She says the same law expanded the child tax credit and effectively ended federal income tax on Social Security for most seniors.",
+        "She says she was the lead plaintiff in a case that stopped noncitizens from voting in New York City elections and that she pushed to fund Staten Island's East Shore sea wall."
+      ],
+      "site": "https://nicolemalliotakis.com/",
+      "siteLabel": "nicolemalliotakis.com",
+      "donate": "https://secure.winred.com/nicolemalliotakis/donate",
+      "source": "https://nicolemalliotakis.com/meet-nicole/"
+    },
+    "mike lawler": {
+      "role": "U.S. representative for New York's 17th District.",
+      "bio": "His campaign says he grew up in Rockland County, served in the state Assembly, and won this Hudson Valley seat in 2022. It says he sits on the Financial Services and Foreign Affairs committees and lives in Pearl River with his wife and two daughters.",
+      "issues": [
+        "He says he crossed his party to raise the state-and-local tax deduction cap to $40,000 and backed tax cuts on tips, overtime, and Social Security benefits.",
+        "He says he forced a House vote to extend Affordable Care Act subsidies and supports a tax credit for IVF.",
+        "He says he would reopen the Indian Point nuclear plant, back an all-of-the-above energy mix, and pair border enforcement with a bipartisan legal-immigration bill."
+      ],
+      "site": "https://www.lawlerforcongress.com/",
+      "siteLabel": "lawlerforcongress.com",
+      "donate": "https://secure.winred.com/lawler-for-congress/donate-today",
+      "source": "https://www.lawlerforcongress.com/issues/"
+    },
+    "pat ryan": {
+      "role": "U.S. representative for New York's 18th District.",
+      "bio": "His campaign says he is a West Point graduate and Iraq veteran who was elected in 2022 and serves on the Armed Services and Transportation and Infrastructure committees. It says he founded the Democratic Veterans Caucus and a caucus focused on monopolies.",
+      "issues": [
+        "He says he is trying to lower utility and health-care bills by challenging companies such as Central Hudson and UnitedHealth.",
+        "He says his housing agenda would build more homes, cut red tape, and lower costs for owners and renters in the Hudson Valley.",
+        "He says middle-class families should get tax relief instead of permanent tax cuts for billionaires and corporations, and he supports paid family leave."
+      ],
+      "site": "https://www.patryanforcongress.com/",
+      "siteLabel": "patryanforcongress.com",
+      "donate": "https://secure.actblue.com/donate/pr-web",
+      "source": "https://www.patryanforcongress.com/priorities"
+    },
+    "christopher gallant": {
+      "role": "Military pilot and union leader running for Congress in New York's 1st District.",
+      "bio": "His campaign says he joined the New York Army National Guard at 17, deployed to Kuwait, and later worked as an FAA air traffic controller, a union leader, and a volunteer firefighter. He says he is running to bring that same discipline to Congress for the Long Island district where he grew up.",
+      "issues": [
+        "He says he would seek federal investments that reduce the cost of housing, energy, and basic goods for Long Island families.",
+        "He says he would protect Medicare and Medicaid and push changes that expand access and lower out-of-pocket costs for older adults.",
+        "He also says he would press for long-term investment in the shoreline and for the tools first responders need to keep neighborhoods safe."
+      ],
+      "site": "https://gallantny.com/",
+      "siteLabel": "gallantny.com",
+      "donate": "https://secure.actblue.com/donate/chris-gallant-website",
+      "source": "https://gallantny.com/about/"
+    },
+    "patrick halpin": {
+      "role": "Former Suffolk County executive running for Congress in New York's 2nd District.",
+      "bio": "His campaign says he was first elected at 26, served in the county legislature and the state Assembly, and became the youngest Suffolk County executive. It says he later chaired the Suffolk Water Authority and is running to lower costs for South Shore families.",
+      "issues": [
+        "He says he would expand housing for working families, take on corporate price gouging, and put those families ahead of billionaires and special interests.",
+        "He supports building toward universal Medicare coverage while protecting plans people already have, lowering drug prices, and reversing health-care cuts he says threaten Long Island hospitals.",
+        "He says he is refusing corporate PAC money, supports a ban on congressional stock trading, and wants immigration enforcement that is both secure and orderly."
+      ],
+      "site": "https://www.halpinforcongress.com/",
+      "siteLabel": "halpinforcongress.com",
+      "donate": "https://secure.actblue.com/donate/halpinwebsite",
+      "source": "https://www.halpinforcongress.com/building-a-better-long-island"
+    },
+    "michael lipetri jr.": {
+      "role": "Former state assemblyman running for Congress in New York's 3rd District.",
+      "bio": "His campaign says he was born and raised in Farmingdale, the son of a nurse and a utility worker, and that he became a lawyer and then a state assemblyman. It says he won that seat by outworking a Democratic incumbent, including knocking on more than 20,000 doors.",
+      "issues": [
+        "He says that in the Assembly he opposed policies he argues raised the cost of living and threatened Long Island's quality of life.",
+        "He says he wants to help House Republicans secure the border, keep a higher state-and-local tax deduction, and cut what he calls waste, fraud, and abuse."
+      ],
+      "site": "https://www.mikelipetriforcongress.com/",
+      "siteLabel": "mikelipetriforcongress.com",
+      "source": "https://www.mikelipetriforcongress.com/"
+    },
+    "jeanine driscoll": {
+      "role": "Hempstead Town receiver of taxes running for Congress in New York's 4th District.",
+      "bio": "Her campaign says she was first elected receiver of taxes in 2019, overwhelmingly reelected in 2023, and has practiced law for more than 30 years, including as an associate village justice in Bellerose. It says she is running to keep fighting for Nassau County taxpayers.",
+      "issues": [
+        "She says she would restore the full state-and-local tax deduction and seek more relief for families and seniors.",
+        "She says she would support law enforcement and keep the southern border from being opened again."
+      ],
+      "site": "https://driscoll4congress.com/",
+      "siteLabel": "driscoll4congress.com",
+      "donate": "https://secure.winred.com/driscoll/donate",
+      "source": "https://driscoll4congress.com/meet-jeanine/"
+    },
+    "george marsh": {
+      "role": "Queens community advocate running for Congress in New York's 5th District.",
+      "bio": "His campaign says he is a lifelong New Yorker raised in the Astoria Projects and a former employee of the mayor's office. It says he is a father and grandfather who has been in recovery from addiction for more than 35 years.",
+      "issues": [
+        "He says he would reintroduce the infrastructure law to modernize roads, bridges, and water systems, and invest in transit and safer streets.",
+        "He says he would cut red tape and expand access to capital so neighborhood businesses can start, hire, and stay open.",
+        "He also says he would protect veterans' earned benefits and expand apprenticeships in skilled trades such as plumbing, electrical work, and construction."
+      ],
+      "site": "https://georgemarshforcongress.com/",
+      "siteLabel": "georgemarshforcongress.com",
+      "source": "https://georgemarshforcongress.com/"
+    },
+    "gregory meeks": {
+      "role": "U.S. representative for New York's 5th District.",
+      "bio": "His campaign says serving the district has been his greatest professional honor and that he is in his fourteenth term, focused on making government work for his constituents. It says he is respected for bipartisan work and treats jobs and wider business access for small, minority, and women-owned firms as core to that mission.",
+      "issues": [
+        "He points to his vote for the bipartisan infrastructure law and says it included nearly $28 billion for New York roads, bridges, transit, ports, and airports.",
+        "He says diversity of race, religion, gender, and national origin helps both the private and public sectors, and he opposes efforts to demonize equity and inclusion in schools and workplaces."
+      ],
+      "site": "https://www.congressmangregorymeeks.com/",
+      "siteLabel": "congressmangregorymeeks.com",
+      "donate": "https://secure.actblue.com/donate/gregorymeeks",
+      "source": "https://www.congressmangregorymeeks.com/about"
+    },
+    "joseph chou": {
+      "role": "Small-business owner running for Congress in New York's 6th District.",
+      "bio": "His campaign says he was born in Japan in 1964 and lived in Taiwan with his grandmother while his father studied law, and that his father later became one of the first lawyers in Flushing. It says Chou is a naturalized citizen who built a small business in Queens.",
+      "issues": [
+        "He says he wants a balanced tax policy that eases the burden on working families and new small businesses, plus fairer interest rates on student loans.",
+        "He says he would back public, private, and vocational education and improve access to health care and affordable child care.",
+        "He says he wants a fair immigration system with secure borders and closer cooperation against criminal threats, and he wants to reform cashless bail."
+      ],
+      "site": "https://josephforny.com/",
+      "siteLabel": "josephforny.com",
+      "source": "https://josephforny.com/issues-1"
+    },
+    "melvin rivera": {
+      "role": "Tenant organizer from Bushwick running for Congress in New York's 7th District.",
+      "bio": "His campaign says he was born and raised in Bushwick and has spent more than 30 years as a community activist and tenant organizer, including work against illegitimate rent increases and predatory real-estate speculation. It says he experienced homelessness earlier in life and is running independent of party loyalty.",
+      "issues": [
+        "He says public assistance should build independence, with apprenticeships aimed at higher-paying work and room for families to keep benefits while they advance.",
+        "He says tenants should get the first chance to buy when a landlord decides to sell, so more renters can become homeowners.",
+        "He also names free enterprise, breaking monopolies, and holding government accountable among his top priorities."
+      ],
+      "site": "https://melvinforcongress.com/",
+      "siteLabel": "melvinforcongress.com",
+      "donate": "https://secure.anedot.com/melvin-for-congress-2026/donate",
+      "source": "https://melvinforcongress.com/issues.html"
+    },
+    "claire valdez": {
+      "role": "State assemblymember running for Congress in New York's 7th District.",
+      "bio": "Her campaign says she is a union organizer, artist, and democratic socialist, and a dual citizen of the Ysleta del Sur Pueblo Nation and the United States. It says she worked low-wage jobs, helped democratize UAW Local 2110 at Columbia, and has used her Assembly seat to tax the rich and protect tenants.",
+      "issues": [
+        "She says she would strengthen the PRO Act, give active federal support to union organizing, and end at-will employment.",
+        "She says everyone should be able to count on a living-wage job, paid parental and sick leave, health care, and a dignified retirement.",
+        "She says the campaign will not take corporate PAC or dark money."
+      ],
+      "site": "https://clairevaldezforcongress.com/",
+      "siteLabel": "clairevaldezforcongress.com",
+      "donate": "https://secure.actblue.com/donate/cvct",
+      "source": "https://clairevaldezforcongress.com/issues"
+    },
+    "joel azumah": {
+      "role": "Brooklyn small-business owner running for Congress in New York's 9th District.",
+      "bio": "His campaign says he is a small businessman in Brooklyn who also coaches men's volleyball at Brooklyn College. It says he graduated from Union College in 2005 with a degree in civil engineering.",
+      "issues": [
+        "He says the country should bring manufacturing home and stay out of a major war so it can reinvest in infrastructure, pointing to tensions over Taiwan and Greenland.",
+        "He warns that artificial intelligence could outrun human guardrails and asks how government stays accountable if machines run more of the market and the state."
+      ],
+      "site": "https://joelazumah.com/",
+      "siteLabel": "joelazumah.com",
+      "source": "https://joelazumah.com/issues"
+    },
+    "yvette clarke": {
+      "role": "U.S. representative for New York's 9th District.",
+      "bio": "Her campaign says she still lives in her childhood home in Flatbush, that both of her parents immigrated from Jamaica, and that her mother, Una Clarke, served on the City Council. It says they were the first mother-daughter succession in Council history and that Clarke was first elected to Congress in 2006.",
+      "issues": [
+        "She says she has worked to keep Brooklyn affordable for low-income residents, including a 2019 bill to cut rent in subsidized areas and a change to the income formula used for affordable housing.",
+        "She says she is a cosponsor of a public-housing bill that would fund outstanding capital repairs so residents have a decent home.",
+        "Her issues page also groups her work under immigration, health care, women and children, LGBTQ rights, and climate."
+      ],
+      "site": "https://voteyvette.com/",
+      "siteLabel": "voteyvette.com",
+      "donate": "https://secure.actblue.com/donate/ydc_donatepage?refcode=menubutton",
+      "source": "https://voteyvette.com/issues/"
+    },
+    "brad lander": {
+      "role": "Former New York City comptroller running for Congress in New York's 10th District.",
+      "bio": "His campaign says he organized tenants and built affordable housing at the Fifth Avenue Committee and the Pratt Center, then passed wage laws for gig workers on the City Council and later served as comptroller. It says he was arrested by federal agents while defending immigrants from ICE.",
+      "issues": [
+        "He says he would be a check on Donald Trump and fight attacks on immigrants, trans kids, the rule of law, health care, Social Security, and working- and middle-class families.",
+        "He says Congress should help cities end street homelessness, fix public housing, protect tenants, and build more affordable homes.",
+        "He says he would take on billionaires and corporate power and get money out of politics rather than take Wall Street, crypto, and AIPAC contributions."
+      ],
+      "site": "https://www.bradlanderforcongress.com/",
+      "siteLabel": "bradlanderforcongress.com",
+      "donate": "https://secure.actblue.com/donate/bl4cweb",
+      "source": "https://www.bradlanderforcongress.com/about"
+    },
+    "mike decillis": {
+      "role": "Former teacher and paramedic running for Congress in New York's 11th District.",
+      "bio": "His campaign says he is a fourth-generation Staten Islander and third-generation union member who has spent nearly 35 years in public service as a teacher, EMT, and paramedic. It says he treated injured firefighters at Ground Zero on September 11, 2001.",
+      "issues": [
+        "He says Congress should act as a co-equal branch and put guardrails around civil and constitutional rights instead of leaving government to executive action alone.",
+        "He says he would lower the tax burden on the working class, have billionaires pay a larger share, and stop what he calls the dismantling of the Education Department.",
+        "He says he would also protect Social Security and Medicare and make groceries, gas, health care, and housing more affordable."
+      ],
+      "site": "https://www.decillisforcongress.com/",
+      "siteLabel": "decillisforcongress.com",
+      "donate": "https://secure.actblue.com/donate/mike-decillis-web",
+      "source": "https://www.decillisforcongress.com/about"
+    },
+    "caroline shinkle": {
+      "role": "Lawyer and economist running for Congress in New York's 12th District.",
+      "bio": "Her campaign says she lives in Midtown, majored in economics at MIT, and worked at the Federal Reserve and at central banks in Europe and Israel before earning a law degree from Harvard. It says she then advised businesses and financial institutions at a New York law firm.",
+      "issues": [
+        "She says she would protect paychecks and push schools to treat every student like an honors student while using innovation to improve results.",
+        "She says she would back law enforcement and first responders, fight antisemitism, and stand with Israel and the city's Jewish community.",
+        "She says she would restore competition and price transparency in health care and pass the Access to Breast Cancer Diagnosis Act."
+      ],
+      "site": "https://carolinefornewyork.com/",
+      "siteLabel": "carolinefornewyork.com",
+      "donate": "https://secure.anedot.com/caroline-for-congress-bd0c133e-a739-4c09-a67e-a8f84264510d/donate_main",
+      "source": "https://www.carolinefornewyork.com/meet-caroline"
+    },
+    "micah lasher": {
+      "role": "State assemblymember running for Congress in New York's 12th District.",
+      "bio": "His campaign says he is a lifelong Upper West Sider now in the Assembly, after serving as policy director for Governor Hochul, chief of staff at the attorney general's office, and an aide to Representative Jerry Nadler. It says that work included gun laws, abortion access, a higher minimum wage, and housing supply.",
+      "issues": [
+        "He says Democrats should use every available lever against what he calls Trumpism and also spell out a positive agenda on affordability, health care, corruption, and climate.",
+        "His platform also covers protecting immigrants and civil rights, reproductive freedom, public schools, and safeguards on big technology companies and artificial intelligence."
+      ],
+      "site": "https://micahlasher.com/",
+      "siteLabel": "micahlasher.com",
+      "donate": "https://secure.actblue.com/donate/micah-lasher-web?refcode=web-header",
+      "source": "https://micahlasher.com/platform-and-policies/"
+    },
+    "jomo williams": {
+      "role": "Self-financed candidate running for Congress in New York's 13th District.",
+      "bio": "His campaign says he is running in the 13th District on his own money so he owes no private or special interest, and that he turned down super PAC support. It says he rejects communism and anarchism and what he calls toxic politics from the far left and the far right.",
+      "issues": [
+        "He says his case is for what he calls universal capitalism rather than socialism, and against a sanctuary city.",
+        "He highlights the SAVE Act and election-integrity litigation, and says extreme politics are dividing neighbors in Harlem."
+      ],
+      "site": "https://jmw4congress.com/",
+      "siteLabel": "jmw4congress.com",
+      "source": "https://jmw4congress.com/"
+    },
+    "darializa avila chevalier": {
+      "role": "Community organizer running for Congress in New York's 13th District.",
+      "bio": "Her campaign says she is a working-class Dominican New Yorker who has organized in upper Manhattan since she was a teenager, and that her father is a truck driver and her mother a caseworker. It says she is a CUNY doctoral student studying how the immigration system treats Black immigrants from Latin America, and a member of UAW Local 2325.",
+      "issues": [
+        "She says she would abolish ICE, expand paths to citizenship, and secure free legal help for immigrants.",
+        "She says she would fund child tax credits and baby bonds instead of spending billions on wars, and treat housing and Medicare for All as rights.",
+        "She says she will not take corporate PAC money and would fight monopolies, price gouging, and super PACs."
+      ],
+      "site": "https://www.darializaforcongress.com/",
+      "siteLabel": "darializaforcongress.com",
+      "donate": "https://secure.actblue.com/donate/chevalier-web",
+      "source": "https://www.darializaforcongress.com/issues"
+    },
+    "diamant hysenaj": {
+      "role": "Construction business owner running for Congress in New York's 14th District.",
+      "bio": "His campaign says he was born on a farm in Kosovo, fled with his family at age nine, and grew up in the Bronx working beside his father. It says he later founded the construction company DCG New York after an earlier business failed in the 2008 crisis.",
+      "issues": [
+        "He says he would focus on affordable rent and quality homes, lower health-care costs by cutting waste and fraud, and lower taxes.",
+        "He says immigration policy should secure the border, speed citizenship for people who follow the law, and support neighborhoods where he says nearly half of residents are immigrants.",
+        "He says he would cut red tape and taxes for small businesses so they can grow and hire."
+      ],
+      "site": "https://votefordiamant.com/",
+      "siteLabel": "votefordiamant.com",
+      "donate": "https://secure.anedot.com/diamant-hysenaj-for-congress/donate",
+      "source": "https://votefordiamant.com/my-story"
+    },
+    "ritchie torres": {
+      "role": "U.S. representative for New York's 15th District.",
+      "bio": "His campaign says he was raised in the Bronx by a single mother earning minimum wage and grew up in public housing with leaks, lead, and unreliable heat. It says that at 25 he became the city's youngest elected official and the first openly LGBTQ elected official from the Bronx.",
+      "issues": [
+        "He says he will fight for health care, housing, schools, and jobs, and stand up for immigrants, seniors, and young people.",
+        "He says he will work to protect neighborhoods from gun violence and make the Bronx safer, more decent, and more affordable."
+      ],
+      "site": "https://torres.nyc/",
+      "siteLabel": "torres.nyc",
+      "donate": "https://secure.actblue.com/donate/torres-for-congress-1",
+      "source": "https://torres.nyc/about"
+    },
+    "joseph cinquemani": {
+      "role": "Attorney from New Rochelle running for Congress in New York's 16th District.",
+      "bio": "His campaign says he has lived in New Rochelle and Pelham Bay for 30 years, is the father of triplets who went through New Rochelle public schools, and has practiced law for 32 years. It says he is running to offer ideas rather than a fixed ideology.",
+      "issues": [
+        "He says he wants tax relief, lower energy costs, high-paying union jobs, a smaller budget, and lower interest rates so housing is more affordable in Westchester and the Bronx.",
+        "He says that work will take a generation of cutting federal spending, lowering taxes, producing affordable American energy, and shrinking the administrative state."
+      ],
+      "site": "https://www.cinquemaniforcongress2026.com/",
+      "siteLabel": "cinquemaniforcongress2026.com",
+      "source": "https://www.cinquemaniforcongress2026.com/about"
+    },
+    "george latimer": {
+      "role": "U.S. representative for New York's 16th District.",
+      "bio": "His campaign says he is a third-generation Westchester native, born in Mount Vernon, who has lived in Rye for more than 37 years and was elected to the House in 2024. It says he has criticized the Trump administration on immigration, tariffs, allies, voting rights, and self-dealing.",
+      "issues": [
+        "He says that as county executive he funded job training and grants for minority- and women-owned businesses, and free summer and holiday bus rides, without raising county taxes for five years.",
+        "He says affordable housing is a human right and that he pushed to create more than 2,500 affordable units since 2018, with thousands more in the pipeline.",
+        "His priorities page also lists defending democracy, reproductive freedom, infrastructure, public safety, and protecting Medicare and Social Security."
+      ],
+      "site": "https://latimerforny.com/",
+      "siteLabel": "latimerforny.com",
+      "donate": "https://secure.actblue.com/donate/latimer-web",
+      "source": "https://latimerforny.com/priorities/"
+    },
+    "cait conley": {
+      "role": "Army special operations veteran running for Congress in New York's 17th District.",
+      "bio": "Her campaign says she is a fourth-generation Hudson Valley native, a West Point graduate, and a decorated combat veteran who was one of the first women to lead in Army special operations. It says she is running because the politicians who created today's problems will not be the ones to fix them.",
+      "issues": [
+        "She says she would lower drug and premium costs by holding pharmaceutical and insurance companies accountable and creating a public insurance option.",
+        "She says she would ban members of Congress and the White House from trading stocks, and stop utility monopolies from passing private-jet, lobbying, and campaign costs on to ratepayers."
+      ],
+      "site": "https://caitconley.com/",
+      "siteLabel": "caitconley.com",
+      "donate": "https://secure.actblue.com/donate/conley-web",
+      "source": "https://caitconley.com/policy/"
+    },
+    "jackie auringer": {
+      "role": "Hudson Valley resident running for Congress in New York's 18th District.",
+      "bio": "Her campaign says she was born in the Hudson Valley and is running because the region is becoming too expensive for the families who built it. It says she is not a career politician and does not owe favors to party bosses or special interests.",
+      "issues": [
+        "She says she would work on taxes, energy, everyday bills, and health care so more income stays with families and small businesses.",
+        "She says she would focus on good-paying jobs, skilled trades, and education connected to careers in the region.",
+        "She also calls for congressional ethics, government transparency, and protection of local rights and public safety."
+      ],
+      "site": "https://winwithjackie.com/",
+      "siteLabel": "winwithjackie.com",
+      "source": "https://winwithjackie.com/about"
+    },
+    "peter oberacker": {
+      "role": "State senator running for Congress in New York's 19th District.",
+      "bio": "His campaign says he is the son of a German sausage maker, started in the family meat market in Schenevus at age eight, and later became a food scientist who founded FormTech Solutions. It says he served on a town board, as town supervisor, and as a county representative before the state Senate, and moved the company headquarters back to his hometown without taxpayer aid.",
+      "issues": [
+        "He says that in every office he has focused on results and low taxes, and that he has never written a budget that raised taxes.",
+        "He says he believes in common sense, accountability, and putting people over politics."
+      ],
+      "site": "https://www.peterforny19.com/",
+      "siteLabel": "peterforny19.com",
+      "donate": "https://secure.winred.com/peter-for-ny-inc/donate",
+      "source": "https://www.peterforny19.com/blank-1"
+    },
+    "josh riley": {
+      "role": "U.S. representative for New York's 19th District.",
+      "bio": "His campaign says he is a fifth-generation Upstate New Yorker from a working-class neighborhood in Endicott, where his mother worked in law enforcement and earlier generations worked at local factories. It says he does not take corporate PAC money.",
+      "issues": [
+        "He says utility bills are out of control and that he is taking utility monopolies to court, backing home energy upgrades, and trying to ban foreign ownership of American utilities.",
+        "He says data centers should pay for the grid upgrades they require instead of passing those costs to Upstate families.",
+        "He says he backs the Equality Act and mental-health services for LGBTQ young people."
+      ],
+      "site": "https://joshrileyforcongress.com/",
+      "siteLabel": "joshrileyforcongress.com",
+      "donate": "https://secure.actblue.com/donate/joshriley_website_2024?refcode=web-header",
+      "source": "https://joshrileyforcongress.com/policy-positions/"
+    },
+    "ralph ambrosio": {
+      "role": "Former state trooper and prosecutor running for Congress in New York's 20th District.",
+      "bio": "His campaign says he was born in Hudson and raised in Chatham, served in the Navy from 1970 to 1976, and then spent years with the New York State Police, as a prosecutor, and as an assistant attorney general. It says he has lived in Delmar since 1985.",
+      "issues": [
+        "He says he would cut taxes and regulation to lower the cost of living and pursue an all-of-the-above energy strategy.",
+        "He says government should support law enforcement, secure the border, and defend the right to self-defense.",
+        "He also supports term limits, voter identification, parental rights in education, and rooting out corruption."
+      ],
+      "site": "https://www.ambrosioforcongress.com/",
+      "siteLabel": "ambrosioforcongress.com",
+      "source": "https://www.ambrosioforcongress.com/issues"
+    },
+    "paul tonko": {
+      "role": "U.S. representative for New York's 20th District.",
+      "bio": "His campaign says he is a lifelong Amsterdam resident and an engineer who has represented the Capital Region since 2009, after leading the state energy research authority and serving 25 years in the Assembly. It says he is a senior member of Energy and Commerce and has chaired its environment and climate subcommittee.",
+      "issues": [
+        "He says he is protecting abortion access after Roe v. Wade was overturned, and he cites a Planned Parenthood endorsement for that work.",
+        "He says fighting climate change is also a way to bring stable, well-paying jobs to the Capital Region.",
+        "He says people struggling with mental illness and opioid addiction face both the illness and public stigma, and that those communities have to be included as the country rebuilds."
+      ],
+      "site": "https://paultonko.com/",
+      "siteLabel": "paultonko.com",
+      "donate": "https://secure.ngpvan.com/Kc_4TB6OfUqzi_V_cUHm6g2",
+      "source": "https://paultonko.com/meet-paul/"
+    },
+    "anthony constantino": {
+      "role": "Printing-company executive running for Congress in New York's 21st District.",
+      "bio": "His campaign says he is the chief executive of Sticker Mule, an online printing company with plants in New York, South Carolina, and Italy. It says he is paying for the race himself so donors, lobbyists, and special interests will not have a claim on him.",
+      "issues": [
+        "He says he would cut waste, bring reliable internet and cell service to the North Country, and oppose regulations he argues are driving up food and utility prices.",
+        "He says he would work to secure the northern border, treat farmers more fairly, and restore First and Second Amendment rights he says have been restricted in New York."
+      ],
+      "site": "https://www.constantino.com/",
+      "siteLabel": "constantino.com",
+      "source": "https://www.constantino.com/agenda/"
+    },
+    "blake gendebien": {
+      "role": "Dairy farmer running for Congress in New York's 21st District.",
+      "bio": "His campaign says his parents started a North Country dairy farm after the Peace Corps, and that he has run Twin Mill Farms with his wife and three sons for 22 years. It says he has also coached junior-varsity basketball, served on the Lisbon school board, and founded a nonprofit for children with cancer.",
+      "issues": [
+        "He says he would repeal costly regulations, support fair trade, and bring manufacturing back so prices fall for families and for seniors on fixed incomes.",
+        "He says this border district needs more Border Patrol staffing, a harder path for illegal entry and an easier legal one, and fixes to the guest-worker programs farms rely on.",
+        "He says farms and Main Street businesses also need fewer burdensome rules and investment in rural roads and bridges."
+      ],
+      "site": "https://blakegendebienforcongress.com/",
+      "siteLabel": "blakegendebienforcongress.com",
+      "donate": "https://secure.actblue.com/donate/gendebien_website?refcode=website-header",
+      "source": "https://blakegendebienforcongress.com/issues/"
+    },
+    "kailee buller": {
+      "role": "Former Agriculture Department chief of staff running for Congress in New York's 22nd District.",
+      "bio": "Her campaign says she grew up in Auburn in a blue-collar family, was the first in her family to finish college, and most recently was chief of staff to the secretary of agriculture. It says she is a working mother of three running to lower costs for Central New York.",
+      "issues": [
+        "She says she would grow good-paying jobs and lower everyday costs so families do not have to leave New York to get ahead.",
+        "She says her work in government has focused on cutting red tape, strengthening American agriculture, and protecting jobs in the food and energy supply chain."
+      ],
+      "site": "https://kaileebuller.com/",
+      "siteLabel": "kaileebuller.com",
+      "donate": "https://secure.winred.com/kailee-for-congress/donate-today",
+      "source": "https://kaileebuller.com/"
+    },
+    "john mannion": {
+      "role": "U.S. representative for New York's 22nd District.",
+      "bio": "His campaign says he is a former public-school science teacher and labor leader whose grandparents came from Ireland and whose parents worked for the railroad and the telephone company. It says he and his wife, a reading teacher, have spent their lives in Central New York.",
+      "issues": [
+        "He says he joined a caucus on utility bills, voted to extend Affordable Care Act tax credits, and cosponsors a bill to make the child tax credit permanent.",
+        "He says he would restore cuts to Medicare and Medicaid, bring back a public health-care option, and negotiate lower drug prices, including a broader cap on insulin.",
+        "He says he cosponsors a bill to restore Roe v. Wade and would expand access to reproductive care and mental-health treatment."
+      ],
+      "site": "https://mannionforny.com/",
+      "siteLabel": "mannionforny.com",
+      "source": "https://www.mannionforny.com/on-the-issues/affordability/"
+    },
+    "nick langworthy": {
+      "role": "U.S. representative for New York's 23rd District.",
+      "bio": "His campaign says he grew up in South Dayton, graduated from Pine Valley Central School, and is the son of a small-business owner in Jamestown. It says he has spent his career defending constitutional rights, including the Second Amendment.",
+      "issues": [
+        "He says he would curb spending that is raising the price of groceries, gas, cars, and housing, and use tax and deregulatory policy to raise take-home pay.",
+        "He says he would speed energy permits, move supply chains away from China, and fully fund border enforcement while ending catch-and-release.",
+        "He says he would support hiring more police officers and oppose efforts to defund them."
+      ],
+      "site": "https://nicklangworthy.com/",
+      "siteLabel": "nicklangworthy.com",
+      "donate": "https://secure.anedot.com/d0857e4d-cf21-42a8-ae60-e6b50dcb52b2/donate-today",
+      "source": "https://nicklangworthy.com/"
+    },
+    "claudia tenney": {
+      "role": "U.S. representative for New York's 24th District.",
+      "bio": "Her campaign says she is an attorney and businesswoman whose view of public service was shaped by running a small business while raising her son as a single mother. It says she served six years in the state Assembly before her election to Congress.",
+      "issues": [
+        "She says she has led efforts against Chinese theft of American intellectual property and against China's grip on the financial system.",
+        "She says the border has to be secured now, that Social Security and Medicare are personal because her parents relied on them, and that the Second Amendment is a way of life in Upstate New York.",
+        "She also says the health-care system is not working and that Congress has to deliver solutions, and she highlights veterans' issues as what she calls a Marine mom."
+      ],
+      "site": "https://claudiaforcongress.com/",
+      "siteLabel": "claudiaforcongress.com",
+      "donate": "https://secure.winred.com/tenney-for-congress/donate",
+      "source": "https://claudiaforcongress.com/issues/"
+    },
+    "alissa ellman": {
+      "role": "Army veteran running for Congress in New York's 24th District.",
+      "bio": "Her campaign says she grew up in Houghton, enlisted before she could vote, and served at Bagram Airfield helping oversee flights in Afghanistan. It says she later taught, worked at the Department of Veterans Affairs until she was laid off during the DOGE cuts, and then decided to run.",
+      "issues": [
+        "She says she would protect and expand Medicaid, arguing a Republican budget bill would cut coverage in the district and close rural hospitals.",
+        "She says she would expand child care, home-repair help, and the low-income housing tax credit, and seek funding for rural buses and water systems.",
+        "She says she would pass the PRO Act, defend abortion access and LGBTQ rights, and not be funded by large corporations."
+      ],
+      "site": "https://www.ellmanforcongress.com/",
+      "siteLabel": "ellmanforcongress.com",
+      "donate": "https://secure.actblue.com/donate/alissaellman",
+      "source": "https://www.ellmanforcongress.com/meetalissa"
+    },
+    "virginia mcintyre": {
+      "role": "Monroe County legislator running for Congress in New York's 25th District.",
+      "bio": "Her campaign says she is a county legislator and educator focused on taxpayer-first budgeting and on older adults, people with special needs, caregivers, veterans, and local businesses. It says she wants to deliver for Monroe and Ontario counties.",
+      "issues": [
+        "She says she would support community policing and prevention programs, and expand vocational and technical education tied to good careers.",
+        "She says she would grow good-paying jobs, ease the burden on working families, fix roads and bridges, and expand broadband.",
+        "She says health-care billing should be transparent so families are not surprised by the cost of care."
+      ],
+      "site": "https://virginiamcintyreforcongress.com/",
+      "siteLabel": "virginiamcintyreforcongress.com",
+      "source": "https://virginiamcintyreforcongress.com/"
+    },
+    "joseph morelle": {
+      "role": "U.S. representative for New York's 25th District.",
+      "bio": "His campaign says he was born and raised upstate and has lived in the same Irondequoit neighborhood for most of his life, the son of a Korean War veteran and a Plumbers and Pipefitters member. It says he served in the county legislature and as Assembly majority leader, and is now ranking member of the House Administration Committee.",
+      "issues": [
+        "He says he is fighting to expand child care and affordable housing, strengthen job training, and support local businesses.",
+        "He says he has worked to end surprise medical bills, lower prescription prices, and protect people with preexisting conditions, and he opposes efforts to dismantle the Affordable Care Act.",
+        "He also highlights climate action, gun laws, abortion rights, and equal rights for people who live in the country."
+      ],
+      "site": "https://www.votemorelle.com/",
+      "siteLabel": "votemorelle.com",
+      "donate": "https://secure.actblue.com/donate/aa-feb20?refcode=kicker&amount=25&recurring=1",
+      "source": "https://www.votemorelle.com/"
+    },
+    "dennis hannon": {
+      "role": "Construction-family candidate running for Congress in New York's 26th District.",
+      "bio": "His campaign says he grew up working in his father's construction business and is running because a fight over his own child's medical care convinced him that parents are not being heard. It says he wants safer streets, costs people can feel, and protections for children.",
+      "issues": [
+        "He says he would disrupt fentanyl trafficking, focus immigration enforcement on serious public-safety threats, and support cooperation between local and federal agencies.",
+        "He says he would seek tax relief for working families, lower drug costs by reforming pharmacy benefit managers, and stop governments from banning particular energy sources.",
+        "He says he would limit online targeting of children, bar commercial artificial intelligence from generating content involving minors, and criminally target people who he says profit from medical procedures on children."
+      ],
+      "site": "https://hannonforcongress.com/",
+      "siteLabel": "hannonforcongress.com",
+      "source": "https://hannonforcongress.com/"
+    },
+    "timothy kennedy": {
+      "role": "U.S. representative for New York's 26th District.",
+      "bio": "His campaign says he grew up in a working-class Buffalo family, began as an occupational therapist, and served 14 years in the state Senate before winning a 2024 special election to the House. It says he serves on Veterans' Affairs and Homeland Security, where he is ranking member of the emergency-management subcommittee.",
+      "issues": [
+        "He says he is fighting cuts to veterans' services and to health care for families, seniors, and people with disabilities, and working to lower the cost of living in Western New York.",
+        "He says that as a state senator he pushed a multiyear transportation building plan, protections for organized labor, record school funding, abortion rights, LGBTQ students, and stronger gun laws."
+      ],
+      "site": "https://kennedyforuscongress.com/",
+      "siteLabel": "kennedyforuscongress.com",
+      "donate": "https://secure.ngpvan.com/cPyJ6b7wZk2UWe2rpV3WPw2",
+      "source": "https://kennedyforuscongress.com/meet-tim/"
+    }
+  },
+  "measures": {}
+}

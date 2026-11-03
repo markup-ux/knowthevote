@@ -1,0 +1,465 @@
+{
+  "code": "co",
+  "ballotSource": "Colorado Secretary of State, 2026 General Election official candidate list, https://coloradosos.gov/pubs/elections/vote/generalCandidates.html",
+  "where": {
+    "url": "https://www.sos.state.co.us/pubs/elections/VIP.html",
+    "label": "Where do I drop off my ballot or vote in person?"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state."
+    }
+  },
+  "people": {
+    "victor marx": {
+      "role": "Candidate for governor of Colorado.",
+      "bio": "Victor Marx says he is a husband, father, and community worker who has supported veterans and people in crisis, and that he founded organizations to do that work. He says he is running to restore trust and put families' safety and costs first.",
+      "issues": [
+        "He says he will back law enforcement and make public safety a first priority.",
+        "He says he will lower the cost of living, change housing policy, cut taxes, and push for good-paying jobs.",
+        "He says government should answer to taxpayers rather than to special interests."
+      ],
+      "site": "https://www.victor2026.com/",
+      "siteLabel": "victor2026.com",
+      "donate": "https://secure.winred.com/victor-marx-for-governor/donate",
+      "source": "https://www.victor2026.com/"
+    },
+    "phil weiser": {
+      "role": "Colorado attorney general running for governor.",
+      "bio": "Phil Weiser, the attorney general, says he is the son and grandson of Holocaust survivors and a first-generation American. He says he clerked at the U.S. Supreme Court, taught at the University of Colorado, and is running to keep the state safer and more affordable.",
+      "issues": [
+        "He says he will work with local leaders to make housing more affordable and to let more people live near their jobs.",
+        "He says he will fight to keep health coverage affordable and to protect the care Coloradans already use.",
+        "He says he will work with law enforcement, fire chiefs, and victims' advocates on safety at home, at school, and in the community."
+      ],
+      "site": "https://philforcolorado.com/",
+      "siteLabel": "philforcolorado.com",
+      "donate": "https://secure.actblue.com/donate/weiserwebsite",
+      "source": "https://philforcolorado.com/about/"
+    },
+    "greg lopez": {
+      "role": "Air Force veteran and former Parker mayor running for governor.",
+      "bio": "Greg Lopez, a U.S. Air Force veteran and former mayor and city manager of Parker, says state government should live within a budget the way families do.",
+      "issues": [
+        "He says he will use zero-based budgeting and review agencies for waste, duplication, and rules that do not help people.",
+        "He says he will push for 25,000 modest starter homes in four years and for lower water and sewer connection fees.",
+        "He says he will hold the transportation department to congestion relief and road repair, and expand school choice and vocational training."
+      ],
+      "site": "https://www.greglopez.co/",
+      "siteLabel": "greglopez.co",
+      "donate": "https://secure.anedot.com/greg-lopez-for-colorado/donate",
+      "source": "https://www.greglopez.co/issues"
+    },
+    "jeff peckman": {
+      "role": "Unity Party candidate for governor.",
+      "bio": "Jeff Peckman says he is running for governor with T.J. Cole, chair of the Unity Party of Colorado, as his running mate. He says his own campaign is self-funded and is not taking donations.",
+      "issues": [
+        "He says Colorado companies can cut air pollution without new electric-vehicle mandates, and that he would declare an air-pollution emergency on his first day.",
+        "He says he would create a chief coherence officer and a partnership to launch new technology projects.",
+        "He says he will work to end TABOR, which he calls a limit that is hurting the state."
+      ],
+      "site": "https://jeffpeckman.com/",
+      "siteLabel": "jeffpeckman.com",
+      "donate": "",
+      "source": "https://jeffpeckman.com/"
+    },
+    "erik underwood": {
+      "role": "Candidate for governor of Colorado.",
+      "bio": "Erik Underwood says he has fought corporate fraud, including eight years in federal court against Bank of America, and that he holds a patent on an artificial-intelligence product. He says he would bring that same fight to the governor's office.",
+      "issues": [
+        "He says he has a plan for home loans with a down payment capped at $2,500.",
+        "He says he would fund child care with 25 cents on each purchase and wants universal health care in Colorado.",
+        "He says he would offer free college and trade school and would fight for the state's water rights."
+      ],
+      "site": "https://erikunderwood.com/",
+      "siteLabel": "erikunderwood.com",
+      "donate": "https://secure.actblue.com/donate/underwood-303",
+      "source": "https://erikunderwood.com/"
+    },
+    "mark baisley": {
+      "role": "Colorado state senator and Republican nominee for U.S. Senate.",
+      "bio": "Mark Baisley says he is an aerospace engineer who leads a Colorado software company and has served in the state House and the state Senate. He says he is the Republican nominee for the U.S. Senate in 2026.",
+      "issues": [
+        "He says that in the legislature he worked on jobs, education, and essential services while limiting government intrusion into private life.",
+        "He says he has defended water rights, protected the energy industry, and opposed reckless spending and government overreach.",
+        "He says he will take that approach to Washington, with an emphasis on liberty and Colorado families."
+      ],
+      "site": "https://baisleyforsenate.com/",
+      "siteLabel": "baisleyforsenate.com",
+      "donate": "",
+      "source": "https://baisleyforsenate.com/"
+    },
+    "john hickenlooper": {
+      "role": "U.S. senator and former Colorado governor.",
+      "bio": "John Hickenlooper's campaign describes him as a former brewpub owner, a former governor, and a sitting senator. It says he is the only peer-reviewed scientist in the Senate.",
+      "issues": [
+        "He says he takes no corporate PAC money and supports overturning Citizens United, tighter disclosure of political money, and protection of vote-by-mail.",
+        "He says he is working on housing costs, small-business capital, and union rights, including the PRO Act.",
+        "He says health care is a right, and that he supports a public option, Medicare negotiation of drug prices, and restoring Roe v. Wade."
+      ],
+      "site": "https://hickenlooper.com/",
+      "siteLabel": "hickenlooper.com",
+      "donate": "https://hickenlooper.com/donate",
+      "source": "https://hickenlooper.com/issues/"
+    },
+    "bob chew": {
+      "role": "Former Navy submarine officer running for U.S. Senate.",
+      "bio": "Bob Chew says he served as a Navy submarine officer during the Cold War and has spent three decades creating jobs. He says he is an independent candidate running for people who are tired of the two parties.",
+      "issues": [
+        "He says he will measure success by problems solved and people helped, not by how much public money is spent.",
+        "He says he cannot be bought or bullied, and that his promise is to Coloradans rather than to parties or donors."
+      ],
+      "site": "https://bobchew2026.com/",
+      "siteLabel": "bobchew2026.com",
+      "donate": "https://secure.anedot.com/robert-chew-for-senate/donate",
+      "source": "https://bobchew2026.com/"
+    },
+    "michael allen": {
+      "role": "District attorney running for Colorado attorney general.",
+      "bio": "Michael Allen says he is the elected district attorney for El Paso and Teller counties, a former Navy aviation electronics technician, and a husband and father. He says he has worked as a prosecutor since a law-school internship in 2004.",
+      "issues": [
+        "He says he will put victims first, use the statewide grand jury on crimes that cross county lines, and work with sheriffs and police across the state, including rural departments.",
+        "He says he will review the attorney general's spending, cut waste, and treat crime as a driver of insurance and business costs.",
+        "He says he will investigate public corruption without regard to party and will defend Colorado's water rights in disputes with other states."
+      ],
+      "site": "https://michaelallenforcolorado.com/",
+      "siteLabel": "michaelallenforcolorado.com",
+      "donate": "",
+      "source": "https://michaelallenforcolorado.com/"
+    },
+    "jena griswold": {
+      "role": "Colorado secretary of state running for attorney general.",
+      "bio": "Jena Griswold says she grew up in a working-class family in Estes Park, was the first in her family to attend a four-year college, and earned a law degree. She says she has been secretary of state since 2018 and is running for attorney general to stand up to Donald Trump and protect Coloradans' rights.",
+      "issues": [
+        "She says she will defend the rights and freedoms of Coloradans and will not be intimidated.",
+        "She says that as secretary of state she backed laws against threats to election workers, guns near voting centers, and tampering with voting equipment.",
+        "She says she expanded ballot drop boxes, in-person voting, campus and tribal voting access, and automatic voter registration."
+      ],
+      "site": "https://www.jenaforcolorado.com/",
+      "siteLabel": "jenaforcolorado.com",
+      "donate": "https://secure.actblue.com/donate/jenaforcoag-4-7-26",
+      "source": "https://www.jenaforcolorado.com/about"
+    },
+    "james wiley": {
+      "role": "Republican nominee for Colorado secretary of state.",
+      "bio": "James Wiley says he is a fifth-generation Coloradan, born in Colorado Springs, who lived in Kazakhstan as a child and later earned a management degree and an MBA from CSU Pueblo. He says he is the Republican nominee and calls himself the Red Flame of Liberty.",
+      "issues": [
+        "He says elections should be held on one day, in person, with voter identification, paper ballots, and citizen hand counts.",
+        "He says he would put public records, including voter rolls and business filings, on a blockchain he calls Liberty Chain.",
+        "He says he would cut red tape and fees so it is faster and cheaper to start a business."
+      ],
+      "site": "https://wileyforcolorado.com/",
+      "siteLabel": "wileyforcolorado.com",
+      "donate": "https://secure.anedot.com/red-flame-of-liberty/donate",
+      "source": "https://wileyforcolorado.com/"
+    },
+    "amanda gonzalez": {
+      "role": "Jefferson County clerk and recorder running for secretary of state.",
+      "bio": "Amanda Gonzalez says she is Jefferson County's clerk and recorder, an attorney, and the Democratic nominee for secretary of state. She says she previously led Colorado Common Cause and worked on voting rights and the state's independent redistricting commission.",
+      "issues": [
+        "She says that as clerk she has worked to expand ballot access, improve election security, and run elections in one of the state's largest counties.",
+        "She says the office should serve Colorado, not her own politics.",
+        "She says she will work so every voice is heard, every vote is counted, and elections stay secure."
+      ],
+      "site": "https://www.amandaforcolorado.com/",
+      "siteLabel": "amandaforcolorado.com",
+      "donate": "https://secure.actblue.com/donate/amanda4co",
+      "source": "https://www.amandaforcolorado.com/"
+    },
+    "amanda campbell": {
+      "role": "Candidate for Colorado secretary of state.",
+      "bio": "Amanda Campbell describes herself as a Colorado native, a married adoptive homeschooling mother, and a constitutionalist. She says she grew up around petition campaigns through her father's political work and wants the public to keep access to the laws that govern them.",
+      "issues": [
+        "She says the state and federal constitutions bind politicians, and that the secretary of state should defend them by warning the legislature and going to court.",
+        "She says voters have a right to use the initiative process without politicians interfering.",
+        "She says business filings should be simpler, and that election security should be improved with each county as the state grows."
+      ],
+      "site": "http://campbellgoodforcolorado.com/",
+      "siteLabel": "campbellgoodforcolorado.com",
+      "donate": "",
+      "source": "http://campbellgoodforcolorado.com/"
+    },
+    "celeste landry": {
+      "role": "Candidate for Colorado secretary of state.",
+      "bio": "Celeste Landry says the secretary of state works for every Coloradan, regardless of party. She describes herself as a longtime election champion campaigning to be the next secretary of state.",
+      "issues": [
+        "She says her campaign is for the right to vote.",
+        "She says she wants better representation.",
+        "She says she is fighting for election integrity."
+      ],
+      "site": "https://www.celeste4sos.com/",
+      "siteLabel": "celeste4sos.com",
+      "donate": "https://www.celeste4sos.com/donate",
+      "source": "https://www.celeste4sos.com/"
+    },
+    "sean vadney": {
+      "role": "Libertarian business owner running for secretary of state.",
+      "bio": "Sean Vadney says he was born in a Denver suburb, raised by a working-class single mother, and has worked in politics for almost seven years. He says he is a Libertarian and a business owner running for secretary of state.",
+      "issues": [
+        "He says every voter, of any party, should feel secure, and that voting should include checks against fraud.",
+        "He says Coloradans across parties are worried about election integrity and that he wants people to feel confident when they cast a ballot.",
+        "He says starting and keeping a business should be easy and affordable, and that he has run into red tape and high costs as a business owner."
+      ],
+      "site": "https://seanvadneyforsos.org/",
+      "siteLabel": "seanvadneyforsos.org",
+      "donate": "",
+      "source": "https://seanvadneyforsos.org/about-sean"
+    },
+    "eric mulder": {
+      "role": "Libertarian nominee for governor of Colorado.",
+      "bio": "Eric Mulder says he is a U.S. Army veteran who served in Afghanistan as a chaplain's assistant. He says that work showed him people from very different backgrounds can pull together when the mission comes first, and that Colorado should govern in that spirit.",
+      "issues": [
+        "He says programs should be judged by the results they deliver, not by how many dollars they spend, and that communities closest to a problem should be free to solve it.",
+        "He proposes a one-year break from the state sales tax for places in economic distress, with local voters deciding whether to replace it with a local tax for schools, roads, water, emergency services, or other needs.",
+        "He says he would oppose government cameras that track every passing car, and he wants the state to clear a path for small nuclear reactors, including reactors that large power users could run themselves."
+      ],
+      "site": "https://www.mulderforgovernor.org/",
+      "siteLabel": "mulderforgovernor.org",
+      "source": "https://www.mulderforgovernor.org/priorities"
+    },
+    "adam withrow": {
+      "role": "Working-class candidate for the U.S. Senate.",
+      "bio": "Adam Withrow says he is not a politician. He says he has worked as a ranch hand, a nursing aide, a cook, a contractor, and a detention officer, and that he is running to speak for ordinary people rather than for donors.",
+      "issues": [
+        "He says fossil fuels are finite and that the country should start moving off them instead of building the future on older technology.",
+        "He says medicine has been organized around corporate profit, and that health care for everyone would cost less than half the defense budget.",
+        "He says he opposes war, and that trade and treating people as equals will do more than bombs."
+      ],
+      "site": "https://www.senatorwithrow.com/",
+      "siteLabel": "senatorwithrow.com",
+      "source": "https://www.senatorwithrow.com/"
+    },
+    "blake huber": {
+      "role": "Election-reform advocate running for U.S. Senate.",
+      "bio": "Blake Huber says he has worked on campaigns since he was 17 and spent more than 30 years in management, including apartments, a small business, a motel, and teams of network engineers. He says he later chaired the Libertarian Party of Colorado, served on its national committee, and now focuses on how elections are run.",
+      "issues": [
+        "He wants approval voting, so people can support every candidate they like and elections are not decided by fear of wasting a vote.",
+        "He says immigration should pair orderly borders with a simpler legal path for people who pass background checks and want to work.",
+        "He says federal rules bury small businesses in cost and paperwork, and that old rules should expire while new ones face a test of their economic impact."
+      ],
+      "site": "https://lpcocolorado.my.canva.site/blake-huber-us-senate-website",
+      "siteLabel": "lpcocolorado.my.canva.site",
+      "source": "https://lpcocolorado.my.canva.site/blake-huber-us-senate-website"
+    },
+    "christy peterson": {
+      "role": "Republican candidate for U.S. House in Colorado's 1st District.",
+      "bio": "Christy Peterson's campaign says she is the Republican candidate for Congress in the 1st District, covering Denver and parts of northern Arapahoe County. She says she is running on common sense, safe cities, a strong economy, and safe schools.",
+      "issues": [
+        "She says she stands for low taxes, limited government, and peace through strength.",
+        "She says she would review Social Security's finances so the program can stay solvent, and that she would cut the federal debt.",
+        "She says she supports Colorado's Taxpayer's Bill of Rights."
+      ],
+      "site": "https://christyforamerica.us/",
+      "siteLabel": "christyforamerica.us",
+      "donate": "https://secure.anedot.com/christypetersonforamerica/donate",
+      "source": "https://christyforamerica.us/"
+    },
+    "melat kiros": {
+      "role": "Democratic socialist running for U.S. House in Colorado's 1st District.",
+      "bio": "Melat Kiros says she was born in Addis Ababa and that her family moved to Denver after her father was selected in the diversity-visa lottery. She says she earned a law degree, lost a New York law job after refusing to take down an article defending students who protested Israel, and is now a doctoral student and a barista.",
+      "issues": [
+        "She says she rejects corporate PAC money and will stand for Medicare for All, a housing-first approach to homelessness, universal child care, and an arms embargo.",
+        "She says medical bills should not bankrupt people, and that she would abolish ICE and replace it with an immigration system aimed at public safety.",
+        "She says universal child care would keep parents from having to choose between work and paying the equivalent of a second rent."
+      ],
+      "site": "https://www.kirosforco.com/",
+      "siteLabel": "kirosforco.com",
+      "donate": "https://secure.actblue.com/donate/melat-kiros-1",
+      "source": "https://www.kirosforco.com/priorities-2"
+    },
+    "kelley dennison": {
+      "role": "Candidate for U.S. House in Colorado's 2nd District.",
+      "bio": "Kelley Dennison says she is a Colorado native with roots in mountain towns and the Front Range, and a business owner. She says she is running so those communities have a voice in Congress on costs, energy, and the state's land and water.",
+      "issues": [
+        "She says families are squeezed by housing, gas, inflation, and property taxes, and that the district should do better by veterans and seniors.",
+        "She says parents should be partners in their children's education, and that responsible gun owners should not be punished for crimes committed by other people.",
+        "She says she has signed a pledge to cosponsor and vote for a constitutional amendment limiting how long any person can serve in Congress."
+      ],
+      "site": "https://kelleyforco.com/",
+      "siteLabel": "kelleyforco.com",
+      "source": "https://kelleyforco.com/"
+    },
+    "joe neguse": {
+      "role": "U.S. representative for Colorado's 2nd District.",
+      "bio": "Joe Neguse's campaign says he represents the 2nd District and is the first African American elected to Congress from Colorado. It says his parents came to the United States as refugees from Eritrea, and that before Congress he was a lawyer, a CU regent, and head of the state's consumer-protection agency.",
+      "issues": [
+        "He says public lands are central to the district, and that he moved a Colorado public-lands bill through the House that would preserve about 400,000 acres and has pushed money toward wildfire preparation.",
+        "He says climate change is an existential threat, and that he has pressed for more solar power, renewable energy, and deep cuts in carbon emissions.",
+        "He says health coverage should be available to everyone, and that he is working to lower drug prices, raise the minimum wage, and close the gender pay gap."
+      ],
+      "site": "https://joeforcolorado.com/",
+      "siteLabel": "joeforcolorado.com",
+      "donate": "https://joeforcolorado.com/donate?refcode=JN_website_nav",
+      "source": "https://joeforcolorado.com/on-the-issues/"
+    },
+    "jeff hurd": {
+      "role": "Grand Junction attorney running for U.S. House in Colorado's 3rd District.",
+      "bio": "Jeff Hurd says he grew up in Grand Junction, is a husband and father of five, and built a law practice for rural electric cooperatives, counties, schools, fire districts, and broadband providers. He says western and southern Colorado need a representative who focuses on results.",
+      "issues": [
+        "He says the border should be secured now, legal immigration expanded, and law enforcement given what it needs to stop fentanyl and other drugs.",
+        "He says his first priority is higher-paying work in rural Colorado, with fewer unnecessary rules and a fairer field for small businesses.",
+        "He says he supports producing Colorado oil and gas along with competitively priced cleaner power, and that he will press the Lower Basin to live within its share of Colorado River water."
+      ],
+      "site": "https://www.jeffhurdforcolorado.com/",
+      "siteLabel": "jeffhurdforcolorado.com",
+      "donate": "https://secure.anedot.com/jeff-hurd-for-congress/ebd29ae4-8678-4706-921f-e5ae235c7601?source=website",
+      "source": "https://www.jeffhurdforcolorado.com/issues"
+    },
+    "dwayne romero": {
+      "role": "Army veteran and business owner running for U.S. House in Colorado's 3rd District.",
+      "bio": "Dwayne Romero says he is a husband, a father, and an Army engineer officer who was raised by a single mother on low wages and food stamps. He says he has also been a small-business owner, a school board president, a city councilman, and a state economic-development director.",
+      "issues": [
+        "He says affordability comes first, and that he would start by repealing tariffs and expanding family tax credits.",
+        "He says he would pass a farm bill, keep foreign buyers out of Colorado water and farmland, and defend the district's water.",
+        "He says the district should keep using the energy it already produces while newer sources come online, and that rural hospitals and public-land staff need to be protected."
+      ],
+      "site": "https://romeroforcolorado.com/",
+      "siteLabel": "romeroforcolorado.com",
+      "donate": "https://secure.actblue.com/donate/rfc-website",
+      "source": "https://romeroforcolorado.com/issues/"
+    },
+    "lauren boebert": {
+      "role": "U.S. representative running for Colorado's 4th District.",
+      "bio": "Lauren Boebert's campaign says she serves in the U.S. House and is running to represent the 4th District. It says she is the mother of four boys and, before Congress, volunteered with women in the Garfield County Jail and helped gather signatures against the National Popular Vote Compact.",
+      "issues": [
+        "She says she believes in personal freedom, the rights of citizens, and the Constitution.",
+        "She says she has passed House bills on energy production and water rights, and has pushed back on federal land rules she says hurt ranchers and farmers.",
+        "She says a jobs bill she got signed in 2023 will create 1,000 jobs in southern Colorado."
+      ],
+      "site": "https://laurenforcolorado.com/",
+      "siteLabel": "laurenforcolorado.com",
+      "source": "https://laurenforcolorado.com/about/"
+    },
+    "eileen laubacher": {
+      "role": "Retired Navy rear admiral running for U.S. House in Colorado's 4th District.",
+      "bio": "Eileen Laubacher says she served 34 years in the Navy, graduated from the Naval Academy, and raised five children in Colorado. She says she retired in 2024 and is running because the district needs someone focused on costs and on making government work.",
+      "issues": [
+        "She says lowering costs comes first, including ending tariffs that raise prices, a middle-class tax cut, and making data centers pay for the power and infrastructure they use.",
+        "She says she would fight for rural hospitals, pass a long-term farm bill, and build water supplies so farms are not sold off and dried up.",
+        "She says she takes no corporate PAC money and supports term limits, a ban on members trading stocks, a secure border, and a path to citizenship."
+      ],
+      "site": "https://www.eileenforcolorado.com/",
+      "siteLabel": "eileenforcolorado.com",
+      "donate": "https://secure.actblue.com/donate/laubacher_website",
+      "source": "https://www.eileenforcolorado.com/platform"
+    },
+    "jeff crank": {
+      "role": "U.S. representative for Colorado's 5th District.",
+      "bio": "Jeff Crank says he was born and raised in southern Colorado and has spent more than 30 years working to strengthen El Paso County. He says he is in Congress and is asking voters in the 5th District to send him back.",
+      "issues": [
+        "He says he is focused on the district's military installations and its veterans.",
+        "He says he is working to make the community more resilient to wildfires.",
+        "He says he wants conservative change so Colorado stays a place to live, work, and raise a family."
+      ],
+      "site": "https://jeffcrankforcongress.com/",
+      "siteLabel": "jeffcrankforcongress.com",
+      "donate": "https://secure.winred.com/jeff-crank-for-congress/donate-today",
+      "source": "https://jeffcrankforcongress.com/"
+    },
+    "jessica killin": {
+      "role": "Army veteran running for U.S. House in Colorado's 5th District.",
+      "bio": "Jessica Killin says she is a fourth-generation Coloradan, raised in Colorado Springs by two public-school educators, who served as an Army captain and military police officer. She says she later spent more than a decade at USAA on policy for military families, then worked on Capitol Hill and at the White House, and that this is her first campaign for office.",
+      "issues": [
+        "She says she would lower costs for housing, groceries, health care, and energy, strengthen VA care, and cut federal spending that does not work.",
+        "She says she would end tariffs that raise everyday prices, limit corporate landlords, and hold monopoly utilities accountable for high electric bills.",
+        "She says she would ban members of Congress from trading stocks, support term limits, and let Medicare negotiate prices on more drugs."
+      ],
+      "site": "https://www.killinforcolorado.com/",
+      "siteLabel": "killinforcolorado.com",
+      "donate": "https://secure.actblue.com/donate/killin-web",
+      "source": "https://www.killinforcolorado.com/frequently-asked-questions"
+    },
+    "jason clark": {
+      "role": "Small-business owner running for U.S. House in Colorado's 6th District.",
+      "bio": "Jason Clark says he was raised in a working-class family in the 6th District, went to Smoky Hill High School, and graduated from West Point in 1992. He says he has been an entrepreneur and small-business owner in Aurora for more than 30 years.",
+      "issues": [
+        "He says rent, education, and health care cost too much, and that bringing those costs down is his first priority.",
+        "He says the campaign is about good-paying jobs, and that he would back entrepreneurs, small businesses, and developers.",
+        "He says he would go after criminals and clean up Colfax Avenue, and that every Colorado child should be able to thrive."
+      ],
+      "site": "https://jasonclarkuscongress.com/",
+      "siteLabel": "jasonclarkuscongress.com",
+      "donate": "https://jasonclarkuscongress.com/donate-to-win-this-november/",
+      "source": "https://jasonclarkuscongress.com/"
+    },
+    "jason crow": {
+      "role": "Combat veteran running for Congress.",
+      "bio": "Jason Crow's campaign says he grew up in a working-class family, the grandson of a bricklayer and the son of small-business owners. It says he joined the National Guard to pay for school, enlisted after September 11, served three combat tours in Iraq and Afghanistan, rose from private to captain, and earned a Bronze Star.",
+      "issues": [
+        "He says he is fighting to make daily life more affordable and to lower health-care costs.",
+        "He says he has never taken corporate PAC money and never will, and that he wants campaign-finance reform and a ban on insider stock trading.",
+        "He says he does not trade stocks and posts his public schedule so he answers to Coloradans rather than to donors."
+      ],
+      "site": "https://jasoncrow.org/",
+      "siteLabel": "jasoncrow.org",
+      "donate": "https://secure.actblue.com/donate/crow-website",
+      "source": "https://jasoncrow.org/"
+    },
+    "tim bennett": {
+      "role": "Retired Army officer running for U.S. House in Colorado's 7th District.",
+      "bio": "Tim Bennett says he is a retired Army lieutenant colonel and Ranger, a single father of two, and a sitting school board member who has lived in Colorado since 1973. He says he is running because prices, safety, and policy from Washington are making life harder for families in the 7th District.",
+      "issues": [
+        "He says he will ask of every bill whether it makes life more affordable in the district, and that he wants housing within reach, careful spending, and affordable energy.",
+        "He says he will protect Colorado water rights and storage, back law enforcement against violent crime and fentanyl, and manage forests to lower wildfire risk.",
+        "He says he would protect Medicare for seniors and Medicaid for people who need it, while cutting fraud and rejecting a full federal takeover of health care."
+      ],
+      "site": "https://timbennettforcongress.com/",
+      "siteLabel": "timbennettforcongress.com",
+      "donate": "https://secure.anedot.com/tim-bennett-for-congress/7ed83e68-b6c6-4895-8302-e2e2c650a204",
+      "source": "https://timbennettforcongress.com/platform"
+    },
+    "brittany pettersen": {
+      "role": "Former Colorado legislator running for Congress.",
+      "bio": "Brittany Pettersen says she was born in Colorado, grew up in a working-class Jefferson County family, and was the first in her family to finish high school and college. She says her mother's addiction after a back injury shaped her, and that she then served 10 years in the Colorado legislature.",
+      "issues": [
+        "She says she will keep working on small-business capital, job training, and rural broadband, and that she wants to stop price gouging and lower costs for families.",
+        "She says she supports a fast shift to wind, solar, and geothermal power, and that she will protect public lands and water levels in the Arkansas River.",
+        "She says she will defend Medicare and Social Security, let Medicare negotiate drug prices, and protect the right to vote."
+      ],
+      "site": "https://brittanypettersen.com/",
+      "siteLabel": "brittanypettersen.com",
+      "donate": "https://secure.actblue.com/donate/pettersendonate-2?refcode=website_signup",
+      "source": "https://brittanypettersen.com/issues/"
+    },
+    "gabe evans": {
+      "role": "U.S. representative for Colorado's 8th District.",
+      "bio": "Gabe Evans's campaign says he is a Colorado native and the grandson of Mexican immigrants who flew Black Hawk helicopters for 12 years in the Army and the Colorado National Guard. It says he then spent more than a decade as an Arvada police officer, served in the state House, and farms with his wife in southern Weld County.",
+      "issues": [
+        "He says he is fighting to secure the border, strengthen public safety, and make life more affordable.",
+        "He says he would lower the cost of living by reining in deficit spending and tax-and-regulate policy, and that the military should focus on fighting wars.",
+        "He says families should be free to pick a school, and that he will protect free expression and the Second Amendment."
+      ],
+      "site": "https://www.electgabeevans.com/",
+      "siteLabel": "electgabeevans.com",
+      "donate": "https://secure.winred.com/elect-gabe-evans-com/website",
+      "source": "https://www.electgabeevans.com/"
+    },
+    "manny rutinel": {
+      "role": "Former state representative running for U.S. House in Colorado's 8th District.",
+      "bio": "Manny Rutinel says he is the son of a Latina single mother, worked at McDonald's and sold plasma as a teenager, and later watched the family lose its home in the Great Recession. He says he has been an economist for the Army Corps of Engineers, a lawyer, and a state representative from Adams County.",
+      "issues": [
+        "He says he would expand tax credits for working parents, close corporate tax loopholes, and bring down the cost of drugs, insurance premiums, and energy bills.",
+        "He says he will protect Social Security and Medicare from benefit cuts and a higher retirement age, and cap insulin at $35 a month.",
+        "He says his campaign takes no corporate PAC money, and that he would ban members of Congress from trading stocks and push to undo Citizens United."
+      ],
+      "site": "https://www.mannyforcolorado.com/",
+      "siteLabel": "mannyforcolorado.com",
+      "donate": "https://secure.actblue.com/donate/mannyforco8",
+      "source": "https://www.mannyforcolorado.com/issues"
+    }
+  },
+  "measures": {}
+}

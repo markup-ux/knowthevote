@@ -1,0 +1,281 @@
+{
+  "code": "ne",
+  "ballotSource": "https://sos.nebraska.gov/sites/default/files/doc/elections/2026/Final_Statewide_General_Candidate_Filing_List_9.11.26.pdf",
+  "where": {
+    "url": "https://www.votercheck.necvr.ne.gov/VoterView/",
+    "label": "Nebraska Secretary of State"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The state constitution vests the supreme executive power in the governor, who shall take care that the laws are faithfully executed and that the affairs of the state are efficiently and economically administered."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The U.S. Senate has the sole power to conduct impeachment trials."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. The office says it serves the citizens of Nebraska and the state's elected officials with fidelity to the United States Constitution, the Nebraska Constitution, and Nebraska law."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. The office is responsible for elections, business registrations, occupational licensing, state rules and regulations, and records management, and it keeps the Great Seal of Nebraska."
+    }
+  },
+  "people": {
+    "jim pillen": {
+      "role": "Governor of Nebraska.",
+      "bio": "His campaign says he is back at work after a horseback accident and that the next stretch is about commonsense conservative solutions. He says the state's overall tax burden is lower than when he took office.",
+      "issues": [
+        "He says the next term should keep a focus on protecting children.",
+        "He says he will promote Nebraska agriculture and defend what he calls Nebraska values.",
+        "He says he will keep leading efforts to fix property taxes."
+      ],
+      "site": "https://www.jimpillen.com/",
+      "siteLabel": "jimpillen.com",
+      "donate": "https://secure.anedot.com/jim-pillen-for-governor/donate",
+      "source": "https://www.jimpillen.com/"
+    },
+    "lynne walz": {
+      "role": "Former teacher running for governor.",
+      "bio": "Her campaign says she is a lifelong Nebraskan, a former teacher, a mother, and a faith leader. She says she is running to bring what she calls common sense, compassion, and integrity back to the governor's office.",
+      "issues": [
+        "She says she wants low taxes, strong schools, and an economy where people can get ahead.",
+        "She says leaders should follow votes the public has already cast, including on medical marijuana, paid sick leave, the minimum wage, and school vouchers.",
+        "She says she would push for a government that tells people what they need to know, not only what they want to hear."
+      ],
+      "site": "https://lynnewalz.com/",
+      "siteLabel": "lynnewalz.com",
+      "donate": "https://secure.actblue.com/donate/lynneandben",
+      "source": "https://lynnewalz.com/"
+    },
+    "brett lindstrom": {
+      "role": "Candidate for governor.",
+      "bio": "His campaign describes a governing approach built on practical problem solving, personal responsibility, and what it calls stewardship for the next generation. He says cities and rural communities succeed together rather than against each other.",
+      "issues": [
+        "He says he would expand paths to success through education, workforce training, and entrepreneurship.",
+        "He says policy should be predictable and institutions reliable, with results ahead of spectacle.",
+        "He says the state should be held in trust for the people who come after, not only for the next election."
+      ],
+      "site": "https://votelindstrom.com/",
+      "siteLabel": "votelindstrom.com",
+      "donate": "",
+      "source": "https://votelindstrom.com/"
+    },
+    "pete ricketts": {
+      "role": "U.S. senator and former governor of Nebraska.",
+      "bio": "His campaign says that as governor he cut taxes, made government work better, and defended Nebraska values. It says he has carried that same approach into the Senate.",
+      "issues": [
+        "He says he stood with President Trump to cut taxes.",
+        "He says he has worked to secure the border.",
+        "He says he is trying to stop spending he calls out of control."
+      ],
+      "site": "https://petericketts.com/",
+      "siteLabel": "petericketts.com",
+      "donate": "https://secure.anedot.com/pete-ricketts-for-senate/33c2056e-4e94-4c9a-8596-31eeeb032b4b",
+      "source": "https://petericketts.com/"
+    },
+    "dan osborn": {
+      "role": "Industrial mechanic, union leader, and Navy veteran.",
+      "bio": "His campaign says he is a Navy veteran, a Nebraska National Guardsman, an industrial mechanic, and a union leader. He says no institution needs fixing more than the Senate, and that he would bring that work history to it.",
+      "issues": [
+        "He says people have more in common with each other than with the partisans who run Washington.",
+        "He says he would protect small businesses, family farms and ranches, and middle-class jobs.",
+        "He says he would bring Nebraska values to Washington, drawing on his years as a sailor, a guardsman, a mechanic, and a union leader."
+      ],
+      "site": "https://www.osbornforsenate.com/",
+      "siteLabel": "osbornforsenate.com",
+      "donate": "https://secure.actblue.com/donate/danosborn_website",
+      "source": "https://www.osbornforsenate.com/"
+    },
+    "mike hilgers": {
+      "role": "Attorney general of Nebraska.",
+      "bio": "His campaign says he is the state's 33rd attorney general, and that before that he started a law firm, served six years in the Legislature, and was elected Speaker in 2021. He says he was born and raised in Nebraska.",
+      "issues": [
+        "He says the office will fight federal overreach and protect constitutional rights, including the First and Second Amendments.",
+        "He says he will protect children, stand with law enforcement, and defend what he calls innocent life.",
+        "He says he will keep communities safe and take on predatory companies, fraudsters, and scam artists."
+      ],
+      "site": "https://www.mikehilgers.com/",
+      "siteLabel": "mikehilgers.com",
+      "donate": "https://secure.winred.com/mike-hilgers/donate-copy-6c7e5de1d321ed82",
+      "source": "https://www.mikehilgers.com/about/"
+    },
+    "jocelyn brasher": {
+      "role": "Former assistant attorney general and prosecutor.",
+      "bio": "Her campaign says she spent five years as an assistant attorney general in the consumer-protection bureau and was a deputy county attorney in Dawson and Dodge counties. She says she is running to return the office to serving Nebraskans rather than political fights.",
+      "issues": [
+        "She says the attorney general should protect consumers rather than large corporations.",
+        "She says enforcement should be both strong and fair so public safety and fairness go together.",
+        "She says the office should respect the will of voters instead of fighting them each election cycle."
+      ],
+      "site": "https://www.brasherforneag.com/",
+      "siteLabel": "brasherforneag.com",
+      "donate": "https://secure.actblue.com/donate/brasherforneag",
+      "source": "https://www.brasherforneag.com/issues"
+    },
+    "scott petersen": {
+      "role": "Business owner running for secretary of state.",
+      "bio": "His campaign calls him a business owner and a conservative and says he is running to restore confidence in elections and in government services. He says the office should safeguard elections, protect records, and serve businesses.",
+      "issues": [
+        "He says every legal vote should count, and only legal votes, through systems that can be audited.",
+        "He says he would strengthen the chain of custody for ballots and expand audits after the election.",
+        "He says business services should be efficient and should save taxpayer money."
+      ],
+      "site": "https://www.petersenfornebraska.com",
+      "siteLabel": "petersenfornebraska.com",
+      "donate": "https://secure.anedot.com/petersen-for-nebraska/donate",
+      "source": "https://www.petersenfornebraska.com/plan"
+    },
+    "sarah slattery": {
+      "role": "Small-business owner running for secretary of state.",
+      "bio": "Her campaign says she has an 18-year background as a small-business owner and is running for common-sense leadership. She says hyper-partisan drama and red tape have gotten in the way of the state's independent streak.",
+      "issues": [
+        "She says she would protect the vote and the public's voice.",
+        "She says she would support local economies.",
+        "She says she would build a more efficient state government that respects every citizen."
+      ],
+      "site": "https://www.slatteryfornebraska.com/",
+      "siteLabel": "slatteryfornebraska.com",
+      "donate": "",
+      "source": "https://www.slatteryfornebraska.com/"
+    },
+    "mike flood": {
+      "role": "U.S. representative for Nebraska's 1st District",
+      "bio": "The campaign says Mike Flood grew up in Norfolk, built Flood Communications from one radio station into a statewide group of radio and TV stations, and was the youngest speaker of the Nebraska Legislature. It says he was elected to Congress in a 2022 special election and chairs the Republican Main Street Caucus.",
+      "issues": [
+        "He says he ran to lower taxes, secure the border, and cut wasteful spending, and that he backed a tax cut covering tips, overtime, and Social Security.",
+        "The campaign says he voted for border-security funding and wrote a bipartisan bill aimed at making housing more affordable.",
+        "He says he is running again to stretch paychecks further, restrain federal spending, and stand up to foreign adversaries, including China."
+      ],
+      "site": "https://mikefloodfornebraska.com/",
+      "siteLabel": "Mike Flood for U.S. Congress",
+      "donate": "https://secure.anedot.com/d5f6f1da-c6e2-448d-bf93-e718311624d7/donate",
+      "source": "https://mikefloodfornebraska.com/about/"
+    },
+    "brinker harding": {
+      "role": "Omaha city councilman and candidate for Congress in Nebraska's 2nd District",
+      "bio": "The campaign says Brinker Harding is a fourth-generation Omahan, a business leader, and the Omaha City Council member for District 6. It says he was chief of staff and economic-development director for Mayor Hal Daub and has been on the council since 2017.",
+      "issues": [
+        "His campaign says he would work on wages and inflation, year-round E15, and prescription prices matched to other developed countries.",
+        "The site says he would protect Social Security, Medicaid, and Medicare for single mothers, veterans, older people, and people with disabilities, and make care including IVF more affordable.",
+        "He says he supports term limits, a ban on congressional stock trading, halting congressional pay during shutdowns, deporting people here illegally who commit violent crimes, and nationwide voter ID."
+      ],
+      "site": "https://www.brinkerharding.com/",
+      "siteLabel": "Brinker Harding for Congress",
+      "donate": "https://www.brinkerharding.com/donate",
+      "source": "https://www.brinkerharding.com/vision"
+    },
+    "adrian smith": {
+      "role": "U.S. representative who chairs the House Trade Subcommittee",
+      "bio": "The campaign says Adrian Smith chairs the Trade Subcommittee and the Congressional Biofuels Caucus, and that he founded the Modern Agriculture Caucus to keep family farms competitive.",
+      "issues": [
+        "His campaign says he helped write the 2017 tax law and the 2025 tax bill, which it says made those cuts permanent, reduced taxes on Social Security benefits, and expanded small-business expensing.",
+        "The site says he supports finishing the border wall, more Border Patrol funding, counting only citizens in the census, and limiting voting to U.S. citizens.",
+        "It says he opposes taxpayer-funded abortion, supports the Second Amendment, and works to open markets for Nebraska crops, livestock, and year-round E15."
+      ],
+      "site": "https://joinadrian.com/",
+      "siteLabel": "Adrian Smith for U.S. Congress",
+      "source": "https://joinadrian.com/issues/"
+    },
+    "mike marvin": {
+      "role": "Former union director running for U.S. Senate in Nebraska.",
+      "bio": "His campaign says he drove a city bus in Omaha for 26 years, was a member of Transport Workers Union Local 223, and later led NAPE/AFSCME, the state employees' union. It says health problems have worsened since he retired in 2017, so he is staying on the ballot but urging supporters to back Dan Osborn.",
+      "issues": [
+        "He says marijuana should be legal nationwide for medical and recreational use, and that he would take that fight to Washington on day one.",
+        "He says he would repeal the PATRIOT Act and restore what he calls a right to privacy against government surveillance.",
+        "He says the United States should stop foreign wars and spend that money on schools and infrastructure instead."
+      ],
+      "site": "https://marvinforsenate.com/",
+      "siteLabel": "marvinforsenate.com",
+      "donate": "https://secure.anedot.com/marvin-for-congress-9e3e925f-da4c-41f4-b1ea-d59fdc438a74/donate",
+      "source": "https://marvinforsenate.com/platform/"
+    },
+    "robin richards": {
+      "role": "Ralston school board member running for U.S. Senate in Nebraska.",
+      "bio": "Her campaign says she grew up in Nebraska, serves on the Ralston school board, and has two sons in those same schools. She says years of door-knocking convinced her that people want someone who answers the phone after Election Day.",
+      "issues": [
+        "She says costs are too high and that she wants good jobs so people can build a life where they already live.",
+        "She says health care should not stand between a family and a secure future.",
+        "She calls for fully funded public schools and housing people can actually live in, especially for working families, rural towns, small businesses, farmers, and ranchers."
+      ],
+      "site": "https://robinforne.com/",
+      "siteLabel": "robinforne.com",
+      "source": "https://robinforne.com/"
+    },
+    "chuck conboy": {
+      "role": "America First Party candidate for U.S. Senate in Nebraska.",
+      "bio": "His campaign says he has lived in Nebraska his whole life, the oldest of seven in an Irish Catholic home, and that he has worked since he was 12, including in management, sales, and as a vice president of a meatpackers and butchers union. He says his views line up with the America First Party.",
+      "issues": [
+        "He says he would secure the southern border, expand immigration enforcement, deport people he says have no claim to remain, and put citizens, veterans, and workers first for taxpayer resources.",
+        "He says Social Security must be protected with no benefit cuts before a 2032 insolvency date, and he opposes endless foreign wars and blank checks to other governments.",
+        "He also calls for affordable college, an end to crushing student debt, a return of trade schools, lower health-care costs, and help with child care for working parents."
+      ],
+      "site": "https://www.conboyforsenate.com/",
+      "siteLabel": "conboyforsenate.com",
+      "donate": "https://donorbox.org/conboy-for-u-s-senate",
+      "source": "https://www.conboyforsenate.com/platform"
+    },
+    "paul rumbaugh": {
+      "role": "Candidate for Nebraska secretary of state.",
+      "bio": "His campaign says he is running to protect Nebraska's votes and voices in the November 3, 2026 election.",
+      "issues": [],
+      "site": "https://www.rumbaughfornebraska.com/",
+      "siteLabel": "rumbaughfornebraska.com",
+      "source": "https://www.rumbaughfornebraska.com/"
+    },
+    "bob krist": {
+      "role": "Retired Air Force lieutenant colonel and former state senator running for secretary of state.",
+      "bio": "His campaign says he is an Omaha native who served 21 years in the Air Force, including Desert Shield and Desert Storm and the Looking Glass mission at Offutt, and retired in 2000. It says Gov. Dave Heineman appointed him to the Legislature in 2009, voters reelected him, and colleagues chose him to chair the Executive Board.",
+      "issues": [
+        "He says the secretary of state should run elections for every voter, make legal voting easy, make cheating difficult, and certify the results no matter who wins.",
+        "He calls for public transparency, checks that safeguards against fraud are working, and support for the county officials who run elections.",
+        "He says he would modernize the office where that improves service without weakening security, so people trust the count."
+      ],
+      "site": "https://electbobkrist.com/",
+      "siteLabel": "electbobkrist.com",
+      "donate": "https://secure.anedot.com/bob-krist-for-sos/32f886f1-4831-4424-99ce-49a73e364789",
+      "source": "https://electbobkrist.com/"
+    },
+    "chris backemeyer": {
+      "role": "Former national-security official running for Congress in Nebraska's 1st District.",
+      "bio": "His campaign says he was born and raised in Lincoln, graduated from Lincoln East, and comes from a family whose farms were homesteaded in Cass County. It says he served in national security at the highest levels of government and is running to lower costs for families.",
+      "issues": [
+        "He says that work included the Situation Room, bipartisan legislation, and briefing presidents while dealing with China, Russia, and Iran.",
+        "He says he will bring that same focus on solving problems to the 1st District, with families and lower costs at the center."
+      ],
+      "site": "https://backnebraska.com/",
+      "siteLabel": "backnebraska.com",
+      "donate": "https://secure.actblue.com/donate/stand-with-chris-backemeyer?refcode=website",
+      "source": "https://backnebraska.com/priorities/"
+    },
+    "denise powell": {
+      "role": "Small-business owner running for Congress in Nebraska's 2nd District.",
+      "bio": "Her campaign says she is a mom, a former corporate executive, and a champion of public schools and health care who left that career to organize locally after 2016. It says that work included helping local candidates, defending public schools, and opposing abortion bans.",
+      "issues": [
+        "She says she would stop tariffs that raise prices, expand clean energy and affordable housing, hold down premiums, and invest in child care and Head Start.",
+        "She wants Medicare to negotiate more drug prices, an insulin cap, a public coverage option, and abortion, contraception, and IVF protections written into federal law.",
+        "She also says she would protect Social Security, fund police, pass a farm bill and right-to-repair, ban congressional stock trading, and pair border security with a path to citizenship for long-settled workers."
+      ],
+      "site": "https://deniseforcongress.org/",
+      "siteLabel": "deniseforcongress.org",
+      "donate": "https://secure.actblue.com/donate/sbd-dpfc-web",
+      "source": "https://deniseforcongress.org/priorities/"
+    },
+    "becky stille": {
+      "role": "Democrat running for Congress in Nebraska's 3rd District.",
+      "bio": "Her campaign says she is a lifelong resident of the 3rd District running against Adrian Smith, and that her neighbors include farmers, factory workers, and small-business owners facing the same pressures her family does. She says a nearby farm going to auction is part of why she is running.",
+      "issues": [
+        "She says she would protect Social Security, Medicare, and SNAP, bring back funding Congress already approved, and invest in public schools without banning books.",
+        "She supports unions, a woman's private medical decisions, veterans, and equipping police, and she says a secure border should come with a fair immigration system.",
+        "She also says she would respect the Second Amendment while working to prevent violence, expand senior care, and improve access to health care."
+      ],
+      "site": "https://www.beckystille2026.com/",
+      "siteLabel": "beckystille2026.com",
+      "donate": "https://secure.actblue.com/donate/becky.stille-ne.3rd-youtube?express_lane_other=true&refcode=express_lane_other",
+      "source": "https://www.beckystille2026.com/issues"
+    }
+  },
+  "measures": {}
+}

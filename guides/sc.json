@@ -1,0 +1,167 @@
+{
+  "code": "sc",
+  "ballotSource": "",
+  "where": {
+    "url": "https://vrems.scvotes.sc.gov/Statistics/PrecinctAndPollingLocations",
+    "label": "South Carolina Election Commission"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The South Carolina Constitution says the governor and lieutenant governor are elected jointly, so each voter casts a single vote for both, and that the governor shall take care that the laws be faithfully executed."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    },
+    "Attorney General": {
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. The South Carolina Constitution says the attorney general assists and represents the governor in seeing that the laws are faithfully executed, and may not use that power against the General Assembly or the Supreme Court."
+    },
+    "Secretary Of State": {
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. The South Carolina Constitution says the secretary of state countersigns commissions sealed with the Great Seal, and that the office's other duties are prescribed by law."
+    }
+  },
+  "people": {
+    "alan wilson": {
+      "role": "South Carolina attorney general and Army National Guard colonel",
+      "bio": "Alan Wilson's campaign says he joined the South Carolina National Guard after college, has served since 1996, and deployed during Operation Iraqi Freedom. It says he is the state's attorney general and is running for governor.",
+      "issues": [
+        "He highlights child-predator prosecutions, a larger Internet Crimes Against Children task force, and the state's human-trafficking task force.",
+        "He says he has gone to court against policies of the Obama and Biden administrations, including what he calls a transgender agenda.",
+        "He says he backs President Trump on immigration enforcement and election integrity."
+      ],
+      "site": "https://wilsonforsc.com/",
+      "siteLabel": "wilsonforsc.com",
+      "donate": "https://secure.winred.com/wilson-for-sc/donate-gov",
+      "source": "https://wilsonforsc.com/"
+    },
+    "jermaine johnson": {
+      "role": "State representative running for governor",
+      "bio": "Jermaine Johnson's campaign says he is a state representative who has passed bills on the senior sales tax, a closed bridge, and broadband. The site also introduces Sam Skardon as his lieutenant-governor running mate.",
+      "issues": [
+        "He says he would expand the number of families who owe no income tax rather than eliminate the tax, because he says ending it would mainly help the wealthiest, and he says he would work with cities to cut property taxes.",
+        "He says he would let cities fix roads with transportation-department money, raise law-enforcement pay, and fund more rural hospitals and trade schools.",
+        "He says he would audit public education, protect reproductive decisions for patients and doctors, and legalize medical marijuana while putting recreational use to a statewide vote."
+      ],
+      "site": "https://johnsonforsc.com/",
+      "siteLabel": "johnsonforsc.com",
+      "donate": "https://secure.actblue.com/donate/drjermaineforgov?refcode=website",
+      "source": "https://johnsonforsc.com/policies"
+    },
+    "michael addison": {
+      "role": "Medical director running for governor",
+      "bio": "Michael Addison's campaign calls him a medical director who says he has cared for patients in South Carolina, and a certified inspector and property-damage analyst. It also describes him as a community organizer working on foreclosure prevention, job training, and help for people without housing.",
+      "issues": [
+        "He says the state needs a governor who combines health-care knowledge with environmental accountability.",
+        "He says prosperity has to start with people who are most vulnerable, including help with jobs and housing distress."
+      ],
+      "site": "https://www.addisonforsc.com/",
+      "siteLabel": "addisonforsc.com",
+      "donate": "",
+      "source": "https://www.addisonforsc.com/"
+    },
+    "walid hakim": {
+      "role": "Green Party candidate for governor and former Marine",
+      "bio": "Walid Hakim's campaign says his family moved to South Carolina in 1985, that he attended Lexington High School and Newberry College, and that he left college to enlist in the Marine Corps after Iraq invaded Kuwait. It says he has worked as a police officer, restaurant owner, and in other jobs.",
+      "issues": [
+        "His listed platform objectives are a 100-year plan, education reform, law-and-order reform, and land reform.",
+        "The site says the Green Party campaign is meant to widen the debate in a state long dominated by one party."
+      ],
+      "site": "https://www.walidnhakim.com/",
+      "siteLabel": "walidnhakim.com",
+      "donate": "",
+      "source": "https://www.walidnhakim.com/"
+    },
+    "darline graham": {
+      "role": "U.S. senator",
+      "bio": "Darline Graham's campaign says she was appointed to the Senate by Governor Henry McMaster after her brother, Senator Lindsey Graham, died. It says she spent nearly 30 years in state vocational rehabilitation and led the Commission for the Blind.",
+      "issues": [
+        "She says she would make the Trump tax cuts permanent, cut waste and fraud, and back workforce training, the skilled trades, and work requirements for able-bodied adults.",
+        "She says she supports finishing a border wall, ending catch-and-release, and opposing amnesty and taxpayer-funded benefits for people here illegally.",
+        "She says she opposes taxpayer funding of abortion, supports voter identification and current voter rolls, and opposes gun registries and red-flag confiscation."
+      ],
+      "site": "https://www.darlinegraham.com/",
+      "siteLabel": "darlinegraham.com",
+      "donate": "https://secure.winred.com/darline-graham-majority-fund/website",
+      "source": "https://www.darlinegraham.com/issues"
+    },
+    "annie andrews": {
+      "role": "Pediatrician running for U.S. Senate",
+      "bio": "Annie Andrews's campaign says she is a pediatrician and mother who has cared for South Carolina children for nearly twenty years, from newborns to teenagers. She says she is not a career politician.",
+      "issues": [
+        "She says families are struggling with grocery prices, child care, and the cost of health care, and her platform treats health care as a right.",
+        "Her listed plans include tackling debt and congressional perks, cutting taxes, lowering premiums, protecting rural hospitals, and reversing Medicaid cuts.",
+        "The platform also lists strong schools and affordable child care, reproductive freedom, political corruption, and an end to gun violence."
+      ],
+      "site": "https://drannieandrews.com/",
+      "siteLabel": "drannieandrews.com",
+      "donate": "https://secure.actblue.com/donate/loc_website",
+      "source": "https://drannieandrews.com/platform/"
+    },
+    "kasie whitener": {
+      "role": "Educator, author, and Libertarian candidate for U.S. Senate",
+      "bio": "Kasie Whitener's campaign describes her as a community leader, author, educator, and radio personality. She says she would be an independent vote in the Senate rather than a party operative.",
+      "issues": [
+        "She says she would simplify the tax code, return to actual budgets, and cut federal spending across agencies.",
+        "She says she would separate health insurance from employment and remove barriers that keep people from starting medical practices.",
+        "She says she wants a balanced-budget amendment, no new foreign wars, and no new federal abortion laws or new limits on the Second Amendment."
+      ],
+      "site": "https://kasiesouthcarolina.com/",
+      "siteLabel": "kasiesouthcarolina.com",
+      "donate": "",
+      "source": "https://kasiesouthcarolina.com/"
+    },
+    "david stumbo": {
+      "role": "Prosecutor running for attorney general",
+      "bio": "David Stumbo's campaign calls him a career criminal prosecutor and the upstate's top prosecutor. He says he is running to be attorney general.",
+      "issues": [
+        "He says he would defend the Constitution, religious liberty, parental rights, and what he calls the sanctity of life of the unborn.",
+        "He says he has prosecuted people in the country illegally, murderers, rapists, domestic abusers, and drug dealers, and that he would keep doing that work on the first day in office.",
+        "He says he supports law enforcement, health-care freedom, lower taxes, and a more transparent government."
+      ],
+      "site": "https://votestumbo.com/",
+      "siteLabel": "votestumbo.com",
+      "donate": "https://secure.winred.com/david-stumbo-for-attorney-general/donate",
+      "source": "https://votestumbo.com/"
+    },
+    "richard hricik": {
+      "role": "Lawyer running for attorney general",
+      "bio": "Richard Hricik's campaign says he has spent 30 years fighting in court for working people. He says he is a Democrat and that he is not taking campaign donations.",
+      "issues": [
+        "He says the attorney general should answer to the public and the rule of law, not to donors, parties, or special interests.",
+        "He says he would go after violent crime and also corporations, insurers, and officials he says put profit or power above people.",
+        "He names flock cameras, data centers, and polluters as targets, along with consumer fraud and corruption."
+      ],
+      "site": "https://richardforattorneygeneral.com/",
+      "siteLabel": "richardforattorneygeneral.com",
+      "donate": "",
+      "source": "https://richardforattorneygeneral.com/"
+    },
+    "jason belton": {
+      "role": "Democratic nominee for secretary of state",
+      "bio": "Jason Belton's campaign calls him the 2026 Democratic nominee for secretary of state. It describes him as a servant leader who says government should work for every family, business, and community.",
+      "issues": [
+        "The site says the campaign takes no corporate PAC money.",
+        "It says contributions pay for community events and voter outreach in every South Carolina county."
+      ],
+      "site": "https://jasonbeltonforsc.com/",
+      "siteLabel": "jasonbeltonforsc.com",
+      "donate": "",
+      "source": "https://jasonbeltonforsc.com/"
+    },
+    "mark hammond": {
+      "role": "Candidate for South Carolina secretary of state.",
+      "bio": "His campaign says South Carolina businesses are growing and that the secretary of state's office has made filings easier. He asks voters to share that record as the campaign continues.",
+      "issues": [
+        "He says Business One Stop has made it easier for businesses to expand in the state.",
+        "He credits the High Growth Small Business Job Creation Act with drawing angel investment into early-stage, high-growth companies.",
+        "He says oversight of charities is part of why the state ranks in the top five nationally for charitable giving."
+      ],
+      "site": "https://www.hammond4sc.com/",
+      "siteLabel": "hammond4sc.com",
+      "donate": "https://secure.anedot.com/mark-hammond-for-secretary-of-state/markhammond",
+      "source": "https://www.hammond4sc.com/"
+    }
+  },
+  "measures": {}
+}

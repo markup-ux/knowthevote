@@ -1,0 +1,341 @@
+{
+  "code": "fl",
+  "ballotSource": "https://dos.elections.myflorida.com/candidates/CanList.asp?elecID=20261103-GEN",
+  "where": {
+    "url": "https://dos.fl.gov/elections/for-voters/check-your-voter-status-and-polling-place/voter-precinct-lookup/",
+    "label": "Florida Division of Elections"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    }
+  },
+  "people": {
+    "byron donalds": {
+      "role": "Member of Congress for Florida's 19th District",
+      "bio": "He says he was born and raised in Brooklyn, New York, in a single-parent household, and that his mother's push toward what he calls the American Dream still guides his work. The campaign describes him as a conservative candidate for governor.",
+      "issues": [
+        "He says Florida should bring down costs for working families and for seniors on fixed incomes.",
+        "He says patients should know the price of care before treatment and that doctors should face less red tape.",
+        "He says the state should secure the border, keep neighborhoods safe, and stop taxpayer support he ties to illegal immigration."
+      ],
+      "site": "https://byrondonalds.com/",
+      "siteLabel": "byrondonalds.com",
+      "donate": "",
+      "source": "https://byrondonalds.com/"
+    },
+    "david jolly": {
+      "role": "Candidate for governor of Florida",
+      "bio": "His campaign says housing costs, underfunded schools, expensive health care, and climate impacts that raise insurance are what Florida families are living with. He says property insurance is the main reason many people cannot afford a place to live.",
+      "issues": [
+        "He says a state catastrophic fund that takes natural-disaster risk out of the private market would cut property and car insurance rates, and he supports no-interest state loans for condominium repairs.",
+        "He says Florida should expand Medicaid and commit to health care for residents across the state.",
+        "He says the state should pause construction of hyperscale data centers until protections for water and nearby communities are shown to be enough."
+      ],
+      "site": "https://davidjolly.com/",
+      "siteLabel": "davidjolly.com",
+      "donate": "",
+      "source": "https://davidjolly.com/issues/"
+    },
+    "dean abrams": {
+      "role": "Independent candidate for governor",
+      "bio": "His campaign says it takes no party, PAC, or corporate money, and that his running mate is Joe Van Vactor. He says he answers to voters rather than to the people who fund the major parties.",
+      "issues": [
+        "He says homesteaded homes worth up to twice a county's median should pay no property tax, and that corporations should stop buying single-family homes.",
+        "He says insurer profits should be capped, rate filings written in plain language, and the right to sue restored when a claim is wrongly denied.",
+        "He says he would ban new AI data centers and end warrantless tracking by license-plate reader networks."
+      ],
+      "site": "https://deanabrams.com/",
+      "siteLabel": "deanabrams.com",
+      "donate": "",
+      "source": "https://deanabrams.com/"
+    },
+    "charles burkett": {
+      "role": "Mayor of Surfside and candidate for governor",
+      "bio": "He says he was raised in Miami Beach, has lived in Surfside since 1996, and was elected mayor of Surfside, including a 2024 reelection. He says he owns a national investment company and is running for governor.",
+      "issues": [
+        "He says homestead property taxes should phase out for long-time Florida homeowners, with the benefit able to pass to a spouse or children.",
+        "He says property and auto insurance laws should be rewritten to bring more competition into the market.",
+        "He says a data center should be allowed only after voters in that county and city approve it."
+      ],
+      "site": "https://burkettforgov.com/",
+      "siteLabel": "burkettforgov.com",
+      "donate": "",
+      "source": "https://burkettforgov.com/"
+    },
+    "moliere dimanche": {
+      "role": "Candidate for governor of Florida",
+      "bio": "He says he was born Moliere Dimanche, is a first-generation American, and grew up in Orlando, including in Pine Hills. He says that as a teenager he worked in grocery and restaurant jobs and later in flooring and remodeling.",
+      "issues": [
+        "He says unincorporated communities should be able to form their own cities so residents control safety, taxes, and public works.",
+        "He says he would close Alligator Alcatraz on his first day in office.",
+        "He says he would abolish homeowners associations and end property taxes on homesteaded homes."
+      ],
+      "site": "https://nomoecorruption.com/",
+      "siteLabel": "nomoecorruption.com",
+      "donate": "",
+      "source": "https://nomoecorruption.com/"
+    },
+    "frank russo": {
+      "role": "Businessman and insurance executive",
+      "bio": "He describes himself as a Florida-born businessman, entrepreneur, insurance executive, and developer running for governor, with Rachel Rodriguez as his running mate. He says many people who already live in Florida are being priced out as the state grows.",
+      "issues": [
+        "He says an affordability plan should take on insurance, housing, property taxes, and everyday costs together and protect homeowners.",
+        "He says he wants Florida's average teacher salary raised to at least $75,000, with more skilled-trades and apprenticeship paths.",
+        "He says lawful medical decisions should be made by patients and their doctors, and that immigration enforcement should focus on violent criminals, traffickers, and gangs while supporting legal immigration."
+      ],
+      "site": "https://russo2026.com/",
+      "siteLabel": "russo2026.com",
+      "donate": "",
+      "source": "https://russo2026.com/"
+    },
+    "scott jewett": {
+      "role": "Entrepreneur and Libertarian candidate for governor",
+      "bio": "He says he is a Boca Raton entrepreneur running with his wife, Regina, and that they live with homeownership and rising insurance costs. He says he is running because Florida can do better with less government and more individual liberty.",
+      "issues": [
+        "He says he would take on the insurance affordability crisis, cut taxes, and shrink government so families keep more of what they earn.",
+        "He says data centers should do no harm and that the state should stop using Flock license-plate cameras.",
+        "He says parents should decide where their children go to school and that education dollars should follow the child."
+      ],
+      "site": "https://scottjewett.com/",
+      "siteLabel": "scottjewett.com",
+      "donate": "https://scottjewett.com/donate/",
+      "source": "https://scottjewett.com/"
+    },
+    "ashley moody": {
+      "role": "U.S. senator and former Florida attorney general",
+      "bio": "She says she is a fifth-generation Floridian raised in Plant City who earned degrees from the University of Florida and a master of laws from Stetson. She says she was a federal prosecutor and a circuit judge before her election as attorney general, and that she was sworn into the Senate on January 21, 2025, after an appointment by Governor Ron DeSantis.",
+      "issues": [
+        "She says she supports America First policies on law and order, economic prosperity, and American sovereignty.",
+        "She says that as attorney general she championed public safety, support for law enforcement, and efforts against violent crime.",
+        "She says that as a senator she is working to uphold conservative values and strengthen national security."
+      ],
+      "site": "https://ashleymoody.com/",
+      "siteLabel": "ashleymoody.com",
+      "donate": "https://secure.winred.com/moody-for-florida/donate-now",
+      "source": "https://ashleymoody.com/about/"
+    },
+    "angie nixon": {
+      "role": "Florida state representative and union organizer",
+      "bio": "She says she is a state representative, union organizer, and mother who was born and raised in Jacksonville. She says she started as an organizer in Duval County and ran for office because she wanted more working people in government.",
+      "issues": [
+        "She says she is running to lower costs, raise wages, and put working families ahead of billionaires.",
+        "She says she supports Medicare for All and a national rent freeze with a moratorium on evictions.",
+        "She says she supports free child care and pre-K, and a Working Families Guarantee for workers."
+      ],
+      "site": "https://angienixon.com/",
+      "siteLabel": "angienixon.com",
+      "donate": "https://secure.actblue.com/donate/nixon-web",
+      "source": "https://angienixon.com/"
+    },
+    "james uthmeier": {
+      "role": "Attorney General of Florida",
+      "bio": "He says he previously served as Governor Ron DeSantis's chief of staff and, before that, as counsel to Donald Trump's 2016 campaign and as a senior advisor to Commerce Secretary Wilbur Ross. He says he led state legal fights to reopen businesses and schools and to prohibit mask and vaccine requirements.",
+      "issues": [
+        "He says he is focused on prosecuting dangerous criminals, combating illegal immigration, and keeping Florida safe.",
+        "He says he has sued corporations over what he describes as sexualizing and indoctrinating children.",
+        "He says his work with the governor included education freedom, parental rights, election rules, tax relief, and public safety."
+      ],
+      "site": "https://jamesforfl.com/",
+      "siteLabel": "jamesforfl.com",
+      "donate": "https://secure.anedot.com/james-uthmeier-campaign/donate",
+      "source": "https://jamesforfl.com/"
+    },
+    "josé rodriguez": {
+      "role": "Candidate for Florida attorney general",
+      "bio": "His campaign page identifies the candidate as Jose Javier Rodriguez and says he is taking on the corrupt and powerful.",
+      "issues": [],
+      "site": "https://www.jjr.vote/",
+      "siteLabel": "jjr.vote",
+      "donate": "",
+      "source": "https://www.jjr.vote/"
+    },
+    "jeffrey datto": {
+      "role": "Scientist and no-party candidate for governor.",
+      "bio": "Jeffrey Datto's campaign says he is a Hialeah scientist with a doctorate in cell and tissue engineering who researched paralysis recovery at the University of Miami and founded DattoAI. It says he is running with no party affiliation after experiencing illness, disability, and homelessness, and that family and faith are central to the campaign.",
+      "issues": [
+        "He says he would move toward universal, income-based health care, strengthen public hospitals and clinics, and create a Florida Institutes of Health focused on serious disease, injury, mental health, and longevity.",
+        "He says he would abolish charter schools and bring them into one state public-education system, with academic freedom and pathways from school into Florida jobs.",
+        "He says he would open a public-accountability office, require timely and accessible courts, and make renters share in property-tax relief given to landlords."
+      ],
+      "site": "https://drjeffdatto.com/",
+      "siteLabel": "Dr. Jeff Datto for Governor",
+      "source": "https://drjeffdatto.com/florida-first"
+    },
+    "jimmy patronis": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Jimmy Patronis's campaign says he is a fourth-generation Floridian from Panama City who worked in his family's seafood restaurant, served eight years in the Florida House, and was the state's chief financial officer and fire marshal before winning a House seat.",
+      "issues": [
+        "He says his House priorities follow an America First agenda: cutting taxes, restraining spending, investing in the military, and reforming veterans' services.",
+        "He says that as chief financial officer he pushed benefits for firefighters diagnosed with cancer and mental-health care for first responders.",
+        "He says he fought insurance practices that let contractors take over homeowners' benefits after storms and drive premiums up."
+      ],
+      "site": "https://joinjimmy.com/",
+      "siteLabel": "Jimmy Patronis for Congress",
+      "donate": "https://secure.anedot.com/friends-of-jimmy-patronis-inc/friendsofjimmypatronis",
+      "source": "https://joinjimmy.com/about/"
+    },
+    "gay valimont": {
+      "role": "Gun-violence prevention organizer running for Congress.",
+      "bio": "Gay Valimont's campaign says she is a Pensacola mother and former athletic trainer who led Florida's Moms Demand Action chapter. It says she cared for her husband and son through terminal illnesses and is running again in the 1st Congressional District.",
+      "issues": [
+        "She says she would cut home and auto insurance costs, challenge shrinkflation, and stop large investors from buying up houses.",
+        "She says she would seek universal affordable care, oppose Social Security and Medicare cuts or privatization, and restore a $35 insulin cap.",
+        "She says Northwest Florida needs a full-service VA hospital, and she supports universal background checks and red-flag laws."
+      ],
+      "site": "https://www.gayforcongress.com/",
+      "siteLabel": "Gay Valimont for Congress",
+      "donate": "https://secure.actblue.com/donate/gay-valimont-1",
+      "source": "https://www.gayforcongress.com/issues"
+    },
+    "kat cammack": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Kat Cammack's campaign says she is in her third term from Florida's 3rd District. It says she and her husband, a Gainesville firefighter and paramedic, are raising their daughter in North Central Florida.",
+      "issues": [
+        "She says she is focused on securing the southern border, advocating for small businesses, and defending the Second Amendment.",
+        "She describes herself as a budget hawk who wants taxes low and federal spending kept minimal."
+      ],
+      "site": "https://katforcongress.com/",
+      "siteLabel": "Kat Cammack for Congress",
+      "source": "https://katforcongress.com/"
+    },
+    "aaron bean": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Aaron Bean's campaign says he was born and raised in Northeast Florida, built an insurance agency and a local miniature-golf business, and served in the Florida House and Senate, including as Senate president pro tempore, before winning the 4th District in 2022.",
+      "issues": [
+        "He says his mission is to lower costs for working families, support police, and make Washington account for tax dollars.",
+        "He says he serves on Ways and Means, co-founded a caucus aimed at waste and fraud, and has pushed lower taxes and pro-business, pro-family policy."
+      ],
+      "site": "https://aaronbean.com/",
+      "siteLabel": "Aaron Bean for Congress",
+      "donate": "https://secure.winred.com/aaron-bean-for-congress/donate-today",
+      "source": "https://aaronbean.com/"
+    },
+    "john rutherford": {
+      "role": "U.S. representative running for another term.",
+      "bio": "John Rutherford's campaign says he grew up in Northeast Florida, graduated from the FBI National Academy and Florida State in criminology, spent 40 years in law enforcement as Duval County sheriff, and now represents the 5th District.",
+      "issues": [
+        "He says he would fight inflation by blocking and cutting taxes, cutting red tape for small businesses, and lowering grocery, gas, and electric costs.",
+        "He says he has backed VA reform, higher troop pay, veterans' mental-health care, and a school-safety law he authored."
+      ],
+      "site": "https://johnrutherfordforcongress.com/",
+      "siteLabel": "John Rutherford for Congress",
+      "source": "https://johnrutherfordforcongress.com/priorities/"
+    },
+    "darren soto": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Darren Soto's campaign says he is a lawyer elected in 2016 and the first member of Congress from Florida of Puerto Rican descent. It says he represents Osceola County and parts of Orange and Polk counties.",
+      "issues": [
+        "He says his reelection campaign is about lower costs, protecting health care, and stopping corruption.",
+        "He says he would stop tariffs that raise grocery, fuel, and housing costs, stop Medicaid and Affordable Care Act cuts, and protect Social Security and Medicare."
+      ],
+      "site": "https://www.darrensoto.com/",
+      "siteLabel": "Darren Soto for Congress",
+      "donate": "https://secure.actblue.com/contribute/page/soto?refcode=www&amount=9",
+      "source": "https://www.darrensoto.com/"
+    },
+    "maxwell frost": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Maxwell Frost's campaign says he was adopted after his mother could not afford another child, saw police abuse and gun violence growing up, and organized with the ACLU, including Florida's voting-rights campaign.",
+      "issues": [
+        "He says that as the first Generation Z member of Congress he is fighting to end gun violence, win Medicare for All, change the criminal justice system, and address the climate crisis.",
+        "He says he pressed to end the Hyde Amendment and organized to restore voting rights to Floridians with past felony convictions."
+      ],
+      "site": "https://www.frostforcongress.com/",
+      "siteLabel": "Maxwell Frost for Congress",
+      "donate": "https://secure.actblue.com/donate/fl-fro-website-donate",
+      "source": "https://www.frostforcongress.com/meet-maxwell"
+    },
+    "gus bilirakis": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Gus Bilirakis's campaign says he is a Tampa Bay husband, father, and attorney whose father, Mike Bilirakis, represented the same community in Congress. It says he is a senior member of the Energy and Commerce Committee.",
+      "issues": [
+        "He says he is taking on property-insurance costs, affordable housing, and the cost of living in Pasco and Hillsborough counties.",
+        "He says he backed a larger senior tax exemption, no tax on tips or overtime, and a deduction for homeowners-insurance premiums."
+      ],
+      "site": "https://www.bilirakisforcongress.com/",
+      "siteLabel": "Gus Bilirakis for Congress",
+      "donate": "https://secure.anedot.com/bilirakis-for-congress/2026-website",
+      "source": "https://www.bilirakisforcongress.com/issues.html"
+    },
+    "anna paulina luna": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Anna Paulina Luna's campaign says she is a mother, Air Force veteran, and one of the younger members of Congress who did not grow up with wealth or a political family. It says her father struggled with substance abuse and her mother raised her on her own.",
+      "issues": [
+        "She says big government is often the problem, not the solution, and that her politics come from growing up in hard circumstances and serving in the military.",
+        "She says she wants reforms aimed at problems people actually face rather than an elitist approach to Congress."
+      ],
+      "site": "https://www.voteannapaulina.com/",
+      "siteLabel": "Anna Paulina Luna for Congress",
+      "donate": "https://secure.winred.com/AnnaPaulinaLuna/web",
+      "source": "https://www.voteannapaulina.com/meet-anna"
+    },
+    "kathy castor": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Kathy Castor's campaign says she is a native Floridian and the first woman elected to represent Hillsborough and Pinellas counties in Congress. It says she was a lawyer and Hillsborough County commissioner before joining the House Energy and Commerce Committee.",
+      "issues": [
+        "She says she works to lower family costs, create jobs, and protect Florida's environment, including wetlands and the coast.",
+        "She says she helped pass the bipartisan infrastructure law, bills expanding care for seriously ill children, and veterans' caucus work."
+      ],
+      "site": "https://castorforcongress.com/",
+      "siteLabel": "Kathy Castor for Congress",
+      "donate": "https://secure.actblue.com/donate/kc_website?refcode=WEB_NBI_KC_D2D_Header_20260709",
+      "source": "https://castorforcongress.com/about/"
+    },
+    "laurel lee": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Laurel Lee's campaign says she serves on the Judiciary, Energy and Commerce, and House Administration committees. It says she was an impeachment manager in the Mayorkas case and served on the task force on the attempt on President Trump's life and the House artificial-intelligence task force.",
+      "issues": [
+        "The site says that under President Trump she is focused on turning conservative priorities into results for the 15th District.",
+        "It quotes his endorsement of her on the border, innovation, the military and veterans, and the Second Amendment."
+      ],
+      "site": "https://votelaurel.com/",
+      "siteLabel": "Laurel Lee for Congress",
+      "donate": "https://secure.winred.com/laurel-lee-for-congress-inc/donate-today",
+      "source": "https://votelaurel.com/"
+    },
+    "greg steube": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Greg Steube's campaign says he is an Army veteran who served in Iraq and a conservative whose name is new on many Lee County ballots. It says he has worked on hurricane recovery for Southwest Florida.",
+      "issues": [
+        "He says he is focused on rebuilding after disasters, disaster tax relief, and lowering costs.",
+        "He says he stands with veterans, privacy and public safety, and border security."
+      ],
+      "site": "https://www.electgregsteube.com/",
+      "siteLabel": "Greg Steube for Congress",
+      "donate": "https://secure.winred.com/gregsteube/donate",
+      "source": "https://www.electgregsteube.com/priority-issues"
+    },
+    "debbie wasserman schultz": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Debbie Wasserman Schultz's campaign says she is Florida's first Jewish congresswoman, sworn in in 2005 after serving in the Florida House and Senate. It says she is a breast-cancer survivor who has worked on screening access.",
+      "issues": [
+        "She says she is fighting to protect Social Security and Medicare, defend reproductive freedom, and strengthen public schools.",
+        "She says she wants lower health-care costs and laws that reduce gun violence."
+      ],
+      "site": "https://debbiewassermanschultz.com/",
+      "siteLabel": "Debbie Wasserman Schultz for Congress",
+      "donate": "https://secure.actblue.com/contribute/page/dwsdefault",
+      "source": "https://debbiewassermanschultz.com/meet-debbie/"
+    },
+    "brian mast": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Brian Mast's campaign says serving the country is what he always wanted to do, following his father and uncles, and that he and his wife, Brianna, hope their children find the same purpose. It says he represents Florida's 18th District and tries to serve without regard for personal gain.",
+      "issues": [],
+      "site": "https://mastforcongress.com/",
+      "siteLabel": "Brian Mast for Congress",
+      "donate": "https://secure.winred.com/mast-for-congress/donate",
+      "source": "https://mastforcongress.com/about/"
+    }
+  },
+  "measures": {}
+}

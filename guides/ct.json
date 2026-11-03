@@ -1,0 +1,218 @@
+{
+  "code": "ct",
+  "ballotSource": "https://portal.ct.gov/-/media/sots/electionservices/town_ballots/2026/nov-ada-2026/stamford_sample_updated_ada.pdf?hash=7800F8F0B1D1EC4613821F7AA3FF4E0D&rev=154ac30788e745078bfded744c387aaf",
+  "where": {
+    "url": "https://portaldir.ct.gov/sots/LookUp.aspx",
+    "label": "Connecticut Secretary of the State"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The Connecticut Constitution makes the governor captain general of the state militia, except when the militia is called into United States service."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. Connecticut law gives the attorney general general supervision over legal matters in which the state is an interested party, except matters directed by prosecuting officers."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. Connecticut law makes the secretary the keeper of the public records and of the state seal."
+    }
+  },
+  "people": {
+    "ryan fazio": {
+      "role": "Connecticut state senator",
+      "bio": "He says he was born in Norwalk, raised in Greenwich, and earned an economics degree from Northwestern University before working in energy, agriculture, and shipping. He also served on Greenwich's Representative Town Meeting and its Energy Efficiency Committee.",
+      "issues": [
+        "He says he co-authored a 2023 bill to disclose hidden utility taxes.",
+        "He says he co-authored a 2025 bill to reduce public-benefits charges on electric bills.",
+        "He says he authored a 2024 bill supporting municipal home rule."
+      ],
+      "site": "https://ryanfazio.com/",
+      "siteLabel": "ryanfazio.com",
+      "donate": "",
+      "source": "https://ryanfazio.com/meet-ryan/"
+    },
+    "ned lamont": {
+      "role": "Governor of Connecticut",
+      "bio": "He is the governor and a former small-business owner who says he built a Connecticut company and learned what it takes to meet a payroll. He says that in office he has worked on the state's finances, a middle-class tax cut, public education, and affordable childcare.",
+      "issues": [
+        "He says he is running again to keep lowering costs and expanding opportunity.",
+        "He says his record includes what he calls the largest middle-class tax cut in state history, along with more funding for public schools.",
+        "He says he has expanded affordable childcare and wants to keep protecting rights he associates with the state."
+      ],
+      "site": "https://www.nedlamont.com/",
+      "siteLabel": "nedlamont.com",
+      "donate": "https://www.nedlamont.com/Donate_By_Mail.pdf",
+      "source": "https://www.nedlamont.com/"
+    },
+    "john bolton": {
+      "role": "Connecticut attorney and former Westport planning and zoning commissioner",
+      "bio": "He says he is a Connecticut attorney and a former member of the Westport Planning and Zoning Commission. He says he grew up as the son of a longtime auditor in the Connecticut State Auditors of Public Accounts.",
+      "issues": [
+        "He says he would make utility rate cases a priority and challenge policies that raise electric costs.",
+        "He says he would investigate AI-driven pricing and pursue consumer fraud, including scams aimed at seniors.",
+        "He says he would hold neighboring states accountable when pollution harms Connecticut rivers, drinking water, or Long Island Sound."
+      ],
+      "site": "https://johnbolton4ag.com/",
+      "siteLabel": "johnbolton4ag.com",
+      "donate": "https://secure.anedot.com/jb4ag26-93bc40c9-19ae-4ab0-a535-9238100b8d96/donate-jb4ag26",
+      "source": "https://johnbolton4ag.com/"
+    },
+    "william tong": {
+      "role": "Attorney General of Connecticut",
+      "bio": "He says he was born and raised in the Hartford area, practiced as a litigator for 18 years, and served 12 years in the Connecticut House, including as chair of the Judiciary and Banking committees. He says he was elected attorney general in 2018.",
+      "issues": [
+        "He says he has filed more than 50 lawsuits against federal cuts to police, schools, and medical research.",
+        "He says he has fought utility rate increases and taken on opioid companies and social-media companies over harm to children.",
+        "He says he is defending reproductive health care and the state's post-Sandy Hook gun laws."
+      ],
+      "site": "https://www.williamtong.com/",
+      "siteLabel": "williamtong.com",
+      "donate": "",
+      "source": "https://www.williamtong.com/about/"
+    },
+    "peter lumaj": {
+      "role": "Business owner running for secretary of the state",
+      "bio": "He describes decades of business experience and says he has created jobs while trying to reduce bureaucracy. His campaign says he would put families first.",
+      "issues": [
+        "He says he would reduce taxes and cut red tape to grow the state's economy.",
+        "He says he wants conditions where families can thrive.",
+        "He says he would defend constitutional rights and conservative principles."
+      ],
+      "site": "https://peterlumaj.com/",
+      "siteLabel": "peterlumaj.com",
+      "donate": "",
+      "source": "https://peterlumaj.com/about"
+    },
+    "stephanie thomas": {
+      "role": "Connecticut secretary of the state",
+      "bio": "She was sworn in as secretary of the state on January 4, 2023, after advising nonprofits, running a business, and serving as a state representative for Norwalk, Wilton, and Westport. She says she was the first Black person elected secretary of the state of Connecticut.",
+      "issues": [
+        "She says she led the rollout of early voting and secured funding to replace aging voting tabulators.",
+        "She says the office is building a centralized voter registration system and carrying out the John R. Lewis Voting Rights Act.",
+        "She says she started a monthly newsletter of funding and training resources for business owners."
+      ],
+      "site": "https://votestephaniethomas.com/",
+      "siteLabel": "votestephaniethomas.com",
+      "donate": "https://votestephaniethomas.com/donate-1",
+      "source": "https://votestephaniethomas.com/about-stephanie-5"
+    },
+    "amy chai": {
+      "role": "Physician running for Congress",
+      "bio": "The campaign says Dr. Amy Chai is a primary-care and addiction physician running for Connecticut's 1st District. She describes growing up in extreme poverty, training at Johns Hopkins, Indiana University, Michigan, and Virginia, and later being named a U.S. Presidential Teacher.",
+      "issues": [
+        "She says the middle class is struggling and that she wants local economies, small businesses, and American industry strengthened so people can afford a home and a family.",
+        "Her issues page also focuses on health care, mental health and addiction, education and parents' rights, and taxes.",
+        "She says government spending and legislation should be easier for the public to see."
+      ],
+      "site": "https://chaiforcongress.com/",
+      "siteLabel": "Chai For Congress",
+      "donate": "https://secure.winred.com/friends-of-doc-chai/donate-today",
+      "source": "https://chaiforcongress.com/issues"
+    },
+    "luke bronin": {
+      "role": "Former mayor of Hartford running for Congress",
+      "bio": "The campaign says Luke Bronin was mayor of Hartford from 2016 to 2024, where he worked to pull the city back from bankruptcy, add housing, and create the Hartford Youth Service Corps. He says he is running because families are struggling while billionaires get tax breaks.",
+      "issues": [
+        "He says he will focus on bringing down costs for housing, health care, groceries, childcare, and elder care.",
+        "He wants Medicare and Medicaid protected and a push toward universal health care.",
+        "He says he would abolish ICE, build more housing, and safeguard reproductive freedom."
+      ],
+      "site": "https://www.broninforcongress.com/",
+      "siteLabel": "Luke Bronin for Congress",
+      "donate": "https://secure.actblue.com/donate/lb-web",
+      "source": "https://www.broninforcongress.com/issues"
+    },
+    "george austin": {
+      "role": "Small-business owner running for Congress",
+      "bio": "The campaign says George Austin grew up working construction in eastern Connecticut, earned a construction-management degree from Central Connecticut State University, and ran a business while raising two sons. He says he won the nomination as a working person rather than a political insider.",
+      "issues": [
+        "He says he wants Social Security and Medicare kept solvent for people who earned them, and veterans cared for instead of left fighting the VA.",
+        "He says workers and small businesses need good jobs, less red tape, lower taxes, and a realistic chance to own a home.",
+        "He wants guardrails on artificial intelligence so the gains do not wipe out jobs for American workers."
+      ],
+      "site": "https://votegeorgeforcongress.com/",
+      "siteLabel": "Vote George for Congress",
+      "source": "https://votegeorgeforcongress.com/"
+    },
+    "joe courtney": {
+      "role": "U.S. representative for Connecticut's 2nd District",
+      "bio": "The campaign says Joe Courtney, a Connecticut native and lawyer, was elected to the U.S. House in 2006 after serving in the state House and as Vernon's town attorney. He chairs the Seapower and Projection Forces Subcommittee, which oversees submarine and ship construction.",
+      "issues": [
+        "He says his first fight in Congress was to keep Electric Boat building submarines, and he still focuses on the shipyard and the region's defense work.",
+        "He says he has worked to lower college costs, expand vocational programs, support farmers and veterans, and end surprise medical bills.",
+        "His priorities page also lists infrastructure, agriculture, health care, and education."
+      ],
+      "site": "https://joecourtney.com/",
+      "siteLabel": "Joe Courtney",
+      "donate": "https://secure.actblue.com/donate/courtney-website?refcode=web&amount=15",
+      "source": "https://joecourtney.com/meet-joe/"
+    },
+    "christopher lancia": {
+      "role": "Coast Guard veteran and federal law enforcement officer running for Congress",
+      "bio": "The campaign says Christopher Lancia was born and raised in Bridgeport, served in the Coast Guard, and later worked as a federal law enforcement officer. He now lives in Milford and says he is running to give Connecticut a voice in an America First agenda.",
+      "issues": [
+        "He says border security is national security and that he wants the border chaos stopped.",
+        "He says he will fight for lower taxes, a balanced budget, and an end to spending he ties to inflation.",
+        "He supports term limits, the Second Amendment, and law enforcement, and says parents should control decisions about their children's education."
+      ],
+      "site": "https://lanciaforcongress2026.org/",
+      "siteLabel": "Christopher Lancia for Congress 2026",
+      "donate": "https://secure.winred.com/lancia-for-congress-2026/donate-today",
+      "source": "https://lanciaforcongress2026.org/"
+    },
+    "rosa delauro": {
+      "role": "U.S. representative for Connecticut's 3rd District",
+      "bio": "The campaign says Rosa DeLauro has represented Connecticut's 3rd District since 1991 and is the ranking Democrat on the House Appropriations Committee, which she chaired in 2020. It says she wrote the Paycheck Fairness Act and worked on the child tax credit.",
+      "issues": [
+        "She says she has shifted spending toward education, health care, climate, and community safety rather than billionaires and corporations.",
+        "The campaign says she has brought more than $70 million to the district for local projects since 2021.",
+        "It says she has worked to improve schools, cut taxes for middle-class families, protect pensions, and encourage jobs in Connecticut."
+      ],
+      "site": "https://rosadelauro.com/",
+      "siteLabel": "Rosa DeLauro for Congress",
+      "donate": "https://secure.actblue.com/donate/rosa-website",
+      "source": "https://rosadelauro.com/about/"
+    },
+    "michael goldstein": {
+      "role": "Surgeon running for Congress",
+      "bio": "The campaign says Dr. Mike Goldstein put himself through medical school, became a surgeon, and spent more than 30 years making decisions in the operating room. He says he is running to bring that same accountability to Congress.",
+      "issues": [
+        "He says health care is expensive because regulation has reduced competition, not because medicine itself is costly.",
+        "He argues that insurers answer to shareholders and that pharmacy middlemen take profit before drugs reach patients.",
+        "He says the FDA has slowed access to treatments and that the Right to Try law has helped very few patients."
+      ],
+      "site": "https://goldsteinforcongress.com/",
+      "siteLabel": "Goldstein for Congress",
+      "donate": "https://secure.winred.com/michael-goldstein-for-congress-2026/donate-today",
+      "source": "https://goldsteinforcongress.com/"
+    },
+    "chris shea": {
+      "role": "Retired Navy SEAL and Republican nominee for Congress",
+      "bio": "The campaign says Chris Shea is a Watertown native, retired Navy SEAL, firefighter, former small-business owner, and the Republican nominee in Connecticut's 5th District. He served with SEAL teams and at the Pentagon over a career of more than 30 years, and he and his wife, Anita, raised their daughter in Watertown.",
+      "issues": [
+        "His campaign slogan is lowering costs, growing wages, and protecting America.",
+        "He says that experience, from a small business that employed six people to helping veterans start new careers, is what he would bring to Congress."
+      ],
+      "site": "https://chrissheaforcongress.com/",
+      "siteLabel": "Chris Shea for Congress",
+      "donate": "https://secure.winred.com/chris-shea-for-congress/donate",
+      "source": "https://chrissheaforcongress.com/"
+    },
+    "jahana hayes": {
+      "role": "U.S. representative for Connecticut's 5th District",
+      "bio": "The campaign says Jahana Hayes, a teacher named National Teacher of the Year in 2016, was elected in 2018 as Connecticut's first African American congresswoman. She sits on Education and Labor and on Agriculture, where she is ranking member of the nutrition subcommittee.",
+      "issues": [
+        "She supports Medicare for All and says she has worked to curb surprise bills and cap prescription drug costs.",
+        "She wants housing help for first-time buyers and an economy that lowers grocery, gas, and energy costs rather than serving only the very wealthy.",
+        "She supports red-flag laws, expanded background checks, and other steps to reduce gun violence."
+      ],
+      "site": "https://jahanahayes.com/",
+      "siteLabel": "Jahana Hayes for Congress",
+      "donate": "https://secure.actblue.com/donate/jh-ads-sms-mayeom",
+      "source": "https://jahanahayes.com/issues/"
+    }
+  },
+  "measures": {}
+}

@@ -1,0 +1,95 @@
+{
+  "code": "va",
+  "ballotSource": "https://www.elections.virginia.gov/casting-a-ballot/candidate-list/november-3-2026-gen-elect-federal-offices/",
+  "where": {
+    "url": "https://vote.elections.virginia.gov/VoterInformation",
+    "label": "Virginia Citizen Portal"
+  },
+  "offices": {
+    "Senate": {
+      "kicker": "Federal · Vote for one.",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The U.S. Senate says it alone conducts impeachment trials and must confirm ambassadors, judges, and other officers the president nominates."
+    }
+  },
+  "people": {
+    "bert mizusawa": {
+      "role": "Retired Army major general and attorney running for the U.S. Senate.",
+      "bio": "His campaign says he graduated first in his West Point class, earned a law degree from Harvard, and commanded troops in combat, including a joint task force in Afghanistan. It says he later held senior civilian posts in the Army and as an adviser at the CIA.",
+      "issues": [
+        "He says he would focus on balancing the federal budget.",
+        "He says he would lower the tax on selling a home and the broader tax burden on Virginia families.",
+        "He says he would protect veterans' health benefits, ban members of Congress from trading stocks, and support new nuclear plants to bring down household energy costs."
+      ],
+      "site": "https://bertforsenate.com/",
+      "siteLabel": "bertforsenate.com",
+      "donate": "",
+      "source": "https://bertforsenate.com/issues"
+    },
+    "mark warner": {
+      "role": "U.S. senator whose campaign says he helped write the Affordable Care Act and a bipartisan infrastructure law.",
+      "bio": "His campaign says he was the first in his family to finish college, that his first two businesses failed, and that a later company succeeded. It says he is the top Democrat on the Senate Intelligence Committee and has worked with both parties on bills signed into law.",
+      "issues": [
+        "He wants more housing through rehabilitation and faster permits, and an easier path to a first mortgage, and he says lower health costs depend on a basic standard of care for every American.",
+        "He says companies that profit from artificial intelligence should help prepare workers and pay for the energy that technology will demand.",
+        "He supports an assault-weapons ban and background checks, and he says Virginia voters should be able to put abortion access, marriage equality, and restoration of voting rights into the state constitution."
+      ],
+      "site": "https://www.markwarnerva.com/",
+      "siteLabel": "markwarnerva.com",
+      "donate": "https://secure.actblue.com/donate/web_2025?refcode=web_top_buttons",
+      "source": "https://www.markwarnerva.com/plan/"
+    },
+    "rob wittman": {
+      "role": "U.S. representative for Virginia's 1st District.",
+      "bio": "He says he was adopted at eight months after time at the Children's Home Society of Virginia, raised in Henrico County by a World War II veteran and a public-school teacher, and worked jobs from groceries and a cannery to fishing boats. He studied biology at Virginia Tech, earned a master's in public health from the University of North Carolina, and a Ph.D. in public policy from Virginia Commonwealth University. He says he lives in Montross and spends the week driving between home and Washington.",
+      "issues": [
+        "He says Washington should lower the cost of groceries, power, housing, health care, and child care, keep taxes down, produce more American energy, and cut regulations that make it harder to build and hire.",
+        "He says he supported tax relief that locked in and doubled the Child Tax Credit, raised the standard deduction to $31,500 for families, and ended tax on qualifying tips and overtime.",
+        "He also says he backed tax provisions that help small businesses invest and let seniors keep more of their Social Security checks."
+      ],
+      "site": "https://robwittman.com/",
+      "siteLabel": "robwittman.com",
+      "donate": "https://secure.winred.com/rob-wittman/donate",
+      "source": "https://robwittman.com/issues/"
+    },
+    "jen kiggans": {
+      "role": "U.S. representative, former Navy pilot, and nurse practitioner.",
+      "bio": "She says she flew H-46 and H-3 helicopters for ten years, with two Persian Gulf deployments, and is married to retired F/A-18 pilot Steve. She used the GI Bill to become a board-certified adult-geriatric nurse practitioner and worked in long-term care and a Virginia Beach primary-care practice. In Congress she serves on Armed Services, Natural Resources, and Veterans' Affairs, where she chairs the Oversight and Investigations Subcommittee.",
+      "issues": [
+        "She says she has prioritized cutting inflation and helped pass spending cuts, and she supported the Working Families Tax Cuts that made the 2017 tax cuts permanent and ended most taxes on tips and overtime.",
+        "She says she fights regulatory burdens so small businesses and industries important to Virginia can hire, and she worked to expand the Child Tax Credit.",
+        "She says spending cuts should still fully fund veterans' benefits, the military, and Social Security and Medicare."
+      ],
+      "site": "https://jenforcongress.com/",
+      "siteLabel": "jenforcongress.com",
+      "donate": "https://secure.winred.com/kiggans-for-congress/donate?utm_medium=website&utm_source=header&utm_campaign=jenforcongress.com",
+      "source": "https://jenforcongress.com/issues/"
+    },
+    "eugene vindman": {
+      "role": "U.S. representative, refugee, and Army veteran.",
+      "bio": "He says he was born in Soviet Ukraine to a Jewish family, left at age three after his mother died, and arrived in New York as a refugee in 1979. He says he attended public schools in Brooklyn, SUNY Binghamton, and Army ROTC at Cornell, and that he served 25 years in the Army, including in the Iraq War.",
+      "issues": [
+        "He says his top priority is cutting taxes and lowering costs for working families, including a crackdown on anti-competitive practices and support for small businesses.",
+        "He supports an all-of-the-above energy strategy and an end to costly foreign wars, which he says would lower gas and utility bills.",
+        "He says he is running to protect democracy and the freedoms his family found after fleeing the Soviet Union."
+      ],
+      "site": "https://vindmanforcongress.com/",
+      "siteLabel": "vindmanforcongress.com",
+      "donate": "https://secure.actblue.com/donate/evfc-website",
+      "source": "https://vindmanforcongress.com/issues/"
+    },
+    "james walkinshaw": {
+      "role": "U.S. representative for Virginia's 11th District.",
+      "bio": "He says he grew up in Prince William County, graduated from NYU, and lives in Fairfax with his wife, Yvette, and their son, Mateo. Before Congress he served on the Fairfax County Board of Supervisors and was chief of staff to Representative Gerry Connolly for more than a decade. He says he was elected to Congress in 2025.",
+      "issues": [
+        "He says housing, groceries, utilities, and child care are squeezing families, and he blames tariffs and a war with Iran for higher prices, including gas.",
+        "He says he opposed those tariffs, is working to restore Congress's authority over trade, and cosponsored the Energy Bills Relief Act.",
+        "He also says his work includes protecting federal workers, health care, Social Security and Medicare, and lowering costs for northern Virginia."
+      ],
+      "site": "https://jameswalkinshaw.org/",
+      "siteLabel": "jameswalkinshaw.org",
+      "donate": "https://secure.actblue.com/donate/james-walkinshaw?refcode=website",
+      "source": "https://jameswalkinshaw.org/priorities/"
+    }
+  },
+  "measures": {}
+}

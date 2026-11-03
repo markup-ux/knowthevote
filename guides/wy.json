@@ -1,0 +1,86 @@
+{
+  "code": "wy",
+  "ballotSource": "https://sos.wyo.gov/Elections/Docs/2026/2026_WY_General_Election_Candidates.pdf",
+  "where": {
+    "url": "https://myelectionday.sos.wyo.gov/WYVOTES/Pages/VOSearch.aspx",
+    "label": "Wyoming Voter Information Tool"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one.",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. Wyoming's constitution makes the governor commander-in-chief of the state's military forces and charges the governor with taking care that the laws are faithfully executed."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one.",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The U.S. Senate says it alone conducts impeachment trials and must confirm ambassadors, judges, and other officers the president nominates."
+    },
+    "Secretary Of State": {
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. Wyoming's secretary of state says the office keeps the Great Seal and is where businesses, elections, and securities filings are recorded."
+    }
+  },
+  "people": {
+    "eric barlow": {
+      "role": "Rancher, large-animal veterinarian, and Marine veteran who served as speaker of the Wyoming House and then in the State Senate.",
+      "bio": "His campaign says he is a fourth-generation Wyomingite raised on a Campbell County ranch who returned after the Marines, earned a veterinary degree, and kept the family ranch with his wife, Kelly.",
+      "issues": [
+        "He says his legislative work has centered on Wyoming energy independence, rural health access, and water infrastructure.",
+        "He says he is running to offer leadership rooted in service, and that the campaign is counting on Wyoming residents rather than special-interest money."
+      ],
+      "site": "https://barlowforwyo.com/",
+      "siteLabel": "barlowforwyo.com",
+      "donate": "https://secure.winred.com/eric-barlow-32097f9d/donate",
+      "source": "https://barlowforwyo.com/"
+    },
+    "harriet hageman": {
+      "role": "Member of Congress and lawyer whose campaign says she has fought federal regulators in court.",
+      "bio": "Her campaign says she has spent her career challenging rules that affect ranchers, farmers, and energy producers, and that Congress should take back power it has given to federal agencies.",
+      "issues": [
+        "She says she will defend speech, gun rights, and private property, and that she wants voter identification and an end to mailing ballots to people who did not request them.",
+        "She says she will fight tax increases, cut federal spending, and defend oil, gas, and coal production.",
+        "She says federal land agencies have mismanaged forests and that she wants multiple-use rules that answer to the people who live with those decisions."
+      ],
+      "site": "https://hagemanforwyoming.com/",
+      "siteLabel": "hagemanforwyoming.com",
+      "donate": "https://secure.psqimpact.com/donate/hageman-senate-fund/website-donation?amount=25",
+      "source": "https://www.hagemanforwyoming.com/issues"
+    },
+    "james byrd": {
+      "role": "Wyoming legislator running for the U.S. Senate.",
+      "bio": "His campaign says he is a native of Wyoming whose family roots in the state go back to homesteading in 1862, and that he has worked across the aisle in the Legislature.",
+      "issues": [
+        "He says he will try to lower energy costs by backing domestic production, cutting red tape, and ending foreign wars he says are driving prices up.",
+        "He says he will keep public lands public and open for hunting, fishing, grazing, and recreation, rather than selling them."
+      ],
+      "site": "https://byrdforsenate.com/",
+      "siteLabel": "byrdforsenate.com",
+      "donate": "https://secure.actblue.com/donate/james-byrd-1?refcode=directory",
+      "source": "https://byrdforsenate.com/"
+    },
+    "robert short": {
+      "role": "Businessman and former election judge running for Wyoming secretary of state.",
+      "bio": "His campaign says the office has to follow rules that build trust, fairness, and accuracy, and that he would carry out the constitutional and statutory duties of the job.",
+      "issues": [
+        "He says he would use the office against sham corporations and people who misuse privacy laws to disadvantage Wyoming businesses.",
+        "He says fair elections depend on county clerks and local volunteers, and that he would act quickly if the process goes wrong.",
+        "He says he would investigate securities violations, including cryptocurrency scams, and refer criminal matters to the proper authorities."
+      ],
+      "site": "https://shortforstate.com/",
+      "siteLabel": "shortforstate.com",
+      "donate": "https://www.shortforstate.com/donate",
+      "source": "https://shortforstate.com/"
+    },
+    "chuck gray": {
+      "role": "Wyoming secretary of state and candidate for Congress",
+      "bio": "The campaign says Chuck Gray served six years in the Wyoming House before becoming secretary of state, an office that also serves as lieutenant governor. It says he has focused on election administration, energy, and abortion limits.",
+      "issues": [
+        "His campaign says he will protect coal, oil, and gas jobs, oppose what he calls woke wind projects and ESG rules, and fight inflation with lower taxes and less spending.",
+        "The site says he sponsored Wyoming's voter ID law, required proof of citizenship to register, and banned ranked-choice voting and foreign funding of elections.",
+        "It says he supports securing the border, the Second Amendment, and pro-life policies, and opposes taxpayer-funded abortion."
+      ],
+      "site": "https://chuckforwyoming.com/",
+      "siteLabel": "Chuck Gray for Congress",
+      "source": "https://chuckforwyoming.com/"
+    }
+  },
+  "measures": {}
+}

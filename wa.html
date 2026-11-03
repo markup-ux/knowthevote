@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaders.vote · Washington, November 3, 2026</title>
+<meta name="description" content="Leaders.vote guide to the Washington general election on November 3, 2026. Candidates, sample ballot, and unofficial results. Not an endorsement.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="guide.css?v=maphover">
+</head>
+<body data-state="wa">
+<header>
+  <div class="wrap bar">
+    <div class="bar-top">
+      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      <div class="lang notranslate" translate="no">
+        <span class="visually-hidden">Language</span>
+        <select id="lang" class="visually-hidden" aria-hidden="true" tabindex="-1">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-CN">中文</option>
+          <option value="pl">Polski</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ko">한국어</option>
+          <option value="tl">Tagalog</option>
+          <option value="ar">العربية</option>
+          <option value="ur">اردو</option>
+          <option value="uk">Українська</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="fr">Français</option>
+        </select>
+        <button type="button" class="lang-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">English</button>
+        <ul id="lang-list" class="lang-menu" role="listbox" aria-label="Translate this page" hidden>
+          <li role="none"><button type="button" role="option" data-lang="en" aria-selected="true">English</button></li>
+          <li role="none"><button type="button" role="option" data-lang="es">Español</button></li>
+          <li role="none"><button type="button" role="option" data-lang="zh-CN">中文</button></li>
+          <li role="none"><button type="button" role="option" data-lang="pl">Polski</button></li>
+          <li role="none"><button type="button" role="option" data-lang="hi">हिन्दी</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ko">한국어</button></li>
+          <li role="none"><button type="button" role="option" data-lang="tl">Tagalog</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ar">العربية</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ur">اردو</button></li>
+          <li role="none"><button type="button" role="option" data-lang="uk">Українська</button></li>
+          <li role="none"><button type="button" role="option" data-lang="vi">Tiếng Việt</button></li>
+          <li role="none"><button type="button" role="option" data-lang="fr">Français</button></li>
+        </ul>
+</div>
+    </div>
+    <p class="here notranslate" translate="no"><img src="flags/wa.svg" alt=""><span>Washington</span></p>
+    <nav>
+      <a href="index.html">All states</a>
+      <a href="#results">Results</a>
+      <a href="#sample">The ballot</a>
+      <a href="#read">Before you go</a>
+      <a href="#measures">Measures</a>
+      <a href="#house">U.S. House</a>
+      <a href="#where">Where to vote</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero">
+    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record. A street address you type is not sent for translation.</p>
+    <p class="kicker">Washington · General election · Tuesday, November 3, 2026</p>
+    <h1>Know who you're voting for.</h1>
+    <p class="deck">What each office does is on this page. A candidate's priorities are included only when they come from that candidate's own site. This is not an endorsement and not a government site.</p>
+    <p class="when">Polls close at 11:00 PM ET. This page does not call a race.</p>
+    <div class="finder where" id="where">
+      <p class="kicker">Where to vote</p>
+      <h2>Find your polling place.</h2>
+      <p class="zip-note">Election Day is Tuesday, November 3. A polling place comes from the home address. Type the street number, street name, and ZIP here. This page does not keep them. The election office lookup is the list for that address.</p>
+      <form id="where-form" data-lookup="https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations" data-lookup-label="Washington Secretary of State">
+        <div>
+          <label for="where-number">Street number</label>
+          <input id="where-number" class="num" name="number" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-street">Street name</label>
+          <input id="where-street" class="street" name="street" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-zip">ZIP code</label>
+          <input id="where-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="98501" required>
+        </div>
+        <button type="submit">Find this address</button>
+      </form>
+      <div id="where-result" aria-live="polite"></div>
+    </div>
+    <div class="races"></div>
+  </div>
+  <section class="block" id="results">
+    <div class="wrap">
+      <p class="kicker">Unofficial · November 3, 2026</p>
+      <h2>Results across Washington.</h2>
+      <p class="sub">Each county is colored by who is ahead there. A blank county has not reported votes. This page does not call a race.</p>
+      <div class="result-legend">
+        <span><i class="swatch blank"></i> No votes reported</span>
+        <span><i class="swatch d"></i> Democratic lead</span>
+        <span><i class="swatch r"></i> Republican lead</span>
+        <span><i class="swatch o"></i> Another lead</span>
+      </div>
+      <div class="result-layout">
+        <div><div id="state-slot"></div></div>
+        <div>
+          <div id="result-races" class="sheet-switch" role="group" aria-label="Races"></div>
+          <div id="result-summary"></div>
+          <label for="result-place">County, parish, or city</label>
+          <select id="result-place"><option value="">Statewide totals</option></select>
+          <div id="result-detail"></div>
+          <p id="result-status" class="note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="sample">
+    <div class="wrap">
+      <p class="kicker">How you vote</p>
+      <h2>What the ballot looks like.</h2>
+      <p class="sub">This sample lists the statewide contests NBC News is publishing for Washington. It is not a precinct ballot.</p>
+      <div class="sample-layout">
+        <div>
+          <ol class="steps" id="sample-steps">
+            <li><button type="button" data-step="mark">Mark one choice on a contest. Next and Back move one contest at a time. This sample puts the mark to the left of a name.</button></li>
+            <li><button type="button" data-step="order">Party order here is Republican, then Democratic, then any other candidate. Your county may print a different order.</button></li>
+            <li><button type="button" data-step="measure">A measure is a yes or no question. It is not a race between candidates.</button></li>
+            <li><button type="button" data-step="house">U.S. House depends on your district and is listed farther down this page. This sample does not include it.</button></li>
+          </ol>
+          <p class="zip-note">The address lookup above opens the election office. A ZIP code alone does not pick a district.</p>
+        </div>
+        <div>
+          <div class="sheet" id="sample-candidates">
+            <p class="kicker">Sample ballot · Washington · November 3, 2026</p>
+            <div class="contest" data-kind="measure"><h3>Measure: Biological sex requirement for school sports</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button></div>
+<div class="contest" data-kind="measure"><h3>Measure:Repeal millionaire tax</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button></div>
+          </div>
+          <div class="sheet-move">
+            <button type="button" id="contest-back" class="notranslate" translate="no" data-phrase="back">Back</button>
+            <p id="sample-status"></p>
+            <button type="button" id="contest-next" class="notranslate" translate="no" data-phrase="next">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="read">
+    <div class="wrap">
+      <p class="kicker">Before you go</p>
+      <h2>Statewide contests, then your district.</h2>
+      <div class="facts">
+        <div class="fact">
+          <h3>What to bring</h3>
+          <p>Bring what this state's election office requires. The address lookup on this page opens that office. This page does not keep the address.</p>
+        </div>
+        <div class="fact">
+          <h3>How names got here</h3>
+          <p>Statewide names were compared with the candidate list linked at the bottom of this page. Photos are the ones NBC News is publishing. On this site the order is Republican, then Democratic, then any other party. A printed ballot may use a different order.</p>
+        </div>
+        <div class="fact">
+          <h3 class="notranslate" translate="no" data-phrase="writeins">Write-ins</h3>
+          <p>A write-in counts only if that person filed. This page lists the names being published.</p>
+        </div>
+        <div class="fact">
+          <h3>What you are choosing</h3>
+          <p>The sample lists the statewide contests on this page. U.S. House is one seat in your district and is listed farther down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="block" id="measures"><div class="wrap"><h2>Ballot measures.</h2><p class="office-note">The title is the one being published for this ballot. This guide adds an explanation only when it comes from the official text.</p><div class="sheet"><h3>Measure: Biological sex requirement for school sports</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button>
+<h3>Measure:Repeal millionaire tax</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button></div></div></section>
+  <section class="block" id="house"><div class="wrap"><h2>U.S. House.</h2><p class="office-note">Every district NBC News is publishing for this state. This list is not filtered to one address. A written note is added only from that candidate's own site.</p><h3>District 1</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H01_R_M_SILVA.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Mary Silva</h3><span class="pill r">Republican</span></div><p class="role">Candidate for Congress in Washington&#x27;s 1st District.</p><p class="bio">Her issues page lays out what she calls an America-first platform on jobs, security, spending, and elections.</p><ul><li>Her platform calls for bringing semiconductor, IT, AI, and cybersecurity work back to the United States and for restructuring H-1B visas so companies hire locally.</li><li>She wants stronger border security, a review of security clearances, and an audit of the Pentagon and intelligence contracting.</li><li>She supports voter ID and a midweek election holiday, and she says patients, including parents, should control medical decisions.</li></ul><p class="links"><a href="https://www.marysilvaforcongress.com/" target="_blank" rel="noopener noreferrer">marysilvaforcongress.com</a> · <a href="https://www.marysilvaforcongress.com/donate" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H01_D_S_DELBENE.png" alt="" data-letter="S" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Suzan DelBene</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative for Washington&#x27;s 1st District.</p><p class="bio">She says she is trying to move past rhetoric and deliver for the district&#x27;s working families and businesses, and her campaign notes that she chairs the Democratic Congressional Campaign Committee.</p><ul><li>She wants economic policy aimed at rising gas, housing, and child-care costs, and she says she is running to win a House majority that can check the administration.</li><li>She supports the Affordable Care Act and a path to universal coverage that includes a public option, plus comprehensive immigration reform and legal limits on ICE.</li><li>She also lists climate action, reproductive rights, housing, Social Security, and digital privacy as priorities.</li></ul><p class="links"><a href="https://delbeneforcongress.com/" target="_blank" rel="noopener noreferrer">delbeneforcongress.com</a> · <a href="https://secure.actblue.com/donate/suzan-delbene-2018-website" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 2</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H02_R_E_FELLER.png" alt="" data-letter="E" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Edwin Feller</h3><span class="pill r">Republican</span></div><p class="role">Candidate for Congress who grew up on a Whatcom County dairy farm.</p><p class="bio">He says the district needs a representative focused on economics and public safety, and he argues that high taxes and a larger government created the affordability crunch.</p><ul><li>He supports tying federal public-safety grants to local cooperation, labeling cartels as foreign terrorist organizations, and ending sanctuary policies.</li><li>He wants faster energy permits, more nuclear and hydroelectric power, and a repeal of federal carbon taxes.</li><li>He wants Title IX to define sex as biological sex, a federal ban on irreversible medical procedures for minors, and immigration rebuilt around nuclear families and job skills.</li></ul><p class="links"><a href="https://fellerforcongress.com/" target="_blank" rel="noopener noreferrer">fellerforcongress.com</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H02_D_R_LARSEN.png" alt="" data-letter="R" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Rick Larsen</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative for Washington&#x27;s 2nd District.</p><p class="bio">His family has lived in northwest Washington for more than a century; he grew up in Arlington as the son of a union power-line worker and a mother who raised eight children, and he worked his way through Pacific Lutheran University.</p><ul><li>He says his votes are aimed at lowering costs, bringing federal investment home, and building an economy that works for more people.</li><li>He says he will hold the administration and ICE accountable, combat fentanyl, and protect reproductive freedom.</li><li>He also lists more access to health care and support for veterans, and he serves as the lead Democrat on the Transportation and Infrastructure Committee.</li></ul><p class="links"><a href="https://www.ricklarsen.org/" target="_blank" rel="noopener noreferrer">ricklarsen.org</a> · <a href="https://secure.actblue.com/donate/stand-with-rick-larsen" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 3</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H03_R_J_BRAUN.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">John Braun</h3><span class="pill r">Republican</span></div><p class="role">Navy veteran and small-business owner running for Congress.</p><p class="bio">He calls himself a citizen-legislator who has balanced budgets, signed paychecks, and fought to put parents in control of schools.</p><ul><li>He wants spending that feeds inflation cut back, and less red tape for small manufacturers and the skilled trades.</li><li>He supports a federal parents&#x27; bill of rights, lower public-university tuition, and more training in the trades.</li><li>He says he would shut down open-air drug markets, interdict fentanyl, finish border barriers, and continue sea-lion control to help salmon runs.</li></ul><p class="links"><a href="https://www.votebraun.com/" target="_blank" rel="noopener noreferrer">votebraun.com</a> · <a href="https://secure.anedot.com/john-braun-for-congress/donate" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H03_D_M_GLUESENKAMPPEREZ.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Marie Gluesenkamp Perez</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative and auto-shop owner from southwest Washington.</p><p class="bio">She describes herself as a fifth-generation Washingtonian, a pro-choice mother, and a trades small-business owner who built a house by hand and brought her child to work because day care was too expensive.</p><ul><li>She says she will oppose a national abortion ban and protect the freedom to see a doctor.</li><li>She wants local police and firefighters paid enough to stay, and she is pushing a right to repair so farmers and customers are not forced back to the manufacturer.</li><li>She says the campaign takes no corporate PAC money and is working to lower housing, child care, and health-care costs.</li></ul><p class="links"><a href="https://marieforcongress.com/" target="_blank" rel="noopener noreferrer">marieforcongress.com</a> · <a href="https://secure.actblue.com/donate/mgpvf-website" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 4</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H04_R_A_MCKINNEY.png" alt="" data-letter="A" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Amanda McKinney</h3><span class="pill r">Republican</span></div><p class="role">Yakima County commissioner running for Congress.</p><p class="bio">She says she came from a family rooted in faith, agriculture, and service, worked in banking, and has used county office to challenge COVID rules, secure water, and flag fraud.</p><ul><li>She says government should protect people and leave decisions with those closest to the consequences.</li><li>She says she will stand with President Trump on the border, energy production, constitutional rights, and federal spending.</li><li>Her stated priorities are faith, family, agriculture, public safety, and freedom for central Washington.</li></ul><p class="links"><a href="https://www.mckinneyforwashington.com/" target="_blank" rel="noopener noreferrer">mckinneyforwashington.com</a> · <a href="https://secure.winred.com/amanda-mckinney-for-congress/donate-today-website" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H04_D_J_DURESKY.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">John Duresky</h3><span class="pill d">Democratic</span></div><p class="role">Candidate for Washington&#x27;s 4th District focused on farms, jobs, and rural care.</p><p class="bio">He says he wants practical results for central Washington families, and his platform treats Hanford cleanup work as a job base to protect.</p><ul><li>He wants tariffs that hurt farmers removed, irrigation rights protected, and the Farm Bill written for small and mid-size operations.</li><li>He says he will defend Hanford cleanup jobs, raise the federal minimum wage, protect the right to organize, and close tax preferences such as stepped-up basis and carried interest.</li><li>He wants rural hospitals kept open, ACA subsidies restored, and Medicare and Medicaid protected from cuts.</li></ul><p class="links"><a href="https://www.johnduresky4congress.com/" target="_blank" rel="noopener noreferrer">johnduresky4congress.com</a> · <a href="https://secure.actblue.com/donate/jd4cweb" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 5</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H05_R_M_BAUMGARTNER.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Michael Baumgartner</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative for Washington&#x27;s 5th District.</p><p class="bio">He says his first year in Congress coincided with fewer border crossings, less crime, lower taxes, and protection for the Lower Snake River dams.</p><ul><li>He says he is running so those policies stay in place.</li><li>He describes the job as delivering results for families and for eastern Washington&#x27;s regional interests.</li></ul><p class="links"><a href="https://www.votebaumgartner.com/" target="_blank" rel="noopener noreferrer">votebaumgartner.com</a> · <a href="https://secure.anedot.com/vote-baumgartner-for-congress-campaign/onlinedonation" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H05_D_C_CONROY.png" alt="" data-letter="C" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Carmela Conroy</h3><span class="pill d">Democratic</span></div><p class="role">Former Spokane County deputy prosecutor and Foreign Service officer running for Congress.</p><p class="bio">She is a third-generation eastern Washingtonian whose family worked on farms, in trades, and on the railroad, and she says she later served under six presidents overseas.</p><ul><li>She wants lower everyday costs and more investment in housing, child care, education, and infrastructure for families, new workers, small businesses, and farms.</li><li>She says her prosecutor and diplomatic work shapes a focus on public safety and steady leadership abroad.</li><li>She wants Medicare, Medicaid, and Social Security protected, health costs lowered, rural hospitals strengthened, and veterans supported.</li></ul><p class="links"><a href="https://conroy4congress.com/" target="_blank" rel="noopener noreferrer">conroy4congress.com</a> · <a href="https://secure.actblue.com/donate/conroy" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 6</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H06_R_T_FOX.png" alt="" data-letter="T" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Teresa Fox</h3><span class="pill r">Republican</span></div><p class="role">Safety professional and emergency manager running for Washington&#x27;s 6th District.</p><p class="bio">She says her work has run from shipyards and naval bases to fish-processing vessels in the Bering Sea, in jobs where excuses were not accepted.</p><ul><li>She wants federal spending restrained and naval readiness funded through the workforce rather than through more bureaucracy.</li><li>She calls for police staffing in rural communities, Title IX rules she says would protect fair competition and privacy, and health care for rural areas.</li><li>She supports congressional term limits.</li></ul><p class="links"><a href="https://foxforwa.com/" target="_blank" rel="noopener noreferrer">foxforwa.com</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H06_D_E_RANDALL.png" alt="" data-letter="E" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Emily Randall</h3><span class="pill d">Democratic</span></div><p class="role">Candidate for Congress who grew up in Washington&#x27;s 6th District.</p><p class="bio">She says she is the daughter of a shipyard worker and a paraeducator and that those roots connect her to the district&#x27;s working-class families.</p><ul><li>The campaign says it does not accept corporate PAC money and is funded by working people.</li><li>She frames the race as a bid to change conditions for the families in the district where she was born and raised.</li></ul><p class="links"><a href="https://electemilyrandall.com/" target="_blank" rel="noopener noreferrer">electemilyrandall.com</a> · <a href="https://secure.actblue.com/donate/er4c2024" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 7</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H07_R_N_SHETH.png" alt="" data-letter="N" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Nirav Sheth</h3><span class="pill r">Republican</span></div><p class="role">Marine veteran and former Lakewood police officer running for Congress.</p><p class="bio">He says he was born and raised in India, came to the United States in 2008 to study engineering, served four years in the Marines, and later worked as a police officer in Lakewood before starting a business in Pierce County.</p><ul><li>He says the campaign is about safe communities, strong infrastructure, and a future in which people can reach their own goals.</li><li>His site organizes that pitch around affordability and jobs, immigration, public safety, small businesses, and local control of education.</li></ul><p class="links"><a href="https://shethforcongress.com/" target="_blank" rel="noopener noreferrer">shethforcongress.com</a> · <a href="https://secure.anedot.com/sheth-for-congress/29e7bb62-ca9b-49e0-898c-c940e8f18713" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H07_D_P_JAYAPAL.png" alt="" data-letter="P" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Pramila Jayapal</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative for Washington&#x27;s 7th District.</p><p class="bio">She is the first South Asian American woman elected to the House, chaired the Congressional Progressive Caucus for six years, and is the ranking Democrat on the Judiciary immigration subcommittee.</p><ul><li>She introduced the Medicare for All Act and describes health care as a human right.</li><li>She introduced a housing bill to invest in affordable homes and a College for All proposal.</li><li>She also lists immigration reform and climate work, including as the first immigrant to serve as ranking member of the Judiciary immigration subcommittee.</li></ul><p class="links"><a href="https://www.pramilaforcongress.com/" target="_blank" rel="noopener noreferrer">pramilaforcongress.com</a> · <a href="https://secure.actblue.com/contribute/page/pramilaforcongress" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 8</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H08_R_S_MELINE.png" alt="" data-letter="S" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Spencer Meline</h3><span class="pill r">Republican</span></div><p class="role">Candidate for Congress in Washington&#x27;s 8th District.</p><p class="bio">He says the American Dream is still alive but harder to reach, and that he is running so working families and the next generation can build a life.</p><ul><li>He supports congressional term limits, single-subject bills, a ban on individual stock trading by members, and searchable federal spending.</li><li>He wants Small Business Administration loans simplified, housing and the cost of living addressed, and forests managed with wildfire defense in mind.</li><li>He also lists patient-centered health care, skills education, and rules for technology and artificial intelligence.</li></ul><p class="links"><a href="https://www.melineforcongress.com/" target="_blank" rel="noopener noreferrer">melineforcongress.com</a> · <a href="https://secure.winred.com/meline-for-congress/donate" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H08_D_K_SCHRIER.png" alt="" data-letter="K" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Kim Schrier</h3><span class="pill d">Democratic</span></div><p class="role">Pediatrician and U.S. representative for Washington&#x27;s 8th District.</p><p class="bio">She chairs the Democratic Doctors Caucus and says travel around the district keeps turning up families squeezed by higher prices.</p><ul><li>She wrote a bill to suspend the federal gas tax for temporary relief, and she says she is fighting corporate price gouging, grocery mergers, and tariffs that hit farmers and small businesses.</li><li>She is pushing housing bills, including a permanent housing-affordability proposal and support for the bipartisan Road to Housing package.</li><li>She wants ACA premium tax credits restored and Republican Medicaid cuts undone so rural hospitals and Apple Health coverage stay in place.</li></ul><p class="links"><a href="https://drkimschrier.com/" target="_blank" rel="noopener noreferrer">drkimschrier.com</a> · <a href="https://secure.actblue.com/donate/kimschrier" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 9</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H09_R_D_BASLER.png" alt="" data-letter="D" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Doug Basler</h3><span class="pill r">Republican</span></div><p class="role">Video-production business owner running for Congress.</p><p class="bio">He founded Prologue Digital, has worked in media and sales training since 1990, and has been a Republican precinct officer and a volunteer with Seattle rescue missions.</p><ul><li>He says families are being priced out by gas, energy, groceries, housing, insurance, and taxes, and he argues the Climate Commitment Act raises energy costs.</li><li>He wants an economy in which people can start a business, buy a home, learn a trade, and advance.</li><li>He says public safety should hold people accountable for crime and disorder while still offering compassion to people in crisis.</li></ul><p class="links"><a href="https://www.dougbasler.com/" target="_blank" rel="noopener noreferrer">dougbasler.com</a> · <a href="https://secure.winred.com/friends-of-doug-basler/run" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H09_D_A_SMITH.png" alt="" data-letter="A" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Adam Smith</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative for Washington&#x27;s 9th District.</p><p class="bio">He says representing the community where he grew up, and where he and his wife Sara raised their family, is the honor of his life, and he describes himself as a lifelong Washingtonian.</p><ul><li>He says he will work to lower rent and get more housing built.</li><li>He says he will stand up to the Trump administration, put people ahead of profits, and open pathways to better-paid jobs.</li><li>He also lists protecting abortion rights and protecting Puget Sound for future generations.</li></ul><p class="links"><a href="https://electadamsmith.com/" target="_blank" rel="noopener noreferrer">electadamsmith.com</a> · <a href="https://electadamsmith.com/contribute" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 10</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H10_R_C_CHUNG.png" alt="" data-letter="C" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Chris Chung</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H10_D_M_STRICKLAND.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Marilyn Strickland</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative working on family costs, health care, and military families.</p><p class="bio">She says she is a proud Army brat representing service members, veterans, and military families, and that her time in Congress has centered on costs, jobs, and care.</p><ul><li>She says working people and small businesses need lower costs, more jobs, and an economy put back on track.</li><li>She wants health care people can afford, Medicare protected, and more renewable energy.</li><li>She says she has led bipartisan work on food insecurity and housing for military families in a district she describes as full of service members and veterans.</li></ul><p class="links"><a href="https://www.stricklandforwashington.com/" target="_blank" rel="noopener noreferrer">stricklandforwashington.com</a> · <a href="https://secure.actblue.com/donate/strickandwebsite" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Leaders.vote is an independent voter guide for the November 3, 2026 general election. It is not a campaign, not an endorsement, and not a site of any state or election authority. This page is Washington.</p>
+    <p>Statewide names were compared with <a href="https://voter.votewa.gov/CandidateList.aspx?e=899" target="_blank" rel="noopener noreferrer">this state candidate list</a>. Photos are the ones NBC News is publishing. An issue line is added only from a candidate's own site.</p>
+  </div>
+</footer>
+<div id="google_translate_element" aria-hidden="true"></div>
+<script src="lang.js"></script>
+<script src="state.js"></script>
+</body>
+</html>

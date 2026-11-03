@@ -1,0 +1,194 @@
+{
+  "code": "la",
+  "ballotSource": "https://voterportal.sos.la.gov/CandidateInquiry/StatewideCandidate/CandidateList?electionId=344&officeIds=67997",
+  "where": {
+    "url": "https://geauxvote.com/",
+    "label": "Find your polling location"
+  },
+  "offices": {
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The Senate has the sole power to try impeachments."
+    }
+  },
+  "people": {
+    "julia letlow": {
+      "role": "U.S. representative from Louisiana running for the Senate.",
+      "bio": "Julia Letlow's site says she is a Louisiana native, mother, and educator who entered Congress after her husband, Luke, died, and that she was the first Republican woman elected to Congress from Louisiana.",
+      "issues": [
+        "She says her work in Congress has been for parents, students, farmers, law enforcement, and Louisiana families.",
+        "She says she is guided by faith, family, service, and love of the state.",
+        "She says she is running for the Senate to give Louisiana conservative leadership, and she notes President Trump's endorsement."
+      ],
+      "site": "https://www.julialetlow.com/",
+      "siteLabel": "julialetlow.com",
+      "donate": "https://www.julialetlow.com/donate",
+      "source": "https://www.julialetlow.com/"
+    },
+    "jamie davis": {
+      "role": "Farmer and Tensas Parish Police Jury member running for the U.S. Senate.",
+      "bio": "Jamie Davis's site says he built a business, met a payroll, farms Delta ground his grandfather sharecropped, and served his neighbors on the Tensas Parish Police Jury.",
+      "issues": [
+        "He says Louisiana has become unaffordable and that he wants lower grocery, insurance, and utility bills.",
+        "He says he will work to expand access to affordable care and will not vote for hospital closings.",
+        "He says he opposes secret nondisclosure agreements in development deals and land takings for industry, and that his campaign is funded by Louisiana donors rather than corporate PACs."
+      ],
+      "site": "https://jamieforlouisiana.com/",
+      "siteLabel": "jamieforlouisiana.com",
+      "donate": "https://secure.actblue.com/donate/sendafarmertowashington",
+      "source": "https://jamieforlouisiana.com/"
+    },
+    "steve scalise": {
+      "role": "House majority leader representing southeast Louisiana.",
+      "bio": "A Jefferson Parish native, he says he registered as a Republican the day he turned 18, served in the Louisiana Legislature from 1996 until his election to Congress in 2008, and was elected majority leader by his colleagues. He and his wife Jennifer have two children, Madison and Harrison.",
+      "issues": [
+        "He says he is working to promote fiscal discipline, create good-paying jobs, protect freedoms, and get the economy back on track.",
+        "His site lists creating jobs, building a border wall, fixing health care, cutting spending, and making America safe among the priorities supporters can choose.",
+        "He says that as majority leader he sets the floor schedule and works with colleagues on conservative solutions to the country's hardest problems."
+      ],
+      "site": "https://stevescalise.com/",
+      "siteLabel": "stevescalise.com",
+      "donate": "https://secure.anedot.com/scalise-for-congress/website/?utm_medium=website",
+      "source": "https://stevescalise.com/meet-steve/"
+    },
+    "lauren jewett": {
+      "role": "Special-education teacher running for Congress in Louisiana's 1st District.",
+      "bio": "She says she has spent 17 years beside Louisiana students, families, and educators and is a nationally board-certified special education teacher and union member. She says she is running because people who teach, care for neighbors, and build communities need someone who will fight as hard as they do.",
+      "issues": [
+        "She says Louisiana families are squeezed by unaffordable insurance, health-care costs, underfunded schools, and an economy that leaves too many people behind.",
+        "Her campaign says the district needs lower costs, strong schools and hospitals, safe communities, and a representative who fights for working people.",
+        "She says she wants to advocate for environmental, constitutional, economic, and health protections in a region she calls overlooked."
+      ],
+      "site": "https://www.laurenjewett.com/",
+      "siteLabel": "laurenjewett.com",
+      "source": "https://www.laurenjewett.com/"
+    },
+    "peter williams": {
+      "role": "Tree farmer and pastor from Lettsworth running for Congress.",
+      "bio": "He says he lives in Lettsworth, graduated from the University of Southwestern Louisiana in 1980, taught school, and since 1999 has run Resource One Nursery, a family tree farm and specialty-crop business. He says he is a Christian of the Apostolic faith, married to Alfreda for 45 years, with four grown children.",
+      "issues": [
+        "He says the new district map covers both urban and rural communities and that a representative should plan around agriculture, health, housing, education, transportation, recreation, and incarceration.",
+        "He says voters should have a choice based on policies and people rather than a party-chosen status quo.",
+        "He says he has spent more than 30 years as a community advocate trying to improve quality of life in the district."
+      ],
+      "site": "https://peterwilliams4congress.com/",
+      "siteLabel": "peterwilliams4congress.com",
+      "source": "https://peterwilliams4congress.com/"
+    },
+    "troy carter sr.": {
+      "role": "U.S. representative for Louisiana's 2nd District and a former state senator.",
+      "bio": "He says he was the first African American elected to the Louisiana House from New Orleans' 102nd District in 1991 and later the first African American elected to state Senate District 7. He says serving in Congress has been the greatest honor of his life because he is fighting for Louisiana.",
+      "issues": [
+        "He says he will keep fighting for fair housing, people with disabilities, criminal and environmental justice, equal pay, and a living wage.",
+        "He says government should let women make their own health and reproductive decisions, and he wants quality, affordable health care and less student-loan debt.",
+        "He says he championed the Social Security Fairness Act so teachers, police, and firefighters are not docked by the windfall and pension offsets."
+      ],
+      "site": "https://www.congressmantroycarter.com/",
+      "siteLabel": "congressmantroycarter.com",
+      "donate": "https://secure.actblue.com/donate/troy-carter-for-congress-1?refcode=header",
+      "source": "https://www.congressmantroycarter.com/"
+    },
+    "john day": {
+      "role": "Navy veteran from Lake Charles running for Congress.",
+      "bio": "Born in Shreveport and raised in Lake Charles, he says he served in the Navy from 1994 to 1998 and decided to run after a house fire nearly took his family's belongings. He and his wife Amanda have four children.",
+      "issues": [
+        "He says he wants lower everyday costs, better pay, safer communities, and storm protection, with an all-of-the-above energy strategy that keeps oil and gas jobs and invests in renewables.",
+        "He says insurance should have fair rates and faster claims, and that homeowners should get the coverage they pay for after storms.",
+        "He says government should not control a person's body, health care, or personal life, and that patients rather than politicians should be in charge of care."
+      ],
+      "site": "https://johndayforcongress.com/",
+      "siteLabel": "johndayforcongress.com",
+      "source": "https://johndayforcongress.com/"
+    },
+    "mike johnson": {
+      "role": "Speaker of the House and representative for Louisiana's 4th District.",
+      "bio": "A husband and father of four, he says he is a constitutional law attorney and the son of a Shreveport firefighter. First elected in 2016, he says he is the first Louisianian chosen as Speaker and the highest-ranking government official in the state's history.",
+      "issues": [
+        "He says that with President Trump he has worked on lower costs, American energy dominance, peace through strength, and tax cuts he says will save district families nearly $1,300.",
+        "He says he will keep fighting for the principles that make Louisiana a place to live, work, and raise a family.",
+        "His campaign quotes a Trump endorsement that highlights border security, law and order, farmers, and the Second Amendment as parts of the agenda Johnson is carrying."
+      ],
+      "site": "https://www.mikejohnsonforlouisiana.com/",
+      "siteLabel": "mikejohnsonforlouisiana.com",
+      "donate": "https://secure.winred.com/MikeJohnson/donate?utm_campaign=organic%3Famount%3D20&utm_medium=website",
+      "source": "https://www.mikejohnsonforlouisiana.com/news/speaker-johnson-qualifies-for-re-election"
+    },
+    "conrad cable": {
+      "role": "First-generation farmer from north Louisiana running for Congress.",
+      "bio": "He says he knows hard work and keeping his word, and that he cannot be bought by lobbyists or billionaires. He is running so someone in Washington fights for people he calls hard-working patriots who are tired of being left behind.",
+      "issues": [
+        "He says he would raise wages, protect the right to organize, and shift power from corporations to the people who do the work.",
+        "He says more than a third of the district relies on Medicaid, that he supports Medicare for All, and that health care should depend on need rather than income.",
+        "He says he would open public grocery stores stocked with local food that SNAP and WIC can buy, and he supports overturning Citizens United and banning congressional stock trading."
+      ],
+      "site": "https://www.conrad4congress2026.com/",
+      "siteLabel": "conrad4congress2026.com",
+      "donate": "https://secure.actblue.com/donate/conrad-cable-1?refcode=web",
+      "source": "https://www.conrad4congress2026.com/"
+    },
+    "michael echols": {
+      "role": "Louisiana state representative and business owner running for Congress.",
+      "bio": "A lifelong northeast Louisiana resident and University of Louisiana at Monroe graduate, he says he chairs the House Republican delegation and works as a licensed contractor and commercial real-estate investor. He and his wife Christie, an architect, live in Monroe with two daughters.",
+      "issues": [
+        "He says insurance premiums should fall if Washington lowers inflation, expands domestic energy, and drops federal rules that raise the cost of rebuilding after storms.",
+        "He says grocery prices rose because of federal spending, and that cheaper fuel and fewer rules on farmers, truckers, and stores would bring checkout prices down.",
+        "He says he would expand oil and gas production, support LNG exports, protect Louisiana refineries, and speed permits for energy projects."
+      ],
+      "site": "https://www.michaelechols.com/",
+      "siteLabel": "michaelechols.com",
+      "donate": "https://secure.winred.com/echols-for-congress/donate-today",
+      "source": "https://www.michaelechols.com/issues/"
+    },
+    "misti cordell": {
+      "role": "Health-care business owner and Louisiana Board of Regents chair running for Congress.",
+      "bio": "She says she is a wife, mother, and business owner, not a career politician, and that Governor Jeff Landry appointed her to chair the Board of Regents. She has been a Trump delegate and serves on the state Republican central committee.",
+      "issues": [
+        "She says she would cut taxes and red tape, defend agriculture and energy jobs, and stand up to federal overreach.",
+        "She says she would secure the border, finish a wall, back law enforcement, and protect Second Amendment rights.",
+        "She says she would vote pro-life, defend girls' sports, support school choice, and return control of education to parents and local communities."
+      ],
+      "site": "https://www.cordellforcongress.com/",
+      "siteLabel": "cordellforcongress.com",
+      "donate": "https://secure.anedot.com/cordell-for-congress/donatenow",
+      "source": "https://www.cordellforcongress.com/platform"
+    },
+    "blake miguez": {
+      "role": "State senator and oil-and-gas business owner running for Congress.",
+      "bio": "A seventh-generation Louisianian and LSU graduate, he says he has owned a home in Baton Rouge for more than 25 years, expanded his family's oil and gas business, and is raising four children with his wife Ashley, a special-education teacher. He was elected to the state Senate in 2023.",
+      "issues": [
+        "He says he passed a law so Louisiana can prosecute corrupt politicians after they leave office, and in Congress he would push term limits and a permanent ban on members trading individual stocks.",
+        "He says he wrote the state law forcing New Orleans to follow immigration law, and he would finish a border wall, mandate E-Verify, and treat cartels as foreign terrorist organizations.",
+        "He says he authored constitutional carry, banned Big Tech money in Louisiana elections, and banned ultra-processed food in school cafeterias."
+      ],
+      "site": "https://blakemiguez.com/",
+      "siteLabel": "blakemiguez.com",
+      "donate": "https://secure.winred.com/blake-miguez/donate-today",
+      "source": "https://blakemiguez.com/issues/"
+    },
+    "lindsay garcia": {
+      "role": "Democratic candidate running for Louisiana's 6th District.",
+      "bio": "She says she grew up stretching a dollar and waiting on doctors, and that she has worked in public schools, served in federal programs, stood with families in crisis, and studied the law. She says she is not a career politician.",
+      "issues": [
+        "She says she would make daily life more affordable, protect Social Security, Medicare, and Medicaid, lower prescription costs, and raise wages.",
+        "She says she would bring federal money home for I-10 and I-12, bridges, drainage, flood protection, and affordable flood insurance.",
+        "She says she would fight violent crime, trafficking, and fentanyl while supporting voting rights, civil rights, and due process."
+      ],
+      "site": "https://www.rubiagarcia.com/",
+      "siteLabel": "rubiagarcia.com",
+      "donate": "https://secure.actblue.com/donate/lindsay-garcia-1?refcode=websitelink",
+      "source": "https://www.rubiagarcia.com/"
+    },
+    "clay higgins": {
+      "role": "Candidate for Congress in Louisiana's 3rd District.",
+      "bio": "His campaign site says he is a lifelong Louisiana resident who served in Acadiana law enforcement and trained as a military police officer in the Army. It calls him a defender of the Bill of Rights.",
+      "issues": [
+        "He says a sworn officer's oath is to the Constitution, not to a sheriff, chief, or marshal.",
+        "The site says that, as a Christian, he focuses on the power of an individual to be redeemed."
+      ],
+      "site": "https://captainhiggins.com/",
+      "siteLabel": "captainhiggins.com",
+      "source": "https://captainhiggins.com/about/"
+    }
+  },
+  "measures": {}
+}

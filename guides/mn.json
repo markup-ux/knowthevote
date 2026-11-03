@@ -1,0 +1,197 @@
+{
+  "code": "mn",
+  "ballotSource": "https://electionresultsfiles.sos.mn.gov/20261103/CandTbl.txt",
+  "where": {
+    "url": "https://myballotmn.sos.mn.gov/",
+    "label": "Minnesota Secretary of State"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. Minnesota law says the governor appoints state officers and employees whose selection is not otherwise provided for by law, and may remove an appointee whose term of service is not set by law."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The U.S. Senate has the sole power to conduct impeachment trials."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. State law requires the attorney general to appear for the state in the supreme court and in federal courts when the state is directly interested, and to appear in a criminal case when a county attorney requests it and the attorney general deems it proper."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. State law makes the secretary of state the custodian of the state seal and of state records and documents that the law does not assign to another official."
+    }
+  },
+  "people": {
+    "lisa demuth": {
+      "role": "Speaker of the Minnesota House.",
+      "bio": "Her campaign says she was elected to the Minnesota House in 2018, served on the ROCORI School Board, and ran a small business before that. In 2025 she became Speaker, and the site says she was the first Black lawmaker and the first Republican woman in that post.",
+      "issues": [
+        "She says her first priority as governor would be helping families afford their lives, including lower income-tax brackets, lower car-tab fees, and an end to the state tax on Social Security benefits.",
+        "She says she would create a nonpartisan inspector general to look for fraud in state programs before money leaves the door.",
+        "She says she would back police, firefighters, and other first responders."
+      ],
+      "site": "https://lisaformn.com",
+      "siteLabel": "lisaformn.com",
+      "donate": "https://secure.winred.com/lisa-demuth-for-governor/donate-today",
+      "source": "https://lisaformn.com/about/"
+    },
+    "amy klobuchar": {
+      "role": "U.S. senator and former Hennepin County attorney.",
+      "bio": "Her campaign says she led Hennepin County's prosecutor's office for eight years and has served in the Senate, where she highlights bipartisan bills and a law letting Medicare negotiate drug prices. She is running for governor and says she wants state government to be more accountable.",
+      "issues": [
+        "She says she would work to lower health care, housing, child care, and utility bills, and to build more homes.",
+        "She says she would root out fraud and make it easier to start a business and get a permit.",
+        "She says she would take on organized crime and gang violence and help local police hire and keep officers."
+      ],
+      "site": "https://www.amyklobuchar.com",
+      "siteLabel": "amyklobuchar.com",
+      "donate": "https://www.amyklobuchar.com/donate",
+      "source": "https://www.amyklobuchar.com/priorities"
+    },
+    "michele tafoya": {
+      "role": "Former NFL sideline reporter and broadcaster.",
+      "bio": "Her campaign says she is a four-time Sports Emmy winner who covered NFL games for NBC, including five Super Bowls, and left the sideline after Super Bowl LVI. She is running for the Senate on what she calls accountability and family-first leadership.",
+      "issues": [
+        "She says she would cosponsor a bill to deport an immigrant convicted of fraud and would seek mandatory federal prison terms for fraud.",
+        "She says she would push to withhold federal money from a state that will not put anti-fraud controls in place.",
+        "She says Minnesota's criminal-justice experiment has failed and that she would stand with victims and law enforcement."
+      ],
+      "site": "https://micheletafoya.com",
+      "siteLabel": "micheletafoya.com",
+      "donate": "https://secure.winred.com/tafoya-for-senate/donate-today",
+      "source": "https://micheletafoya.com/issues/"
+    },
+    "peggy flanagan": {
+      "role": "Lieutenant governor of Minnesota.",
+      "bio": "She says she grew up with a single mother, relying on food stamps and Medicaid, and that she is now lieutenant governor. She says she is running for the Senate because leaders in Washington have failed working people.",
+      "issues": [
+        "She says she wants a fair economy so people can afford the lives they want for their families.",
+        "She says she will not take corporate PAC money and wants to reverse Citizens United and limit dark money in elections.",
+        "She says Washington works for special interests and that she would make the government answer to Minnesotans instead."
+      ],
+      "site": "https://peggyflanagan.com/",
+      "siteLabel": "peggyflanagan.com",
+      "donate": "https://secure.actblue.com/donate/pf-web",
+      "source": "https://peggyflanagan.com/priorities/"
+    },
+    "rebecca whiting": {
+      "role": "Libertarian candidate for U.S. Senate.",
+      "bio": "Her campaign says working people are not being heard and that inflation, debt, and undeclared wars are the result of federal overspending. She frames the race as a demand to take back rights she says the public has lost.",
+      "issues": [
+        "She says the country should stop funding wars that Congress has not declared.",
+        "She says overspending and printing money are driving up the cost of groceries and gas.",
+        "She says the two major parties, the military industry, banks, and corporations are not being held accountable."
+      ],
+      "site": "https://whiting4senate.us",
+      "siteLabel": "whiting4senate.us",
+      "donate": "https://whiting4senate.us/donate/",
+      "source": "https://whiting4senate.us"
+    },
+    "ronald schutz": {
+      "role": "Trial lawyer, Army veteran, and former law-firm chairman.",
+      "bio": "His campaign says he grew up on a Minnesota dairy farm, served in the Army, and is a partner in a national litigation firm, where he was chairman from 2019 to 2024. He says he is running because the state needs an attorney general focused on crime, fraud, and the rule of law.",
+      "issues": [
+        "He says fighting fraud and protecting tax dollars would be a top priority, and that he would try to stop fraud before it starts.",
+        "He says seniors, families, and small businesses need a consumer-protection lawyer who will take on scammers and powerful companies.",
+        "He says he would enforce the law and put public safety ahead of political headlines."
+      ],
+      "site": "https://www.ronformnag.com",
+      "siteLabel": "ronformnag.com",
+      "donate": "https://secure.anedot.com/ron-for-mn/generalron2025",
+      "source": "https://www.ronformnag.com/priorities.html"
+    },
+    "keith ellison": {
+      "role": "Attorney general of Minnesota.",
+      "bio": "His campaign says Minnesotans first elected him attorney general in 2018 and that he calls the job the people's lawyer. The site says the office has gone after insulin prices, opioid companies, scams, and medical debt.",
+      "issues": [
+        "He says the office has lowered costs, including cutting the price of insulin, and has taken on price-gouging, medical debt, and opioid companies.",
+        "He says he is protecting tenants, going after scammers, and standing up for student borrowers.",
+        "He says he is challenging the Trump administration because no one is above the law, and that he is defending reproductive rights and access to gender-affirming care."
+      ],
+      "site": "https://www.keithellison.org/",
+      "siteLabel": "keithellison.org",
+      "donate": "https://secure.actblue.com/donate/keith-ellison",
+      "source": "https://www.keithellison.org/about"
+    },
+    "tad jude": {
+      "role": "Former legislator, county commissioner, and judge.",
+      "bio": "His campaign says he has been a legislator, a county commissioner, a judge, and a small-business owner. He is running for secretary of state on a plan he calls Trust the Vote.",
+      "issues": [
+        "He says he would require a photo ID to vote and work to limit voting to U.S. citizens.",
+        "He says he would work with local, state, and federal partners to clean up voter rolls.",
+        "He says he would try to prevent fraud in public programs and make business filings and other office services more reliable."
+      ],
+      "site": "https://tadjude.com",
+      "siteLabel": "tadjude.com",
+      "donate": "",
+      "source": "https://tadjude.com"
+    },
+    "steve simon": {
+      "role": "Secretary of state of Minnesota.",
+      "bio": "His campaign says his family fled persecution in Lithuania and settled on the Iron Range, and that his father's illness later made voting in person hard. He says that experience led him to write the law that lets eligible Minnesotans vote from home.",
+      "issues": [
+        "He says his top priority is protecting the freedom to vote for every eligible Minnesotan.",
+        "He says he has worked for an election system that is fair, accurate, honest, and secure, including for seniors and students.",
+        "He says he has opposed federal efforts to add voting restrictions and to collect sensitive information on Minnesota voters."
+      ],
+      "site": "https://www.stevesimonmn.com/",
+      "siteLabel": "stevesimonmn.com",
+      "donate": "https://secure.actblue.com/donate/steve-simon-for-secretary-of-state-1",
+      "source": "https://www.stevesimonmn.com/"
+    },
+    "seth kuhl-stennes": {
+      "role": "Green Party candidate for secretary of state.",
+      "bio": "His campaign says he was born and raised in Baudette, studied political science near St. Cloud, and has worked in cooperatives, businesses, and nonprofits, including as a union steward. He says he now works for the Land Stewardship Project.",
+      "issues": [
+        "He says he would keep paper ballots, early and absentee voting, and same-day registration, and he wants Election Day to be a paid state holiday.",
+        "He says he would expand voting rights to Minnesota residents regardless of U.S. citizenship or a criminal conviction.",
+        "He says he would end the legal split between major and minor parties and support ranked-choice voting for state executive offices."
+      ],
+      "site": "https://www.seth4mnsos.org/",
+      "siteLabel": "seth4mnsos.org",
+      "donate": "https://www.seth4mnsos.org/donate",
+      "source": "https://www.seth4mnsos.org/issues"
+    },
+    "george tangen": {
+      "role": "Libertarian candidate for secretary of state.",
+      "bio": "His campaign says he grew up in Eden Prairie, worked as legislative counsel to a member of Congress, and has aligned with the Libertarian Party since 2016. He says he is running to bring a third-party view to the office that runs elections.",
+      "issues": [
+        "He says the chief elections officer should be unbound from the two major parties so voters in either party can count on impartiality.",
+        "He says he would push to remove barriers that keep independent and minor-party candidates off the ballot.",
+        "He says same-day registration should stay, and that ballots from voters whose eligibility is not clear on Election Day should be counted only after eligibility is confirmed."
+      ],
+      "site": "https://chipforsos.com/",
+      "siteLabel": "chipforsos.com",
+      "donate": "",
+      "source": "https://chipforsos.com/"
+    },
+    "ilhan omar": {
+      "role": "U.S. representative and the first African refugee elected to Congress.",
+      "bio": "She says her public service started at 14 interpreting for her grandfather at DFL caucuses, and that in 2016 she became the first Somali-American Muslim legislator in the country. In 2018 she became the first woman of color to represent Minnesota in Congress.",
+      "issues": [
+        "She says she has fought to codify Roe v. Wade, pass climate legislation, address opioids, and ban assault weapons.",
+        "She says she negotiated a public-safety bill with local investment and accountability, and funding that fed more than 30 million children during the pandemic.",
+        "She says community projects she brought home include veteran housing in Robbinsdale and help for entrepreneurs in north Minneapolis."
+      ],
+      "site": "https://ilhanomar.com/",
+      "siteLabel": "ilhanomar.com",
+      "donate": "https://secure.actblue.com/donate/ilhan_for_congress?express_lane=true&amount=5&refcode=express_lane_5",
+      "source": "https://ilhanomar.com/about/"
+    },
+    "tom emmer": {
+      "role": "House majority whip representing Minnesota's 6th District.",
+      "bio": "Born in 1961 and raised in Minnesota, he says he was first elected in 2014 and now serves as majority whip. He says he brings a Minnesota work ethic and common-sense leadership to Washington.",
+      "issues": [
+        "He says he is fighting high grocery, gas, and electricity costs and backed a tax law that keeps cuts in place and ends taxes on tips, overtime, and adds relief for seniors.",
+        "He says he led the border bill H.R. 2 and supported the Laken Riley Act so people in the country illegally who commit crimes are deported.",
+        "He says he supports the SAVE Act's proof-of-citizenship requirement, school choice, and ending the U.S. Department of Education."
+      ],
+      "site": "https://emmerforcongress.com/",
+      "siteLabel": "emmerforcongress.com",
+      "source": "https://emmerforcongress.com/principles-key-issues/"
+    }
+  },
+  "measures": {}
+}

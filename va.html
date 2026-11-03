@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaders.vote · Virginia, November 3, 2026</title>
+<meta name="description" content="Leaders.vote guide to the Virginia general election on November 3, 2026. Candidates, sample ballot, and unofficial results. Not an endorsement.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="guide.css?v=maphover">
+</head>
+<body data-state="va">
+<header>
+  <div class="wrap bar">
+    <div class="bar-top">
+      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      <div class="lang notranslate" translate="no">
+        <span class="visually-hidden">Language</span>
+        <select id="lang" class="visually-hidden" aria-hidden="true" tabindex="-1">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-CN">中文</option>
+          <option value="pl">Polski</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ko">한국어</option>
+          <option value="tl">Tagalog</option>
+          <option value="ar">العربية</option>
+          <option value="ur">اردو</option>
+          <option value="uk">Українська</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="fr">Français</option>
+        </select>
+        <button type="button" class="lang-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">English</button>
+        <ul id="lang-list" class="lang-menu" role="listbox" aria-label="Translate this page" hidden>
+          <li role="none"><button type="button" role="option" data-lang="en" aria-selected="true">English</button></li>
+          <li role="none"><button type="button" role="option" data-lang="es">Español</button></li>
+          <li role="none"><button type="button" role="option" data-lang="zh-CN">中文</button></li>
+          <li role="none"><button type="button" role="option" data-lang="pl">Polski</button></li>
+          <li role="none"><button type="button" role="option" data-lang="hi">हिन्दी</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ko">한국어</button></li>
+          <li role="none"><button type="button" role="option" data-lang="tl">Tagalog</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ar">العربية</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ur">اردو</button></li>
+          <li role="none"><button type="button" role="option" data-lang="uk">Українська</button></li>
+          <li role="none"><button type="button" role="option" data-lang="vi">Tiếng Việt</button></li>
+          <li role="none"><button type="button" role="option" data-lang="fr">Français</button></li>
+        </ul>
+</div>
+    </div>
+    <p class="here notranslate" translate="no"><img src="flags/va.svg" alt=""><span>Virginia</span></p>
+    <nav>
+      <a href="index.html">All states</a>
+      <a href="#results">Results</a>
+      <a href="#sample">The ballot</a>
+      <a href="#read">Before you go</a>
+      <a href="#senate">Senate</a>
+      <a href="#measures">Measures</a>
+      <a href="#house">U.S. House</a>
+      <a href="#where">Where to vote</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero">
+    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record. A street address you type is not sent for translation.</p>
+    <p class="kicker">Virginia · General election · Tuesday, November 3, 2026</p>
+    <h1>Know who you're voting for.</h1>
+    <p class="deck">What each office does is on this page. A candidate's priorities are included only when they come from that candidate's own site. This is not an endorsement and not a government site.</p>
+    <p class="when">Polls close at 7:00 PM ET. This page does not call a race.</p>
+    <div class="finder where" id="where">
+      <p class="kicker">Where to vote</p>
+      <h2>Find your polling place.</h2>
+      <p class="zip-note">Election Day is Tuesday, November 3. A polling place comes from the home address. Type the street number, street name, and ZIP here. This page does not keep them. The election office lookup is the list for that address.</p>
+      <form id="where-form" data-lookup="https://vote.elections.virginia.gov/VoterInformation" data-lookup-label="Virginia Citizen Portal">
+        <div>
+          <label for="where-number">Street number</label>
+          <input id="where-number" class="num" name="number" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-street">Street name</label>
+          <input id="where-street" class="street" name="street" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-zip">ZIP code</label>
+          <input id="where-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="23219" required>
+        </div>
+        <button type="submit">Find this address</button>
+      </form>
+      <div id="where-result" aria-live="polite"></div>
+    </div>
+    <div class="races"><a href="#senate"><strong>Senate</strong><span>Bert Mizusawa, Mark Warner</span></a></div>
+  </div>
+  <section class="block" id="results">
+    <div class="wrap">
+      <p class="kicker">Unofficial · November 3, 2026</p>
+      <h2>Results across Virginia.</h2>
+      <p class="sub">Each county is colored by who is ahead there. A blank county has not reported votes. This page does not call a race.</p>
+      <div class="result-legend">
+        <span><i class="swatch blank"></i> No votes reported</span>
+        <span><i class="swatch d"></i> Democratic lead</span>
+        <span><i class="swatch r"></i> Republican lead</span>
+        <span><i class="swatch o"></i> Another lead</span>
+      </div>
+      <div class="result-layout">
+        <div><div id="state-slot"></div></div>
+        <div>
+          <div id="result-races" class="sheet-switch" role="group" aria-label="Races"></div>
+          <div id="result-summary"></div>
+          <label for="result-place">County, parish, or city</label>
+          <select id="result-place"><option value="">Statewide totals</option></select>
+          <div id="result-detail"></div>
+          <p id="result-status" class="note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="sample">
+    <div class="wrap">
+      <p class="kicker">How you vote</p>
+      <h2>What the ballot looks like.</h2>
+      <p class="sub">This sample lists the statewide contests NBC News is publishing for Virginia. It is not a precinct ballot.</p>
+      <div class="sample-layout">
+        <div>
+          <ol class="steps" id="sample-steps">
+            <li><button type="button" data-step="mark">Mark one choice on a contest. Next and Back move one contest at a time. This sample puts the mark to the left of a name.</button></li>
+            <li><button type="button" data-step="order">Party order here is Republican, then Democratic, then any other candidate. Your county may print a different order.</button></li>
+            <li><button type="button" data-step="measure">A measure is a yes or no question. It is not a race between candidates.</button></li>
+            <li><button type="button" data-step="house">U.S. House depends on your district and is listed farther down this page. This sample does not include it.</button></li>
+          </ol>
+          <p class="zip-note">The address lookup above opens the election office. A ZIP code alone does not pick a district.</p>
+        </div>
+        <div>
+          <div class="sheet" id="sample-candidates">
+            <p class="kicker">Sample ballot · Virginia · November 3, 2026</p>
+            <div class="contest" data-kind="race"><h3>Senate</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Bert Mizusawa</span><span class="pill r">Republican</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Mark Warner</span><span class="pill d">Democratic</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no" data-phrase="writein">Write-in</span></button></div>
+<div class="contest" data-kind="measure"><h3>Question 1: Right to abortion</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button></div>
+<div class="contest" data-kind="measure"><h3>Question 2: Remove same-sex marriage ban</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button></div>
+<div class="contest" data-kind="measure"><h3>Question 3: Felon voting rights upon release</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button></div>
+          </div>
+          <div class="sheet-move">
+            <button type="button" id="contest-back" class="notranslate" translate="no" data-phrase="back">Back</button>
+            <p id="sample-status"></p>
+            <button type="button" id="contest-next" class="notranslate" translate="no" data-phrase="next">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="read">
+    <div class="wrap">
+      <p class="kicker">Before you go</p>
+      <h2>Statewide contests, then your district.</h2>
+      <div class="facts">
+        <div class="fact">
+          <h3>What to bring</h3>
+          <p>Bring what this state's election office requires. The address lookup on this page opens that office. This page does not keep the address.</p>
+        </div>
+        <div class="fact">
+          <h3>How names got here</h3>
+          <p>Statewide names were compared with the candidate list linked at the bottom of this page. Photos are the ones NBC News is publishing. On this site the order is Republican, then Democratic, then any other party. A printed ballot may use a different order.</p>
+        </div>
+        <div class="fact">
+          <h3 class="notranslate" translate="no" data-phrase="writeins">Write-ins</h3>
+          <p>A write-in counts only if that person filed. This page lists the names being published.</p>
+        </div>
+        <div class="fact">
+          <h3>What you are choosing</h3>
+          <p>The sample lists the statewide contests on this page. U.S. Senate is one seat. The term is six years. U.S. House is one seat in your district and is listed farther down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="senate"><div class="wrap"><p class="kicker">Federal · Vote for one.</p><h2>Senate</h2><p class="sub">The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The U.S. Senate says it alone conducts impeachment trials and must confirm ambassadors, judges, and other officers the president nominates.</p><article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_S00_R_B_MIZUSAWA.png" alt="" data-letter="B" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Bert Mizusawa</h3><span class="pill r">Republican</span></div><p class="role">Retired Army major general and attorney running for the U.S. Senate.</p><p class="bio">His campaign says he graduated first in his West Point class, earned a law degree from Harvard, and commanded troops in combat, including a joint task force in Afghanistan. It says he later held senior civilian posts in the Army and as an adviser at the CIA.</p><ul><li>He says he would focus on balancing the federal budget.</li><li>He says he would lower the tax on selling a home and the broader tax burden on Virginia families.</li><li>He says he would protect veterans&#x27; health benefits, ban members of Congress from trading stocks, and support new nuclear plants to bring down household energy costs.</li></ul><p class="links"><a href="https://bertforsenate.com/" target="_blank" rel="noopener noreferrer">bertforsenate.com</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_S00_D_M_WARNER.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Mark Warner</h3><span class="pill d">Democratic</span></div><p class="role">U.S. senator whose campaign says he helped write the Affordable Care Act and a bipartisan infrastructure law.</p><p class="bio">His campaign says he was the first in his family to finish college, that his first two businesses failed, and that a later company succeeded. It says he is the top Democrat on the Senate Intelligence Committee and has worked with both parties on bills signed into law.</p><ul><li>He wants more housing through rehabilitation and faster permits, and an easier path to a first mortgage, and he says lower health costs depend on a basic standard of care for every American.</li><li>He says companies that profit from artificial intelligence should help prepare workers and pay for the energy that technology will demand.</li><li>He supports an assault-weapons ban and background checks, and he says Virginia voters should be able to put abortion access, marriage equality, and restoration of voting rights into the state constitution.</li></ul><p class="links"><a href="https://www.markwarnerva.com/" target="_blank" rel="noopener noreferrer">markwarnerva.com</a> · <a href="https://secure.actblue.com/donate/web_2025?refcode=web_top_buttons" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article></div></section>
+  <section class="block" id="measures"><div class="wrap"><h2>Ballot measures.</h2><p class="office-note">The title is the one being published for this ballot. This guide adds an explanation only when it comes from the official text.</p><div class="sheet"><h3>Question 1: Right to abortion</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button>
+<h3>Question 2: Remove same-sex marriage ban</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button>
+<h3>Question 3: Felon voting rights upon release</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button></div></div></section>
+  <section class="block" id="house"><div class="wrap"><h2>U.S. House.</h2><p class="office-note">Every district NBC News is publishing for this state. This list is not filtered to one address. A written note is added only from that candidate's own site.</p><h3>District 1</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H01_R_R_WITTMAN.png" alt="" data-letter="R" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Rob Wittman</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative for Virginia&#x27;s 1st District.</p><p class="bio">He says he was adopted at eight months after time at the Children&#x27;s Home Society of Virginia, raised in Henrico County by a World War II veteran and a public-school teacher, and worked jobs from groceries and a cannery to fishing boats. He studied biology at Virginia Tech, earned a master&#x27;s in public health from the University of North Carolina, and a Ph.D. in public policy from Virginia Commonwealth University. He says he lives in Montross and spends the week driving between home and Washington.</p><ul><li>He says Washington should lower the cost of groceries, power, housing, health care, and child care, keep taxes down, produce more American energy, and cut regulations that make it harder to build and hire.</li><li>He says he supported tax relief that locked in and doubled the Child Tax Credit, raised the standard deduction to $31,500 for families, and ended tax on qualifying tips and overtime.</li><li>He also says he backed tax provisions that help small businesses invest and let seniors keep more of their Social Security checks.</li></ul><p class="links"><a href="https://robwittman.com/" target="_blank" rel="noopener noreferrer">robwittman.com</a> · <a href="https://secure.winred.com/rob-wittman/donate" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H01_D_S_TAYLOR.png" alt="" data-letter="S" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Shannon Taylor</h3><span class="pill d">Democratic</span></div></div></article>
+<h3>District 2</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H02_R_J_KIGGANS.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Jen Kiggans</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative, former Navy pilot, and nurse practitioner.</p><p class="bio">She says she flew H-46 and H-3 helicopters for ten years, with two Persian Gulf deployments, and is married to retired F/A-18 pilot Steve. She used the GI Bill to become a board-certified adult-geriatric nurse practitioner and worked in long-term care and a Virginia Beach primary-care practice. In Congress she serves on Armed Services, Natural Resources, and Veterans&#x27; Affairs, where she chairs the Oversight and Investigations Subcommittee.</p><ul><li>She says she has prioritized cutting inflation and helped pass spending cuts, and she supported the Working Families Tax Cuts that made the 2017 tax cuts permanent and ended most taxes on tips and overtime.</li><li>She says she fights regulatory burdens so small businesses and industries important to Virginia can hire, and she worked to expand the Child Tax Credit.</li><li>She says spending cuts should still fully fund veterans&#x27; benefits, the military, and Social Security and Medicare.</li></ul><p class="links"><a href="https://jenforcongress.com/" target="_blank" rel="noopener noreferrer">jenforcongress.com</a> · <a href="https://secure.winred.com/kiggans-for-congress/donate?utm_medium=website&amp;utm_source=header&amp;utm_campaign=jenforcongress.com" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H02_D_E_LURIA.png" alt="" data-letter="E" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Elaine Luria</h3><span class="pill d">Democratic</span></div></div></article>
+<h3>District 3</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H03_R_E_RIVERA.png" alt="" data-letter="E" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Edwin Rivera Jr.</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H03_D_B_SCOTT.png" alt="" data-letter="B" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Bobby Scott</h3><span class="pill d">Democratic</span></div></div></article>
+<h3>District 4</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H04_R_R_MURRAY.png" alt="" data-letter="R" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Robert Murray Jr.</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H04_D_J_MCCLELLAN.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Jennifer McClellan</h3><span class="pill d">Democratic</span></div></div></article>
+<h3>District 5</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H05_R_J_MCGUIRE.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">John McGuire III</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H05_D_T_PERRIELLO.png" alt="" data-letter="T" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Tom Perriello</h3><span class="pill d">Democratic</span></div></div></article>
+<h3>District 6</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H06_R_B_CLINE.png" alt="" data-letter="B" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Ben Cline</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H06_D_B_MACY.png" alt="" data-letter="B" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Beth Macy</h3><span class="pill d">Democratic</span></div></div></article>
+<h3>District 7</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H07_R_D_OLLIVANT.png" alt="" data-letter="D" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Doug Ollivant</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H07_D_E_VINDMAN.png" alt="" data-letter="E" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Eugene Vindman</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative, refugee, and Army veteran.</p><p class="bio">He says he was born in Soviet Ukraine to a Jewish family, left at age three after his mother died, and arrived in New York as a refugee in 1979. He says he attended public schools in Brooklyn, SUNY Binghamton, and Army ROTC at Cornell, and that he served 25 years in the Army, including in the Iraq War.</p><ul><li>He says his top priority is cutting taxes and lowering costs for working families, including a crackdown on anti-competitive practices and support for small businesses.</li><li>He supports an all-of-the-above energy strategy and an end to costly foreign wars, which he says would lower gas and utility bills.</li><li>He says he is running to protect democracy and the freedoms his family found after fleeing the Soviet Union.</li></ul><p class="links"><a href="https://vindmanforcongress.com/" target="_blank" rel="noopener noreferrer">vindmanforcongress.com</a> · <a href="https://secure.actblue.com/donate/evfc-website" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 8</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H08_R_T_SABIO.png" alt="" data-letter="T" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Tony Sabio</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H08_D_D_BEYER.png" alt="" data-letter="D" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Donald Beyer Jr.</h3><span class="pill d">Democratic</span></div></div></article>
+<h3>District 9</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H09_R_M_GRIFFITH.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Morgan Griffith</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H09_D_J_POWERS.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Joy Powers</h3><span class="pill d">Democratic</span></div></div></article>
+<h3>District 10</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H10_R_D_BECKWITH.png" alt="" data-letter="D" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Dave Beckwith</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H10_D_S_SUBRAMANYAM.png" alt="" data-letter="S" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Suhas Subramanyam</h3><span class="pill d">Democratic</span></div></div></article>
+<h3>District 11</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H11_R_A_PURVES.png" alt="" data-letter="A" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Arthur Purves</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H11_D_J_WALKINSHAW.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">James Walkinshaw</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative for Virginia&#x27;s 11th District.</p><p class="bio">He says he grew up in Prince William County, graduated from NYU, and lives in Fairfax with his wife, Yvette, and their son, Mateo. Before Congress he served on the Fairfax County Board of Supervisors and was chief of staff to Representative Gerry Connolly for more than a decade. He says he was elected to Congress in 2025.</p><ul><li>He says housing, groceries, utilities, and child care are squeezing families, and he blames tariffs and a war with Iran for higher prices, including gas.</li><li>He says he opposed those tariffs, is working to restore Congress&#x27;s authority over trade, and cosponsored the Energy Bills Relief Act.</li><li>He also says his work includes protecting federal workers, health care, Social Security and Medicare, and lowering costs for northern Virginia.</li></ul><p class="links"><a href="https://jameswalkinshaw.org/" target="_blank" rel="noopener noreferrer">jameswalkinshaw.org</a> · <a href="https://secure.actblue.com/donate/james-walkinshaw?refcode=website" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Leaders.vote is an independent voter guide for the November 3, 2026 general election. It is not a campaign, not an endorsement, and not a site of any state or election authority. This page is Virginia.</p>
+    <p>Statewide names were compared with <a href="https://www.elections.virginia.gov/casting-a-ballot/candidate-list/november-3-2026-gen-elect-federal-offices/" target="_blank" rel="noopener noreferrer">this state candidate list</a>. Photos are the ones NBC News is publishing. An issue line is added only from a candidate's own site.</p>
+  </div>
+</footer>
+<div id="google_translate_element" aria-hidden="true"></div>
+<script src="lang.js"></script>
+<script src="state.js"></script>
+</body>
+</html>

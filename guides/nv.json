@@ -1,0 +1,184 @@
+{
+  "code": "nv",
+  "ballotSource": "",
+  "where": {
+    "url": "https://www.nvsos.gov/elections/election-information/2026-election-information/2026-polling-locations",
+    "label": "2026 polling locations"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The supreme executive power of Nevada is vested in the governor, who is commander-in-chief of the state's military forces."
+    },
+    "Lt. Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The lieutenant governor is next in line if the governor cannot finish the term. Any other duties are set by state law. In Nevada, the lieutenant governor presides over the State Senate and chairs the Commission on Tourism."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. Nevada law has the attorney general represent the people of the state in civil and criminal matters."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. In Nevada, the secretary of state maintains the official records of the acts of the Legislature and the executive branch."
+    }
+  },
+  "people": {
+    "joe lombardo": {
+      "role": "Nevada's governor, running for another term.",
+      "bio": "Joe Lombardo's campaign says he grew up in a military family, graduated from Rancho High School and UNLV, served in the Army and the Nevada National Guard, and spent 26 years with the Las Vegas police before two terms as Clark County sheriff.",
+      "issues": [
+        "He says that as governor he has cut regulation, made large investments in education, and pushed accountability in schools.",
+        "He says he has backed law enforcement and worked on the housing shortage.",
+        "He says the unfinished work is a safer, stronger, and more prosperous state."
+      ],
+      "site": "https://www.joelombardofornv.com/",
+      "siteLabel": "Joe Lombardo for Governor",
+      "donate": "https://secure.winred.com/lombardo-for-governor/website-donate-button?amount=50",
+      "source": "https://www.joelombardofornv.com/about"
+    },
+    "aaron ford": {
+      "role": "Nevada's attorney general, running for governor.",
+      "bio": "Aaron Ford's campaign says he grew up in a working-class family, taught public-school math, earned five degrees, and serves as attorney general. It says he and his wife, Berna, moved to Nevada.",
+      "issues": [
+        "He says he would speed housing permits, limit corporate buying of single-family homes, and ban software used to set rents.",
+        "He says pharmacy benefit managers should pass drug-discount savings to patients, and that he would set up relief for medical debt.",
+        "He says data centers should bring their own power, grid equipment, and water before they receive tax breaks."
+      ],
+      "site": "https://www.fordfornevada.com/",
+      "siteLabel": "Aaron Ford for Nevada",
+      "donate": "https://secure.actblue.com/donate/aaron-ford-for-nevada-1",
+      "source": "https://www.fordfornevada.com/issues"
+    },
+    "danielle ford": {
+      "role": "Nonpartisan candidate for governor and a member of the State Board of Education.",
+      "bio": "Danielle Ford says she is a Las Vegas native, a mother, a marketer, a former Clark County School District trustee, and a current member of the Nevada State Board of Education. She says she is not running with a party.",
+      "issues": [
+        "She says housing, health care, mental health, water, energy, and government accountability show up together and should be repaired as public systems.",
+        "She says schools are where those failures become visible first, and that her approach started in education.",
+        "She says government should serve people ahead of parties, PACs, lobbyists, or a national agenda."
+      ],
+      "site": "https://daniellefornevada.com/",
+      "siteLabel": "Danielle Ford for Governor",
+      "donate": "",
+      "source": "https://daniellefornevada.com/"
+    },
+    "stavros anthony": {
+      "role": "Nevada's lieutenant governor, running for another term.",
+      "bio": "Stavros Anthony's campaign says he was elected lieutenant governor in 2022 after 13 years on the Las Vegas City Council and nearly 30 years with Las Vegas police, retiring as a captain.",
+      "issues": [
+        "He says the job includes presiding over the Senate, chairing tourism and outdoor recreation, and serving on economic development and transportation boards.",
+        "He says he created a 2025 task force to protect female athletes and fairness in high school and college sports.",
+        "He says he advises the governor on homeland security and public safety and supports resources for local police."
+      ],
+      "site": "https://www.stavrosfornv.com/",
+      "siteLabel": "Stavros Anthony for Lt. Governor",
+      "donate": "https://secure.winred.com/stavros-for-nevada/anthonyforlieutenantgovernor",
+      "source": "https://www.stavrosfornv.com/about"
+    },
+    "sandra jauregui": {
+      "role": "State legislator running for lieutenant governor.",
+      "bio": "Sandra Jauregui says she worked during the Great Recession to help Nevadans stay in their homes and has served in the Legislature. She says she survived the October 1 mass shooting.",
+      "issues": [
+        "She says her legislative work includes more affordable housing, a cap on insulin costs, lower health-care costs, and protections for wages and benefits.",
+        "She says the shooting led her to push gun-safety laws.",
+        "She says she is running for lieutenant governor to take that record statewide."
+      ],
+      "site": "https://sandrafornevada.com/",
+      "siteLabel": "Sandra for Nevada",
+      "donate": "",
+      "source": "https://sandrafornevada.com/"
+    },
+    "janine hansen": {
+      "role": "Independent American candidate for lieutenant governor.",
+      "bio": "Janine Hansen says she is a native Nevadan who has advocated for families and taxpayers at the Legislature throughout her adult life. She is the Independent American Party nominee.",
+      "issues": [
+        "She says she would use the Senate presidency to oppose growth of state government into family and taxpayer life.",
+        "She says tourism, especially outdoor recreation, should expand because rural counties depend on it, and that Nevada should keep taxes low, including no state income tax.",
+        "She says the homeland-security role requires watching for terrorism while protecting constitutional rights."
+      ],
+      "site": "https://www.janinehansen.com/",
+      "siteLabel": "Janine Hansen for Lt. Governor",
+      "donate": "",
+      "source": "https://www.janinehansen.com/"
+    },
+    "adriana guzmán fralick": {
+      "role": "Attorney running for attorney general.",
+      "bio": "Adriana Guzmán Fralick's campaign says she has been chief deputy district attorney in Carson City, general counsel to former Gov. Jim Gibbons, counsel to the ethics commission, and chair of the Cannabis Compliance Board.",
+      "issues": [
+        "She says she would undo parts of a 2019 law that raised the felony theft threshold and eased some drug penalties.",
+        "She says she would restore longer sentences for repeat offenders and drug traffickers and stand with police.",
+        "She says she would expand help for domestic-violence survivors, pursue online predators, and prosecute fraud against taxpayers."
+      ],
+      "site": "https://www.adrianafornevada.com/",
+      "siteLabel": "Adriana Guzmán Fralick for Attorney General",
+      "donate": "https://secure.winred.com/adriana-for-nevada/donate-today",
+      "source": "https://www.adrianafornevada.com/"
+    },
+    "nicole cannizzaro": {
+      "role": "Legislator and former prosecutor running for attorney general.",
+      "bio": "Nicole Cannizzaro's campaign says she was a deputy district attorney who prosecuted gang cases involving fraud and violence, and that she has served in the Legislature.",
+      "issues": [
+        "The site says she has worked to shield local police departments from budget cuts.",
+        "It says she has pushed a crackdown on fentanyl trafficking.",
+        "It says she backed laws aimed at AI-generated child sexual abuse images and the people who distribute them."
+      ],
+      "site": "https://www.nicolecannizzaro.com/",
+      "siteLabel": "Nicole Cannizzaro for Attorney General",
+      "donate": "https://secure.actblue.com/donate/nicole-cannizzaro-website",
+      "source": "https://www.nicolecannizzaro.com/"
+    },
+    "jim marchant": {
+      "role": "Candidate for secretary of state.",
+      "bio": "Jim Marchant says he is running for secretary of state to rebuild trust in elections and to make Nevada a better place to start a business.",
+      "issues": [
+        "He says he would require voter identification and proof of citizenship, replace voting machines with precinct hand counts of paper ballots, and end universal mail ballots while keeping absentee voting for military, traveling, elderly, and medically unable voters.",
+        "He says every voter should re-register and that Nevada should leave the Electronic Registration Information Center.",
+        "He says he would advocate repeal of the commerce tax and lower fees to form a business."
+      ],
+      "site": "https://jimmarchant.com/",
+      "siteLabel": "Jim Marchant for Secretary of State",
+      "donate": "https://jimmarchant.com/donate/",
+      "source": "https://jimmarchant.com/whyiamrunning/"
+    },
+    "francisco aguilar": {
+      "role": "Secretary of state running for another term.",
+      "bio": "His campaign calls him Cisco Aguilar and says he is running for re-election as secretary of state.",
+      "issues": [
+        "He says his work rests on modernization, innovation, and transparency.",
+        "He says he has updated the elections system and the business-filing system so elections are fair and open and so it is easier to do business in Nevada."
+      ],
+      "site": "https://cisconv.co/",
+      "siteLabel": "Cisco Aguilar for Secretary of State",
+      "donate": "https://secure.actblue.com/donate/ca-website",
+      "source": "https://cisconv.co/"
+    },
+    "brad lee barnhill": {
+      "role": "Independent American candidate for secretary of state.",
+      "bio": "Brad Lee Barnhill is the Independent American nominee. His campaign says he has worked about twenty years as a systems analyst and about twenty years as a litigation paralegal.",
+      "issues": [
+        "He says that if voters approve voter identification, he would carry it out with the office's existing rules and with help for people who have trouble getting an ID.",
+        "He says possible duplicate registrations should be reviewed by a person before a record is changed, and that poll rules should be the same in every county.",
+        "He says he would urge repeal of the commerce tax and oversee the move of business filings from SilverFlume to ORION."
+      ],
+      "site": "https://electbarnhill.net/",
+      "siteLabel": "Nevadans for Barnhill",
+      "donate": "",
+      "source": "https://electbarnhill.net/policy-positions/"
+    },
+    "dina titus": {
+      "role": "U.S. representative for Nevada's 1st District",
+      "bio": "The campaign says Dina Titus taught government at the University of Nevada, Las Vegas for 34 years and served 20 years in the Nevada Legislature, including as Democratic minority leader. It says she was first elected to the U.S. House in November 2008 and serves on Transportation and Infrastructure and Foreign Affairs.",
+      "issues": [
+        "Her campaign says her work has focused on children, seniors, and people with disabilities.",
+        "The site says she has treated quality education and the arts as priorities.",
+        "It says she has worked on environmental protection, renewable energy, and more sustainable communities."
+      ],
+      "site": "https://www.dinatitus.com/home",
+      "siteLabel": "Dina Titus",
+      "donate": "https://secure.actblue.com/donate/titus-website",
+      "source": "https://www.dinatitus.com/home"
+    }
+  },
+  "measures": {}
+}

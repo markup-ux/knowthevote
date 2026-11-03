@@ -1,0 +1,223 @@
+{
+  "code": "ut",
+  "ballotSource": "https://vote.utah.gov/2026-candidate-filings/",
+  "where": {
+    "url": "https://votesearch.utah.gov/voter-search/search/search-by-address",
+    "label": "Utah Voter Search"
+  },
+  "offices": {
+    "U.S. House": {
+      "kicker": "Federal",
+      "job": "Each district elects one representative. The winner votes on federal law and spending. The term is two years."
+    }
+  },
+  "people": {
+    "district 1|riley owen": {
+      "role": "Candidate for Congress campaigning on Utah family costs and limits on political self-dealing.",
+      "bio": "His priorities page says elected officials should serve the public, and that Washington needs new faces rather than career politicians.",
+      "issues": [
+        "He supports tax credits for businesses that offer six weeks of paid maternity leave, and he wants federal housing funds tied to local zoning reform.",
+        "He says he will sponsor a bill requiring age verification for social media users 16 and older.",
+        "He also calls for a ban on congressional stock trading, term limits, and an end to Citizens United."
+      ],
+      "site": "https://www.utahriley.com/",
+      "siteLabel": "utahriley.com",
+      "donate": "https://www.utahriley.com/donate",
+      "source": "https://www.utahriley.com/issues"
+    },
+    "riley owen": {
+      "role": "Candidate for Congress campaigning on Utah family costs and limits on political self-dealing.",
+      "bio": "His priorities page says elected officials should serve the public, and that Washington needs new faces rather than career politicians.",
+      "issues": [
+        "He supports tax credits for businesses that offer six weeks of paid maternity leave, and he wants federal housing funds tied to local zoning reform.",
+        "He says he will sponsor a bill requiring age verification for social media users 16 and older.",
+        "He also calls for a ban on congressional stock trading, term limits, and an end to Citizens United."
+      ],
+      "site": "https://www.utahriley.com/",
+      "siteLabel": "utahriley.com",
+      "donate": "https://www.utahriley.com/donate",
+      "source": "https://www.utahriley.com/issues"
+    },
+    "district 1|ben mcadams": {
+      "role": "Candidate for Congress who says Utah, not a party, will set his votes.",
+      "bio": "He describes a childhood in which his mother worked as hard as anyone he knew, the lights sometimes went out, and he took his first job at 11.",
+      "issues": [
+        "He says his work in Congress would focus on lowering housing costs, getting people medical care, and making daily life easier for Utah families.",
+        "He says he will work with anyone for results and will also stand alone when he thinks democracy, protest, or due process is being trampled.",
+        "His priorities page also lists protecting the environment and defending human rights and opportunity."
+      ],
+      "site": "https://benmcadams.com/",
+      "siteLabel": "benmcadams.com",
+      "donate": "https://secure.actblue.com/donate/bm-website",
+      "source": "https://benmcadams.com/priorities/"
+    },
+    "ben mcadams": {
+      "role": "Candidate for Congress who says Utah, not a party, will set his votes.",
+      "bio": "He describes a childhood in which his mother worked as hard as anyone he knew, the lights sometimes went out, and he took his first job at 11.",
+      "issues": [
+        "He says his work in Congress would focus on lowering housing costs, getting people medical care, and making daily life easier for Utah families.",
+        "He says he will work with anyone for results and will also stand alone when he thinks democracy, protest, or due process is being trampled.",
+        "His priorities page also lists protecting the environment and defending human rights and opportunity."
+      ],
+      "site": "https://benmcadams.com/",
+      "siteLabel": "benmcadams.com",
+      "donate": "https://secure.actblue.com/donate/bm-website",
+      "source": "https://benmcadams.com/priorities/"
+    },
+    "district 2|blake moore": {
+      "role": "U.S. representative for northern Utah.",
+      "bio": "He says three terms in Congress have centered on costs, immigration, the military, and what he calls the Utah way of life, and he notes a constituent-service award for his office.",
+      "issues": [
+        "He says he is pushing border security, American energy, fiscal discipline, and conservative social policy.",
+        "He points to work strengthening Hill Air Force Base, expanding the charitable tax deduction, protecting the Great Salt Lake, and funding local water, roads, trails, and education."
+      ],
+      "site": "https://www.electmoore.com/",
+      "siteLabel": "electmoore.com",
+      "donate": "https://secure.winred.com/blake-moore-for-congress/donate",
+      "source": "https://www.electmoore.com/"
+    },
+    "blake moore": {
+      "role": "U.S. representative for northern Utah.",
+      "bio": "He says three terms in Congress have centered on costs, immigration, the military, and what he calls the Utah way of life, and he notes a constituent-service award for his office.",
+      "issues": [
+        "He says he is pushing border security, American energy, fiscal discipline, and conservative social policy.",
+        "He points to work strengthening Hill Air Force Base, expanding the charitable tax deduction, protecting the Great Salt Lake, and funding local water, roads, trails, and education."
+      ],
+      "site": "https://www.electmoore.com/",
+      "siteLabel": "electmoore.com",
+      "donate": "https://secure.winred.com/blake-moore-for-congress/donate",
+      "source": "https://www.electmoore.com/"
+    },
+    "district 2|peter crosby": {
+      "role": "Candidate for Congress who says northern Utah has been his home for almost 20 years.",
+      "bio": "He says he and his wife Amanda raised their family there, and he holds town halls every month.",
+      "issues": [
+        "He wants to confront housing costs, health care costs, and the local jobs and small businesses that hold towns together.",
+        "He supports a ban on congressional stock trades, a real debate on term limits, and getting corporate dark money out of politics.",
+        "He says he will protect public lands, work on the Great Salt Lake, and oppose corporate projects such as the Stratos data center in Box Elder County."
+      ],
+      "site": "https://petercrosbyforcongress.org/",
+      "siteLabel": "petercrosbyforcongress.org",
+      "donate": "https://secure.actblue.com/donate/peter-crosby-1",
+      "source": "https://petercrosbyforcongress.org/"
+    },
+    "peter crosby": {
+      "role": "Candidate for Congress who says northern Utah has been his home for almost 20 years.",
+      "bio": "He says he and his wife Amanda raised their family there, and he holds town halls every month.",
+      "issues": [
+        "He wants to confront housing costs, health care costs, and the local jobs and small businesses that hold towns together.",
+        "He supports a ban on congressional stock trades, a real debate on term limits, and getting corporate dark money out of politics.",
+        "He says he will protect public lands, work on the Great Salt Lake, and oppose corporate projects such as the Stratos data center in Box Elder County."
+      ],
+      "site": "https://petercrosbyforcongress.org/",
+      "siteLabel": "petercrosbyforcongress.org",
+      "donate": "https://secure.actblue.com/donate/peter-crosby-1",
+      "source": "https://petercrosbyforcongress.org/"
+    },
+    "district 3|celeste maloy": {
+      "role": "U.S. representative campaigning on taxes, the border, and federal spending.",
+      "bio": "Her campaign says she has made it a priority to slow inflation so a paycheck covers more, and she highlights a tax bill she says cut taxes on tips, overtime, and Social Security.",
+      "issues": [
+        "She says she voted to fund a border wall and to give Border Patrol more technology against drugs and trafficking.",
+        "She says she will defend religious practice, the Second Amendment, and legal protections for the unborn.",
+        "She says she has voted to cut wasteful spending and to ease rules she believes have held back American energy production."
+      ],
+      "site": "https://www.celesteforutah.com/",
+      "siteLabel": "celesteforutah.com",
+      "donate": "https://secure.anedot.com/celeste-for-congress-e7d62064-b5bc-442d-8205-1a832a49ecca/donate",
+      "source": "https://www.celesteforutah.com/issues"
+    },
+    "celeste maloy": {
+      "role": "U.S. representative campaigning on taxes, the border, and federal spending.",
+      "bio": "Her campaign says she has made it a priority to slow inflation so a paycheck covers more, and she highlights a tax bill she says cut taxes on tips, overtime, and Social Security.",
+      "issues": [
+        "She says she voted to fund a border wall and to give Border Patrol more technology against drugs and trafficking.",
+        "She says she will defend religious practice, the Second Amendment, and legal protections for the unborn.",
+        "She says she has voted to cut wasteful spending and to ease rules she believes have held back American energy production."
+      ],
+      "site": "https://www.celesteforutah.com/",
+      "siteLabel": "celesteforutah.com",
+      "donate": "https://secure.anedot.com/celeste-for-congress-e7d62064-b5bc-442d-8205-1a832a49ecca/donate",
+      "source": "https://www.celesteforutah.com/issues"
+    },
+    "district 3|kent udell": {
+      "role": "Mechanical engineer running for Utah's 3rd District.",
+      "bio": "He was born in Lehi, worked with mining, petroleum, geothermal, and solar industries, and says much of his career was spent on water, environmental cleanup, and teaching engineers.",
+      "issues": [
+        "He says he is running because Washington has grown more divisive and disconnected, and he wants a representative who honors the Constitution.",
+        "He calls for a moratorium on new data centers and says his priorities include Utah's land and water, Social Security, and the cost of health care.",
+        "He says he takes no corporate PAC money and has pledged to limit his own term."
+      ],
+      "site": "https://www.kentudellforcongress.com/",
+      "siteLabel": "kentudellforcongress.com",
+      "donate": "https://secure.actblue.com/donate/kentudellforcongress",
+      "source": "https://www.kentudellforcongress.com/"
+    },
+    "kent udell": {
+      "role": "Mechanical engineer running for Utah's 3rd District.",
+      "bio": "He was born in Lehi, worked with mining, petroleum, geothermal, and solar industries, and says much of his career was spent on water, environmental cleanup, and teaching engineers.",
+      "issues": [
+        "He says he is running because Washington has grown more divisive and disconnected, and he wants a representative who honors the Constitution.",
+        "He calls for a moratorium on new data centers and says his priorities include Utah's land and water, Social Security, and the cost of health care.",
+        "He says he takes no corporate PAC money and has pledged to limit his own term."
+      ],
+      "site": "https://www.kentudellforcongress.com/",
+      "siteLabel": "kentudellforcongress.com",
+      "donate": "https://secure.actblue.com/donate/kentudellforcongress",
+      "source": "https://www.kentudellforcongress.com/"
+    },
+    "district 4|mike kennedy": {
+      "role": "U.S. representative who previously served in Utah's part-time legislature.",
+      "bio": "His campaign says he ran to follow the Constitution, rein in federal overreach, and stand up for families dealing with higher costs.",
+      "issues": [
+        "He says he has backed ending taxes on tips and overtime, strengthening the child tax credit, and expanding health savings accounts.",
+        "His campaign lists work on wildfire prevention, rail safety, energy permitting, technical education, and rural health access.",
+        "He says he will keep opposing spending he believes drives up family costs."
+      ],
+      "site": "https://mikekennedyforutah.com/",
+      "siteLabel": "mikekennedyforutah.com",
+      "donate": "https://secure.winred.com/mike-kennedy-for-utah/donation/",
+      "source": "https://mikekennedyforutah.com/issues/"
+    },
+    "mike kennedy": {
+      "role": "U.S. representative who previously served in Utah's part-time legislature.",
+      "bio": "His campaign says he ran to follow the Constitution, rein in federal overreach, and stand up for families dealing with higher costs.",
+      "issues": [
+        "He says he has backed ending taxes on tips and overtime, strengthening the child tax credit, and expanding health savings accounts.",
+        "His campaign lists work on wildfire prevention, rail safety, energy permitting, technical education, and rural health access.",
+        "He says he will keep opposing spending he believes drives up family costs."
+      ],
+      "site": "https://mikekennedyforutah.com/",
+      "siteLabel": "mikekennedyforutah.com",
+      "donate": "https://secure.winred.com/mike-kennedy-for-utah/donation/",
+      "source": "https://mikekennedyforutah.com/issues/"
+    },
+    "district 4|jonny larsen": {
+      "role": "Marine veteran and Blue Dog Democrat running for Utah's 4th District.",
+      "bio": "He enlisted at 17, served as an infantry rifleman from 2000 to 2004, was in Washington during the attack on the Pentagon, and deployed twice to Iraq.",
+      "issues": [
+        "He says veterans in the district drive hours for basic care and that VA staffing cuts, including nurses and doctors, need to be reversed.",
+        "He credits his grandmother's Teamster pension, Medicare, and Social Security with giving her stability, and he says he will defend those programs.",
+        "He says there is no VA clinic in Tooele, Sevier, Millard, or Sanpete counties, in a district that includes Camp Williams, Dugway Proving Ground, and the Tooele Army Depot."
+      ],
+      "site": "https://jonnyutah4congress.com/",
+      "siteLabel": "jonnyutah4congress.com",
+      "donate": "https://secure.actblue.com/donate/jonnyutah",
+      "source": "https://jonnyutah4congress.com/about-jonny"
+    },
+    "jonny larsen": {
+      "role": "Marine veteran and Blue Dog Democrat running for Utah's 4th District.",
+      "bio": "He enlisted at 17, served as an infantry rifleman from 2000 to 2004, was in Washington during the attack on the Pentagon, and deployed twice to Iraq.",
+      "issues": [
+        "He says veterans in the district drive hours for basic care and that VA staffing cuts, including nurses and doctors, need to be reversed.",
+        "He credits his grandmother's Teamster pension, Medicare, and Social Security with giving her stability, and he says he will defend those programs.",
+        "He says there is no VA clinic in Tooele, Sevier, Millard, or Sanpete counties, in a district that includes Camp Williams, Dugway Proving Ground, and the Tooele Army Depot."
+      ],
+      "site": "https://jonnyutah4congress.com/",
+      "siteLabel": "jonnyutah4congress.com",
+      "donate": "https://secure.actblue.com/donate/jonnyutah",
+      "source": "https://jonnyutah4congress.com/about-jonny"
+    }
+  },
+  "measures": {}
+}

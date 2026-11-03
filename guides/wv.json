@@ -1,0 +1,56 @@
+{
+  "code": "wv",
+  "ballotSource": "https://apps.sos.wv.gov/elections/2026GeneralSampleBallots/SAMPLE%20-%20WV%20Wood%20261103%20General%20-%2014inch.pdf",
+  "where": {
+    "url": "https://apps.sos.wv.gov/elections/voter/FindMyPollingPlace",
+    "label": "West Virginia Secretary of State"
+  },
+  "offices": {
+    "Senate": {
+      "kicker": "Federal · Vote for one.",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The U.S. Senate says it alone conducts impeachment trials and must confirm ambassadors, judges, and other officers the president nominates."
+    }
+  },
+  "people": {
+    "shelley moore capito": {
+      "role": "U.S. senator from West Virginia and chair of the Senate Republican Policy Committee.",
+      "bio": "Her campaign says she grew up in the Northern Panhandle, served in the West Virginia House, and represented the 2nd District in the U.S. House before the Senate. It says she chairs the Environment and Public Works Committee and serves on Appropriations and Commerce.",
+      "issues": [
+        "She says her Senate work focuses on the opioid crisis, broadband, and public infrastructure, and on rolling back rules such as California's electric-vehicle mandate.",
+        "The campaign says she is running again as a champion of tax cuts, border security, and the Second Amendment.",
+        "It says her earlier work in the Legislature and the House centered on education, job training, transportation, and federal funding for highways and bridges."
+      ],
+      "site": "https://shelleymoorecapito.com/",
+      "siteLabel": "shelleymoorecapito.com",
+      "donate": "https://secure.winred.com/shelley-moore-capito/donate",
+      "source": "https://shelleymoorecapito.com/"
+    },
+    "rachel fetty anderson": {
+      "role": "Public-interest lawyer and former Morgantown council member running for the U.S. Senate.",
+      "bio": "Her campaign says she earned a law degree at the University of Iowa, has represented children, families, and people seeking Medicaid, Medicare, and Social Security help, and served on the Morgantown City Council from 2017 to 2021.",
+      "issues": [
+        "She says family farmers should be shielded from foreign takeovers of land and from rules that punish them for choosing methods other than those of large agribusiness.",
+        "She wants a moratorium on hyperscale data centers and local control over their zoning and taxes.",
+        "She says Social Security should be preserved, including by ending the wage cap on the Social Security tax, and that U.S. military force should be reserved for self-defense with Congress declaring war."
+      ],
+      "site": "https://www.fettyandersonforsenate.com/",
+      "siteLabel": "fettyandersonforsenate.com",
+      "donate": "https://secure.actblue.com/donate/rachel-fetty-anderson-2?refcode=directory",
+      "source": "https://www.fettyandersonforsenate.com/issues"
+    },
+    "carol miller": {
+      "role": "U.S. representative for West Virginia",
+      "bio": "The campaign says Carol Miller is a small business owner, farmer, and job creator, and a wife, mother, and grandmother. It says she is in Congress to lower costs.",
+      "issues": [
+        "Her campaign says she is pro-life, pro-jobs, pro-energy, and for lower taxes.",
+        "The site says taxes, spending, and regulation from Washington hurt West Virginia families and businesses.",
+        "It says she has worked to lower taxes, create jobs, protect energy industries, and secure the border."
+      ],
+      "site": "https://www.electcarolmiller.com/",
+      "siteLabel": "Carol Miller for Congress",
+      "donate": "https://secure.winred.com/CarolMiller/donate",
+      "source": "https://www.electcarolmiller.com/"
+    }
+  },
+  "measures": {}
+}

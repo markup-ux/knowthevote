@@ -1,0 +1,296 @@
+{
+  "code": "az",
+  "ballotSource": "",
+  "where": {
+    "url": "https://my.arizona.vote/WhereToVote.aspx",
+    "label": "Arizona Secretary of State"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state."
+    }
+  },
+  "people": {
+    "andy biggs": {
+      "role": "U.S. representative",
+      "bio": "Andy Biggs is an Arizona native who has represented the state's 5th Congressional District since 2016. He is running for governor with Sine Kerr for lieutenant governor.",
+      "issues": [
+        "He says he will eliminate the state income tax, work with local governments to ease property taxes, and cut permitting barriers for new homes.",
+        "He says he will end state incentives for data centers and set standards to protect Arizona's water and energy.",
+        "He says he will reconvene a Border Strike Force aimed at human trafficking and drug trafficking and equip police to fight drug trafficking."
+      ],
+      "site": "https://biggsforarizona.com/",
+      "siteLabel": "biggsforarizona.com",
+      "donate": "https://secure.anedot.com/biggs-for-arizona/biggsforarizona",
+      "source": "https://biggsforarizona.com/issues/"
+    },
+    "katie hobbs": {
+      "role": "Governor of Arizona",
+      "bio": "Katie Hobbs is a social worker who was elected Arizona secretary of state and then governor, taking office in 2022. Her campaign says that before politics she worked with homeless youth and helped run a large domestic-violence shelter.",
+      "issues": [
+        "She says she eliminated the tax on rent, offered down-payment help for first homes, and cut red tape to make housing more affordable.",
+        "She says she created a Border Coordination Office, sent more than $100 million in border-security funding to local police, and that Task Force SAFE has stopped over 19 million fentanyl pills.",
+        "She says a water compromise passed under her watch will create jobs, lower housing costs, and conserve water, and that she ended a foreign corporation's groundwater leases."
+      ],
+      "site": "https://katiehobbs.org/",
+      "siteLabel": "katiehobbs.org",
+      "donate": "https://secure.actblue.com/donate/kmh-web",
+      "source": "https://katiehobbs.org/meet-katie/"
+    },
+    "risa lombardo": {
+      "role": "Candidate for governor",
+      "bio": "Risa Lombardo says she is running for governor to speak for people she believes the major parties ignore. She says she has been registered with both major parties and spent most of her life as a Democrat.",
+      "issues": [
+        "Her issues page lists the Green Party call to cut the military budget sharply and to move from fossil fuels to renewable energy.",
+        "That page also demands a living wage and a stronger safety net.",
+        "It calls for public financing of elections, open debates, and voting systems she describes as more representative."
+      ],
+      "site": "https://risalombardo.com/",
+      "siteLabel": "risalombardo.com",
+      "donate": "",
+      "source": "https://risalombardo.com/issues/"
+    },
+    "warren petersen": {
+      "role": "President of the Arizona Senate",
+      "bio": "Warren Petersen is president of the Arizona Senate and the Republican candidate for attorney general. His campaign says that in the Senate he defended state laws, opposed mandates he calls unconstitutional, and backed Second Amendment rights.",
+      "issues": [
+        "He says as attorney general he will uphold the rule of law and stand with law enforcement to hold criminals accountable.",
+        "He says he will protect the rights of Arizona families.",
+        "He says he has worked to keep men out of women's sports and to check government power."
+      ],
+      "site": "https://www.petersenforag.com/",
+      "siteLabel": "petersenforag.com",
+      "donate": "https://secure.winred.com/friends-of-warren-petersen/donate",
+      "source": "https://www.petersenforag.com/"
+    },
+    "kris mayes": {
+      "role": "Arizona attorney general",
+      "bio": "Kris Mayes is Arizona's attorney general. Her campaign calls her a consumer advocate and says she is the second woman, and the first mother, to serve as the state's chief law-enforcement officer and chief attorney.",
+      "issues": [],
+      "site": "https://www.krismayes.com/",
+      "siteLabel": "krismayes.com",
+      "donate": "https://secure.actblue.com/donate/kris-mayes-website",
+      "source": "https://www.krismayes.com/"
+    },
+    "alexander kolodin": {
+      "role": "Candidate for secretary of state",
+      "bio": "Alexander Kolodin is running for Arizona secretary of state. His campaign says accountability in that office starts with securing elections and reporting results voters can trust.",
+      "issues": [
+        "He says he will harden election systems against manipulation, error, and interference so every legal vote is counted accurately.",
+        "He says he will run elections that reflect voters' choices without bureaucratic overreach or partisan interference.",
+        "He says he will modernize administration so results come faster without giving up accuracy, and he promises more transparency."
+      ],
+      "site": "https://www.alexforaz.com/",
+      "siteLabel": "alexforaz.com",
+      "donate": "https://secure.anedot.com/alex-for-arizona/donate-15d12401de41057027",
+      "source": "https://www.alexforaz.com/platform"
+    },
+    "adrian fontes": {
+      "role": "Arizona secretary of state",
+      "bio": "Adrian Fontes, a former Marine who served on active duty from 1992 to 1996, was elected Maricopa County recorder in 2016 and Arizona's 21st secretary of state in 2022. He previously prosecuted cases in Denver, at the Maricopa County Attorney's Office, and in the Arizona attorney general's international prosecution unit.",
+      "issues": [
+        "He says he has enforced Arizona's voter ID laws, kept voter rolls current, and will keep defending free and fair elections.",
+        "He says he is a defender of vote-by-mail, which his campaign says more than 80 percent of Arizonans use, and that he has gone to court to block demands for voters' private data.",
+        "He says he is cutting red tape and wait times in the office's business services."
+      ],
+      "site": "https://electfontes.com/",
+      "siteLabel": "electfontes.com",
+      "donate": "https://secure.actblue.com/donate/adrianfontes",
+      "source": "https://electfontes.com/about/"
+    },
+    "duwayne collier": {
+      "role": "Green Party candidate for Arizona secretary of state.",
+      "bio": "His Clean Elections statement says he grew up in a small farming town in California, worked in construction, labor, sales, and service, and settled in Arizona with his wife and two children.",
+      "issues": [
+        "He says he supports strong borders and legal immigration, including more lawful pathways so farming and construction have a workforce.",
+        "He says he supports renewable energy, including fusion, and securing Arizona's share of Colorado River water.",
+        "He says he would hold corporations accountable for clean air and water and work to bring manufacturing and higher-paying jobs to Arizona."
+      ],
+      "site": "https://www.duwaynecollier.com/",
+      "siteLabel": "duwaynecollier.com",
+      "source": "https://www.azcleanelections.gov/arizona-elections/voter-education-guide/primary-text-secretary-of-state"
+    },
+    "jay feely": {
+      "role": "Former NFL kicker running for Congress in Arizona's 1st District.",
+      "bio": "His campaign says he played 14 seasons in the NFL, including for the Arizona Cardinals, and later worked as a CBS analyst. He and his wife Rebecca have lived in the Valley for 15 years and are raising four children.",
+      "issues": [
+        "He says he will protect Arizona's water, stand with farmers and ranchers, defend Second Amendment rights, and oppose federal mandates he says hurt families, small businesses, and schools.",
+        "He says he will fight to finish the border wall, back Border Patrol and ICE, and work to keep fentanyl out of neighborhoods.",
+        "He says he will cut red tape, extend the Trump-era tax cuts, and back domestic manufacturing so the Valley keeps higher-paying jobs."
+      ],
+      "site": "https://www.jayfeelyforcongress.com/",
+      "siteLabel": "jayfeelyforcongress.com",
+      "donate": "https://secure.winred.com/feely-for-congress/donate",
+      "source": "https://www.jayfeelyforcongress.com/issues"
+    },
+    "david redkey": {
+      "role": "Certified teacher running for Congress in Arizona's 3rd District.",
+      "bio": "His campaign says he is a certified public-school teacher, a small-business owner, a husband, and a father who has lived in Arizona for nearly four decades.",
+      "issues": [
+        "He says his Foundation Economics plan starts with working families and household stability, and that he will fight for a fair wage.",
+        "He says he wants stronger public education, including teaching budgeting in every school.",
+        "He says guardianship, probate, and fiduciary systems need more transparency so families are not taken advantage of."
+      ],
+      "site": "https://www.davidredkey4congress.com/",
+      "siteLabel": "davidredkey4congress.com",
+      "donate": "https://donorbox.org/elect-david-redkey-to-az-03",
+      "source": "https://www.davidredkey4congress.com/why-vote-for-david-redkey"
+    },
+    "zuhdi jasser": {
+      "role": "Physician and Navy veteran running for Congress in Arizona's 4th District.",
+      "bio": "His campaign says his parents fled Syria in 1966, he grew up in Wisconsin, served 11 years as a Navy officer, and has practiced medicine in Phoenix for more than 20 years. He and his wife Gada have three children.",
+      "issues": [
+        "He says he will rein in spending, let people keep more of what they earn, and cut regulations so small businesses can grow.",
+        "He supports a balanced-budget amendment and says both parties have spent without regard for whether the country can afford it.",
+        "He says he will back more resources for border agents and school funding that follows students."
+      ],
+      "site": "https://z4az.com/",
+      "siteLabel": "z4az.com",
+      "donate": "https://secure.winred.com/friends-of-dr-jasser-inc/donate-today",
+      "source": "https://z4az.com/"
+    },
+    "teri ann hourihan": {
+      "role": "No Labels candidate for governor of Arizona.",
+      "bio": "Her campaign says she was born and raised in Glendale, later earned a doctorate, and became a licensed counselor who founded a behavioral-health company. She says she is running after a Medicaid payment suspension she describes as unjust, and that she is not a career politician.",
+      "issues": [
+        "She says she takes no PAC or special-interest money and wants state government to be more accessible and accountable to residents.",
+        "She says she and her running mate are focused on lowering the cost of living and acting for Arizona families rather than either major party.",
+        "On schools, she says she would keep school choice, including empowerment scholarship accounts, and audit education spending so more money reaches classrooms."
+      ],
+      "site": "https://teriann4azgov.org/",
+      "siteLabel": "teriann4azgov.org",
+      "donate": "https://donate.stripe.com/3cI7sLfhGcW13FHadf5AQ03",
+      "source": "https://teriann4azgov.org/about"
+    },
+    "greg stanton": {
+      "role": "U.S. representative for Arizona's 4th District.",
+      "bio": "His campaign describes him as a former Phoenix mayor and a husband and father whose parents spent weekends feeding families at a park. It says he is running to protect the Arizona he believes in.",
+      "issues": [
+        "He says lowering the cost of living in Arizona is his top priority, and that as a leader of the New Democrat Coalition he helped write a broad policy on that subject.",
+        "He says the state's water future depends on a fair deal and that he has delivered results to protect Arizona's water supply."
+      ],
+      "site": "https://gregstanton.com/",
+      "siteLabel": "gregstanton.com",
+      "donate": "https://secure.actblue.com/donate/stantonhomepage2026",
+      "source": "https://gregstanton.com/affordability"
+    },
+    "juan ciscomani": {
+      "role": "U.S. representative for Arizona's 6th District.",
+      "bio": "His campaign says he is a husband and father of six whose parents were working-class immigrants, and that he is the first naturalized U.S. citizen from Mexico elected to the House from Arizona. It says he grew up in the 6th District.",
+      "issues": [
+        "He says his results include more border agents, lower taxes for everyday Arizonans and seniors, and more funding for cancer research.",
+        "He says he also works to support veterans and law enforcement officers."
+      ],
+      "site": "https://juanciscomani.com/",
+      "siteLabel": "juanciscomani.com",
+      "donate": "https://secure.winred.com/ciscomani-for-congress/donate",
+      "source": "https://juanciscomani.com/"
+    },
+    "amish shah": {
+      "role": "Emergency physician and former state representative running for Congress in Arizona's 1st District.",
+      "bio": "His campaign says he is an emergency doctor who won three terms in the Arizona House and had more bills signed than any Democrat in the legislature over the last decade. He says that work focused on teacher pay, small businesses, and public health.",
+      "issues": [
+        "He says he would roll back tariffs he calls a tax on groceries and gas, and protect Social Security, Medicare, and Medicaid.",
+        "He says only a woman and her doctor should make reproductive decisions, and he wants abortion rights written into federal law.",
+        "He says he would reduce gun violence, fund police, stop fentanyl, and fight for Arizona's share of Colorado River water."
+      ],
+      "site": "https://www.amishforarizona.com/",
+      "siteLabel": "amishforarizona.com",
+      "source": "https://www.amishforarizona.com/issues"
+    },
+    "eli crane": {
+      "role": "Former Navy SEAL and U.S. representative for Arizona's 2nd District.",
+      "bio": "His campaign says he enlisted after September 11, served 13 years including five wartime deployments with SEAL Team 3, and later started Bottle Breacher with his wife. He says he is a father of two raising his family in Arizona.",
+      "issues": [
+        "He says he is pro-life and pro-Second Amendment, and that he voted to end taxes on tips, overtime, and Social Security while expanding the child tax credit.",
+        "He says he would finish the border wall, hire more immigration judges, and stop fentanyl, and he supports a national voter-ID law.",
+        "He says rural Arizona should come first, including copper, water, tribal entrepreneurs, and veterans' care, and he opposes wind and solar farms he says raise utility bills."
+      ],
+      "site": "https://eliforarizona.com/",
+      "siteLabel": "eliforarizona.com",
+      "source": "https://eliforarizona.com/issues-eli-crane/"
+    },
+    "jonathan nez": {
+      "role": "Former Navajo Nation president running for Congress in Arizona's 2nd District.",
+      "bio": "His campaign says he grew up in rural Arizona in a home without running water or electricity, and that childhood taught him hard work, responsibility, and faith. He says families are paying the price for an economy that puts billionaires first.",
+      "issues": [
+        "He says he would lower health-care and housing costs, take on drug-price gouging, and reverse Medicaid cuts that threaten rural hospitals.",
+        "He says he would secure Arizona's share of Colorado River water, update rural water systems, and protect groundwater.",
+        "He also lists rural infrastructure, veterans, voting rights, and tribal sovereignty among his priorities."
+      ],
+      "site": "https://www.jonathannezforaz.com/",
+      "siteLabel": "jonathannezforaz.com",
+      "source": "https://www.jonathannezforaz.com/issues"
+    },
+    "yassamin ansari": {
+      "role": "U.S. representative for Arizona's 3rd District.",
+      "bio": "Her campaign says she represents one of the country's most diverse districts, including Phoenix, and is the youngest woman in this Congress and Democratic freshman class president. She says her first term has focused on costs, immigration enforcement, and reproductive freedom.",
+      "issues": [
+        "She says she supports Medicare for All, more affordable housing, free child care, and a federal minimum wage of $25 an hour.",
+        "She says ICE should be abolished and prosecuted, and that Dreamers, refugees, and asylum seekers need a path to stay.",
+        "She says she is pushing climate action, public education, and oversight of the administration, including the Epstein investigation."
+      ],
+      "site": "https://yassaminforcongress.com/",
+      "siteLabel": "yassaminforcongress.com",
+      "source": "https://yassaminforcongress.com/issues-policy/"
+    },
+    "joanna mendoza": {
+      "role": "Retired Marine running for Congress in Arizona's 6th District.",
+      "bio": "Her campaign says she is a working mother and retired Marine, the daughter of farmworkers who grew up in rural poverty. She says she is not a politician and has no tolerance for corruption.",
+      "issues": [
+        "She says she would crack down on price gouging, modernize the child tax credit, oppose tariffs that raise costs, and strengthen Social Security.",
+        "She says she would reverse health-care cuts, protect people with preexisting conditions, and expand Medicare drug-price negotiation.",
+        "She says she would fund police, deport people who commit violent crimes, create a path to citizenship for people who follow the law, and require data centers to bring their own power."
+      ],
+      "site": "https://www.joannamendoza.com/",
+      "siteLabel": "joannamendoza.com",
+      "source": "https://www.joannamendoza.com/issues/cost-of-living/"
+    },
+    "adelita grijalva": {
+      "role": "U.S. representative for Arizona's 7th District.",
+      "bio": "Her campaign says she is a lifelong public servant who grew up on Tucson's south side, graduated from Pueblo High School, and earned a political-science degree from the University of Arizona. She says that as a Pima County supervisor she worked on housing, the environment, and climate.",
+      "issues": [
+        "She says she would lower the cost of gas, groceries, housing, and health care, raise the minimum wage, and pass the PRO Act.",
+        "She says she supports a path to citizenship for DACA recipients and an end to private immigration detention.",
+        "She says she would invest in clean energy, protect Colorado River water and tribal water rights, and require royalties on minerals taken from public land."
+      ],
+      "site": "https://www.adelitaforcongress.com/",
+      "siteLabel": "adelitaforcongress.com",
+      "source": "https://www.adelitaforcongress.com/issues"
+    },
+    "abraham hamadeh": {
+      "role": "Army Reserve veteran and U.S. representative for Arizona's 8th District.",
+      "bio": "His campaign says he is a former Army Reserve captain and intelligence officer and a former Maricopa County prosecutor, and the son of immigrants whose family fled places including Syria and Venezuela. He says he grew up in the 8th District and is seeking a second term.",
+      "issues": [
+        "He says border security is national security and that he will keep voting to stop illegal crossings and defend private property.",
+        "He says the government should pass a budget and live within its means, and that fentanyl should carry harsher sentences.",
+        "He says he would fund police, preserve Social Security, and defend the Second Amendment."
+      ],
+      "site": "https://www.abeforaz.com/",
+      "siteLabel": "abeforaz.com",
+      "source": "https://www.abeforaz.com/our-issues"
+    },
+    "paul gosar": {
+      "role": "Dentist and U.S. representative for Arizona's 9th District.",
+      "bio": "His campaign says he practiced dentistry for 25 years, first won a House seat in 2010, and is in his sixth term. It says redistricting has him running in the 9th District, and that he wants more freedom and less government.",
+      "issues": [
+        "He says he would end taxes on Social Security and pension offsets, and he calls the right to keep and bear arms absolute.",
+        "He says he supports a balanced-budget amendment, U.S. energy independence, and the president's border wall.",
+        "He says he would extend Interstate 11 between Phoenix and Las Vegas and would not cut military health and retirement benefits to fund other programs."
+      ],
+      "site": "https://drpaulgosar.com/",
+      "siteLabel": "drpaulgosar.com",
+      "source": "https://drpaulgosar.com/issues/"
+    }
+  },
+  "measures": {}
+}

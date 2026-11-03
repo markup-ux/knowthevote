@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640.0 354.0" role="img" aria-label="Map of Kansas">
+<path data-fips="20137" data-name="Norton" d="M 178.7 16.3 L 223.3 18.1 L 221.3 64.7 L 176.5 62.9 Z"/>
+<path data-fips="20073" data-name="Greenwood" d="M 472.5 229.1 L 486.1 229.3 L 486.2 219.9 L 519.2 220.2 L 519.0 281.1 L 472.0 280.6 Z"/>
+<path data-fips="20101" data-name="Lane" d="M 130.7 153.9 L 166.9 155.8 L 165.0 202.6 L 128.7 200.6 Z"/>
+<path data-fips="20115" data-name="Marion" d="M 402.9 172.3 L 439.3 172.7 L 439.2 182.1 L 448.2 182.2 L 448.1 200.8 L 446.6 200.8 L 446.1 229.0 L 420.2 228.6 L 420.4 219.2 L 402.2 219.1 Z"/>
+<path data-fips="20007" data-name="Barber" d="M 264.1 291.4 L 309.9 292.7 L 309.6 302.0 L 319.2 302.2 L 318.4 343.7 L 263.5 342.0 L 264.7 300.7 L 263.9 300.7 Z"/>
+<path data-fips="20047" data-name="Edwards" d="M 219.3 242.3 L 220.1 223.6 L 238.2 224.3 L 237.9 233.6 L 265.1 234.5 L 264.5 253.3 L 265.2 253.3 L 264.9 263.2 L 219.5 261.5 Z"/>
+<path data-fips="20193" data-name="Thomas" d="M 78.5 57.8 L 132.7 60.7 L 130.3 107.3 L 75.6 104.2 Z"/>
+<path data-fips="20057" data-name="Ford" d="M 164.8 240.0 L 219.3 242.3 L 218.7 290.1 L 163.6 287.1 L 165.4 249.4 Z"/>
+<path data-fips="20017" data-name="Chase" d="M 448.2 182.2 L 486.6 182.5 L 486.1 229.3 L 446.1 229.0 L 446.6 200.8 L 448.1 200.8 Z"/>
+<path data-fips="20207" data-name="Woodson" d="M 519.2 234.2 L 555.7 234.3 L 555.7 257.7 L 555.3 267.1 L 519.0 267.1 Z"/>
+<path data-fips="20199" data-name="Wallace" d="M 22.2 101.2 L 68.6 103.8 L 65.4 150.4 L 19.4 147.9 L 21.7 110.4 Z"/>
+<path data-fips="20059" data-name="Franklin" d="M 556.8 159.1 L 593.3 158.9 L 592.9 196.3 L 556.4 196.5 L 556.2 163.8 Z"/>
+<path data-fips="20133" data-name="Neosho" d="M 555.3 267.1 L 591.7 266.9 L 592.0 304.3 L 555.5 304.6 Z"/>
+<path data-fips="20029" data-name="Cloud" d="M 359.1 59.4 L 404.8 60.2 L 404.1 97.5 L 358.6 96.7 L 359.0 68.7 Z"/>
+<path data-fips="20135" data-name="Ness" d="M 166.9 155.8 L 221.2 158.2 L 219.6 204.8 L 165.0 202.6 Z"/>
+<path data-fips="20003" data-name="Anderson" d="M 556.4 196.5 L 592.9 196.3 L 592.2 234.1 L 555.7 234.3 L 555.7 210.6 Z"/>
+<path data-fips="20051" data-name="Ellis" d="M 222.5 111.4 L 267.7 112.9 L 265.8 159.7 L 220.2 158.2 Z"/>
+<path data-fips="20085" data-name="Jackson" d="M 512.8 70.4 L 532.9 70.4 L 532.9 61.1 L 551.1 61.0 L 550.8 86.1 L 549.2 86.1 L 549.3 107.9 L 512.9 108.0 Z"/>
+<path data-fips="20171" data-name="Scott" d="M 94.6 152.0 L 130.7 153.9 L 128.7 200.6 L 92.3 198.7 Z"/>
+<path data-fips="20151" data-name="Pratt" d="M 265.2 253.3 L 310.2 254.7 L 309.9 292.7 L 264.1 291.4 L 264.9 263.2 Z"/>
+<path data-fips="20037" data-name="Crawford" d="M 591.8 273.1 L 631.0 272.8 L 631.5 306.0 L 631.5 308.7 L 593.2 309.0 L 592.0 304.3 Z"/>
+<path data-fips="20111" data-name="Lyon" d="M 486.6 182.5 L 486.8 159.2 L 520.2 159.2 L 519.9 210.7 L 519.2 220.2 L 486.2 219.9 Z"/>
+<path data-fips="20147" data-name="Phillips" d="M 223.3 18.1 L 268.3 19.7 L 266.9 66.2 L 221.3 64.7 Z"/>
+<path data-fips="20067" data-name="Grant" d="M 55.9 253.5 L 92.2 255.5 L 90.2 292.9 L 53.8 290.8 Z"/>
+<path data-fips="20065" data-name="Graham" d="M 178.0 62.9 L 223.4 64.8 L 221.4 111.4 L 175.7 109.6 Z"/>
+<path data-fips="20001" data-name="Allen" d="M 555.7 234.3 L 592.2 234.1 L 591.7 266.9 L 555.3 267.1 L 555.7 257.7 Z"/>
+<path data-fips="20195" data-name="Trego" d="M 177.1 109.6 L 222.5 111.4 L 220.2 158.2 L 174.5 156.2 Z"/>
+<path data-fips="20049" data-name="Elk" d="M 472.0 280.6 L 519.0 281.1 L 519.0 304.4 L 518.7 313.8 L 471.8 313.3 L 471.8 294.6 Z"/>
+<path data-fips="20075" data-name="Hamilton" d="M 16.5 194.5 L 57.9 196.9 L 55.1 243.6 L 56.4 243.7 L 55.9 253.5 L 13.1 250.6 Z"/>
+<path data-fips="20039" data-name="Decatur" d="M 133.5 14.1 L 178.7 16.3 L 176.5 62.9 L 131.0 60.6 Z"/>
+<path data-fips="20201" data-name="Washington" d="M 405.3 22.9 L 450.8 23.5 L 450.3 70.1 L 404.7 69.5 L 404.8 60.2 Z"/>
+<path data-fips="20069" data-name="Gray" d="M 165.3 230.6 L 163.6 287.1 L 127.2 285.4 L 129.0 228.8 Z"/>
+<path data-fips="20061" data-name="Geary" d="M 437.1 116.6 L 437.3 107.2 L 446.4 107.4 L 446.2 121.4 L 458.0 121.2 L 458.0 123.1 L 474.8 123.3 L 474.6 145.1 L 439.8 144.7 L 440.0 133.1 L 436.9 134.6 Z"/>
+<path data-fips="20203" data-name="Wichita" d="M 58.6 150.0 L 94.6 152.0 L 92.3 198.7 L 55.8 196.8 Z"/>
+<path data-fips="20027" data-name="Clay" d="M 404.1 97.5 L 404.7 69.5 L 437.9 70.0 L 437.1 116.6 L 403.8 116.2 Z"/>
+<path data-fips="20179" data-name="Sheridan" d="M 132.7 60.7 L 178.0 62.9 L 175.7 109.6 L 130.3 107.3 Z"/>
+<path data-fips="20097" data-name="Kiowa" d="M 219.5 261.5 L 264.9 263.2 L 263.9 300.7 L 219.4 299.5 L 218.7 290.1 Z"/>
+<path data-fips="20139" data-name="Osage" d="M 520.2 159.2 L 520.2 145.1 L 556.7 145.1 L 556.8 159.1 L 556.3 191.8 L 519.9 191.9 Z"/>
+<path data-fips="20181" data-name="Sherman" d="M 24.9 54.6 L 78.5 57.8 L 75.6 104.2 L 22.2 101.2 Z"/>
+<path data-fips="20163" data-name="Rooks" d="M 223.4 64.8 L 268.6 66.3 L 266.9 112.9 L 221.4 111.4 Z"/>
+<path data-fips="20169" data-name="Saline" d="M 357.7 143.4 L 357.9 134.1 L 403.5 134.9 L 402.9 172.3 L 357.4 171.5 Z"/>
+<path data-fips="20053" data-name="Ellsworth" d="M 312.1 142.4 L 357.7 143.4 L 357.3 180.8 L 311.5 179.9 L 311.5 161.1 Z"/>
+<path data-fips="20121" data-name="Miami" d="M 593.3 158.9 L 630.0 158.5 L 630.2 196.0 L 592.9 196.3 L 592.6 163.6 Z"/>
+<path data-fips="20189" data-name="Stevens" d="M 51.2 290.6 L 92.1 293.0 L 89.9 334.8 L 48.9 332.8 Z"/>
+<path data-fips="20043" data-name="Doniphan" d="M 569.1 23.7 L 571.6 23.7 L 580.0 33.4 L 585.1 34.5 L 586.2 37.1 L 593.6 37.9 L 597.1 34.4 L 602.3 35.3 L 601.3 38.3 L 606.7 42.6 L 602.7 45.9 L 603.8 49.2 L 607.3 47.7 L 606.2 52.7 L 600.4 50.7 L 599.2 57.1 L 594.6 59.4 L 592.6 64.8 L 589.0 64.2 L 587.5 60.8 L 569.3 60.9 Z"/>
+<path data-fips="20173" data-name="Sedgwick" d="M 365.3 265.7 L 374.4 265.7 L 374.4 246.8 L 420.0 247.3 L 419.4 294.3 L 364.8 293.6 Z"/>
+<path data-fips="20183" data-name="Smith" d="M 268.3 19.7 L 313.7 21.0 L 312.4 67.6 L 266.9 66.2 Z"/>
+<path data-fips="20079" data-name="Harvey" d="M 374.9 218.6 L 420.4 219.2 L 420.0 247.3 L 374.4 246.8 Z"/>
+<path data-fips="20013" data-name="Brown" d="M 532.9 23.8 L 569.1 23.7 L 569.3 60.9 L 532.9 61.1 Z"/>
+<path data-fips="20023" data-name="Cheyenne" d="M 27.7 8.0 L 79.4 11.2 L 76.5 57.7 L 25.0 53.9 Z"/>
+<path data-fips="20071" data-name="Greeley" d="M 18.8 156.7 L 19.4 147.9 L 58.6 150.0 L 55.8 196.8 L 16.5 193.8 Z"/>
+<path data-fips="20191" data-name="Sumner" d="M 364.8 293.6 L 419.4 294.3 L 419.3 345.4 L 364.2 344.6 L 364.6 303.0 Z"/>
+<path data-fips="20149" data-name="Pottawatomie" d="M 468.7 70.3 L 512.8 70.4 L 512.6 117.6 L 508.9 110.4 L 501.4 110.9 L 496.9 108.5 L 493.8 111.9 L 490.9 110.0 L 488.8 114.1 L 478.3 110.7 L 478.2 113.0 L 470.6 111.9 L 469.9 105.2 L 463.7 99.6 L 463.1 96.0 L 456.7 87.7 L 458.3 81.5 L 461.5 80.0 L 463.4 75.3 Z"/>
+<path data-fips="20205" data-name="Wilson" d="M 519.0 281.1 L 519.0 267.1 L 555.3 267.1 L 555.5 304.6 L 519.0 304.4 Z"/>
+<path data-fips="20019" data-name="Chautauqua" d="M 471.8 313.3 L 518.7 313.8 L 518.8 346.0 L 471.6 345.9 Z"/>
+<path data-fips="20107" data-name="Linn" d="M 592.9 196.3 L 630.2 196.0 L 630.7 233.7 L 592.2 234.1 L 592.2 210.4 L 593.0 210.4 Z"/>
+<path data-fips="20095" data-name="Kingman" d="M 309.9 292.7 L 310.6 264.6 L 365.3 265.7 L 364.6 303.0 L 309.6 302.0 Z"/>
+<path data-fips="20123" data-name="Mitchell" d="M 313.9 67.6 L 359.0 68.7 L 358.3 106.1 L 312.6 104.9 Z"/>
+<path data-fips="20083" data-name="Hodgeman" d="M 166.4 202.6 L 220.7 204.8 L 219.3 242.3 L 164.8 240.0 L 165.3 230.6 Z"/>
+<path data-fips="20127" data-name="Morris" d="M 442.8 144.8 L 474.6 145.1 L 474.6 149.7 L 483.8 149.8 L 483.8 159.1 L 486.8 159.2 L 486.6 182.5 L 439.2 182.1 L 439.7 151.0 L 442.7 151.0 Z"/>
+<path data-fips="20165" data-name="Rush" d="M 221.2 158.2 L 266.6 159.8 L 265.4 197.2 L 219.9 195.5 Z"/>
+<path data-fips="20185" data-name="Stafford" d="M 265.1 234.5 L 274.1 234.8 L 275.0 206.8 L 310.8 207.9 L 310.2 254.7 L 264.5 253.3 Z"/>
+<path data-fips="20055" data-name="Finney" d="M 94.1 198.8 L 166.4 202.6 L 165.3 230.6 L 129.0 228.8 L 128.0 247.4 L 128.6 257.4 L 92.2 255.5 L 92.7 245.6 L 91.6 245.5 Z"/>
+<path data-fips="20087" data-name="Jefferson" d="M 549.3 107.9 L 549.2 86.1 L 582.4 85.9 L 582.8 117.1 L 582.2 126.2 L 574.3 126.0 L 569.7 127.6 L 561.9 123.6 L 556.7 125.0 L 548.8 124.2 Z"/>
+<path data-fips="20145" data-name="Pawnee" d="M 219.9 195.5 L 265.4 197.2 L 265.2 206.5 L 275.0 206.8 L 274.1 234.8 L 237.9 233.6 L 238.2 224.3 L 220.1 223.6 L 220.7 204.8 L 219.6 204.8 Z"/>
+<path data-fips="20031" data-name="Coffey" d="M 519.2 220.2 L 519.9 191.9 L 556.3 191.8 L 556.4 196.5 L 555.7 234.3 L 519.2 234.2 Z"/>
+<path data-fips="20025" data-name="Clark" d="M 172.7 287.5 L 218.7 290.1 L 219.4 299.5 L 218.1 340.4 L 172.0 338.3 L 173.6 297.0 L 172.3 296.9 Z"/>
+<path data-fips="20187" data-name="Stanton" d="M 12.5 260.7 L 13.1 250.6 L 55.9 253.5 L 53.8 290.8 L 10.8 288.1 Z"/>
+<path data-fips="20033" data-name="Comanche" d="M 219.4 299.5 L 264.7 300.7 L 263.5 342.0 L 218.1 340.4 Z"/>
+<path data-fips="20153" data-name="Rawlins" d="M 79.4 11.2 L 133.5 14.1 L 131.0 60.6 L 76.5 57.7 Z"/>
+<path data-fips="20021" data-name="Cherokee" d="M 593.2 309.0 L 631.5 308.7 L 632.0 345.2 L 593.7 345.6 Z"/>
+<path data-fips="20177" data-name="Shawnee" d="M 512.9 108.0 L 549.3 107.9 L 548.8 124.2 L 556.7 125.0 L 556.7 145.1 L 520.2 145.1 L 520.1 120.6 L 512.6 117.6 Z"/>
+<path data-fips="20005" data-name="Atchison" d="M 551.1 61.0 L 587.5 60.8 L 589.0 64.2 L 592.6 64.8 L 591.7 68.9 L 588.2 69.3 L 588.7 73.6 L 592.9 77.4 L 593.8 80.7 L 599.7 85.8 L 550.8 86.1 Z"/>
+<path data-fips="20089" data-name="Jewell" d="M 313.7 21.0 L 359.9 22.1 L 359.0 68.7 L 312.4 67.6 Z"/>
+<path data-fips="20117" data-name="Marshall" d="M 450.8 23.5 L 496.5 23.8 L 496.4 70.4 L 450.3 70.1 Z"/>
+<path data-fips="20131" data-name="Nemaha" d="M 496.5 23.8 L 532.9 23.8 L 532.9 70.4 L 496.4 70.4 Z"/>
+<path data-fips="20093" data-name="Kearny" d="M 57.9 196.9 L 94.1 198.8 L 91.6 245.5 L 92.7 245.6 L 92.2 255.5 L 55.9 253.5 L 56.4 243.7 L 55.1 243.6 Z"/>
+<path data-fips="20129" data-name="Morton" d="M 10.8 288.1 L 51.2 290.6 L 48.9 332.8 L 8.0 330.5 Z"/>
+<path data-fips="20143" data-name="Ottawa" d="M 358.6 96.7 L 404.1 97.5 L 403.5 134.9 L 357.9 134.1 L 358.3 106.1 Z"/>
+<path data-fips="20167" data-name="Russell" d="M 267.7 112.9 L 312.9 114.4 L 311.5 161.1 L 265.8 159.7 Z"/>
+<path data-fips="20045" data-name="Douglas" d="M 556.7 125.0 L 561.9 123.6 L 569.7 127.6 L 574.3 126.0 L 582.2 126.2 L 582.4 134.7 L 584.2 132.9 L 591.6 134.6 L 593.0 132.7 L 593.3 158.9 L 556.8 159.1 L 556.7 145.1 Z"/>
+<path data-fips="20157" data-name="Republic" d="M 359.9 22.1 L 405.3 22.9 L 404.8 60.2 L 359.1 59.4 Z"/>
+<path data-fips="20103" data-name="Leavenworth" d="M 582.4 85.9 L 599.7 85.8 L 602.6 89.3 L 606.2 88.5 L 604.5 92.9 L 605.4 98.5 L 609.8 101.8 L 611.7 108.1 L 615.7 109.0 L 605.5 108.9 L 605.1 131.6 L 595.9 130.8 L 591.6 134.6 L 584.2 132.9 L 582.4 134.7 L 582.8 117.1 Z"/>
+<path data-fips="20141" data-name="Osborne" d="M 268.6 66.3 L 313.9 67.6 L 312.4 114.3 L 266.9 112.9 Z"/>
+<path data-fips="20159" data-name="Rice" d="M 311.5 179.9 L 357.3 180.8 L 356.7 218.3 L 311.2 217.3 L 310.8 207.9 Z"/>
+<path data-fips="20209" data-name="Wyandotte" d="M 615.7 109.0 L 618.9 112.4 L 622.9 110.7 L 625.0 113.5 L 630.0 113.2 L 629.7 125.6 L 613.6 125.9 L 608.0 124.3 L 605.1 131.6 L 605.5 108.9 Z"/>
+<path data-fips="20099" data-name="Labette" d="M 555.8 304.6 L 592.0 304.3 L 593.2 309.0 L 593.7 345.6 L 555.9 345.9 L 556.2 318.7 Z"/>
+<path data-fips="20091" data-name="Johnson" d="M 593.0 132.7 L 595.9 130.8 L 605.1 131.6 L 608.0 124.3 L 613.6 125.9 L 629.7 125.6 L 629.9 146.8 L 630.0 158.5 L 593.3 158.9 Z"/>
+<path data-fips="20041" data-name="Dickinson" d="M 403.5 134.9 L 403.8 116.2 L 437.1 116.6 L 436.9 134.6 L 440.0 133.1 L 439.8 144.7 L 442.8 144.8 L 442.7 151.0 L 439.7 151.0 L 439.3 172.7 L 402.9 172.3 Z"/>
+<path data-fips="20155" data-name="Reno" d="M 311.2 217.3 L 374.9 218.6 L 374.4 265.7 L 310.6 264.6 L 310.2 254.7 Z"/>
+<path data-fips="20109" data-name="Logan" d="M 68.6 103.8 L 122.9 106.9 L 120.0 153.4 L 65.4 150.4 Z"/>
+<path data-fips="20081" data-name="Haskell" d="M 92.2 255.5 L 128.6 257.4 L 126.7 294.8 L 90.2 292.9 Z"/>
+<path data-fips="20063" data-name="Gove" d="M 122.9 106.9 L 177.1 109.6 L 174.5 156.2 L 120.0 153.4 Z"/>
+<path data-fips="20197" data-name="Wabaunsee" d="M 474.6 145.1 L 474.8 126.4 L 483.8 126.5 L 484.0 112.6 L 488.8 114.1 L 490.9 110.0 L 493.8 111.9 L 496.9 108.5 L 501.4 110.9 L 508.9 110.4 L 512.6 117.6 L 520.1 120.6 L 520.2 159.2 L 483.8 159.1 L 483.8 149.8 L 474.6 149.7 Z"/>
+<path data-fips="20119" data-name="Meade" d="M 127.2 285.4 L 172.7 287.5 L 172.3 296.9 L 173.6 297.0 L 172.0 338.3 L 126.3 336.4 L 128.3 294.8 L 126.7 294.8 Z"/>
+<path data-fips="20077" data-name="Harper" d="M 319.2 302.2 L 364.6 303.0 L 364.2 344.6 L 318.4 343.7 Z"/>
+<path data-fips="20161" data-name="Riley" d="M 437.9 70.0 L 468.7 70.3 L 463.4 75.3 L 461.5 80.0 L 458.3 81.5 L 456.7 87.7 L 463.1 96.0 L 463.7 99.6 L 469.9 105.2 L 470.6 111.9 L 478.2 113.0 L 478.3 110.7 L 484.0 112.6 L 483.8 126.5 L 474.8 126.4 L 474.8 123.3 L 458.0 123.1 L 458.0 121.2 L 446.2 121.4 L 446.4 107.4 L 437.3 107.2 Z"/>
+<path data-fips="20105" data-name="Lincoln" d="M 312.6 104.9 L 358.3 106.1 L 357.7 143.4 L 312.1 142.4 L 312.4 114.3 Z"/>
+<path data-fips="20175" data-name="Seward" d="M 92.1 293.0 L 128.3 294.8 L 126.3 336.4 L 89.9 334.8 Z"/>
+<path data-fips="20009" data-name="Barton" d="M 266.6 159.8 L 311.5 161.1 L 310.8 207.9 L 265.2 206.5 L 265.4 197.2 Z"/>
+<path data-fips="20125" data-name="Montgomery" d="M 518.7 313.8 L 519.0 304.4 L 555.8 304.6 L 556.2 318.7 L 555.9 345.9 L 518.8 346.0 Z"/>
+<path data-fips="20113" data-name="McPherson" d="M 357.4 171.5 L 402.9 172.3 L 402.2 219.1 L 356.7 218.3 L 357.3 180.8 Z"/>
+<path data-fips="20035" data-name="Cowley" d="M 419.4 294.3 L 471.8 294.6 L 471.8 313.3 L 471.6 345.9 L 419.3 345.4 Z"/>
+<path data-fips="20011" data-name="Bourbon" d="M 591.7 266.9 L 592.2 234.1 L 630.7 233.7 L 631.0 272.8 L 591.8 273.1 Z"/>
+<path data-fips="20015" data-name="Butler" d="M 420.0 247.3 L 420.2 228.6 L 472.5 229.1 L 471.8 294.6 L 419.4 294.3 Z"/>
+</svg>

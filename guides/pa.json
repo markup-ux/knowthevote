@@ -1,0 +1,419 @@
+{
+  "code": "pa",
+  "ballotSource": "https://www.cumberlandcountypa.gov/DocumentCenter/View/55560/Official-Candidate-Listing",
+  "where": {
+    "url": "https://www.pa.gov/services/vote/find-your-local-polling-place",
+    "label": "Commonwealth of Pennsylvania"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The Pennsylvania Constitution vests the supreme executive power in the governor and says a lieutenant governor is chosen jointly with the governor by one vote for both offices."
+    }
+  },
+  "people": {
+    "stacy garrity": {
+      "role": "Pennsylvania treasurer and retired U.S. Army Reserve colonel",
+      "bio": "Stacy Garrity's campaign says she is the commonwealth's treasurer, a retired Army Reserve colonel who deployed three times, and a former business executive. She is running with Jason Richey and says she wants to be the next governor.",
+      "issues": [
+        "Her Turn Around PA plan says she would lift a ban on new drilling sites and call a special session to speed energy permits, pipelines, and power plants.",
+        "The same plan says she would make daily costs more affordable, reduce property taxes for families and seniors, and restore fairness and transparency in state government.",
+        "She says she would roll back costly mandates and pause or reform renewable-energy and efficiency mandates so the state can produce more energy."
+      ],
+      "site": "https://garrityforpa.com/",
+      "siteLabel": "garrityforpa.com",
+      "donate": "",
+      "source": "https://garrityforpa.com/turnaroundpa/"
+    },
+    "josh shapiro": {
+      "role": "Governor of Pennsylvania",
+      "bio": "The campaign site presents Josh Shapiro as the governor and Austin Davis as lieutenant governor. It asks voters to support Shapiro for governor.",
+      "issues": [],
+      "site": "https://joshshapiro.org/",
+      "siteLabel": "joshshapiro.org",
+      "donate": "",
+      "source": "https://joshshapiro.org/"
+    },
+    "ken krawchuk": {
+      "role": "Information technology entrepreneur and Libertarian candidate for governor",
+      "bio": "Ken Krawchuk's campaign says he has been a registered Libertarian since 1993 and is running for governor with John Thomas for lieutenant governor. The site says he was born in Philadelphia's Feltonville section and has lived in Abington for decades.",
+      "issues": [
+        "He says he would veto tax increases, use the line-item veto, phase out the personal income tax, and abolish property taxes.",
+        "He says he would end the state's monopoly on schooling and privatize public schools because too many students are behind in reading and math.",
+        "His listed program also says he would eliminate parole for violent criminals, pardon nonviolent drug offenders, and decriminalize marijuana."
+      ],
+      "site": "https://www.kenk4pa.com/",
+      "siteLabel": "kenk4pa.com",
+      "donate": "https://www.kenk4pa.com/donate/",
+      "source": "https://www.kenk4pa.com/issues/"
+    },
+    "brian fitzpatrick": {
+      "role": "U.S. representative for Pennsylvania's 1st District.",
+      "bio": "His campaign says he spent nearly 15 years as an FBI supervisory special agent focused on political corruption before coming to Congress. It says he chairs the Problem Solvers Caucus and calls himself the most bipartisan member of the House for five years running.",
+      "issues": [
+        "He says that on his first day in office he proposed congressional term limits, no pay if Congress misses a budget, and a requirement to balance the budget.",
+        "He highlights a law he wrote to give law enforcement more resources to stop drugs at the border.",
+        "He says he wants people with serious terminal illnesses to have access to treatments that might save their lives, and that institutions should serve the public rather than career officials."
+      ],
+      "site": "https://www.brianfitzpatrick.com/",
+      "siteLabel": "brianfitzpatrick.com",
+      "donate": "https://secure.winred.com/brian-fitzpatrick-for-congress/donate",
+      "source": "https://www.brianfitzpatrick.com/bio/"
+    },
+    "brendan boyle": {
+      "role": "U.S. representative for Pennsylvania's 2nd District.",
+      "bio": "His campaign says he grew up in a Philadelphia rowhouse, was the first in his family to attend college, and later earned a public-policy degree from Harvard. It says his father was a SEPTA custodian who emigrated from Ireland and that Boyle was elected to the House in 2014.",
+      "issues": [
+        "He says his work on the Budget Committee is aimed at a federal budget that expands opportunity.",
+        "On Ways and Means, he says he wants tax and social policy that matches the priorities of working families.",
+        "He says the Blue Collar Caucus he co-founded in 2016 looks at wage stagnation, job insecurity, trade, offshoring, and careers in manufacturing and the building trades."
+      ],
+      "site": "https://voteboyle.com/",
+      "siteLabel": "voteboyle.com",
+      "source": "https://voteboyle.com/about-brendan/"
+    },
+    "summer lee": {
+      "role": "U.S. representative for Pennsylvania's 12th District.",
+      "bio": "Her campaign says she grew up in the Mon Valley, worked as an organizer and lawyer, and became the first Black woman from western Pennsylvania in the state House and then in Congress. It says she co-founded a grassroots group that helped elect progressives in the region.",
+      "issues": [
+        "She supports automatic voter registration, early and mail voting, and an end to the Citizens United ruling, and she says she will not trade individual stocks while in office.",
+        "She supports Medicare for All, a higher minimum wage, and the PRO Act so workers can form unions.",
+        "She says a shift to clean energy should come with union jobs and training, and that employers should not be allowed to pay disabled workers a subminimum wage."
+      ],
+      "site": "https://summerforpa.com/",
+      "siteLabel": "summerforpa.com",
+      "donate": "https://secure.actblue.com/donate/sl-website",
+      "source": "https://summerforpa.com/issues/"
+    },
+    "chris deluzio": {
+      "role": "U.S. representative for Pennsylvania's 17th District.",
+      "bio": "His campaign says he is a Thornburg native, Naval Academy graduate, and Iraq war veteran who later worked as a voting-rights lawyer at the Brennan Center and at the University of Pittsburgh. It says he has represented western Pennsylvania since 2022 and lives in Allegheny County with his wife and four children.",
+      "issues": [
+        "He says he is fighting powerful interests he argues have taken the American Dream away from working people.",
+        "Before Congress he says he worked on voting rights and election security, and he helped University of Pittsburgh faculty win a union with the United Steelworkers."
+      ],
+      "site": "https://chrisforpa.com/",
+      "siteLabel": "chrisforpa.com",
+      "donate": "https://secure.actblue.com/donate/chris-deluzio-site",
+      "source": "https://chrisforpa.com/meet-chris/"
+    },
+    "bob harvie": {
+      "role": "Former teacher and Bucks County commissioner running for Congress in Pennsylvania's 1st District.",
+      "bio": "Bob Harvie taught for 26 years before serving on the Bucks County Board of Commissioners. His campaign says he is running because working families are paying the price while Washington is in chaos.",
+      "issues": [
+        "He says families deserve a fair shot to earn a living, afford a home, raise children, and retire with dignity.",
+        "He describes the race as a chance to send someone to Congress who will fight for a better deal for working people."
+      ],
+      "site": "https://bobharvieforcongress.com/",
+      "siteLabel": "bobharvieforcongress.com",
+      "donate": "https://secure.actblue.com/donate/pa01website",
+      "source": "https://bobharvieforcongress.com/priorities/"
+    },
+    "jessica arriaga": {
+      "role": "Healthcare worker running for Congress in Pennsylvania's 2nd District.",
+      "bio": "Jessica Arriaga is a mother from North Philadelphia who has worked in operating rooms for more than 20 years. She says she is running to put results for the city ahead of party politics.",
+      "issues": [
+        "She says public safety, the cost of living, and career and technical education are the issues she hears about most.",
+        "She argues health care should put patients first and that the city needs practical results rather than partisan fights."
+      ],
+      "site": "https://jessforcongress.com/",
+      "siteLabel": "jessforcongress.com",
+      "donate": "https://secure.anedot.com/jessica-arriaga-for-congress/donate",
+      "source": "https://jessforcongress.com/results-for-philadelphia/"
+    },
+    "chris rabb": {
+      "role": "State representative running for Congress in Pennsylvania's 3rd District.",
+      "bio": "Chris Rabb is a five-term Pennsylvania state representative from Philadelphia. His campaign says he is running to put working people ahead of corporate power.",
+      "issues": [
+        "His platform calls for housing people can afford, a living wage, and Medicare for All.",
+        "He also says he will fight for food security, clean air and water, and a foreign policy that prioritizes peace."
+      ],
+      "site": "https://www.chrisrabb.com/",
+      "siteLabel": "chrisrabb.com",
+      "donate": "https://secure.actblue.com/donate/rabbwebsite",
+      "source": "https://www.chrisrabb.com/platform"
+    },
+    "dennis mahoney": {
+      "role": "Candidate running for Congress in Pennsylvania's 3rd District.",
+      "bio": "Dennis Mahoney's campaign says he is running to reward work and restore stability for families. He says public policy should connect housing, transit, child care, health care, food, education, and jobs.",
+      "issues": [
+        "He argues government should make work pay and should help families stay stable.",
+        "He says housing, transportation, child care, health care, food, education, and employment have to be treated as one system rather than separate programs."
+      ],
+      "site": "https://mahoneyforcongress.com/",
+      "siteLabel": "mahoneyforcongress.com",
+      "source": "https://mahoneyforcongress.com/about"
+    },
+    "madeleine dean": {
+      "role": "U.S. representative for Pennsylvania's 4th District.",
+      "bio": "Madeleine Dean is a mother, grandmother, professor, and lawyer from Glenside who was first elected to Congress in 2018. Her campaign says she focuses on education, health care, gun violence, clean water, ethical government, and infrastructure.",
+      "issues": [
+        "She says she will keep working to expand access to health care and to reduce gun violence.",
+        "She also lists clean water and the climate, ethical governance, and infrastructure among her priorities."
+      ],
+      "site": "https://mad4pa.com/",
+      "siteLabel": "mad4pa.com",
+      "donate": "https://secure.actblue.com/donate/mad-4-pa-pac-1?refcode=web-signup",
+      "source": "https://mad4pa.com/about/"
+    },
+    "aurora stuski": {
+      "role": "Business owner running for Congress in Pennsylvania's 4th District.",
+      "bio": "Aurora Stuski says she has lived in West Norriton for 35 years, owns a business, and is the mother of three. She describes herself as a conservative running to lower costs and support law enforcement.",
+      "issues": [
+        "She says she will work to lower costs for families and make it easier for small businesses to operate.",
+        "She also says she will back law enforcement, secure the border, and push for more transparent government."
+      ],
+      "site": "https://aurora4pa.com/",
+      "siteLabel": "aurora4pa.com",
+      "donate": "https://secure.anedot.com/friends-of-aurora-stuski/6619508b-f6f7-474e-b87c-a159b564dac8",
+      "source": "https://aurora4pa.com/meet-aurora/"
+    },
+    "nick manganaro": {
+      "role": "Finance professional running for Congress in Pennsylvania's 5th District.",
+      "bio": "Nick Manganaro says most of his finance career was in research, product development, and risk management, including consulting for multinational financial firms. He describes himself as data-driven and says the district deserves better representation.",
+      "issues": [
+        "He says he would work across the aisle on a path to balance the budget, oppose new entitlement expansions that widen the deficit, and demand oversight of federal spending.",
+        "He also calls for an all-of-the-above energy policy, less regulation, and equal treatment under the law, free association, and free speech."
+      ],
+      "site": "https://manganaro4congress.net/",
+      "siteLabel": "manganaro4congress.net",
+      "source": "https://manganaro4congress.net/policies/"
+    },
+    "marty young": {
+      "role": "Army National Guard chaplain and restructuring executive running for Congress in Pennsylvania's 6th District.",
+      "bio": "Marty Young is a fourth-generation Pennsylvanian and West Point graduate who served as an infantry officer and now as a lieutenant colonel and Army National Guard chaplain. He says he has spent 25 years stabilizing companies in defense, aerospace, manufacturing, and technology.",
+      "issues": [
+        "His platform focuses on making family life affordable, fixing health care, protecting public safety, strengthening energy security, and supporting the military.",
+        "He says his Young Americans Plan would extend real coverage to children up to age 23 and to expectant mothers, and that he wants to create jobs, secure the border, and cut waste."
+      ],
+      "site": "https://www.voteyoung.com/",
+      "siteLabel": "voteyoung.com",
+      "source": "https://www.voteyoung.com/priorities"
+    },
+    "chrissy houlahan": {
+      "role": "U.S. representative for Pennsylvania's 6th District.",
+      "bio": "Chrissy Houlahan is a third-generation veteran, an Air Force Reserve captain, and a former AND1 executive and Teach for America corps member who was the first woman elected in Pennsylvania's 6th District. She serves on Armed Services and Intelligence and chairs the BIOTech Caucus.",
+      "issues": [
+        "She says her work in Congress is aimed at the cost of living for families in Chester County and the district.",
+        "Through the BIOTech Caucus she says she is working to grow jobs tied to biotechnology."
+      ],
+      "site": "https://chrissyhoulahanforcongress.com/",
+      "siteLabel": "chrissyhoulahanforcongress.com",
+      "donate": "https://secure.actblue.com/donate/chrissy-houlahan-for-congress-1?refcode=website_splash_page&expresslane=true",
+      "source": "https://chrissyhoulahanforcongress.com/issues/"
+    },
+    "ryan mackenzie": {
+      "role": "U.S. representative for Pennsylvania's 7th District.",
+      "bio": "Ryan Mackenzie joined Congress in 2025 after serving in the Pennsylvania House and says he is a lifelong resident of the district. He serves on Education and the Workforce, Foreign Affairs, and Homeland Security, and chairs the Workforce Protections Subcommittee.",
+      "issues": [
+        "His campaign says he is focused on seniors and Medicare, lowering costs, and banning members of Congress from trading stocks.",
+        "He says his committee work is aimed at protecting workers and the district's interests on education, foreign affairs, and homeland security."
+      ],
+      "site": "https://www.mackenzieforcongress.com/",
+      "siteLabel": "mackenzieforcongress.com",
+      "donate": "https://secure.winred.com/mackenzie-for-congress/give-today",
+      "source": "https://www.mackenzieforcongress.com/issues"
+    },
+    "bob brooks": {
+      "role": "Union leader running for Congress in Pennsylvania's 7th District.",
+      "bio": "Bob Brooks is a union president who says he has spent his career fighting for workers. He says he is running so Washington works for working people.",
+      "issues": [
+        "He says that as a union president he pressed politicians for higher wages, better health care, and stronger benefits.",
+        "His issues page lists affordability, health care, a higher minimum wage, stronger unions, housing costs, and ending corruption."
+      ],
+      "site": "https://www.brooksforcongress.com/",
+      "siteLabel": "brooksforcongress.com",
+      "source": "https://www.brooksforcongress.com/on-the-issues/"
+    },
+    "rob bresnahan jr.": {
+      "role": "U.S. representative for Pennsylvania's 8th District.",
+      "bio": "Rob Bresnahan Jr. is a fifth-generation northeastern Pennsylvanian who took over his grandfather's union electrical company at 19 and was elected to Congress in 2024. He serves on Transportation and Infrastructure, Small Business, and Agriculture.",
+      "issues": [
+        "He says he supports securing the border, stopping wasteful spending, cutting taxes, and backing law enforcement against fentanyl.",
+        "He says he will protect Social Security and Medicare without raising the retirement age or cutting benefits, and that he wants more jobs in the region."
+      ],
+      "site": "https://robforpa.com/",
+      "siteLabel": "robforpa.com",
+      "donate": "https://secure.winred.com/rob-for-pa/donate",
+      "source": "https://robforpa.com/about/"
+    },
+    "dan meuser": {
+      "role": "U.S. representative for Pennsylvania's 9th District.",
+      "bio": "Dan Meuser describes himself as a job creator who was first elected in 2018 and is serving a fourth term. He sits on Financial Services, where he chairs an oversight subcommittee, and on Small Business.",
+      "issues": [
+        "He says his priorities are an America First agenda, border security, the economy, and energy.",
+        "He says his committee work is aimed at oversight of the financial system and support for small business."
+      ],
+      "site": "https://www.meuserforcongress.com/",
+      "siteLabel": "meuserforcongress.com",
+      "source": "https://www.meuserforcongress.com/about"
+    },
+    "rachel wallace": {
+      "role": "Former federal official running for Congress in Pennsylvania's 9th District.",
+      "bio": "Rachel Wallace grew up in Pottsville and worked for a member of Congress, the State Department, the Senate, and as chief of staff at the Office of Management and Budget before moving home to Schuylkill County. She is the daughter of a pastor and a nurse and says her family has lived in Berks and Schuylkill counties for ten generations.",
+      "issues": [
+        "She says she is focused on fixing health care, lowering the cost of living, and keeping promises to veterans and farmers.",
+        "Her priorities page also lists raising wages and rooting out government corruption and fraud."
+      ],
+      "site": "https://www.wallaceforcongress.com/",
+      "siteLabel": "wallaceforcongress.com",
+      "source": "https://www.wallaceforcongress.com/about"
+    },
+    "scott perry": {
+      "role": "U.S. representative for Pennsylvania's 10th District.",
+      "bio": "Scott Perry's campaign describes him as a soldier and businessman who has served in Congress since 2013 and has represented the 10th District since 2018. He serves on Transportation and Infrastructure, Foreign Affairs, and Oversight and was chair of the Freedom Caucus.",
+      "issues": [],
+      "site": "https://patriotsforperry.com/",
+      "siteLabel": "patriotsforperry.com",
+      "donate": "https://secure.winred.com/ScottPerry/donate",
+      "source": "https://patriotsforperry.com/"
+    },
+    "janelle stelson": {
+      "role": "Journalist running for Congress in Pennsylvania's 10th District.",
+      "bio": "Janelle Stelson says she spent more than 30 years telling stories in central Pennsylvania. She is running on term limits that would apply to herself, a ban on congressional stock trading, and a pledge to vote against pay raises for members.",
+      "issues": [
+        "She says she wants to lower utility, health care, and housing costs and support small businesses and farms.",
+        "She says she will protect Social Security, Medicare, and Medicaid and defend abortion rights."
+      ],
+      "site": "https://janellestelson.com/",
+      "siteLabel": "janellestelson.com",
+      "donate": "https://secure.actblue.com/donate/stelson-web",
+      "source": "https://janellestelson.com/"
+    },
+    "lloyd smucker": {
+      "role": "U.S. representative for Pennsylvania's 11th District.",
+      "bio": "Lloyd Smucker owned the Smucker Company for 25 years, served in the state Senate as education committee chair, and was elected to Congress in 2016. His campaign highlights taxes, retirement, health care costs, energy, small business, and family farms.",
+      "issues": [
+        "He says he wants to cut taxes, protect retirement, and spend taxpayer dollars more carefully.",
+        "He also lists lower health care costs, American energy, and support for small businesses and family farms."
+      ],
+      "site": "https://www.electsmucker.com/",
+      "siteLabel": "electsmucker.com",
+      "source": "https://www.electsmucker.com/issues"
+    },
+    "nancy mannion": {
+      "role": "Nurse and health care leader running for Congress in Pennsylvania's 11th District.",
+      "bio": "Nancy Mannion is a former emergency nurse and international health care leader who says she has spent more than 40 years caring for people in crisis. She says she will bring that focus on integrity and accountability to Congress.",
+      "issues": [
+        "She says her first priority is affordable, high-quality health care, including removing cost barriers to treatment and medicine.",
+        "She also calls for stronger public education and workforce training, help for Lancaster and York farmers, and federal support so local farmers can supply fresh food to area pantries."
+      ],
+      "site": "https://www.nancymannion.com/",
+      "siteLabel": "nancymannion.com",
+      "source": "https://www.nancymannion.com/Platform/"
+    },
+    "james hayes": {
+      "role": "Economist running for Congress in Pennsylvania's 12th District.",
+      "bio": "James Hayes is the son of a steelworker, an economist, and a former Federal Reserve Bank of Richmond employee who has lived in the Pittsburgh area since 2005. He says he is running for safer communities, stronger growth, and practical leadership.",
+      "issues": [
+        "He says he wants less regulation, a return of good-paying union jobs, support for law enforcement, and accountability for repeat violent offenders.",
+        "He also supports school choice, an all-of-the-above energy strategy, standing with allies including Israel, and reining in federal spending."
+      ],
+      "site": "https://jameshayesforpa.com/",
+      "siteLabel": "jameshayesforpa.com",
+      "source": "https://jameshayesforpa.com/policy-vision"
+    },
+    "john joyce": {
+      "role": "U.S. representative for Pennsylvania's 13th District.",
+      "bio": "John Joyce is a physician who has practiced with his wife in Blair County and has served in Congress since 2019. His campaign says he focuses on the economy, affordable health care, and constitutional rights.",
+      "issues": [
+        "He says he is working to strengthen the economy and make health care more affordable.",
+        "He also says he will defend constitutional rights."
+      ],
+      "site": "https://www.johnjoyceforcongress.com/",
+      "siteLabel": "johnjoyceforcongress.com",
+      "source": "https://www.johnjoyceforcongress.com/bio"
+    },
+    "beth farnham": {
+      "role": "Stay-at-home parent running for Congress in Pennsylvania's 13th District.",
+      "bio": "Beth Farnham says she is a stay-at-home parent running again for the 13th District, with the support of her husband, Rob. She says she wants a representative who is accessible across the district.",
+      "issues": [
+        "She says she would defend reproductive freedom, public education, gun safety, universal health care, and immigration reform.",
+        "She also lists affordability and the environment, and says climate change requires action to protect agriculture and communities."
+      ],
+      "site": "https://bethfarnhamforcongress.com/",
+      "siteLabel": "bethfarnhamforcongress.com",
+      "source": "https://bethfarnhamforcongress.com/priorities/"
+    },
+    "guy reschenthaler": {
+      "role": "U.S. representative for Pennsylvania's 14th District.",
+      "bio": "Guy Reschenthaler's campaign describes him as a son of western Pennsylvania who served in uniform and as a prosecutor and judge. He says he is running to keep the district's voice in Congress.",
+      "issues": [
+        "His issues page says national security is personal because he prosecuted terrorists in Iraq, and that he supports a strong defense.",
+        "He says cutting regulation in Harrisburg and Washington is how the region creates jobs, and he lists immigration, security, jobs, and taxes among his priorities."
+      ],
+      "site": "https://guyforpa.com/",
+      "siteLabel": "guyforpa.com",
+      "donate": "https://secure.winred.com/GuyReschenthaler/donate",
+      "source": "https://guyforpa.com/issues/"
+    },
+    "alan bradstock": {
+      "role": "Retired FBI agent and Army veteran running for Congress in Pennsylvania's 14th District.",
+      "bio": "Alan Bradstock is a Desert Storm combat veteran and retired FBI agent who says he is rooted in western Pennsylvania. He says he is running to restore integrity in Washington and stand up for working families.",
+      "issues": [
+        "He calls for higher wages, support for small businesses, and an economy that is not limited to the wealthy and well-connected.",
+        "He also says health care should be affordable and accessible and that medical debt should end, and that no one should be above the law."
+      ],
+      "site": "https://www.bradstockforcongress.com/",
+      "siteLabel": "bradstockforcongress.com",
+      "source": "https://www.bradstockforcongress.com/issues"
+    },
+    "glenn thompson": {
+      "role": "U.S. representative for Pennsylvania's 15th District.",
+      "bio": "Glenn Thompson chairs the House Agriculture Committee and is a senior member of Education and the Workforce. His campaign says he advocates for the people who produce the nation's food, fiber, and energy and for education from early learning through retirement.",
+      "issues": [
+        "He says his Agriculture Committee work is about supporting the people who produce food, fiber, and energy.",
+        "On Education and the Workforce he says he works on education from early learning through retirement."
+      ],
+      "site": "https://friendsofglennthompson.com/",
+      "siteLabel": "friendsofglennthompson.com",
+      "donate": "https://secure.winred.com/GlennThompson/donate",
+      "source": "https://friendsofglennthompson.com/"
+    },
+    "ray bilger": {
+      "role": "Air Force and intelligence veteran running for Congress in Pennsylvania's 15th District.",
+      "bio": "Ray Bilger grew up in Pleasant Gap, served as an Air Force linguist in Desert Shield and Desert Storm, and spent 35 years in security and intelligence, including as an NSA technical director for cyber analysis. He says he is running to bring jobs and hope back to rural central Pennsylvania.",
+      "issues": [
+        "He says a strong economy should be judged by whether a paycheck covers groceries, a family can afford a home, and young people can find work without leaving, and he wants more local hiring in manufacturing, health care, cybersecurity, and related fields.",
+        "He says no one should have to choose between a doctor and a mortgage, and he wants lower drug costs, protection for Medicare and Medicaid, and stronger rural hospitals."
+      ],
+      "site": "https://bilgerforcongress.com/",
+      "siteLabel": "bilgerforcongress.com",
+      "source": "https://bilgerforcongress.com/priorities/"
+    },
+    "mike kelly": {
+      "role": "U.S. representative for Pennsylvania's 16th District.",
+      "bio": "Mike Kelly was born in Pittsburgh, raised in Butler, and has run his family's auto dealership. He served on Butler city council and the school board before his election to Congress in 2010 and sits on Ways and Means.",
+      "issues": [
+        "He says he favors fiscal responsibility, smaller government, and pro-growth tax reform.",
+        "His campaign says businesses, not government, create jobs, and lists the economy, tax reform, energy, veterans, and education among his issues."
+      ],
+      "site": "https://www.mikekellyforcongress.com/",
+      "siteLabel": "mikekellyforcongress.com",
+      "source": "https://www.mikekellyforcongress.com/biography/"
+    },
+    "justin wagner": {
+      "role": "Veteran and engineer running for Congress in Pennsylvania's 16th District.",
+      "bio": "Justin Wagner was born and raised in Greenville and Transfer and says his family has lived there for eight generations. He describes himself as a veteran, engineer, and pro-union candidate running for safer and more self-reliant communities.",
+      "issues": [
+        "He says housing, health care, power, and food costs are pushing working families into poverty, and that he would fight for affordability, local veterans, and labor.",
+        "He also says every school needs the tools to prepare the next generation, the justice system should be fair, and the environment should stay safe for future children."
+      ],
+      "site": "https://www.justinwagnerforcongress.com/",
+      "siteLabel": "justinwagnerforcongress.com",
+      "source": "https://www.justinwagnerforcongress.com/about"
+    },
+    "tony guy": {
+      "role": "Beaver County sheriff running for Congress in Pennsylvania's 17th District.",
+      "bio": "Tony Guy is a lifelong Beaver County resident who served 26 years with the Pennsylvania State Police and has been sheriff since 2016. He says he is not a career politician and is running to take local values to Washington.",
+      "issues": [
+        "He says he will back law enforcement, fund and finish a border wall, deport people he calls criminal immigrants, and stop fentanyl trafficking.",
+        "He also wants pro-growth policies for small business, manufacturing, natural gas, and agriculture, and less federal regulation and spending."
+      ],
+      "site": "https://tonyguyforcongress.com/",
+      "siteLabel": "tonyguyforcongress.com",
+      "source": "https://tonyguyforcongress.com/issues/"
+    }
+  },
+  "measures": {}
+}

@@ -1,0 +1,91 @@
+{
+  "code": "hi",
+  "ballotSource": "",
+  "where": {
+    "url": "https://elections.hawaii.gov/voter-service-centers-and-places-of-deposit/",
+    "label": "Voter service centers and drop boxes"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The Hawaii Constitution makes the governor responsible for the faithful execution of the laws and commander in chief of the armed forces of the state."
+    }
+  },
+  "people": {
+    "gary cordery": {
+      "role": "Candidate for governor of Hawaii.",
+      "bio": "His priorities page says cost-of-living relief should let families stay in Hawaii, and that trust in leadership starts with transparency. He also lays out housing, Native Hawaiian, and education plans on that page.",
+      "issues": [
+        "He says he would eliminate the general excise tax on food and medicine, freeze property taxes for kupuna on a primary home at retirement, and seek tax exemptions for Native Hawaiian homeowners.",
+        "He says a housing plan would produce 15,000 fee-simple homes priced between $400,000 and $600,000 for working families, teachers, nurses, and kupuna, with faster permitting and an end to no-bid contracts.",
+        "He says he would open a government transparency office, require annual audits of public-private partnerships and departments, and send corruption cases to the attorney general."
+      ],
+      "site": "https://www.garycorderyforgovernor.com/",
+      "siteLabel": "garycorderyforgovernor.com",
+      "donate": "https://www.garycorderyforgovernor.com/donate",
+      "source": "https://www.garycorderyforgovernor.com/key-issues-priorities"
+    },
+    "josh green": {
+      "role": "Governor of Hawaii and a physician.",
+      "bio": "He says he has cared for Hawaii families as a local physician and emergency doctor, then as a legislator, lieutenant governor, and governor. He and Jaime Ushiroda, whom he met in 2005, have two children, Maia and Sam.",
+      "issues": [
+        "He says that since 2022 he has worked to lower the cost of living.",
+        "He says he is working to build affordable housing.",
+        "He says he is working to reduce homelessness statewide."
+      ],
+      "site": "https://joshgreenforhawaii.com/",
+      "siteLabel": "joshgreenforhawaii.com",
+      "donate": "https://secure.actblue.com/donate/josh-green-for-hawaii-1",
+      "source": "https://joshgreenforhawaii.com/about/"
+    },
+    "adriel lam": {
+      "role": "Retired Army officer running for Congress",
+      "bio": "The campaign says Adriel Lam is a fourth-generation Kaneohe resident who came home after nearly 24 years in the Army. LAM4ALOHA says it is the authorized campaign to elect him in Hawaii's 1st District.",
+      "issues": [
+        "He says Hawaii needs a representative who will speak for shared values and use the federal government's resources for the islands.",
+        "He describes Hawaii as the strategic center of the Pacific, a military point, an economic path, and a cultural link between continents."
+      ],
+      "site": "https://lam4aloha.com/",
+      "siteLabel": "lam4aloha.com",
+      "source": "https://lam4aloha.com/about/"
+    },
+    "ed case": {
+      "role": "U.S. representative for Hawaii's 1st District",
+      "bio": "The campaign says Ed Case is the U.S. representative for Hawaii's 1st District, covering Honolulu from Makapu'u to Mililani and Kapolei, and that he is asking voters to return him to Congress. He says another term would move him into the top quarter of House seniority and keep him on Appropriations.",
+      "issues": [
+        "He says the country needs experienced leadership to defend democracy and deliver practical solutions.",
+        "He says he will keep speaking honestly, listening, and representing all of Hawaii, pointing to his work through COVID-19, Red Hill, and the Maui wildfires."
+      ],
+      "site": "https://edcase.com/",
+      "siteLabel": "Ed Case for Congress",
+      "donate": "https://www.edcase.com/donate/",
+      "source": "https://edcase.com/"
+    },
+    "brenton awa": {
+      "role": "Hawaii Senate minority leader",
+      "bio": "The campaign says Brenton Awa is Hawaii's Senate minority leader, representing Kaneohe through the North Shore, and that he was first elected in 2022. He says he is running for the U.S. House so the 2nd District has more leverage in Washington.",
+      "issues": [
+        "He wants to limit corporate purchases of single-family homes and open suitable federal land for local workforce housing.",
+        "He says federal infrastructure money should be tied to housing for people who live and work in Hawaii, and he wants down-payment help for first-time local buyers.",
+        "He says he refuses gifts and has founded roadside food forests and other land-restoration projects."
+      ],
+      "site": "https://www.votebrentonawa.com/",
+      "siteLabel": "Hawaii's Home Team",
+      "source": "https://www.votebrentonawa.com/"
+    },
+    "jill tokuda": {
+      "role": "U.S. representative for Hawaii's 2nd District",
+      "bio": "The campaign says Jill Tokuda is a lifelong Kaneohe resident who represented Kaneohe and Kailua in the state Senate from 2006 to 2018, including as Ways and Means chair, and was first elected to Congress in 2022. She sits on Agriculture and Armed Services and co-chairs the Bipartisan Rural Health Caucus.",
+      "issues": [
+        "She says zip code and income should not decide the quality of care, and she wants rural hospitals, mobile clinics, telehealth, and Medicare for All.",
+        "She says she is fighting tariffs, wants the federal gas tax suspended, and wants childcare and the child tax credit expanded so families can stay in Hawaii.",
+        "She says getting sick should not push people into debt."
+      ],
+      "site": "https://www.tokudaforhawaii.com/",
+      "siteLabel": "Jill Tokuda",
+      "donate": "https://secure.actblue.com/donate/tokudawebsite",
+      "source": "https://www.tokudaforhawaii.com/issues/"
+    }
+  },
+  "measures": {}
+}

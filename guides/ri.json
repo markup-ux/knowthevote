@@ -1,0 +1,204 @@
+{
+  "code": "ri",
+  "ballotSource": "https://vote.sos.ri.gov/Candidates/CandidateSearchSummary?%3BElection=18239&OfficeType=549",
+  "where": {
+    "url": "https://vote.sos.ri.gov/Home/PollingPlaces",
+    "label": "Rhode Island Department of State"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The Rhode Island Constitution vests the chief executive power in a governor elected by the people and limits a person to two consecutive full terms in that office."
+    },
+    "Lt. Governor": {
+      "job": "The lieutenant governor is next in line if the governor cannot finish the term. Any other duties are set by state law. The Rhode Island Constitution says the lieutenant governor fills a vacant governor's office, and that since 2003 the Senate elects its own president."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    },
+    "Attorney General": {
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. The Rhode Island Constitution elects the attorney general for four years and limits a person to two consecutive full terms."
+    },
+    "Secretary Of State": {
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. The Rhode Island Constitution has the secretary of state administer the oath to the governor and to legislators, and it limits a person to two consecutive full terms in that office."
+    }
+  },
+  "people": {
+    "aaron guckian": {
+      "role": "Republican candidate for governor",
+      "bio": "Aaron Guckian's campaign describes him as a lifelong Rhode Islander with roots in East Greenwich and experience in government, banking, nonprofits, education, and health care. He says he is running to make the state more affordable and more open to business.",
+      "issues": [
+        "He says he would expand housing, reduce construction barriers, and lower utility and health-care costs.",
+        "He says the campaign would invest in public schools, teacher support, and vocational and technical programs tied to local employers.",
+        "He says he would expand training and incentives so the state has more primary-care doctors and dentists, and he calls for targeted tax relief and less wasteful spending."
+      ],
+      "site": "https://www.aaronforri.com/",
+      "siteLabel": "aaronforri.com",
+      "donate": "",
+      "source": "https://www.aaronforri.com/"
+    },
+    "helena foulkes": {
+      "role": "Former CVS retail president running for governor",
+      "bio": "Helena Foulkes's campaign says she is a lifelong Rhode Islander who spent 25 years at CVS and became president of its retail division. It says that as retail president she worked to lower prescription prices and took tobacco off the shelves.",
+      "issues": [
+        "She says she would create good-paying jobs and make Rhode Island more affordable, and she criticizes the state's handling of housing and the Washington Bridge.",
+        "She says she would push back against federal funding cuts aimed at states like Rhode Island.",
+        "Her plans page lists health care, jobs, child care and transportation, career and technical education, and a housing program called Rhode Home."
+      ],
+      "site": "https://helenafoulkes.com/",
+      "siteLabel": "helenafoulkes.com",
+      "donate": "",
+      "source": "https://helenafoulkes.com/"
+    },
+    "kenneth block": {
+      "role": "Independent candidate for governor",
+      "bio": "Kenneth Block is running for governor as an independent. His site says he wants the state government held accountable for waste, failed projects, and rising taxes.",
+      "issues": [
+        "He says the state budget is about $15 billion and that residents are not getting services that match what they pay.",
+        "He points to the Washington Bridge and large technology projects as examples of agencies repeating mistakes.",
+        "He says his focus is accountability, fixing broken processes, and results for residents."
+      ],
+      "site": "https://www.blockforgovernor.com/",
+      "siteLabel": "blockforgovernor.com",
+      "donate": "",
+      "source": "https://www.blockforgovernor.com/"
+    },
+    "jasjit gotra": {
+      "role": "Independent candidate for governor",
+      "bio": "Jasjit Gotra, who goes by Jay, is running as an independent. His site says he founded companies, including Alliance Security, and that he would treat the state budget like a business profit-and-loss statement.",
+      "issues": [
+        "He says he would cut waste, fully fund teacher and firefighter pensions, and make the state easier for businesses.",
+        "He says he would end the state tax on Social Security within two years.",
+        "His listed plans include cutting energy costs, teaching artificial intelligence in every high school by 2028, capping out-of-pocket health costs, and building 20,000 housing units in four years."
+      ],
+      "site": "https://governorgotra.com/",
+      "siteLabel": "governorgotra.com",
+      "donate": "https://governorgotra.com/contribute",
+      "source": "https://governorgotra.com/"
+    },
+    "c. reynolds": {
+      "role": "Independent candidate for governor",
+      "bio": "The site for C. Reynolds calls the campaign Reynolds for Governor and describes an independent voice from Providence. Its slogan is change you can put in your pocket.",
+      "issues": [
+        "The site contrasts Rhode Island's state budget with New Hampshire's and says Rhode Islanders pay far more per person for government.",
+        "It frames the campaign as returning money to residents under the banner of life, liberty, and the pursuit of happiness."
+      ],
+      "site": "https://cdreynolds.com/",
+      "siteLabel": "cdreynolds.com",
+      "donate": "",
+      "source": "https://cdreynolds.com/"
+    },
+    "john loughlin ii": {
+      "role": "Republican candidate for lieutenant governor",
+      "bio": "John Loughlin's site says he was raised in Rhode Island and educated in the Portsmouth and Lincoln public schools. It says he attended Rhode Island College and the University of Rhode Island, where he was a student firefighter, and later earned a bachelor of science degree from Excelsior University.",
+      "issues": [],
+      "site": "https://www.loughlin4ri.com/",
+      "siteLabel": "loughlin4ri.com",
+      "donate": "",
+      "source": "https://www.loughlin4ri.com/"
+    },
+    "sabina matos": {
+      "role": "Lieutenant governor",
+      "bio": "Sabina Matos's campaign says she is lieutenant governor and grew up working in Providence. She says her focus is making the state a place where families can get ahead.",
+      "issues": [
+        "She says she is pushing legislation to stop grocery price gouging and to bring more grocery stores into neighborhoods that need them.",
+        "She says she has fought for affordable housing since her time on the Providence City Council.",
+        "She says she will defend reproductive freedom and the right to vote, and that every Rhode Islander should feel safe at home."
+      ],
+      "site": "https://www.sabinamatos.com/",
+      "siteLabel": "sabinamatos.com",
+      "donate": "https://secure.actblue.com/donate/friends-of-sabina-matos-2",
+      "source": "https://www.sabinamatos.com/"
+    },
+    "raymond mckay": {
+      "role": "Republican candidate for U.S. Senate",
+      "bio": "Raymond McKay's campaign says he is a native Rhode Islander born in Providence who lives in Warwick. It says he is the father of four and has 13 grandchildren.",
+      "issues": [
+        "His Right Direction program says it would restore constitutional promises and the rights of life, liberty, and the pursuit of happiness.",
+        "He says he would apply common-sense answers so the country does not waste current and future opportunities.",
+        "He says the campaign is meant to secure freedom, values, and prosperity for Rhode Islanders and other Americans."
+      ],
+      "site": "https://www.mckayforussenate.com/",
+      "siteLabel": "mckayforussenate.com",
+      "donate": "https://secure.winred.com/mckay-for-senate/donate-today",
+      "source": "https://www.mckayforussenate.com/"
+    },
+    "jack reed": {
+      "role": "U.S. senator",
+      "bio": "Jack Reed's campaign says he grew up in Cranston, graduated from West Point, served as an Army Ranger, and commanded paratroopers in the 82nd Airborne. It says he serves on the Appropriations and Armed Services committees.",
+      "issues": [
+        "He says he voted against the Iraq War, opposes the Iran war, and is using his Senate vote to stop that war and other military operations he calls unnecessary.",
+        "He says he wants housing, education, health care, and environmental spending paid for by higher taxes on billionaires and changes to the tax system.",
+        "He says he has worked to bring federal money to Rhode Island for housing, coastal research, Coast Guard ships, Quonset jobs, the airport, roads, and transit."
+      ],
+      "site": "https://jackreed.com/",
+      "siteLabel": "jackreed.com",
+      "donate": "",
+      "source": "https://jackreed.com/meet-jack/"
+    },
+    "michael bahry": {
+      "role": "Independent candidate for U.S. Senate",
+      "bio": "Michael Bahry's campaign says he is a native Rhode Islander who has worked as a laborer, carpenter, construction executive, and business owner. It says he founded a Providence nonprofit in 2014 and later earned two master's degrees from Providence College.",
+      "issues": [
+        "His campaign videos argue that Congress needs term limits and regular turnover.",
+        "Other videos call the war in Gaza a tragedy and argue for peace rather than more bombing in Gaza and in the Russia-Ukraine war."
+      ],
+      "site": "https://bahryforsenate.com/",
+      "siteLabel": "bahryforsenate.com",
+      "donate": "",
+      "source": "https://bahryforsenate.com/"
+    },
+    "alan gordon": {
+      "role": "Republican candidate for attorney general",
+      "bio": "Alan Gordon's campaign says he earned a law degree from the University of Buckingham and has spent more than a decade on public-law and constitutional advocacy. He says a party label must not control the attorney general.",
+      "issues": [
+        "He says he would apply the same law and the same evidence standard to political allies and opponents, and seek an outside review when the office has a conflict.",
+        "He says he would defend religious liberty, conscience, lawful self-defense, and other constitutional rights.",
+        "He says he would focus prosecution on dangerous offenders while confronting trafficking, exploitation, and domestic violence."
+      ],
+      "site": "https://alangordonri.com/",
+      "siteLabel": "alangordonri.com",
+      "donate": "",
+      "source": "https://alangordonri.com/"
+    },
+    "kimberly ahern": {
+      "role": "Former prosecutor running for attorney general",
+      "bio": "Kimberly Ahern's campaign says she was a prosecutor, advised two governors and three attorneys general, and worked as a regulator. It says she lives in Providence.",
+      "issues": [
+        "She says that as attorney general she would put the criminal unit first and prosecute violent offenders, including murder, sexual assault, domestic violence, and trafficking.",
+        "She says she would expand diversion so people with mental illness or addiction can get treatment while communities stay safe."
+      ],
+      "site": "https://ahernforag.com/",
+      "siteLabel": "ahernforag.com",
+      "donate": "https://secure.actblue.com/donate/ahernforag",
+      "source": "https://ahernforag.com/issues/"
+    },
+    "gregg amore": {
+      "role": "Secretary of state running for reelection",
+      "bio": "Gregg Amore's campaign says he is running for reelection in 2026. He says the office has worked to expand ballot access and to modernize how people deal with government.",
+      "issues": [
+        "He says Rhode Islanders believe in fair elections, transparent government, and a democracy that works for everyone.",
+        "He says he will keep building on work to expand access to the ballot and to stand up for residents when those rights are threatened."
+      ],
+      "site": "https://greggforri.com/",
+      "siteLabel": "greggforri.com",
+      "donate": "https://secure.actblue.com/donate/amoreweb",
+      "source": "https://greggforri.com/"
+    },
+    "gabe amo": {
+      "role": "U.S. representative for Rhode Island's 1st District",
+      "bio": "The campaign says Gabe Amo grew up in Pawtucket as the son of Ghanaian and Liberian immigrants, worked in the White House and for Governor Gina Raimondo, and was elected to the 1st District in 2023.",
+      "issues": [
+        "A seniors plan on his campaign site says protecting Social Security and Medicare is a top priority, including work on the Social Security 2100 Act.",
+        "The plan says he would lower the Medicare eligibility age to 60 and defend Medicare drug-price negotiation and the insulin cap.",
+        "It also calls for more home and long-term care, fair pay for care workers, and more supportive housing for low-income seniors."
+      ],
+      "site": "https://www.gabeamo.com/",
+      "siteLabel": "Gabe Amo | Democrat for Congress",
+      "donate": "https://www.gabeamo.com/donate",
+      "source": "https://www.gabeamo.com/protecting-rhode-islands-seniors/"
+    }
+  },
+  "measures": {}
+}

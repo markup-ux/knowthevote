@@ -1,0 +1,277 @@
+{
+  "code": "ar",
+  "ballotSource": "",
+  "where": {
+    "url": "https://www.voterview.ar-nova.org/voterview",
+    "label": "Arkansas Secretary of State"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Lt. Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The lieutenant governor is next in line if the governor cannot finish the term. Any other duties are set by state law."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state."
+    }
+  },
+  "people": {
+    "sarah huckabee sanders": {
+      "role": "Governor of Arkansas",
+      "bio": "Sarah Huckabee Sanders is the 47th governor of Arkansas. She was inaugurated on January 10, 2023, and her campaign says she is the first woman to hold the office and the youngest governor in the country.",
+      "issues": [],
+      "site": "https://www.sarahforgovernor.com/",
+      "siteLabel": "sarahforgovernor.com",
+      "donate": "",
+      "source": "https://www.sarahforgovernor.com/"
+    },
+    "fred love": {
+      "role": "State legislator",
+      "bio": "Fred Love says his public work has included AmeriCorps, the Arkansas Food Bank, and Pulaski County, and that as a legislator he delivered a Southwest Little Rock health unit, an Arkansas Children's Hospital clinic, and the Forest of Hope Family Justice Center. He is running for governor saying government should help families eat, children learn, and communities stay safe.",
+      "issues": [
+        "He says he will build regional economic hubs, rebuild roads, water, sewer, and broadband, and expand apprenticeships and affordable housing.",
+        "He says he will invest in literacy so students read on grade level, pay and support teachers, and reject policies that move money out of public classrooms.",
+        "He says he will stop the proposed 3,000-bed Franklin County prison and put the focus on rehabilitation, job training, and reentry."
+      ],
+      "site": "https://www.fredloveforarkansas.com/",
+      "siteLabel": "fredloveforarkansas.com",
+      "donate": "https://secure.actblue.com/donate/fred-love-for-governor",
+      "source": "https://www.fredloveforarkansas.com/issues"
+    },
+    "colt shelby": {
+      "role": "Contract manager and farmer",
+      "bio": "Colt Shelby says he worked on drilling rigs for nearly 16 years and has spent the last twenty years managing hundreds of millions of dollars in contracts. He says he got into the race in 2024 after a 3,000-bed prison was proposed near his home.",
+      "issues": [
+        "He says he will open government records and restore what he calls honest government.",
+        "He opposes school voucher plans that he says pull money away from rural public schools.",
+        "He opposes the proposed Franklin County prison, and he says data-center expansion should not raise utility rates for families and farms."
+      ],
+      "site": "https://www.colt4arkansas.org/",
+      "siteLabel": "colt4arkansas.org",
+      "donate": "https://goodchange.app/donate/colt-cb",
+      "source": "https://www.colt4arkansas.org/"
+    },
+    "leslie rutledge": {
+      "role": "Lieutenant governor of Arkansas",
+      "bio": "Leslie Rutledge was sworn in on January 10, 2023, as Arkansas's 21st lieutenant governor, and her campaign says she is the first woman in that office. She previously served as attorney general from 2015 to 2023 after work as a prosecutor, a clerk at the Arkansas Supreme Court, and counsel in Governor Mike Huckabee's office.",
+      "issues": [],
+      "site": "https://www.leslierutledge.com/",
+      "siteLabel": "leslierutledge.com",
+      "donate": "https://secure.winred.com/leslierutledge/donate",
+      "source": "https://www.leslierutledge.com/meet-leslie"
+    },
+    "michael kalagias": {
+      "role": "Candidate for lieutenant governor",
+      "bio": "Michael Kalagias is running for lieutenant governor. His campaign site argues Arkansas taxes too much while the state runs surpluses.",
+      "issues": [
+        "He proposes cutting the state sales-tax rate from 6.5 percent to 5 percent and ending local sales tax on food, diapers, and feminine hygiene products.",
+        "He wants the state standard deduction raised to the federal figure of $15,750 for each filer and dependent.",
+        "He says the planned large prison should be canceled because he calls it a billion-dollar project the state does not need."
+      ],
+      "site": "https://mk4ar.org/",
+      "siteLabel": "mk4ar.org",
+      "donate": "https://mk4ar.org/donate/",
+      "source": "https://mk4ar.org/issues-2/"
+    },
+    "tom cotton": {
+      "role": "U.S. senator from Arkansas",
+      "bio": "Tom Cotton is a U.S. senator who grew up on a cattle farm in Yell County, graduated from Harvard and Harvard Law School, and served as an Army infantry officer with combat tours in Iraq and Afghanistan. His campaign says he chairs the Senate Intelligence Committee.",
+      "issues": [
+        "He says he wrote the RAISE Act, helped pass the Laken Riley Act, and has a voting record he describes as fully opposed to illegal immigration.",
+        "He says he cast a decisive vote for a large middle-class tax cut, ended the Affordable Care Act tax on Arkansans, and worked to lower energy and health-care costs.",
+        "He says his Armed Services work and his relationship with President Trump brought billions in defense investment to places including Pine Bluff, Fort Ebbing, and Little Rock."
+      ],
+      "site": "https://tomcotton.com/",
+      "siteLabel": "tomcotton.com",
+      "donate": "https://winred.tomcotton.com/tom-cotton/website-donation-button",
+      "source": "https://tomcotton.com/"
+    },
+    "hallie shoffner": {
+      "role": "Sixth-generation farmer",
+      "bio": "Hallie Shoffner says she is a sixth-generation Arkansas farmer and that she has lived through a farm shutdown. She describes the farming community of Shoffner, named for her family, as a place that is now empty buildings and abandoned fields.",
+      "issues": [
+        "She says she will cut taxes for working families and lower the cost of groceries, child care, housing, and health care.",
+        "She says she will protect and strengthen Social Security and Medicare, lift the payroll-tax cap on the very wealthy, and reverse cuts to those programs.",
+        "She says a farm bill should help farmers diversify, sell into regional markets, and supply food to public schools."
+      ],
+      "site": "https://www.hallieshoffner.com/",
+      "siteLabel": "hallieshoffner.com",
+      "donate": "https://secure.actblue.com/donate/hswebsite",
+      "source": "https://www.hallieshoffner.com/platform"
+    },
+    "jeff wadlin": {
+      "role": "Engineer and businessman",
+      "bio": "Jeff Wadlin says he studied aerospace and mechanical engineering at the University of Virginia, worked at Caterpillar, earned an MBA from Northwestern, and later ran membership nationwide at Sam's Club in Bentonville. He says he also co-founded an online auto-parts salvage company and now has his own consulting business.",
+      "issues": [
+        "He says broad tariffs should end because they raise prices on food, equipment, vehicles, building materials, and household goods.",
+        "He says the goal in health care is to cover everyone while cutting the total cost roughly in half, using private delivery with universal access and protection from catastrophic bills.",
+        "He says antitrust law should challenge mergers and consolidation that leave farmers and workers facing only a few suppliers and buyers."
+      ],
+      "site": "https://jeffwadlin.com/",
+      "siteLabel": "jeffwadlin.com",
+      "donate": "",
+      "source": "https://jeffwadlin.com/issues"
+    },
+    "kim hammer": {
+      "role": "Arkansas state senator and pastor",
+      "bio": "Kim Hammer of Benton was elected to the state Senate in 2018 after eight years in the House, and he chairs the Senate Efficiency Committee. He has been pastor of Saline Missionary Baptist Church in Tull since 1978 and chaired the start of Saline Memorial Hospice.",
+      "issues": [
+        "His campaign biography says that in the 94th General Assembly he sponsored bills to protect election integrity, including limits on electioneering near voting sites and authority for the legislature to look into voting irregularities.",
+        "It says his priorities include making motor-vehicle registration and driver's-license renewal simpler.",
+        "It says he was the lead sponsor of Act 403 of 2021, which lets the legislature end an executive order for a statewide public-health emergency."
+      ],
+      "site": "https://www.hammerforarkansas.com/",
+      "siteLabel": "hammerforarkansas.com",
+      "donate": "https://secure.winred.com/hammer-for-arkansas/hammerforarkansas",
+      "source": "https://www.hammerforarkansas.com/about/"
+    },
+    "kelly grappe": {
+      "role": "Longtime manager of teams and operations",
+      "bio": "Kelly Grappe says she spent decades leading teams, managing complex systems, and serving customers and businesses, and that she is not running because she has had a career in politics. She says she is running for secretary of state to take politics out of the office and make it work for the public.",
+      "issues": [
+        "She says she will show how votes are cast, protected, counted, and verified, and answer doubts with facts rather than dismiss them.",
+        "She says she will defend Arkansas's authority to run its own elections and oppose efforts to nationalize that work.",
+        "She says transparency is one of the ways to build confidence that elections are secure."
+      ],
+      "site": "https://www.kellygrappe.com/",
+      "siteLabel": "kellygrappe.com",
+      "donate": "https://goodchange.app/donate/commi-h8",
+      "source": "https://www.kellygrappe.com/"
+    },
+    "michael pakko": {
+      "role": "Economist",
+      "bio": "Michael Pakko says he spent more than 15 years as a research economist at the Federal Reserve Bank of St. Louis and then was chief economist and state economic forecaster at the Arkansas Economic Development Institute at UA Little Rock. He says he has chaired the Libertarian Party of Arkansas for about a decade and was the party's 2024 nominee for treasurer.",
+      "issues": [
+        "He says he will run elections as a professional operation, with accurate voter rolls, support for county clerks, published procedures, and counts the public can check.",
+        "He says ballot access and rule-making should treat every candidate and party the same.",
+        "He says election and business-filing data should be published in forms citizens and the press can use."
+      ],
+      "site": "https://pakko4ar.org/",
+      "siteLabel": "pakko4ar.org",
+      "donate": "https://secure.anedot.com/pakko-for-arkansas-treasurer/donate/",
+      "source": "https://pakko4ar.org/"
+    },
+    "tim griffin": {
+      "role": "Attorney general of Arkansas",
+      "bio": "The campaign says Tim Griffin grew up in Magnolia, a fifth-generation Arkansan and the son of a minister and a teacher. He was sworn in as attorney general in January 2023 after serving as lieutenant governor from 2015 to 2023 and as the U.S. representative for Arkansas's 2nd District from 2011 to 2015. He is a colonel in the Arkansas Army National Guard.",
+      "issues": [],
+      "site": "https://timgriffinforag.com/",
+      "siteLabel": "Tim Griffin for Attorney General",
+      "donate": "https://timgriffinforag.com/donate/",
+      "source": "https://timgriffinforag.com/meet-tim/"
+    },
+    "rick crawford": {
+      "role": "U.S. representative for Arkansas's 1st District",
+      "bio": "The campaign says Rick Crawford grew up in an Air Force family, served as an Army explosive-ordnance technician, and earned an agriculture business degree from Arkansas State University. He founded the AgWatch radio network, was first elected in 2010, and now chairs the House Intelligence Committee.",
+      "issues": [
+        "He says addressing the federal debt is his top priority and that he wants permanent spending controls.",
+        "He says he wants to keep an overzealous federal government off people's backs.",
+        "His campaign also invites supporters to join him in lowering taxes, growing the economy, and standing up for conservative values."
+      ],
+      "site": "https://www.meetrickcrawford.com/",
+      "siteLabel": "Rick Crawford for Congress",
+      "donate": "https://www.meetrickcrawford.com/donate/",
+      "source": "https://www.meetrickcrawford.com/"
+    },
+    "terri yarbrough green": {
+      "role": "Pathologist running for Congress",
+      "bio": "The campaign says Dr. Terri Yarbrough Green is a board-certified pathologist and laboratory medical director who has worked in rural hospitals. She says she is running because Arkansans deserve a government that works for working families rather than wealthy insiders.",
+      "issues": [
+        "She says power should be checked, and that she wants dark money out of politics and elections people can trust.",
+        "She supports family farms, a higher minimum wage, and health care that does not bankrupt people or force women to travel hours for maternity care.",
+        "She says communities need safe roads, broadband, public schools, productive farmland, and utilities that serve both the environment and local needs."
+      ],
+      "site": "https://www.terrigreenforarkansas.com/",
+      "siteLabel": "Dr. Terri Green for Arkansas",
+      "donate": "https://secure.actblue.com/donate/kickoffterrigreen",
+      "source": "https://www.terrigreenforarkansas.com/"
+    },
+    "french hill": {
+      "role": "U.S. representative and chairman of the House Financial Services Committee",
+      "bio": "The campaign says French Hill chairs the House Financial Services Committee and is running on a record of tax cuts and lower costs for Arkansas families. It says President Trump has endorsed him.",
+      "issues": [
+        "He says the Working Families Tax Cut put money back in family budgets, including by ending taxes on tips and overtime and adding a deduction for seniors.",
+        "His campaign says his office has closed about 2,000 veteran cases and recovered back pay and benefits, and he has backed bills to expand veterans' care.",
+        "He says he has sponsored balanced-budget amendments and wants the federal government to live within its means, and he says he will protect the unborn and the Second Amendment."
+      ],
+      "site": "https://www.electfrench.com/",
+      "siteLabel": "French Hill for Congress",
+      "source": "https://www.electfrench.com/"
+    },
+    "chris jones": {
+      "role": "Candidate for Congress",
+      "bio": "The campaign says Chris Jones grew up in Pine Bluff as the son of a minister and built a career in science without leaving Arkansas behind. He says he is running to expand opportunity, strengthen schools and health care, and give more Arkansans a seat at the table.",
+      "issues": [
+        "He says the economy should mean good jobs, fair wages, small-business growth, reliable internet, and rural hospitals that stay open.",
+        "He wants stronger schools, maternal health care, addiction recovery, and food security for families.",
+        "He supports early childhood education, apprenticeships, and training in both technology and the trades, plus fair maps and elections people can trust."
+      ],
+      "site": "https://chrisjonesforcongress.com/",
+      "siteLabel": "Chris Jones for Congress",
+      "donate": "https://secure.actblue.com/donate/chip-in-for-chris?refcode=website",
+      "source": "https://chrisjonesforcongress.com/"
+    },
+    "steve womack": {
+      "role": "U.S. representative for Arkansas's 3rd District",
+      "bio": "The campaign says Steve Womack was elected in 2010 and chairs the House Appropriations subcommittee on Transportation, Housing and Urban Development. Before Congress he was mayor of Rogers for twelve years and a colonel in the Arkansas Army National Guard.",
+      "issues": [
+        "He says he is running again on a pro-growth, pro-jobs, and pro-family agenda.",
+        "He says the country faces global threats, a rising national debt, and inflation, and that he will keep working on those for the 3rd District."
+      ],
+      "site": "https://www.womackforcongress.com/",
+      "siteLabel": "Steve Womack for Congress",
+      "source": "https://www.womackforcongress.com/newsroom/congressman-womack-files-for-reelection"
+    },
+    "robb ryerse": {
+      "role": "Pastor and nonprofit leader running for Congress",
+      "bio": "The campaign says Robb Ryerse is a pastor and nonprofit leader who has lived in Springdale for 20 years with his wife, Vanessa, and their four children. He first ran for Congress in 2018 and says he is running again so working families are heard.",
+      "issues": [
+        "He says he will not take corporate PAC money and that the campaign is funded by neighbors.",
+        "He says a representative should show up for town halls and answer questions in the district.",
+        "He says he wants good jobs, safe neighborhoods, strong schools, and a government that works for families rather than a party."
+      ],
+      "site": "https://www.robbforcongress.com/",
+      "siteLabel": "Robb for Congress",
+      "source": "https://www.robbforcongress.com/"
+    },
+    "bruce westerman": {
+      "role": "U.S. representative for Arkansas's 4th District",
+      "bio": "The campaign says Bruce Westerman was born and raised in Garland County, played football at the University of Arkansas, and earned a master's in forestry from Yale. He worked in engineering and forestry for more than 22 years, served in the Arkansas House, and now chairs the House Natural Resources Committee.",
+      "issues": [
+        "He says he wants lower taxes so families and small businesses can keep more of what they earn, and he points to tax cuts passed while he has been in Congress.",
+        "He says he has helped roll back regulations he argues hurt jobs.",
+        "As the only forester in the House, he says he wants science-based management of national forests and points to the Resilient Federal Forests Act."
+      ],
+      "site": "https://www.brucewesterman.com/",
+      "siteLabel": "Bruce Westerman for Congress",
+      "donate": "https://secure.winred.com/westerman-for-congress/donate/",
+      "source": "https://www.brucewesterman.com/issues/"
+    },
+    "james russell iii": {
+      "role": "Mental health business owner running for Congress",
+      "bio": "The campaign says James Russell, who goes by Rus, has lived in central Arkansas for more than 25 years with his wife, Wendy, and they have run an outpatient mental health business in Little Rock since 2014. He says he is running for the 4th District in 2026.",
+      "issues": [
+        "He says wages have not kept up with profits or the cost of living and that he wants higher pay and equal pay for equal work.",
+        "He wants fairer taxes, with working people paying less and loopholes closed for the very rich.",
+        "He supports expanding Medicare toward health care for everyone and making college or job training affordable."
+      ],
+      "site": "https://russellforar.com/",
+      "siteLabel": "James Russell for Arkansas",
+      "donate": "https://goodchange.app/version-live/donate/may-t-wo",
+      "source": "https://russellforar.com/on-the-issues"
+    }
+  },
+  "measures": {}
+}

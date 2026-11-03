@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaders.vote · Louisiana, November 3, 2026</title>
+<meta name="description" content="Leaders.vote guide to the Louisiana general election on November 3, 2026. Candidates, sample ballot, and unofficial results. Not an endorsement.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="guide.css?v=maphover">
+</head>
+<body data-state="la">
+<header>
+  <div class="wrap bar">
+    <div class="bar-top">
+      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      <div class="lang notranslate" translate="no">
+        <span class="visually-hidden">Language</span>
+        <select id="lang" class="visually-hidden" aria-hidden="true" tabindex="-1">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-CN">中文</option>
+          <option value="pl">Polski</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ko">한국어</option>
+          <option value="tl">Tagalog</option>
+          <option value="ar">العربية</option>
+          <option value="ur">اردو</option>
+          <option value="uk">Українська</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="fr">Français</option>
+        </select>
+        <button type="button" class="lang-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">English</button>
+        <ul id="lang-list" class="lang-menu" role="listbox" aria-label="Translate this page" hidden>
+          <li role="none"><button type="button" role="option" data-lang="en" aria-selected="true">English</button></li>
+          <li role="none"><button type="button" role="option" data-lang="es">Español</button></li>
+          <li role="none"><button type="button" role="option" data-lang="zh-CN">中文</button></li>
+          <li role="none"><button type="button" role="option" data-lang="pl">Polski</button></li>
+          <li role="none"><button type="button" role="option" data-lang="hi">हिन्दी</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ko">한국어</button></li>
+          <li role="none"><button type="button" role="option" data-lang="tl">Tagalog</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ar">العربية</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ur">اردو</button></li>
+          <li role="none"><button type="button" role="option" data-lang="uk">Українська</button></li>
+          <li role="none"><button type="button" role="option" data-lang="vi">Tiếng Việt</button></li>
+          <li role="none"><button type="button" role="option" data-lang="fr">Français</button></li>
+        </ul>
+</div>
+    </div>
+    <p class="here notranslate" translate="no"><img src="flags/la.svg" alt=""><span>Louisiana</span></p>
+    <nav>
+      <a href="index.html">All states</a>
+      <a href="#results">Results</a>
+      <a href="#sample">The ballot</a>
+      <a href="#read">Before you go</a>
+      <a href="#senate">Senate</a>
+      <a href="#house">U.S. House</a>
+      <a href="#where">Where to vote</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero">
+    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record. A street address you type is not sent for translation.</p>
+    <p class="kicker">Louisiana · General election · Tuesday, November 3, 2026</p>
+    <h1>Know who you're voting for.</h1>
+    <p class="deck">What each office does is on this page. A candidate's priorities are included only when they come from that candidate's own site. This is not an endorsement and not a government site.</p>
+    <p class="when">Polls close at 9:00 PM ET. This page does not call a race.</p>
+    <div class="finder where" id="where">
+      <p class="kicker">Where to vote</p>
+      <h2>Find your polling place.</h2>
+      <p class="zip-note">Election Day is Tuesday, November 3. A polling place comes from the home address. Type the street number, street name, and ZIP here. This page does not keep them. The election office lookup is the list for that address.</p>
+      <form id="where-form" data-lookup="https://geauxvote.com/" data-lookup-label="Find your polling location">
+        <div>
+          <label for="where-number">Street number</label>
+          <input id="where-number" class="num" name="number" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-street">Street name</label>
+          <input id="where-street" class="street" name="street" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-zip">ZIP code</label>
+          <input id="where-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="70802" required>
+        </div>
+        <button type="submit">Find this address</button>
+      </form>
+      <div id="where-result" aria-live="polite"></div>
+    </div>
+    <div class="races"><a href="#senate"><strong>Senate</strong><span>Julia Letlow, Jamie Davis</span></a></div>
+  </div>
+  <section class="block" id="results">
+    <div class="wrap">
+      <p class="kicker">Unofficial · November 3, 2026</p>
+      <h2>Results across Louisiana.</h2>
+      <p class="sub">Each county is colored by who is ahead there. A blank county has not reported votes. This page does not call a race.</p>
+      <div class="result-legend">
+        <span><i class="swatch blank"></i> No votes reported</span>
+        <span><i class="swatch d"></i> Democratic lead</span>
+        <span><i class="swatch r"></i> Republican lead</span>
+        <span><i class="swatch o"></i> Another lead</span>
+      </div>
+      <div class="result-layout">
+        <div><div id="state-slot"></div></div>
+        <div>
+          <div id="result-races" class="sheet-switch" role="group" aria-label="Races"></div>
+          <div id="result-summary"></div>
+          <label for="result-place">County, parish, or city</label>
+          <select id="result-place"><option value="">Statewide totals</option></select>
+          <div id="result-detail"></div>
+          <p id="result-status" class="note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="sample">
+    <div class="wrap">
+      <p class="kicker">How you vote</p>
+      <h2>What the ballot looks like.</h2>
+      <p class="sub">This sample lists the statewide contests NBC News is publishing for Louisiana. It is not a precinct ballot.</p>
+      <div class="sample-layout">
+        <div>
+          <ol class="steps" id="sample-steps">
+            <li><button type="button" data-step="mark">Mark one choice on a contest. Next and Back move one contest at a time. This sample puts the mark to the left of a name.</button></li>
+            <li><button type="button" data-step="order">Party order here is Republican, then Democratic, then any other candidate. Your county may print a different order.</button></li>
+            <li><button type="button" data-step="house">U.S. House depends on your district and is listed farther down this page. This sample does not include it.</button></li>
+          </ol>
+          <p class="zip-note">The address lookup above opens the election office. A ZIP code alone does not pick a district.</p>
+        </div>
+        <div>
+          <div class="sheet" id="sample-candidates">
+            <p class="kicker">Sample ballot · Louisiana · November 3, 2026</p>
+            <div class="contest" data-kind="race"><h3>Senate</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Julia Letlow</span><span class="pill r">Republican</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Jamie Davis</span><span class="pill d">Democratic</span></button></div>
+          </div>
+          <div class="sheet-move">
+            <button type="button" id="contest-back" class="notranslate" translate="no" data-phrase="back">Back</button>
+            <p id="sample-status"></p>
+            <button type="button" id="contest-next" class="notranslate" translate="no" data-phrase="next">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="read">
+    <div class="wrap">
+      <p class="kicker">Before you go</p>
+      <h2>Statewide contests, then your district.</h2>
+      <div class="facts">
+        <div class="fact">
+          <h3>What to bring</h3>
+          <p>Bring what this state's election office requires. The address lookup on this page opens that office. This page does not keep the address.</p>
+        </div>
+        <div class="fact">
+          <h3>How names got here</h3>
+          <p>Statewide names were compared with the candidate list linked at the bottom of this page. Photos are the ones NBC News is publishing. On this site the order is Republican, then Democratic, then any other party. A printed ballot may use a different order.</p>
+        </div>
+        <div class="fact">
+          <h3 class="notranslate" translate="no" data-phrase="writeins">Write-ins</h3>
+          <p>A write-in counts only if that person filed. This page lists the names being published.</p>
+        </div>
+        <div class="fact">
+          <h3>What you are choosing</h3>
+          <p>The sample lists the statewide contests on this page. U.S. Senate is one seat. The term is six years. U.S. House is one seat in your district and is listed farther down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="senate"><div class="wrap"><p class="kicker">Federal · Vote for one</p><h2>Senate</h2><p class="sub">The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The Senate has the sole power to try impeachments.</p><article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_S00_R_J_LETLOW.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Julia Letlow</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative from Louisiana running for the Senate.</p><p class="bio">Julia Letlow&#x27;s site says she is a Louisiana native, mother, and educator who entered Congress after her husband, Luke, died, and that she was the first Republican woman elected to Congress from Louisiana.</p><ul><li>She says her work in Congress has been for parents, students, farmers, law enforcement, and Louisiana families.</li><li>She says she is guided by faith, family, service, and love of the state.</li><li>She says she is running for the Senate to give Louisiana conservative leadership, and she notes President Trump&#x27;s endorsement.</li></ul><p class="links"><a href="https://www.julialetlow.com/" target="_blank" rel="noopener noreferrer">julialetlow.com</a> · <a href="https://www.julialetlow.com/donate" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_S00_D_J_DAVIS.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Jamie Davis</h3><span class="pill d">Democratic</span></div><p class="role">Farmer and Tensas Parish Police Jury member running for the U.S. Senate.</p><p class="bio">Jamie Davis&#x27;s site says he built a business, met a payroll, farms Delta ground his grandfather sharecropped, and served his neighbors on the Tensas Parish Police Jury.</p><ul><li>He says Louisiana has become unaffordable and that he wants lower grocery, insurance, and utility bills.</li><li>He says he will work to expand access to affordable care and will not vote for hospital closings.</li><li>He says he opposes secret nondisclosure agreements in development deals and land takings for industry, and that his campaign is funded by Louisiana donors rather than corporate PACs.</li></ul><p class="links"><a href="https://jamieforlouisiana.com/" target="_blank" rel="noopener noreferrer">jamieforlouisiana.com</a> · <a href="https://secure.actblue.com/donate/sendafarmertowashington" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article></div></section>
+  
+  <section class="block" id="house"><div class="wrap"><h2>U.S. House.</h2><p class="office-note">Every district NBC News is publishing for this state. This list is not filtered to one address. A written note is added only from that candidate's own site.</p><h3>District 1</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H01_R_S_SCALISE.png" alt="" data-letter="S" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Steve Scalise</h3><span class="pill r">Republican</span></div><p class="role">House majority leader representing southeast Louisiana.</p><p class="bio">A Jefferson Parish native, he says he registered as a Republican the day he turned 18, served in the Louisiana Legislature from 1996 until his election to Congress in 2008, and was elected majority leader by his colleagues. He and his wife Jennifer have two children, Madison and Harrison.</p><ul><li>He says he is working to promote fiscal discipline, create good-paying jobs, protect freedoms, and get the economy back on track.</li><li>His site lists creating jobs, building a border wall, fixing health care, cutting spending, and making America safe among the priorities supporters can choose.</li><li>He says that as majority leader he sets the floor schedule and works with colleagues on conservative solutions to the country&#x27;s hardest problems.</li></ul><p class="links"><a href="https://stevescalise.com/" target="_blank" rel="noopener noreferrer">stevescalise.com</a> · <a href="https://secure.anedot.com/scalise-for-congress/website/?utm_medium=website" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H01_D_L_JEWETT.png" alt="" data-letter="L" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Lauren Jewett</h3><span class="pill d">Democratic</span></div><p class="role">Special-education teacher running for Congress in Louisiana&#x27;s 1st District.</p><p class="bio">She says she has spent 17 years beside Louisiana students, families, and educators and is a nationally board-certified special education teacher and union member. She says she is running because people who teach, care for neighbors, and build communities need someone who will fight as hard as they do.</p><ul><li>She says Louisiana families are squeezed by unaffordable insurance, health-care costs, underfunded schools, and an economy that leaves too many people behind.</li><li>Her campaign says the district needs lower costs, strong schools and hospitals, safe communities, and a representative who fights for working people.</li><li>She says she wants to advocate for environmental, constitutional, economic, and health protections in a region she calls overlooked.</li></ul><p class="links"><a href="https://www.laurenjewett.com/" target="_blank" rel="noopener noreferrer">laurenjewett.com</a></p></div></article>
+<h3>District 2</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H02_R_P_WILLIAMS.png" alt="" data-letter="P" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Peter Williams</h3><span class="pill r">Republican</span></div><p class="role">Tree farmer and pastor from Lettsworth running for Congress.</p><p class="bio">He says he lives in Lettsworth, graduated from the University of Southwestern Louisiana in 1980, taught school, and since 1999 has run Resource One Nursery, a family tree farm and specialty-crop business. He says he is a Christian of the Apostolic faith, married to Alfreda for 45 years, with four grown children.</p><ul><li>He says the new district map covers both urban and rural communities and that a representative should plan around agriculture, health, housing, education, transportation, recreation, and incarceration.</li><li>He says voters should have a choice based on policies and people rather than a party-chosen status quo.</li><li>He says he has spent more than 30 years as a community advocate trying to improve quality of life in the district.</li></ul><p class="links"><a href="https://peterwilliams4congress.com/" target="_blank" rel="noopener noreferrer">peterwilliams4congress.com</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H02_D_T_CARTER.png" alt="" data-letter="T" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Troy Carter Sr.</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative for Louisiana&#x27;s 2nd District and a former state senator.</p><p class="bio">He says he was the first African American elected to the Louisiana House from New Orleans&#x27; 102nd District in 1991 and later the first African American elected to state Senate District 7. He says serving in Congress has been the greatest honor of his life because he is fighting for Louisiana.</p><ul><li>He says he will keep fighting for fair housing, people with disabilities, criminal and environmental justice, equal pay, and a living wage.</li><li>He says government should let women make their own health and reproductive decisions, and he wants quality, affordable health care and less student-loan debt.</li><li>He says he championed the Social Security Fairness Act so teachers, police, and firefighters are not docked by the windfall and pension offsets.</li></ul><p class="links"><a href="https://www.congressmantroycarter.com/" target="_blank" rel="noopener noreferrer">congressmantroycarter.com</a> · <a href="https://secure.actblue.com/donate/troy-carter-for-congress-1?refcode=header" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 3</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H03_R_C_HIGGINS.png" alt="" data-letter="C" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Clay Higgins</h3><span class="pill r">Republican</span></div><p class="role">Candidate for Congress in Louisiana&#x27;s 3rd District.</p><p class="bio">His campaign site says he is a lifelong Louisiana resident who served in Acadiana law enforcement and trained as a military police officer in the Army. It calls him a defender of the Bill of Rights.</p><ul><li>He says a sworn officer&#x27;s oath is to the Constitution, not to a sheriff, chief, or marshal.</li><li>The site says that, as a Christian, he focuses on the power of an individual to be redeemed.</li></ul><p class="links"><a href="https://captainhiggins.com/" target="_blank" rel="noopener noreferrer">captainhiggins.com</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H03_D_J_DAY.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">John Day</h3><span class="pill d">Democratic</span></div><p class="role">Navy veteran from Lake Charles running for Congress.</p><p class="bio">Born in Shreveport and raised in Lake Charles, he says he served in the Navy from 1994 to 1998 and decided to run after a house fire nearly took his family&#x27;s belongings. He and his wife Amanda have four children.</p><ul><li>He says he wants lower everyday costs, better pay, safer communities, and storm protection, with an all-of-the-above energy strategy that keeps oil and gas jobs and invests in renewables.</li><li>He says insurance should have fair rates and faster claims, and that homeowners should get the coverage they pay for after storms.</li><li>He says government should not control a person&#x27;s body, health care, or personal life, and that patients rather than politicians should be in charge of care.</li></ul><p class="links"><a href="https://johndayforcongress.com/" target="_blank" rel="noopener noreferrer">johndayforcongress.com</a></p></div></article>
+<h3>District 4</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H04_R_M_JOHNSON.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Mike Johnson</h3><span class="pill r">Republican</span></div><p class="role">Speaker of the House and representative for Louisiana&#x27;s 4th District.</p><p class="bio">A husband and father of four, he says he is a constitutional law attorney and the son of a Shreveport firefighter. First elected in 2016, he says he is the first Louisianian chosen as Speaker and the highest-ranking government official in the state&#x27;s history.</p><ul><li>He says that with President Trump he has worked on lower costs, American energy dominance, peace through strength, and tax cuts he says will save district families nearly $1,300.</li><li>He says he will keep fighting for the principles that make Louisiana a place to live, work, and raise a family.</li><li>His campaign quotes a Trump endorsement that highlights border security, law and order, farmers, and the Second Amendment as parts of the agenda Johnson is carrying.</li></ul><p class="links"><a href="https://www.mikejohnsonforlouisiana.com/" target="_blank" rel="noopener noreferrer">mikejohnsonforlouisiana.com</a> · <a href="https://secure.winred.com/MikeJohnson/donate?utm_campaign=organic%3Famount%3D20&amp;utm_medium=website" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H04_D_C_CABLE.png" alt="" data-letter="C" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Conrad Cable</h3><span class="pill d">Democratic</span></div><p class="role">First-generation farmer from north Louisiana running for Congress.</p><p class="bio">He says he knows hard work and keeping his word, and that he cannot be bought by lobbyists or billionaires. He is running so someone in Washington fights for people he calls hard-working patriots who are tired of being left behind.</p><ul><li>He says he would raise wages, protect the right to organize, and shift power from corporations to the people who do the work.</li><li>He says more than a third of the district relies on Medicaid, that he supports Medicare for All, and that health care should depend on need rather than income.</li><li>He says he would open public grocery stores stocked with local food that SNAP and WIC can buy, and he supports overturning Citizens United and banning congressional stock trading.</li></ul><p class="links"><a href="https://www.conrad4congress2026.com/" target="_blank" rel="noopener noreferrer">conrad4congress2026.com</a> · <a href="https://secure.actblue.com/donate/conrad-cable-1?refcode=web" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 5</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H05_R_M_ECHOLS.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Michael Echols</h3><span class="pill r">Republican</span></div><p class="role">Louisiana state representative and business owner running for Congress.</p><p class="bio">A lifelong northeast Louisiana resident and University of Louisiana at Monroe graduate, he says he chairs the House Republican delegation and works as a licensed contractor and commercial real-estate investor. He and his wife Christie, an architect, live in Monroe with two daughters.</p><ul><li>He says insurance premiums should fall if Washington lowers inflation, expands domestic energy, and drops federal rules that raise the cost of rebuilding after storms.</li><li>He says grocery prices rose because of federal spending, and that cheaper fuel and fewer rules on farmers, truckers, and stores would bring checkout prices down.</li><li>He says he would expand oil and gas production, support LNG exports, protect Louisiana refineries, and speed permits for energy projects.</li></ul><p class="links"><a href="https://www.michaelechols.com/" target="_blank" rel="noopener noreferrer">michaelechols.com</a> · <a href="https://secure.winred.com/echols-for-congress/donate-today" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H05_R_M_CORDELL.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Misti Cordell</h3><span class="pill r">Republican</span></div><p class="role">Health-care business owner and Louisiana Board of Regents chair running for Congress.</p><p class="bio">She says she is a wife, mother, and business owner, not a career politician, and that Governor Jeff Landry appointed her to chair the Board of Regents. She has been a Trump delegate and serves on the state Republican central committee.</p><ul><li>She says she would cut taxes and red tape, defend agriculture and energy jobs, and stand up to federal overreach.</li><li>She says she would secure the border, finish a wall, back law enforcement, and protect Second Amendment rights.</li><li>She says she would vote pro-life, defend girls&#x27; sports, support school choice, and return control of education to parents and local communities.</li></ul><p class="links"><a href="https://www.cordellforcongress.com/" target="_blank" rel="noopener noreferrer">cordellforcongress.com</a> · <a href="https://secure.anedot.com/cordell-for-congress/donatenow" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 6</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H06_R_B_MIGUEZ.png" alt="" data-letter="B" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Blake Miguez</h3><span class="pill r">Republican</span></div><p class="role">State senator and oil-and-gas business owner running for Congress.</p><p class="bio">A seventh-generation Louisianian and LSU graduate, he says he has owned a home in Baton Rouge for more than 25 years, expanded his family&#x27;s oil and gas business, and is raising four children with his wife Ashley, a special-education teacher. He was elected to the state Senate in 2023.</p><ul><li>He says he passed a law so Louisiana can prosecute corrupt politicians after they leave office, and in Congress he would push term limits and a permanent ban on members trading individual stocks.</li><li>He says he wrote the state law forcing New Orleans to follow immigration law, and he would finish a border wall, mandate E-Verify, and treat cartels as foreign terrorist organizations.</li><li>He says he authored constitutional carry, banned Big Tech money in Louisiana elections, and banned ultra-processed food in school cafeterias.</li></ul><p class="links"><a href="https://blakemiguez.com/" target="_blank" rel="noopener noreferrer">blakemiguez.com</a> · <a href="https://secure.winred.com/blake-miguez/donate-today" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H06_D_L_GARCIA.png" alt="" data-letter="L" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Lindsay Garcia</h3><span class="pill d">Democratic</span></div><p class="role">Democratic candidate running for Louisiana&#x27;s 6th District.</p><p class="bio">She says she grew up stretching a dollar and waiting on doctors, and that she has worked in public schools, served in federal programs, stood with families in crisis, and studied the law. She says she is not a career politician.</p><ul><li>She says she would make daily life more affordable, protect Social Security, Medicare, and Medicaid, lower prescription costs, and raise wages.</li><li>She says she would bring federal money home for I-10 and I-12, bridges, drainage, flood protection, and affordable flood insurance.</li><li>She says she would fight violent crime, trafficking, and fentanyl while supporting voting rights, civil rights, and due process.</li></ul><p class="links"><a href="https://www.rubiagarcia.com/" target="_blank" rel="noopener noreferrer">rubiagarcia.com</a> · <a href="https://secure.actblue.com/donate/lindsay-garcia-1?refcode=websitelink" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Leaders.vote is an independent voter guide for the November 3, 2026 general election. It is not a campaign, not an endorsement, and not a site of any state or election authority. This page is Louisiana.</p>
+    <p>Statewide names were compared with <a href="https://voterportal.sos.la.gov/CandidateInquiry/StatewideCandidate/CandidateList?electionId=344&amp;officeIds=67997" target="_blank" rel="noopener noreferrer">this state candidate list</a>. Photos are the ones NBC News is publishing. An issue line is added only from a candidate's own site.</p>
+  </div>
+</footer>
+<div id="google_translate_element" aria-hidden="true"></div>
+<script src="lang.js"></script>
+<script src="state.js"></script>
+</body>
+</html>

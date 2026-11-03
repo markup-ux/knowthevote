@@ -1,0 +1,110 @@
+{
+  "code": "nh",
+  "ballotSource": "",
+  "where": {
+    "url": "https://app.sos.nh.gov/viphome",
+    "label": "Search polling places and sample ballots"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. Under Part II, Article 41 of the New Hampshire Constitution, the governor may issue executive orders."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The Constitution provides two senators from each state."
+    }
+  },
+  "people": {
+    "kelly ayotte": {
+      "role": "New Hampshire's governor, running for another term.",
+      "bio": "Kelly Ayotte is the state's 83rd governor. Her campaign says she previously served as attorney general and as a U.S. senator, and that she lives in Nashua.",
+      "issues": [
+        "She says her first term sped up housing construction, fully funded child-care scholarships, and produced a balanced budget with no new taxes.",
+        "She says she got cell phones out of classrooms, raised per-student school funding, and put more weight on reading.",
+        "She says she rewrote bail rules, strengthened laws on domestic violence and trafficking, and used her veto on bills she calls hidden sales taxes."
+      ],
+      "site": "https://kellyfornh.com/",
+      "siteLabel": "Kelly Ayotte for Governor",
+      "donate": "https://secure.winred.com/kelly-for-new-hampshire/winred-directory",
+      "source": "https://kellyfornh.com/about-kelly/"
+    },
+    "cinde warmington": {
+      "role": "Democratic candidate for governor and a former executive councilor.",
+      "bio": "Cinde Warmington is the Democratic nominee for governor. Her campaign says she was the only Democrat on the Executive Council and is running on the cost of living.",
+      "issues": [
+        "She says she would repeal the private-school voucher program, which she argues drives up property taxes and hurts public schools.",
+        "She says she would push back on higher health-care costs and tariffs, and would reject an immigration detention site in Merrimack.",
+        "She says she would not support a sales or income tax, and that she would work for small businesses."
+      ],
+      "site": "https://www.cindewarmington.com/",
+      "siteLabel": "Cinde Warmington for Governor",
+      "donate": "https://secure.actblue.com/donate/cw-website26",
+      "source": "https://www.cindewarmington.com/"
+    },
+    "stephen villee": {
+      "role": "Libertarian candidate for governor.",
+      "bio": "Stephen Villee is the Libertarian nominee. He says he moved to New Hampshire in 2003 as an early Free State Project participant and wants a much smaller state government.",
+      "issues": [
+        "He says he would push approval voting, so a voter can support more than one candidate, and full legalization of cannabis for adults.",
+        "He says the National Guard should not be activated unless Congress has declared war.",
+        "He says medical psilocybin should be legal for post-traumatic stress, substance use disorder, and depression that has not responded to other care."
+      ],
+      "site": "https://villee4nh.com/",
+      "siteLabel": "Stephen Villee for Governor",
+      "donate": "https://secure.anedot.com/stephen-villee-for-governor/donate",
+      "source": "https://villee4nh.com/"
+    },
+    "john sununu": {
+      "role": "Candidate for U.S. Senate.",
+      "bio": "John Sununu's campaign says he is a lifelong Granite Stater, trained as an engineer, with private-sector experience and a prior stretch representing New Hampshire in Washington.",
+      "issues": [
+        "The site says that in Washington he went after government waste, defended privacy, opposed tax increases, and worked on protections for seniors.",
+        "He says he would take a practical approach and put New Hampshire first."
+      ],
+      "site": "https://www.sununusenator.com/",
+      "siteLabel": "John Sununu for U.S. Senate",
+      "donate": "https://secure.winred.com/sununu-senator/website-donate",
+      "source": "https://www.sununusenator.com/"
+    },
+    "chris pappas": {
+      "role": "U.S. representative running for the Senate.",
+      "bio": "Chris Pappas's campaign says he is in the House and will take on corporate interests, Donald Trump, or his own party when he thinks New Hampshire is better served.",
+      "issues": [
+        "He says he forced a House vote on banning stock trading by members of Congress, including against his own party's leadership.",
+        "He says he took on drug companies to lower prices and cap insulin at $35.",
+        "He says he is challenging polluters of drinking water and companies he describes as taking advantage of veterans."
+      ],
+      "site": "https://chrispappas.org/",
+      "siteLabel": "Chris Pappas for Senate",
+      "donate": "https://secure.actblue.com/donate/cps_web",
+      "source": "https://chrispappas.org/priorities/"
+    },
+    "edmond laplante": {
+      "role": "U.S. Senate candidate, Marine, and school board member.",
+      "bio": "Edmond Laplante's site describes him as a father, grandfather, Marine, and a mechanic for more than 40 years. He says he qualified for the November ballot by petition.",
+      "issues": [
+        "He says the Constitution is a set of limits on power, not a tool for politicians to redesign society.",
+        "He says a government that stays inside those limits is more trustworthy than one that promises to fix everything."
+      ],
+      "site": "https://laplante4constitutionalnh.com/",
+      "siteLabel": "Edmond Laplante for U.S. Senate",
+      "donate": "https://laplante4constitutionalnh.com/donate",
+      "source": "https://laplante4constitutionalnh.com/"
+    },
+    "maggie goodlander": {
+      "role": "U.S. representative for New Hampshire's 2nd District",
+      "bio": "The campaign says Maggie Goodlander grew up in Nashua, served more than a decade in the Navy Reserve, and later worked at the Justice Department and as a White House senior advisor. It says she is now in her first term in Congress.",
+      "issues": [
+        "Her campaign says her priorities are lowering costs, taking on corruption that raises prices, and keeping promises to Americans.",
+        "The site says that work includes housing bills meant to build more homes and limit corporate purchases of single-family houses, plus protections for Social Security and for veterans and military families.",
+        "She says she has pushed to end emergency tariffs and to wind down U.S. hostilities with Iran."
+      ],
+      "site": "https://maggiefornh.com/",
+      "siteLabel": "Maggie Goodlander for Congress",
+      "donate": "https://secure.actblue.com/donate/good_website",
+      "source": "https://maggiefornh.com/accomplishments/"
+    }
+  },
+  "measures": {}
+}

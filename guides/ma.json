@@ -1,0 +1,298 @@
+{
+  "code": "ma",
+  "ballotSource": "https://www.sec.state.ma.us/divisions/elections/research-and-statistics/2026-state-election-candidates.htm",
+  "where": {
+    "url": "https://www.sec.state.ma.us/WhereDoIVoteMA/WhereDoIVote",
+    "label": "Where do I vote"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The governor leads the executive branch, nominates judicial officers, and serves as commander-in-chief of the state's military forces."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The Senate has the sole power to try impeachments."
+    },
+    "Attorney General": {
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. In Massachusetts the office protects consumers, investigates and prosecutes crime, and works on fraud, the environment, workers, and civil rights."
+    },
+    "Secretary Of State": {
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. Massachusetts calls this officer the secretary of the commonwealth, who keeps public records, administers elections, regulates securities, and registers corporations."
+    }
+  },
+  "people": {
+    "michael minogue": {
+      "role": "Business leader and Army veteran running for governor.",
+      "bio": "Mike Minogue's site describes him as a husband, father, combat veteran, and the business leader who took Abiomed from an idea to a global standard in cardiac care.",
+      "issues": [
+        "He says a voter-backed audit of the Legislature is not being enforced and that the political establishment is wasting tax dollars and growing debt.",
+        "He says taxes and regulation are pushing young people out and making it hard for seniors to stay, and he asks supporters to join a call to suspend the gas tax.",
+        "He says the state needs entrepreneurs and manufacturing to stay and expand, and that the governor's basic job is public safety, including enforcement against fentanyl dealers."
+      ],
+      "site": "https://minogueforma.com/",
+      "siteLabel": "minogueforma.com",
+      "donate": "https://secure.anedot.com/mike-minogue-for-governor/donate",
+      "source": "https://minogueforma.com/"
+    },
+    "maura healey": {
+      "role": "Governor of Massachusetts, running for re-election with Lieutenant Governor Kim Driscoll.",
+      "bio": "Maura Healey's campaign says she and Kim Driscoll were elected in 2022 as the first all-women executive team in the nation's history and are running again to keep lowering costs.",
+      "issues": [
+        "Her campaign says the first term ended renter's fees, capped health-care deductibles and co-pays, opposed utility rate increases, cut taxes, and protected SNAP from federal cuts.",
+        "It also points to work on the MBTA, free school meals, free community college, and veterans' homes.",
+        "For a second term she says she will defend health care and abortion rights, access to vaccines, research, jobs, and lower costs, and stand up to Donald Trump."
+      ],
+      "site": "https://maurahealey.com/",
+      "siteLabel": "maurahealey.com",
+      "donate": "https://secure.actblue.com/donate/loc_mh_website_2026",
+      "source": "https://maurahealey.com/governor-maura-healey-and-lt-governor-kim-driscoll-launch-reelection-campaign/"
+    },
+    "andrea james": {
+      "role": "Independent candidate for governor.",
+      "bio": "Andrea James's site says her family has lived in Massachusetts for seven generations and that she is running to put the government's agenda on the needs of people.",
+      "issues": [
+        "She says a governor's priorities should be housing, health care, child care, education, and quality of life, and she calls housing a human right.",
+        "She says people should be able to see a doctor without going into debt and that families should have child care they trust.",
+        "She says Massachusetts should not have contracts with ICE, and she wants data centers banned in favor of lower utility costs and green energy."
+      ],
+      "site": "https://www.ajforma.com/",
+      "siteLabel": "ajforma.com",
+      "donate": "https://www.ajforma.com/donate",
+      "source": "https://www.ajforma.com/"
+    },
+    "john deaton": {
+      "role": "Trial lawyer and Marine veteran running for the U.S. Senate.",
+      "bio": "John Deaton's site describes him as a trial attorney, Marine veteran, cancer survivor, and father of three daughters.",
+      "issues": [
+        "He says affordable health care is a right and that he will work to break up large insurers and pharmacy benefit managers, lower drug prices, and expand telehealth.",
+        "He wants faster permitting for housing and an energy mix that includes nuclear power, and he says he will not support what he calls blank checks for foreign aid.",
+        "He says he will secure the border, expand legal immigration, and support an earned path to citizenship for Dreamers who meet strict standards."
+      ],
+      "site": "https://www.johndeatonforsenate.com/",
+      "siteLabel": "johndeatonforsenate.com",
+      "donate": "https://secure.winred.com/john-deaton-for-senate-inc-8d46fe78/donate-today",
+      "source": "https://www.johndeatonforsenate.com/issues"
+    },
+    "ed markey": {
+      "role": "U.S. senator from Massachusetts, first elected to the Senate in 2013.",
+      "bio": "Ed Markey's campaign says that since he entered the Senate he has refused to compromise progressive values and has focused on costs, opportunity, rights, and a safer and more sustainable future.",
+      "issues": [
+        "He says he is fighting to lower costs, protect workers, and expand opportunity in education and jobs.",
+        "He says health care is too expensive and that he wants lower costs, wider access, stronger public health, and corporations held accountable.",
+        "He also lists clean energy and transit, civil rights for LGBTQ people and immigrants, stronger gun laws, and a fairer justice system."
+      ],
+      "site": "https://www.edmarkey.com/",
+      "siteLabel": "edmarkey.com",
+      "donate": "https://secure.actblue.com/donate/ejm2020",
+      "source": "https://www.edmarkey.com/issues-priorities/"
+    },
+    "shiva ayyadurai": {
+      "role": "Scientist and entrepreneur running for the U.S. Senate as an independent.",
+      "bio": "Shiva Ayyadurai's site describes him as a scientist, inventor, and entrepreneur with four degrees from MIT, including a PhD in biological engineering, who has started technology companies in Massachusetts.",
+      "issues": [
+        "He says he wants to solve hard problems by finding root causes and bringing people together, outside the major parties.",
+        "He campaigns on a platform he calls Truth, Freedom, and Health, tying systems science, education, technology, and local action.",
+        "He says Massachusetts is deleting digital ballot images and that he is fighting to preserve them."
+      ],
+      "site": "https://shiva4senate.com/",
+      "siteLabel": "shiva4senate.com",
+      "donate": "https://shiva4senate.com/donate",
+      "source": "https://shiva4senate.com/"
+    },
+    "joe tache": {
+      "role": "Youth worker and community organizer running for the U.S. Senate.",
+      "bio": "Joe Tache's site says he is a socialist based in Boston who has spent more than ten years in movements against worker exploitation, war, police brutality, and gentrification, and that he writes and teaches that capitalism is the root of those problems.",
+      "issues": [
+        "He says the largest corporations should be taken into public control and the economy reorganized around housing, health care, food, education, child care, retirement, and a living wage.",
+        "He says climate policy and meaningful jobs require working people in power, and he wants spending shifted from war to domestic needs.",
+        "He says immigrants, Black Americans, women, and LGBTQ people should not be blamed for the crisis, and he wants rent capped as a share of income, free health care, and millions of union jobs."
+      ],
+      "site": "https://www.tache4ma.com/",
+      "siteLabel": "tache4ma.com",
+      "donate": "https://www.tache4ma.com/donate",
+      "source": "https://www.tache4ma.com/"
+    },
+    "michael walsh": {
+      "role": "Massachusetts litigator running for attorney general.",
+      "bio": "Michael Walsh's site says he was born and raised in Lynnfield, has practiced law in Massachusetts for 15 years, and earned his bachelor's degree and law degree at Suffolk University at unusually young ages. It says he has represented workers, homeowners, service members, and towns, and is currently litigating against the attorney general's office.",
+      "issues": [
+        "He says he will enforce laws already on the books, including the legislative audit, with no selective enforcement.",
+        "He opposes state zoning mandates that he says override local home rule and threaten funding.",
+        "He says he will fight utility rate hikes, vet ballot questions for clarity and legality, and investigate fraud, waste, and abuse."
+      ],
+      "site": "https://www.mikewalshforag.com/",
+      "siteLabel": "mikewalshforag.com",
+      "donate": "https://secure.winred.com/the-committee-to-elect-michael-walsh/donate-today",
+      "source": "https://www.mikewalshforag.com/"
+    },
+    "andrea campbell": {
+      "role": "Attorney general of Massachusetts, running for re-election.",
+      "bio": "Andrea Campbell's site says she was born and raised in Roxbury and the South End, went from foster care to Princeton and into public service, and is the first Black woman to serve as the state's attorney general.",
+      "issues": [
+        "She says she is trying to make life more affordable by putting money back into people's pockets.",
+        "She says she is defending freedoms against rollbacks from the Trump era.",
+        "She says she is fighting for the next generation and for wider opportunity for every child, including reproductive rights, civil rights, and cases against powerful corporations."
+      ],
+      "site": "https://andreacampbell.org/",
+      "siteLabel": "andreacampbell.org",
+      "donate": "https://secure.actblue.com/donate/website20252026",
+      "source": "https://andreacampbell.org/"
+    },
+    "anne brensley": {
+      "role": "Former Wayland selectwoman and business executive running for secretary of state.",
+      "bio": "Anne Brensley's site says she is a former Wayland selectwoman, chief executive of DevCo North America, and was born in Honduras.",
+      "issues": [
+        "She says she wants to encourage business growth.",
+        "She says she will engage directly with disenfranchised voters.",
+        "She says she will protect the integrity of the ballot and campaign on transparency and local control."
+      ],
+      "site": "https://www.annebrensley.com/",
+      "siteLabel": "annebrensley.com",
+      "donate": "https://secure.anedot.com/anne-brensley-2026/give",
+      "source": "https://www.annebrensley.com/"
+    },
+    "william galvin": {
+      "role": "Secretary of the commonwealth, seeking another term.",
+      "bio": "William Galvin's campaign letter says he wants to continue as secretary of state through 2030 and calls himself the longest-serving state elections administrator in the country.",
+      "issues": [
+        "He says he is in federal court resisting efforts to limit registration and voting by mail and to obtain detailed personal information about Massachusetts voters.",
+        "He says he intends to expose and resist federal interference with the 2028 presidential election and the Electoral College.",
+        "He says he wants a complete Census count in 2030, including group quarters and residents who were not born in the United States, and he lists election integrity, early voting, vote-by-mail, consumer protection, and historical preservation."
+      ],
+      "site": "https://billgalvin.com/",
+      "siteLabel": "billgalvin.com",
+      "donate": "",
+      "source": "https://billgalvin.com/"
+    },
+    "richard neal": {
+      "role": "U.S. representative and ranking member of the House Ways and Means Committee.",
+      "bio": "He represents 83 cities and towns in western and central Massachusetts and says he has spent his career serving people he has met and drawing on his own story. He says he is known as a champion of the middle class.",
+      "issues": [
+        "He says grocery and prescription costs are too high, and he is fighting for middle-class tax cuts, community investment, and an end to tariffs that raise prices.",
+        "He says he opposes wars he calls reckless because they threaten security and the economy.",
+        "He says he has fought to protect Social Security and Medicare and to make sure the region gets its fair share."
+      ],
+      "site": "https://www.nealforcongress.com/",
+      "siteLabel": "nealforcongress.com",
+      "donate": "https://secure.actblue.com/donate/richardneal14",
+      "source": "https://www.nealforcongress.com/"
+    },
+    "nadia milleron": {
+      "role": "Independent farmer, attorney, and advocate running for Congress.",
+      "bio": "She says she is a mother whose daughter died in the 2019 Boeing 737 MAX crash in Ethiopia, and that she then helped win passage of the Aircraft Certification, Safety, and Accountability Act. She ran in this district in 2024 and says she answers to voters rather than a party.",
+      "issues": [
+        "She says she would eliminate federal income tax on earnings under $100,000, stop price gouging, and vote against sending tax dollars to foreign wars.",
+        "She says she would bar corporations from buying elections, cap rents, and ban corporate speculators from buying local homes.",
+        "She says she supports health care for all that removes corporate insurers, more local doctors, and a personal term limit of three House terms."
+      ],
+      "site": "https://nadiaforcongress.com/",
+      "siteLabel": "nadiaforcongress.com",
+      "source": "https://nadiaforcongress.com/fight/"
+    },
+    "james mcgovern": {
+      "role": "U.S. representative and chair of the House Rules Committee.",
+      "bio": "Born and raised in Worcester, he is the son of small-business owners and has represented the 2nd District since 1996. He says he also co-chairs the Tom Lantos Human Rights Commission and the House Hunger Caucus.",
+      "issues": [
+        "He says hunger, housing insecurity, and unaffordable health care are political choices, and that he is running against tax breaks for billionaires.",
+        "He says his work in Congress is to defend human rights, reform campaign finance, end hunger, and build an economy where everyone can thrive.",
+        "He says he walks 43 miles each year through the Pioneer Valley to raise money and attention for the Food Bank of Western Massachusetts."
+      ],
+      "site": "https://www.jimmcgovern.com/",
+      "siteLabel": "jimmcgovern.com",
+      "donate": "https://secure.actblue.com/contribute/page/donatemcgovern?refcode=wwwslider&amount=15.00",
+      "source": "https://www.jimmcgovern.com/about/"
+    },
+    "lori trahan": {
+      "role": "U.S. representative and working mother from Lowell.",
+      "bio": "She says she was born and raised in a working-class family in Lowell, is the mother of two girls, and has about 25 years of experience in Congress and the private sector. She says she is an optimist who will work with both parties.",
+      "issues": [
+        "She says health care is a right, that she would strengthen the Affordable Care Act, and that Medicare should be able to negotiate drug prices.",
+        "She says she would invest in education from early childhood through apprenticeships and fight student debt.",
+        "She says she supports a constitutional amendment to overturn Citizens United and a pathway to citizenship alongside updated border security."
+      ],
+      "site": "https://loritrahan.com/",
+      "siteLabel": "loritrahan.com",
+      "donate": "https://secure.actblue.com/donate/loritrahan?refcode=www&amount=5",
+      "source": "https://loritrahan.com/policy-priorities/"
+    },
+    "jake auchincloss": {
+      "role": "Marine and U.S. representative on the Energy and Commerce Committee.",
+      "bio": "He says he is a dad, a Marine, and a lifelong student of American history who represents 35 cities and towns from Fall River to Brookline. He says leaders fight from the front, own hard decisions, and eat last.",
+      "issues": [
+        "He says he works in Washington to defend democracy and lower prices against corruption that makes the American dream too expensive.",
+        "He describes a New American Dream as an excellent education by 18, a home by 30, and a dignified retirement by 65.",
+        "He says housing, health care, and utility costs should be treated by cutting rules that block starter homes, using technology to lower hospital prices, and fixing Social Security so the wealthiest pay more in."
+      ],
+      "site": "https://www.jakeforma.com/",
+      "siteLabel": "jakeforma.com",
+      "donate": "https://secure.actblue.com/donate/jake-auchincloss-for-congress?refcode=websitelaunch24",
+      "source": "https://www.jakeforma.com/issues"
+    },
+    "katherine clark": {
+      "role": "House Democratic whip representing Massachusetts' 5th District.",
+      "bio": "She says she first ran in 2013 because of the issues facing women, children, and families, and that colleagues elected her Democratic whip in 2022, the highest-ranking woman from Massachusetts in House history. She says the people of the district are why she is running again.",
+      "issues": [
+        "She says she is fighting to cancel cuts to Medicaid and the Affordable Care Act, end a war she says raised gas prices, and lift tariffs that made goods more expensive.",
+        "She says that if Democrats control Congress she would lead efforts to crack down on ICE, stop unauthorized wars, and hold the president accountable for using the office to enrich himself.",
+        "She says every worker should have a living wage, paid family leave, and the right to join a union, and she highlights the expanded child tax credit in the American Rescue Plan."
+      ],
+      "site": "https://katherineclark.org/",
+      "siteLabel": "katherineclark.org",
+      "donate": "https://secure.actblue.com/donate/katherine-clark-web",
+      "source": "https://katherineclark.org/"
+    },
+    "ayanna pressley": {
+      "role": "U.S. representative and the first woman of color elected to Congress from Massachusetts.",
+      "bio": "She says she is an advocate, policy-maker, activist, and survivor, elected in 2018 to the 7th District. She says the people closest to the pain should be closest to the power.",
+      "issues": [
+        "She says the campaign has worked on abortion access, student-loan cancellation, and housing justice.",
+        "She says more than $35 million has come home for community health centers, transit, workforce training, and climate justice.",
+        "Her site lists a just economy, the climate crisis, housing as a human right, and changes to the criminal legal system among the issues she is organizing around."
+      ],
+      "site": "https://ayannapressley.com/",
+      "siteLabel": "ayannapressley.com",
+      "donate": "https://secure.actblue.com/donate/web-2024",
+      "source": "https://ayannapressley.com/"
+    },
+    "stephen lynch": {
+      "role": "Former ironworker and U.S. representative from Boston.",
+      "bio": "He says he grew up in Boston public housing, worked nearly 20 years as a structural ironworker, and later became a labor leader, a lawyer, and a member of Congress. He says he never left his working-class values behind.",
+      "issues": [
+        "He says families are working more and receiving less, with stagnant wages and rising costs.",
+        "He says he has worked for fair wages, economic security, higher-education funding, housing assistance, and Social Security.",
+        "He says health care should be affordable and accessible, and that he will keep being a voice for the district."
+      ],
+      "site": "https://www.stephenflynch.com/",
+      "siteLabel": "stephenflynch.com",
+      "donate": "https://secure.actblue.com/donate/stephen-lynch-2",
+      "source": "https://www.stephenflynch.com/"
+    },
+    "bill keating": {
+      "role": "Former prosecutor and U.S. representative for southeastern Massachusetts.",
+      "bio": "He says he was elected to the state House at 23, later served as a state senator and Norfolk district attorney, and won this U.S. House seat in 2010. He and his wife Tevis live in Bourne and have two adult children.",
+      "issues": [
+        "He says he is challenging tariffs that raise prices and hurt small businesses, and that he wants health care that is more affordable and accessible.",
+        "He says he has fought to protect Social Security, Medicare, reproductive rights, and veterans and military families.",
+        "He says he serves on Foreign Affairs and Armed Services and has brought home federal money for coastal resiliency, public safety, clean energy, and jobs."
+      ],
+      "site": "https://keatingforcongress.com/",
+      "siteLabel": "keatingforcongress.com",
+      "source": "https://keatingforcongress.com/meet-bill"
+    },
+    "dan koh": {
+      "role": "Former White House and Labor Department aide running for Congress.",
+      "bio": "Born and raised in Andover, he says his family came from Korea and Lebanon. He says he was a senior White House aide, chief of staff at the Labor Department and for Boston's mayor, and an Andover Select Board member, and that he and his wife Amy have two young children.",
+      "issues": [
+        "He says he is running to defend democracy, protect rights, and reduce the cost of living against what he calls a dismantling of the country.",
+        "He says that in the Biden administration he worked on infrastructure, clean-energy jobs, education, and lower prescription costs for seniors.",
+        "He says that at the Labor Department he helped recover wages, improve workplace safety, and increase union participation, and that he takes no corporate PAC money."
+      ],
+      "site": "https://www.kohforcongress.com/",
+      "siteLabel": "kohforcongress.com",
+      "donate": "https://secure.actblue.com/donate/dk-web-home?refcode=home",
+      "source": "https://www.kohforcongress.com/meet-dan"
+    }
+  },
+  "measures": {}
+}

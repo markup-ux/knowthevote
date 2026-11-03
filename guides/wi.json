@@ -1,0 +1,307 @@
+{
+  "code": "wi",
+  "ballotSource": "https://elections.wi.gov/sites/default/files/documents/Candidates%20on%20Ballot%20By%20Election_November%203%202026%20General%20Election.pdf",
+  "where": {
+    "url": "https://myvote.wi.gov/en-US/FindMyPollingPlace",
+    "label": "MyVote Wisconsin"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one.",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. Wisconsin's constitution says the governor and lieutenant governor are chosen jointly, by one vote that applies to both offices."
+    },
+    "Attorney General": {
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. Wisconsin statute says the Department of Justice appears for the state and prosecutes or defends cases in the court of appeals and the supreme court in which the state is a party, and takes on other duties the law assigns."
+    },
+    "Secretary Of State": {
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. Wisconsin's constitution says the secretary of state keeps a record of the official acts of the legislature and the executive department and performs other duties assigned by law."
+    }
+  },
+  "people": {
+    "tom tiffany": {
+      "role": "Member of Congress and former small-business owner running for governor.",
+      "bio": "His campaign says he grew up on a dairy farm in western Wisconsin, worked his way through UW-River Falls, and with his wife ran Wilderness Cruises in the Northwoods for two decades. It says he also tended a dam on the Willow Flowage for 29 years.",
+      "issues": [
+        "He says he has balanced budgets and worked on border security, and that he is running so Wisconsin families can still own a business and raise children.",
+        "He says he will stand up to unelected bureaucrats and fight for farmers and other workers.",
+        "He argues that another four years of the current leadership in Madison would raise taxes and shrink opportunity."
+      ],
+      "site": "https://tomtiffany.com/",
+      "siteLabel": "tomtiffany.com",
+      "donate": "",
+      "source": "https://tomtiffany.com/about/"
+    },
+    "david crowley": {
+      "role": "Milwaukee County executive and former state representative running for governor.",
+      "bio": "His campaign says he grew up with a father who worked as an electrician and a mother who worked in the service industry, both while dealing with addiction, and that the family faced eviction. It says he and his wife are raising three daughters in Milwaukee.",
+      "issues": [
+        "He says he would take a storefront-revitalization program statewide, tie infrastructure spending to local hiring and labor standards, and expand apprenticeships in the trades and health care.",
+        "He proposes more affordable housing, universal early childhood education, and closing the state's broadband gap.",
+        "He says he would protect voting rights and push for nonpartisan redistricting."
+      ],
+      "site": "https://www.crowleyforwi.com/",
+      "siteLabel": "crowleyforwi.com",
+      "donate": "https://secure.actblue.com/donate/dc-web?refcode=dc-web-donatebtn-refresh",
+      "source": "https://www.crowleyforwi.com/plan"
+    },
+    "eric toney": {
+      "role": "Fond du Lac County district attorney running for attorney general.",
+      "bio": "His campaign says he has prosecuted human trafficking, homicide, sexual assault, drug trafficking, and financial crimes, and that he is a past president of the Wisconsin District Attorneys Association. It says he was named the state's district attorney of the year in 2024.",
+      "issues": [
+        "He says he would back police, keep violent offenders off the street, and put public safety ahead of politics.",
+        "He says he would go after cartels and dealers tied to fentanyl and meth.",
+        "He says he would modernize the state crime labs and clear the testing backlog."
+      ],
+      "site": "https://erictoney.com/",
+      "siteLabel": "erictoney.com",
+      "donate": "",
+      "source": "https://erictoney.com/"
+    },
+    "josh kaul": {
+      "role": "Wisconsin attorney general and former federal prosecutor.",
+      "bio": "His campaign says he grew up in Oshkosh and Fond du Lac and has led the state Department of Justice since 2019.",
+      "issues": [
+        "He says the department has investigated homicides, sexual assaults, internet crimes against children, and drug trafficking, and has sought money from companies tied to the opioid epidemic.",
+        "He says he supports wider background checks on firearm transfers and more funding for crime-victim services and school safety.",
+        "He says he is pro-choice, points to a Wisconsin Supreme Court ruling on an old abortion law, and says the office has joined cases against federal funding cuts and weaker environmental rules."
+      ],
+      "site": "https://joshkaul.org/",
+      "siteLabel": "joshkaul.org",
+      "donate": "https://secure.actblue.com/donate/k4agwebsite",
+      "source": "https://joshkaul.org/on-the-issues"
+    },
+    "jay schroeder": {
+      "role": "Wisconsin native and business graduate running for secretary of state.",
+      "bio": "His campaign says he was born and raised in Clintonville, earned a business degree from UW-Stout, and was the first student elected to the Menomonie City Council.",
+      "issues": [
+        "He says Wisconsin should move election administration from the Wisconsin Elections Commission to the secretary of state, by legislation or by referendum.",
+        "He says voters can hold an elected secretary accountable for how elections are run in a way they cannot hold an appointed commission.",
+        "He says the office should also stand for transparency in public records and in the land funds it oversees."
+      ],
+      "site": "https://jayforwisconsin.com/",
+      "siteLabel": "jayforwisconsin.com",
+      "donate": "https://secure.winred.com/jayforwisconsin/donate-today",
+      "source": "https://jayforwisconsin.com/"
+    },
+    "jocasta zamarripa": {
+      "role": "Milwaukee alder and former state representative running for secretary of state.",
+      "bio": "Her campaign says she was born and raised on Milwaukee's south side, served ten years in the Assembly, and is in her second term on the Common Council. It says she was the first Latina and the first openly bisexual member of both bodies.",
+      "issues": [
+        "She is using the campaign to call for state investment in affordable child care, housing, and relief on grocery costs.",
+        "She says the secretary of state sits on the Board of Commissioners of Public Lands and that she would protect the trust funds and land that support public schools and libraries.",
+        "She says she would push the state to fund public schools so districts rely less on local referenda."
+      ],
+      "site": "https://www.votejocasta.com/",
+      "siteLabel": "votejocasta.com",
+      "donate": "https://secure.actblue.com/donate/jocastaforwi",
+      "source": "https://www.votejocasta.com/issues"
+    },
+    "pete karas": {
+      "role": "Third-party candidate for Wisconsin secretary of state.",
+      "bio": "His campaign says he is running because he believes the two-party system is broken and voters are tired of being told they have only two choices.",
+      "issues": [
+        "He says the secretary of state's limited duties make this a race where a vote can send a statewide message.",
+        "He says electing a third-party candidate would push for political reform and an end to what he calls the two parties' hold on elections."
+      ],
+      "site": "https://petekaras.com/",
+      "siteLabel": "petekaras.com",
+      "donate": "",
+      "source": "https://petekaras.com/"
+    },
+    "mark pocan": {
+      "role": "U.S. representative and former Wisconsin state legislator.",
+      "bio": "He says his politics started in blue-collar Kenosha, where at age eight he delivered literature for his father, a city alderman. He took 14 years in the Assembly to Congress in 2013 and co-chairs the LGBT Equality Caucus and the Labor Caucus.",
+      "issues": [
+        "He says he uses private-sector and public-sector experience to promote job growth and support families in south-central Wisconsin.",
+        "He is chair emeritus of the Congressional Progressive Caucus and describes himself as a progressive leader.",
+        "A campaign news note says he stopped taking corporate PAC money for his reelection."
+      ],
+      "site": "https://pocanforcongress.com/",
+      "siteLabel": "pocanforcongress.com",
+      "donate": "https://secure.actblue.com/contribute/page/pocanwebsite",
+      "source": "https://pocanforcongress.com/meet-mark/"
+    },
+    "rebecca cooke": {
+      "role": "Waitress and small-business owner from an Eau Claire dairy farm running for Congress.",
+      "bio": "A sixth-generation Wisconsinite, she says her family has farmed since 1856 and served in the military from the Civil War through her brother's Navy service. She started a nonprofit she says helped more than 70 small businesses and served on the Wisconsin Economic Development Corporation board.",
+      "issues": [
+        "She says she is running to lower costs and expand opportunity for working people and retirees, especially in rural areas, rather than for the ultra-wealthy.",
+        "She says she would ban stock trading by members of Congress and the White House, overturn Citizens United, and enforce congressional term limits.",
+        "She says she would fully fund law enforcement to keep communities safe and protect the border."
+      ],
+      "site": "https://cookeforwisconsin.com/",
+      "siteLabel": "cookeforwisconsin.com",
+      "donate": "https://secure.actblue.com/donate/cooke-web-2026",
+      "source": "https://cookeforwisconsin.com/priorities/"
+    },
+    "gwen moore": {
+      "role": "U.S. representative and the first African American woman Wisconsin elected to the House.",
+      "bio": "She took the oath on January 4, 2005, later co-chaired the 2020 Democratic National Convention in Milwaukee, and has chaired the Congressional Women's Caucus. She says serving the 4th District is the privilege of a lifetime.",
+      "issues": [
+        "The campaign calls her a champion for working Wisconsinites and a member of the Congressional Progressive Caucus.",
+        "It says she has been a champion for protecting Social Security and Medicare and an advocate for low-income communities.",
+        "It says she is a voice against what it calls an assault on democracy."
+      ],
+      "site": "https://gwenmooreforcongress.com/",
+      "siteLabel": "gwenmooreforcongress.com",
+      "donate": "https://secure.actblue.com/donate/forthegwen",
+      "source": "https://gwenmooreforcongress.com/about-gwen/"
+    },
+    "bryan steil": {
+      "role": "U.S. representative for Wisconsin's 1st District, seeking another term.",
+      "bio": "His campaign says he is a lifelong resident of southeast Wisconsin who was first elected in 2018 after work in the private sector. It says he chairs the Committee on House Administration and a Financial Services subcommittee on digital assets and artificial intelligence.",
+      "issues": [
+        "He says he is cutting wasteful spending to lower prices, securing the border against fentanyl and human trafficking, and working with local law enforcement.",
+        "He says he will protect Social Security and Medicare, including their solvency, and work to lower prescription prices for seniors.",
+        "He also says he is working so service members, their families, and veterans get mental-health care and the benefits they earned."
+      ],
+      "site": "https://bryansteil.com/",
+      "siteLabel": "bryansteil.com",
+      "donate": "https://secure.winred.com/steilforwisconsin/support-bryan-for-congress",
+      "source": "https://bryansteil.com/issues/"
+    },
+    "mitchell berman": {
+      "role": "Emergency nurse running for Congress in Wisconsin's 1st District.",
+      "bio": "His campaign says he grew up in a one-stoplight town in rural Wisconsin, where his father built a roofing business and his mother worked in a foundry. It says he has more than 23 years in health care, including more than a decade as a nurse at the VA, and is a husband and father of two.",
+      "issues": [
+        "He says he will lower costs for working families, make health care more affordable, and protect programs that feed children.",
+        "He says he will stop giveaways to corporations and billionaires and fight corruption in Washington.",
+        "He says he is running for families rather than for billionaires and big corporations."
+      ],
+      "site": "https://www.bermanforcongress.com/",
+      "siteLabel": "bermanforcongress.com",
+      "donate": "https://secure.actblue.com/donate/berman-website?refcode=website-top-right-button",
+      "source": "https://www.bermanforcongress.com/"
+    },
+    "derrick van orden": {
+      "role": "U.S. representative and Navy SEAL veteran for Wisconsin's 3rd District.",
+      "bio": "His campaign says he is a Navy SEAL veteran, a paramedic, a father, and a grandfather, and that he is a statesman rather than a politician. He says America is exceptional and Wisconsin is the heart of it.",
+      "issues": [
+        "He says life should be protected, drawing on friends lost in training and combat.",
+        "He says the rights in the Declaration of Independence and the Constitution should not be infringed.",
+        "He says people do better when government gets out of the way and they can decide what to do with their own money."
+      ],
+      "site": "https://www.vanordenforcongress.com/",
+      "siteLabel": "vanordenforcongress.com",
+      "donate": "https://secure.winred.com/van-orden-for-congress/official-launch/",
+      "source": "https://www.vanordenforcongress.com/"
+    },
+    "tim rogers": {
+      "role": "Milwaukee resident running for Congress in Wisconsin's 4th District.",
+      "bio": "His campaign says he was born and raised in Milwaukee, graduated from North Division High School in 1978, and studied at UW-Parkside and MATC. It says his father and uncle owned a grocery store, and that he has spent almost 30 years delivering for local businesses while singing in church and alumni choirs.",
+      "issues": [
+        "He says schools, graduation rates, and a justice system he calls uneven have declined, and that he wants justice applied equally.",
+        "He says aging lead water lines and poor drinking water need action, not more talk.",
+        "He says he will stand up for the district on taxes and representation and try to restore neighborhood quality of life."
+      ],
+      "site": "https://www.rogersforwisconsin.com/",
+      "siteLabel": "rogersforwisconsin.com",
+      "donate": "https://secure.winred.com/tim-rogers-for-congress/donate",
+      "source": "https://www.rogersforwisconsin.com/about-5"
+    },
+    "scott fitzgerald": {
+      "role": "U.S. representative for Wisconsin's 5th District, seeking another term.",
+      "bio": "His campaign says he was elected in 2020, graduated from Hustisford High School and the University of Wisconsin-Oshkosh, and served 27 years in the Army Reserve, rising to lieutenant colonel. It says he sits on Financial Services and the Judiciary.",
+      "issues": [
+        "He says he is working with President Trump to secure the border, stop illegal drugs and illegal immigration, and end what he calls reckless spending.",
+        "He says he will help small businesses, support law enforcement as the son and father of officers, and defend the right to life and the Second Amendment.",
+        "He says he is pushing back on socialism and on bureaucracies he says are out of control."
+      ],
+      "site": "https://scottfitzgeraldforcongress.com/",
+      "siteLabel": "scottfitzgeraldforcongress.com",
+      "donate": "https://secure.anedot.com/scott-fitzgerald-for-congress/homepage?source_code=Homepage",
+      "source": "https://scottfitzgeraldforcongress.com/"
+    },
+    "andrew beck": {
+      "role": "Health-care and business candidate running for Congress in Wisconsin's 5th District.",
+      "bio": "His campaign says he is the son of Wisconsin's union movement, a product of public schools, and not a career politician. It says he built a career in health care and business beside workers and manufacturers.",
+      "issues": [
+        "He says he would bring practical leadership aimed at lower costs, good-paying jobs, and better health care.",
+        "He says protecting fair elections and democratic institutions is the issue that makes progress on jobs, health care, and education possible.",
+        "He says women must be able to make their own reproductive-health decisions and that Congress should secure that right."
+      ],
+      "site": "https://www.beckforcongress.com/",
+      "siteLabel": "beckforcongress.com",
+      "donate": "https://secure.actblue.com/donate/beck-for-congress-1?refcode=website-banner&amount=26",
+      "source": "https://www.beckforcongress.com/"
+    },
+    "glenn grothman": {
+      "role": "U.S. representative for Wisconsin's 6th District since 2014.",
+      "bio": "His campaign says he serves the 6th District and sits on Oversight and Reform, Budget, and Education and Labor. It says the district has more manufacturing jobs than any other in the country.",
+      "issues": [
+        "He says he is fighting to protect manufacturing jobs, expand technical education, reform welfare, secure the border, and cut federal spending.",
+        "He says he sponsored a bill to limit welfare benefits such as Medicaid and Medicare to U.S. citizens so the safety net is not compromised."
+      ],
+      "site": "https://glenngrothman.com/",
+      "siteLabel": "glenngrothman.com",
+      "donate": "https://secure.winred.com/glenngrothman/donate",
+      "source": "https://glenngrothman.com/meet-glenn/"
+    },
+    "brad smith": {
+      "role": "Veteran and business owner running for Congress in Wisconsin's 6th District.",
+      "bio": "His campaign says he is a dad, a veteran, and a business builder, and a Democrat running to deliver jobs, affordable health care, and training. He says he wants to protect the Wisconsin he loves.",
+      "issues": [
+        "He supports a higher minimum wage, apprenticeships, prevailing wage, project labor agreements, and the right to organize, plus training through tech schools, college, and trades.",
+        "He says health care should protect people with pre-existing conditions and stay close to home, and he wants transparency before large data centers are built.",
+        "As a gun owner, he supports background checks, red-flag laws, and secure storage, and he also calls for fair milk prices, farm broadband, reproductive freedom, and LGBTQ+ protections."
+      ],
+      "site": "https://www.bradsmithforcongress.com/",
+      "siteLabel": "bradsmithforcongress.com",
+      "donate": "https://secure.actblue.com/donate/bradsmithforcongress?refcode=website-donate-button",
+      "source": "https://www.bradsmithforcongress.com/"
+    },
+    "michael alfonso": {
+      "role": "Construction worker and podcast producer running for Congress in Wisconsin's 7th District.",
+      "bio": "His campaign says he was raised from Vilas County to Wausau, paid his way through a mathematics degree at UW-Madison with construction work, and married his high-school best friend at 22. It says his grandfather fled communist Cuba and that he later produced The Dan Bongino Show.",
+      "issues": [
+        "He says he would cut spending and red tape so young families can buy homes, ease rules on farms, and back school choice and homeschooling.",
+        "He says he is fully opposed to abortion and assisted suicide, would ban members of Congress from trading stocks, and would defend the Second Amendment, including constitutional carry.",
+        "He says immigration policy, including H-1B visas, should serve American workers, and that he would return power to the states and stop spending he calls wasteful foreign aid."
+      ],
+      "site": "https://www.alfonsoforwisconsin.com/",
+      "siteLabel": "alfonsoforwisconsin.com",
+      "donate": "https://secure.anedot.com/alfonso-victory/donate",
+      "source": "https://www.alfonsoforwisconsin.com/issues/"
+    },
+    "fred clark": {
+      "role": "Forester and former rural legislator running for Congress in Wisconsin's 7th District.",
+      "bio": "His campaign says he has worked outdoors as a forester and land manager, owned a business, and served as a rural legislator. He says small towns, farms, and forests are what make northern Wisconsin, and that he is running to listen.",
+      "issues": [
+        "He says data centers and artificial intelligence need public oversight and guardrails, and he supports women's decisions on reproductive care, including contraception.",
+        "He says the border should be secure and criminals deported, while people here legally keep their rights.",
+        "He says health care costs too much for the access Americans get, and that constitutional guarantees are at risk if leaders do not uphold them."
+      ],
+      "site": "https://www.clarkforwi.com/",
+      "siteLabel": "clarkforwi.com",
+      "donate": "https://secure.actblue.com/donate/fred-clark-web",
+      "source": "https://www.clarkforwi.com/issues"
+    },
+    "tony wied": {
+      "role": "U.S. representative and businessman for Wisconsin's 8th District.",
+      "bio": "His campaign says he is an America First businessman who spent three decades starting and running companies in northeast Wisconsin, and that he ran because career politicians made empty promises. He says he is a political outsider.",
+      "issues": [
+        "He says illegal immigration surged under the Biden administration and that the border still has to be secured against crime and human trafficking.",
+        "He says he will cut federal spending, get government out of the way of American energy, and keep the military strong.",
+        "He says he will protect farmers and other agricultural producers by reducing regulations so they can succeed."
+      ],
+      "site": "https://tonywiedforcongress.com/",
+      "siteLabel": "tonywiedforcongress.com",
+      "donate": "https://secure.winred.com/tony-wied-for-congress/donate-today",
+      "source": "https://tonywiedforcongress.com/"
+    },
+    "rick crosson": {
+      "role": "Army veteran and school board member running for Congress in Wisconsin's 8th District.",
+      "bio": "His campaign says he has served in the U.S. Army, in business, and on a school board. He says he is running to represent northeast Wisconsin and help people solve problems.",
+      "issues": [
+        "He says the campaign is focused on affordability, which he describes as helping families meet their needs without constant financial stress.",
+        "He says accountability means leaders who show up, listen, and act transparently.",
+        "He says results means real improvements in people's lives, and that he wants leadership that brings people together."
+      ],
+      "site": "https://rickcrosson.com/",
+      "siteLabel": "rickcrosson.com",
+      "donate": "https://secure.actblue.com/donate/crosson-general",
+      "source": "https://rickcrosson.com/"
+    }
+  },
+  "measures": {}
+}

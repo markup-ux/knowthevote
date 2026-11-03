@@ -1,0 +1,505 @@
+{
+  "code": "wa",
+  "ballotSource": "https://voter.votewa.gov/CandidateList.aspx?e=899",
+  "where": {
+    "url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations",
+    "label": "Washington Secretary of State"
+  },
+  "offices": {
+    "U.S. House": {
+      "kicker": "Federal",
+      "job": "Each district elects one representative. The winner votes on federal law and spending. The term is two years."
+    }
+  },
+  "people": {
+    "district 1|mary silva": {
+      "role": "Candidate for Congress in Washington's 1st District.",
+      "bio": "Her issues page lays out what she calls an America-first platform on jobs, security, spending, and elections.",
+      "issues": [
+        "Her platform calls for bringing semiconductor, IT, AI, and cybersecurity work back to the United States and for restructuring H-1B visas so companies hire locally.",
+        "She wants stronger border security, a review of security clearances, and an audit of the Pentagon and intelligence contracting.",
+        "She supports voter ID and a midweek election holiday, and she says patients, including parents, should control medical decisions."
+      ],
+      "site": "https://www.marysilvaforcongress.com/",
+      "siteLabel": "marysilvaforcongress.com",
+      "donate": "https://www.marysilvaforcongress.com/donate",
+      "source": "https://www.marysilvaforcongress.com/issues"
+    },
+    "mary silva": {
+      "role": "Candidate for Congress in Washington's 1st District.",
+      "bio": "Her issues page lays out what she calls an America-first platform on jobs, security, spending, and elections.",
+      "issues": [
+        "Her platform calls for bringing semiconductor, IT, AI, and cybersecurity work back to the United States and for restructuring H-1B visas so companies hire locally.",
+        "She wants stronger border security, a review of security clearances, and an audit of the Pentagon and intelligence contracting.",
+        "She supports voter ID and a midweek election holiday, and she says patients, including parents, should control medical decisions."
+      ],
+      "site": "https://www.marysilvaforcongress.com/",
+      "siteLabel": "marysilvaforcongress.com",
+      "donate": "https://www.marysilvaforcongress.com/donate",
+      "source": "https://www.marysilvaforcongress.com/issues"
+    },
+    "district 1|suzan delbene": {
+      "role": "U.S. representative for Washington's 1st District.",
+      "bio": "She says she is trying to move past rhetoric and deliver for the district's working families and businesses, and her campaign notes that she chairs the Democratic Congressional Campaign Committee.",
+      "issues": [
+        "She wants economic policy aimed at rising gas, housing, and child-care costs, and she says she is running to win a House majority that can check the administration.",
+        "She supports the Affordable Care Act and a path to universal coverage that includes a public option, plus comprehensive immigration reform and legal limits on ICE.",
+        "She also lists climate action, reproductive rights, housing, Social Security, and digital privacy as priorities."
+      ],
+      "site": "https://delbeneforcongress.com/",
+      "siteLabel": "delbeneforcongress.com",
+      "donate": "https://secure.actblue.com/donate/suzan-delbene-2018-website",
+      "source": "https://delbeneforcongress.com/issues/"
+    },
+    "suzan delbene": {
+      "role": "U.S. representative for Washington's 1st District.",
+      "bio": "She says she is trying to move past rhetoric and deliver for the district's working families and businesses, and her campaign notes that she chairs the Democratic Congressional Campaign Committee.",
+      "issues": [
+        "She wants economic policy aimed at rising gas, housing, and child-care costs, and she says she is running to win a House majority that can check the administration.",
+        "She supports the Affordable Care Act and a path to universal coverage that includes a public option, plus comprehensive immigration reform and legal limits on ICE.",
+        "She also lists climate action, reproductive rights, housing, Social Security, and digital privacy as priorities."
+      ],
+      "site": "https://delbeneforcongress.com/",
+      "siteLabel": "delbeneforcongress.com",
+      "donate": "https://secure.actblue.com/donate/suzan-delbene-2018-website",
+      "source": "https://delbeneforcongress.com/issues/"
+    },
+    "district 2|edwin feller": {
+      "role": "Candidate for Congress who grew up on a Whatcom County dairy farm.",
+      "bio": "He says the district needs a representative focused on economics and public safety, and he argues that high taxes and a larger government created the affordability crunch.",
+      "issues": [
+        "He supports tying federal public-safety grants to local cooperation, labeling cartels as foreign terrorist organizations, and ending sanctuary policies.",
+        "He wants faster energy permits, more nuclear and hydroelectric power, and a repeal of federal carbon taxes.",
+        "He wants Title IX to define sex as biological sex, a federal ban on irreversible medical procedures for minors, and immigration rebuilt around nuclear families and job skills."
+      ],
+      "site": "https://fellerforcongress.com/",
+      "siteLabel": "fellerforcongress.com",
+      "donate": "",
+      "source": "https://fellerforcongress.com/"
+    },
+    "edwin feller": {
+      "role": "Candidate for Congress who grew up on a Whatcom County dairy farm.",
+      "bio": "He says the district needs a representative focused on economics and public safety, and he argues that high taxes and a larger government created the affordability crunch.",
+      "issues": [
+        "He supports tying federal public-safety grants to local cooperation, labeling cartels as foreign terrorist organizations, and ending sanctuary policies.",
+        "He wants faster energy permits, more nuclear and hydroelectric power, and a repeal of federal carbon taxes.",
+        "He wants Title IX to define sex as biological sex, a federal ban on irreversible medical procedures for minors, and immigration rebuilt around nuclear families and job skills."
+      ],
+      "site": "https://fellerforcongress.com/",
+      "siteLabel": "fellerforcongress.com",
+      "donate": "",
+      "source": "https://fellerforcongress.com/"
+    },
+    "district 2|rick larsen": {
+      "role": "U.S. representative for Washington's 2nd District.",
+      "bio": "His family has lived in northwest Washington for more than a century; he grew up in Arlington as the son of a union power-line worker and a mother who raised eight children, and he worked his way through Pacific Lutheran University.",
+      "issues": [
+        "He says his votes are aimed at lowering costs, bringing federal investment home, and building an economy that works for more people.",
+        "He says he will hold the administration and ICE accountable, combat fentanyl, and protect reproductive freedom.",
+        "He also lists more access to health care and support for veterans, and he serves as the lead Democrat on the Transportation and Infrastructure Committee."
+      ],
+      "site": "https://www.ricklarsen.org/",
+      "siteLabel": "ricklarsen.org",
+      "donate": "https://secure.actblue.com/donate/stand-with-rick-larsen",
+      "source": "https://www.ricklarsen.org/about/"
+    },
+    "rick larsen": {
+      "role": "U.S. representative for Washington's 2nd District.",
+      "bio": "His family has lived in northwest Washington for more than a century; he grew up in Arlington as the son of a union power-line worker and a mother who raised eight children, and he worked his way through Pacific Lutheran University.",
+      "issues": [
+        "He says his votes are aimed at lowering costs, bringing federal investment home, and building an economy that works for more people.",
+        "He says he will hold the administration and ICE accountable, combat fentanyl, and protect reproductive freedom.",
+        "He also lists more access to health care and support for veterans, and he serves as the lead Democrat on the Transportation and Infrastructure Committee."
+      ],
+      "site": "https://www.ricklarsen.org/",
+      "siteLabel": "ricklarsen.org",
+      "donate": "https://secure.actblue.com/donate/stand-with-rick-larsen",
+      "source": "https://www.ricklarsen.org/about/"
+    },
+    "district 3|john braun": {
+      "role": "Navy veteran and small-business owner running for Congress.",
+      "bio": "He calls himself a citizen-legislator who has balanced budgets, signed paychecks, and fought to put parents in control of schools.",
+      "issues": [
+        "He wants spending that feeds inflation cut back, and less red tape for small manufacturers and the skilled trades.",
+        "He supports a federal parents' bill of rights, lower public-university tuition, and more training in the trades.",
+        "He says he would shut down open-air drug markets, interdict fentanyl, finish border barriers, and continue sea-lion control to help salmon runs."
+      ],
+      "site": "https://www.votebraun.com/",
+      "siteLabel": "votebraun.com",
+      "donate": "https://secure.anedot.com/john-braun-for-congress/donate",
+      "source": "https://www.votebraun.com/issues"
+    },
+    "john braun": {
+      "role": "Navy veteran and small-business owner running for Congress.",
+      "bio": "He calls himself a citizen-legislator who has balanced budgets, signed paychecks, and fought to put parents in control of schools.",
+      "issues": [
+        "He wants spending that feeds inflation cut back, and less red tape for small manufacturers and the skilled trades.",
+        "He supports a federal parents' bill of rights, lower public-university tuition, and more training in the trades.",
+        "He says he would shut down open-air drug markets, interdict fentanyl, finish border barriers, and continue sea-lion control to help salmon runs."
+      ],
+      "site": "https://www.votebraun.com/",
+      "siteLabel": "votebraun.com",
+      "donate": "https://secure.anedot.com/john-braun-for-congress/donate",
+      "source": "https://www.votebraun.com/issues"
+    },
+    "district 3|marie gluesenkamp perez": {
+      "role": "U.S. representative and auto-shop owner from southwest Washington.",
+      "bio": "She describes herself as a fifth-generation Washingtonian, a pro-choice mother, and a trades small-business owner who built a house by hand and brought her child to work because day care was too expensive.",
+      "issues": [
+        "She says she will oppose a national abortion ban and protect the freedom to see a doctor.",
+        "She wants local police and firefighters paid enough to stay, and she is pushing a right to repair so farmers and customers are not forced back to the manufacturer.",
+        "She says the campaign takes no corporate PAC money and is working to lower housing, child care, and health-care costs."
+      ],
+      "site": "https://marieforcongress.com/",
+      "siteLabel": "marieforcongress.com",
+      "donate": "https://secure.actblue.com/donate/mgpvf-website",
+      "source": "https://marieforcongress.com/issues/"
+    },
+    "marie gluesenkamp perez": {
+      "role": "U.S. representative and auto-shop owner from southwest Washington.",
+      "bio": "She describes herself as a fifth-generation Washingtonian, a pro-choice mother, and a trades small-business owner who built a house by hand and brought her child to work because day care was too expensive.",
+      "issues": [
+        "She says she will oppose a national abortion ban and protect the freedom to see a doctor.",
+        "She wants local police and firefighters paid enough to stay, and she is pushing a right to repair so farmers and customers are not forced back to the manufacturer.",
+        "She says the campaign takes no corporate PAC money and is working to lower housing, child care, and health-care costs."
+      ],
+      "site": "https://marieforcongress.com/",
+      "siteLabel": "marieforcongress.com",
+      "donate": "https://secure.actblue.com/donate/mgpvf-website",
+      "source": "https://marieforcongress.com/issues/"
+    },
+    "district 4|amanda mckinney": {
+      "role": "Yakima County commissioner running for Congress.",
+      "bio": "She says she came from a family rooted in faith, agriculture, and service, worked in banking, and has used county office to challenge COVID rules, secure water, and flag fraud.",
+      "issues": [
+        "She says government should protect people and leave decisions with those closest to the consequences.",
+        "She says she will stand with President Trump on the border, energy production, constitutional rights, and federal spending.",
+        "Her stated priorities are faith, family, agriculture, public safety, and freedom for central Washington."
+      ],
+      "site": "https://www.mckinneyforwashington.com/",
+      "siteLabel": "mckinneyforwashington.com",
+      "donate": "https://secure.winred.com/amanda-mckinney-for-congress/donate-today-website",
+      "source": "https://www.mckinneyforwashington.com/"
+    },
+    "amanda mckinney": {
+      "role": "Yakima County commissioner running for Congress.",
+      "bio": "She says she came from a family rooted in faith, agriculture, and service, worked in banking, and has used county office to challenge COVID rules, secure water, and flag fraud.",
+      "issues": [
+        "She says government should protect people and leave decisions with those closest to the consequences.",
+        "She says she will stand with President Trump on the border, energy production, constitutional rights, and federal spending.",
+        "Her stated priorities are faith, family, agriculture, public safety, and freedom for central Washington."
+      ],
+      "site": "https://www.mckinneyforwashington.com/",
+      "siteLabel": "mckinneyforwashington.com",
+      "donate": "https://secure.winred.com/amanda-mckinney-for-congress/donate-today-website",
+      "source": "https://www.mckinneyforwashington.com/"
+    },
+    "district 4|john duresky": {
+      "role": "Candidate for Washington's 4th District focused on farms, jobs, and rural care.",
+      "bio": "He says he wants practical results for central Washington families, and his platform treats Hanford cleanup work as a job base to protect.",
+      "issues": [
+        "He wants tariffs that hurt farmers removed, irrigation rights protected, and the Farm Bill written for small and mid-size operations.",
+        "He says he will defend Hanford cleanup jobs, raise the federal minimum wage, protect the right to organize, and close tax preferences such as stepped-up basis and carried interest.",
+        "He wants rural hospitals kept open, ACA subsidies restored, and Medicare and Medicaid protected from cuts."
+      ],
+      "site": "https://www.johnduresky4congress.com/",
+      "siteLabel": "johnduresky4congress.com",
+      "donate": "https://secure.actblue.com/donate/jd4cweb",
+      "source": "https://www.johnduresky4congress.com/issues"
+    },
+    "john duresky": {
+      "role": "Candidate for Washington's 4th District focused on farms, jobs, and rural care.",
+      "bio": "He says he wants practical results for central Washington families, and his platform treats Hanford cleanup work as a job base to protect.",
+      "issues": [
+        "He wants tariffs that hurt farmers removed, irrigation rights protected, and the Farm Bill written for small and mid-size operations.",
+        "He says he will defend Hanford cleanup jobs, raise the federal minimum wage, protect the right to organize, and close tax preferences such as stepped-up basis and carried interest.",
+        "He wants rural hospitals kept open, ACA subsidies restored, and Medicare and Medicaid protected from cuts."
+      ],
+      "site": "https://www.johnduresky4congress.com/",
+      "siteLabel": "johnduresky4congress.com",
+      "donate": "https://secure.actblue.com/donate/jd4cweb",
+      "source": "https://www.johnduresky4congress.com/issues"
+    },
+    "district 5|michael baumgartner": {
+      "role": "U.S. representative for Washington's 5th District.",
+      "bio": "He says his first year in Congress coincided with fewer border crossings, less crime, lower taxes, and protection for the Lower Snake River dams.",
+      "issues": [
+        "He says he is running so those policies stay in place.",
+        "He describes the job as delivering results for families and for eastern Washington's regional interests."
+      ],
+      "site": "https://www.votebaumgartner.com/",
+      "siteLabel": "votebaumgartner.com",
+      "donate": "https://secure.anedot.com/vote-baumgartner-for-congress-campaign/onlinedonation",
+      "source": "https://www.votebaumgartner.com/"
+    },
+    "michael baumgartner": {
+      "role": "U.S. representative for Washington's 5th District.",
+      "bio": "He says his first year in Congress coincided with fewer border crossings, less crime, lower taxes, and protection for the Lower Snake River dams.",
+      "issues": [
+        "He says he is running so those policies stay in place.",
+        "He describes the job as delivering results for families and for eastern Washington's regional interests."
+      ],
+      "site": "https://www.votebaumgartner.com/",
+      "siteLabel": "votebaumgartner.com",
+      "donate": "https://secure.anedot.com/vote-baumgartner-for-congress-campaign/onlinedonation",
+      "source": "https://www.votebaumgartner.com/"
+    },
+    "district 5|carmela conroy": {
+      "role": "Former Spokane County deputy prosecutor and Foreign Service officer running for Congress.",
+      "bio": "She is a third-generation eastern Washingtonian whose family worked on farms, in trades, and on the railroad, and she says she later served under six presidents overseas.",
+      "issues": [
+        "She wants lower everyday costs and more investment in housing, child care, education, and infrastructure for families, new workers, small businesses, and farms.",
+        "She says her prosecutor and diplomatic work shapes a focus on public safety and steady leadership abroad.",
+        "She wants Medicare, Medicaid, and Social Security protected, health costs lowered, rural hospitals strengthened, and veterans supported."
+      ],
+      "site": "https://conroy4congress.com/",
+      "siteLabel": "conroy4congress.com",
+      "donate": "https://secure.actblue.com/donate/conroy",
+      "source": "https://conroy4congress.com/"
+    },
+    "carmela conroy": {
+      "role": "Former Spokane County deputy prosecutor and Foreign Service officer running for Congress.",
+      "bio": "She is a third-generation eastern Washingtonian whose family worked on farms, in trades, and on the railroad, and she says she later served under six presidents overseas.",
+      "issues": [
+        "She wants lower everyday costs and more investment in housing, child care, education, and infrastructure for families, new workers, small businesses, and farms.",
+        "She says her prosecutor and diplomatic work shapes a focus on public safety and steady leadership abroad.",
+        "She wants Medicare, Medicaid, and Social Security protected, health costs lowered, rural hospitals strengthened, and veterans supported."
+      ],
+      "site": "https://conroy4congress.com/",
+      "siteLabel": "conroy4congress.com",
+      "donate": "https://secure.actblue.com/donate/conroy",
+      "source": "https://conroy4congress.com/"
+    },
+    "district 6|teresa fox": {
+      "role": "Safety professional and emergency manager running for Washington's 6th District.",
+      "bio": "She says her work has run from shipyards and naval bases to fish-processing vessels in the Bering Sea, in jobs where excuses were not accepted.",
+      "issues": [
+        "She wants federal spending restrained and naval readiness funded through the workforce rather than through more bureaucracy.",
+        "She calls for police staffing in rural communities, Title IX rules she says would protect fair competition and privacy, and health care for rural areas.",
+        "She supports congressional term limits."
+      ],
+      "site": "https://foxforwa.com/",
+      "siteLabel": "foxforwa.com",
+      "donate": "",
+      "source": "https://foxforwa.com/"
+    },
+    "teresa fox": {
+      "role": "Safety professional and emergency manager running for Washington's 6th District.",
+      "bio": "She says her work has run from shipyards and naval bases to fish-processing vessels in the Bering Sea, in jobs where excuses were not accepted.",
+      "issues": [
+        "She wants federal spending restrained and naval readiness funded through the workforce rather than through more bureaucracy.",
+        "She calls for police staffing in rural communities, Title IX rules she says would protect fair competition and privacy, and health care for rural areas.",
+        "She supports congressional term limits."
+      ],
+      "site": "https://foxforwa.com/",
+      "siteLabel": "foxforwa.com",
+      "donate": "",
+      "source": "https://foxforwa.com/"
+    },
+    "district 6|emily randall": {
+      "role": "Candidate for Congress who grew up in Washington's 6th District.",
+      "bio": "She says she is the daughter of a shipyard worker and a paraeducator and that those roots connect her to the district's working-class families.",
+      "issues": [
+        "The campaign says it does not accept corporate PAC money and is funded by working people.",
+        "She frames the race as a bid to change conditions for the families in the district where she was born and raised."
+      ],
+      "site": "https://electemilyrandall.com/",
+      "siteLabel": "electemilyrandall.com",
+      "donate": "https://secure.actblue.com/donate/er4c2024",
+      "source": "https://electemilyrandall.com/"
+    },
+    "emily randall": {
+      "role": "Candidate for Congress who grew up in Washington's 6th District.",
+      "bio": "She says she is the daughter of a shipyard worker and a paraeducator and that those roots connect her to the district's working-class families.",
+      "issues": [
+        "The campaign says it does not accept corporate PAC money and is funded by working people.",
+        "She frames the race as a bid to change conditions for the families in the district where she was born and raised."
+      ],
+      "site": "https://electemilyrandall.com/",
+      "siteLabel": "electemilyrandall.com",
+      "donate": "https://secure.actblue.com/donate/er4c2024",
+      "source": "https://electemilyrandall.com/"
+    },
+    "district 7|pramila jayapal": {
+      "role": "U.S. representative for Washington's 7th District.",
+      "bio": "She is the first South Asian American woman elected to the House, chaired the Congressional Progressive Caucus for six years, and is the ranking Democrat on the Judiciary immigration subcommittee.",
+      "issues": [
+        "She introduced the Medicare for All Act and describes health care as a human right.",
+        "She introduced a housing bill to invest in affordable homes and a College for All proposal.",
+        "She also lists immigration reform and climate work, including as the first immigrant to serve as ranking member of the Judiciary immigration subcommittee."
+      ],
+      "site": "https://www.pramilaforcongress.com/",
+      "siteLabel": "pramilaforcongress.com",
+      "donate": "https://secure.actblue.com/contribute/page/pramilaforcongress",
+      "source": "https://www.pramilaforcongress.com/bio"
+    },
+    "pramila jayapal": {
+      "role": "U.S. representative for Washington's 7th District.",
+      "bio": "She is the first South Asian American woman elected to the House, chaired the Congressional Progressive Caucus for six years, and is the ranking Democrat on the Judiciary immigration subcommittee.",
+      "issues": [
+        "She introduced the Medicare for All Act and describes health care as a human right.",
+        "She introduced a housing bill to invest in affordable homes and a College for All proposal.",
+        "She also lists immigration reform and climate work, including as the first immigrant to serve as ranking member of the Judiciary immigration subcommittee."
+      ],
+      "site": "https://www.pramilaforcongress.com/",
+      "siteLabel": "pramilaforcongress.com",
+      "donate": "https://secure.actblue.com/contribute/page/pramilaforcongress",
+      "source": "https://www.pramilaforcongress.com/bio"
+    },
+    "district 8|kim schrier": {
+      "role": "Pediatrician and U.S. representative for Washington's 8th District.",
+      "bio": "She chairs the Democratic Doctors Caucus and says travel around the district keeps turning up families squeezed by higher prices.",
+      "issues": [
+        "She wrote a bill to suspend the federal gas tax for temporary relief, and she says she is fighting corporate price gouging, grocery mergers, and tariffs that hit farmers and small businesses.",
+        "She is pushing housing bills, including a permanent housing-affordability proposal and support for the bipartisan Road to Housing package.",
+        "She wants ACA premium tax credits restored and Republican Medicaid cuts undone so rural hospitals and Apple Health coverage stay in place."
+      ],
+      "site": "https://drkimschrier.com/",
+      "siteLabel": "drkimschrier.com",
+      "donate": "https://secure.actblue.com/donate/kimschrier",
+      "source": "https://drkimschrier.com/my-priorities/"
+    },
+    "kim schrier": {
+      "role": "Pediatrician and U.S. representative for Washington's 8th District.",
+      "bio": "She chairs the Democratic Doctors Caucus and says travel around the district keeps turning up families squeezed by higher prices.",
+      "issues": [
+        "She wrote a bill to suspend the federal gas tax for temporary relief, and she says she is fighting corporate price gouging, grocery mergers, and tariffs that hit farmers and small businesses.",
+        "She is pushing housing bills, including a permanent housing-affordability proposal and support for the bipartisan Road to Housing package.",
+        "She wants ACA premium tax credits restored and Republican Medicaid cuts undone so rural hospitals and Apple Health coverage stay in place."
+      ],
+      "site": "https://drkimschrier.com/",
+      "siteLabel": "drkimschrier.com",
+      "donate": "https://secure.actblue.com/donate/kimschrier",
+      "source": "https://drkimschrier.com/my-priorities/"
+    },
+    "district 8|spencer meline": {
+      "role": "Candidate for Congress in Washington's 8th District.",
+      "bio": "He says the American Dream is still alive but harder to reach, and that he is running so working families and the next generation can build a life.",
+      "issues": [
+        "He supports congressional term limits, single-subject bills, a ban on individual stock trading by members, and searchable federal spending.",
+        "He wants Small Business Administration loans simplified, housing and the cost of living addressed, and forests managed with wildfire defense in mind.",
+        "He also lists patient-centered health care, skills education, and rules for technology and artificial intelligence."
+      ],
+      "site": "https://www.melineforcongress.com/",
+      "siteLabel": "melineforcongress.com",
+      "donate": "https://secure.winred.com/meline-for-congress/donate",
+      "source": "https://www.melineforcongress.com/priorities"
+    },
+    "spencer meline": {
+      "role": "Candidate for Congress in Washington's 8th District.",
+      "bio": "He says the American Dream is still alive but harder to reach, and that he is running so working families and the next generation can build a life.",
+      "issues": [
+        "He supports congressional term limits, single-subject bills, a ban on individual stock trading by members, and searchable federal spending.",
+        "He wants Small Business Administration loans simplified, housing and the cost of living addressed, and forests managed with wildfire defense in mind.",
+        "He also lists patient-centered health care, skills education, and rules for technology and artificial intelligence."
+      ],
+      "site": "https://www.melineforcongress.com/",
+      "siteLabel": "melineforcongress.com",
+      "donate": "https://secure.winred.com/meline-for-congress/donate",
+      "source": "https://www.melineforcongress.com/priorities"
+    },
+    "district 9|adam smith": {
+      "role": "U.S. representative for Washington's 9th District.",
+      "bio": "He says representing the community where he grew up, and where he and his wife Sara raised their family, is the honor of his life, and he describes himself as a lifelong Washingtonian.",
+      "issues": [
+        "He says he will work to lower rent and get more housing built.",
+        "He says he will stand up to the Trump administration, put people ahead of profits, and open pathways to better-paid jobs.",
+        "He also lists protecting abortion rights and protecting Puget Sound for future generations."
+      ],
+      "site": "https://electadamsmith.com/",
+      "siteLabel": "electadamsmith.com",
+      "donate": "https://electadamsmith.com/contribute",
+      "source": "https://electadamsmith.com/"
+    },
+    "adam smith": {
+      "role": "U.S. representative for Washington's 9th District.",
+      "bio": "He says representing the community where he grew up, and where he and his wife Sara raised their family, is the honor of his life, and he describes himself as a lifelong Washingtonian.",
+      "issues": [
+        "He says he will work to lower rent and get more housing built.",
+        "He says he will stand up to the Trump administration, put people ahead of profits, and open pathways to better-paid jobs.",
+        "He also lists protecting abortion rights and protecting Puget Sound for future generations."
+      ],
+      "site": "https://electadamsmith.com/",
+      "siteLabel": "electadamsmith.com",
+      "donate": "https://electadamsmith.com/contribute",
+      "source": "https://electadamsmith.com/"
+    },
+    "district 9|doug basler": {
+      "role": "Video-production business owner running for Congress.",
+      "bio": "He founded Prologue Digital, has worked in media and sales training since 1990, and has been a Republican precinct officer and a volunteer with Seattle rescue missions.",
+      "issues": [
+        "He says families are being priced out by gas, energy, groceries, housing, insurance, and taxes, and he argues the Climate Commitment Act raises energy costs.",
+        "He wants an economy in which people can start a business, buy a home, learn a trade, and advance.",
+        "He says public safety should hold people accountable for crime and disorder while still offering compassion to people in crisis."
+      ],
+      "site": "https://www.dougbasler.com/",
+      "siteLabel": "dougbasler.com",
+      "donate": "https://secure.winred.com/friends-of-doug-basler/run",
+      "source": "https://www.dougbasler.com/about/"
+    },
+    "doug basler": {
+      "role": "Video-production business owner running for Congress.",
+      "bio": "He founded Prologue Digital, has worked in media and sales training since 1990, and has been a Republican precinct officer and a volunteer with Seattle rescue missions.",
+      "issues": [
+        "He says families are being priced out by gas, energy, groceries, housing, insurance, and taxes, and he argues the Climate Commitment Act raises energy costs.",
+        "He wants an economy in which people can start a business, buy a home, learn a trade, and advance.",
+        "He says public safety should hold people accountable for crime and disorder while still offering compassion to people in crisis."
+      ],
+      "site": "https://www.dougbasler.com/",
+      "siteLabel": "dougbasler.com",
+      "donate": "https://secure.winred.com/friends-of-doug-basler/run",
+      "source": "https://www.dougbasler.com/about/"
+    },
+    "district 10|marilyn strickland": {
+      "role": "U.S. representative working on family costs, health care, and military families.",
+      "bio": "She says she is a proud Army brat representing service members, veterans, and military families, and that her time in Congress has centered on costs, jobs, and care.",
+      "issues": [
+        "She says working people and small businesses need lower costs, more jobs, and an economy put back on track.",
+        "She wants health care people can afford, Medicare protected, and more renewable energy.",
+        "She says she has led bipartisan work on food insecurity and housing for military families in a district she describes as full of service members and veterans."
+      ],
+      "site": "https://www.stricklandforwashington.com/",
+      "siteLabel": "stricklandforwashington.com",
+      "donate": "https://secure.actblue.com/donate/strickandwebsite",
+      "source": "https://www.stricklandforwashington.com/priorities/"
+    },
+    "marilyn strickland": {
+      "role": "U.S. representative working on family costs, health care, and military families.",
+      "bio": "She says she is a proud Army brat representing service members, veterans, and military families, and that her time in Congress has centered on costs, jobs, and care.",
+      "issues": [
+        "She says working people and small businesses need lower costs, more jobs, and an economy put back on track.",
+        "She wants health care people can afford, Medicare protected, and more renewable energy.",
+        "She says she has led bipartisan work on food insecurity and housing for military families in a district she describes as full of service members and veterans."
+      ],
+      "site": "https://www.stricklandforwashington.com/",
+      "siteLabel": "stricklandforwashington.com",
+      "donate": "https://secure.actblue.com/donate/strickandwebsite",
+      "source": "https://www.stricklandforwashington.com/priorities/"
+    },
+    "district 10|nirav sheth": {
+      "role": "Marine veteran and former Lakewood police officer running for Congress.",
+      "bio": "He says he was born and raised in India, came to the United States in 2008 to study engineering, served four years in the Marines, and later worked as a police officer in Lakewood before starting a business in Pierce County.",
+      "issues": [
+        "He says the campaign is about safe communities, strong infrastructure, and a future in which people can reach their own goals.",
+        "His site organizes that pitch around affordability and jobs, immigration, public safety, small businesses, and local control of education."
+      ],
+      "site": "https://shethforcongress.com/",
+      "siteLabel": "shethforcongress.com",
+      "donate": "https://secure.anedot.com/sheth-for-congress/29e7bb62-ca9b-49e0-898c-c940e8f18713",
+      "source": "https://shethforcongress.com/"
+    },
+    "nirav sheth": {
+      "role": "Marine veteran and former Lakewood police officer running for Congress.",
+      "bio": "He says he was born and raised in India, came to the United States in 2008 to study engineering, served four years in the Marines, and later worked as a police officer in Lakewood before starting a business in Pierce County.",
+      "issues": [
+        "He says the campaign is about safe communities, strong infrastructure, and a future in which people can reach their own goals.",
+        "His site organizes that pitch around affordability and jobs, immigration, public safety, small businesses, and local control of education."
+      ],
+      "site": "https://shethforcongress.com/",
+      "siteLabel": "shethforcongress.com",
+      "donate": "https://secure.anedot.com/sheth-for-congress/29e7bb62-ca9b-49e0-898c-c940e8f18713",
+      "source": "https://shethforcongress.com/"
+    }
+  },
+  "measures": {}
+}

@@ -3,509 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leaders · Illinois, November 3, 2026</title>
-<meta name="description" content="Leaders is an independent guide to every statewide race on the Illinois ballot for November 3, 2026. Photos, offices, and what each candidate says they stand for. Not an endorsement.">
+<title>Leaders.vote · November 3, 2026</title>
+<meta name="description" content="Leaders.vote is an independent voter guide for every state in the November 3, 2026 general election. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
-<style>
-  :root {
-    --paper: #f4f0e6;
-    --ink: #1c1915;
-    --muted: #5c564c;
-    --line: #d8d0c2;
-    --chip: #ebe4d6;
-    --dem: #1e4d7b;
-    --rep: #8d3232;
-    --ind: #3e5c45;
-    --other: #5c4a2a;
-    --max: 1080px;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
-    line-height: 1.45;
-  }
-  a { color: inherit; }
-  img { display: block; max-width: 100%; }
-  .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    background: #0a3161;
-    border-bottom: 5px solid #bf0a30;
-  }
-  header::after {
-    content: "";
-    display: block;
-    height: 3px;
-    background: #fff;
-  }
-  .bar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 14px 0 12px;
-  }
-  .brand {
-    color: #fff;
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-size: 22px;
-    text-decoration: none;
-    letter-spacing: -0.03em;
-    white-space: nowrap;
-  }
-  .brand span { color: #d6e4f5; font-family: "Segoe UI", sans-serif; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin-left: 10px; }
-  nav { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; }
-  nav a { text-decoration: none; color: #f4f7fb; white-space: nowrap; }
-  nav a:hover { color: #fff; text-decoration: underline; text-decoration-color: #bf0a30; text-underline-offset: 3px; }
-  .brand:focus-visible, nav a:focus-visible, .lang-button:focus-visible, .lang-menu button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-  .bar-top { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; }
-  .lang { position: relative; display: flex; align-items: center; }
-  .lang-button {
-    position: relative;
-    background: transparent;
-    color: #f4f7fb;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    font: inherit;
-    font-size: 14px;
-    line-height: 1.2;
-    padding: 6px 28px 6px 10px;
-    cursor: pointer;
-  }
-  .lang-button::after {
-    content: "";
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    width: 6px;
-    height: 6px;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    transform: translateY(-75%) rotate(45deg);
-  }
-  .lang-menu {
-    position: absolute;
-    right: 0;
-    top: calc(100% + 8px);
-    z-index: 3;
-    min-width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background: #0a3161;
-    border-bottom: 5px solid #bf0a30;
-  }
-  .lang-menu::before {
-    content: "";
-    display: block;
-    height: 3px;
-    background: #fff;
-  }
-  .lang-menu button {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 8px 14px;
-    border: 0;
-    background: transparent;
-    color: #f4f7fb;
-    font: inherit;
-    font-size: 15px;
-    line-height: 1.3;
-    text-align: left;
-    cursor: pointer;
-  }
-  .lang-menu button:hover,
-  .lang-menu button[aria-selected="true"] {
-    background: #bf0a30;
-    color: #fff;
-  }
-  .lang-note { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  iframe.skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame, .goog-tooltip, .goog-te-spinner-pos { display: none !important; }
-  body { top: 0 !important; position: static !important; }
-  #google_translate_element { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
-  .goog-text-highlight, font { background: transparent !important; box-shadow: none !important; }
-  .hero { padding: 40px 0 28px; scroll-margin-top: 96px; }
-  h1 {
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-weight: 500;
-    font-size: clamp(42px, 6vw, 76px);
-    line-height: 0.95;
-    letter-spacing: -0.03em;
-    margin: 10px 0 0;
-  }
-  .kicker {
-    font-size: 13px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-weight: 650;
-  }
-  .deck { font-size: 20px; max-width: 680px; margin: 18px 0 0; }
-  .when { margin: 18px 0 0; font-size: 16px; color: var(--muted); }
-  .races {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid var(--ink);
-    margin-top: 36px;
-  }
-  .races a {
-    text-decoration: none;
-    padding: 18px 18px 18px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .races strong {
-    display: block;
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-weight: 500;
-    font-size: 22px;
-  }
-  .races span { display: block; margin-top: 4px; color: #3a342c; font-size: 15px; }
-  section.block { padding: 48px 0 12px; border-top: 1px solid var(--ink); scroll-margin-top: 108px; }
-  section.block h2 {
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-weight: 500;
-    font-size: clamp(32px, 4vw, 48px);
-    letter-spacing: -0.03em;
-    margin: 8px 0 0;
-  }
-  .sub { max-width: 760px; font-size: 18px; margin: 12px 0 0; }
-  .candidate {
-    display: grid;
-    grid-template-columns: 168px 1fr;
-    gap: 28px;
-    padding: 28px 0;
-    border-top: 1px solid var(--line);
-    margin-top: 22px;
-  }
-  .avatar, .mono {
-    width: 168px;
-    height: 210px;
-    object-fit: cover;
-    background: #e4ddd0;
-  }
-  .mono {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-size: 48px;
-  }
-  .who { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-  h3 {
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-weight: 500;
-    font-size: 32px;
-    letter-spacing: -0.02em;
-    margin: 0;
-  }
-  .pill {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 4px 7px 3px;
-    background: var(--chip);
-  }
-  .pill.d { color: var(--dem); }
-  .pill.r { color: var(--rep); }
-  .pill.i { color: var(--ind); }
-  .pill.o { color: var(--other); }
-  .role { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
-  .bio { margin: 10px 0 0; font-size: 17px; }
-  .links { margin: 14px 0 0; font-size: 15px; }
-  .links a { text-decoration: underline; text-underline-offset: 2px; }
-  ul { margin: 10px 0 0; padding-left: 18px; }
-  li { margin: 0 0 6px; }
-  .facts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 32px;
-    margin-top: 8px;
-  }
-  .fact { padding: 16px 0; border-top: 1px solid var(--line); }
-  .fact h3 { font-size: 22px; margin-bottom: 6px; }
-  .fact p { margin: 0; }
-  footer {
-    margin-top: 28px;
-    background: #0a3161;
-    border-top: 5px solid #bf0a30;
-    color: #f4f7fb;
-    font-size: 14px;
-  }
-  footer::before {
-    content: "";
-    display: block;
-    height: 3px;
-    background: #fff;
-  }
-  footer .wrap { padding: 28px 0 48px; }
-  footer p { margin: 0 0 10px; }
-  footer a {
-    color: #fff;
-    text-decoration: underline;
-    text-decoration-color: #bf0a30;
-    text-underline-offset: 3px;
-  }
-  footer a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-  .finder { margin-top: 28px; max-width: 720px; }
-  .finder form { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
-  .finder label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 13px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 650;
-    color: var(--muted);
-  }
-  .finder input {
-    font: inherit;
-    font-size: 22px;
-    letter-spacing: 0.06em;
-    width: 8.5rem;
-    padding: 10px 12px;
-    border: 1px solid var(--ink);
-    background: transparent;
-    color: var(--ink);
-  }
-  .finder input.num, .finder input.street { letter-spacing: 0; }
-  .finder input.num { width: 8rem; }
-  .finder input.street { width: min(100%, 18rem); }
-  .finder h2 {
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-weight: 500;
-    font-size: clamp(32px, 4vw, 44px);
-    letter-spacing: -0.03em;
-    margin: 8px 0 0;
-  }
-  .where { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--ink); }
-  .where-card { margin-top: 18px; }
-  .where-card h3 {
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-weight: 500;
-    font-size: 28px;
-    margin: 0;
-  }
-  .where-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-  .where-actions a {
-    text-decoration: none;
-    background: var(--ink);
-    color: var(--paper);
-    padding: 12px 14px;
-  }
-  .where-actions a.quiet { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
-  .finder button {
-    font: inherit;
-    font-size: 16px;
-    padding: 13px 16px;
-    background: var(--ink);
-    color: var(--paper);
-    border: 1px solid var(--ink);
-    cursor: pointer;
-  }
-  .zip-note { margin: 14px 0 0; color: var(--muted); font-size: 15px; }
-  .ballot-block { margin-top: 28px; }
-  .ballot-block h3 { font-size: 28px; margin: 0; }
-  .ballot-block .share, .ballot-block .seat-note { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
-  .seat { margin-top: 16px; }
-  .seat h4 {
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-weight: 500;
-    font-size: 20px;
-    margin: 0;
-  }
-  .person {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: baseline;
-    padding: 10px 0;
-    border-top: 1px solid var(--line);
-  }
-  .person strong {
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-weight: 500;
-    font-size: 22px;
-  }
-  .retain {
-    columns: 2;
-    margin: 8px 0 0;
-    padding: 0;
-    list-style: none;
-  }
-  .retain li {
-    break-inside: avoid;
-    padding: 7px 18px 7px 0;
-    border-top: 1px solid var(--line);
-  }
-  #zip-result:empty { display: none; }
-  #zip-result { margin-top: 8px; }
-  #zip-result .candidate {
-    grid-template-columns: 112px 1fr;
-    gap: 16px 18px;
-    margin-top: 0;
-    padding: 18px 0;
-  }
-  #zip-result .avatar, #zip-result .mono {
-    width: 112px;
-    height: 140px;
-    font-size: 36px;
-  }
-  #zip-result .candidate h3 { font-size: 26px; }
-  #zip-result .bio { font-size: 16px; }
-  .sample-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
-    gap: 32px;
-    align-items: start;
-    margin-top: 8px;
-  }
-  .steps { list-style: none; margin: 0; padding: 0; }
-  .steps li { border-top: 1px solid var(--line); }
-  .steps button {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 12px 8px 12px 2rem;
-    border: 0;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    text-align: left;
-    cursor: pointer;
-  }
-  .steps button::before {
-    content: counter(step);
-    counter-increment: step;
-    position: absolute;
-    left: 0;
-    top: 12px;
-    font-family: Georgia, "Palatino Linotype", serif;
-  }
-  .steps { counter-reset: step; }
-  .steps button.is-on { background: var(--chip); }
-  .sheet-switch { display: flex; gap: 18px; margin: 0 0 8px; }
-  .sheet-switch button, .sheet-move button {
-    font: inherit;
-    background: transparent;
-    color: var(--muted);
-    border: 0;
-    border-bottom: 2px solid transparent;
-    padding: 6px 0;
-    cursor: pointer;
-  }
-  .sheet-switch button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
-  .sheet {
-    background: #fff;
-    color: #161616;
-    border: 1px solid var(--ink);
-    max-height: 640px;
-    overflow: auto;
-    padding: 16px 16px 20px;
-    font-family: "Times New Roman", Times, serif;
-  }
-  .sheet.green { background: #e5efe4; }
-  .sheet-head { margin: 0 0 8px; text-align: center; }
-  .sheet-head strong {
-    display: block;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
-    letter-spacing: 0.08em;
-  }
-  .sheet-head span { display: block; font-size: 14px; }
-  .sheet-instruct { margin: 0 0 12px; font-size: 13px; line-height: 1.35; }
-  .sheet .mini-oval {
-    display: inline-block;
-    width: 14px;
-    height: 10px;
-    margin: 0 3px;
-    border: 1.5px solid #161616;
-    border-radius: 50%;
-    background: #161616;
-    vertical-align: -1px;
-  }
-  .contest { padding: 8px 6px 10px; border-top: 1px solid #161616; }
-  .contest.is-current { background: rgba(28, 25, 21, 0.06); }
-  .sheet.green .contest.is-current { background: rgba(28, 25, 21, 0.05); }
-  .contest h3 {
-    margin: 0;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-  }
-  .contest .detail, .contest .vote-for { margin: 2px 0 0; font-size: 14px; font-weight: 700; }
-  .choice {
-    display: grid;
-    grid-template-columns: 26px 1fr;
-    gap: 8px;
-    width: 100%;
-    margin: 7px 0 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    text-align: left;
-    cursor: pointer;
-  }
-  .oval {
-    width: 18px;
-    height: 13px;
-    margin-top: 4px;
-    border: 2px solid #161616;
-    border-radius: 50%;
-  }
-  .choice[aria-pressed="true"] .oval { background: #161616; }
-  .who-name, .who-line, .who-party { display: block; }
-  .who-name { font-size: 17px; font-weight: 700; }
-  .who-line, .who-party { font-size: 14px; font-weight: 400; }
-  .write-field { display: block; margin: 2px 0 4px 34px; }
-  .write-field input {
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid #161616;
-    background: transparent;
-    font: inherit;
-    font-size: 16px;
-    color: inherit;
-  }
-  .contest.note { font-size: 14px; }
-  .sheet-move { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
-  .sheet-move button { border: 1px solid var(--ink); color: var(--ink); padding: 8px 12px; }
-  #sample-status { flex: 1; margin: 0; color: var(--muted); font-size: 14px; }
-  @media (max-width: 800px) {
-    .races, .facts, .sample-layout { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 640px) {
-    .candidate { grid-template-columns: 1fr; gap: 14px; }
-    .avatar, .mono { width: 100%; height: 280px; }
-    .retain { columns: 1; }
-  }
-</style>
+<link rel="stylesheet" href="guide.css?v=maphover">
 </head>
-<body id="top">
+<body>
 <header>
   <div class="wrap bar">
     <div class="bar-top">
-      <a class="brand notranslate" href="#top" translate="no">Leaders</a>
+      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
       <div class="lang notranslate" translate="no">
         <span class="visually-hidden">Language</span>
         <select id="lang" class="visually-hidden" aria-hidden="true" tabindex="-1">
@@ -537,1338 +44,220 @@
           <li role="none"><button type="button" role="option" data-lang="vi">Tiếng Việt</button></li>
           <li role="none"><button type="button" role="option" data-lang="fr">Français</button></li>
         </ul>
-      </div>
+</div>
     </div>
+    <p class="here notranslate" translate="no"><img src="flags/us.svg" alt=""><span>United States</span></p>
     <nav>
-      <a href="#senate">Senate</a>
-      <a href="#governor">Governor</a>
-      <a href="#ag">Attorney general</a>
-      <a href="#sos">Secretary of state</a>
-      <a href="#comptroller">Comptroller</a>
-      <a href="#treasurer">Treasurer</a>
-      <a href="#sample">The ballot</a>
-      <a href="#where">Where to vote</a>
-      <a href="#zip">Your ballot</a>
+      <a href="index.html">All states</a>
     </nav>
   </div>
 </header>
-
 <main>
   <div class="wrap hero">
-    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record. A street address you type is not sent for translation.</p>
-    <p class="kicker">Illinois · General election · Tuesday, November 3, 2026</p>
+    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
+    <p class="kicker">United States · General election · Tuesday, November 3, 2026</p>
     <h1>Know who you're voting for.</h1>
-    <p class="deck">Six offices are on every ballot in the state. Leaders lists the printed candidates, what the job does, and what each campaign says it will do. Enter a ZIP code for the district races on that ballot.</p>
-    <p class="when">Polls are open 6 a.m. to 7 p.m. If you are in line by 7, you can still vote. This is not an endorsement and not a government site.</p>
-    <div class="finder" id="zip">
-      <form id="zip-form">
-        <div>
-          <label for="zip-code">ZIP code</label>
-          <input id="zip-code" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="60614" required>
-        </div>
-        <button type="submit">Show this ballot</button>
-      </form>
-      <p class="zip-note">A ZIP code can cross a district line. This shows every district that covers a real part of that ZIP. Your precinct uses only one. Sheriff, clerk, county board, and local questions come from the county clerk and are not in this list.</p>
+    <p class="deck">Leaders.vote is an independent, nonpartisan voter guide for the November 3, 2026 election.</p>
+    <p class="deck">Select your state to explore candidates, understand the responsibilities of each elected office, and learn about candidates' priorities when published on their official websites.</p>
+    <p class="deck">You can also enter your street address to access your state's official election-office lookup. Your address is never stored on Leaders.vote.</p>
+    <p class="deck">Independent. Informational. No endorsements. Leaders.vote is not affiliated with any government agency.</p>
+    <div id="us-slot"></div>
+    <p class="sub">Each state is colored by the party ahead in that state's top statewide race. The colors are the same ones used for a county on a state map. A blank state has not reported votes. This map does not call a race.</p>
+    <div class="result-legend">
+      <span><i class="swatch blank"></i> No votes reported</span>
+      <span><i class="swatch d"></i> Democratic lead</span>
+      <span><i class="swatch r"></i> Republican lead</span>
+      <span><i class="swatch o"></i> Another lead</span>
     </div>
-    <div class="finder where" id="where">
-      <p class="kicker">Where to vote</p>
-      <h2>Find your polling place.</h2>
-      <p class="zip-note">Election Day is Tuesday, November 3. Polls are open 6 a.m. to 7 p.m. If you are in line by 7, you can still vote. The State Board of Elections assigns the precinct polling place from the home address, not from a ZIP code alone.</p>
-      <form id="where-form">
-        <div>
-          <label for="where-number">Street number</label>
-          <input id="where-number" class="num" name="number" autocomplete="off" required>
-        </div>
-        <div>
-          <label for="where-street">Street name</label>
-          <input id="where-street" class="street" name="street" autocomplete="off" required>
-        </div>
-        <div>
-          <label for="where-zip">ZIP code</label>
-          <input id="where-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="60614" required>
-        </div>
-        <button type="submit">Find this address</button>
-      </form>
-      <div id="where-result" aria-live="polite"></div>
-    </div>
-    <div id="zip-result" aria-live="polite"></div>
-    <div class="races">
-      <a href="#senate"><strong>U.S. Senate</strong><span>Open seat. Dick Durbin is retiring.</span></a>
-      <a href="#governor"><strong>Governor</strong><span>Joint ticket with lieutenant governor. Pritzker is seeking a third term.</span></a>
-      <a href="#ag"><strong>Attorney general</strong><span>The state’s lawyer. Raoul is seeking a third term.</span></a>
-      <a href="#sos"><strong>Secretary of state</strong><span>Licenses, plates, and the state library. Giannoulias is the incumbent.</span></a>
-      <a href="#comptroller"><strong>Comptroller</strong><span>Pays the state’s bills. Open seat.</span></a>
-      <a href="#treasurer"><strong>Treasurer</strong><span>Invests state money. Frerichs is the incumbent.</span></a>
-    </div>
+    <p id="us-status" class="note"></p>
+    <div class="state-list"><a href="al.html" data-code="AL">Alabama</a>
+<a href="ak.html" data-code="AK">Alaska</a>
+<a href="az.html" data-code="AZ">Arizona</a>
+<a href="ar.html" data-code="AR">Arkansas</a>
+<a href="ca.html" data-code="CA">California</a>
+<a href="co.html" data-code="CO">Colorado</a>
+<a href="ct.html" data-code="CT">Connecticut</a>
+<a href="de.html" data-code="DE">Delaware</a>
+<a href="dc.html" data-code="DC">District of Columbia</a>
+<a href="fl.html" data-code="FL">Florida</a>
+<a href="ga.html" data-code="GA">Georgia</a>
+<a href="hi.html" data-code="HI">Hawaii</a>
+<a href="id.html" data-code="ID">Idaho</a>
+<a href="illinois.html" data-code="IL">Illinois</a>
+<a href="in.html" data-code="IN">Indiana</a>
+<a href="ia.html" data-code="IA">Iowa</a>
+<a href="ks.html" data-code="KS">Kansas</a>
+<a href="ky.html" data-code="KY">Kentucky</a>
+<a href="la.html" data-code="LA">Louisiana</a>
+<a href="me.html" data-code="ME">Maine</a>
+<a href="md.html" data-code="MD">Maryland</a>
+<a href="ma.html" data-code="MA">Massachusetts</a>
+<a href="mi.html" data-code="MI">Michigan</a>
+<a href="mn.html" data-code="MN">Minnesota</a>
+<a href="ms.html" data-code="MS">Mississippi</a>
+<a href="mo.html" data-code="MO">Missouri</a>
+<a href="mt.html" data-code="MT">Montana</a>
+<a href="ne.html" data-code="NE">Nebraska</a>
+<a href="nv.html" data-code="NV">Nevada</a>
+<a href="nh.html" data-code="NH">New Hampshire</a>
+<a href="nj.html" data-code="NJ">New Jersey</a>
+<a href="nm.html" data-code="NM">New Mexico</a>
+<a href="ny.html" data-code="NY">New York</a>
+<a href="nc.html" data-code="NC">North Carolina</a>
+<a href="nd.html" data-code="ND">North Dakota</a>
+<a href="oh.html" data-code="OH">Ohio</a>
+<a href="ok.html" data-code="OK">Oklahoma</a>
+<a href="or.html" data-code="OR">Oregon</a>
+<a href="pa.html" data-code="PA">Pennsylvania</a>
+<a href="ri.html" data-code="RI">Rhode Island</a>
+<a href="sc.html" data-code="SC">South Carolina</a>
+<a href="sd.html" data-code="SD">South Dakota</a>
+<a href="tn.html" data-code="TN">Tennessee</a>
+<a href="tx.html" data-code="TX">Texas</a>
+<a href="ut.html" data-code="UT">Utah</a>
+<a href="vt.html" data-code="VT">Vermont</a>
+<a href="va.html" data-code="VA">Virginia</a>
+<a href="wa.html" data-code="WA">Washington</a>
+<a href="wv.html" data-code="WV">West Virginia</a>
+<a href="wi.html" data-code="WI">Wisconsin</a>
+<a href="wy.html" data-code="WY">Wyoming</a></div>
   </div>
-
-  <section class="block" id="sample">
-    <div class="wrap">
-      <p class="kicker">How you vote</p>
-      <h2>What the ballot looks like.</h2>
-      <p class="sub" id="sample-lead">Illinois ballots are paper sheets you mark, or a touchscreen that prints one. Darken the oval to the left of a name. This sample uses the real statewide candidates. It is not a precinct ballot.</p>
-      <div class="sample-layout">
-        <div>
-          <ol class="steps" id="sample-steps">
-            <li><button type="button" data-step="mark">Darken the oval to the left of one choice. The line at the top of the sheet says the same thing.</button></li>
-            <li><button type="button" data-step="ticket">Governor and lieutenant governor share one oval. The two names are a single ticket.</button></li>
-            <li><button type="button" data-step="next">The next office is farther down the sheet. On a touchscreen, Next and Back move one contest at a time.</button></li>
-            <li><button type="button" data-step="green">Judges up for retention are on a separate green ballot. Each question is yes or no. No judge on that sheet is running against another judge.</button></li>
-            <li><button type="button" data-step="cast">Marking two ovals for one office means that office is not counted. If you spoil the sheet, ask an election judge for another. A scanner reads the ovals. A touchscreen prints the sheet after you review it.</button></li>
-          </ol>
-          <p class="zip-note">Your county draws the order of the parties, so the printed order may differ. Sheriff, clerk, county board, and local questions come after these offices. Enter a ZIP above to put your district and judges on this sample.</p>
-        </div>
-        <div>
-          <div class="sheet-switch">
-            <button type="button" id="show-white" aria-pressed="true">Candidate ballot</button>
-            <button type="button" id="show-green" class="notranslate" translate="no" data-phrase="green" aria-pressed="false">Green retention ballot</button>
-          </div>
-          <div id="sample-candidates" class="sheet"></div>
-          <div id="sample-green" class="sheet green" hidden></div>
-          <div class="sheet-move">
-            <button type="button" id="contest-back" class="notranslate" translate="no" data-phrase="back">Back</button>
-            <p id="sample-status"></p>
-            <button type="button" id="contest-next" class="notranslate" translate="no" data-phrase="next">Next</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="read">
-    <div class="wrap">
-      <p class="kicker">Before you go</p>
-      <h2>Same six races. Then your own district.</h2>
-      <div class="facts">
-        <div class="fact">
-          <h3>What to bring</h3>
-          <p>Most people who are already registered sign the application. If you registered by mail and this is your first vote in the jurisdiction, bring identification. Call your county clerk if you are unsure.</p>
-        </div>
-        <div class="fact">
-          <h3>How names got here</h3>
-          <p>These are the candidates printed on county specimen ballots. Primary losers and candidates removed in July are not listed. On this site the order is Republican, then Democratic, then any other party. Your precinct ballot may list them differently.</p>
-        </div>
-        <div class="fact">
-          <h3 class="notranslate" translate="no" data-phrase="writeins">Write-ins</h3>
-          <p>Governor, comptroller, and treasurer include a write-in line. A write-in counts only if that person filed. This guide covers the printed names.</p>
-        </div>
-        <div class="fact">
-          <h3>One vote each</h3>
-          <p>Vote for one Senate candidate, one governor ticket, and one person in each of the other four offices. Governor and lieutenant governor are a single choice. Terms are four years, except the Senate, which is six. Illinois does not limit the governor to two terms.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="senate">
-    <div class="wrap">
-      <p class="kicker">Federal · Vote for one · Open seat</p>
-      <h2>U.S. Senate</h2>
-      <p class="sub">Durbin is retiring. The winner is one of 100 votes on federal law, spending, treaties, and judges. Six-year term. Primary was March 17.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/don-tracy.webp" alt="Don Tracy">
-        <div>
-          <div class="who"><h3>Don Tracy</h3><span class="pill r">Republican</span></div>
-          <p class="role">Attorney · former Illinois Republican Party chair · won the primary with 40%</p>
-          <p class="bio">Springfield lawyer and former chair of the Illinois Gaming Board, from Mt. Sterling. He says he is running on costs, safety, and a voice for the whole state, not only Chicago and Cook County.</p>
-          <ul>
-            <li>Lower taxes, energy bills, and health-care costs, with an all-of-the-above energy policy so rates fall and the lights stay on.</li>
-            <li>Back police, hold violent offenders accountable, and enforce immigration law. He opposes taxpayer-funded benefits for people here illegally.</li>
-            <li>Less federal regulation on small business, manufacturing, and farms, and tighter control of federal spending.</li>
-          </ul>
-          <p class="links"><a href="https://dontracyforil.com/" target="_blank" rel="noopener noreferrer">dontracyforil.com</a> · <a href="https://secure.winred.com/dontracyforil/contribute" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/juliana-stratton.webp" alt="Juliana Stratton">
-        <div>
-          <div class="who"><h3>Juliana Stratton</h3><span class="pill d">Democratic</span></div>
-          <p class="role">Lieutenant governor since 2019 · former state representative · won the primary with 40.4%</p>
-          <p class="bio">South Side of Chicago. Daughter of a Navy veteran and a Chicago public-school teacher, and a mother of four. She finished ahead of Raja Krishnamoorthi and Robin Kelly, and she is not taking corporate PAC money in this race.</p>
-          <ul>
-            <li>$25 federal minimum wage, a larger earned-income credit and child tax credit, and a middle-class tax cut paid for by higher taxes on income above $1 million.</li>
-            <li>Medicare for All, including home care, hearing, and vision. She opposes the current tariffs, which she calls a tax on groceries and goods.</li>
-            <li>Restore Roe-level abortion protections, pass the John Lewis Voting Rights Act and gun laws, and abolish ICE. Her housing plan targets hedge-fund home purchases and algorithm-set rents.</li>
-          </ul>
-          <p class="links"><a href="https://www.julianastratton.com/" target="_blank" rel="noopener noreferrer">julianastratton.com</a> · <a href="https://secure.actblue.com/donate/jfi-landingpage" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/whitfield-harrington-jr.webp" alt="Whitfield Harrington Jr.">
-        <div>
-          <div class="who"><h3>Whitfield Harrington Jr.</h3><span class="pill o">American Center</span></div>
-          <p class="role">Schaumburg pastor · former financial-services professional · party he founded</p>
-          <p class="bio">Degree from Delta State. He worked in banks and insurance, then has pastored in Chicago since 2013. He built the American Center Party for voters who think both major parties have moved to the edges. A finish of 5% would make it an established party in Illinois.</p>
-          <ul>
-            <li>End the Iran war, then ban oil-market speculation by people who never take delivery. He says that would cut prices across the economy.</li>
-            <li>Direct primary care, paying the doctor instead of routing routine care through insurance. Free community college.</li>
-            <li>Keep tariffs off food. Use them to stop dumping that hurts U.S. factories, and negotiate them in private. He says current immigration enforcement has “crossed the line.”</li>
-          </ul>
-          <p class="links"><a href="https://whit4ilsenate.com/" target="_blank" rel="noopener noreferrer">whit4ilsenate.com</a> · <a href="https://secure.anedot.com/whitfield-harrington-for-illinois/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="block" id="governor">
-    <div class="wrap">
-      <p class="kicker">State · Vote for one ticket</p>
-      <h2>Governor and lieutenant governor</h2>
-      <p class="sub">One choice elects both. The governor signs or vetoes laws, proposes the budget, and appoints agency heads. The lieutenant governor succeeds the governor and takes the duties assigned. A write-in line is on this race.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/darren-bailey.webp" alt="Darren Bailey">
-        <div>
-          <div class="who"><h3>Darren Bailey</h3><span class="pill r">Republican</span></div>
-          <p class="role">With Aaron Del Mar, Cook County Republican Party chair · farmer from Xenia · 2022 nominee</p>
-          <p class="bio">Former state representative and senator, in a rematch with Pritzker. He won the March primary with 53.3%. Donald Trump endorsed him in September 2026. This guide has no separate photo of Del Mar.</p>
-          <ul>
-            <li>Cut property taxes and state spending. He argues Springfield should audit what it already spends instead of adding programs.</li>
-            <li>Repeal the SAFE-T Act and bring back cash bail. Repeal the TRUST Act so local police can work with federal immigration enforcement, and end state spending on undocumented residents.</li>
-            <li>He personally opposes abortion and has said he will not try to change Illinois abortion law.</li>
-          </ul>
-          <p class="links"><a href="https://baileyforillinois.com/" target="_blank" rel="noopener noreferrer">baileyforillinois.com</a> · <a href="https://secure.winred.com/bailey-for-illinois/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/jb-pritzker.webp" alt="J.B. Pritzker">
-        <div>
-          <div class="who"><h3>J.B. Pritzker</h3><span class="pill d">Democratic</span></div>
-          <p class="role">Incumbent since 2019, with Christian Mitchell, a former state representative and deputy governor</p>
-          <p class="bio">Businessman seeking a third term, which no Illinois Democrat has won. Mitchell would replace Stratton, who is running for Senate. This guide has no separate photo of Mitchell. Pritzker campaigns on wages, abortion access, schools, and budgets he says are balanced, along with credit-rating upgrades.</p>
-          <ul>
-            <li>Points to the $15 minimum wage, the ended state grocery tax, a doubled child tax credit, a $35 insulin cap, and medical-debt relief. Wants more housing.</li>
-            <li>Abortion-access laws that made Illinois a destination for care. He says health care is a right and opposes federal Medicaid cuts.</li>
-            <li>Signed limits on civil immigration arrests near courthouses, hospitals, colleges, and day cares. Says people convicted of violent crimes should be deported, and that he is open to changes in SAFE-T pretrial rules.</li>
-          </ul>
-          <p class="links"><a href="https://jbpritzker.com/" target="_blank" rel="noopener noreferrer">jbpritzker.com</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/collin-corbett.webp" alt="Collin Corbett">
-        <div>
-          <div class="who"><h3>Collin Corbett</h3><span class="pill i">Independent</span></div>
-          <p class="role">With Carolyn Schofield, a former McHenry County Board member · Palatine consultant</p>
-          <p class="bio">Owner of Cor Strategies. A Republican strategist for about 20 years who left the party to run. This guide has no separate photo of Schofield. He calls affordability the race and says neither major-party nominee will fix property taxes.</p>
-          <ul>
-            <li>Property-tax relief first, then spending restraint, cheaper gas and power, fewer data centers, and more housing.</li>
-            <li>Has proposed taxing some services so property taxes and the sales tax on essentials can come down.</li>
-            <li>Supports abortion rights. Would amend the TRUST Act so police can work with federal agents on violent cases. Supports more gun laws and health-care price transparency, including direct primary care.</li>
-          </ul>
-          <p class="links"><a href="https://www.collinforil.com/" target="_blank" rel="noopener noreferrer">collinforil.com</a> · <a href="https://www.collinforil.com/contribute/" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="block" id="ag">
-    <div class="wrap">
-      <p class="kicker">State · Vote for one</p>
-      <h2>Attorney general</h2>
-      <p class="sub">Lawyer for the state. Consumer fraud, civil rights, antitrust, some public-corruption work, and lawsuits to defend Illinois statutes and funding. Criminal cases are mostly local state’s attorneys. Four-year term.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/robert-w-fioretti.webp" alt="Robert W. Fioretti">
-        <div>
-          <div class="who"><h3>Robert W. Fioretti</h3><span class="pill r">Republican</span></div>
-          <p class="role">Former Chicago alderman · attorney · Democrat until he switched parties</p>
-          <p class="bio">Known as Bob Fioretti. Has run for Chicago mayor, Cook County board president, and Cook County state’s attorney. He says the office spends too much time on national lawsuits and too little on crime and corruption in Illinois.</p>
-          <ul>
-            <li>Push state’s attorneys to prosecute violent crime more aggressively. He says the office should “represent the victims of crime.”</li>
-            <li>“Restore the rule of law” and “break this cycle of crime and corruption.”</li>
-            <li>He says he agreed with only three of Raoul’s suits against the Trump administration, and that Raoul is rarely the lead plaintiff when many Democratic states sue together.</li>
-          </ul>
-          <p class="links"><a href="https://www.bobforillinois.com/" target="_blank" rel="noopener noreferrer">bobforillinois.com</a> · <a href="https://www.bobforillinois.com/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/kwame-raoul.webp" alt="Kwame Raoul">
-        <div>
-          <div class="who"><h3>Kwame Raoul</h3><span class="pill d">Democratic</span></div>
-          <p class="role">Incumbent · seeking a third term · former state senator</p>
-          <p class="bio">Unopposed in the Democratic primary. His office’s public docket has leaned on consumer protection, workers, civil rights, guns, and reproductive rights. Capitol News Illinois counted roughly 90 legal fights with the Trump administration in the last two years. The office says those cases kept Illinois from losing access to more than $8 billion in federal funds.</p>
-          <ul>
-            <li>If reelected, keep lawyers on staff and rebuild capacity after lawmakers cut the office budget by $10 million this year.</li>
-            <li>Says corruption has been a priority for eight years, including cases the office cannot announce because the U.S. attorney takes the public lead.</li>
-            <li>Will keep defending state laws on abortion, guns, and civil rights, and joining multistate cases when federal policy hits Illinois funding.</li>
-          </ul>
-          <p class="links"><a href="https://kwameraoul.com/" target="_blank" rel="noopener noreferrer">kwameraoul.com</a> · <a href="https://secure.actblue.com/donate/raoul-for-illinois-2" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="block" id="sos">
-    <div class="wrap">
-      <p class="kicker">State · Vote for one</p>
-      <h2>Secretary of state</h2>
-      <p class="sub">The office most people actually visit. Driver’s licenses and Real ID, vehicle titles and plates, business filings, organ-donor registration, and the state library. Four-year term.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/diane-m-harris.webp" alt="Diane M. Harris">
-        <div>
-          <div class="who"><h3>Diane M. Harris</h3><span class="pill r">Republican</span></div>
-          <p class="role">Joliet Junior College trustee · Will County</p>
-          <p class="bio">She told Capitol News Illinois she would rather have voters than the incumbent’s campaign cash, and that she has advertised mainly on Joliet radio. She says she would keep much of the appointment system and still take walk-ins.</p>
-          <ul>
-            <li>Rules-of-the-road tests in English only. The office now offers them in Spanish and other languages, including Chinese and Polish.</li>
-            <li>Faster service at the counter and online, and a simpler business-licensing process.</li>
-            <li>Clean up voter rolls and “election integrity.” The secretary of state maintains some records used in elections. Illinois elections themselves are run by the State Board of Elections and local clerks.</li>
-          </ul>
-          <p class="links"><a href="https://www.harrisforsos.com/" target="_blank" rel="noopener noreferrer">harrisforsos.com</a> · <a href="https://www.harrisforsos.com/contribute" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/alexi-giannoulias.webp" alt="Alexi Giannoulias">
-        <div>
-          <div class="who"><h3>Alexi Giannoulias</h3><span class="pill d">Democratic</span></div>
-          <p class="role">Incumbent · also running for mayor of Chicago</p>
-          <p class="bio">He has filed for Chicago’s next mayoral race while seeking this second term. He told Capitol News Illinois he is focused on the job in front of him. Critics say a win in Chicago would mean leaving this office months into the term.</p>
-          <ul>
-            <li>Cites appointments, kiosks, a Chicago Real ID supercenter, and more services online so a license stop is not a lost workday.</li>
-            <li>Backed digital driver’s licenses, limits on state grants to libraries that ban books, and rules for e-bikes and e-scooters.</li>
-            <li>Second term: finish that work. He has also said license-plate-reader companies should not hand data to police to track immigrants or people seeking abortion care.</li>
-          </ul>
-          <p class="links"><a href="https://alexiforus.com/" target="_blank" rel="noopener noreferrer">alexiforus.com</a> · <a href="https://go.alexiforus.com/a/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="block" id="comptroller">
-    <div class="wrap">
-      <p class="kicker">State · Vote for one · Open seat</p>
-      <h2>Comptroller</h2>
-      <p class="sub">Pays the bills the legislature and governor have already approved, publishes the state’s checkbook, and enforces some wage rules by holding payments. Does not write the budget. Susana Mendoza is leaving after a decade to run for mayor of Chicago. A write-in line is on this race.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/bryan-drew.webp" alt="Bryan Drew">
-        <div>
-          <div class="who"><h3>Bryan Drew</h3><span class="pill r">Republican</span></div>
-          <p class="role">Attorney from Benton</p>
-          <p class="bio">Says he is not a politician and that his only client would be the taxpayer. He argues a Democrat who voted for the current budgets cannot be the watchdog of a Democratic governor and legislature. Spending decisions still sit with those two branches. The comptroller’s leverage is disclosure and which bills get paid when.</p>
-          <ul>
-            <li>Rebuild the office website so a resident can see, in plain language, where money went.</li>
-            <li>Track grants to nonprofits and use artificial intelligence to flag waste, fraud, and abuse.</li>
-            <li>Treat transparency as the path to lower spending and lower taxes. Says he would help the legislature if it takes up pension changes.</li>
-          </ul>
-          <p class="links"><a href="https://www.drewforillinois.com/" target="_blank" rel="noopener noreferrer">drewforillinois.com</a> · <a href="https://www.drewforillinois.com/contribute" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/margaret-croke.webp" alt="Margaret Croke">
-        <div>
-          <div class="who"><h3>Margaret Croke</h3><span class="pill d">Democratic</span></div>
-          <p class="role">State representative, 12th District, since 2021 · chairs Financial Institutions</p>
-          <p class="bio">Chicago. Previously deputy chief of staff at the Department of Commerce and Economic Opportunity. She voted for the recent budgets Democrats credit with paying down the bill backlog and lifting the state’s credit. She calls the budget a moral document and says the job is to make every dollar traceable.</p>
-          <ul>
-            <li>A public “budget to bill” tool: from the line in the budget to the day the check goes out.</li>
-            <li>Connect the office’s software to other agencies, use predictive models to catch missed federal matches and fraud, and send staff to help small vendors and local governments with late audits.</li>
-            <li>Keep withholding pay from contractors who violate the Prevailing Wage Act. Change the Vendor Payment Program so finance firms cannot cherry-pick the receivables of larger vendors. Rebuild the rainy-day fund and make pension payments.</li>
-          </ul>
-          <p class="links"><a href="https://crokeforillinois.com/" target="_blank" rel="noopener noreferrer">crokeforillinois.com</a> · <a href="https://secure.actblue.com/donate/crokewebsite" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="block" id="treasurer">
-    <div class="wrap">
-      <p class="kicker">State · Vote for one</p>
-      <h2>Treasurer</h2>
-      <p class="sub">Invests state cash, runs the Illinois Funds for local governments, holds the unclaimed-property list, and oversees Bright Start and Bright Directions college savings. Four-year term. No Republican filed for the primary. Solomon won the line as a write-in. A write-in line is also on the general-election ballot.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/max-solomon.jpg" alt="Max Solomon">
-        <div>
-          <div class="who"><h3>Max Solomon</h3><span class="pill r">Republican</span></div>
-          <p class="role">Attorney from Hazel Crest</p>
-          <p class="bio">DePaul and Valparaiso Law. Has been a Grande Prairie library trustee and an adjunct political-science instructor at South Suburban College. He dropped a long-shot race for governor and won more than 60,000 write-in votes in March to make this ballot. He had under $5,000 on hand on October 1, against Frerichs’s roughly $1.6 million.</p>
-          <ul>
-            <li>“Illinois first.” He says state money should not be invested with foreign governments, and that he would take a lower return to keep investments here. He did not name a Frerichs investment he considers political.</li>
-            <li>Use the office as “whistleblower-in-chief” on waste and fraud, including pressure on the legislature. Much of that is outside the treasurer’s formal powers.</li>
-            <li>His campaign also lists a public dashboard of state funds and a stronger Bright Start and Bright Directions.</li>
-          </ul>
-          <p class="links"><a href="https://maxsolomon.info/" target="_blank" rel="noopener noreferrer">maxsolomon.info</a> · <a href="https://secure.winred.com/friends-of-max-solomon/donate-copy-a8fecc4db938370d" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/mike-frerichs.jpg" alt="Michael W. Frerichs">
-        <div>
-          <div class="who"><h3>Michael W. Frerichs</h3><span class="pill d">Democratic</span></div>
-          <p class="role">Incumbent since 2015 · former state senator · grew up in Gifford</p>
-          <p class="bio">Won his first race by fewer than 10,000 votes. A win now would make him the longest-serving treasurer in state history. He describes the job as making money for the state, helping families save, and giving money back.</p>
-          <ul>
-            <li>Unclaimed property: he says the office returns about $1 million a day. This year that included $8.65 owed to Robert Prevost, now Pope Leo XIV, from an old PayPal account.</li>
-            <li>Cites a Morningstar turnaround for Bright Start, and investment earnings above $1.4 billion in fiscal 2026. Local governments in the Illinois Funds earn interest he says they then do not have to raise in property taxes.</li>
-            <li>Will keep Israel bonds. His test is return, safety, and diversification, and he says dropping them is a question for the legislature, not his office.</li>
-          </ul>
-          <p class="links"><a href="https://www.mikeforillinois.com/" target="_blank" rel="noopener noreferrer">mikeforillinois.com</a> · <a href="https://secure.actblue.com/donate/friends-of-frerichs" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-    </div>
-  </section>
-
 </main>
-
 <footer>
   <div class="wrap">
-    <p>Leaders is an independent voter guide for the Illinois general election on November 3, 2026. It is not a campaign, not an endorsement, and not a site of the State of Illinois or any election authority. Campaign and donation links go to each candidate’s own page. This site does not take contributions. J.B. Pritzker’s campaign site does not publish a donation page.</p>
-    <p>Printed names checked against the Illinois State Board of Elections general-election candidate list and specimen ballots from DuPage, Will, and Crawford counties. Records and quotes: Ballotpedia; Capitol News Illinois, Oct. 23, 2026; Chicago Sun-Times questionnaires and voter guide; ABC7 and WTTW interviews; Shaw Local questionnaires; KWQC, Sept. 30, 2026; candidate sites for Stratton, Tracy, Harrington, Croke, and Drew.</p>
-    <p>Photos: Chicago Sun-Times 2026 voter guide, except Michael Frerichs (Wikimedia Commons, 2026) and Max Solomon (campaign site, maxsolomon.info). No separate photo is included for Christian Mitchell, Aaron Del Mar, or Carolyn Schofield. Compiled November 2, 2026.</p>
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any state or election authority. Campaign links, where a candidate publishes them, go to that candidate. This site does not take contributions.</p>
+    <p>A written line is added only from a candidate's own site. Illinois printed names were checked against the State Board of Elections. Names on another state page are compared with that state's candidate list before they are described as checked. Photos outside Illinois come from NBC News and the Associated Press.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var form = document.getElementById("zip-form");
-  var input = document.getElementById("zip-code");
-  var out = document.getElementById("zip-result");
-  var whereForm = document.getElementById("where-form");
-  var whereNumber = document.getElementById("where-number");
-  var whereStreet = document.getElementById("where-street");
-  var whereZip = document.getElementById("where-zip");
-  var whereOut = document.getElementById("where-result");
-  var POLL_URL = "https://ova.elections.il.gov/PollingPlaceLookup.aspx";
-  var EARLY_URL = "https://www.elections.il.gov/VotingAndRegistrationSystems/EarlyVotingLocationsSearch.aspx";
-  var REG_URL = "https://ova.elections.il.gov/RegistrationLookup.aspx";
-  var AUTH_URL = "https://www.elections.il.gov/ElectionOperations/ElectionAuthorities.aspx";
-  var data = null;
-  var profiles = {};
-  var SUBCIRCUIT = { cook: 1, 3: 1, 7: 1, 12: 1, 16: 1, 17: 1, 18: 1, 19: 1, 22: 1 };
-
-  function el(tag, cls, text) {
-    var node = document.createElement(tag);
-    if (cls) node.className = cls;
-    if (text != null) node.textContent = text;
-    return node;
-  }
-
-  function ordinal(n) {
-    n = Number(n);
-    var teen = n % 100;
-    var suf = teen >= 11 && teen <= 13 ? "th" : ({ 1: "st", 2: "nd", 3: "rd" }[n % 10] || "th");
-    return n + suf;
-  }
-
-  function pillClass(party) {
-    if (party === "Republican") return "r";
-    if (party === "Democratic") return "d";
-    if (party === "Independent") return "i";
-    return "o";
-  }
-
-  function displayName(person) {
-    if (person.m && person.m.length) return person.n + " and " + person.m.join(" and ");
-    return person.n;
-  }
-
-  function profileKey(name) {
-    return String(name || "")
-      .replace(/J\.B\./g, "JB")
-      .replace(/Jr\./g, "Jr")
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-  function externalLink(href, label) {
-    var hostLabel = /\./.test(label || "");
-    var link = el("a", hostLabel ? "notranslate" : "", label);
-    if (hostLabel) link.setAttribute("translate", "no");
-    link.href = href;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    return link;
-  }
-
-  function hasProfile(profile) {
-    return !!(profile.bio || profile.stance || profile.photo || profile.site || profile.official || profile.donate || (profile.points && profile.points.length));
-  }
-
-  function addPerson(parent, person) {
-    var profile = profiles[profileKey(person.n)] || {};
-    if (!hasProfile(profile)) {
-      var row = el("div", "person");
-      row.appendChild(el("strong", "", displayName(person)));
-      if (person.p) row.appendChild(el("span", "pill " + pillClass(person.p), person.p));
-      row.appendChild(el("span", "seat-note", "No campaign page was found."));
-      parent.appendChild(row);
-      return;
-    }
-    var card = el("article", "candidate");
-    if (profile.photo) {
-      var img = el("img", "avatar");
-      img.src = profile.photo;
-      img.alt = "Photo of " + person.n;
-      card.appendChild(img);
-    } else {
-      var letter = (person.n || "?").trim().charAt(0).toUpperCase();
-      card.appendChild(el("div", "mono", letter));
-    }
-    var body = el("div");
-    var who = el("div", "who");
-    var name = el("h3", "notranslate", displayName(person));
-    name.setAttribute("translate", "no");
-    who.appendChild(name);
-    if (person.p) who.appendChild(el("span", "pill " + pillClass(person.p), person.p));
-    body.appendChild(who);
-    if (profile.role) body.appendChild(el("p", "role", profile.role));
-    if (profile.bio) body.appendChild(el("p", "bio", profile.bio));
-    if (profile.stance) {
-      var stanceLead = profile.stanceFrom === "official" ? "From the official page: " : "From the campaign site: ";
-      body.appendChild(el("p", "bio", stanceLead + profile.stance));
-    }
-    if (profile.points && profile.points.length) {
-      if (profile.source !== "Guide") body.appendChild(el("p", "role", "Listed on the campaign site"));
-      var list = el("ul");
-      profile.points.forEach(function (point) { list.appendChild(el("li", "", point)); });
-      body.appendChild(list);
-    } else if (!profile.bio && !profile.stance) {
-      body.appendChild(el("p", "role", "No campaign description is on file for this name."));
-    } else if (profile.source !== "Guide" && !profile.stance) {
-      body.appendChild(el("p", "role", "No 2026 issue list was found on a campaign site."));
-    }
-    if (profile.site || profile.official || profile.donate) {
-      var links = el("p", "links");
-      var parts = [];
-      if (profile.site) parts.push(externalLink(profile.site, profile.siteLabel || "Campaign site"));
-      if (profile.official) parts.push(externalLink(profile.official, profile.officialLabel || "Official site"));
-      if (profile.donate) parts.push(externalLink(profile.donate, "Donate"));
-      parts.forEach(function (part, index) {
-        if (index) links.appendChild(document.createTextNode(" · "));
-        links.appendChild(part);
-      });
-      body.appendChild(links);
-    }
-    card.appendChild(body);
-    parent.appendChild(card);
-  }
-
-  function visibleParts(list) {
-    var ranked = (list || []).filter(function (pair) { return pair[1] >= 10; });
-    if (!ranked.length) return [];
-    var main = ranked.filter(function (pair) { return pair[1] >= 50; });
-    if (!main.length) main = [ranked[0]];
-    var small = ranked.filter(function (pair) {
-      return main.every(function (item) { return item[0] !== pair[0]; });
-    });
-    return main.concat(small);
-  }
-
-  function shareText(share) {
-    if (share >= 980) return "";
-    return "About " + Math.round(share / 10) + "% of the land in this ZIP.";
-  }
-
-  function addOffice(parent, title, people, share, note) {
-    var block = el("div", "ballot-block");
-    block.appendChild(el("h3", "", title));
-    var shareLine = shareText(share);
-    if (shareLine) block.appendChild(el("p", "share", shareLine));
-    if (note) block.appendChild(el("p", "seat-note", note));
-    if (!people || !people.length) {
-      block.appendChild(el("p", "seat-note", "No active candidate is on the state list for this district."));
-    } else {
-      people.slice().sort(function (a, b) {
-        var rank = { Republican: 0, Democratic: 1 };
-        var ar = Object.prototype.hasOwnProperty.call(rank, a.p) ? rank[a.p] : 2;
-        var br = Object.prototype.hasOwnProperty.call(rank, b.p) ? rank[b.p] : 2;
-        if (ar !== br) return ar - br;
-        if (a.p !== b.p) return a.p < b.p ? -1 : 1;
-        return a.n < b.n ? -1 : a.n > b.n ? 1 : 0;
-      }).forEach(function (person) { addPerson(block, person); });
-    }
-    parent.appendChild(block);
-  }
-
-  function crossed(zipRow) {
-    return ["cd", "sen", "hs"].some(function (key) {
-      return visibleParts(zipRow[key]).length > 1;
-    });
-  }
-
-  function addChamber(parent, zipRow, key, titleFor, rows, emptyNote) {
-    visibleParts(zipRow[key]).forEach(function (pair) {
-      var id = String(pair[0]);
-      var people = rows[id];
-      if (!people && emptyNote) {
-        var block = el("div", "ballot-block");
-        block.appendChild(el("h3", "", titleFor(pair[0])));
-        var shareLine = shareText(pair[1]);
-        if (shareLine) block.appendChild(el("p", "share", shareLine));
-        block.appendChild(el("p", "seat-note", emptyNote(pair[0])));
-        parent.appendChild(block);
-        return;
-      }
-      addOffice(parent, titleFor(pair[0]), people || [], pair[1]);
-    });
-  }
-
-  function addSchools(parent, counties) {
-    var seen = {};
-    counties.forEach(function (county) {
-      (data.schools[county] || []).forEach(function (person) {
-        if (!seen[person.title]) seen[person.title] = [];
-        if (!seen[person.title].some(function (item) { return item.n === person.n && item.p === person.p; })) {
-          seen[person.title].push(person);
-        }
-      });
-    });
-    Object.keys(seen).forEach(function (title) {
-      addOffice(parent, title, seen[title], 1000);
-    });
-  }
-
-  function addCourt(parent, bundle, retainHeading) {
-    if (!bundle) return;
-    (bundle.race || []).forEach(function (seat) {
-      var block = el("div", "ballot-block");
-      block.appendChild(el("h3", "", seat.title));
-      seat.people.forEach(function (person) { addPerson(block, person); });
-      parent.appendChild(block);
-    });
-    var names = [];
-    (bundle.retain || []).forEach(function (seat) {
-      seat.people.forEach(function (person) { names.push(person.n); });
-    });
-    if (!names.length) return;
-    var block = el("div", "ballot-block");
-    block.appendChild(el("h3", "", retainHeading));
-    block.appendChild(el("p", "seat-note", "Each name is a separate yes or no question. A judge needs three-fifths of the vote on that question to stay."));
-    var list = el("ul", "retain");
-    names.forEach(function (name) {
-      var item = el("li", "notranslate", name);
-      item.setAttribute("translate", "no");
-      list.appendChild(item);
-    });
-    block.appendChild(list);
-    parent.appendChild(block);
-  }
-
-  function render(zip) {
-    var row = data.zips[zip];
-    out.replaceChildren();
-    if (!row) {
-      out.appendChild(el("p", "zip-error", "That ZIP is not in this Illinois lookup. PO Box ZIPs often are not. Use a street address in the State Board of Elections polling-place search."));
-      var link = el("p", "zip-note");
-      var a = el("a", "", "elections.il.gov polling-place search");
-      a.href = "https://www.elections.il.gov/VotingAndRegistrationSystems/PollingPlaceSearch.aspx";
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      link.appendChild(a);
-      out.appendChild(link);
-      if (window.leadersRefreshLang) window.leadersRefreshLang();
-      return;
-    }
-
-    var intro = el("div", "ballot-block");
-    intro.appendChild(el("p", "kicker", "ZIP " + zip));
-    intro.appendChild(el("h3", "", row.co && row.co.length ? row.co.map(function (county) { return county + " County"; }).join(" and ") : "Districts in this ZIP"));
-    if (crossed(row)) {
-      intro.appendChild(el("p", "seat-note", "This ZIP covers more than one district. The list includes each one that takes at least 1% of the land. Your precinct ballot uses only one."));
-    }
-    if (!row.cd.length) {
-      intro.appendChild(el("p", "seat-note", "This ZIP is not on the Census district map, so Congress and the General Assembly are not shown. Judges follow the county when that is known."));
-    }
-    out.appendChild(intro);
-
-    var state = el("div", "ballot-block");
-    state.appendChild(el("h3", "", "On every Illinois ballot"));
-    data.statewide.forEach(function (office) {
-      var seat = el("div", "seat");
-      var heading = el("h4", "");
-      var jump = el("a", "", office.title);
-      jump.href = office.href;
-      heading.appendChild(jump);
-      seat.appendChild(heading);
-      office.people.forEach(function (person) { addPerson(seat, person); });
-      state.appendChild(seat);
-    });
-    out.appendChild(state);
-
-    addChamber(out, row, "cd", function (n) { return "U.S. House, " + ordinal(n) + " District"; }, data.congress);
-    addChamber(out, row, "sen", function (n) { return "State Senate, " + ordinal(n) + " District"; }, data.senate, function () {
-      return "This seat is not on the ballot this year. Senate terms are staggered.";
-    });
-    addChamber(out, row, "hs", function (n) { return "State House, " + ordinal(n) + " District"; }, data.house);
-
-    if (row.co && row.co.length) {
-      if (row.co.length > 1) {
-        var countyNote = el("p", "seat-note");
-        countyNote.textContent = "This ZIP is listed in more than one county. Judge and school races are shown for each.";
-        out.appendChild(countyNote);
-      }
-      addSchools(out, row.co);
-      var circuits = [];
-      var appellates = [];
-      row.co.forEach(function (county) {
-        var circuit = data.countyCircuit[county];
-        var appellate = String(data.countyAppellate[county]);
-        if (circuits.indexOf(circuit) === -1) circuits.push(circuit);
-        if (appellates.indexOf(appellate) === -1) appellates.push(appellate);
-      });
-      appellates.forEach(function (id) {
-        addCourt(out, data.appellate[id], ordinal(id) + " Appellate Court retention");
-      });
-      circuits.forEach(function (id) {
-        var heading = id === "cook" ? "Cook County Circuit Court retention" : ordinal(id) + " Circuit Court retention";
-        addCourt(out, data.circuit[String(id)], heading);
-        if (SUBCIRCUIT[id]) {
-          out.appendChild(el("p", "seat-note", "Some ballots in this circuit also include a subcircuit judge. A ZIP code cannot tell which one. Check your specimen ballot for that seat."));
-        }
-      });
-    }
-
-    var source = el("p", "zip-note");
-    source.appendChild(document.createTextNode("Active names from the Illinois State Board of Elections list as of " + data.asOf + " Removed and withdrawn candidates are left off. Photos, short descriptions, and links are taken from the candidate’s own site or Ballotpedia when a page could be checked. A missing photo, issue list, or donate link was not filled in. Districts are matched from 2020 Census maps, which are the maps still used in 2026. "));
-    var sourceLink = el("a", "", "Candidate list");
-    sourceLink.href = data.source;
-    sourceLink.target = "_blank";
-    sourceLink.rel = "noopener noreferrer";
-    source.appendChild(sourceLink);
-    source.appendChild(document.createTextNode(". "));
-    var poll = el("a", "", "Polling-place search");
-    poll.href = "https://www.elections.il.gov/VotingAndRegistrationSystems/PollingPlaceSearch.aspx";
-    poll.target = "_blank";
-    poll.rel = "noopener noreferrer";
-    source.appendChild(poll);
-    source.appendChild(document.createTextNode("."));
-    out.appendChild(source);
-    showSample(row, zip);
-    if (window.leadersRefreshLang) window.leadersRefreshLang();
-  }
-
-  var sampleIndex = 0;
-  var sampleSheet = "white";
-  var WRITE_IN = { "Governor and lieutenant governor": 1, "Comptroller": 1, "Treasurer": 1 };
-
-  function byParty(people) {
-    return (people || []).slice().sort(function (a, b) {
-      var rank = { Republican: 0, Democratic: 1 };
-      var ar = Object.prototype.hasOwnProperty.call(rank, a.p) ? rank[a.p] : 2;
-      var br = Object.prototype.hasOwnProperty.call(rank, b.p) ? rank[b.p] : 2;
-      if (ar !== br) return ar - br;
-      if ((a.p || "") !== (b.p || "")) return a.p < b.p ? -1 : 1;
-      return a.n < b.n ? -1 : a.n > b.n ? 1 : 0;
-    });
-  }
-
-  function contest(office, detail, vote, people, writeIn) {
-    return { kind: "race", office: office, detail: detail || "", vote: vote, people: byParty(people), writeIn: !!writeIn };
-  }
-
-  function yesNo(question) {
-    return { kind: "yesno", office: question, detail: "", vote: "(Vote yes or no)", people: [{ n: "YES" }, { n: "NO" }] };
-  }
-
-  function mainPart(list) {
-    var parts = visibleParts(list);
-    var big = parts.filter(function (pair) { return pair[1] >= 50; });
-    return (big[0] || parts[0] || null);
-  }
-
-  function statewideContests() {
-    var titles = {
-      "U.S. Senate": ["FOR UNITED STATES SENATOR", ""],
-      "Governor and lieutenant governor": ["FOR GOVERNOR AND LIEUTENANT GOVERNOR", ""],
-      "Attorney general": ["FOR ATTORNEY GENERAL", ""],
-      "Secretary of state": ["FOR SECRETARY OF STATE", ""],
-      "Comptroller": ["FOR COMPTROLLER", ""],
-      "Treasurer": ["FOR TREASURER", ""]
-    };
-    if (data && data.statewide) {
-      return data.statewide.map(function (office) {
-        var pair = titles[office.title] || [office.title.toUpperCase(), ""];
-        return contest(pair[0], pair[1], "(Vote for one)", office.people, !!WRITE_IN[office.title]);
-      });
-    }
-    return [
-      contest("FOR UNITED STATES SENATOR", "", "(Vote for one)", [
-        { n: "Don Tracy", p: "Republican" },
-        { n: "Juliana Stratton", p: "Democratic" },
-        { n: "Whitfield Harrington Jr", p: "American Center Party" }
-      ]),
-      contest("FOR GOVERNOR AND LIEUTENANT GOVERNOR", "", "(Vote for one)", [
-        { n: "Darren Bailey", p: "Republican", m: ["Aaron B. Del Mar"] },
-        { n: "JB Pritzker", p: "Democratic", m: ["Christian Mitchell"] },
-        { n: "Collin Corbett", p: "Independent", m: ["Carolyn Schofield"] }
-      ], true),
-      contest("FOR ATTORNEY GENERAL", "", "(Vote for one)", [
-        { n: "Robert W. Fioretti", p: "Republican" },
-        { n: "Kwame Raoul", p: "Democratic" }
-      ]),
-      contest("FOR SECRETARY OF STATE", "", "(Vote for one)", [
-        { n: "Diane M. Harris", p: "Republican" },
-        { n: "Alexi Giannoulias", p: "Democratic" }
-      ]),
-      contest("FOR COMPTROLLER", "", "(Vote for one)", [
-        { n: "Bryan Drew", p: "Republican" },
-        { n: "Margaret Croke", p: "Democratic" }
-      ], true),
-      contest("FOR TREASURER", "", "(Vote for one)", [
-        { n: "Max Solomon", p: "Republican" },
-        { n: "Michael W. Frerichs", p: "Democratic" }
-      ], true)
-    ];
-  }
-
-  function sampleModel(row, zip) {
-    var contests = statewideContests();
-    var retentions = [];
-    var lead = "Illinois ballots are paper sheets you mark, or a touchscreen that prints one. Darken the oval to the left of a name. This sample uses the real statewide candidates. It is not a precinct ballot.";
-    if (!row) {
-      retentions.push(yesNo("SHALL the judge named on your green ballot be retained in office as JUDGE OF THE CIRCUIT COURT?"));
-      return { lead: lead, contests: contests, retentions: retentions, retentionNote: "This question shows the pattern. Enter a ZIP to fill in the judges for that county." };
-    }
-    lead = "Sample for ZIP " + zip + ". Where the ZIP crosses a line, this sheet uses the district that covers the most land. Your precinct uses only one.";
-    function addDistrict(list, rows, office, detail) {
-      var part = mainPart(list);
-      if (!part || !rows[String(part[0])] || !rows[String(part[0])].length) return;
-      contests.push(contest(office, detail(part[0]), "(Vote for one)", rows[String(part[0])], false));
-    }
-    addDistrict(row.cd, data.congress, "FOR REPRESENTATIVE IN CONGRESS", function (n) { return ordinal(n).toUpperCase() + " CONGRESSIONAL DISTRICT"; });
-    addDistrict(row.sen, data.senate, "FOR STATE SENATOR", function (n) { return ordinal(n).toUpperCase() + " LEGISLATIVE DISTRICT"; });
-    addDistrict(row.hs, data.house, "FOR REPRESENTATIVE IN THE GENERAL ASSEMBLY", function (n) { return ordinal(n).toUpperCase() + " REPRESENTATIVE DISTRICT"; });
-    if (row.co && row.co.length) {
-      var school = (data.schools[row.co[0]] || [])[0];
-      if (school) {
-        var group = data.schools[row.co[0]].filter(function (person) { return person.title === school.title; });
-        contests.push(contest("FOR REGIONAL SUPERINTENDENT OF SCHOOLS", school.title.replace(/^Regional superintendent of schools, /i, "").toUpperCase(), "(Vote for one)", group, false));
-      }
-      var circuit = data.countyCircuit[row.co[0]];
-      var appellate = String(data.countyAppellate[row.co[0]]);
-      var circuitBundle = data.circuit[String(circuit)];
-      var appealBundle = data.appellate[appellate];
-      var races = (circuitBundle && circuitBundle.race) || [];
-      races.slice(0, 2).forEach(function (seat) {
-        contests.push(contest("FOR JUDGE OF THE CIRCUIT COURT", seat.title.toUpperCase(), "(Vote for one)", seat.people, false));
-      });
-      var moreRaces = Math.max(0, races.length - 2);
-      function retainQuestion(name, court) {
-        return "SHALL " + name + " be retained in office as " + court + "?";
-      }
-      var courtName = circuit === "cook"
-        ? "JUDGE OF THE CIRCUIT COURT OF COOK COUNTY"
-        : "JUDGE OF THE CIRCUIT COURT " + ordinal(circuit).toUpperCase() + " JUDICIAL CIRCUIT";
-      var appealName = "JUDGE OF THE APPELLATE COURT " + ordinal(appellate).toUpperCase() + " JUDICIAL DISTRICT";
-      var all = [];
-      if (appealBundle) appealBundle.retain.forEach(function (seat) { seat.people.forEach(function (person) { all.push(retainQuestion(person.n, appealName)); }); });
-      if (circuitBundle) circuitBundle.retain.forEach(function (seat) { seat.people.forEach(function (person) { all.push(retainQuestion(person.n, courtName)); }); });
-      if (!all.length) retentions.push(yesNo("SHALL the judge named on your green ballot be retained in office as JUDGE OF THE CIRCUIT COURT?"));
-      all.slice(0, 3).forEach(function (question) { retentions.push(yesNo(question)); });
-      var extra = all.length - retentions.length;
-      var whiteNote = "County offices and public questions follow on the same sheet.";
-      if (moreRaces) whiteNote += " " + moreRaces + " more judge contests are on the full ballot.";
-      return { lead: lead, contests: contests, retentions: retentions, whiteNote: whiteNote, retentionNote: extra > 0 ? "The green ballot continues with " + extra + " more judges." : "" };
-    }
-    retentions.push(yesNo("SHALL the judge named on your green ballot be retained in office as JUDGE OF THE CIRCUIT COURT?"));
-    return { lead: lead, contests: contests, retentions: retentions, retentionNote: "Judge names follow the county. This ZIP did not match one." };
-  }
-
-  function choiceButton(id, value, lines, party) {
-    var btn = el("button", "choice");
-    btn.type = "button";
-    btn.dataset.contest = id;
-    btn.dataset.value = value;
-    btn.setAttribute("aria-pressed", "false");
-    var mark = el("span", "oval");
-    mark.setAttribute("aria-hidden", "true");
-    btn.appendChild(mark);
-    var text = el("span", "");
-    lines.forEach(function (line, index) {
-      var writeIn = line === "Write-in";
-      var keep = writeIn || (line !== "YES" && line !== "NO");
-      var span = el("span", (index === 0 ? "who-name" : "who-line") + (keep ? " notranslate" : ""), line);
-      if (keep) span.setAttribute("translate", "no");
-      if (writeIn) span.setAttribute("data-phrase", "writein");
-      text.appendChild(span);
-    });
-    if (party) text.appendChild(el("span", "who-party", party));
-    btn.appendChild(text);
-    return btn;
-  }
-
-  function fillSheet(root, items, head, instruction, tail) {
-    root.replaceChildren();
-    var banner = el("div", "sheet-head");
-    banner.appendChild(el("strong", "", head));
-    banner.appendChild(el("span", "", "November 3, 2026 · Sample, not a precinct ballot"));
-    root.appendChild(banner);
-    var intro = el("p", "sheet-instruct");
-    intro.appendChild(document.createTextNode("To vote, darken the oval to the left of your choice, like this "));
-    intro.appendChild(el("span", "mini-oval"));
-    intro.appendChild(document.createTextNode(". " + instruction));
-    root.appendChild(intro);
-    items.forEach(function (item, index) {
-      var block = el("div", "contest");
-      block.appendChild(el("h3", "", item.office));
-      if (item.detail) block.appendChild(el("p", "detail", item.detail));
-      if (item.vote) block.appendChild(el("p", "vote-for", item.vote));
-      (item.people || []).forEach(function (person) {
-        var lines = [person.n];
-        (person.m || []).forEach(function (mate) { lines.push("and " + mate); });
-        block.appendChild(choiceButton("c" + index, person.n, lines, person.p || ""));
-      });
-      if (item.writeIn) {
-        block.appendChild(choiceButton("c" + index, "write-in", ["Write-in"], ""));
-        var field = el("label", "write-field");
-        var input = document.createElement("input");
-        input.type = "text";
-        input.className = "notranslate";
-        input.setAttribute("translate", "no");
-        input.setAttribute("data-phrase", "writefield");
-        input.setAttribute("aria-label", "Write-in name");
-        input.placeholder = "Write a name";
-        field.appendChild(input);
-        block.appendChild(field);
-      }
-      root.appendChild(block);
-    });
-    if (tail) root.appendChild(el("p", "contest note", tail));
-  }
-
-  function showSample(row, zip) {
-    var model = sampleModel(row, zip);
-    document.getElementById("sample-lead").textContent = model.lead;
-    fillSheet(
-      document.getElementById("sample-candidates"),
-      model.contests,
-      "OFFICIAL BALLOT",
-      "To cast a write-in vote, darken the oval to the left of the blank line and write the name. Governor, comptroller, and treasurer have a write-in line.",
-      model.whiteNote || "County offices and public questions follow on the same sheet. They are not shown here."
-    );
-    var greenItems = model.retentions.slice();
-    fillSheet(
-      document.getElementById("sample-green"),
-      greenItems,
-      "BALLOT FOR JUDICIAL CANDIDATES SEEKING RETENTION IN OFFICE",
-      "Vote on the proposition for any judge listed. No judge listed is running against any other judge. The only question is whether each judge shall be retained. A judge needs three-fifths of the vote on that question to stay.",
-      model.retentionNote
-    );
-    sampleIndex = 0;
-    focusContest(0);
-  }
-
-  function sheetRoot() {
-    return document.getElementById(sampleSheet === "white" ? "sample-candidates" : "sample-green");
-  }
-
-  function focusContest(index) {
-    var nodes = sheetRoot().querySelectorAll(".contest:not(.note)");
-    if (!nodes.length) return;
-    if (index < 0) index = 0;
-    if (index >= nodes.length) index = nodes.length - 1;
-    sampleIndex = index;
-    Array.prototype.forEach.call(nodes, function (node, i) {
-      node.classList.toggle("is-current", i === index);
-    });
-    var title = nodes[index].querySelector("h3");
-    document.getElementById("sample-status").textContent = "Contest " + (index + 1) + " of " + nodes.length + (title ? ": " + title.textContent : "");
-    if (index > 0) nodes[index].scrollIntoView({ block: "nearest" });
-  }
-
-  function setSheet(name) {
-    sampleSheet = name;
-    document.getElementById("sample-candidates").hidden = name !== "white";
-    document.getElementById("sample-green").hidden = name !== "green";
-    document.getElementById("show-white").setAttribute("aria-pressed", name === "white" ? "true" : "false");
-    document.getElementById("show-green").setAttribute("aria-pressed", name === "green" ? "true" : "false");
-    focusContest(0);
-  }
-
-  document.getElementById("sample-candidates").addEventListener("click", onChoice);
-  document.getElementById("sample-green").addEventListener("click", onChoice);
-  function onChoice(event) {
-    var btn = event.target.closest(".choice");
-    if (!btn) return;
-    var turnOff = btn.getAttribute("aria-pressed") === "true";
-    var contestNode = btn.closest(".contest");
-    var buttons = contestNode.querySelectorAll(".choice");
-    Array.prototype.forEach.call(buttons, function (other) { other.setAttribute("aria-pressed", "false"); });
-    if (!turnOff) btn.setAttribute("aria-pressed", "true");
-  }
-  document.getElementById("contest-next").addEventListener("click", function () { focusContest(sampleIndex + 1); });
-  document.getElementById("contest-back").addEventListener("click", function () { focusContest(sampleIndex - 1); });
-  document.getElementById("show-white").addEventListener("click", function () { setSheet("white"); });
-  document.getElementById("show-green").addEventListener("click", function () { setSheet("green"); });
-  document.getElementById("sample-steps").addEventListener("click", function (event) {
-    var btn = event.target.closest("button");
-    if (!btn) return;
-    Array.prototype.forEach.call(document.querySelectorAll("#sample-steps button"), function (other) {
-      other.classList.toggle("is-on", other === btn);
-    });
-    var step = btn.dataset.step;
-    if (step === "green") {
-      setSheet("green");
-      return;
-    }
-    setSheet("white");
-    if (step === "ticket") focusContest(1);
-    else if (step === "next") focusContest(2);
-    else focusContest(0);
-  });
-  showSample(null, null);
-
-  function countyLine(zip) {
-    var row = data && data.zips ? data.zips[zip] : null;
-    if (!row || !row.co || !row.co.length) return "";
-    if (row.co.length === 1) return "This ZIP is in " + row.co[0] + " County.";
-    return "This ZIP is listed in " + row.co.join(" and ") + " counties.";
-  }
-
-  function showWhere(number, street, zip) {
-    whereOut.replaceChildren();
-    var card = el("div", "where-card");
-    card.appendChild(el("p", "kicker", "Polling place"));
-    var place = el("h3", "notranslate", number + " " + street + ", " + zip);
-    place.setAttribute("translate", "no");
-    card.appendChild(place);
-    var county = countyLine(zip);
-    var lead = "The State Board of Elections lookup is the list that assigns this address. It asks for the ZIP first, then the street number, then the street name from its own list.";
-    if (county) lead = county + " " + lead;
-    card.appendChild(el("p", "zip-note", lead));
-    var steps = el("ol");
-    function stepLine(parts) {
-      var item = el("li", "");
-      parts.forEach(function (part) {
-        if (typeof part === "string") {
-          item.appendChild(document.createTextNode(part));
-          return;
-        }
-        var secret = el("span", "notranslate", part.secret);
-        secret.setAttribute("translate", "no");
-        item.appendChild(secret);
-      });
-      steps.appendChild(item);
-    }
-    stepLine(["Open the polling-place lookup."]);
-    stepLine(["Enter ZIP " + zip + " and submit."]);
-    stepLine(["Enter street number", { secret: " " + number }, "."]);
-    stepLine(["Choose the street that matches", { secret: " " + street + " " }, ". The list may abbreviate it."]);
-    card.appendChild(steps);
-    if (county && county.indexOf("Cook") !== -1) {
-      card.appendChild(el("p", "zip-note", "Cook County includes Chicago and the suburbs. They do not share one set of polling places. Chicago also keeps Election Day vote centers open. Use the address lookup for the assigned place."));
-    }
-    var actions = el("div", "where-actions");
-    actions.appendChild(externalLink(POLL_URL, "Polling-place lookup"));
-    actions.appendChild(externalLink(EARLY_URL, "Early voting and vote centers"));
-    var reg = externalLink(REG_URL, "Registration check");
-    reg.classList.add("quiet");
-    actions.appendChild(reg);
-    var auth = externalLink(AUTH_URL, "County election office");
-    auth.classList.add("quiet");
-    actions.appendChild(auth);
-    card.appendChild(actions);
-    card.appendChild(el("p", "zip-note", "The registration check asks for your name and date of birth on the State Board site. This page does not collect them. Early voting and vote centers are a separate list from the precinct polling place."));
-    whereOut.appendChild(card);
-    if (window.leadersRefreshLang) window.leadersRefreshLang();
-  }
-
-  whereForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    var number = (whereNumber.value || "").trim().replace(/\s+/g, " ");
-    var street = (whereStreet.value || "").trim().replace(/\s+/g, " ");
-    var zip = (whereZip.value || "").replace(/\D/g, "").slice(0, 5);
-    whereZip.value = zip;
-    if (!number || !street || zip.length !== 5) {
-      whereOut.replaceChildren(el("p", "zip-error", "Enter a street number, a street name, and a 5-digit ZIP code."));
-      if (window.leadersRefreshLang) window.leadersRefreshLang();
-      return;
-    }
-    if (!input.value) input.value = zip;
-    var draw = function () { showWhere(number, street, zip); };
-    if (data) {
-      draw();
-      return;
-    }
-    whereOut.replaceChildren(el("p", "zip-note", "Checking the county for this ZIP."));
-    fetch("ballot.json")
-      .then(function (response) {
-        if (!response.ok) throw new Error("missing");
-        return response.json();
-      })
-      .then(function (json) {
-        data = json;
-        draw();
-      })
-      .catch(function () { draw(); });
-  });
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    var zip = (input.value || "").replace(/\D/g, "").slice(0, 5);
-    input.value = zip;
-    if (zip.length !== 5) {
-      out.replaceChildren(el("p", "zip-error", "Enter a 5-digit ZIP code."));
-      if (window.leadersRefreshLang) window.leadersRefreshLang();
-      return;
-    }
-    var run = function () { render(zip); };
-    if (data) {
-      run();
-      return;
-    }
-    out.replaceChildren(el("p", "zip-note", "Loading the candidate list."));
-    Promise.all([
-      fetch("ballot.json").then(function (response) {
-        if (!response.ok) throw new Error("missing");
-        return response.json();
-      }),
-      fetch("profiles.json").then(function (response) {
-        return response.ok ? response.json() : {};
-      }).catch(function () { return {}; })
-    ])
-      .then(function (pair) {
-        data = pair[0];
-        profiles = pair[1] || {};
-        run();
-      })
-      .catch(function () {
-        out.replaceChildren(el("p", "zip-error", "The ballot file did not load. Open this page from the site folder, not as a loose file."));
-        if (window.leadersRefreshLang) window.leadersRefreshLang();
-      });
-  });
-})();
-</script>
 <div id="google_translate_element" aria-hidden="true"></div>
+<script src="lang.js"></script>
 <script>
-(function () {
-  var select = document.getElementById("lang");
-  var note = document.getElementById("lang-note");
-  var langButton = document.querySelector(".lang-button");
-  var langMenu = document.getElementById("lang-list");
-
-  function syncLangMenu() {
-    var code = select.value || "en";
-    var current = select.options[select.selectedIndex];
-    if (langButton && current) langButton.textContent = current.text;
-    if (!langMenu) return;
-    Array.prototype.forEach.call(langMenu.querySelectorAll("[data-lang]"), function (item) {
-      item.setAttribute("aria-selected", item.getAttribute("data-lang") === code ? "true" : "false");
-    });
-  }
-
-  function closeLangMenu() {
-    if (!langMenu || !langButton) return;
-    langMenu.hidden = true;
-    langButton.setAttribute("aria-expanded", "false");
-  }
-
-  if (langButton && langMenu) {
-    langButton.addEventListener("click", function () {
-      var open = langMenu.hidden;
-      langMenu.hidden = !open;
-      langButton.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    langMenu.addEventListener("click", function (event) {
-      var item = event.target.closest("[data-lang]");
-      if (!item) return;
-      select.value = item.getAttribute("data-lang");
-      syncLangMenu();
-      closeLangMenu();
-      select.dispatchEvent(new Event("change"));
-    });
-    document.addEventListener("click", function (event) {
-      if (!event.target.closest(".lang")) closeLangMenu();
-    });
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") closeLangMenu();
-    });
-  }
-  var KEY = "leaders-lang";
-  var pending = null;
-  var ready = false;
-  var waiters = [];
-
-  document.querySelectorAll(".who h3, .links a").forEach(function (node) {
-    if (node.tagName === "A" && node.textContent.indexOf(".") === -1) return;
-    node.classList.add("notranslate");
-    node.setAttribute("translate", "no");
-  });
-
-  function readCookie() {
-    var match = document.cookie.match(/(?:^|; )googtrans=([^;]+)/);
-    if (!match) return "";
-    var parts = decodeURIComponent(match[1]).split("/");
-    return parts[2] || "";
-  }
-
-  function writeCookie(code) {
-    var host = location.hostname;
-    var domains = [""];
-    if (host && host !== "localhost" && host !== "127.0.0.1") domains.push(host, "." + host);
-    domains.forEach(function (domain) {
-      if (code && code !== "en") {
-        document.cookie = "googtrans=/en/" + code + ";path=/" + (domain ? ";domain=" + domain : "");
-        return;
+fetch("preview/us.svg").then(function (response) { return response.text(); }).then(function (markup) {
+  var start = markup.indexOf("<svg");
+  var slot = document.getElementById("us-slot");
+  slot.innerHTML = start >= 0 ? markup.slice(start) : "";
+  var svg = slot.querySelector("svg");
+  if (!svg) return;
+  svg.id = "us-map";
+  function labelAt(path) {
+    var code = path.getAttribute("data-code");
+    var best = null;
+    (path.getAttribute("d") || "").split(/[Mm]/).forEach(function (part) {
+      var nums = part.match(/-?\d+(?:\.\d+)?/g);
+      if (!nums || nums.length < 4) return;
+      var minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+      for (var i = 0; i + 1 < nums.length; i += 2) {
+        var px = +nums[i], py = +nums[i + 1];
+        if (px < minX) minX = px;
+        if (py < minY) minY = py;
+        if (px > maxX) maxX = px;
+        if (py > maxY) maxY = py;
       }
-      document.cookie = "googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/" + (domain ? ";domain=" + domain : "");
-    });
-  }
-
-  function savedLang() {
-    var fromCookie = readCookie();
-    if (fromCookie && select.querySelector('option[value="' + fromCookie + '"]')) return fromCookie;
-    try {
-      var stored = localStorage.getItem(KEY) || "en";
-      if (select.querySelector('option[value="' + stored + '"]')) return stored;
-    } catch (error) {}
-    return "en";
-  }
-
-  var PHRASES = {
-    en: { green: "Green retention ballot", writein: "Write-in", writeins: "Write-ins", writeName: "Write a name", writeLabel: "Write-in name", back: "Back", next: "Next" },
-    es: { green: "Papeleta verde de retención", writein: "Voto por escrito", writeins: "Votos por escrito", writeName: "Escriba un nombre", writeLabel: "Nombre del voto por escrito", back: "Atrás", next: "Siguiente" },
-    "zh-CN": { green: "绿色留任选票", writein: "另填候选人", writeins: "另填候选人", writeName: "填写姓名", writeLabel: "另填姓名", back: "返回", next: "下一步" },
-    pl: { green: "Zielona karta utrzymania sędziego", writein: "Głos dopisany", writeins: "Głosy dopisane", writeName: "Wpisz nazwisko", writeLabel: "Nazwisko dopisane", back: "Wstecz", next: "Dalej" },
-    hi: { green: "Green retention ballot", writein: "Write-in", writeins: "Write-ins", writeName: "Write a name", writeLabel: "Write-in name", back: "पीछे", next: "आगे" },
-    ko: { green: "녹색 유임 투표용지", writein: "기표 외 후보", writeins: "기표 외 투표", writeName: "이름을 쓰세요", writeLabel: "기표 외 이름", back: "뒤로", next: "다음" },
-    tl: { green: "Green retention ballot", writein: "Write-in", writeins: "Write-ins", writeName: "Isulat ang pangalan", writeLabel: "Pangalan sa write-in", back: "Bumalik", next: "Susunod" },
-    ar: { green: "Green retention ballot", writein: "Write-in", writeins: "Write-ins", writeName: "Write a name", writeLabel: "Write-in name", back: "رجوع", next: "التالي" },
-    ur: { green: "Green retention ballot", writein: "Write-in", writeins: "Write-ins", writeName: "Write a name", writeLabel: "Write-in name", back: "واپس", next: "آگے" },
-    uk: { green: "Зелений бюлетень щодо залишення", writein: "Вписаний кандидат", writeins: "Вписані голоси", writeName: "Впишіть ім’я", writeLabel: "Вписане ім’я", back: "Назад", next: "Далі" },
-    vi: { green: "Phiếu xanh giữ chức thẩm phán", writein: "Bỏ phiếu ghi tên", writeins: "Bỏ phiếu ghi tên", writeName: "Viết tên", writeLabel: "Tên ghi thêm", back: "Quay lại", next: "Tiếp" },
-    fr: { green: "Bulletin vert de maintien", writein: "Vote par écrit", writeins: "Votes par écrit", writeName: "Écrire un nom", writeLabel: "Nom du vote par écrit", back: "Retour", next: "Suivant" }
-  };
-
-  function fixOfficeNames(code) {
-    if (code !== "es") return;
-    var nodes = [];
-    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-    var node;
-    while ((node = walker.nextNode())) nodes.push(node);
-    nodes.forEach(function (text) {
-      var parent = text.parentElement;
-      if (!parent || parent.closest(".notranslate, .lang, #google_translate_element")) return;
-      if (text.nodeValue.indexOf("Ministro de justicia") === -1 && text.nodeValue.indexOf("ministro de justicia") === -1) return;
-      text.nodeValue = text.nodeValue.replace(/Ministro de justicia/g, "Procurador general").replace(/ministro de justicia/g, "procurador general");
-    });
-  }
-
-  function showNote(on) {
-    if (!note) return;
-    note.hidden = !on;
-  }
-
-  window.leadersApplyPhrases = function (code) {
-    var pack = PHRASES[code] || PHRASES.en;
-    document.querySelectorAll("[data-phrase]").forEach(function (node) {
-      var key = node.getAttribute("data-phrase");
-      if (key === "writefield") {
-        node.placeholder = pack.writeName;
-        node.setAttribute("aria-label", pack.writeLabel);
-        return;
-      }
-      if (pack[key]) node.textContent = pack[key];
-    });
-  };
-
-  function combo() {
-    return document.querySelector(".goog-te-combo");
-  }
-
-  function apply(code) {
-    var box = combo();
-    if (!box) return false;
-    document.documentElement.lang = code === "en" ? "en" : code;
-    box.value = code === "en" ? "" : code;
-    box.dispatchEvent(new Event("change"));
-    window.leadersApplyPhrases(code);
-    setTimeout(function () { fixOfficeNames(code); }, 700);
-    setTimeout(function () { fixOfficeNames(code); }, 2200);
-    return true;
-  }
-
-  window.leadersRefreshLang = function () {
-    var code = select.value || "en";
-    if (code === "en" || !combo()) return;
-    clearTimeout(pending);
-    pending = setTimeout(function () {
-      var box = combo();
-      if (!box) return;
-      box.value = "";
-      box.dispatchEvent(new Event("change"));
-      setTimeout(function () { apply(code); }, 280);
-    }, 40);
-  };
-
-  function finishWaiters() {
-    var queued = waiters.splice(0);
-    queued.forEach(function (done) { done(); });
-  }
-
-  function loadWidget(done) {
-    if (ready && combo()) {
-      done();
-      return;
-    }
-    waiters.push(done);
-    if (document.getElementById("google-translate-script")) return;
-    window.googleTranslateElementInit = function () {
-      new google.translate.TranslateElement({
-        pageLanguage: "en",
-        autoDisplay: false,
-        includedLanguages: "es,zh-CN,pl,hi,ko,tl,ar,ur,uk,vi,fr"
-      }, "google_translate_element");
-      var waits = 0;
-      var timer = setInterval(function () {
-        waits += 1;
-        if (combo() || waits > 40) {
-          clearInterval(timer);
-          ready = !!combo();
-          finishWaiters();
+      var w = maxX - minX, h = maxY - minY;
+      if (w < 1 || h < 1) return;
+      var step = Math.max(1.5, Math.min(w, h) / 14);
+      var n = 0, sx = 0, sy = 0;
+      for (var gy = minY; gy <= maxY; gy += step) {
+        for (var gx = minX; gx <= maxX; gx += step) {
+          if (path.isPointInFill(new DOMPoint(gx, gy))) { n++; sx += gx; sy += gy; }
         }
-      }, 50);
-    };
-    var script = document.createElement("script");
-    script.id = "google-translate-script";
-    script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    script.onerror = function () {
-      select.value = "en";
-      showNote(false);
-      waiters = [];
-    };
-    document.body.appendChild(script);
+      }
+      if (!best || n > best.n) best = { n: n, x: n ? sx / n : (minX + maxX) / 2, y: n ? sy / n : (minY + maxY) / 2, w: w, h: h };
+    });
+    if (!best) return null;
+    var size = Math.max(8, Math.min(13, Math.min(best.w, best.h) / 3.2));
+    var x = best.x, y = best.y;
+    if (code === "MD") { x = 826; y = 231; size = 10; }
+    if (code === "DC") { x = 832; y = 245; size = 8; }
+    if (code === "RI") { x = 916; y = 174; size = 8; }
+    return { x: x, y: y, size: size };
   }
-
-  var initial = savedLang();
-  select.value = initial;
-  syncLangMenu();
-  showNote(initial !== "en");
-  if (initial !== "en") writeCookie(initial);
-
-  select.addEventListener("change", function () {
-    var code = select.value || "en";
-    try { localStorage.setItem(KEY, code); } catch (error) {}
-    writeCookie(code);
-    if (code === "en") {
-      location.reload();
-      return;
+  svg.querySelectorAll("path").forEach(function (path) {
+    var code = path.getAttribute("data-code");
+    var spot = labelAt(path);
+    if (spot && code) {
+      var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      text.setAttribute("class", "map-code notranslate");
+      text.setAttribute("translate", "no");
+      text.setAttribute("data-code", code);
+      text.setAttribute("x", spot.x);
+      text.setAttribute("y", spot.y);
+      text.setAttribute("font-size", spot.size);
+      text.textContent = code;
+      svg.appendChild(text);
     }
-    showNote(true);
-    window.leadersApplyPhrases(code);
-    loadWidget(function () { apply(code); });
+    path.addEventListener("click", function () {
+      location.href = code === "IL" ? "illinois.html" : code.toLowerCase() + ".html";
+    });
+    path.addEventListener("mouseenter", function () {
+      clearMark();
+      path.classList.add("is-on");
+      var link = document.querySelector('.state-list a[data-code="' + code + '"]');
+      if (link) link.classList.add("is-on");
+    });
+    path.addEventListener("mouseleave", clearMark);
   });
-
-  window.leadersApplyPhrases(initial);
-  if (initial !== "en") loadWidget(function () { apply(initial); });
-  var fixTimer = 0;
-  window.addEventListener("scroll", function () {
-    if ((select.value || "en") === "en") return;
-    clearTimeout(fixTimer);
-    fixTimer = setTimeout(function () { fixOfficeNames(select.value); }, 500);
-  }, { passive: true });
-})();
+  function clearMark() {
+    svg.querySelectorAll("path.is-on").forEach(function (node) { node.classList.remove("is-on"); });
+    document.querySelectorAll(".state-list a.is-on").forEach(function (node) { node.classList.remove("is-on"); });
+  }
+  document.querySelectorAll(".state-list a").forEach(function (link) {
+    var code = link.getAttribute("data-code");
+    function mark() {
+      clearMark();
+      var path = svg.querySelector('path[data-code="' + code + '"]');
+      if (path) path.classList.add("is-on");
+      link.classList.add("is-on");
+    }
+    link.addEventListener("mouseenter", mark);
+    link.addEventListener("focus", mark);
+    link.addEventListener("mouseleave", clearMark);
+    link.addEventListener("blur", clearMark);
+  });
+  var PARTY = { dem: "#1e4d7b", gop: "#8d3232", ind: "#3e5c45", other: "#5c4a2a" };
+  var PARTY_LABEL = { dem: "Democratic", gop: "Republican", ind: "Independent", lib: "Libertarian", other: "Other" };
+  function tint(hex, amount) {
+    var chip = [235, 228, 214];
+    var rgb = [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
+    return "rgb(" + chip.map(function (channel, index) {
+      return Math.round(channel + (rgb[index] - channel) * amount);
+    }).join(",") + ")";
+  }
+  function paintLeads(data) {
+    var rows = (data && data.states) || {};
+    svg.querySelectorAll("path").forEach(function (path) {
+      var code = path.getAttribute("data-code");
+      var row = rows[code] || {};
+      var label = svg.querySelector('text[data-code="' + code + '"]');
+      var party = row.party || "";
+      var votes = row.votes || 0;
+      if (party && votes) {
+        var amount = Math.max(0.4, Math.min(1, (row.gap || 0) / 32));
+        path.style.setProperty("--lead", tint(PARTY[party] || PARTY.other, amount));
+        if (label) label.classList.toggle("on-dark", amount >= 0.72);
+        path.setAttribute("title", (path.getAttribute("data-name") || code) + ": " + (row.office || "Statewide") + ", " + (PARTY_LABEL[party] || "Other") + " lead");
+      } else {
+        path.style.removeProperty("--lead");
+        if (label) label.classList.remove("on-dark");
+        path.setAttribute("title", path.getAttribute("data-name") || code);
+      }
+    });
+    var status = document.getElementById("us-status");
+    if (!status) return;
+    status.textContent = "";
+    var when = new Date(data && data.updated);
+    var clock = isNaN(when.getTime()) ? "" : when.toLocaleString("en-US", {
+      timeZone: "America/Chicago", month: "short", day: "numeric", hour: "numeric", minute: "2-digit"
+    });
+    if (clock) status.appendChild(document.createTextNode("Updated " + clock + " Central. "));
+    status.appendChild(document.createTextNode("Unofficial totals from the Associated Press, published by NBC News. This map does not call a race."));
+  }
+  function loadLeads() {
+    fetch("preview/leads.json?t=" + Date.now()).then(function (response) { return response.json(); }).then(paintLeads).catch(function () {});
+  }
+  loadLeads();
+  setInterval(loadLeads, 60000);
+});
 </script>
 </body>
 </html>

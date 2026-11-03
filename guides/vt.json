@@ -1,0 +1,129 @@
+{
+  "code": "vt",
+  "ballotSource": "https://outside.vermont.gov/dept/sos/Elections_Division/voters/voter_guide/256242.pdf",
+  "where": {
+    "url": "https://vote.vermont.gov/",
+    "label": "Vermont Voter Portal"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one.",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. Vermont's official voter guide says the governor serves a two-year term, carries out state laws, and appoints agency heads and state judges."
+    },
+    "Lt. Governor": {
+      "job": "The lieutenant governor is next in line if the governor cannot finish the term. Any other duties are set by state law. Vermont's official voter guide says the lieutenant governor presides over the Senate and casts tie-breaking votes."
+    },
+    "Attorney General": {
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. Vermont's official voter guide says the attorney general represents the state in civil and criminal matters and enforces consumer-protection, civil-rights, and environmental laws."
+    },
+    "Secretary Of State": {
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. Vermont's official voter guide says this secretary of state runs elections and campaign-finance enforcement, registers businesses, licenses professions, and keeps the state archives."
+    }
+  },
+  "people": {
+    "phil scott": {
+      "role": "Governor of Vermont, small-business owner, and racecar driver.",
+      "bio": "His campaign says he grew up in Barre, built and later co-owned an excavation company, and served five terms in the Vermont Senate before becoming lieutenant governor. The site says he has worked shifts in other Vermonters' jobs, from manufacturing floors to classrooms, to hear from employers and workers.",
+      "issues": [
+        "The site says he sought the office because too many families and employers were on the economic edge.",
+        "He says the state should expand the middle class, lift wages, and confront what he calls a crisis of affordability for working families and small businesses."
+      ],
+      "site": "https://www.philscott.org/",
+      "siteLabel": "philscott.org",
+      "donate": "https://secure.anedot.com/phil-scott/donate",
+      "source": "https://www.philscott.org/meet-phil/"
+    },
+    "amanda janoo": {
+      "role": "Economist running for governor of Vermont.",
+      "bio": "Her campaign says she was born and raised in rural Vermont and has spent her career helping governments build economies that work for people. She says strong communities are built by neighbors, not by distant institutions.",
+      "issues": [
+        "She proposes free universal primary and preventive care, with a community doctor for every Vermonter.",
+        "She wants permanently affordable housing paid for in part by taxes on private equity, second homes, and luxury estates, and she wants to ban AI data centers.",
+        "She says the state should invest in local businesses, farmers, workers, and cooperatives so more wealth stays in Vermont."
+      ],
+      "site": "https://janooforvt.com/",
+      "siteLabel": "janooforvt.com",
+      "donate": "https://secure.actblue.com/donate/janoo-for-vt?refcode=Website",
+      "source": "https://janooforvt.com/"
+    },
+    "june goodband": {
+      "role": "Peace and Justice Party candidate for governor of Vermont.",
+      "bio": "Her campaign says the major parties maintain economic and environmental injustice, and that her platform is a just and inclusive society with wealth and power shared more equally.",
+      "issues": [
+        "She wants profitable businesses to pay a living wage and wants Vermont's universal health care law fully carried out.",
+        "She proposes progressive taxes, including higher taxes on high incomes and on buildings left vacant most of the year, in place of homestead taxes for education.",
+        "She wants community hubs where people can offer skills and get help, plus housing support such as cooperative ownership and no-interest mortgages for modest homes."
+      ],
+      "site": "https://june4govvt.org/",
+      "siteLabel": "june4govvt.org",
+      "donate": "",
+      "source": "https://june4govvt.org/"
+    },
+    "john rodgers": {
+      "role": "Lieutenant governor, farmer, and small-business owner.",
+      "bio": "His campaign says he is a fifth-generation Vermonter who grew up on a family farm in West Glover, served in the Vermont House and Senate, and was elected lieutenant governor in 2024. It says he still runs excavation, forestry, agriculture, and construction businesses.",
+      "issues": [
+        "He says affordability comes first, and that he opposes taxes, mandates, and spending he considers unnecessary burdens on families, seniors, farmers, and small businesses.",
+        "He says he will defend property rights and traditional land uses for farmers, loggers, sportsmen, and landowners.",
+        "He wants it to be easier to build housing, and he wants more career and technical education, apprenticeships, and workforce programs."
+      ],
+      "site": "https://www.rodgersforvt.com/",
+      "siteLabel": "rodgersforvt.com",
+      "donate": "https://secure.anedot.com/rodgersforvermont/donate",
+      "source": "https://www.rodgersforvt.com/priorities"
+    },
+    "molly gray": {
+      "role": "Former lieutenant governor and human-rights lawyer running for the office again.",
+      "bio": "Her campaign says she grew up on a family farm in South Newbury, later led the Vermont Afghan Alliance, and became a parent while helping care for her mother. She says she is running to protect fundamental rights, lower costs, and make life better for working families.",
+      "issues": [
+        "She says she would use state tools against attacks on basic rights, immigration policies she calls inhumane, voter suppression, and harm from tariffs.",
+        "She wants affordable child care and elder care, universal paid family and medical leave, and health-care changes that reach every part of the state.",
+        "She says she would focus on building housing, lowering costs, strengthening public schools, and expanding hands-on job training."
+      ],
+      "site": "https://mollyforvt.com/",
+      "siteLabel": "mollyforvt.com",
+      "donate": "https://secure.actblue.com/donate/mollygrayforvermont-ws",
+      "source": "https://mollyforvt.com/"
+    },
+    "charity clark": {
+      "role": "Vermont attorney general running for another term.",
+      "bio": "Her campaign says she was sworn in as attorney general in January 2023 and is running to keep challenging federal actions, polluters, and companies that harm children.",
+      "issues": [
+        "She says she has sued the Trump administration 49 times for violating the Constitution or federal law, and that she has sued Meta and TikTok over harm to children.",
+        "She says she has defended abortion access, including a case about medication abortion, and sued pharmacy benefit managers over drug costs.",
+        "She says the office prosecutes violent crimes and sexual crimes against children, and that she sued Monsanto over PCB contamination of water and schools."
+      ],
+      "site": "https://charityforvermont.com/",
+      "siteLabel": "charityforvermont.com",
+      "donate": "https://secure.actblue.com/donate/charityforag",
+      "source": "https://charityforvermont.com/"
+    },
+    "sarah copeland hanzas": {
+      "role": "Vermont secretary of state, first elected in 2022.",
+      "bio": "Her campaign says she served 18 years in the Vermont House before this office, including work that made universal vote-by-mail permanent for general elections.",
+      "issues": [
+        "She says the office registers businesses, runs elections and campaign-finance disclosure, licenses professions, and preserves state and local records.",
+        "She points to a universal voter guide, a new election management system, and the Safe at Home program for people facing domestic violence, sexual assault, or stalking.",
+        "She says civic education, including a Kid Governor program and visits to schools, is a priority of the office."
+      ],
+      "site": "https://www.sarahforvermont.com/",
+      "siteLabel": "sarahforvermont.com",
+      "donate": "https://secure.actblue.com/donate/sarah4vermont26",
+      "source": "https://www.sarahforvermont.com/key-issues/"
+    },
+    "becca balint": {
+      "role": "U.S. representative for Vermont",
+      "bio": "The campaign says Becca Balint is the first woman and openly LGBTQ+ person to represent Vermont in Congress. It says she is a teacher and parent, served in the state Senate, and now sits on the House Judiciary Committee and in the Progressive Caucus.",
+      "issues": [
+        "Her campaign says housing is a human right and points to the Community Housing Act, which she introduced to fund affordable housing, renter protections, and down-payment help.",
+        "The site says she has introduced bills to expand mental health care after disasters and for young people.",
+        "It says she cosponsored the Freedom to Vote Act and the John Lewis Voting Rights Act and wants Supreme Court term limits and tighter ethics rules."
+      ],
+      "site": "https://beccabalint.com/",
+      "siteLabel": "Becca Balint for US Congress",
+      "donate": "https://secure.actblue.com/donate/scrappylittlevt",
+      "source": "https://beccabalint.com/issues/"
+    }
+  },
+  "measures": {}
+}

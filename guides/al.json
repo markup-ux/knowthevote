@@ -1,0 +1,339 @@
+{
+  "code": "al",
+  "ballotSource": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Chambers_Sample.pdf",
+  "where": {
+    "url": "https://myinfo.alabamavotes.gov/voterview",
+    "label": "Alabama Secretary of State"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Lt. Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The lieutenant governor is next in line if the governor cannot finish the term. Any other duties are set by state law."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state."
+    }
+  },
+  "people": {
+    "tommy tuberville": {
+      "role": "U.S. senator and former college football coach",
+      "bio": "Tommy Tuberville is a U.S. senator from Alabama and a former college football coach, best known for his years at Auburn. His campaign says he was elected to the Senate in 2020 and is running for governor at the end of that Senate term.",
+      "issues": [
+        "He says men should not compete in women's sports, that critical race theory and diversity, equity, and inclusion programs do not belong in schools or government, and that no tax money should pay for abortions.",
+        "He says he will cut taxes, cut waste, and work to bring manufacturing jobs back to Alabama.",
+        "He says he will expand school choice across charter, magnet, private, public, and home schools, and that parents should control a child's education."
+      ],
+      "site": "https://www.coachforgovernor.com/",
+      "siteLabel": "coachforgovernor.com",
+      "donate": "https://secure.winred.com/tuberville-for-governor-inc/donate",
+      "source": "https://www.coachforgovernor.com/issues"
+    },
+    "doug jones": {
+      "role": "Former U.S. senator and former U.S. attorney",
+      "bio": "Doug Jones is a lawyer who served as U.S. attorney for the Northern District of Alabama and, in that job, prosecuted two former Ku Klux Klan members for the 1963 bombing of the Sixteenth Street Baptist Church. He was elected to the U.S. Senate in 2017 and is now the Democratic candidate for governor.",
+      "issues": [
+        "He says he will declare a one-year moratorium on data centers and reject tax breaks, secret deals, and nondisclosure agreements for those companies.",
+        "He says he would suspend the state gas tax when prices spike, eliminate the grocery tax, end taxes on overtime, and raise the minimum wage.",
+        "He says he would expand Medicaid to cover more than 154,000 working Alabamians and stop turning down roughly $182 million a year in federal health-care funding."
+      ],
+      "site": "https://www.dougjones.com/",
+      "siteLabel": "dougjones.com",
+      "donate": "https://secure.actblue.com/donate/dfaweb",
+      "source": "https://www.dougjones.com/priorities"
+    },
+    "john wahl": {
+      "role": "Chairman of the Alabama Republican Party",
+      "bio": "John Wahl became chairman of the Alabama Republican Party in 2021 after earlier work as a party field director, and he runs a butterfly farm in Limestone County. Governor Kay Ivey appointed him to the Alabama Public Library Service board, and the board elected him its chairman in 2024.",
+      "issues": [
+        "He supports tax relief and says that as party chairman he helped lead a cut in the state grocery tax.",
+        "He supports school choice, wants classrooms focused on reading, writing, math, history, and civics, and backs ending the federal Department of Education.",
+        "He says he will work with Donald Trump's border plans so Alabama is not a sanctuary for illegal activity, and he wants post-election audits and tighter oversight of voting machines."
+      ],
+      "site": "https://votejohnwahl.com/",
+      "siteLabel": "votejohnwahl.com",
+      "donate": "https://secure.winred.com/john-wahl-for-alabama/donate-today",
+      "source": "https://votejohnwahl.com/issues/"
+    },
+    "phillip ensler": {
+      "role": "Candidate for lieutenant governor",
+      "bio": "Phillip Ensler is running for lieutenant governor. His campaign says he will use relationships across Alabama to build support for an agenda aimed at working families.",
+      "issues": [
+        "He says every Alabamian deserves a quality education, affordable health care, safe communities, and more money in their pockets.",
+        "He says the lieutenant governor should help pass an agenda that delivers those things for working families."
+      ],
+      "site": "https://phillipensler.com/",
+      "siteLabel": "phillipensler.com",
+      "donate": "",
+      "source": "https://phillipensler.com/"
+    },
+    "barry moore": {
+      "role": "U.S. representative and small-business owner",
+      "bio": "Barry Moore is a member of Congress and the owner of a waste-removal and demolition company he and his wife started after he earned an agricultural science degree at Auburn and served in the Alabama National Guard. He previously served in the Alabama House, where he says he judged votes by faith, family, finance, and freedom.",
+      "issues": [
+        "He says illegal immigration should face zero tolerance, and he wants people in the country illegally deported, beginning with those he calls the most violent.",
+        "He points to tax cuts on tips, overtime, and Social Security, and says he is working to cut regulations and shrink the federal government.",
+        "He says violent criminals should be prosecuted fully and that federal law enforcement should be funded to focus on crime rather than political opponents."
+      ],
+      "site": "https://barrymooreforalabama.com/",
+      "siteLabel": "barrymooreforalabama.com",
+      "donate": "https://secure.winred.com/barrymoore/9a96a362-b3c2-4882-8e29-730f780c64f9",
+      "source": "https://barrymooreforalabama.com/issues/"
+    },
+    "everett wess": {
+      "role": "Attorney and Midfield municipal judge",
+      "bio": "Everett Wess has been managing partner of the Wess Law Firm since 2001, focusing on estate planning and criminal defense, and he has served eight years as a Midfield municipal court judge. Before law he worked more than a decade in Huntsville in technology and engineering, including support for NASA mission operations.",
+      "issues": [
+        "He says he is running to fight for affordable health care, including funding for medical providers and hospitals in rural Alabama.",
+        "He says he will advocate for voting rights, equal justice, quality public education, and economic opportunity.",
+        "He says the justice system should work for everyone, not only the powerful, and that courts should be fair and government clean."
+      ],
+      "site": "https://wessforsenate.com/",
+      "siteLabel": "wessforsenate.com",
+      "donate": "https://secure.actblue.com/donate/everett-wess-1",
+      "source": "https://wessforsenate.com/"
+    },
+    "katherine robertson": {
+      "role": "Chief counsel to the Alabama attorney general",
+      "bio": "Katherine Robertson is a graduate of Auburn University and the University of Alabama School of Law and has been chief counsel to Attorney General Steve Marshall for nearly a decade. She previously was vice president of the Alabama Policy Institute and worked in Washington as clerk and counsel to Senator Jeff Sessions.",
+      "issues": [
+        "She says her work has been to fight what she calls federal overreach.",
+        "She says she has fought efforts she describes as attacks on women's sports, free speech, and the sanctity of life.",
+        "She says she is running to defend the rights and freedoms of Alabamians."
+      ],
+      "site": "https://www.katherineforag.com/",
+      "siteLabel": "katherineforag.com",
+      "donate": "https://secure.anedot.com/robertson-for-ag/e8cf38cc-c936-4ddc-969f-bb6a5bc30498",
+      "source": "https://www.katherineforag.com/"
+    },
+    "jeff mclaughlin": {
+      "role": "Lawyer and former state representative",
+      "bio": "Jeff McLaughlin was a schoolteacher, then practiced law in Guntersville for more than 30 years, and represented Marshall County in the Alabama House for ten of those years. He says he self-financed those legislative races and led the fight to ban secret PAC-to-PAC transfers.",
+      "issues": [
+        "He says he will use the attorney general's office to root out public corruption no matter the party or the connections.",
+        "He says he will go after scams that target seniors and fraud that drains working families, and that he will stand up for victims.",
+        "He says he will back local police and focus on fentanyl and other dangerous drugs coming into the state."
+      ],
+      "site": "https://www.mclaughlinforag.com/",
+      "siteLabel": "mclaughlinforag.com",
+      "donate": "https://secure.actblue.com/donate/1website",
+      "source": "https://www.mclaughlinforag.com/"
+    },
+    "caroleene dobson": {
+      "role": "Candidate for secretary of state",
+      "bio": "Caroleene Dobson is running for secretary of state. Her campaign says the job should serve Alabama voters and businesses.",
+      "issues": [
+        "She says she will reduce fees on Alabama businesses.",
+        "She says she will streamline government services for the public.",
+        "She says she will oppose groups she calls liberal activists who want to weaken election security."
+      ],
+      "site": "https://www.dobsonforalabama.com/",
+      "siteLabel": "dobsonforalabama.com",
+      "donate": "https://secure.winred.com/dobson-for-al/donate",
+      "source": "https://www.dobsonforalabama.com/"
+    },
+    "wayne rogers": {
+      "role": "Attorney",
+      "bio": "Wayne Rogers is a Thomasville native and attorney who earned degrees from Samford University and Cumberland School of Law. His campaign says he has worked as a federal prosecutor, spent two decades in private practice, and helped lead Democratic campaigns in Jefferson County.",
+      "issues": [
+        "He says the secretary of state should administer elections as an impartial scorekeeper, with partisan politics kept out of who received the most votes.",
+        "He says he will encourage every eligible Alabamian to vote and expand opportunities to cast a ballot.",
+        "He says officeholders should put people over party and do what they tell voters they will do."
+      ],
+      "site": "https://waynerogersforalsecretaryofstate.com/",
+      "siteLabel": "waynerogersforalsecretaryofstate.com",
+      "donate": "https://secure.actblue.com/donate/wayne-rogers-1",
+      "source": "https://waynerogersforalsecretaryofstate.com/"
+    },
+    "jerry carl": {
+      "role": "Businessman and former Mobile County commissioner running for Congress",
+      "bio": "The campaign says Jerry Carl was born in Mobile, started his first company at 25, and has launched more than ten businesses over four decades, from real estate and health care to timber. He later served on the Mobile County Commission, where the campaign says he voted against tax increases and skipped a taxpayer-funded salary for his first two years.",
+      "issues": [
+        "He says he will work with President Trump on an America First agenda.",
+        "He says illegal immigration threatens national security and points to border-wall funding and more Border Patrol agents as work he wants continued.",
+        "He says he is a lifelong hunter who will defend the Second Amendment."
+      ],
+      "site": "https://jerrycarlforcongress.com/",
+      "siteLabel": "Jerry Carl for Congress",
+      "donate": "https://secure.winred.com/jerry-carl-for-congress/website",
+      "source": "https://jerrycarlforcongress.com/issues/"
+    },
+    "clyde jones": {
+      "role": "Retired Army first sergeant running for Congress",
+      "bio": "The campaign says Clyde Jones served 21 years in the Army Signal Corps, retired as a first sergeant, and received a Bronze Star for service in Desert Storm and Iraqi Freedom. He later worked in process safety for DuPont and FMC in south Alabama and serves as an associate minister.",
+      "issues": [
+        "He says he will focus on lowering prices for gas, health coverage, rent, and groceries.",
+        "He says Congress should check the White House, and he says he will not take corporate PAC money.",
+        "He supports expanding Medicaid and Affordable Care Act premium tax credits so people who earn too much for Medicaid can still get coverage."
+      ],
+      "site": "https://clydeforcongress.com/",
+      "siteLabel": "Clyde Jones For Alabama's First Congressional District",
+      "donate": "https://secure.actblue.com/donate/clyde-jones-al",
+      "source": "https://clydeforcongress.com/issues"
+    },
+    "rhett marques": {
+      "role": "Small-business owner and Republican nominee for Congress",
+      "bio": "The campaign says Rhett Marques was born and raised in Alabama, met his wife at the University of Alabama, and spent more than 26 years owning a tire and auto shop in Enterprise while raising two daughters. It says he has served in the Alabama Legislature and is the Republican nominee trying to flip the 2nd District.",
+      "issues": [
+        "He says his top priority is making life affordable by cutting wasteful spending and taxes so families keep more of their pay.",
+        "He says he will secure the border and push to deport people he describes as criminal illegal aliens.",
+        "He says he voted for what he calls the country's strongest pro-life law and will work to stop taxpayer funding of abortion."
+      ],
+      "site": "https://www.rhettforalabama.com/",
+      "siteLabel": "Rhett for Alabama",
+      "source": "https://www.rhettforalabama.com/"
+    },
+    "shomari figures": {
+      "role": "U.S. representative for Alabama's 2nd District",
+      "bio": "The campaign says Shomari Figures was born and raised in Alabama and represents the 2nd District. It says that in his first term he has brought nearly $18 million back to the district, pushed to keep hospitals open, and worked to lower costs.",
+      "issues": [
+        "He says he has pushed to expand Medicaid in Alabama and to keep Jackson Hospital in Montgomery from closing.",
+        "He says he introduced a tariff-relief plan for small and mid-sized farmers and tax breaks tied to children's activities and first-time parents.",
+        "His campaign says he defended reproductive rights and patient decision-making."
+      ],
+      "site": "https://www.figuresforcongress.com/",
+      "siteLabel": "Shomari Figures for Congress",
+      "donate": "https://secure.actblue.com/donate/committee-to-elect-shomari-figures-for-congress-1",
+      "source": "https://www.figuresforcongress.com/issues"
+    },
+    "mike rogers": {
+      "role": "U.S. representative for Alabama's 3rd District and chairman of the House Armed Services Committee",
+      "bio": "The campaign says Mike Rogers, a sixth-generation east Alabamian and the son of a textile worker and firefighter, was first elected to the U.S. House in 2002. He previously served on the Calhoun County Commission and as Alabama House minority leader, and he practiced law in Anniston.",
+      "issues": [
+        "He says the next two years should finish work he ties to President Trump: closing the border, protecting the unborn, expanding American energy, and growing the economy.",
+        "His campaign says he is grateful for Trump's endorsement and for the 3rd District's support of another term."
+      ],
+      "site": "https://www.mikerogersforcongress.com/",
+      "siteLabel": "Mike Rogers For Congress",
+      "source": "https://www.mikerogersforcongress.com/about-mike/"
+    },
+    "lee mcinnis": {
+      "role": "Retired defense intelligence officer running for Congress",
+      "bio": "The campaign says Lee McInnis is an Alabama native who served six years in Army intelligence and then 28 years in the defense intelligence community, including as acting director of intelligence for a NATO and U.S. special operations task force in Afghanistan. After federal service he taught communications and American government and earned a master's degree in history from Auburn.",
+      "issues": [
+        "He says the economy favors the very wealthy and that he wants working families to keep more of what they earn.",
+        "He says the 3rd District has counties without hospitals, pediatricians, or labor-and-delivery care, and that health care should be available to everyone.",
+        "He says he will not take money from corporate PACs or PACs tied to foreign governments, and that he will hold town halls."
+      ],
+      "site": "https://leemcinnis4alabama.com/",
+      "siteLabel": "Lee McInnis for Congress",
+      "source": "https://leemcinnis4alabama.com/"
+    },
+    "robert aderholt": {
+      "role": "Member of Congress from Alabama's 4th District",
+      "bio": "The campaign describes Robert Aderholt as a pro-life member of Congress who has spent more than a decade on abortion policy and who treats rebuilding the economy as his first priority. It points to growth in aerospace, defense, agriculture, and manufacturing in north Alabama and says that work is not finished.",
+      "issues": [
+        "He says he wants further tax cuts, less regulation, and jobs brought back so the country is less dependent on critical goods from China, Russia, and other rivals.",
+        "He supports more U.S. energy production, including opening the Keystone pipeline, and broadband so rural small businesses can compete.",
+        "The campaign calls him one of the leading pro-life members of Congress and says he has worked to defend life and promote alternatives to abortion."
+      ],
+      "site": "https://aderholtforcongress.org/",
+      "siteLabel": "Robert B. Aderholt for Congress",
+      "donate": "https://secure.winred.com/robert-aderholt-for-congress/reelect-robert-aderholt/",
+      "source": "https://aderholtforcongress.org/issues"
+    },
+    "amanda pusczek": {
+      "role": "Registered nurse running for Congress",
+      "bio": "The campaign says Amanda Pusczek is a registered nurse who has spent more than a decade on double shifts and disaster work, and that she is running because rural hospitals, public schools, and family farms in north Alabama have been squeezed. She says she is not a millionaire and will not take corporate PAC money.",
+      "issues": [
+        "She says rural hospital closures and cuts to safety-net programs have left medical gaps, and she wants federal help to keep emergency rooms and maternity care open.",
+        "She supports a $15 federal minimum wage, stronger union rights, and antitrust rules aimed at meatpacking and other concentrated industries.",
+        "She wants family farmers protected from what she calls a poultry tournament system, plus a federal right to repair farm equipment."
+      ],
+      "site": "https://www.amandaforalabama.com/",
+      "siteLabel": "Amanda Pusczek for Alabama CD-4",
+      "donate": "https://secure.actblue.com/donate/amandaforalabama",
+      "source": "https://www.amandaforalabama.com/policy"
+    },
+    "dale strong": {
+      "role": "Candidate for Congress",
+      "bio": "The campaign says Dale Strong was born and raised in Monrovia in Madison County and worked as a volunteer firefighter and paramedic before serving as a district commissioner and chairman of the Madison County Commission. He says he is running to continue a conservative agenda he associates with Donald Trump.",
+      "issues": [
+        "He says he is a pro-life Christian, a lifetime NRA member, and that he will defend the Second Amendment.",
+        "He says raising taxes is not an option and that cutting waste and shrinking government should be a priority.",
+        "He says he supports building a border wall, returning people in the country illegally, and enforcing immigration law."
+      ],
+      "site": "https://www.dalestrongforcongress.com/",
+      "siteLabel": "Dale Strong for Congress",
+      "source": "https://www.dalestrongforcongress.com/"
+    },
+    "andrew sneed": {
+      "role": "Small-business owner and plumber running for Congress",
+      "bio": "The campaign says Andrew Sneed was born and raised in Huntsville, graduated from Lee High, and later left restaurant work to start over as a plumber's helper. He founded Whole Home Solutions in 2019 and says the company now has several trucks and employees. He says he is running because the district needs a representative who is not a career politician.",
+      "issues": [
+        "On health care, he says he wants to expand Medicaid, negotiate drug prices, regulate for-profit insurers, and keep rural hospitals open.",
+        "On affordability, he says he wants to address housing, lower utility bills, and restore federal investment in energy efficiency.",
+        "He also calls for congressional term limits, overturning Citizens United, a lobbying waiting period, and a ban on stock trading by members of Congress."
+      ],
+      "site": "https://www.sneedforcongress.com/",
+      "siteLabel": "Andrew Sneed for Congress",
+      "donate": "https://secure.actblue.com/donate/andrew-sneed-1?refcode=website",
+      "source": "https://www.sneedforcongress.com/healthcare"
+    },
+    "gary palmer": {
+      "role": "U.S. representative for Alabama's 6th District",
+      "bio": "The campaign says Gary Palmer grew up in Hackleburg, earned a degree from the University of Alabama, and led the Alabama Policy Institute for 24 years before his election to Congress in 2014. He serves on Energy and Commerce, where he chairs the Environment Subcommittee, and on Oversight and Government Reform.",
+      "issues": [
+        "He says domestic energy should be developed to lower costs and create jobs, and he has pushed to limit EPA greenhouse-gas rules he says Congress never authorized.",
+        "He opposes amnesty and says immigration changes should start with border security and enforcement of existing law.",
+        "He says health care decisions belong with patients and doctors, and he supports repealing the Affordable Care Act for a more market-based plan."
+      ],
+      "site": "https://palmerforalabama.com/",
+      "siteLabel": "Palmer For Alabama",
+      "donate": "https://secure.winred.com/gary-palmer-for-congress/donate",
+      "source": "https://palmerforalabama.com/issues/"
+    },
+    "maurice mercer": {
+      "role": "Former Pelham City Council president running for Congress",
+      "bio": "The campaign says Maurice Mercer graduated from Troy University, works as an account executive, and served three terms on the Pelham City Council, including as president from 2020 to 2025. It says he was the council's first African American member and is running to focus on costs, health care, and civility.",
+      "issues": [
+        "He says he will push to lower grocery, utility, and health costs and help working families keep more of what they earn.",
+        "He supports wider access to affordable care, rural providers, mental health services, and clearer prescription prices.",
+        "He supports secure borders and a path to legal status for people who have lived here, worked, and paid taxes, with enforcement aimed first at people who threaten public safety."
+      ],
+      "site": "https://www.mauricemercer.com/",
+      "siteLabel": "Maurice Mercer For America",
+      "donate": "https://secure.actblue.com/donate/mauricemercer",
+      "source": "https://www.mauricemercer.com/platform"
+    },
+    "ammie akin": {
+      "role": "Educator and entrepreneur running for Congress",
+      "bio": "The campaign says Ammie Akin is an educator and entrepreneur who has taught students with disabilities, trained school leaders, and with her husband is turning a former elementary school into a shared campus for nonprofits. She says she is ready to represent Alabama's 7th District.",
+      "issues": [
+        "She says she will put families, workers, small businesses, and local communities ahead of party politics and will fight wasteful federal spending.",
+        "She wants rural hospitals kept open and health care that does not depend on how far a family lives from a provider.",
+        "She says schools should be a partnership among teachers, parents, and the community, and that students should be prepared for college or a career."
+      ],
+      "site": "https://www.akinforcongress.com/",
+      "siteLabel": "Ammie Akin For Congress",
+      "donate": "https://secure.winred.com/akin-for-congress/website-main",
+      "source": "https://www.akinforcongress.com/issues"
+    },
+    "terri sewell": {
+      "role": "U.S. representative for Alabama's 7th District",
+      "bio": "The campaign says Terri Sewell was raised in Selma by a librarian and a high school coach, became Selma High's first Black valedictorian, and later practiced public-finance law in Alabama before her election to Congress in 2010. She sits on Ways and Means and has also served on Armed Services.",
+      "issues": [
+        "She says tariffs and the war with Iran have raised everyday costs, and she wants lower drug prices, protected health coverage, and nutrition assistance.",
+        "She points to a housing bill she supported to build more affordable homes and lower mortgage and rent costs.",
+        "She supports an energy-bills bill aimed at price gouging and at keeping families' power from being shut off."
+      ],
+      "site": "https://sewellforcongress.com/",
+      "siteLabel": "Terri Sewell for Congress",
+      "donate": "https://secure.actblue.com/donate/website-23",
+      "source": "https://sewellforcongress.com/affordability/"
+    }
+  },
+  "measures": {}
+}

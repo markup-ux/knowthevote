@@ -1,0 +1,466 @@
+{
+  "code": "oh",
+  "ballotSource": "https://www.boe.ohio.gov/jefferson/c/upload/ELECTION_Candidates.pdf",
+  "where": {
+    "url": "https://voterlookup.ohiosos.gov/voterlookup.aspx",
+    "label": "Ohio voter search"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one.",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. Ohio's official ballot prints the governor and lieutenant governor as one choice."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one.",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The official ballot form lists this contest as an unexpired term."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one.",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one.",
+      "job": "Ohio law makes the secretary of state the chief election officer. The office appoints the members of county boards of elections, prescribes ballot forms, and certifies the names of candidates for state offices."
+    }
+  },
+  "people": {
+    "vivek ramaswamy": {
+      "role": "Cincinnati native and business leader running for governor.",
+      "bio": "His campaign describes him as a husband and father who has spent his career turning business ideas into results. He says he is running to restore opportunity and keep the American Dream available in Ohio.",
+      "issues": [
+        "He says the state should be more affordable, with lower taxes, lower energy bills, and more money in household budgets.",
+        "He says children should get a world-class education.",
+        "He says the state should protect neighborhoods, revive cities, and put unity ahead of division."
+      ],
+      "site": "https://vivekforohio.com/",
+      "siteLabel": "vivekforohio.com",
+      "donate": "https://secure.winred.com/vivek-ramaswamy-for-ohio/website-donate",
+      "source": "https://vivekforohio.com/"
+    },
+    "amy acton": {
+      "role": "Physician running for governor.",
+      "bio": "Her campaign says she grew up in Youngstown under difficult circumstances and is a doctor, advocate, and problem-solver. She says she is running because families are struggling while wealthy interests pull the state in another direction.",
+      "issues": [
+        "The site lists lower household costs, health-care costs, education, jobs, worker protections, safer communities, and corruption as her priorities.",
+        "A campaign update says medical debt should be eliminated and health care made more affordable.",
+        "She also lists reproductive freedom and the ability to age in place among the issues on the site."
+      ],
+      "site": "https://actonforgovernor.com/",
+      "siteLabel": "actonforgovernor.com",
+      "donate": "https://secure.actblue.com/donate/loc_asa_fr_web_q12025",
+      "source": "https://actonforgovernor.com/"
+    },
+    "don kissick": {
+      "role": "Libertarian candidate for governor on the Kissick/Mills ticket.",
+      "bio": "The campaign site says the ticket is running because its candidates were tired of choosing between the two major parties. It says it wants a political home for Ohioans who feel they do not have one.",
+      "issues": [
+        "The site says too many institutions have become corrupt, self-serving, and comfortable expanding power without representing Ohioans.",
+        "It says liberty, kindness, justice, common sense, and integrity should be the test for every bill and political leader.",
+        "It says the campaign will not support a policy that asks voters to give those principles up."
+      ],
+      "site": "https://donkissick.com/",
+      "siteLabel": "donkissick.com",
+      "donate": "",
+      "source": "https://donkissick.com/"
+    },
+    "jon husted": {
+      "role": "The campaign site calls him Senator Husted and asks voters to send him to the U.S. Senate.",
+      "bio": "An election-eve post on the site describes a Cleveland rally and urges supporters to vote the next day.",
+      "issues": [],
+      "site": "https://www.jonhustedforsenate.com/",
+      "siteLabel": "jonhustedforsenate.com",
+      "donate": "https://secure.winred.com/husted-for-senate/donate-today",
+      "source": "https://www.jonhustedforsenate.com/"
+    },
+    "sherrod brown": {
+      "role": "Candidate for U.S. Senate who says he was born and raised in Mansfield.",
+      "bio": "His campaign says he saw corporations seek tax breaks and trade deals that sent Ohio jobs overseas, and that he has opposed those deals. It says he lives in Columbus with his wife, Connie Schultz.",
+      "issues": [
+        "He says he led the effort to restore pensions after Wall Street losses, including retirement payments for more than 100,000 Ohioans.",
+        "He says he fought drug-company prices, including a cap on insulin and lower prices on other prescriptions for seniors.",
+        "He says he worked to get care for veterans exposed to burn pits and to restore full Social Security payments for former public workers."
+      ],
+      "site": "https://sherrodbrown.com/",
+      "siteLabel": "sherrodbrown.com",
+      "donate": "https://secure.actblue.com/donate/sherrod-website",
+      "source": "https://sherrodbrown.com/"
+    },
+    "keith faber": {
+      "role": "Ohio auditor of state running for attorney general.",
+      "bio": "His campaign says he was elected auditor after more than two decades that included private-sector work and public office, and that he keeps a law practice in Celina. It says his audit team has pursued criminal cases against public officials and findings to recover taxpayer money.",
+      "issues": [
+        "He says he would defend constitutional rights, including religious liberty, and challenge federal actions he argues exceed federal authority.",
+        "He says he would fight the drug epidemic with treatment, prosecutions, and efforts to cut supply chains, and that he would work with police on human trafficking and survivor services.",
+        "He says he would enforce consumer-protection laws against fraud, scams, and deceptive businesses, especially cases that target seniors, and he proposes a program to help patients challenge health-insurance denials."
+      ],
+      "site": "https://keithfaber.org/",
+      "siteLabel": "keithfaber.org",
+      "donate": "https://secure.winred.com/faber/donate",
+      "source": "https://keithfaber.org/issues"
+    },
+    "john kulewicz": {
+      "role": "Columbus lawyer and Upper Arlington city council member running for attorney general.",
+      "bio": "His campaign says he grew up in Columbus, studied at Ohio State, and then spent more than 40 years as a litigator after a clerkship. It says he has been on the Upper Arlington council since 2020 and has won cases in the U.S. Supreme Court and Ohio courts.",
+      "issues": [
+        "He says the attorney general should be independent of Columbus politics and should work for the people who pay the office.",
+        "He says he would take on corrupt politicians and restore transparency and accountability.",
+        "He says he would pursue price-fixing, scams, robocalls, and fraud by Medicaid providers and nursing homes."
+      ],
+      "site": "https://john4ohioag.com/",
+      "siteLabel": "john4ohioag.com",
+      "donate": "",
+      "source": "https://john4ohioag.com/"
+    },
+    "robert sprague": {
+      "role": "State treasurer running for secretary of state.",
+      "bio": "His campaign says his background runs from engineering to finance and public policy. It says that as treasurer he invested taxpayer money, cut waste, and modernized systems.",
+      "issues": [
+        "He says he is running to defend the vote, the voter's voice, and the family.",
+        "He says he wants the office to run the most secure elections in the state's history."
+      ],
+      "site": "https://www.spragueforohio.com/",
+      "siteLabel": "spragueforohio.com",
+      "donate": "https://secure.anedot.com/sprague-for-ohio/secretaryofstate",
+      "source": "https://www.spragueforohio.com/"
+    },
+    "allison russo": {
+      "role": "Candidate for Ohio secretary of state.",
+      "bio": "Her campaign says she is running because every voice matters and every vote counts. She says politicians in Columbus and Washington are trying to hold onto power, and that the power belongs with Ohioans.",
+      "issues": [
+        "She says the secretary of state should protect each voter's voice and keep elections fair, secure, and accessible.",
+        "She says voters should choose their politicians, and that she has fought officials who rig the system to protect their own power.",
+        "She says she would restore trust in elections, protect personal data, and make government answerable on costs and the other problems families face."
+      ],
+      "site": "https://allisonrusso.com/",
+      "siteLabel": "allisonrusso.com",
+      "donate": "https://secure.actblue.com/donate/allison-russo-sos",
+      "source": "https://allisonrusso.com/"
+    },
+    "tom pruss": {
+      "role": "Toledo business owner running for secretary of state.",
+      "bio": "His campaign says he was born and raised in Toledo, has worked in printing since 1985, and has owned NorthCoast Print Mail Marketing since 2017. It says he has also led Polish-American community groups in northwest Ohio and has run before for the Toledo school board and for Lucas County clerk of courts.",
+      "issues": [
+        "He says the office has been used as a gatekeeper for the two major parties and should treat every candidate equally, including on ballot access.",
+        "He says election security and access can go together, with accurate voter rolls, secure systems, and procedures that do not change at the last minute.",
+        "He says the office should publish election and campaign-finance information more clearly, and should make business filings faster and less burdened by red tape."
+      ],
+      "site": "https://votepruss.com/",
+      "siteLabel": "votepruss.com",
+      "donate": "",
+      "source": "https://votepruss.com/"
+    },
+    "jim jordan": {
+      "role": "U.S. representative for Ohio's 4th District and chair of the House Judiciary Committee.",
+      "bio": "His campaign says he was a state and college wrestling champion, grew up in rural Champaign County, and was the first chair of the House Freedom Caucus. It says his focus in Congress is oversight of federal agencies.",
+      "issues": [
+        "He says he is using the Judiciary Committee to investigate federal agencies, including the IRS, and to defend constitutional freedoms.",
+        "He points to a Cut, Cap and Balance plan and says he has offered deep spending cuts and a balanced federal budget.",
+        "The campaign says that as a state legislator he opposed higher taxes and spending and received awards from Ohio anti-abortion groups."
+      ],
+      "site": "https://www.jimjordanforcongress.com/",
+      "siteLabel": "jimjordanforcongress.com",
+      "donate": "https://secure.winred.com/jimjordan/donate-today",
+      "source": "https://www.jimjordanforcongress.com/jim-jordan-biography"
+    },
+    "marcy kaptur": {
+      "role": "U.S. representative for Ohio's 9th District.",
+      "bio": "Her campaign says she still lives in the small Toledo house where she grew up in a UAW family, and that she entered public service after watching factories close. It says she will back an idea from either party if she thinks it helps northwest Ohio.",
+      "issues": [
+        "She says she would oppose foreign bailouts and wars she argues put Wall Street ahead of northwest Ohio, and make data-center companies pay for the power and water they use.",
+        "She says she would take on corporate buyers of houses and expand the supply of affordable homes.",
+        "She says she would fully fund Medicare and Medicaid, restore Affordable Care Act tax credits, and lower prescription prices and the cost of child care and long-term care."
+      ],
+      "site": "https://marcykaptur.com/",
+      "siteLabel": "marcykaptur.com",
+      "donate": "https://secure.actblue.com/donate/marcy-kaptur-web",
+      "source": "https://marcykaptur.com/priorities/"
+    },
+    "eric conroy": {
+      "role": "Air Force veteran running for Congress in Ohio's 1st District.",
+      "bio": "Eric Conroy says he grew up on Cincinnati's west side, graduated from the Air Force Academy, served as a captain in special operations, and later worked as a CIA case officer. He says he is running to fight for working families and safer communities.",
+      "issues": [
+        "He says he will lower inflation, cut red tape, and back pro-growth policies for Ohio workers and small businesses.",
+        "He also says he will stand with law enforcement, secure the border, protect Social Security and Medicare from benefit cuts, and support parents and local control of education."
+      ],
+      "site": "https://ericconroy.com/",
+      "siteLabel": "ericconroy.com",
+      "source": "https://ericconroy.com/issues/"
+    },
+    "greg landsman": {
+      "role": "U.S. representative for Ohio's 1st District.",
+      "bio": "Greg Landsman is a former public school teacher and Cincinnati City Council member who led the Preschool Promise initiative for three- and four-year-olds. He says he was elected to Congress in 2022 and works in the Problem Solvers Caucus.",
+      "issues": [
+        "He says he is running again to protect freedoms and human rights and to make it easier to raise a family.",
+        "His campaign says he is focused on lowering costs for families in southwest Ohio."
+      ],
+      "site": "https://www.landsmanforcongress.com/",
+      "siteLabel": "landsmanforcongress.com",
+      "donate": "https://secure.actblue.com/donate/landsmanwebsite",
+      "source": "https://www.landsmanforcongress.com/about-2"
+    },
+    "david taylor": {
+      "role": "U.S. representative for Ohio's 2nd District.",
+      "bio": "David Taylor says he is a Clermont County businessman who runs a ready-mix company, practiced as a local prosecutor, and is married with three daughters. His campaign describes him as a political outsider who came from the family business.",
+      "issues": [
+        "He says he will secure the border, cut taxes, and put working families first.",
+        "He says his years as a prosecutor shape his push to give law enforcement resources against fentanyl, violent crime, and corruption."
+      ],
+      "site": "https://davetaylorforcongress.com/",
+      "siteLabel": "davetaylorforcongress.com",
+      "donate": "https://secure.winred.com/dave-taylor-for-congress/donate-today",
+      "source": "https://davetaylorforcongress.com/meet-dave/"
+    },
+    "jen mazzuckelli": {
+      "role": "Teacher running for Congress in Ohio's 2nd District.",
+      "bio": "Jen Mazzuckelli says she was raised by a teacher and a federal employee, earned an English degree and a master's in teaching, and worked as a high school English teacher. She says she is in long-term recovery, has multiple sclerosis, and has lived through domestic violence.",
+      "issues": [
+        "She says the representative should work for the people rather than campaign donors, and that neighbors who disagree are not enemies.",
+        "She says public servants should keep promises and that the way to earn reelection is to do the job well."
+      ],
+      "site": "https://jen4oh2.com/",
+      "siteLabel": "jen4oh2.com",
+      "donate": "https://secure.actblue.com/donate/jen4oh2",
+      "source": "https://jen4oh2.com/about"
+    },
+    "cleophus dulaney": {
+      "role": "Community volunteer running for Congress in Ohio's 3rd District.",
+      "bio": "Cleophus Dulaney says he lives and works in the district and has spent years helping people who are homeless, encouraging young people, and backing candidates in both parties. He says he is running because politics has too much party loyalty and not enough listening.",
+      "issues": [
+        "He says he will push Medicare to negotiate drug prices, take on pharmacy middlemen, and support tax relief for working and middle-class families.",
+        "He also wants infrastructure, manufacturing, and clean-energy jobs, apprenticeships, and fewer rules that do not make small businesses safer, plus voting-rights protections and fair maps."
+      ],
+      "site": "https://www.votedulaney.org/",
+      "siteLabel": "votedulaney.org",
+      "source": "https://www.votedulaney.org/"
+    },
+    "joyce beatty": {
+      "role": "U.S. representative for Ohio's 3rd District.",
+      "bio": "Joyce Beatty says she represents Ohio's 3rd District, serves on Financial Services, and was the first chair of its diversity and inclusion subcommittee. Her campaign describes her as a small business owner and former college administrator who tries to connect people to policy.",
+      "issues": [
+        "She says she supports a livable wage, equal pay, workforce training, and lower college costs, and she calls health care a right she would strengthen through the Affordable Care Act.",
+        "She says she will protect and expand Social Security, Medicare, and Medicaid, defend abortion access and civil rights, and support a path to citizenship for undocumented immigrants and DREAMers."
+      ],
+      "site": "https://beattyforcongress.com/",
+      "siteLabel": "beattyforcongress.com",
+      "source": "https://beattyforcongress.com/issues-page/"
+    },
+    "joshua kolasinski": {
+      "role": "Small business owner running for Congress in Ohio's 4th District.",
+      "bio": "Joshua Kolasinski says he runs a business that installs, tests, and repairs medical equipment, and that he is a husband, a father of three, and a Christian whose family has lived in Delaware, Ohio since 2012. He says he has voted for both parties and is running as a Democrat so people in the district are heard.",
+      "issues": [
+        "He says federal taxes should be used in local communities rather than on more wars or corporate welfare, and that housing, gas, health care, education, and food should be affordable.",
+        "He proposes a registered-voter lobby and a district think tank, and he says Medicare should negotiate drug prices and patients should see prices before care."
+      ],
+      "site": "https://www.joshuaforohio.com/",
+      "siteLabel": "joshuaforohio.com",
+      "source": "https://www.joshuaforohio.com/"
+    },
+    "brian shaver": {
+      "role": "Teacher and city council president running for Congress in Ohio's 5th District.",
+      "bio": "Brian Shaver says he was born and raised in Fostoria, still lives on a small family farm there with his wife and daughter, teaches social studies, and is president of the Fostoria City Council. He says representatives should put people before party.",
+      "issues": [
+        "He supports campaign-finance limits, term limits, stronger checks and balances, and transparency in legislation.",
+        "He also wants guardrails so elected officials cannot profit from their positions, and he says they should stay present and accountable to their communities."
+      ],
+      "site": "https://www.brianshaverforcongress.com/",
+      "siteLabel": "brianshaverforcongress.com",
+      "source": "https://www.brianshaverforcongress.com/"
+    },
+    "michael rulli": {
+      "role": "U.S. representative for Ohio's 6th District.",
+      "bio": "Michael Rulli says he was born and raised in the Mahoning Valley and still runs Rulli Brothers Market, which his family started more than 100 years ago. He served as Leetonia school board president and in the Ohio Senate before winning a 2024 special election to Congress.",
+      "issues": [
+        "He says that as school board president he led the district out of a financial crisis without raising taxes.",
+        "He says that in the state Senate he brought funding back to communities and stood up for local values."
+      ],
+      "site": "https://www.michaelrulli.com/",
+      "siteLabel": "michaelrulli.com",
+      "source": "https://www.michaelrulli.com/about"
+    },
+    "elizabeth kirtley": {
+      "role": "Candidate running for Congress in Ohio's 6th District.",
+      "bio": "Elizabeth Kirtley's campaign says due process and the freedoms of speech, assembly, and religion should be treated as rights, not privileges. She says she is running to defend those rights and a woman's ability to make medical decisions.",
+      "issues": [
+        "She says ICE should be abolished because she believes an agency that blocks constitutional rights should not exist.",
+        "She wants abortion rights written into federal law so they do not change at state lines, and she says each person should have one vote that cannot be bought."
+      ],
+      "site": "https://www.elizabethforus.com/",
+      "siteLabel": "elizabethforus.com",
+      "source": "https://www.elizabethforus.com/issues"
+    },
+    "max miller": {
+      "role": "U.S. representative for Ohio's 7th District.",
+      "bio": "Max Miller is in his second term and says he grew up in northeast Ohio, served six years in the Marine Corps Reserve, and spent four years in the White House as director of presidential advance and a senior advisor to Donald Trump. His father owns a cap manufacturing company in Cleveland.",
+      "issues": [
+        "He says he has voted to make tax cuts permanent and to end taxes on tips and overtime, and that workforce training should not require a four-year degree.",
+        "He also says he will fund law enforcement, keep the southern border secure, expand American energy, and invest in roads, bridges, rail, and broadband."
+      ],
+      "site": "https://votemaxmiller.com/",
+      "siteLabel": "votemaxmiller.com",
+      "donate": "https://secure.winred.com/max-miller-for-congress/webdonate",
+      "source": "https://votemaxmiller.com/priorities"
+    },
+    "brian poindexter": {
+      "role": "Union ironworker and city council member running for Congress in Ohio's 7th District.",
+      "bio": "Brian Poindexter says he is the son of a union machinist and the grandson of a union autoworker, one of six children who grew up in Cleveland, and a Brook Park council member since 2017. He says he has worked on a shop floor and on Cleveland skyscrapers.",
+      "issues": [
+        "He says companies that benefit from America should invest in American workers instead of sending jobs overseas for cheaper labor.",
+        "On the council he says he has opposed right-to-work laws and school vouchers and supported the postal service and public schools."
+      ],
+      "site": "https://poindexterforcongress.com/",
+      "siteLabel": "poindexterforcongress.com",
+      "source": "https://poindexterforcongress.com/brian-poindexters-working-class-story/"
+    },
+    "warren davidson": {
+      "role": "U.S. representative for Ohio's 8th District.",
+      "bio": "Warren Davidson's campaign describes him as a West Point graduate and former Army Ranger who served in the 75th Ranger Regiment, the 101st Airborne, the 3rd Infantry Division, and the Old Guard, and as a former manufacturing company owner. He says he wants a government small enough to fit inside the Constitution.",
+      "issues": [
+        "He opposes the income tax, argues deficits are driving up prices, and says regulation should be cut back to the minimum needed for fair competition.",
+        "He says the Second Amendment protects an individual right to keep and bear arms, and he wants people to choose their own mix of health care, coverage, and cost."
+      ],
+      "site": "https://www.davidsonforcongress.com/",
+      "siteLabel": "davidsonforcongress.com",
+      "donate": "https://secure.anedot.com/davidson-for-congress/general-fund-c190511c3c1ea845988ab",
+      "source": "https://www.davidsonforcongress.com/issues/"
+    },
+    "vanessa enoch": {
+      "role": "Consultant running for Congress in Ohio's 8th District.",
+      "bio": "Vanessa Enoch says she is a public-policy and management consultant who has led Cultural Impact, LLC for more than 25 years and has worked as a community organizer. She says she is running because families who are doing everything right still feel squeezed.",
+      "issues": [
+        "She says affordability means updating the rules that drive up health care and housing costs and expanding places to rent or buy near jobs.",
+        "She says data-center companies, not working families, should pay for the power lines and grid upgrades they need, and that those facilities should not pollute neighborhoods or replace farmland."
+      ],
+      "site": "https://enochforcongress.com/",
+      "siteLabel": "enochforcongress.com",
+      "source": "https://enochforcongress.com/"
+    },
+    "derek merrin": {
+      "role": "Former state representative running for Congress in Ohio's 9th District.",
+      "bio": "Derek Merrin says he is a former Lucas County state representative who served eight years in the Ohio House and led the House Republican caucus. His campaign describes him as a conservative running for the 9th District.",
+      "issues": [
+        "He says he led efforts to cut the state income tax, reduce regulations, and expand school choice.",
+        "He also says he played key roles in requiring photo identification to vote and in recognizing a constitutional right to carry a firearm."
+      ],
+      "site": "https://www.derekmerrin.com/",
+      "siteLabel": "derekmerrin.com",
+      "source": "https://www.derekmerrin.com/"
+    },
+    "mike turner": {
+      "role": "U.S. representative for Ohio's 10th District.",
+      "bio": "Mike Turner says he is a lifelong southwest Ohioan whose father worked in Dayton manufacturing and whose mother taught in Huber Heights. He is a senior member of the Armed Services Committee and says his work has centered on jobs at Wright-Patterson Air Force Base.",
+      "issues": [
+        "He says he has worked to add jobs at the base, grow regional manufacturing and defense work, and restore pensions for Delphi retirees.",
+        "He also says he has pushed for veterans' health care and housing, supported law enforcement, and worked to secure the border and slow illicit drugs."
+      ],
+      "site": "https://miketurner.com/",
+      "siteLabel": "miketurner.com",
+      "source": "https://www.miketurner.com/about.php"
+    },
+    "kristina knickerbocker": {
+      "role": "Air Force veteran and nurse practitioner running for Congress in Ohio's 10th District.",
+      "bio": "Kristina Knickerbocker says she is an Air Force veteran, an oncology nurse practitioner, and a mother of two who served as a major and nurse at Wright-Patterson Air Force Base. She says she put herself through school and followed her grandmother into nursing.",
+      "issues": [
+        "She says she would ban congressional stock trading, end corporate PAC influence, pass term limits, protect voting rights, and close the lobbying revolving door.",
+        "She also says she would cut taxes for working families, repeal tariffs that raise prices, build more housing, cap child-care costs, and make data-center companies pay for their own infrastructure."
+      ],
+      "site": "https://kristinaknickerbocker.com/",
+      "siteLabel": "kristinaknickerbocker.com",
+      "source": "https://kristinaknickerbocker.com/my-priorities/"
+    },
+    "mike kirchner": {
+      "role": "Retired pension consultant running for Congress in Ohio's 11th District.",
+      "bio": "Mike Kirchner says he is a retired consultant who spent 30 years evaluating pension plans, grew up in Tiffin, and earned an applied-mathematics degree from the University of Akron before joining the Wyatt Company. He says he lives in Highland Heights.",
+      "issues": [],
+      "site": "https://mikekirchner.com/",
+      "siteLabel": "mikekirchner.com",
+      "source": "https://mikekirchner.com/about/"
+    },
+    "troy balderson": {
+      "role": "U.S. representative for Ohio's 12th District.",
+      "bio": "Troy Balderson says he grew up in Zanesville fixing cars and working on his family's farm, graduated from Zanesville High School, and attended Muskingum College and Ohio State. He says he ran for Congress because of spending, the cost of living, and what children are seeing in and out of school.",
+      "issues": [
+        "He says the border should be closed to people who do not enter lawfully, and he wants more agents and technology aimed at cartels, drugs, and illegal crossings.",
+        "He says government is too big and that the answer is usually to get it out of the way, and he wants shop classes back in schools."
+      ],
+      "site": "https://www.baldersonforcongress.com/",
+      "siteLabel": "baldersonforcongress.com",
+      "source": "https://www.baldersonforcongress.com/issues"
+    },
+    "jerrad christian": {
+      "role": "Navy veteran and software engineer running for Congress in Ohio's 12th District.",
+      "bio": "Jerrad Christian says he is a Navy veteran who served as a meteorologist, a software engineer, and someone who grew up with poverty in rural Ohio. He says that service turned him into an advocate for using less oil.",
+      "issues": [
+        "He wants to overturn the Citizens United ruling, cap campaign spending, and stop foreign-linked money in elections.",
+        "He also supports universal health care, a higher minimum wage, and more housing by changing exclusionary zoning and limiting large corporate buyers."
+      ],
+      "site": "https://www.christianforohio.com/",
+      "siteLabel": "christianforohio.com",
+      "source": "https://www.christianforohio.com/issues"
+    },
+    "carey coleman": {
+      "role": "Radio host running for Congress in Ohio's 13th District.",
+      "bio": "Carey Coleman says he is a longtime northeast Ohio radio host on WNIR and a former television meteorologist. He says he is running because rising costs, insecure borders, and government overreach have made it harder for families to get ahead.",
+      "issues": [
+        "He says he will rein in federal spending, expand American energy to lower fuel and utility costs, and protect middle-class families from new taxes.",
+        "He also says he will defend the First and Second Amendments and religious freedom, back law enforcement, secure the border, and give parents a stronger say in education."
+      ],
+      "site": "https://careycoleman.com/",
+      "siteLabel": "careycoleman.com",
+      "source": "https://careycoleman.com/issues/"
+    },
+    "emilia sykes": {
+      "role": "U.S. representative for Ohio's 13th District.",
+      "bio": "Emilia Sykes says she grew up on Akron's west side and has worked with members of both parties to bring federal resources back to the 13th District. She serves on Transportation and Infrastructure, including its water resources subcommittee.",
+      "issues": [
+        "She says clean water, clean air, and a healthy environment are basic rights, and that environmental policy can also create jobs and hold down utility costs.",
+        "She says every northeast Ohioan deserves to have their voice heard and their vote counted."
+      ],
+      "site": "https://www.emiliasykesforcongress.com/",
+      "siteLabel": "emiliasykesforcongress.com",
+      "donate": "https://secure.actblue.com/donate/es-web?refcode=bio-page",
+      "source": "https://www.emiliasykesforcongress.com/issues"
+    },
+    "david joyce": {
+      "role": "U.S. representative for Ohio's 14th District.",
+      "bio": "Dave Joyce says he is a lifelong northeast Ohioan who spent more than 25 years as Geauga County prosecuting attorney and has served in Congress since 2012. His campaign says he is the son of a World War II veteran and is married to a registered nurse.",
+      "issues": [],
+      "site": "https://joyceforcongress.com/",
+      "siteLabel": "joyceforcongress.com",
+      "source": "https://joyceforcongress.com/bio/"
+    },
+    "maria jukic": {
+      "role": "Attorney and former city council member running for Congress in Ohio's 14th District.",
+      "bio": "Maria Jukic says she is a licensed attorney, a former Euclid councilwoman, and the child of immigrants from a union family, and that she worked in health care for 24 years. She says she is running for people in the political middle who are doing everything right and still falling behind.",
+      "issues": [
+        "She says she will defend the Constitution and the rule of law, and that she is looking for practical answers to a health system in which many people lack insurance or carry medical debt.",
+        "She says she will stand up for workers and regular people and look for common ground instead of sorting the country into two extremes."
+      ],
+      "site": "https://www.mariajukicforcongress.com/",
+      "siteLabel": "mariajukicforcongress.com",
+      "source": "https://www.mariajukicforcongress.com/"
+    },
+    "mike carey": {
+      "role": "U.S. representative for Ohio's 15th District.",
+      "bio": "Mike Carey says he was born and raised in the 15th District, sworn in on November 4, 2021, and now serves on Ways and Means and House Administration as a deputy whip. His campaign describes him as a veteran.",
+      "issues": [
+        "He says he is running to keep fighting for lower taxes, a stronger economy, secure borders, affordable energy, and safer communities.",
+        "His campaign also lists protecting Social Security, supporting veterans and first responders, and reducing government spending."
+      ],
+      "site": "https://careyforcongress.com/",
+      "siteLabel": "careyforcongress.com",
+      "source": "https://www.careyforcongress.com/faq"
+    },
+    "don leonard": {
+      "role": "Educator running for Congress in Ohio's 15th District.",
+      "bio": "Don Leonard says he is the son of a single mother and that he saw times when her work was not enough to keep poverty and homelessness away. He says he is running so a full-time job can support a full life for families in central Ohio.",
+      "issues": [
+        "He says every American deserves quality insurance they can afford to use, and that every working American should be able to own a home.",
+        "He also says good child care should not cost as much as a second mortgage, and that seniors should be able to retire with dignity."
+      ],
+      "site": "https://donforohio.com/",
+      "siteLabel": "donforohio.com",
+      "source": "https://donforohio.com/"
+    }
+  },
+  "measures": {}
+}

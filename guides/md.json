@@ -1,0 +1,275 @@
+{
+  "code": "md",
+  "ballotSource": "https://elections.maryland.gov/elections/2026/general_candidates/2026_GG_statewide_candidatelist.html",
+  "where": {
+    "url": "https://www.elections.maryland.gov/voting/where.html",
+    "label": "Maryland polling place lookup"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    }
+  },
+  "people": {
+    "dan cox": {
+      "role": "Candidate for governor of Maryland.",
+      "bio": "Dan Cox's campaign describes him as a husband, father, and small-business owner who says he has taken on leaders in both parties. He says he is running because high prices and the cost of living are weighing on Maryland families.",
+      "issues": [
+        "He says he would cut taxes and fees and limit property taxes so retirees are not taxed out of their homes.",
+        "He proposes down-payment help and tax credits for first-time and younger buyers, and says building and permitting costs should come down.",
+        "He says Maryland should reopen closed power plants, study small modular reactors, and give households more energy choices so electric bills stop climbing."
+      ],
+      "site": "https://dancoxforgovernor.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://dancoxforgovernor.com/donate/",
+      "source": "https://dancoxforgovernor.com/"
+    },
+    "wes moore": {
+      "role": "Governor of Maryland, running for reelection.",
+      "bio": "Wes Moore's campaign says he is Maryland's 63rd governor, a combat veteran who led soldiers in Afghanistan, and a former chief executive of the Robin Hood Foundation. He says his work in office has centered on child poverty, the middle class, and public education.",
+      "issues": [
+        "He says he has cut taxes for veterans and middle-class families and wants more Marylanders to be able to afford to live in the state.",
+        "He points to record spending on public schools and says he wants those schools to be the best in the country.",
+        "He says public safety is a priority and that homicides in Baltimore are at their lowest level in 50 years."
+      ],
+      "site": "https://wesmoore.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.actblue.com/donate/wes-web",
+      "source": "https://wesmoore.com/about/"
+    },
+    "andy ellis": {
+      "role": "Green Party candidate for governor of Maryland.",
+      "bio": "Andy Ellis says he has lived in Baltimore since 2005, coached debate, and spent nearly 15 years in corporate technology. He says he has spent more than a decade organizing the Green Party in Baltimore and across Maryland.",
+      "issues": [
+        "He says the state should stop data-center projects that he argues threaten communities, water, and public health.",
+        "He says unaffiliated and third-party voters are shut out of meaningful elections and that he has a plan aimed at two-party political corruption.",
+        "He says the state should spread wealth, power, and opportunity so more residents have a say in incentives, public funds, and budgets."
+      ],
+      "site": "https://www.gogreen2026.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://www.gogreen2026.com/donate",
+      "source": "https://www.gogreen2026.com/priorities"
+    },
+    "cathy white": {
+      "role": "Working Class Party candidate for governor of Maryland.",
+      "bio": "Cathy White says she is not a professional politician and has spent 40 years as a factory production worker. She says she cared for her mother and for a sister with Down syndrome while working full time.",
+      "issues": [
+        "She says workers need their own political organization because neither major party represents them on jobs, low wages, and rising prices.",
+        "She says child care and elder care cost more than most workers can pay, and that many older workers cannot afford to retire.",
+        "She says workers have no reason to support the current war in the Middle East, which she argues enriches defense and energy companies while raising the price of gas."
+      ],
+      "site": "https://sites.google.com/view/wcp-md",
+      "siteLabel": "Campaign site",
+      "donate": "",
+      "source": "https://sites.google.com/view/wcp-md"
+    },
+    "james rutledge iii": {
+      "role": "Candidate for Maryland attorney general.",
+      "bio": "Jim Rutledge's campaign says he earned a law degree with honors from the University of Maryland and has practiced law in Maryland for decades. It says he served as a Bel Air town commissioner and on the judicial nominating commission for Harford County's district and circuit courts.",
+      "issues": [
+        "He says he would fight crime at every level without turning the office into a partisan fight.",
+        "He says the office should go after hackers, online predators, and scams that target older and vulnerable people.",
+        "He says he would protect clean water and the Chesapeake Bay."
+      ],
+      "site": "https://electjim.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.anedot.com/friends-of-jim-rutledge/donate",
+      "source": "https://electjim.com/"
+    },
+    "anthony brown": {
+      "role": "Maryland attorney general, running for reelection.",
+      "bio": "Anthony Brown's campaign says he is the state's attorney general, an Army veteran, and a lawyer raised by immigrant parents. It says that before this office he served in the legislature, as lieutenant governor, and in Congress.",
+      "issues": [
+        "He says he created a civil-rights division and widened the Independent Investigations Division so it can prosecute police-involved deaths.",
+        "He says he has defended gun-safety laws in court and pursued wage theft and corporate conduct that harms workers and consumers.",
+        "He says he has sued when federal policy threatened environmental rules, voting rights, and protections for women and immigrants."
+      ],
+      "site": "https://anthonybrown.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://anthonybrown.com/donate",
+      "source": "https://anthonybrown.com/"
+    },
+    "andy harris": {
+      "role": "Physician and U.S. representative who chairs the House Freedom Caucus.",
+      "bio": "The son of immigrants who fled communist Eastern Europe after World War II, he says he has been a Johns Hopkins physician, a Naval Reserve veteran, a state senator, and, since 2025, an eighth-term congressman. He chairs the Agriculture appropriations subcommittee.",
+      "issues": [
+        "He says he is fighting to restore fiscal responsibility in Washington and protect taxpayer dollars.",
+        "The campaign describes him as a common-sense conservative with the courage to change Washington.",
+        "He says he is unafraid to speak for the priorities of Maryland's 1st District."
+      ],
+      "site": "https://andyharris.com/",
+      "siteLabel": "andyharris.com",
+      "donate": "https://secure.anedot.com/andy-harris-for-congress/andy-harris-for-congress",
+      "source": "https://andyharris.com/meet-andy"
+    },
+    "johnny olszewski jr.": {
+      "role": "U.S. representative for Maryland's 2nd District since 2025.",
+      "bio": "A lifelong Marylander, he says working-class values from eastern Baltimore County guide him. He serves on Small Business and Foreign Affairs and on the Democratic Steering and Policy Committee.",
+      "issues": [
+        "He says he wants higher wages, affordable health care, and fully funded public schools, and he opposed a budget he says gave tax breaks to the wealthy while threatening programs families use.",
+        "He says he would extend health-insurance tax credits, end tariffs that raise prices, cut drug costs, expand housing, and protect Medicare, Medicaid, SNAP, and the Child Tax Credit.",
+        "He says he supports expanding voting rights, protecting court independence, and banning stock trading by members of Congress."
+      ],
+      "site": "https://gojohnnyo.com/",
+      "siteLabel": "gojohnnyo.com",
+      "donate": "https://secure.actblue.com/donate/jo4c-web?refcode=popupup&amount=5&express_lane=true",
+      "source": "https://gojohnnyo.com/priorities/"
+    },
+    "sarah elfreth": {
+      "role": "U.S. representative and the youngest woman ever elected to Congress from Maryland.",
+      "bio": "She says she learned her work ethic in a union household, served six years in the Maryland Senate, and lives in Annapolis with her husband Eric. She says her first term included five bills signed into law and more than 2,000 constituent cases.",
+      "issues": [
+        "She says she is working to revoke tariffs that raise prices, expand affordable child care, ease student loans, build more housing, and roll back utility rate increases.",
+        "She says affordability is personal as a first-time homeowner and young professional with student loans.",
+        "She says she is also standing up for federal workers, supporting veterans, and protecting the Chesapeake Bay."
+      ],
+      "site": "https://elfrethformaryland.com/",
+      "siteLabel": "elfrethformaryland.com",
+      "donate": "https://secure.actblue.com/donate/sefc_website?refcode=menu",
+      "source": "https://elfrethformaryland.com/issues/"
+    },
+    "jamie raskin": {
+      "role": "U.S. representative for Maryland's 8th District, sworn in for a fifth term in 2025.",
+      "bio": "He says he proudly represents the 8th District and founded Democracy Summer, a program that trains high school and college students in voter registration, canvassing, and organizing. The campaign asks supporters to help defend democracy in Maryland and across the country.",
+      "issues": [
+        "He says Democracy Summer teaches the history of democratic freedom and lessons for political leadership today.",
+        "The campaign is organizing volunteers to defend what it calls strong democracy and freedom.",
+        "He is asking voters to send him back to the House for another term representing the 8th District."
+      ],
+      "site": "https://jamieraskin.com/",
+      "siteLabel": "jamieraskin.com",
+      "donate": "https://secure.actblue.com/donate/raskin-homepage?refcode=homepage",
+      "source": "https://jamieraskin.com/"
+    },
+    "dan schwartz": {
+      "role": "Consumer advocate running for Congress in Maryland's 1st District.",
+      "bio": "His campaign says he is a Democrat who has spent more than 14 years working with state banking regulators and the Consumer Financial Protection Bureau to challenge financial fraud. He and his wife Megan live in Bellevue, and he says her work as a nurse practitioner in Dorchester County shapes his view of health-care costs.",
+      "issues": [
+        "He says he would hold monthly town halls and support a ban on members of Congress trading stocks, options, and crypto.",
+        "He says he would fight spending freezes and tariffs that hurt farmers and raise prices, and protect consumers from what he calls corporate grift.",
+        "He says he would restore safety programs for food, water, bridges, and air travel, protect the environment, and defend affordable care and public-health research."
+      ],
+      "site": "https://www.schwartzforcongress.com/",
+      "siteLabel": "schwartzforcongress.com",
+      "donate": "https://secure.actblue.com/donate/daniel-schwartz-1?refcode=website",
+      "source": "https://www.schwartzforcongress.com/meet-dan"
+    },
+    "dave wallace": {
+      "role": "Small-business owner running for Congress in Maryland's 2nd District.",
+      "bio": "His campaign says he is a lifelong Marylander with a biology degree who has spent more than 40 years building a family business, starting in 1981. It says he is not a career politician and has also worked through a group he calls Restore America's Mission.",
+      "issues": [
+        "He says he will vote to equip police and other first responders, and that he would sponsor a gold-standard bill to stop the dollar from losing value.",
+        "His mission statement calls for restoring constitutional freedoms, a free-market economy, public safety, and national sovereignty.",
+        "He says that work includes opposing socialism and what he describes as strict Sharia law and movements that weaken faith, family, and the Bill of Rights."
+      ],
+      "site": "https://davewallace.us/",
+      "siteLabel": "davewallace.us",
+      "donate": "https://secure.winred.com/wallace-for-america/donate-today",
+      "source": "https://davewallace.us/about-dave-wallace-for-america/"
+    },
+    "george mcdermott": {
+      "role": "Candidate for Congress in Maryland's 4th District.",
+      "bio": "His campaign says he is about 80 and is running to press the executive, legislative, and judicial branches to follow the Constitution and their oaths of office. He describes that work as a duty to other citizens.",
+      "issues": [
+        "He says he will not vote blindly with a party and that legislation should serve citizens rather than corporate insiders and lobbyists.",
+        "He says he opposes corruption in local, state, and federal government and argues that courts and private prisons have a financial stake in incarceration."
+      ],
+      "site": "https://georgemcdermott.com/",
+      "siteLabel": "georgemcdermott.com",
+      "source": "https://georgemcdermott.com/campaign/"
+    },
+    "glenn ivey": {
+      "role": "U.S. representative for Maryland's 4th District, seeking another term.",
+      "bio": "His campaign says he serves on Appropriations, Homeland Security, and Ethics after work as a Senate counsel, an assistant U.S. attorney, chair of Maryland's Public Service Commission, and two terms as Prince George's County state's attorney. It says he grew up in Rocky Mount, North Carolina, where his mother, a librarian, helped desegregate schools.",
+      "issues": [
+        "He says the Trump administration is attacking federal workers, diversity programs, and constitutional rights, and that he is fighting those actions in Congress and in court.",
+        "He says he is working with unions, advocacy groups, and attorneys and will not give ground to the administration."
+      ],
+      "site": "https://www.glennivey.com/",
+      "siteLabel": "glennivey.com",
+      "donate": "https://secure.actblue.com/donate/glenn-fight-ivey",
+      "source": "https://www.glennivey.com/meet-glenn"
+    },
+    "chris chaffee": {
+      "role": "Builder and farmer running for Congress in Maryland's 5th District.",
+      "bio": "His campaign says he is a husband, father, and grandfather, the son of a veteran, who started as a union electrician, studied at the University of Maryland, and has run a home-building business since 1991. He says he is also a farmer and a conservative running in Southern Maryland.",
+      "issues": [
+        "He says high costs have pushed taxpayers out of Maryland and that he would work to bring resources back to the 5th District.",
+        "He points to the delay rebuilding the Baltimore bridge and says the state should also look at a new crossing from Calvert County toward St. Mary's County and the Patuxent River Naval Base."
+      ],
+      "site": "https://www.chaffeeamericafirst.com/",
+      "siteLabel": "chaffeeamericafirst.com",
+      "source": "https://www.chaffeeamericafirst.com/"
+    },
+    "adrian boafo": {
+      "role": "State delegate running for Congress in Maryland's 5th District.",
+      "bio": "His campaign says his parents emigrated from Ghana and raised him in Prince George's County, where he attended DeMatha and became the first Black student-body president at the University of Baltimore. It says he worked for Congressman Steny Hoyer and won a Bowie City Council seat at 25.",
+      "issues": [
+        "He says he would raise the federal minimum wage to $15 and tie it to inflation, cut taxes for working and middle-class families, and expand the child tax credit and earned income tax credit.",
+        "He supports universal child care and says he would defend Social Security.",
+        "He says he is fighting what he calls unlawful attacks on democratic institutions and civil rights and wants voting rights and equal protection strengthened."
+      ],
+      "site": "https://www.adrianboafo.com/",
+      "siteLabel": "adrianboafo.com",
+      "donate": "https://secure.actblue.com/donate/ab-website26",
+      "source": "https://www.adrianboafo.com/issues"
+    },
+    "robin ficker": {
+      "role": "Former state legislator and Army veteran running for Congress in Maryland's 6th District.",
+      "bio": "His campaign says he is a lifelong Marylander who grew up here, raised a family, started businesses, and owns a farm. It says he is a U.S. Army veteran who served in the Maryland legislature and passed ballot measures on property taxes and county term limits.",
+      "issues": [
+        "He says he would cut wasteful spending and the deficit, support police, and hold people who commit crimes accountable.",
+        "He says he would lower taxes and regulation so jobs stay in the United States and in Maryland.",
+        "He opposes making the District of Columbia part of Maryland and says only American citizens should vote in American elections."
+      ],
+      "site": "https://voteficker.com/",
+      "siteLabel": "voteficker.com",
+      "donate": "https://secure.winred.com/robin-ficker-for-congress/donate-today",
+      "source": "https://voteficker.com/issues/"
+    },
+    "april mcclain delaney": {
+      "role": "U.S. representative for Maryland's 6th District, seeking another term.",
+      "bio": "Her campaign says she was raised in Buhl, Idaho, the daughter of a potato farmer, and is the mother of four. It says she led Common Sense Media's Washington office and served as a deputy assistant secretary for communications at the Department of Commerce.",
+      "issues": [
+        "She says she will work on rising costs, health care, and equal access to a good education, and that she wants more job training, small-business support, and better-paying work in the district.",
+        "She points to her work expanding broadband and says technology should drive development across the 6th District.",
+        "She says she will put progress ahead of partisanship and defend democratic institutions."
+      ],
+      "site": "https://www.aprilmcclaindelaneyforcongress.com/",
+      "siteLabel": "aprilmcclaindelaneyforcongress.com",
+      "source": "https://aprilmcclaindelaneyforcongress.com/meet-the-candidate/"
+    },
+    "kweisi mfume": {
+      "role": "U.S. representative for Maryland's 7th District, seeking another term.",
+      "bio": "His campaign says he was born and raised in Baltimore, graduated with honors from Morgan State, and earned a master's degree at Johns Hopkins. It says he served on the city council and in Congress, led the NAACP, and returned to the House in 2020.",
+      "issues": [
+        "The campaign says he still argues for bipartisan work on economic, education, and health-care issues.",
+        "It highlights his role on the Americans with Disabilities Act, a ban on assault weapons, and the Henrietta Lacks law on diversity in cancer research.",
+        "It also points to legislation that codified and increased funding for the Minority Business Development Agency."
+      ],
+      "site": "https://mfumeforcongress.com/",
+      "siteLabel": "mfumeforcongress.com",
+      "donate": "https://secure.actblue.com/donate/mfumeforcongress-em2021q2?refcode=112421",
+      "source": "https://mfumeforcongress.com/about-me/"
+    },
+    "cheryl riley": {
+      "role": "Conservative candidate running for Congress in Maryland's 8th District.",
+      "bio": "Her campaign says she is a Christian conservative who grew up in Montgomery County and is running on an America First platform. She says she has watched schools, taxes, and crime move in the wrong direction.",
+      "issues": [
+        "She says safety comes first and that she will push to keep people who commit crimes off the street, especially to protect older people, women, and children.",
+        "She says she will back pro-growth policies that put American businesses and workers first, and she argues for limited government rather than what she calls democratic socialism.",
+        "She also says she will defend the Constitution, the Second Amendment, veterans, and law enforcement, and she calls for sealed borders, more energy production, and parents' rights in schools."
+      ],
+      "site": "https://www.cheryl4maryland.com/",
+      "siteLabel": "cheryl4maryland.com",
+      "donate": "https://secure.anedot.com/cherylriley/congress",
+      "source": "https://www.cheryl4maryland.com/"
+    }
+  },
+  "measures": {}
+}

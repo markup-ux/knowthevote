@@ -1,0 +1,153 @@
+{
+  "code": "ok",
+  "ballotSource": "https://hosting.okelections.gov/electionlist.html",
+  "where": {
+    "url": "https://oklahoma.gov/elections/voters/ok-voter-portal.html",
+    "label": "OK Voter Portal"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one.",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Lt. Governor": {
+      "kicker": "State · Vote for one.",
+      "job": "The lieutenant governor is next in line if the governor cannot finish the term. Any other duties are set by state law."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one.",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one.",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    }
+  },
+  "people": {
+    "mike mazzei": {
+      "role": "Former state senator running for governor.",
+      "bio": "His campaign describes him as a business leader who focused on budgets, fiscal discipline, and where taxpayer money goes. He says faith, family, and freedom guide his decisions.",
+      "issues": [
+        "He says he would phase out the property tax for seniors and veterans while keeping essential services and the budget stable.",
+        "The site also lists protecting Oklahoma land, schools that teach students to read, and more high-paying jobs.",
+        "He says government should be accountable, respect taxpayers, and make daily life less expensive."
+      ],
+      "site": "https://mikeforok.com/",
+      "siteLabel": "mikeforok.com",
+      "donate": "",
+      "source": "https://mikeforok.com/"
+    },
+    "cyndi munson": {
+      "role": "Candidate for governor of Oklahoma.",
+      "bio": "Her campaign says a campaign should be about people, and she is asking Oklahomans to send stories, photos, and letters about why they love the state. She says those stories would guide her if she becomes governor.",
+      "issues": [],
+      "site": "https://www.cyndimunson.com/",
+      "siteLabel": "cyndimunson.com",
+      "donate": "",
+      "source": "https://www.cyndimunson.com/"
+    },
+    "robert brooks sr.": {
+      "role": "Candidate for governor who says he would follow a public vote before he signs or vetoes.",
+      "bio": "His site, which he calls the Farmer Servant Movement, says he is Robert Brooks and that the other candidates in the race have already held office. He says he would publish what people decide and what action follows.",
+      "issues": [
+        "He proposes an app in which registered voters would weigh in on bills, pardons, and policy before he acts, and says he would follow the majority.",
+        "He says schools should put parents, teachers, and students first and show measurable gains.",
+        "He says he would respect property rights and working families, and that he has no tolerance for pay-to-play politics."
+      ],
+      "site": "https://votewethepeople.com/",
+      "siteLabel": "votewethepeople.com",
+      "donate": "",
+      "source": "https://votewethepeople.com/"
+    },
+    "t. shannon": {
+      "role": "Candidate for lieutenant governor and a former Speaker of the Oklahoma House.",
+      "bio": "His campaign describes him as a fourth-generation Oklahoman who has been a transportation commissioner, a bank chief executive, and a senior advisor in the Trump administration. He says he is running to bring that record to the lieutenant governor's office.",
+      "issues": [
+        "He says Oklahoma can lead in economic opportunity, energy, agriculture, education, and innovation while protecting the state's values.",
+        "The site lists growing the economy, cutting taxes and red tape, and supporting farmers and ranchers.",
+        "It also says he would back law enforcement and defend freedoms."
+      ],
+      "site": "https://votetwshannon.com/",
+      "siteLabel": "votetwshannon.com",
+      "donate": "",
+      "source": "https://votetwshannon.com/"
+    },
+    "kelly forbes": {
+      "role": "Educator and consultant running for lieutenant governor.",
+      "bio": "His campaign says he is a lifelong Oklahoman raised in Skiatook and Broken Arrow, the first in his family to graduate from college, and the holder of a doctorate in administration and leadership. It says he has taught and administered schools, owns Kelly B's Consulting, and serves on the board of Oklahoma City's family justice center.",
+      "issues": [
+        "He says he would invest in small business, CareerTech, workforce training, and partnerships with Native nations, and would work on affordable housing and food insecurity.",
+        "He says he would put more funding into public schools, respect teachers, and keep public dollars in public schools.",
+        "He says he would expand health-care access in underserved places, promote tourism, and lead the office with public integrity rather than as a career politician."
+      ],
+      "site": "https://www.forbesforoklahoma.com/",
+      "siteLabel": "forbesforoklahoma.com",
+      "donate": "",
+      "source": "https://www.forbesforoklahoma.com/"
+    },
+    "kevin hern": {
+      "role": "Candidate for U.S. Senate who says he was born on an Air Force base.",
+      "bio": "His campaign says he earned an architectural drafting certificate in high school, used it to pay for an engineering degree, and later earned an MBA. It says that in office he has backed the Trump administration's agenda.",
+      "issues": [
+        "He says he has backed bills to recognize groups of veterans and a constitutional amendment aimed at a balanced budget.",
+        "He says he has voted to fund a border wall and to cut off federal money for sanctuary campuses, and that he wants small businesses to get capital.",
+        "He says he would protect religious liberty, restrict abortion funding, and protect gun rights, including concealed-carry reciprocity."
+      ],
+      "site": "https://hernforsenate.com/",
+      "siteLabel": "hernforsenate.com",
+      "donate": "",
+      "source": "https://hernforsenate.com/"
+    },
+    "n'kiyla jasmine thomas": {
+      "role": "Candidate for U.S. Senate who says the campaign takes no corporate PAC money.",
+      "bio": "Her site says she secured the Democratic nomination and is on the November 3 ballot. She says she is a military spouse and a Chickasaw citizen, and that her son is autistic.",
+      "issues": [
+        "She says the campaign is funded by individual Oklahomans and will not take corporate PAC money or money from AIPAC.",
+        "She lists honest education reform, health-care access for rural and underserved communities, and support for military families.",
+        "She also lists protections for Native sovereignty, equity in autism care, and transparency in government."
+      ],
+      "site": "https://www.jasmineforok.com/",
+      "siteLabel": "jasmineforok.com",
+      "donate": "",
+      "source": "https://www.jasmineforok.com/"
+    },
+    "jon echols": {
+      "role": "Candidate for attorney general who says he is a fifth-generation Oklahoman and a small-business owner.",
+      "bio": "His campaign says his family still owns a farm in Okeene, that he and his wife are raising three children in Oklahoma City, and that he earned degrees from the University of Oklahoma and Oklahoma City University's law school. He says he started his first business in college.",
+      "issues": [
+        "He says everyone, including political elites, should be treated equally under the law, and that the office should back police and defend liberties.",
+        "He says he would watch taxpayer dollars and support border and fentanyl enforcement.",
+        "He says he would defend private property against foreign adversaries and out-of-state interests, work with tribal nations, and back the state's energy industry."
+      ],
+      "site": "https://jonechols.com/",
+      "siteLabel": "jonechols.com",
+      "donate": "",
+      "source": "https://jonechols.com/priorities/"
+    },
+    "nick coffey": {
+      "role": "Former federal prosecutor running for attorney general.",
+      "bio": "His campaign calls him a lifelong Oklahoman and a career prosecutor, not a politician. It says that as a federal prosecutor in the Western District of Oklahoma he led complex cases and prosecuted transnational criminal organizations.",
+      "issues": [
+        "He says those cases covered money laundering, immigration, illegal firearms, and drug conspiracies.",
+        "He also lists counterfeiting and fraud among the crimes he has prosecuted, and says the work was about protecting communities and holding criminal organizations accountable."
+      ],
+      "site": "https://www.coffeyforok.com/",
+      "siteLabel": "coffeyforok.com",
+      "donate": "",
+      "source": "https://www.coffeyforok.com/"
+    },
+    "tom cole": {
+      "role": "U.S. representative running for reelection in Oklahoma's 4th District",
+      "bio": "The campaign says Tom Cole has spent his career in service to Oklahoma. In Congress, it says, he has focused on national defense, taxpayers, small businesses, and Native American and tribal issues.",
+      "issues": [
+        "Announcing his 2026 reelection bid, Cole says a Republican Congress and White House have secured the border, brought inflation down, and cut taxes, including on tips, overtime, and Social Security.",
+        "He says Republicans passed energy legislation to create jobs in Oklahoma and raised military pay, expanded VA services, and increased law enforcement funding.",
+        "He says he is running to support America First policies, national security, and continued work at Fort Sill and Tinker Air Force Base."
+      ],
+      "site": "https://tomcoleforcongress.com/",
+      "siteLabel": "Tom Cole For Congress",
+      "source": "https://tomcoleforcongress.com/tom-cole-announces-for-re-election/"
+    }
+  },
+  "measures": {}
+}

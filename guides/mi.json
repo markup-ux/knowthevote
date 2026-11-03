@@ -1,0 +1,523 @@
+{
+  "code": "mi",
+  "ballotSource": "https://mi-boe.entellitrak.com/etk-mi-boe-prod/page.request.do?electionType=GEN&electionYear=2026&page=page.miboePublicReport",
+  "where": {
+    "url": "https://mvic.sos.state.mi.us/Voter",
+    "label": "Michigan voter information"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. Michigan's secretary of state site lists election services, including voter registration and polling-place lookup, along with branch and online office services."
+    }
+  },
+  "people": {
+    "john james": {
+      "role": "Republican nominee for governor of Michigan.",
+      "bio": "John James's campaign says he entered West Point at 18, became a Ranger-qualified Apache helicopter pilot, and served with the Army in Iraq. He says he is the father of three sons and is running so more young people can build a life in Michigan.",
+      "issues": [
+        "He says he would bring down the cost of housing, energy, groceries, and car insurance.",
+        "He says schools should put reading, math, and skilled trades first, with parents in charge of their children's education.",
+        "He says he would back police and prosecute violent crime from Detroit to the Upper Peninsula."
+      ],
+      "site": "https://johnjamesmi.com/",
+      "siteLabel": "Campaign site",
+      "donate": "",
+      "source": "https://johnjamesmi.com/"
+    },
+    "jocelyn benson": {
+      "role": "Michigan secretary of state, running for governor.",
+      "bio": "Jocelyn Benson's campaign says she is the daughter of two special-education teachers and, at 35, became the youngest woman to lead an accredited American law school as dean at Wayne State. She says she has been secretary of state since 2019 and is running so children, parents, and older residents can afford to stay.",
+      "issues": [
+        "She says she would expand rural health-care options and build more housing.",
+        "She says she would take on utility companies over the rates they charge.",
+        "She says she would make child care free so more people can afford to live in the state."
+      ],
+      "site": "https://www.jocelynbenson.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.actblue.com/donate/benson-web",
+      "source": "https://www.jocelynbenson.com/MeetJocelyn"
+    },
+    "anthony hudson": {
+      "role": "Candidate for governor of Michigan.",
+      "bio": "Anthony Hudson's campaign says he was born and raised in Texas and moved to Michigan in 2012 to be in his children's lives. He describes himself as a blue-collar candidate running against what he calls corruption in Lansing.",
+      "issues": [
+        "He says he would eliminate property taxes and the state income tax.",
+        "He says he would stop data-center and solar-panel development and protect farmland.",
+        "He says he wants lower taxes, smaller government, and decisions returned to local communities."
+      ],
+      "site": "https://electanthonyhudson.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://electanthonyhudson.com/contribute/",
+      "source": "https://electanthonyhudson.com/"
+    },
+    "mike rogers": {
+      "role": "Candidate for U.S. Senate from Michigan.",
+      "bio": "Mike Rogers's campaign says he was raised in Livingston County, served as an Army lieutenant and an FBI agent, and later served in the Michigan Senate and in Congress. It says he chaired the House Intelligence Committee and is running for the U.S. Senate.",
+      "issues": [
+        "He says that as a state senator he wrote the law creating Michigan's 529 college-savings program and worked with police on tools to pursue child predators.",
+        "He says that in Congress he worked to end federal taxes on education savings and to expand American energy production by easing regulation.",
+        "He says that as Intelligence Committee chair he warned about China and worked to stop theft of intellectual property affecting Michigan's auto industry."
+      ],
+      "site": "https://rogersforsenate.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.winred.com/team-rogers/donate",
+      "source": "https://rogersforsenate.com/meet-mike"
+    },
+    "abdul el-sayed": {
+      "role": "Candidate for U.S. Senate from Michigan.",
+      "bio": "Abdul El-Sayed's campaign says he trained as a doctor, grew up in southeast Michigan, and later rebuilt Detroit's health department after bankruptcy and restructured Wayne County's health, human, and veterans services. He says he lives in Ann Arbor with his wife and two daughters.",
+      "issues": [
+        "He says he is running so the Senate works for residents rather than for billionaires.",
+        "He says his local health work included free glasses for children, removing lead from Detroit elementary schools, and making naloxone widely available.",
+        "He says he led a program to cancel medical debt and wrote a citizen's guide to Medicare for All."
+      ],
+      "site": "https://abdulforsenate.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.actblue.com/donate/aes-web?refcode=web-nav",
+      "source": "https://abdulforsenate.com/about/"
+    },
+    "doug lloyd": {
+      "role": "Republican candidate for Michigan attorney general.",
+      "bio": "Doug Lloyd's campaign says he has been a prosecutor for more than 30 years, led cases involving fraud and financial crime, and was chosen by fellow prosecutors to lead their state association. He says he is running to prosecute cases and make communities safer.",
+      "issues": [
+        "He says he would prosecute crimes fairly, without political favor or bias.",
+        "He says he would advise lawmakers as they write what he calls strong, commonsense laws.",
+        "He says he would protect constitutional rights, oppose politically motivated prosecutions, and root out corruption."
+      ],
+      "site": "https://votedouglloyd.com/",
+      "siteLabel": "Campaign site",
+      "donate": "",
+      "source": "https://votedouglloyd.com/"
+    },
+    "eli savit": {
+      "role": "Washtenaw County prosecuting attorney, running for Michigan attorney general.",
+      "bio": "Eli Savit's campaign says he grew up in Ann Arbor, taught eighth-grade history, and later clerked at the U.S. Supreme Court for Justices Sandra Day O'Connor and Ruth Bader Ginsburg. It says he was elected Washtenaw County prosecutor in 2020.",
+      "issues": [
+        "He says his office built units for sexual assault and domestic violence and pursued cold-case rape prosecutions.",
+        "He says that after Roe v. Wade was overturned he went to court to challenge Michigan's abortion ban and has kept arguing for reproductive freedom.",
+        "He says he created a unit aimed at wage theft and consumer harm and has sued large companies over pollution of air and water."
+      ],
+      "site": "https://www.eliformichigan.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.actblue.com/donate/eliformichigan",
+      "source": "https://www.eliformichigan.com/about"
+    },
+    "anthony forlini": {
+      "role": "Former Macomb County clerk, running for Michigan secretary of state.",
+      "bio": "Anthony Forlini's campaign says he is a lifelong Michigan resident, a husband, father, and grandfather, and the son of an Italian immigrant. It says he has served as a township supervisor, a state representative, and Macomb County clerk.",
+      "issues": [
+        "He says he would protect election integrity by removing ineligible and deceased voters from the rolls and by requiring watermarked ballots statewide.",
+        "He says he would stop sending voter information to outside groups and audit county clerks so election practices match across the state.",
+        "He says he would cut secretary of state wait times and make routine services easier to finish online or in person."
+      ],
+      "site": "https://www.forliniforus.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.winred.com/anthony-forlini/donate",
+      "source": "https://www.forliniforus.com/"
+    },
+    "garlin gilchrist ii": {
+      "role": "Lieutenant governor of Michigan, running for secretary of state.",
+      "bio": "Garlin Gilchrist's campaign says he is an engineer, a husband, and a father who was Detroit's director of innovation and a software engineer at Microsoft before becoming lieutenant governor. He says he is running for secretary of state to protect the right to vote and make government services work for residents.",
+      "issues": [
+        "He says he would defend the right to vote and push for laws that disclose more dark money in politics.",
+        "He says he would modernize licensing and registration and oppose misuse of voter-registration or license-plate data.",
+        "He says he would hold car-repair companies accountable when they overcharge customers, and that his campaign takes no corporate PAC money."
+      ],
+      "site": "https://garlingilchrist.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.actblue.com/donate/loc_gilchrist-soc_web?refcode=website",
+      "source": "https://garlingilchrist.com/"
+    },
+    "douglas marsh": {
+      "role": "Community journalist running for the U.S. Senate.",
+      "bio": "He says he is a community journalist who drives a 2010 Subaru Outback and built the campaign site himself. He asks what would change if working-class people wrote the law.",
+      "issues": [
+        "He says he would advocate a universal basic income of $1,000 a month for every adult citizen and $1,500 a month for descendants of chattel slavery.",
+        "He supports single-payer health care, and he says private-equity firms should not own homes, with rents tied to local wages and leases based on need.",
+        "He calls for an end to U.S. hostilities with Iran and for ceasefires in Gaza and Ukraine, and he wants accountability for Flint's water and a stop to Line 5."
+      ],
+      "site": "https://www.electmarsh.org/",
+      "siteLabel": "electmarsh.org",
+      "source": "https://www.electmarsh.org/"
+    },
+    "jason dye": {
+      "role": "Constitutional advocate running for Michigan attorney general.",
+      "bio": "He says he founded WTPN.news to publish the same record on candidates, donors, and officials, including himself. He is running with Anthony Hudson on the Libertarian ticket and says both major parties have protected the same machine of taxes, corporate welfare, and corruption.",
+      "issues": [
+        "He says he would build a public-corruption unit aimed at government abuse, retaliation, fraud, and misuse of office, and investigate patterns of courtroom misconduct.",
+        "He wants to end qualified immunity and stop civil asset forfeiture without real due process, and he says hidden contracts and pay-to-play lobbying should be exposed.",
+        "He says he would defend homeowners from property-tax foreclosure abuse and treat secret corporate-welfare deals as corruption."
+      ],
+      "site": "https://dye4ag.com/",
+      "siteLabel": "dye4ag.com",
+      "source": "https://dye4ag.com/platform.html"
+    },
+    "eric borregard": {
+      "role": "Green Party candidate for Michigan secretary of state.",
+      "bio": "His campaign says corporate-funded debates have replaced nonpartisan League of Women Voters forums and left people convinced elections are rigged. He argues Michigan should expand democratic choice.",
+      "issues": [
+        "He wants ranked-choice voting so people can rank the candidates they support and so third-party votes are not dismissed as wasted.",
+        "He says he would lower the voting age to 16, arguing that youth political power matters more than claims of voter fraud.",
+        "He says the stations that sell candidate ads should not control debate questions, and he points to Green Party pickets of those studios."
+      ],
+      "site": "https://www.ericborregard4michsos.org/",
+      "siteLabel": "ericborregard4michsos.org",
+      "donate": "https://www.ericborregard4michsos.org/contribute",
+      "source": "https://www.ericborregard4michsos.org/issues"
+    },
+    "christine sloan": {
+      "role": "Candidate for Michigan secretary of state.",
+      "bio": "She says the office should administer elections and serve residents, and that it should not be a partisan platform or a step toward higher office. She says more than a decade in health care shaped her view that individual rights and dignity are not negotiable.",
+      "issues": [
+        "She says she would keep voter rolls accurate, let people verify how elections are run, and treat independent and minor-party candidates fairly.",
+        "She wants government limited to protecting rights, maintaining essential services, and enforcing laws consistently.",
+        "She says she would restrict mass surveillance, including vehicle-tracking cameras and unchecked data collection, and push open records and plain-language budget reports."
+      ],
+      "site": "https://votechristinesloan.com/",
+      "siteLabel": "votechristinesloan.com",
+      "source": "https://votechristinesloan.com/issues/"
+    },
+    "lydia christensen": {
+      "role": "Libertarian candidate for the U.S. Senate.",
+      "bio": "Her campaign says she is from Ironwood in the Upper Peninsula, with a background in computer science, and that she built the campaign herself without PAC money. She says Michigan needs a senator who answers to residents rather than a political machine.",
+      "issues": [
+        "She says she would protect the Great Lakes and push affordable health care, including Medicaid for all.",
+        "She calls for fair wages, green jobs, and support for small businesses, and for social, racial, and LGBTQIA+ equity.",
+        "She says she would defend voting rights and constitutional freedoms, and that she is not beholden to party bosses or corporate donors."
+      ],
+      "site": "https://www.lydialynnchristensen.com/",
+      "siteLabel": "lydialynnchristensen.com",
+      "source": "https://www.lydialynnchristensen.com/about"
+    },
+    "jack bergman": {
+      "role": "U.S. representative and retired Marine lieutenant general.",
+      "bio": "His campaign says he rose to lieutenant general in the Marine Corps, ran a small business, and spent 22 years as a commercial airline pilot. He and his wife Cindy live in Watersmeet, and the campaign says family roots in the Upper Peninsula go back to iron miners in the late 1800s.",
+      "issues": [
+        "He says he has worked to expand rural broadband, including a bill that would account for short construction seasons in northern Michigan.",
+        "He says his veterans work includes suicide-prevention grants, more home and community care, and a burial-benefit fix he calls Gerald's Law.",
+        "He says he backs Michigan farms, including cherry growers, opposes taxpayer funding of abortion, and wants a military strong enough to deter adversaries."
+      ],
+      "site": "https://www.bergmanforcongress.com/",
+      "siteLabel": "bergmanforcongress.com",
+      "donate": "https://secure.winred.com/the-bergman-victory-committee/2026cycle",
+      "source": "https://www.bergmanforcongress.com/issues"
+    },
+    "callie barr": {
+      "role": "Attorney and veterans advocate running for Congress in Michigan's 1st District.",
+      "bio": "Her campaign says she was born and raised in Traverse City and Cheboygan, taught school, and became the primary caretaker for her husband Matt after he came home from the Marine Corps with combat injuries. That work led her into veterans advocacy and law.",
+      "issues": [
+        "She says health care should be a right, wants Medicare available from birth, and wants Medicaid cuts restored and drug prices lowered.",
+        "She wants homes people can afford, less red tape for local builders, and a balance between short-term rentals and year-round residents.",
+        "She says work should pay enough to live in the district, and she supports unions, Social Security, childcare, farms, and broadband."
+      ],
+      "site": "https://callieforcongress.com/",
+      "siteLabel": "callieforcongress.com",
+      "source": "https://callieforcongress.com/platform/"
+    },
+    "john moolenaar": {
+      "role": "U.S. representative for Michigan's 2nd District.",
+      "bio": "His campaign says he represents 20 counties and chairs the House select committee on competition with the Chinese Communist Party. He says he is running again to keep cutting taxes, secure the border, and protect Michigan communities.",
+      "issues": [
+        "He says he opposed a Chinese-linked battery plant in Michigan and wants to stop adversaries from buying American farmland.",
+        "He says he will defend the Second Amendment, protect the unborn, and preserve Social Security and Medicare, including tax relief on those benefits for seniors.",
+        "He says he has worked to support farmers, protect Line 5, and improve patient safety and rural health care."
+      ],
+      "site": "https://www.johnmoolenaarforcongress.com/",
+      "siteLabel": "johnmoolenaarforcongress.com",
+      "donate": "https://secure.winred.com/johnmoolenaar/donate",
+      "source": "https://www.johnmoolenaarforcongress.com/"
+    },
+    "ben ambrose": {
+      "role": "Marine veteran running for Congress in Michigan's 2nd District.",
+      "bio": "His campaign says he grew up on a farm in Hesperia, enlisted at 18, and served nearly 20 years in the Marine Corps as an infantryman, including combat tours. He says he is running to keep serving rural Michigan.",
+      "issues": [
+        "He says he would bring down grocery and gas prices, back small businesses, strengthen collective bargaining, and bring manufacturing jobs back with Buy American policies.",
+        "He supports more funding for public schools, larger Pell Grants, and vocational training, and he says he backs Medicare for All.",
+        "He also lists veterans, the natural environment, and community safety among his priorities."
+      ],
+      "site": "https://ambrose4congress.com/",
+      "siteLabel": "ambrose4congress.com",
+      "source": "https://ambrose4congress.com/priorities"
+    },
+    "terri deboer": {
+      "role": "Meteorologist running for Congress in Michigan's 3rd District.",
+      "bio": "Her campaign says she has spent more than 30 years as a West Michigan meteorologist and is a wife, mother, and grandmother. She says growing up in a military family taught her hard work and service.",
+      "issues": [
+        "She wants more health-care choice, including direct primary care and health savings accounts, plus price transparency.",
+        "She says she would cut taxes and spending to fight inflation, ease rules on small businesses, and support educational freedom.",
+        "She backs an all-of-the-above energy policy, including nuclear power, and says she would secure the border and enforce immigration law."
+      ],
+      "site": "https://www.terrideboer.com/",
+      "siteLabel": "terrideboer.com",
+      "donate": "https://secure.winred.com/terri-deboer-for-congress/donate-website?web_id=terrideboerforcongress_updates_footer",
+      "source": "https://www.terrideboer.com/"
+    },
+    "hillary scholten": {
+      "role": "U.S. representative for Michigan's 3rd District.",
+      "bio": "Her campaign says she is a former Justice Department attorney, a Christian, and a mother of two, and that in 2022 she became the first Democratic woman to represent West Michigan in the House. She says she is running for a third term focused on costs, health care, and government corruption.",
+      "issues": [
+        "She says she is working to lower health-care and drug costs, defend the Affordable Care Act, and stop insurers from dropping people who get sick.",
+        "She says decisions about pregnancy belong with women, and that she will protect the right to choose.",
+        "She wants well-paying jobs, semiconductor manufacturing in Michigan, and protection of drinking water from PFAS."
+      ],
+      "site": "https://hillaryscholten.com/",
+      "siteLabel": "hillaryscholten.com",
+      "donate": "https://secure.actblue.com/donate/sch_web_22?refcode=WEB_BS_SCH_DD_HEAD&amount=5",
+      "source": "https://hillaryscholten.com/priorities/"
+    },
+    "bill huizenga": {
+      "role": "U.S. representative and small-business owner from Ottawa County.",
+      "bio": "His campaign says he is a lifelong Ottawa County resident who built and ran a local business before Congress, and that he and his wife Natalie raised five children in southwest Michigan. He attended Holland Christian High School and earned a political science degree from Calvin College.",
+      "issues": [
+        "He says he has pushed to rein in federal spending to fight inflation and lower the cost of energy, groceries, and housing.",
+        "He supports more American energy production and fewer regulations so small businesses can hire.",
+        "He says he backs limited government, secure borders, and safe communities, and that he has worked on Great Lakes and PFAS issues."
+      ],
+      "site": "https://huizengaformichigan.com/",
+      "siteLabel": "huizengaformichigan.com",
+      "donate": "https://secure.winred.com/huizenga-for-congress/contribute",
+      "source": "https://huizengaformichigan.com/issues/"
+    },
+    "sean mccann": {
+      "role": "State senator running for Congress in Michigan's 4th District.",
+      "bio": "His campaign says he was born and raised in Michigan, attended Western Michigan University, and has served as a Kalamazoo city commissioner, state representative, and state senator. He says Washington should focus on health care and the cost of living.",
+      "issues": [
+        "He says his first priority is lowering everyday costs, from utilities and drugs to housing, while protecting jobs in southwest Michigan.",
+        "He says he would extend Affordable Care Act tax credits, lower prescription prices, and strengthen care in rural and urban communities.",
+        "He supports solar, wind, and nuclear power, including the Palisades plant, and says he would protect the Great Lakes and drinking water."
+      ],
+      "site": "https://seanmccannforcongress.com/",
+      "siteLabel": "seanmccannforcongress.com",
+      "donate": "https://secure.actblue.com/donate/sm-website",
+      "source": "https://seanmccannforcongress.com/issues/"
+    },
+    "tim walberg": {
+      "role": "U.S. representative and former pastor.",
+      "bio": "His campaign says he served as a pastor for nearly 10 years, spent 16 years in the Michigan House, and later led a community foundation and worked for the Moody Bible Institute. He says less power in Washington and more in families, businesses, and local communities will strengthen Michigan.",
+      "issues": [
+        "He says his focus is job creation, higher incomes, and a federal government that lives within its means.",
+        "He says lowering drug costs, protecting people with pre-existing conditions, and fighting addiction are health-care priorities.",
+        "He says he has voted to support veterans, religious freedom, the Second Amendment, and a right to life."
+      ],
+      "site": "https://www.walbergforcongress.com/",
+      "siteLabel": "walbergforcongress.com",
+      "source": "https://www.walbergforcongress.com/issues"
+    },
+    "christian vukasovich": {
+      "role": "Teacher and union organizer running for Congress in Michigan's 5th District.",
+      "bio": "His campaign says he was born and raised in Michigan, the son of an immigrant family on his father's side and of Michigan ministers on his mother's, and that he worked his way through school as a bricklayer. He says he is a husband, father, and teacher.",
+      "issues": [
+        "He says he would fight for living wages, union jobs, and an economy that rewards hard work.",
+        "He says quality, affordable health care is a right, and he wants housing working families can afford.",
+        "He also calls for education and job training, and says he would put people ahead of corporate and billionaire interests."
+      ],
+      "site": "https://christian4michigan.com/",
+      "siteLabel": "christian4michigan.com",
+      "source": "https://www.christian4michigan.com/about"
+    },
+    "heather smiley": {
+      "role": "Retired Ford employee running for Congress in Michigan's 6th District.",
+      "bio": "Her campaign says she is a Christian mother of two, married 30 years, and the first in her family to attend college, earning a bachelor's and a master's from Central Michigan University. She says she recently retired from Ford after more than 32 years in product development, planning, and analytics.",
+      "issues": [
+        "She says she would cut wasteful spending, balance the budget, and limit spending bills that bundle unrelated items.",
+        "She wants schools focused on academics, elections limited to citizens, and energy independence through the free market.",
+        "She says she would close the border, protect the right to self-defense, and restrict foreign ownership of land."
+      ],
+      "site": "https://smileyforcongress.com/",
+      "siteLabel": "smileyforcongress.com",
+      "source": "https://smileyforcongress.com/?page_id=269"
+    },
+    "debbie dingell": {
+      "role": "U.S. representative for Michigan's 6th District.",
+      "bio": "Her campaign calls her a fighter for working families who believes people can disagree without being disagreeable. It says she serves on Energy and Commerce and Natural Resources and chairs the Democratic Policy and Communications Committee.",
+      "issues": [
+        "She says she is working to protect the Great Lakes, lower health-care and prescription costs, and support seniors and veterans.",
+        "She says she backs U.S. auto manufacturing and fuel-economy standards that also keep cars affordable.",
+        "She says quality health care is a right and that climate change requires action from the federal government."
+      ],
+      "site": "https://debbiedingellforcongress.com/",
+      "siteLabel": "debbiedingellforcongress.com",
+      "source": "https://debbiedingellforcongress.com/meet-debbie/"
+    },
+    "tom barrett": {
+      "role": "U.S. representative and Army veteran.",
+      "bio": "His campaign says he was born and raised in Michigan, served 22 years in the Army, including Iraq, and used the GI Bill to graduate from Western Michigan University. He lives in Charlotte with his wife Ashley and their four children, and he says he previously served eight years in the state legislature.",
+      "issues": [
+        "He says taxpayer subsidies for large corporations are the wrong use of public money, and that infrastructure, tax and regulatory reform, and a lower cost of living matter more.",
+        "He says he opposes defunding police, wants schools focused on teaching and safety, and has signed a taxpayer-protection pledge to lower the tax burden.",
+        "He says he would finish the border wall and give border agencies the tools to stop illegal crossings, and he describes himself as pro-life."
+      ],
+      "site": "https://tombarrettforcongress.com/",
+      "siteLabel": "tombarrettforcongress.com",
+      "source": "https://tombarrettforcongress.com/issues"
+    },
+    "william lawrence": {
+      "role": "Organizer running for Congress in Michigan's 7th District.",
+      "bio": "His campaign says he was raised in East Lansing, graduated from East Lansing High School, and lives in Lansing with his wife. It says he helped found the Sunrise Movement and groups that work on rent and homelessness in mid-Michigan.",
+      "issues": [
+        "He says he would lower the cost of living by taxing the wealthy to protect Social Security, building affordable housing, and guaranteeing health care.",
+        "He wants a 12-month federal pause on new data centers, restored wetlands and rivers, and polluters held accountable.",
+        "He says he would end what he calls an illegal war on Iran, stop arms sales to Israel and other human-rights violators, and ban stock trading by members of Congress."
+      ],
+      "site": "https://wewill2026.com/",
+      "siteLabel": "wewill2026.com",
+      "source": "https://wewill2026.com/platform/"
+    },
+    "thomas smith": {
+      "role": "Former General Motors worker running for Congress in Michigan's 8th District.",
+      "bio": "His campaign says he grew up in Flint and spent his career at General Motors, including work tied to the company's first J.D. Power Initial Quality Award. In 2009 he and his son Dave, a Marine veteran, started Jar Head Salsa.",
+      "issues": [
+        "He says he would protect First and Second Amendment rights and resist federal overreach.",
+        "He says he would support finishing a border wall, restoring deportations, and ending catch-and-release.",
+        "He says he would cut wasteful spending and regulations and lower taxes, and that as the father of three veterans he would defend veterans' care and benefits."
+      ],
+      "site": "https://www.tomsmithformi.com/",
+      "siteLabel": "tomsmithformi.com",
+      "source": "https://www.tomsmithformi.com/issues"
+    },
+    "kristen mcdonald rivet": {
+      "role": "U.S. representative for Michigan's 8th District.",
+      "bio": "Her campaign says she grew up in a working-class Michigan town and later led Michigan Head Start, served as chief of staff at the state Department of Education, and was a vice president at the Skillman Foundation. She says her work has centered on child care and education.",
+      "issues": [
+        "She says she has introduced bipartisan bills to lower grocery, housing, and medicine costs and to invest in child care, and that she led an effort to let families on SNAP buy hot prepared chicken.",
+        "She says she worked to keep Saginaw's Social Security office open and opposes cuts to Social Security benefits.",
+        "She says she wants to ban members of Congress from trading stock on insider information and to reverse Citizens United."
+      ],
+      "site": "https://kristenmcdonaldrivet.com/",
+      "siteLabel": "kristenmcdonaldrivet.com",
+      "source": "https://kristenmcdonaldrivet.com/about/"
+    },
+    "lisa mcclain": {
+      "role": "U.S. representative and former financial-services executive.",
+      "bio": "Her campaign says she grew up in Stockbridge, worked through high school and college, and earned a business degree from Northwood University. She says she spent 30 years in the private sector, including American Express and Hantz Financial, and lives in Romeo with her husband Mike and their four children.",
+      "issues": [
+        "She says she would cut taxes and regulations on small business and support trade deals that help Michigan farmers and workers.",
+        "She says she would build a border wall, enforce immigration law, and defend the Second Amendment for law-abiding owners.",
+        "She says health coverage should be sold across state lines with wider use of health savings accounts, and she opposes taxpayer funding of abortion."
+      ],
+      "site": "https://www.lisamcclainforcongress.com/",
+      "siteLabel": "lisamcclainforcongress.com",
+      "source": "https://www.lisamcclainforcongress.com/meet-lisa"
+    },
+    "ray pooley": {
+      "role": "Machinist running for Congress in Michigan's 9th District.",
+      "bio": "His campaign says he is a third-generation manufacturer and CNC machinist. He says the campaign is about a government that works as hard as the people who build, grow, and fix things.",
+      "issues": [
+        "He lists manufacturing and jobs, affordable health care, and family farms and clean land as his top priorities.",
+        "He says jobs should provide a dignified living, health care should not bankrupt families, and corporations should be held accountable."
+      ],
+      "site": "https://www.pooley4congress.com/",
+      "siteLabel": "pooley4congress.com",
+      "source": "https://www.pooley4congress.com/"
+    },
+    "michael bouchard": {
+      "role": "Army National Guard captain running for Congress in Michigan's 10th District.",
+      "bio": "His campaign says he is a third-generation Michigander, a Michigan State ROTC graduate, and a Bronze Star recipient who served with the 82nd and 101st Airborne Divisions, including the southern border and Iraq. It says his father is Oakland County Sheriff Mike Bouchard and his grandfather worked at General Motors.",
+      "issues": [
+        "He says he would bring manufacturing jobs back to Michigan and cut red tape on small businesses.",
+        "He says he would finish the border wall, restore Remain in Mexico, end catch-and-release, and stop fentanyl smuggling.",
+        "He says schools should return to reading, writing, math, and science, and he backs a Parents' Bill of Rights."
+      ],
+      "site": "https://www.bouchardforcongress.com/",
+      "siteLabel": "bouchardforcongress.com",
+      "source": "https://www.bouchardforcongress.com/"
+    },
+    "christina hines": {
+      "role": "Prosecutor running for Congress in Michigan's 10th District.",
+      "bio": "Her campaign says she grew up in Macomb County, attended the University of Michigan and Wayne State University Law School, and worked as a prosecutor on homicide, trafficking, and sexual-assault cases. She and her husband David are raising three children in Macomb County.",
+      "issues": [
+        "She says she would lower the cost of groceries, gas, and health care and fight for good-paying Michigan jobs.",
+        "She says she would support safer communities, schools, and law-enforcement resources to prevent violent crime and protect children and seniors online.",
+        "She says she refuses corporate PAC money, would ban members of Congress from trading stocks, and would work with either party against corruption."
+      ],
+      "site": "https://www.christinahinesforcongress.com/",
+      "siteLabel": "christinahinesforcongress.com",
+      "source": "https://www.christinahinesforcongress.com/"
+    },
+    "ethan baker": {
+      "role": "Mayor of Troy running for Congress in Michigan's 11th District.",
+      "bio": "His campaign says he and his wife Bethany moved to Oakland County 17 years ago, and that he was elected to the Troy City Council in 2015 and mayor in 2019. He says he has spent seven years as a nonpartisan mayor focused on rebuilding trust in local government.",
+      "issues": [
+        "He says he is running because constant political division is unhealthy, and that people can hold their principles while still listening to one another.",
+        "He says most people want stability for their families, opportunity for their children, and safe communities, and that he would bring that approach to Congress."
+      ],
+      "site": "https://www.bakerforcongress.com/",
+      "siteLabel": "bakerforcongress.com",
+      "source": "https://www.bakerforcongress.com/why-im-running"
+    },
+    "jeremy moss": {
+      "role": "State Senate president pro tem running for Congress in Michigan's 11th District.",
+      "bio": "His campaign says he is a lifelong Oakland County resident, a Groves High School and Michigan State graduate, and that Southfield voters elected him to the city council in 2011. He says he later led the 2022 campaign that flipped the Michigan Senate and now serves as president pro tem.",
+      "issues": [
+        "He says he would lower everyday costs, push back on tariffs he says raise prices, and defend Social Security, Medicare, and Medicaid.",
+        "He says he reduced barriers to voting as elections committee chair, strengthened the state civil-rights law, and acted to protect abortion access after Roe was overturned.",
+        "He says he passed gun-safety laws, restored labor rights, and returned tax relief to seniors and working families."
+      ],
+      "site": "https://votejeremymoss.com/",
+      "siteLabel": "votejeremymoss.com",
+      "source": "https://votejeremymoss.com/about-jeremy/"
+    },
+    "james hooper": {
+      "role": "Building-trades worker running for Congress in Michigan's 12th District.",
+      "bio": "His campaign says he grew up on the east side of Detroit, worked at Eastern Market, and later worked in the building trades. It says he also served with Samaritan's Purse and the Billy Graham Evangelistic Association in Liberia, and that he is Wayne County Republican chairman.",
+      "issues": [
+        "He says he is pro-life from conception to natural death and that the Second Amendment should not be infringed.",
+        "He says representative government exists to secure the rights of the governed, and he calls himself an America First conservative.",
+        "He says he is a conservative Christian and that he will be a voice for those positions in the House."
+      ],
+      "site": "https://jameshooperforcongress.com/",
+      "siteLabel": "jameshooperforcongress.com",
+      "source": "https://jameshooperforcongress.com/about"
+    },
+    "rashida tlaib": {
+      "role": "U.S. representative for Michigan's 12th District.",
+      "bio": "Her campaign says she grew up the eldest of 14 children in a working-class UAW family in southwest Detroit, the daughter of Palestinian immigrants. It says she was the first Muslim woman elected to the Michigan Legislature and the first Palestinian American woman in Congress.",
+      "issues": [
+        "She says her priorities are economic and housing justice, racial and immigration justice, environmental justice, and health care for all.",
+        "She says she is demanding ICE leave communities, an end to forced family separation, and spending at home instead of blank checks for war.",
+        "She says she does not take corporate PAC money and has directed federal funding to community spaces, water projects, and housing in the district."
+      ],
+      "site": "https://rashidaforcongress.com/",
+      "siteLabel": "rashidaforcongress.com",
+      "source": "https://rashidaforcongress.com/about/"
+    },
+    "t.p. nykoriak": {
+      "role": "Republican running for Congress in Michigan's 13th District.",
+      "bio": "His campaign says he was shaped by Detroit and that he traveled to Ukraine in 2022 and 2023, where he says American resources can go unaccounted for. He says the campaign answers to residents of the district rather than a party or donor class.",
+      "issues": [
+        "He says he would defend the Constitution, oversee federal agencies, and fight waste, fraud, and corruption.",
+        "He says he would support law enforcement, secure the border, and enforce immigration laws, including against trafficking and fentanyl.",
+        "He says he would cut unnecessary regulation, expand manufacturing, lower the cost of living, and reduce the national debt."
+      ],
+      "site": "https://tp313.org/",
+      "siteLabel": "tp313.org",
+      "source": "https://tp313.org/"
+    },
+    "donavan mckinney": {
+      "role": "State representative running for Congress in Michigan's 13th District.",
+      "bio": "His campaign says he is a lifelong Detroiter who grew up in northeast Detroit, was raised by his mother and grandmother, and was the first in his family to graduate from college. It says he led SEIU Healthcare Michigan and now serves in the state House.",
+      "issues": [
+        "He says he would defend the right to form a union, fight for a living wage, tax billionaires, and support a universal basic income.",
+        "He calls for a Green New Deal, clean air and water, and more public transit, and he says Detroit's lead pipes and pollution are personal.",
+        "He supports Medicare for All, a national housing guarantee, an end to cash bail, and federal protection of abortion access, including repeal of the Hyde Amendment."
+      ],
+      "site": "https://www.donavanforcongress.com/",
+      "siteLabel": "donavanforcongress.com",
+      "source": "https://www.donavanforcongress.com/priorities"
+    }
+  },
+  "measures": {}
+}

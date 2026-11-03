@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaders.vote · Missouri, November 3, 2026</title>
+<meta name="description" content="Leaders.vote guide to the Missouri general election on November 3, 2026. Candidates, sample ballot, and unofficial results. Not an endorsement.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="guide.css?v=maphover">
+</head>
+<body data-state="mo">
+<header>
+  <div class="wrap bar">
+    <div class="bar-top">
+      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      <div class="lang notranslate" translate="no">
+        <span class="visually-hidden">Language</span>
+        <select id="lang" class="visually-hidden" aria-hidden="true" tabindex="-1">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-CN">中文</option>
+          <option value="pl">Polski</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ko">한국어</option>
+          <option value="tl">Tagalog</option>
+          <option value="ar">العربية</option>
+          <option value="ur">اردو</option>
+          <option value="uk">Українська</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="fr">Français</option>
+        </select>
+        <button type="button" class="lang-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">English</button>
+        <ul id="lang-list" class="lang-menu" role="listbox" aria-label="Translate this page" hidden>
+          <li role="none"><button type="button" role="option" data-lang="en" aria-selected="true">English</button></li>
+          <li role="none"><button type="button" role="option" data-lang="es">Español</button></li>
+          <li role="none"><button type="button" role="option" data-lang="zh-CN">中文</button></li>
+          <li role="none"><button type="button" role="option" data-lang="pl">Polski</button></li>
+          <li role="none"><button type="button" role="option" data-lang="hi">हिन्दी</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ko">한국어</button></li>
+          <li role="none"><button type="button" role="option" data-lang="tl">Tagalog</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ar">العربية</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ur">اردو</button></li>
+          <li role="none"><button type="button" role="option" data-lang="uk">Українська</button></li>
+          <li role="none"><button type="button" role="option" data-lang="vi">Tiếng Việt</button></li>
+          <li role="none"><button type="button" role="option" data-lang="fr">Français</button></li>
+        </ul>
+</div>
+    </div>
+    <p class="here notranslate" translate="no"><img src="flags/mo.svg" alt=""><span>Missouri</span></p>
+    <nav>
+      <a href="index.html">All states</a>
+      <a href="#results">Results</a>
+      <a href="#sample">The ballot</a>
+      <a href="#read">Before you go</a>
+      <a href="#measures">Measures</a>
+      <a href="#house">U.S. House</a>
+      <a href="#where">Where to vote</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero">
+    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record. A street address you type is not sent for translation.</p>
+    <p class="kicker">Missouri · General election · Tuesday, November 3, 2026</p>
+    <h1>Know who you're voting for.</h1>
+    <p class="deck">What each office does is on this page. A candidate's priorities are included only when they come from that candidate's own site. This is not an endorsement and not a government site.</p>
+    <p class="when">Polls close at 8:00 PM ET. This page does not call a race.</p>
+    <div class="finder where" id="where">
+      <p class="kicker">Where to vote</p>
+      <h2>Find your polling place.</h2>
+      <p class="zip-note">Election Day is Tuesday, November 3. A polling place comes from the home address. Type the street number, street name, and ZIP here. This page does not keep them. The election office lookup is the list for that address.</p>
+      <form id="where-form" data-lookup="https://voteroutreach.sos.mo.gov/portal" data-lookup-label="Missouri Secretary of State">
+        <div>
+          <label for="where-number">Street number</label>
+          <input id="where-number" class="num" name="number" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-street">Street name</label>
+          <input id="where-street" class="street" name="street" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-zip">ZIP code</label>
+          <input id="where-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="65101" required>
+        </div>
+        <button type="submit">Find this address</button>
+      </form>
+      <div id="where-result" aria-live="polite"></div>
+    </div>
+    <div class="races"></div>
+  </div>
+  <section class="block" id="results">
+    <div class="wrap">
+      <p class="kicker">Unofficial · November 3, 2026</p>
+      <h2>Results across Missouri.</h2>
+      <p class="sub">Each county is colored by who is ahead there. A blank county has not reported votes. This page does not call a race.</p>
+      <div class="result-legend">
+        <span><i class="swatch blank"></i> No votes reported</span>
+        <span><i class="swatch d"></i> Democratic lead</span>
+        <span><i class="swatch r"></i> Republican lead</span>
+        <span><i class="swatch o"></i> Another lead</span>
+      </div>
+      <div class="result-layout">
+        <div><div id="state-slot"></div></div>
+        <div>
+          <div id="result-races" class="sheet-switch" role="group" aria-label="Races"></div>
+          <div id="result-summary"></div>
+          <label for="result-place">County, parish, or city</label>
+          <select id="result-place"><option value="">Statewide totals</option></select>
+          <div id="result-detail"></div>
+          <p id="result-status" class="note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="sample">
+    <div class="wrap">
+      <p class="kicker">How you vote</p>
+      <h2>What the ballot looks like.</h2>
+      <p class="sub">This sample lists the statewide contests NBC News is publishing for Missouri. It is not a precinct ballot.</p>
+      <div class="sample-layout">
+        <div>
+          <ol class="steps" id="sample-steps">
+            <li><button type="button" data-step="mark">Mark one choice on a contest. Next and Back move one contest at a time. This sample puts the mark to the left of a name.</button></li>
+            <li><button type="button" data-step="order">Party order here is Republican, then Democratic, then any other candidate. Your county may print a different order.</button></li>
+            <li><button type="button" data-step="measure">A measure is a yes or no question. It is not a race between candidates.</button></li>
+            <li><button type="button" data-step="house">U.S. House depends on your district and is listed farther down this page. This sample does not include it.</button></li>
+          </ol>
+          <p class="zip-note">The address lookup above opens the election office. A ZIP code alone does not pick a district.</p>
+        </div>
+        <div>
+          <div class="sheet" id="sample-candidates">
+            <p class="kicker">Sample ballot · Missouri · November 3, 2026</p>
+            <div class="contest" data-kind="measure"><h3>Amendment 3: Repeal abortion rights and prohibit gender transition</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button></div>
+<div class="contest" data-kind="measure"><h3>Proposition A: Approve 2025 congressional map</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button></div>
+          </div>
+          <div class="sheet-move">
+            <button type="button" id="contest-back" class="notranslate" translate="no" data-phrase="back">Back</button>
+            <p id="sample-status"></p>
+            <button type="button" id="contest-next" class="notranslate" translate="no" data-phrase="next">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="read">
+    <div class="wrap">
+      <p class="kicker">Before you go</p>
+      <h2>Statewide contests, then your district.</h2>
+      <div class="facts">
+        <div class="fact">
+          <h3>What to bring</h3>
+          <p>Bring what this state's election office requires. The address lookup on this page opens that office. This page does not keep the address.</p>
+        </div>
+        <div class="fact">
+          <h3>How names got here</h3>
+          <p>Statewide names were compared with the candidate list linked at the bottom of this page. Photos are the ones NBC News is publishing. On this site the order is Republican, then Democratic, then any other party. A printed ballot may use a different order.</p>
+        </div>
+        <div class="fact">
+          <h3 class="notranslate" translate="no" data-phrase="writeins">Write-ins</h3>
+          <p>A write-in counts only if that person filed. This page lists the names being published.</p>
+        </div>
+        <div class="fact">
+          <h3>What you are choosing</h3>
+          <p>The sample lists the statewide contests on this page. U.S. House is one seat in your district and is listed farther down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="block" id="measures"><div class="wrap"><h2>Ballot measures.</h2><p class="office-note">The title is the one being published for this ballot. This guide adds an explanation only when it comes from the official text.</p><div class="sheet"><h3>Amendment 3: Repeal abortion rights and prohibit gender transition</h3>
+<p class="office-note">A yes vote would repeal the 2024 constitutional right to reproductive care, including abortion through fetal viability, permit limits tied to medical emergencies, rape and incest under twelve weeks, and fetal anomalies, and prohibit gender-transition surgeries, cross-sex hormones, and puberty blockers for minors except for specific medical conditions.</p><button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button>
+<h3>Proposition A: Approve 2025 congressional map</h3>
+<p class="office-note">A yes vote would approve House Bill 1 from the 2025 extraordinary session, which redraws congressional district boundaries, and a no vote would leave the 2022 boundaries in place.</p><button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Yes</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">No</span></button></div></div></section>
+  <section class="block" id="house"><div class="wrap"><h2>U.S. House.</h2><p class="office-note">Every district NBC News is publishing for this state. This list is not filtered to one address. A written note is added only from that candidate's own site.</p><h3>District 1</h3>
+<article class="candidate compact"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H01_R_P_BERRY.png" alt="" data-letter="P" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Paul Berry III</h3><span class="pill r">Republican</span></div></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H01_D_W_BELL.png" alt="" data-letter="W" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Wesley Bell</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative for Missouri&#x27;s 1st District.</p><p class="bio">His campaign says the job is to bring federal results home to St. Louis, and it points to infrastructure, public safety, workforce, and neighborhood projects he pursued while Republicans controlled Congress and the White House.</p><ul><li>He says every family in St. Louis should have a safe, affordable home, and he highlights federal housing grants meant to add supply and lower costs for renters and buyers.</li><li>He wants Lambert Airport modernized so flights stay on schedule and the region stays connected.</li><li>He says he fought to expand the Radiation Exposure Compensation Act for North County families sickened by radioactive contamination at Coldwater Creek.</li></ul><p class="links"><a href="https://www.bell4mo.com/" target="_blank" rel="noopener noreferrer">bell4mo.com</a> · <a href="https://secure.actblue.com/donate/bell-for-missouri-2" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 2</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H02_R_A_WAGNER.png" alt="" data-letter="A" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Ann Wagner</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative for Missouri&#x27;s 2nd District.</p><p class="bio">She grew up working at her parents&#x27; carpet store in Manchester, studied business at the University of Missouri, and later held management jobs at Hallmark and Ralston Purina before coming to Congress.</p><ul><li>She says she has worked to cut taxes and regulation so local businesses can hire, and she voted for a tax bill that removes taxes on tips, overtime, and Social Security.</li><li>She highlights the Fight Online Sex Trafficking Act and funding for rape-kit testing through the Debbie Smith Act.</li><li>She says she will keep defending a right to life, and she introduced a bill to require medical care for infants born alive after an abortion.</li></ul><p class="links"><a href="https://annwagner.com/" target="_blank" rel="noopener noreferrer">annwagner.com</a> · <a href="https://secure.winred.com/ann-wagner/annwagner" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H02_D_F_WELLMAN.png" alt="" data-letter="F" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Fred Wellman</h3><span class="pill d">Democratic</span></div><p class="role">Retired Army veteran running for Congress in Missouri.</p><p class="bio">His campaign says he served 22 years and four combat tours, then spent a decade in Washington advocating for veterans.</p><ul><li>He says housing, health care, child care, and groceries are outrunning wages, and he wants lower costs, higher pay, and the right to organize, including a higher federal minimum wage and paid family leave.</li><li>On health care he supports restoring ACA subsidies, reversing Medicaid cuts, a public option, and a lower Medicare eligibility age, with universal coverage as the longer-term goal.</li><li>He says Social Security, Medicare, and pensions should be protected so people can retire without choosing between medicine, rent, and heat.</li></ul><p class="links"><a href="https://www.wellmanformo.com/" target="_blank" rel="noopener noreferrer">wellmanformo.com</a> · <a href="https://secure.actblue.com/donate/fwhomepage" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 3</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H03_R_B_ONDER.png" alt="" data-letter="B" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Bob Onder</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative and physician from Missouri.</p><p class="bio">His campaign describes a record in Congress and in Jefferson City centered on immigration enforcement, abortion limits, gun laws, and taxes.</p><ul><li>He highlights a bill aimed at visa overstays and earlier Missouri legislation against sanctuary cities and employment of people without legal status.</li><li>He says he co-chairs the Pro-Life Caucus and has backed federal abortion limits, after authoring Missouri clinic rules and helping write the 2019 heartbeat bill.</li><li>He points to work on constitutional carry and the Second Amendment Preservation Act, and to the tax bill he says he passed with House Republicans.</li></ul><p class="links"><a href="https://www.bobondermo.com/" target="_blank" rel="noopener noreferrer">bobondermo.com</a> · <a href="https://secure.winred.com/onder-for-congress/donate-today" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H03_D_B_MANN.png" alt="" data-letter="B" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Bethany Mann</h3><span class="pill d">Democratic</span></div><p class="role">Scientist and working mother running for Missouri&#x27;s 3rd District.</p><p class="bio">She grew up in Foristell, lives in St. Peters, and has worked as an environmental chemist testing crops and checking communities for lead and forever chemicals.</p><ul><li>She supports full, equal funding for public schools from pre-K through college and union apprenticeships.</li><li>She wants affordable physical and mental health care, and federal infrastructure money for rural roads, bridges, broadband, and water.</li><li>She ties her environmental work to clean air and water, and she supports the Women&#x27;s Health Protection Act, the Equal Rights Amendment, and Medicare for All.</li></ul><p class="links"><a href="https://www.bethanymannforcongress.com/" target="_blank" rel="noopener noreferrer">bethanymannforcongress.com</a> · <a href="https://secure.actblue.com/donate/mannupmo" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 4</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H04_R_M_ALFORD.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Mark Alford</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative campaigning as a conservative voice for rural Missouri.</p><p class="bio">He tells voters he spent more than 23 years as a local television anchor before taking that platform to Congress.</p><ul><li>He says he is fully opposed to abortion and will defend what he calls a right to life for the unborn.</li><li>He wants federal spending, waste, and fraud cut back in order to slow the national debt.</li><li>He says he will defend the Second Amendment for law-abiding owners and will oppose efforts to reduce police funding.</li></ul><p class="links"><a href="https://alfordforcongress.com/" target="_blank" rel="noopener noreferrer">alfordforcongress.com</a> · <a href="https://secure.winred.com/mark-alford-for-congress/" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H04_D_J_HERRERA.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Jordan Herrera</h3><span class="pill d">Democratic</span></div><p class="role">Air Force veteran, attorney, and former Missouri assistant attorney general running for Congress.</p><p class="bio">He says he grew up in a working-class Midwestern family, spent nearly 16 years in service, and then went to court for Missourians when the rules were unfair.</p><ul><li>He says he is running to work on the cost of living with practical proposals.</li><li>He wants safer communities through what he calls common-sense policy.</li><li>He says government should treat people with dignity, and he describes the campaign as youth-led and people-powered.</li></ul><p class="links"><a href="https://jordanjherrera.com/" target="_blank" rel="noopener noreferrer">jordanjherrera.com</a> · <a href="https://secure.actblue.com/donate/jordan-herrera-1" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 5</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H05_R_R_BRATTIN.png" alt="" data-letter="R" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Rick Brattin</h3><span class="pill r">Republican</span></div><p class="role">Missouri legislator running for Congress on a conservative platform.</p><p class="bio">His campaign says he is done accepting the status quo and wants to carry the fight he led in Jefferson City into the U.S. House, alongside President Trump.</p><ul><li>He says he will defend the Second Amendment in Congress after helping write Missouri laws he calls among the strongest gun protections in the country.</li><li>He says he is fully opposed to abortion, wants Planned Parenthood&#x27;s federal funding ended, and cites votes to lengthen Missouri&#x27;s waiting period and to notify parents of minors.</li><li>He supports a border wall, full funding for ICE, and deportation of people he calls criminal illegal aliens, and he says grocery and gas prices have to come down.</li></ul><p class="links"><a href="https://rickbrattin.com/" target="_blank" rel="noopener noreferrer">rickbrattin.com</a> · <a href="https://secure.winred.com/rick-brattin-for-congress-822a75d3/donate-today" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H05_D_E_CLEAVER.png" alt="" data-letter="E" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Emanuel Cleaver II</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative for Missouri&#x27;s 5th District.</p><p class="bio">His campaign says he grew up in public housing and has treated affordable housing as a lifelong cause, including work on a major federal housing law.</p><ul><li>He says Social Security and Medicare should be kept solvent, and he supports expanding Medicaid so rural patients do not have to travel hours for care.</li><li>He supports the Affordable Care Act, wants it strengthened, and says he has fought to lower prescription drug prices.</li><li>He opposes the decision overturning Roe v. Wade and supports bipartisan gun laws that he says can protect children while allowing responsible ownership.</li></ul><p class="links"><a href="https://www.cleaver4congress.com/" target="_blank" rel="noopener noreferrer">cleaver4congress.com</a> · <a href="https://secure.actblue.com/donate/cleaver-congress" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 6</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H06_R_C_STIGALL.png" alt="" data-letter="C" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Chris Stigall</h3><span class="pill r">Republican</span></div><p class="role">Candidate for Congress campaigning on north Missouri farms, taxes, and rural hospitals.</p><p class="bio">His issues page presents a conservative platform he ties to President Trump, aimed at gun rights, small-town hospitals, abortion, taxes, and agriculture.</p><ul><li>He says the Second Amendment is not negotiable and that he will oppose federal gun restrictions aimed at law-abiding owners.</li><li>He wants less red tape for rural hospitals, and he opposes taxpayer funding of abortion.</li><li>He supports making the Trump tax cuts permanent and giving farms more market access with fewer regulations.</li></ul><p class="links"><a href="https://www.stigallforcongress.com/" target="_blank" rel="noopener noreferrer">stigallforcongress.com</a> · <a href="https://secure.anedot.com/chris-stigall-for-congress/donate" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H06_D_J_SMEAD.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Josh Smead</h3><span class="pill d">Democratic</span></div><p class="role">Architect and small-business owner from Liberty running for Missouri&#x27;s 6th District.</p><p class="bio">He is a licensed architect and project professional raising four children, and he says that experience with budgets and deadlines is how he wants government to work.</p><ul><li>He says voters should judge officials by the plan they propose, the work they do, and what actually changes.</li><li>He describes the job as planning the problem, building the response, managing the constraints, and finishing it.</li></ul><p class="links"><a href="https://votesmead.com/" target="_blank" rel="noopener noreferrer">votesmead.com</a> · <a href="https://secure.actblue.com/donate/votesmead" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 7</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H07_R_E_BURLISON.png" alt="" data-letter="E" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Eric Burlison</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative campaigning on taxes, health care, and the border.</p><p class="bio">His campaign calls him a conservative family man and says the agenda is meant to put Missouri families first.</p><ul><li>He wants spending cut so Missourians keep more of their pay.</li><li>He says health care should be affordable and directed by patients rather than bureaucrats.</li><li>He wants the southern border secured, constitutional rights of law-abiding people defended, and federal waste investigated.</li></ul><p class="links"><a href="https://www.ericburlisonforcongress.com/" target="_blank" rel="noopener noreferrer">ericburlisonforcongress.com</a> · <a href="https://winred.ericburlisonforcongress.com/eric-burlison-for-congress/send-proven-conservative-leadership-back-to-washin" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H07_D_M_HESKETH.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Missi Hesketh</h3><span class="pill d">Democratic</span></div><p class="role">Candidate for Congress who published five priorities and the bills she pairs with each one.</p><p class="bio">She groups the race around household costs, children&#x27;s futures, health care, farms and natural resources, and government accountability.</p><ul><li>She wants affordability measures that include closing tax loopholes, protecting Social Security, paid family leave, and bans on grocery price gouging and junk fees.</li><li>She supports rural education funding, higher teacher pay, Medicare available to anyone who wants it, rural hospital stabilization, and Medicare drug-price negotiation.</li><li>She opposes new AI data centers, backs a right to repair and crop-insurance reform, and wants congressional stock trading, dark money, and Citizens United ended.</li></ul><p class="links"><a href="https://www.missiformo.com/" target="_blank" rel="noopener noreferrer">missiformo.com</a> · <a href="https://secure.actblue.com/donate/missiformo" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 8</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H08_R_J_SMITH.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Jason Smith</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative for Missouri&#x27;s 8th District.</p><p class="bio">He says he grew up on a farm, used an FFA project to help pay for college, finished a double major in three years, and later ran the family farm and a small business in Dent County while paying off law-school debt.</p><ul><li>He describes his state House years as a push for smaller government and fiscal conservatism, and his colleagues later chose him as majority whip and speaker pro tem.</li><li>On Ways and Means he says he has focused on simplifying the tax code and lowering the federal tax burden on small businesses, farmers, and families.</li></ul><p class="links"><a href="https://electjasonsmith.com/home/" target="_blank" rel="noopener noreferrer">electjasonsmith.com</a> · <a href="https://secure.winred.com/JasonSmith/donate" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H08_D_C_REICHARD.png" alt="" data-letter="C" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Chris Reichard</h3><span class="pill d">Democratic</span></div><p class="role">Disabled Army veteran and IBEW Local 1 member running for Missouri&#x27;s 8th District.</p><p class="bio">He says he is a second-generation union electrician from Arnold running a grassroots campaign that takes no corporate PAC or dark money.</p><ul><li>He supports the PRO Act to protect organizing and the Major Richard Star Act so combat-injured veterans receive full benefits.</li><li>He wants the United States kept out of another long war and supports a bill to count the full human and financial cost of war up front.</li><li>He wants Citizens United overturned and backs the Equality Act, and he says rural hospitals and public schools in the district are underfunded.</li></ul><p class="links"><a href="https://www.reichardforrep.com/" target="_blank" rel="noopener noreferrer">reichardforrep.com</a> · <a href="https://secure.actblue.com/donate/chris-reichard-1" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Leaders.vote is an independent voter guide for the November 3, 2026 general election. It is not a campaign, not an endorsement, and not a site of any state or election authority. This page is Missouri.</p>
+    <p>Statewide names were compared with <a href="https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" target="_blank" rel="noopener noreferrer">this state candidate list</a>. Photos are the ones NBC News is publishing. An issue line is added only from a candidate's own site.</p>
+  </div>
+</footer>
+<div id="google_translate_element" aria-hidden="true"></div>
+<script src="lang.js"></script>
+<script src="state.js"></script>
+</body>
+</html>

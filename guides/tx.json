@@ -1,0 +1,1053 @@
+{
+  "code": "tx",
+  "ballotSource": "https://www.sos.texas.gov/elections/forms/2026-ballot-cert.pdf",
+  "where": {
+    "url": "https://www.votetexas.gov/voting/where",
+    "label": "VoteTexas.gov"
+  },
+  "offices": {
+    "Governor": {
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials.",
+      "kicker": "State · Vote for one."
+    },
+    "Lt. Governor": {
+      "job": "The lieutenant governor is next in line if the governor cannot finish the term. Any other duties are set by state law."
+    },
+    "Senate": {
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years.",
+      "kicker": "Federal · Vote for one."
+    },
+    "Attorney General": {
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    },
+    "Railroad Commissioner": {
+      "job": "The railroad commissioner serves on the Railroad Commission of Texas, which regulates oil and natural gas, pipelines, natural gas utilities, LP-gas, critical natural gas infrastructure, and coal and uranium surface mining. The commission no longer regulates railroads."
+    }
+  },
+  "people": {
+    "greg abbott": {
+      "role": "Governor of Texas, running for another term.",
+      "bio": "His campaign site identifies him as governor and asks Texans to keep the state Republican. He presents public safety, affordability, and education as the themes of the campaign.",
+      "issues": [
+        "He says new data centers are being paused and must show they will pay their own way, supply their own power, reuse their own water, reduce electricity costs, and avoid disturbing neighborhoods.",
+        "He says the state made bail tougher, backed law enforcement, and focused on violent repeat offenders."
+      ],
+      "site": "https://www.gregabbott.com/",
+      "siteLabel": "gregabbott.com",
+      "donate": "",
+      "source": "https://www.gregabbott.com/"
+    },
+    "gina hinojosa": {
+      "role": "Candidate for governor of Texas.",
+      "bio": "She says she has spent her life advocating for Texas families and children, from workers to taking on politicians she calls corrupt. She says her agenda as governor would stay short so the promise is plain.",
+      "issues": [
+        "She says she will save Texas public schools.",
+        "She says she will put money back in Texans' pockets.",
+        "She says she will end what she calls Greg Abbott's corruption so families can reach the American dream."
+      ],
+      "site": "https://ginafortexas.com/",
+      "siteLabel": "ginafortexas.com",
+      "donate": "",
+      "source": "https://ginafortexas.com/"
+    },
+    "pat dixon": {
+      "role": "Libertarian candidate for governor of Texas.",
+      "bio": "He says he has held executive jobs in private industry, nonprofits, and politics, has worked with the Texas Legislature since 2004, and has served in elected office. He says a campaign should be a job interview and that his opponents are not his enemies.",
+      "issues": [
+        "He says shrinking government to its proper size means a person may do anything that does not harm someone else.",
+        "He says voters should not be limited to two choices when the office is this important.",
+        "He says he will not publish a long list of promises, because future crises are unpredictable and his Libertarian principles are what make his positions predictable."
+      ],
+      "site": "https://patdixon.org/",
+      "siteLabel": "patdixon.org",
+      "donate": "",
+      "source": "https://patdixon.org/"
+    },
+    "dan patrick": {
+      "role": "Lieutenant governor of Texas, running for re-election.",
+      "bio": "His campaign says he was first elected lieutenant governor in 2014 and re-elected in 2018 and 2022. It describes him as a national voice for conservative policy.",
+      "issues": [
+        "He says he fights to protect liberty, lower property and business taxes, create jobs, and grow the economy.",
+        "He says he wants a stronger electric grid through more reliable thermal power and a high-quality education for every student.",
+        "He says he works to secure the border, support law enforcement, and protect life, religious freedom, and the Second Amendment."
+      ],
+      "site": "https://danpatrick.org/",
+      "siteLabel": "danpatrick.org",
+      "donate": "",
+      "source": "https://danpatrick.org/"
+    },
+    "vikki goodwin": {
+      "role": "State representative running for lieutenant governor.",
+      "bio": "The site identifies her as a state representative running for lieutenant governor because people across Texas asked her to. She says the Senate needs a presiding officer who takes ideas from the whole chamber.",
+      "issues": [
+        "She says neighborhood public schools should be well funded, and that tax money should not go to vouchers for religious schools.",
+        "She says families deserve clean drinking water and reliable energy, and that corporations should not come ahead of those families.",
+        "She says Texas needs more homes and apartments, limits on tax increases, and health coverage that includes preventive care and specialists."
+      ],
+      "site": "https://www.vikkigoodwin.com/",
+      "siteLabel": "vikkigoodwin.com",
+      "donate": "",
+      "source": "https://www.vikkigoodwin.com/"
+    },
+    "kevin mccormick": {
+      "role": "Green Party candidate for lieutenant governor.",
+      "bio": "He says he is the Green Party candidate and that the campaign will depend on voters telling other people, because he expects little corporate-media coverage. He says the lieutenant governor should judge bills by whether they protect health and a decent life for every Texan.",
+      "issues": [
+        "He says his first bills would expand city bus fleets, invest in rural family-farm greenhouses and hemp, and change elections to ranked-choice voting, one statewide primary, and a nonpartisan redistricting commission.",
+        "He says he would appraise property by rent or lease value instead of comparable sales and drop exemptions he calls special-interest favors.",
+        "He says he favors a moratorium on data centers with strict limits on their electricity and water, and legal THC with rules to protect the public."
+      ],
+      "site": "https://www.kmm2026.org/",
+      "siteLabel": "kmm2026.org",
+      "donate": "",
+      "source": "https://www.kmm2026.org/"
+    },
+    "anthony cristo": {
+      "role": "Libertarian candidate for lieutenant governor.",
+      "bio": "He says he is a high school English and debate teacher in Cibolo and a military veteran. He says he is running so Texans have a choice built on liberty, a balanced budget, and straight talk.",
+      "issues": [
+        "He says real tax relief requires cutting spending, and that property-tax plans without spending cuts only move the bill somewhere else.",
+        "He says he opposes taxpayer-funded welfare and supports immigrants who come to Texas to work.",
+        "He says Texas should legalize marijuana and end what he calls the lieutenant governor's war on drugs."
+      ],
+      "site": "https://www.anthonycristo.com/",
+      "siteLabel": "anthonycristo.com",
+      "donate": "",
+      "source": "https://www.anthonycristo.com/"
+    },
+    "ken paxton": {
+      "role": "Candidate for the U.S. Senate.",
+      "bio": "His campaign calls him a former attorney general who fought federal policies in court and is now running for the Senate. He says he will carry the president's agenda in Washington.",
+      "issues": [
+        "He says he will push tax cuts, border security, deportations, an end to what he calls the weaponization of government, and less federal spending.",
+        "He says he will take on large drug and food companies, seek more transparency in food and health care, and side with a Make America Healthy Again effort.",
+        "He says he will defend gun rights and laws against abortion, oppose transgender participation in girls' sports, and support a clear legal framework for crypto, including the CLARITY Act."
+      ],
+      "site": "https://www.kenpaxton.com/",
+      "siteLabel": "kenpaxton.com",
+      "donate": "",
+      "source": "https://www.kenpaxton.com/issues"
+    },
+    "james talarico": {
+      "role": "Candidate for the U.S. Senate.",
+      "bio": "His campaign says he is an eighth-generation Texan, a former middle school teacher, and a Presbyterian seminarian who has served as a state representative. He says that work has been aimed at donors and politicians he believes have taken over the state.",
+      "issues": [
+        "He says he has led a fight against billionaire donors and politicians he calls puppets.",
+        "He says he is running for the Senate to take that fight against corruption to Washington and return power to working people."
+      ],
+      "site": "https://jamestalarico.com/",
+      "siteLabel": "jamestalarico.com",
+      "donate": "",
+      "source": "https://jamestalarico.com/"
+    },
+    "ted brown": {
+      "role": "Libertarian candidate for the U.S. Senate.",
+      "bio": "He says he is a retired independent insurance adjuster who studied political science at UCLA and has been active in the Libertarian Party since 1979. He says he lives in Austin and serves in Libertarian Party posts in Travis County and statewide.",
+      "issues": [
+        "He says he will never vote to raise taxes and wants the federal income tax repealed and the IRS abolished, with nothing put in their place.",
+        "He says he opposes government age checks and digital IDs for the internet, and that he would end broad government surveillance of people's records.",
+        "He says he wants an Ellis Island-style entry system that screens for a criminal record and communicable disease, lets people work immediately, and he says Immigration and Customs Enforcement should be abolished."
+      ],
+      "site": "https://tedbrown.org/",
+      "siteLabel": "tedbrown.org",
+      "donate": "",
+      "source": "https://tedbrown.org/website/"
+    },
+    "mayes middleton": {
+      "role": "Republican candidate for attorney general.",
+      "bio": "He says he is a seventh-generation Texan, an attorney, president of an independent oil company, and a rancher who represents Senate District 11 after two terms in the Texas House. He says he rejects the state pension and health coverage and gives his state salary to local charities.",
+      "issues": [
+        "He says as attorney general he will sue sanctuary cities, enforce federal border and deportation orders, and fight human trafficking.",
+        "He says he will defend laws protecting unborn children, keep males out of women's sports and private spaces, and enforce voter-identification and citizenship rules for voting.",
+        "He says he will go after waste, fraud, and abuse, enforce the open-records law, and protect oil and gas jobs from activists he calls far left."
+      ],
+      "site": "https://mayesmiddleton.com/",
+      "siteLabel": "mayesmiddleton.com",
+      "donate": "",
+      "source": "https://mayesmiddleton.com/"
+    },
+    "nathan johnson": {
+      "role": "State senator running for attorney general.",
+      "bio": "He says he is a state senator and a longtime litigator and mediator who has passed 134 bills since 2019, on subjects that include water, energy, education, health care, and criminal justice. He says he is running because Texans need a lawyer who will use the office for the public.",
+      "issues": [
+        "He says he will defend individual rights, go to court against federal actions he calls illegal, and investigate public corruption without regard to party.",
+        "He says he will enforce consumer-protection and competition laws against price gouging, scams, and unfair competition.",
+        "He says he will work with local district attorneys on identity theft, cybercrime, Medicaid fraud, and human trafficking, and help secure the border without tactics he says violate the Constitution."
+      ],
+      "site": "https://nathanfortexas.com/",
+      "siteLabel": "nathanfortexas.com",
+      "donate": "",
+      "source": "https://nathanfortexas.com/priorities/"
+    },
+    "bo french": {
+      "role": "Candidate for railroad commissioner.",
+      "bio": "He says he was raised in Midland by a father in the Texas energy business, entered the industry in 1994, and worked as an energy trader. He says he is also a rancher and mineral owner and has chaired the Tarrant County Republican Party.",
+      "issues": [
+        "He says the Railroad Commission oversees oil and gas plus uranium, coal, and salt, and that the seat should be held by a conservative who will back the president.",
+        "He says he will end diversity, equity, and inclusion programs, regulation he calls overbearing, and influence from radical Islam and the Chinese Communist Party in Texas oil.",
+        "He says he will enforce the Legislature's ban on hostile foreign ownership of land in order to protect the Texas oil industry."
+      ],
+      "site": "https://bofrench.com/",
+      "siteLabel": "bofrench.com",
+      "donate": "",
+      "source": "https://bofrench.com/"
+    },
+    "jon rosenthal": {
+      "role": "Candidate for railroad commissioner.",
+      "bio": "He says he is a mechanical engineer who spent 25 years in the energy industry and has served four terms in the Texas House. He says he is the only candidate in the race who knows what the commission regulates and cannot be bought by the companies it watches.",
+      "issues": [
+        "He says Texas families need a commissioner who will not bend to the companies being regulated while energy bills climb.",
+        "He says that in the House he pushed weatherization rules for gas infrastructure after the 2021 grid failure and fought utilities passing the cost of their own failures on to families.",
+        "He says the commission has bent to special interests while energy bills rise, and that engineering judgment should replace that pattern."
+      ],
+      "site": "https://jonrosenthaltx.com/",
+      "siteLabel": "jonrosenthaltx.com",
+      "donate": "",
+      "source": "https://jonrosenthaltx.com/about/"
+    },
+    "arthur dibianca": {
+      "role": "Libertarian candidate for railroad commissioner.",
+      "bio": "He says he lives in Austin and has been a Libertarian activist for many years. His campaign slogan is to vote Libertarian and downsize government across the board.",
+      "issues": [
+        "He says the market, not the state, should choose the energy mix, with no subsidies or mandates that pick winners among oil, gas, wind, solar, or nuclear.",
+        "He says mineral and surface owners should be protected from eminent-domain abuse, and that disputes with energy developers should be settled by voluntary agreements.",
+        "He says operators should plug wells and clean sites through bonding and insurance priced to their risk, rather than through taxpayer bailouts."
+      ],
+      "site": "https://www.votedibianca.com/",
+      "siteLabel": "votedibianca.com",
+      "donate": "",
+      "source": "https://www.votedibianca.com/"
+    },
+    "nathaniel moran": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Nathaniel Moran's campaign says he grew up in East Texas, attended West Point, and finished degrees in Russian, business, and law at Texas Tech. It says he practiced law, served on the Tyler council and as Smith County judge, and was elected to Congress in 2022.",
+      "issues": [
+        "He says his politics come from Christian faith, family, and a duty to defend liberty and the Constitution.",
+        "He highlights his work on the Ways and Means Committee, which covers taxes, trade, Social Security, and Medicare, and on a House committee focused on the Chinese Communist Party."
+      ],
+      "site": "https://www.nathanielmoran.com/",
+      "siteLabel": "Nathaniel Moran for Congress",
+      "donate": "https://secure.winred.com/nathaniel-moran-for-congress/donate",
+      "source": "https://www.nathanielmoran.com/about/meet-nathaniel-moran/"
+    },
+    "yolanda prince": {
+      "role": "Community organizer running for Congress.",
+      "bio": "Yolanda Prince's campaign says she is a Tyler native and organizer who was raised to step up rather than wait for change. It says her work has focused on rural opportunity, government accountability, affordability, and health care, including a march to renew the Voting Rights Act.",
+      "issues": [
+        "She says she would raise the federal minimum wage to at least $15, raise teacher pay, and protect public schools, special education, school meals, and pre-kindergarten.",
+        "She supports Medicare for All, higher Medicare payments so rural hospitals can stay open, and lower prescription prices.",
+        "She says reproductive decisions belong with patients and their doctors, and she wants a less expensive path to citizenship and an end to for-profit prisons."
+      ],
+      "site": "https://yolandaprince.com/",
+      "siteLabel": "Yolanda Prince for Congress",
+      "donate": "https://secure.actblue.com/donate/yolandaprinceforthepeople",
+      "source": "https://yolandaprince.com/issues"
+    },
+    "steve toth": {
+      "role": "State representative running for Congress.",
+      "bio": "Steve Toth's campaign says he is an ordained pastor and small-business owner who served in the Texas House and was ranked among its most conservative members. It says he and his wife have been married more than 40 years and that he is running for their children and grandchildren.",
+      "issues": [
+        "He says that as an appropriations member he steered billions toward border barriers and security, and that he will keep pushing Congress to stop traffickers and cartels.",
+        "He says he led efforts to remove critical race theory and diversity programs from Texas classrooms and universities, and that he will defend the Second Amendment without red-flag laws."
+      ],
+      "site": "https://stevetothforcongress.com/",
+      "siteLabel": "Steve Toth for Congress",
+      "donate": "https://secure.winred.com/toth-for-congress/donate-today",
+      "source": "https://stevetothforcongress.com/issues/"
+    },
+    "shaun finnie": {
+      "role": "Energy investment banker running for Congress.",
+      "bio": "Shaun Finnie's campaign says he grew up on a farm, was the first in his family to finish college, and earned degrees in economics, law, and business. It says he spent three decades in energy investment banking, lives in The Woodlands, and taught high-school students about personal finance.",
+      "issues": [
+        "He says he would apply business budgeting to government, remove tariffs, and tackle the federal debt so younger people are not stuck with it.",
+        "He says he would protect Social Security, Medicare, and Medicaid for the middle class, leave reproductive decisions to women, and invest in public schools and medical research."
+      ],
+      "site": "https://shaunfinnieforcongress.com/",
+      "siteLabel": "Shaun Finnie for Congress",
+      "donate": "https://secure.actblue.com/donate/shaun-finnie-1",
+      "source": "https://shaunfinnieforcongress.com/meet-shaun/"
+    },
+    "keith self": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Keith Self's campaign says he is a native Texan, West Point graduate, and retired Army lieutenant colonel who served in the infantry and Special Forces. It says that after the Army he was Collin County judge and is seeking another term in Congress.",
+      "issues": [
+        "He says he voted to restart border-wall construction, offered a bill to use seized cartel money on border security, and wants the federal government to repay Texas for its border spending.",
+        "He says he cut the county property-tax rate, opposes stopgap federal budgets, and wants lower taxes, less spending, and energy permitting that expands American production.",
+        "He says he started a caucus to stop what he calls the spread of Sharia law in Texas and the country."
+      ],
+      "site": "https://keithself.com/",
+      "siteLabel": "Keith Self for Congress",
+      "donate": "https://secure.winred.com/self-for-congress/donate",
+      "source": "https://keithself.com/issues/"
+    },
+    "evan hunt": {
+      "role": "Air Force veteran running for Congress.",
+      "bio": "Evan Hunt's campaign says he is a retired Air Force lieutenant colonel, combat aviator, and business leader who has lived in Texas for more than a decade, most recently in McKinney. It says he is running as a Democrat so the 3rd District is not represented by what he calls an extremist agenda.",
+      "issues": [
+        "He says he would put mission ahead of party, defend constitutional limits and the rule of law, and seek a government that works for the whole district.",
+        "He says he wants more opportunity and less hardship for North Texas families, and solutions that give every family a voice."
+      ],
+      "site": "https://www.electevanhunt.com/",
+      "siteLabel": "Evan Hunt for Congress",
+      "donate": "https://secure.actblue.com/donate/evan-hunt-website",
+      "source": "https://www.electevanhunt.com/"
+    },
+    "pat fallon": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Pat Fallon's campaign says he is a military veteran and business owner who served on a city council and for years in the Texas House and Senate. It says he was a Notre Dame scholarship student, an ROTC cadet, and a member of the 1988 national championship football team.",
+      "issues": [
+        "He says he championed a border crackdown, a ban on sanctuary cities, and protection of Texas historical monuments.",
+        "He says he co-authored legislation to restrict abortion, backed a permanent ban on a state income tax, and supported limits on future property taxes.",
+        "He says he will defend the Second and Tenth Amendments."
+      ],
+      "site": "https://www.fallonforcongress.com/",
+      "siteLabel": "Pat Fallon for Congress",
+      "source": "https://www.fallonforcongress.com/about/"
+    },
+    "lance gooden": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Lance Gooden's campaign asks voters to send him back to Congress and says he has fought both the political swamp and calls for socialism.",
+      "issues": [
+        "He says people are tired of Washington deal-making and of growing calls for socialism.",
+        "He says another term would be used to protect what he calls God-given freedoms."
+      ],
+      "site": "https://www.lancegooden.com/",
+      "siteLabel": "Lance Gooden for Congress",
+      "donate": "https://secure.anedot.com/lancegooden/donate",
+      "source": "https://www.lancegooden.com/"
+    },
+    "chelsey hockett": {
+      "role": "East Texas parent running for Congress.",
+      "bio": "Chelsey Hockett's campaign says she is a mother of two from a union family in Terrell who is not a career politician. It says she is running because Washington is ignoring the cost of food, housing, health care, and child care.",
+      "issues": [
+        "She says she would end tariffs she argues raise prices, enact Medicare for All, and create universal child care.",
+        "She says the minimum wage should start at $25 and be tied to the cost of living, and that Social Security should keep up with prices.",
+        "She says billionaires and corporations should pay more so public schools, Title I, special education, and Head Start are fully funded."
+      ],
+      "site": "https://chelseyhockettforcongress.com/",
+      "siteLabel": "Chelsey Hockett for Congress",
+      "donate": "https://secure.actblue.com/donate/chelseyhockettforcongress",
+      "source": "https://chelseyhockettforcongress.com/issues.html"
+    },
+    "jake ellzey": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Jake Ellzey's campaign says he is a Naval Academy graduate who flew fighters, served on the ground with a SEAL team, and finished as air boss on the USS Ronald Reagan. It says he later became a businessman, a Texas Veterans Commission member, and a commercial pilot, and that he and his wife are raising two children in Ellis County.",
+      "issues": [
+        "He says he will defend gun ownership, opposes leaving families unarmed at home, and supports a legal right to life.",
+        "He says Congress should finish a border wall, back Border Patrol, and stop projects he says seize private land, including a proposed high-speed rail.",
+        "He says he serves on Appropriations and Small Business and advocates for veterans, small firms, and taxpayers."
+      ],
+      "site": "https://ellzeyfortexas.com/",
+      "siteLabel": "Jake Ellzey for Congress",
+      "donate": "https://secure.winred.com/jake-ellzey-for-congress/donate",
+      "source": "https://ellzeyfortexas.com/issues/"
+    },
+    "danny minton": {
+      "role": "Health-care worker running for Congress.",
+      "bio": "Danny Minton's campaign says he is the Democratic nominee in the 6th District and works in health care, training nurses and doctors on equipment used in breast-cancer surgery. It says he grew up poor, lives in Arlington with his wife and two sons, and wants government to work as hard as the people it serves.",
+      "issues": [
+        "He says health care is a right and points to Medicare and the VA as models for care that costs less and covers more people.",
+        "He says he would protect public schools from what he calls billionaire voucher schemes, and he wants Congress to vote before troops are sent into lasting wars.",
+        "He says immigration policy should combine a secure border with basic dignity, and that small businesses should come ahead of Wall Street."
+      ],
+      "site": "https://www.dannyfortexas.com/",
+      "siteLabel": "Danny Minton for Congress",
+      "donate": "https://secure.actblue.com/donate/dannyfortexas",
+      "source": "https://www.dannyfortexas.com/priorities/"
+    },
+    "alexander hale": {
+      "role": "Houston Republican running for Congress.",
+      "bio": "Alexander Hale's campaign says he is a devout Christian and fourth-generation Houstonian who attended Baylor on a full academic scholarship. It says he studied finance, political science, philosophy, and business, and interned in Washington before running for the 7th District.",
+      "issues": [
+        "He says he would champion Houston energy companies rather than subsidize competitors, and go after housing, insurance, health-care, and electricity costs Washington controls.",
+        "He says Houston's crime rate needs federal help for local police, and that he would cut spending he calls wasteful.",
+        "He says state and local governments should handle problems they understand better than federal agencies."
+      ],
+      "site": "https://www.halefortexas.com/",
+      "siteLabel": "Alexander Hale for Congress",
+      "donate": "https://secure.winred.com/alexander-hale-for-congress/donate",
+      "source": "https://www.halefortexas.com/about"
+    },
+    "lizzie fletcher": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Lizzie Fletcher's campaign says she is a Houston native who practiced business litigation at Vinson & Elkins and became the first woman partner at the firm AZA. It says she was first elected in 2018 and serves on Energy and Commerce, where she works on energy and health care.",
+      "issues": [
+        "She says the district's values are inclusion, innovation, and collaboration, and that those should produce progress and opportunity.",
+        "She says she looks for common-sense solutions for Houstonians rather than slogans, including on energy and health policy."
+      ],
+      "site": "https://www.lizziefletcher.com/",
+      "siteLabel": "Lizzie Fletcher for Congress",
+      "donate": "https://secure.actblue.com/donate/folf-website-homepage",
+      "source": "https://www.lizziefletcher.com/meet-lizzie-fletcher/"
+    },
+    "jessica hart steinmann": {
+      "role": "Former Justice Department official running for Congress.",
+      "bio": "Jessica Hart Steinmann's campaign says she is a Christian, a wife, and a mother of two who served in the Trump Justice Department as director of the Office for Victims of Crime. It says she later was executive general counsel at the America First Policy Institute and is the Trump-endorsed Republican for the 8th District.",
+      "issues": [
+        "She says she would put Texas and American workers ahead of what she calls global elites, secure the border, and defend the Constitution.",
+        "She says she has fought diversity programs in higher education, represented service members who challenged a COVID vaccine mandate, and sued to keep boys out of girls' sports.",
+        "She says parents, not government, should direct how children are raised, and that she led federal work against human trafficking."
+      ],
+      "site": "https://www.jessicasteinmann.com/",
+      "siteLabel": "Jessica Steinmann for Congress",
+      "donate": "https://secure.winred.com/steinmann-for-congress/donate-today",
+      "source": "https://www.jessicasteinmann.com/issues"
+    },
+    "laura jones": {
+      "role": "Small-business owner running for Congress.",
+      "bio": "Laura Jones's campaign says she is a lifelong Texan, an Army mom, a small-business owner, and a working-class candidate running in 2026.",
+      "issues": [
+        "She says the minimum wage should rise and be tied to the cost of living so a full-time worker can cover housing, utilities, and food.",
+        "She supports Medicare for All, including cutting out insurance middlemen and negotiating drug and medical prices.",
+        "She says taxes should fall for most households and rise for billionaires and large corporations."
+      ],
+      "site": "https://www.laura4tx.com/",
+      "siteLabel": "Laura Jones for Congress",
+      "donate": "https://secure.actblue.com/donate/laurajonesforcongress",
+      "source": "https://www.laura4tx.com/"
+    },
+    "alex mealer": {
+      "role": "Combat veteran running for Congress.",
+      "bio": "Alex Mealer's campaign says she is a West Point graduate who led soldiers as an Army bomb-disposal officer in Afghanistan, then earned Harvard law and business degrees. It says she worked in Houston energy finance, owns a small business, and is raising children in the area.",
+      "issues": [
+        "She says she would ban members of Congress from trading individual stocks, seek term limits, cut taxes and regulations, and lower the cost of living.",
+        "She says she would keep boys out of girls' sports and locker rooms, secure the border, and back law enforcement.",
+        "She says she would push flood projects around Lake Houston and expand oil and gas so energy stays affordable."
+      ],
+      "site": "https://alexandramealer.com/",
+      "siteLabel": "Alex Mealer for Congress",
+      "donate": "https://secure.anedot.com/alexandra-mealer-for-congress/alexdonate",
+      "source": "https://alexandramealer.com/about/"
+    },
+    "leticia gutierrez": {
+      "role": "Community advocate running for Congress.",
+      "bio": "Leticia Gutierrez's campaign says she has lived in the district for 45 years, is the daughter of farm laborers, and earned a finance degree from the University of St. Thomas. It says she is a military mother who became a children's-health advocate after her son developed asthma.",
+      "issues": [
+        "She says her priorities are lower costs, good jobs, strong public schools, affordable health care, and secure retirements.",
+        "She says she is for industry and jobs without blank checks for billionaires, and for safe neighborhoods, secure borders, and equal justice.",
+        "She says she opposes wars of choice and corporate handouts, and wants government to answer to families rather than the highest bidder."
+      ],
+      "site": "https://www.leticiaforcongress.com/",
+      "siteLabel": "Leticia Gutierrez for Congress",
+      "donate": "https://secure.actblue.com/donate/leticiaforcongress",
+      "source": "https://www.leticiaforcongress.com/priorities"
+    },
+    "chris gober": {
+      "role": "Lawyer and business owner running for Congress.",
+      "bio": "Chris Gober's campaign says he is a seventh-generation Texan, a Texas A&M graduate, and a Harvard-trained lawyer who grew up in Throckmorton and Graham. It says he worked on national security and border issues at the Justice Department, then built businesses in Texas, and is a husband and father of two.",
+      "issues": [
+        "He says he would make life affordable, secure the border against cartels, and stop what he calls the weaponization of government against conservatives.",
+        "He says he would grow defense and technology jobs in Austin and the Brazos Valley so the country outcompetes China.",
+        "He says rural communities need fewer regulations, nearby health care, and data-center rules that do not drain water or raise electric rates."
+      ],
+      "site": "https://chrisgober.com/",
+      "siteLabel": "Chris Gober for Congress",
+      "source": "https://chrisgober.com/"
+    },
+    "caitlin rourk": {
+      "role": "Army officer running for Congress.",
+      "bio": "Caitlin Rourk's campaign says she is an Army intelligence officer and a mother who has lived and worked in Central Texas for more than a decade. It says she was raised by public-school teachers, worked on energy and deficit policy, and most recently led communications at Dell.",
+      "issues": [
+        "She says she would lower costs, restore government accountability, and expand access to health care.",
+        "She says she would strengthen public schools and child care, set rules for communities facing artificial intelligence, and fix immigration.",
+        "She says foreign policy and national security should be practical rather than driven by headlines."
+      ],
+      "site": "https://www.caitlinrourk.com/",
+      "siteLabel": "Caitlin Rourk for Congress",
+      "donate": "https://secure.actblue.com/donate/caitlin-rourk-website",
+      "source": "https://www.caitlinrourk.com/about"
+    },
+    "august pfluger": {
+      "role": "U.S. representative running for another term.",
+      "bio": "August Pfluger's campaign says he is a seventh-generation Texan who grew up on a family ranch, graduated from San Angelo Central and the Air Force Academy, and spent 20 years as a combat pilot and a national-security adviser to Donald Trump. It says he still works in the family ranching business and founded an energy investment company in the Permian Basin.",
+      "issues": [
+        "He says Republicans delivered border-wall money, support for immigration enforcement, and tax cuts that include no tax on tips, overtime, and Social Security.",
+        "He says he helped secure billions in border reimbursements for states such as Texas and will keep defending conservative Texas values and national security."
+      ],
+      "site": "https://www.augustpfluger.com/",
+      "siteLabel": "August Pfluger for Congress",
+      "donate": "https://secure.winred.com/august-pfluger-for-congress/donate",
+      "source": "https://www.augustpfluger.com/"
+    },
+    "claire reynolds": {
+      "role": "Attorney running for Congress.",
+      "bio": "Claire Reynolds's campaign says she grew up in central Illinois, studied journalism at Northwestern, and earned a law degree at the University of San Diego. It says she moved to Texas in 2007, raised her children here, and is the Democratic candidate in a district that now stretches from north Austin to Midland and Odessa.",
+      "issues": [
+        "She says wages have not kept up with prices and that nobody should go bankrupt over a broken hip or cancer.",
+        "She supports moving toward single-payer coverage like Medicare, a strong border with a faster legal immigration process, and abortion that is safe, legal, and rare.",
+        "She says Texas needs both oil and gas and renewable energy jobs to stay competitive."
+      ],
+      "site": "https://www.clairereynoldsforcongress.org/",
+      "siteLabel": "Claire Reynolds for Congress",
+      "donate": "https://secure.actblue.com/donate/claire-reynolds-1?amount=25",
+      "source": "https://www.clairereynoldsforcongress.org/issues"
+    },
+    "craig goldman": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Craig Goldman's campaign says he is a fifth-generation Texan and fourth-generation Fort Worth native who spent 12 years in the Texas House, including as chair of Energy Resources, before his election to Congress. It says he serves on Energy and Commerce, which covers energy, health, and telecommunications.",
+      "issues": [
+        "He says his first bill signed into law rolled back regulations he argues would have cost Americans billions, and that he voted to extend the 2017 tax cuts.",
+        "He says he supported the Laken Riley Act so immigration authorities detain people in the country illegally who are accused of theft or assault.",
+        "He says border security is the federal government's first duty and that he backed more defense spending to keep building the F-35."
+      ],
+      "site": "https://www.craiggoldman.org/",
+      "siteLabel": "Craig Goldman for Congress",
+      "donate": "https://secure.anedot.com/craig-goldman-for-congress-tx/donate",
+      "source": "https://www.craiggoldman.org/issues/"
+    },
+    "angela rodriguez prilliman": {
+      "role": "Entrepreneur running for Congress.",
+      "bio": "Angela Rodriguez Prilliman's campaign says she is a Fort Worth mother and entrepreneur who grew up in Stephenville, graduated from Texas A&M, and spent more than a decade in technology. It says she is the Democratic candidate in the 12th District.",
+      "issues": [
+        "She says she would seek universal health care and universal child care, paid for by taxes on billionaires.",
+        "She also lists voting rights, full funding for public schools, and getting billionaire money out of politics.",
+        "She says Congress should protect AI whistleblowers, set liability and testing rules, and restrict AI companions for children."
+      ],
+      "site": "https://www.helifortexas.com/",
+      "siteLabel": "Heli Rodriguez Prilliman for Congress",
+      "source": "https://www.helifortexas.com/issues"
+    },
+    "ronny jackson": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Ronny Jackson's campaign says he is a retired Navy rear admiral who was White House physician to three presidents and chief medical adviser to Donald Trump. It says he represents a large Panhandle and North Texas district and serves on Armed Services, Agriculture, Foreign Affairs, and Intelligence.",
+      "issues": [
+        "He says his focus is national security, support for farmers and ranchers, and keeping the country strong and free.",
+        "The campaign describes that work as defending Texas families in Congress."
+      ],
+      "site": "https://www.teamronny.com/",
+      "siteLabel": "Ronny Jackson for Congress",
+      "donate": "https://secure.winred.com/team-ronny/donate",
+      "source": "https://www.teamronny.com/"
+    },
+    "mark nair": {
+      "role": "Educator and former council member running for Congress.",
+      "bio": "Mark Nair's campaign says he is a husband, father, inventor, and former Amarillo city council member who has lived in the district for more than 30 years. It says he taught at Amarillo College, led innovation at a local employer, and holds patents.",
+      "issues": [
+        "He says tariffs should be set by Congress rather than a president, and that he wants wages people can live on.",
+        "He says government should stop using artificial intelligence for facial recognition and social-media surveillance until privacy rules exist, and that workers should know when AI affects their jobs.",
+        "He says health care should put people ahead of insurers and corporate profits."
+      ],
+      "site": "https://www.marknair.com/",
+      "siteLabel": "Mark Nair for Congress",
+      "donate": "https://secure.actblue.com/donate/marknairforcd13",
+      "source": "https://www.marknair.com/platform"
+    },
+    "randy weber": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Randy Weber's campaign says he is a third-generation Texan who spent nearly 70 years on the Gulf Coast, owned an air-conditioning company for 35 years, and served in the Texas House before his election to Congress in 2013. It says he serves on Energy and Commerce and on Science, Space, and Technology.",
+      "issues": [
+        "He describes himself as conservative, opposed to abortion, opposed to socialism, and a Second Amendment supporter.",
+        "He says that in the Texas House he wrote a human-trafficking law that trained police and protected minor victims."
+      ],
+      "site": "https://www.randyweber.org/",
+      "siteLabel": "Randy Weber for Congress",
+      "donate": "https://secure.winred.com/randyweber/donate",
+      "source": "https://www.randyweber.org/about-randy"
+    },
+    "thurman bartie": {
+      "role": "Former mayor running for Congress.",
+      "bio": "Thurman Bartie's campaign says he is a lifelong Port Arthur resident, a funeral director, a former teacher and pastor, and the first African American justice of the peace in his precinct. It says he later served two terms as mayor through hurricanes, floods, and the pandemic.",
+      "issues": [
+        "He says he would seek good jobs and fair wages, more support for teachers, and classrooms that give every child a path forward.",
+        "He says coastal infrastructure and the power grid should be reliable after storms, and that safety also requires mental-health care and help with homelessness.",
+        "He supports restoring the Affordable Care Act, updating immigration law he says has failed since 1990, and rolling back tariffs that raise prices."
+      ],
+      "site": "https://votebartie.org/",
+      "siteLabel": "Thurman Bartie for Congress",
+      "donate": "https://secure.actblue.com/donate/votebartie",
+      "source": "https://votebartie.org/who"
+    },
+    "monica de la cruz": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Monica De La Cruz's campaign says she is the first Latina and first Republican to represent the 15th District, and that a fentanyl-trafficking bill she backed was the first from her community signed into law in nearly 20 years. It says she started a South Texas water group and is pressing Mexico to deliver water it owes the region.",
+      "issues": [
+        "She says she would finish border infrastructure, end catch-and-release, restore Remain in Mexico, and support E-Verify and more immigration judges.",
+        "She says she would cut farm regulations, oppose tariffs that block farm exports, protect Medicare and Social Security, and lower taxes on families and small businesses.",
+        "She supports oil and gas jobs, nuclear power, and a balanced-budget amendment, and rejects what she calls Green New Deal policies."
+      ],
+      "site": "https://monicaforcongress.us/",
+      "siteLabel": "Monica De La Cruz for Congress",
+      "donate": "https://secure.winred.com/monica-for-congress-149b0cf8/donate",
+      "source": "https://monicaforcongress.us/issues/"
+    },
+    "bobby pulido": {
+      "role": "Musician and small-business owner running for Congress.",
+      "bio": "Bobby Pulido's campaign says he was born and raised in Edinburg, studied political science, and became a well-known Tejano singer while also running businesses. It says he and his wife are raising four sons in the Rio Grande Valley.",
+      "issues": [
+        "He says he would challenge corporations raising prices, cut red tape for small businesses, and back apprenticeships and higher-wage jobs that stay in South Texas.",
+        "He says farmers and ranchers need fair markets and open trade, and that tariffs are raising costs.",
+        "He says the border should stay secure and violent criminals should be removed, without raids that he argues hurt local workers and businesses."
+      ],
+      "site": "https://www.bobbypulidofortexas.com/",
+      "siteLabel": "Bobby Pulido for Congress",
+      "donate": "https://secure.actblue.com/donate/pulido-website?amount=25&refcode=takeover-donate-section&express_lane=true",
+      "source": "https://www.bobbypulidofortexas.com/issues/"
+    },
+    "adam bauman": {
+      "role": "Border Patrol veteran running for Congress.",
+      "bio": "Adam Bauman's campaign says he served on the Border Patrol tactical team and is a Navy special-warfare veteran running to put El Paso ahead of party agendas.",
+      "issues": [
+        "He says El Paso property taxes are too high because of school budgets and bonds, and that he would work with local leaders to make them more affordable.",
+        "He says he would help local and small businesses get the resources they need.",
+        "He says a secure border should stop criminals and drugs, and that veterans and seniors should get care and Social Security without raising the age for benefits."
+      ],
+      "site": "https://www.adambaumanforcongress.com/",
+      "siteLabel": "Adam Bauman for Congress",
+      "source": "https://www.adambaumanforcongress.com/"
+    },
+    "veronica escobar": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Veronica Escobar's campaign says she is a third-generation El Pasoan who served as a county commissioner and county judge before Congress, including work to open the border's only children's hospital. It says she was the first woman elected to represent El Paso in the House.",
+      "issues": [
+        "She says health care is a right and supports Medicare for All, an insulin cap, and Medicare coverage for dental, vision, and hearing.",
+        "She says she would protect Social Security from cuts or privatization and seek fair, lasting immigration reform.",
+        "She says she is working on climate policy, fair wages, and reproductive rights."
+      ],
+      "site": "https://veronicaescobar.com/",
+      "siteLabel": "Veronica Escobar for Congress",
+      "donate": "https://secure.actblue.com/donate/veronicaescobar2021?refcode=website",
+      "source": "https://veronicaescobar.com/issues/"
+    },
+    "pete sessions": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Pete Sessions's campaign says he was born and raised in Waco, worked as an AT&T executive, and has served in Congress both before 2019 and since 2021. It says he is an Eagle Scout who now sits on Financial Services and Oversight and chairs the Government Operations subcommittee.",
+      "issues": [
+        "He says a conservative agenda should use capitalism and the rule of law to put more money in Americans' pockets and create jobs.",
+        "He says infrastructure has to keep up with Texas population growth, and that he spends time in the district when he is not voting.",
+        "He says the country should lead with moral character and invest in a purpose-driven life for young people and families."
+      ],
+      "site": "https://www.petesessions.com/",
+      "siteLabel": "Pete Sessions for Congress",
+      "source": "https://www.petesessions.com/about/"
+    },
+    "casey shepard": {
+      "role": "Criminal defense lawyer running for Congress.",
+      "bio": "Casey Shepard's campaign says he is a seventh-generation Texan who returned to Waco in 2010 and has practiced indigent criminal defense in Central Texas since 2011. It says that work means enforcing constitutional duties for clients who cannot afford a lawyer.",
+      "issues": [
+        "He says Congress should be able to check the executive branch, and that courts should stay independent enough to review those decisions.",
+        "He says he would fully fund SNAP and school meals, restore Medicaid and Medicare support, and expand the health-care workforce.",
+        "He says tax incentives and rental aid should produce affordable homes, and that tariffs are raising the price of food and building materials."
+      ],
+      "site": "https://caseyshepardforcongress.com/",
+      "siteLabel": "Casey Shepard for Congress",
+      "donate": "https://secure.actblue.com/donate/casey-shepard",
+      "source": "https://caseyshepardforcongress.com/caseys-vision"
+    },
+    "christian menefee": {
+      "role": "Former county attorney running for Congress.",
+      "bio": "Christian Menefee's campaign says he was raised in the 18th District by two military parents, used a Pell Grant to become the first in his family to finish college, and earned a law degree at Washington University. It says he was a commercial litigator and then the youngest person, and the first Black person, elected Harris County attorney.",
+      "issues": [
+        "He says he would seek Medicare for All, protect public schools and abortion rights, and make daily life more affordable.",
+        "He lists workers' rights, jobs, gun-violence prevention, immigration, veterans, and criminal-justice reform among his priorities.",
+        "He says he went to court against voting restrictions, pollution in Black and Latino neighborhoods, and disaster price gouging."
+      ],
+      "site": "https://christianmenefee.com/",
+      "siteLabel": "Christian Menefee for Congress",
+      "donate": "https://secure.actblue.com/donate/cdmwebsite?refcode=website&amount=18",
+      "source": "https://christianmenefee.com/about/"
+    },
+    "tom sell": {
+      "role": "West Texas businessman running for Congress.",
+      "bio": "Tom Sell's campaign says he is a fifth-generation West Texan who earned agribusiness and law degrees at Texas Tech and worked for Congressman Larry Combest, including on the 2002 farm bill and crop-insurance reform. It says he then co-founded a Lubbock firm with Combest and is running to stand with Donald Trump.",
+      "issues": [
+        "He says his platform is a strong border, energy dominance, the Second Amendment, and protections for unborn life.",
+        "He says he would champion agriculture, West Texas values, and national defense, and oppose what he calls Sharia law."
+      ],
+      "site": "https://www.selltexastrue.com/",
+      "siteLabel": "Tom Sell for Congress",
+      "donate": "https://secure.anedot.com/tom-sell-victory-committee/tomsellvictorycommittee",
+      "source": "https://www.selltexastrue.com/about"
+    },
+    "kyle rable": {
+      "role": "Army Reserve officer running for Congress.",
+      "bio": "Kyle Rable's campaign says he commissioned through Army ROTC at the University of Toledo, earned a master's while working in restaurants, and is a Texas Tech doctoral student and Army Reserve captain in Lubbock. It says he is running for workers and family farmers he argues both parties have forgotten.",
+      "issues": [
+        "He says he would pass fair-pricing rules, limit corporate purchases of single-family homes, and offer tax credits for first-time buyers.",
+        "He says he would fund child-care training and facilities, curb presidential tariff power, and bring back manufacturing jobs.",
+        "He says legal paths to citizenship should expand because immigrants are part of West Texas communities."
+      ],
+      "site": "https://www.rableforwesttexas.com/",
+      "siteLabel": "Kyle Rable for Congress",
+      "donate": "https://secure.actblue.com/donate/rable2026?amount=10",
+      "source": "https://www.rableforwesttexas.com/issues"
+    },
+    "edgardo baez": {
+      "role": "Attorney and veteran running for Congress.",
+      "bio": "Edgardo Baez's campaign says he has been a soldier, a critical-care nurse, and an attorney for more than 20 years, and that he saw government overreach while in Cuba. It says he is running in the San Antonio area.",
+      "issues": [
+        "He says he would defend constitutional rights, reject socialism, and protect freedoms.",
+        "He says he would stimulate local business, attract investment, and champion tax changes that help neighborhoods."
+      ],
+      "site": "https://www.drbaezforcongress.com/",
+      "siteLabel": "Edgardo Baez for Congress",
+      "donate": "https://secure.winred.com/dr-baez-for-congress/donate-hd",
+      "source": "https://www.drbaezforcongress.com/"
+    },
+    "mark teixeira": {
+      "role": "Former major-league player running for Congress.",
+      "bio": "Mark Teixeira's campaign says he is a Christian husband and father and a former All-Star whose father was a Navy veteran and whose mother was a teacher. It says five seasons with the Texas Rangers tied him to the state, and that he moved back in 2021.",
+      "issues": [
+        "He says he would secure the border, deport people here illegally, and go after cartels.",
+        "He says he would cut federal spending, expand oil, gas, and nuclear production, and defend parental rights, the Second Amendment, and the unborn."
+      ],
+      "site": "https://teixeiraforcongress.com/",
+      "siteLabel": "Mark Teixeira for Congress",
+      "source": "https://teixeiraforcongress.com/issues/"
+    },
+    "kristin hook": {
+      "role": "Scientist running for Congress.",
+      "bio": "Kristin Hook's campaign says she taught middle-school science through Teach For America, earned a PhD in animal behavior from Cornell, and did postdoctoral research in reproductive biology. It says she later left the lab for federal science and technology work.",
+      "issues": [
+        "She says she would lower costs, fight corruption, and stop AI data centers from taking local water and electricity.",
+        "She says billionaires should pay more, health care and public schools should be expanded, abortion rights restored, and the border secured."
+      ],
+      "site": "https://www.drkristinhook.org/",
+      "siteLabel": "Dr. Kristin Hook for Congress",
+      "donate": "https://secure.actblue.com/donate/khookfortexas-w",
+      "source": "https://www.drkristinhook.org/meet-kristin"
+    },
+    "trever nehls": {
+      "role": "Retired Army colonel running for Congress.",
+      "bio": "Trever Nehls's campaign says he served 33 years in the Army, rising from infantryman to colonel with deployments to Iraq, Afghanistan, and Kuwait. It says he was a Sugar Land police officer and Fort Bend County constable, and that he and his wife are raising three children in the 22nd District.",
+      "issues": [
+        "He says he would finish the border wall, end catch-and-release, deport people here illegally, and treat cartels as foreign terrorist organizations.",
+        "He says he would lower taxes and grocery, gas, and housing costs, back police, and put parents in charge of schools."
+      ],
+      "site": "https://www.trevernehlsforcongress.com/",
+      "siteLabel": "Trever Nehls for Congress",
+      "donate": "https://secure.anedot.com/trever-nehls-for-congress/donate",
+      "source": "https://www.trevernehlsforcongress.com/issues/"
+    },
+    "marquette greene-scott": {
+      "role": "Iowa Colony council member running for Congress.",
+      "bio": "Marquette Greene-Scott's campaign says she is mayor pro tem of Iowa Colony, the youngest of five children of a Vietnam veteran, and the mother of an adult daughter. It says she moved to Texas in 2010 as a single mother and recently married.",
+      "issues": [
+        "She says she is running because Congress is broken and she will judge issues by what is best for the district rather than by party.",
+        "She says her focus is creating jobs, improving infrastructure, and protecting essential rights."
+      ],
+      "site": "https://marquettegreenescott.com/",
+      "siteLabel": "Marquette Greene-Scott for Congress",
+      "donate": "https://secure.actblue.com/donate/marquette-greene-scott-for-congress-1",
+      "source": "https://marquettegreenescott.com/bio/"
+    },
+    "brandon herrera": {
+      "role": "Firearms entrepreneur running for Congress.",
+      "bio": "Brandon Herrera's campaign says he is an entrepreneur and Second Amendment activist with family roots in Texas, including Hispanic heritage and parents from military families. It says he studied pre-law and then built a small firearm-manufacturing business.",
+      "issues": [
+        "He says he would take practical steps to secure the southern border and improve support for veterans and their families.",
+        "He says he would seek national concealed-carry reciprocity, pledge no new taxes, cut waste, and back the REINS Act."
+      ],
+      "site": "https://brandonherreraforcongress.com/",
+      "siteLabel": "Brandon Herrera for Congress",
+      "source": "https://brandonherreraforcongress.com/"
+    },
+    "katy padilla stout": {
+      "role": "Teacher and attorney running for Congress.",
+      "bio": "Katy Padilla Stout's campaign says she was born and raised in South Texas, taught school, and worked as an attorney for children in foster care. It says she and her husband are raising four children and she is running to be the first woman to represent the 23rd District.",
+      "issues": [
+        "She says the cost of living comes from the current administration's economic policies, and that the tax code should help the middle class rather than cut taxes for billionaires while food aid is debated.",
+        "She says she would expand Medicare toward coverage for everyone and treat gun ownership as a right that still allows commonsense limits."
+      ],
+      "site": "https://www.katyforcongress.com/",
+      "siteLabel": "Katy Padilla Stout for Congress",
+      "donate": "https://secure.actblue.com/donate/katy-stout-1?refcode=website&amount=",
+      "source": "https://www.katyforcongress.com/issues/"
+    },
+    "beth van duyne": {
+      "role": "Former mayor running for Congress.",
+      "bio": "Beth Van Duyne's campaign says she is a single working mother who left home at 17, put herself through college, and became the first woman mayor of her hometown before serving in a presidential administration.",
+      "issues": [
+        "She says she is running in the 24th District so her children have the same opportunities she had, and she warns about socialism, the border, and hostile nations.",
+        "She says she is a conservative who has fought government corruption, supported removing criminal noncitizens from North Texas, and backed growth and the Constitution."
+      ],
+      "site": "https://bethfortexas.com/",
+      "siteLabel": "Beth Van Duyne for Congress",
+      "donate": "https://secure.winred.com/beth-van-duyne-for-congress/support-today",
+      "source": "https://bethfortexas.com/about-beth-van-duyne/"
+    },
+    "kevin burge": {
+      "role": "Marine veteran running for Congress.",
+      "bio": "Kevin Burge's campaign says he is a Marine veteran with more than 20 years of leadership and deployments to Iraq and Afghanistan, and that he grew up without wealth in Los Alamos. It says his wife immigrated from Honduras, serves in the Texas Army National Guard, and their son attends public school in Tarrant County.",
+      "issues": [
+        "He says he would fast-track affordable housing, crack down on corporate landlords, raise the minimum wage, and expand Medicaid.",
+        "He says he supports Medicare for All, restoring abortion rights, tuition-free public college, and rules so data centers recycle water and limit pollution."
+      ],
+      "site": "https://www.burgeforcongress.com/",
+      "siteLabel": "Kevin Burge for Congress",
+      "donate": "https://secure.actblue.com/donate/burgewebsite",
+      "source": "https://www.burgeforcongress.com/issues"
+    },
+    "roger williams": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Roger Williams's campaign says he grew up in Fort Worth, played baseball at TCU and in the Atlanta Braves system, and has run a family car dealership and cattle operation for more than 50 years. It says he was Texas secretary of state and was elected to Congress in 2012.",
+      "issues": [
+        "He says his priorities are lower taxes, less government, cutting spending, defending the border, listening to generals, the Tenth Amendment, and standing with Israel.",
+        "He says that as a business owner he opposes taxes and regulation that hurt small businesses, and that he chairs the House Small Business Committee."
+      ],
+      "site": "https://www.rogerforcongress.com/",
+      "siteLabel": "Roger Williams for Congress",
+      "donate": "https://secure.winred.com/roger-williams-for-us-congress/donate",
+      "source": "https://www.rogerforcongress.com/about/"
+    },
+    "brandon gill": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Brandon Gill's campaign says he was born on an Air Force base, grew up on a cattle ranch outside Abilene, and graduated from Dartmouth before working in finance and starting a conservative news site. It says his father was a fighter pilot and his grandfather a Dallas-area preacher.",
+      "issues": [
+        "He says that in Congress he has worked to stop a large tax increase, secure the southern border, and end funding for projects he calls leftist.",
+        "He says he is running again so children can live in a better Texas and a better America, alongside an America First agenda."
+      ],
+      "site": "https://brandongillforcongress.com/",
+      "siteLabel": "Brandon Gill for Congress",
+      "donate": "https://secure.winred.com/brandon-gill-victory-fund/donate-hd",
+      "source": "https://brandongillforcongress.com/about"
+    },
+    "steven shook": {
+      "role": "Nurse practitioner running for Congress.",
+      "bio": "Steven Shook's campaign says he is a Fort Worth nurse practitioner who has cared for critically ill and injured patients since 2009 and holds degrees from Tarrant County College, Texas Tech, and the University of Texas at Arlington.",
+      "issues": [
+        "He says he would create jobs, protect Social Security and Medicare, and make health care affordable.",
+        "He says he would support local businesses, defend educational opportunity, and improve local infrastructure."
+      ],
+      "site": "https://shookforcongress2026.com/",
+      "siteLabel": "Steven Shook for Congress",
+      "donate": "https://secure.actblue.com/donate/shookforcongress",
+      "source": "https://shookforcongress2026.com/"
+    },
+    "michael cloud": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Michael Cloud's campaign says he is a husband and father elected in 2018 to represent the coastal 27th District. It says he is a Freedom Caucus member who describes his mission as Christian, conservative, America First values.",
+      "issues": [
+        "He says the border needs a wall and a response to cartels and trafficking, and that cutting regulation and simplifying the tax code would help small businesses.",
+        "He says federal spending is on a path to ruin and he has filed bills to improve cost estimates and to sunset federal agencies."
+      ],
+      "site": "https://www.cloudforcongress.com/",
+      "siteLabel": "Michael Cloud for Congress",
+      "donate": "https://secure.anedot.com/cloudforcongress/cloudwebdonate",
+      "source": "https://www.cloudforcongress.com/about-michael/"
+    },
+    "tanya lloyd": {
+      "role": "Teacher running for Congress.",
+      "bio": "Tanya Lloyd's campaign says she is a fifth-generation Texan, a mother, and a kindergarten teacher who went back to school in her thirties after working in car dealerships and real estate.",
+      "issues": [
+        "She says rural hospitals are closing and she would seek single-payer health care, restore reproductive rights, and fund rural schools.",
+        "She says she would support family farmers, protect water and land, and create jobs in clean energy and sustainable agriculture."
+      ],
+      "site": "https://www.tanyafortexas.com/",
+      "siteLabel": "Tanya Lloyd for Congress",
+      "donate": "https://secure.actblue.com/donate/tanya-website-2026?refcode=website_menu_button",
+      "source": "https://www.tanyafortx27.com/issues"
+    },
+    "tano tijerina": {
+      "role": "Webb County judge running for Congress.",
+      "bio": "Tano Tijerina's campaign says he is a husband, father, and Christian raised in South Texas who served as Webb County judge. It says he and his wife are raising their children in Laredo.",
+      "issues": [
+        "He says the border should be secured and immigration should happen legally, and that as county judge he lowered property taxes five times in ten years.",
+        "He says he would lower taxes for working families and small businesses, cut federal regulation, and stop wasteful spending."
+      ],
+      "site": "https://www.tanoforcongress.com/",
+      "siteLabel": "Tano Tijerina for Congress",
+      "donate": "https://secure.winred.com/tano-tijerina-for-congress/donate-today",
+      "source": "https://www.tanoforcongress.com/issues"
+    },
+    "martha fierro": {
+      "role": "Minister running for Congress.",
+      "bio": "Martha Fierro's campaign says she is a Houston-raised Latina, a first-generation college graduate of the University of Houston, and director of a prayer network that works with churches. It says she has been married for more than 30 years, has five children, and started as a health-care worker at 19.",
+      "issues": [
+        "She says health care should get more affordable through competition and patient choice rather than government mandates, and she supports school choice and parental rights.",
+        "She says she would cut federal spending, back Texas oil and gas, and support Border Patrol against illegal crossings and trafficking."
+      ],
+      "site": "https://www.fierrofortexas.com/",
+      "siteLabel": "Martha Fierro for Congress",
+      "source": "https://www.fierrofortexas.com/meet-martha"
+    },
+    "sylvia garcia": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Sylvia Garcia's campaign says she was elected in 2018 as the first Latina to represent Texas's 29th District and was one of the first women to serve as a presidential impeachment manager. It says she is vice ranking member of the House Financial Services Committee.",
+      "issues": [
+        "She says she is focused on defending democracy, lowering costs, and making housing more affordable.",
+        "She says she is standing up for women's rights, an economy that works for more than those at the top, and a more compassionate immigration policy."
+      ],
+      "site": "https://www.sylviaforcongress.com/",
+      "siteLabel": "Sylvia Garcia for Congress",
+      "source": "https://www.sylviaforcongress.com/"
+    },
+    "frederick haynes iii": {
+      "role": "Candidate running for Congress.",
+      "bio": "Frederick Haynes III's campaign says he is running because the 30th District needs representation rooted in ordinary people's lives rather than corporate talking points or systems that benefit a few.",
+      "issues": [
+        "He says Congress has too long centered policymaking on corporate interests and political convenience.",
+        "He says the district has a history of servant-leaders and needs that kind of representation again."
+      ],
+      "site": "https://www.haynesforcongress.com/",
+      "siteLabel": "Haynes for Congress",
+      "donate": "https://secure.actblue.com/donate/haynesforcongress",
+      "source": "https://www.haynesforcongress.com/issues"
+    },
+    "john carter": {
+      "role": "U.S. representative running for another term.",
+      "bio": "John Carter's campaign says he settled in Central Texas with his wife after law degrees from Texas Tech and the University of Texas, practiced in Round Rock, and was appointed a Williamson County district judge before Congress.",
+      "issues": [
+        "His issues page lists border security, protecting the homeland, care for veterans, lower taxes and a stronger economy, the Second Amendment, and protecting children.",
+        "He says he treats Central Texas as home and comes back after votes rather than staying in Washington."
+      ],
+      "site": "https://www.johncarterforcongress.com/",
+      "siteLabel": "John Carter for Congress",
+      "donate": "https://secure.winred.com/john-carter/donate",
+      "source": "https://www.johncarterforcongress.com/on-the-issues"
+    },
+    "justin early": {
+      "role": "Army veteran running for Congress.",
+      "bio": "Justin Early's campaign says he is a Georgetown father of seven and a cybersecurity architect at Dell whose parents served in the Army. It says he enlisted after Leander High School, served as a paratrooper, and worked at the Defense Intelligence Agency.",
+      "issues": [
+        "He says his priorities are affordability, responsible technology and AI, and defending democracy.",
+        "He says families are squeezed by the cost of living and unaffordable health care, and that he is not a career politician."
+      ],
+      "site": "https://www.votejustinearly.com/",
+      "siteLabel": "Justin Early for Congress",
+      "donate": "https://secure.actblue.com/donate/votejewebsite",
+      "source": "https://www.votejustinearly.com/about"
+    },
+    "jace yarbrough": {
+      "role": "Air Force officer and lawyer running for Congress.",
+      "bio": "Jace Yarbrough's campaign says he is a seventh-generation Texan, an Air Force major, and a constitutional lawyer with degrees from UT Austin and Stanford. It says he and his wife founded a classical Christian school and are raising five children.",
+      "issues": [
+        "He says he would back immigration enforcement and oppose amnesty, and keep legal immigration from being used to push down wages.",
+        "He says he would seek national concealed-carry reciprocity and repeal of the National Firearms Act."
+      ],
+      "site": "https://www.jaceforcongress.com/",
+      "siteLabel": "Jace Yarbrough for Congress",
+      "donate": "https://secure.anedot.com/jace-victory-fund/contribute",
+      "source": "https://www.jaceforcongress.com/priorities"
+    },
+    "dan barrios": {
+      "role": "Richardson council member running for Congress.",
+      "bio": "Dan Barrios's campaign says he grew up in a working-class family in Brownsville and has lived in North Texas for more than 25 years. It says he was elected to the Richardson council in 2023 and is a husband and father.",
+      "issues": [
+        "He says he would confront rising grocery and housing costs by strengthening consumer protections.",
+        "He says nobody should be left without affordable medical care, and he would oppose extremism and defend the Constitution."
+      ],
+      "site": "https://www.danbarriosforcongress.com/",
+      "siteLabel": "Dan Barrios for Congress",
+      "donate": "https://secure.actblue.com/donate/danforcongresswebsite",
+      "source": "https://www.danbarriosforcongress.com/"
+    },
+    "patrick gillespie": {
+      "role": "Candidate running again for Congress.",
+      "bio": "Patrick Gillespie's campaign says he is running again in the 33rd District and that representing the community is a responsibility he means to honor.",
+      "issues": [
+        "He says he would protect human life from fertilization to natural death, limit government to enumerated powers, and support parents' choice of schools.",
+        "He says immigrants should be vetted, illegal crossings stopped, existing gun laws enforced, and federal spending brought back to a balanced budget."
+      ],
+      "site": "https://patrickgillespie4congress33.com/",
+      "siteLabel": "Patrick Gillespie for Congress",
+      "source": "https://patrickgillespie4congress33.com/"
+    },
+    "colin allred": {
+      "role": "Former U.S. representative running for Congress.",
+      "bio": "Colin Allred's campaign says he was raised in Dallas by a single mother who taught in public school, captained the Baylor football team, played in the NFL, and became a civil rights lawyer. It says he worked at the Department of Housing and Urban Development and later won a House seat.",
+      "issues": [
+        "He says he is running to lower costs and stop politicians from rigging the economy against people who work hard.",
+        "He says his earlier service included work on voting rights and on VA care in North Texas."
+      ],
+      "site": "https://colinallred.com/",
+      "siteLabel": "Colin Allred for Congress",
+      "donate": "https://secure.actblue.com/donate/allred-web?refcode=website&amount=10&express_lane=true",
+      "source": "https://colinallred.com/"
+    },
+    "eric flores": {
+      "role": "Former prosecutor and Army officer running for Congress.",
+      "bio": "Eric Flores's campaign says he grew up in the Rio Grande Valley, served as a Texas Army National Guard infantry captain on the border, and was an assistant U.S. attorney who prosecuted trafficking cases. It says he is a husband and father of two.",
+      "issues": [
+        "He says he would lower the cost of living, oppose spending that feeds inflation, and fund roads, ports, broadband, and water supplies.",
+        "He says he would shorten VA waits, protect seniors' earned benefits, and back South Texas farmers, ranchers, and small businesses."
+      ],
+      "site": "https://www.ericflores.com/",
+      "siteLabel": "Eric Flores for Congress",
+      "source": "https://www.ericflores.com/priorities"
+    },
+    "vicente gonzalez": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Vicente Gonzalez's campaign says he has worked for South Texas since 2017 and focuses on practical results for the 34th District.",
+      "issues": [
+        "He says he is focused on lowering everyday costs, protecting seniors' benefits, and defending women's access to health care.",
+        "He says he supports public schools, veterans' services, and affordable health care families can rely on."
+      ],
+      "site": "https://vicentegonzalez.com/",
+      "siteLabel": "Vicente Gonzalez for Congress",
+      "donate": "https://secure.actblue.com/donate/vicente-website-2022?refcode=web-homepage",
+      "source": "https://vicentegonzalez.com/"
+    },
+    "carlos de la cruz": {
+      "role": "Air Force veteran running for Congress.",
+      "bio": "Carlos De La Cruz's campaign says he was raised by a single mother in South Texas, enlisted in the Air Force at 17, and served 20 years, including deployments to Iraq, Afghanistan, and the southern border. It says he and his wife later built a San Antonio business.",
+      "issues": [
+        "He says he would keep securing the border, give Border Patrol more support, and welcome legal immigration.",
+        "He says he would lower costs for working families, expand Texas energy, and vote to ban members of Congress from trading stocks."
+      ],
+      "site": "https://www.carlosforcongress.com/",
+      "siteLabel": "Carlos De La Cruz for Congress",
+      "donate": "https://secure.winred.com/carlos-for-congress/website",
+      "source": "https://www.carlosforcongress.com/mission"
+    },
+    "johnny garcia": {
+      "role": "Sheriff's deputy running for Congress.",
+      "bio": "Johnny Garcia's campaign says he was raised on San Antonio's West Side by his mother, worked construction while at community college, and has spent nearly 20 years with the Bexar County Sheriff's Office, including as a SWAT hostage negotiator.",
+      "issues": [
+        "He says he would lower everyday costs, end tariffs that raise prices, and stop members of Congress from trading stocks.",
+        "He says he would secure the border, focus immigration enforcement on criminals, keep police funded, and reverse health-care cuts."
+      ],
+      "site": "https://www.votejohnnygarcia.com/",
+      "siteLabel": "Johnny Garcia for Congress",
+      "source": "https://www.votejohnnygarcia.com/issues"
+    },
+    "brian babin": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Brian Babin's campaign says he is an East Texas dentist who served in the National Guard, Army Reserve, and Air Force, was mayor of Woodville, and was sworn into Congress in 2015. It says he serves on Transportation and Infrastructure and on Science, Space, and Technology.",
+      "issues": [
+        "He says securing the border, including support for a border wall, is his top immigration priority.",
+        "He says he is running to keep the country safe, strong, and economically secure for his children and grandchildren."
+      ],
+      "site": "https://www.babinforcongress.com/",
+      "siteLabel": "Brian Babin for Congress",
+      "donate": "https://secure.winred.com/dr-brian-babin-for-congress/donate",
+      "source": "https://www.babinforcongress.com/about"
+    },
+    "greg casar": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Greg Casar's campaign says he is a progressive Democrat and chair of the Congressional Progressive Caucus, a former labor organizer, and the son of Mexican immigrants. It says he is running in the new Austin-based 37th District after redistricting.",
+      "issues": [
+        "He says he would lower costs for working families, make billionaires pay more, and guarantee health care.",
+        "He says he backs restoring abortion rights, the PRO Act, Medicare for All, and union jobs in clean energy, and stronger rules on artificial intelligence."
+      ],
+      "site": "https://www.casarforcongress.com/",
+      "siteLabel": "Greg Casar for Congress",
+      "donate": "https://secure.actblue.com/donate/gc-web?refcode=header",
+      "source": "https://www.casarforcongress.com/about"
+    },
+    "jon bonck": {
+      "role": "Mortgage broker running for Congress.",
+      "bio": "Jon Bonck's campaign says he is a Christian, husband, and father from greater Houston who has worked in real estate and mortgages for more than 20 years with his wife, Laura. It says he is a deacon and Bible-study teacher.",
+      "issues": [
+        "He says he would finish the border wall, protect life from conception, and put parents ahead of school ideology.",
+        "He says he would defend the Second Amendment and religious liberty, cut spending on foreign wars, and reject vaccine mandates."
+      ],
+      "site": "https://www.jonbonck.com/",
+      "siteLabel": "Jon Bonck for Congress",
+      "donate": "https://secure.winred.com/jon-bonck-for-congress/donate-hd",
+      "source": "https://www.jonbonck.com/"
+    },
+    "melissa mcdonough": {
+      "role": "Real estate broker running for Congress.",
+      "bio": "Melissa McDonough's campaign says she has lived in Harris County for nearly 30 years and is a mother, businesswoman, and community organizer. It says she has worked as a realtor and brokerage owner and has helped run Harris County elections.",
+      "issues": [
+        "She says she would protect Social Security, fund public schools, make tuition more affordable, and support renewable energy and flood control.",
+        "She says she supports responsible gun ownership, letting women make their own medical decisions, Medicare for All, and more effective border management."
+      ],
+      "site": "https://melissaforcongress.com/",
+      "siteLabel": "Melissa McDonough for Congress",
+      "donate": "https://secure.actblue.com/donate/MelissaForCongress2024",
+      "source": "https://melissaforcongress.com/about-melissa/"
+    }
+  },
+  "measures": {}
+}

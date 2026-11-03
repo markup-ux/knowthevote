@@ -1,0 +1,239 @@
+{
+  "code": "or",
+  "ballotSource": "https://www.co.umatilla.or.us/departments/elections/general-election/contest-and-candidate-listing-for-the-november-3-2026-general-election",
+  "where": {
+    "url": "https://sos.oregon.gov/elections/pages/drop-box-locator.aspx",
+    "label": "Oregon ballot drop box locator"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one.",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The official contest listing describes the governor's term as four years."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one.",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    }
+  },
+  "people": {
+    "christine drazan": {
+      "role": "Candidate for governor of Oregon.",
+      "bio": "Her campaign says Oregon should be the best place to raise a family, start a business, buy a home, and get a strong education, and that those goals are out of reach for too many people. She says the cost of living, jobs leaving the state, homelessness, schools, and state spending are leadership problems.",
+      "issues": [
+        "She says she would order agencies to find rules and fees that raise the cost of housing, energy, food, child care, health care, and running a business, and that she would veto new tax and fee increases.",
+        "She says she would speed housing permits, expand help for first-time buyers, and make it easier to build more kinds of homes.",
+        "She says homelessness spending should be audited and shifted toward addiction recovery, mental-health treatment, and programs measured by how many people reach stable housing."
+      ],
+      "site": "https://www.christinefororegon.com/",
+      "siteLabel": "christinefororegon.com",
+      "donate": "",
+      "source": "https://www.christinefororegon.com/drazan-plan/"
+    },
+    "tina kotek": {
+      "role": "Governor of Oregon, seeking another term.",
+      "bio": "Her campaign says she began her career advocating for families in need and still treats that as the job. It says her first term has focused on the cost of living, homelessness, and schools.",
+      "issues": [
+        "She says her plan is to make life more affordable and create more economic opportunity.",
+        "She says she wants every student to succeed.",
+        "She says she would defend what makes Oregon distinct while continuing work on homelessness and schools."
+      ],
+      "site": "https://www.tinafororegon.com/",
+      "siteLabel": "tinafororegon.com",
+      "donate": "",
+      "source": "https://www.tinafororegon.com/"
+    },
+    "brett smith": {
+      "role": "Candidate for governor whose site publishes a plan written with the Pacific Green Party.",
+      "bio": "He says corruption is the most important problem and that the major parties will not fix the system that keeps them in power. The plan thanks Matt Rowe, Seth Woolley, and the Pacific Green Party.",
+      "issues": [
+        "He proposes a surcharge on large employers whose wages leave workers needing public assistance, with small employers exempt and the money directed to health coverage, food aid, and wage support.",
+        "He proposes expanding the Oregon Health Plan into a public option open to every resident, with private insurance still available.",
+        "He also says he is the only candidate against data centers, and he backs a state limit on sending the National Guard into combat without a congressional declaration of war."
+      ],
+      "site": "https://brett-smith.us/",
+      "siteLabel": "brett-smith.us",
+      "donate": "",
+      "source": "https://brett-smith.us/"
+    },
+    "david brock smith": {
+      "role": "Southwest Oregon small businessman running for U.S. Senate.",
+      "bio": "His campaign says he is a third-generation resident who has served in the Oregon Capitol and would carry that work to Washington. He says his approach is to work for constituents rather than political insiders.",
+      "issues": [
+        "He says he is running to keep working on solutions for working families, their communities, and the businesses that support them.",
+        "He says the Senate needs common sense, accountability, and a stronger rural voice so people across Oregon are represented."
+      ],
+      "site": "https://www.davidbrocksmithfororegon.com/",
+      "siteLabel": "davidbrocksmithfororegon.com",
+      "donate": "",
+      "source": "https://www.davidbrocksmithfororegon.com/"
+    },
+    "jeff merkley": {
+      "role": "U.S. senator from Oregon, seeking another term.",
+      "bio": "His campaign says he was born in Myrtle Creek and has not lost touch with working-class roots. It calls him a workhorse and a progressive who is trying to get the country back on track.",
+      "issues": [
+        "He says his daily work is to create opportunity for working families.",
+        "He says he is trying to stop the corruption of democracy.",
+        "He says he is trying to tackle the climate crisis."
+      ],
+      "site": "https://www.jeffmerkley.com/",
+      "siteLabel": "jeffmerkley.com",
+      "donate": "",
+      "source": "https://www.jeffmerkley.com/"
+    },
+    "chris henry": {
+      "role": "U.S. Senate candidate of the Oregon Progressive Party and the Pacific Green Party.",
+      "bio": "His site lists his work as a long-haul truck driver and a UAW aircraft mechanic, and civic roles that include the Oregon Consumer League, a neighborhood association, and union shop steward. He says no special interest is funding the campaign.",
+      "issues": [
+        "He says he would cut the military budget, support Medicare for All, and raise wages while rejecting both broad tariffs and trade deals that override labor and environmental rules.",
+        "He proposes a federal fund for earthquake retrofits, backup power, and supplies ahead of a Cascadia earthquake.",
+        "His site says state law can end a smaller party that misses a statewide vote threshold, and that this Senate race is the Progressive Party's contest this year."
+      ],
+      "site": "https://www.chrishenry.org/",
+      "siteLabel": "chrishenry.org",
+      "donate": "",
+      "source": "https://www.chrishenry.org/"
+    },
+    "barbara kahl": {
+      "role": "Veterinarian running for Congress in Oregon's 1st District.",
+      "bio": "Her campaign says Barbara Kahl is an Oregon native who spent about 20 years in business, including finance work at Intel, and earned her veterinary degree in 2006. It says she later served as chief veterinarian for American Samoa, where she built an animal-control unit, and that she has testified before the Oregon Legislature.",
+      "issues": [
+        "She says economic growth comes first, through small-business relief, infrastructure, and jobs, and she wants housing built faster by cutting permitting delays.",
+        "On schools, she supports public schools, school choice, vocational pathways, and funding that follows the student, and she says parents rather than federal officials should control curriculum.",
+        "She also calls for lower health-care costs and stronger veterans' care, more accountable federal spending, forest stewardship that keeps timber communities working, and support for ports and local police."
+      ],
+      "site": "https://www.drkahlforcongress.com/",
+      "siteLabel": "drkahlforcongress.com",
+      "donate": "https://secure.winred.com/dr-kahl-for-congress/donate-today?sc=winred-directory&money_bomb=false&recurring=false",
+      "source": "https://www.drkahlforcongress.com/about"
+    },
+    "suzanne bonamici": {
+      "role": "U.S. representative for Oregon's 1st District, seeking another term.",
+      "bio": "Her campaign says she grew up in a small Michigan town, moved to Oregon, and worked her way through Lane Community College, the University of Oregon, and law school. It says she practiced consumer-protection law, served in the Oregon House and Senate, and was first elected to Congress in 2012.",
+      "issues": [
+        "She says she will keep opposing the Trump administration, and her priorities include an economy that works for more people, support for working families, and more affordable housing.",
+        "She calls for universal health care, stronger education, more affordable college, reproductive rights, and a response to climate change that builds a clean-energy economy.",
+        "She also lists protecting Social Security, small businesses, gun-violence prevention, voting rights, LGBTQIA+ rights, and a fairer immigration system."
+      ],
+      "site": "https://www.bonamiciforcongress.com/",
+      "siteLabel": "bonamiciforcongress.com",
+      "donate": "https://secure.actblue.com/donate/stand-with-suzanne-bonamici?refcode=website",
+      "source": "https://www.bonamiciforcongress.com/priorities/"
+    },
+    "cliff bentz": {
+      "role": "U.S. representative for Oregon's 2nd District, seeking another term.",
+      "bio": "His campaign says he is a third-generation Oregonian raised on cattle ranches in Harney County, a lawyer who has practiced in Ontario since 1977, and a former chair of the Oregon Water Resources Commission. It says he served in the Oregon House and Senate before running for Congress.",
+      "issues": [
+        "He says he will back tighter border security and finishing a border wall, and he describes himself as a right-to-life candidate who believes life begins at conception.",
+        "He opposes government-run health care and says he will direct investment toward rural Oregon while holding the federal government accountable for how it manages forests and wildfire.",
+        "He says he supports the Second Amendment and the wise use of Oregon's water and land."
+      ],
+      "site": "https://cliffbentz.com/",
+      "siteLabel": "cliffbentz.com",
+      "donate": "https://secure.anedot.com/cliff-bentz-for-congress/slug",
+      "source": "https://cliffbentz.com/issues/"
+    },
+    "chris beck": {
+      "role": "Democratic and Independent Party candidate for Congress in Oregon's 2nd District.",
+      "bio": "His campaign says he is an Oregon native and lifelong public servant from Jacksonville, and the grandson of an agriculture teacher at Redmond High School. He says he is running to replace Cliff Bentz and to be a representative who shows up for rural constituents.",
+      "issues": [
+        "He says Congress should repeal the bill he calls the Big Beautiful Bill and restore Medicaid and SNAP funding, and he wants wildfire-prevention funding and staffing restored at the Forest Service.",
+        "He says ending the war with Iran and canceling tariffs would ease fuel and household costs, and he wants low-cost housing folded into small-town Main Streets rather than onto farms and forest land.",
+        "He says rural hospitals and clinics need protection because Medicaid covers a large share of the district, including many of its children."
+      ],
+      "site": "https://chrisbeckforcongress.com/",
+      "siteLabel": "chrisbeckforcongress.com",
+      "source": "https://chrisbeckforcongress.com/district2issues"
+    },
+    "maxine dexter": {
+      "role": "U.S. representative and physician for Oregon's 3rd District, seeking another term.",
+      "bio": "Her campaign says she grew up in the Pacific Northwest, worked at a grocery store as a union member, and became the first in her family to finish college and medical school at the University of Washington. It says she practiced at Kaiser Permanente, served in the Oregon House, and now represents the 3rd District.",
+      "issues": [
+        "She says she is working to protect Social Security, Medicare, and Medicaid, and she lists universal, affordable health care, addiction and mental-health treatment, and reproductive care among her priorities.",
+        "She also names economic opportunity, climate and environmental protection, housing, gun-violence prevention, and schools.",
+        "Her issues page includes government corruption, immigration, LGBTQ protections, and safeguarding democracy."
+      ],
+      "site": "https://maxinefororegon.com/",
+      "siteLabel": "maxinefororegon.com",
+      "donate": "https://secure.actblue.com/donate/share_drmaxine",
+      "source": "https://maxinefororegon.com/issues/"
+    },
+    "monique despain": {
+      "role": "Retired Air Force colonel and attorney running for Congress in Oregon's 4th District.",
+      "bio": "Her campaign says she is a mom who raised her sons in Eugene, a retired Air Force colonel with 30 years of service, and a lawyer who has worked in Oregon's legal system. She says she is not a career politician and is running because costs, crime, and schools are getting worse.",
+      "issues": [
+        "She says she will oppose a national abortion ban and any congressional effort to limit abortion access for Oregonians, and that those decisions belong with women and their doctors.",
+        "On immigration, she calls for a secure border, removal of people she says are dangerous criminals, a one-time path to lawful status for long-settled residents who pass background checks, and a faster legal immigration system.",
+        "She also says she will defend veterans' care, back law enforcement, tie homelessness and addiction funding to results, and speed forest management and homebuilding."
+      ],
+      "site": "https://www.moniqueforcongress.com/",
+      "siteLabel": "moniqueforcongress.com",
+      "donate": "https://secure.winred.com/monique-for-congress-b5779956/fb876bc1-3549-4f96-93a9-9cb48f0c7ee7?amount=25",
+      "source": "https://moniqueforcongress.com/issues/"
+    },
+    "val hoyle": {
+      "role": "U.S. representative for Oregon's 4th District, seeking another term.",
+      "bio": "Her campaign says she comes from a union family, worked as a waitress and for 25 years in the bicycle industry, and later served as Oregon labor commissioner and as House majority leader. It says she now represents the 4th District and focuses on working families.",
+      "issues": [
+        "She says people who work should be able to find a union job, buy a home, and start a family in Oregon, and she highlights paid sick leave, a higher minimum wage, apprenticeships, and the PRO Act.",
+        "She supports universal preschool, a cap on child-care costs, paid family and medical leave, lower prescription prices, and restoring enhanced Affordable Care Act premium tax credits while still pushing for universal health care.",
+        "Her campaign also points to reproductive health care, protecting vote-by-mail, and a shift toward cleaner energy."
+      ],
+      "site": "https://www.valhoyle.com/",
+      "siteLabel": "valhoyle.com",
+      "donate": "https://secure.actblue.com/donate/stand-with-val-hoyle?refcode=website",
+      "source": "https://www.valhoyle.com/issues/"
+    },
+    "patti adair": {
+      "role": "Deschutes County commissioner running for Congress in Oregon's 5th District.",
+      "bio": "Her campaign says she is a fourth-generation Oregonian, born in Pendleton and raised on a family ranch in Heppner, who became a CPA and worked at Moss Adams. It says she was elected Deschutes County commissioner in 2018 and lives with her husband on a horse ranch in Sisters.",
+      "issues": [
+        "She says she would make daily life more affordable, make permanent the exemptions from tax on tips, overtime, and Social Security, and raise the child tax credit.",
+        "She says she would fully support law enforcement, ban members of Congress from insider trading and from being paid during shutdowns, and require big technology companies to disclose how data centers affect air, water, and electricity costs.",
+        "She also lists sustainable management of natural resources, small-business growth, and putting people ahead of parties."
+      ],
+      "site": "https://www.pattiforcongress.com/",
+      "siteLabel": "pattiforcongress.com",
+      "donate": "https://secure.winred.com/patti-adair-for-congress/website-donate",
+      "source": "https://www.pattiforcongress.com/priorities"
+    },
+    "janelle bynum": {
+      "role": "U.S. representative for Oregon's 5th District, seeking another term.",
+      "bio": "Her campaign says she is a mother of four and a small-business owner who, with her husband, ran four restaurants, and that she is the daughter of teachers with degrees in electrical engineering and business. It says she served in the Oregon House before Congress, where she has passed bipartisan bills.",
+      "issues": [
+        "She says her mission is to lower health-care and housing costs, create jobs, and make sure every child gets a good education.",
+        "Her issues list also names climate action, protecting reproductive rights, and ending homelessness.",
+        "She says she is pushing back on what she calls cruelty and chaos from the White House while working with either party on results."
+      ],
+      "site": "https://www.janellebynum.com/",
+      "siteLabel": "janellebynum.com",
+      "donate": "https://secure.actblue.com/donate/jsb-website?express_lane=true",
+      "source": "https://www.janellebynum.com/issues"
+    },
+    "david russ": {
+      "role": "Former Dundee mayor running for Congress in Oregon's 6th District.",
+      "bio": "His campaign says he is a husband, father, and grandfather who has worked in farming, manufacturing, real estate, and retail, and that he served about a decade as mayor of Dundee. He says his priorities are God, the Constitution, and the people he would represent.",
+      "issues": [
+        "He says he would bring manufacturing back, ease rules on small businesses and family farms, and end subsidies and loan programs he says target non-citizens.",
+        "He wants federal public lands and control of schools, utilities, and infrastructure returned to states and local governments.",
+        "He says he would make it a federal felony to help people cross the border illegally and would shrink what he calls an oversized federal government."
+      ],
+      "site": "https://russisforus.com/",
+      "siteLabel": "russisforus.com",
+      "source": "https://russisforus.com/the-platform/"
+    },
+    "andrea salinas": {
+      "role": "U.S. representative for Oregon's 6th District, seeking another term.",
+      "bio": "Her campaign says her father immigrated from Mexico, served in the military, and spent three decades as a police officer, and that she was the first in her family to finish college. It says she worked in the Oregon Legislature on health care, the minimum wage, and paid family leave before her election to Congress.",
+      "issues": [
+        "She says she will fight rising costs for working families, seek more living-wage jobs, and keep backing worker protections and investments in rural health care, education, and infrastructure.",
+        "She says she led efforts to cap prescription prices in Oregon and is pushing Congress to let Medicare negotiate drug prices and to strengthen hospital and insurance price transparency.",
+        "She also treats mental health and substance use as part of health care that is too often overlooked."
+      ],
+      "site": "https://www.andreasalinasfororegon.com/",
+      "siteLabel": "andreasalinasfororegon.com",
+      "donate": "https://secure.actblue.com/donate/stand-with-andrea-salinas?refcode=www",
+      "source": "https://www.andreasalinasfororegon.com/issues/"
+    }
+  },
+  "measures": {}
+}

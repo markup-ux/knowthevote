@@ -1,0 +1,111 @@
+{
+  "code": "me",
+  "ballotSource": "",
+  "where": {
+    "url": "https://www.maine.gov/portal/government/edemocracy/voter_lookup.php",
+    "label": "Maine voter information lookup"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    }
+  },
+  "people": {
+    "bobby charles": {
+      "role": "Candidate for governor of Maine.",
+      "bio": "Bobby Charles says he grew up in Wayne, Maine, the son of a public-school teacher, and later studied at Dartmouth, Oxford, and Columbia Law. He says he is running for safer streets, lower taxes, stronger schools, and a government that works for residents.",
+      "issues": [
+        "He says he would cut crime and treat the drug trade as a central threat to Maine communities.",
+        "He says he would cut taxes and regulation that he argues weigh on businesses and working families.",
+        "He says schools should improve and that too much state policy has been driven by ideological agendas he opposes."
+      ],
+      "site": "https://www.bobbyformaine.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.winred.com/bobby-charles-for-maine/take-an-axe?utm_source=website&utm_medium=button&utm_content=homepage",
+      "source": "https://www.bobbyformaine.com/"
+    },
+    "hannah pingree": {
+      "role": "Candidate for governor of Maine.",
+      "bio": "Hannah Pingree says she was raised on the island of North Haven, became Speaker of the Maine House, and later directed the Governor's Office of Policy Innovation and the Future. She says she still lives on North Haven with her husband and two children.",
+      "issues": [
+        "She says her record includes expanding access to health care and affordable housing and helping lead the state's climate work.",
+        "She says that in the Legislature she worked on rural broadband, clean energy, lower health costs, reproductive rights, and Maine's working waterfronts.",
+        "She says that work included the Kid-Safe Products Act, aimed at keeping toxic chemicals out of products children use."
+      ],
+      "site": "https://hannahforgovernor.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.actblue.com/donate/sbd-hp-fr-website",
+      "source": "https://hannahforgovernor.com/meet-hannah-pingree/"
+    },
+    "rick bennett": {
+      "role": "Independent candidate for governor of Maine.",
+      "bio": "Rick Bennett says he grew up in Yarmouth, the son of a school teacher and a retail worker, and that he and his wife live in Oxford, where his family goes back more than 200 years. He says he has created jobs in Maine and led turnarounds of struggling companies.",
+      "issues": [
+        "He says families are paying more for housing, groceries, and energy, and that many young people are unsure they can afford to stay.",
+        "He says his record includes fights against dark-money interests, work to expand broadband, and challenges to the utilities.",
+        "He says a governor should make daily life more affordable and answer to residents rather than to either major party."
+      ],
+      "site": "https://bennettforgovernor.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://www.supportrickbennett.com/donate",
+      "source": "https://bennettforgovernor.com/meet-rick-bennett"
+    },
+    "susan collins": {
+      "role": "Republican United States senator from Maine, seeking another term.",
+      "bio": "Susan Collins's campaign says she grew up in Caribou, where both of her parents served as mayor, and that she graduated from St. Lawrence University. It says she led the state agency for professional and financial regulation and a regional Small Business Administration office before the Senate, and that she has not missed a roll-call vote.",
+      "issues": [
+        "She says her legislative work has focused on health care, the economy, and jobs in Maine.",
+        "She says she has worked to help small businesses and on education, national security, and veterans.",
+        "She says help for older Americans has been a major part of that record, and that she chairs the Senate Appropriations Committee."
+      ],
+      "site": "https://susancollins.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.winred.com/susan-collins/donate-contributebutton-2026",
+      "source": "https://susancollins.com/about/"
+    },
+    "troy jackson": {
+      "role": "Democratic nominee for U.S. Senate from Maine.",
+      "bio": "Troy Jackson's campaign says he is a fifth-generation logger from Allagash whose father was a logger, and that he earned an associate degree from the University of Maine at Fort Kent. It says he spent 20 years in the Maine Legislature, six of them as Senate president.",
+      "issues": [
+        "He says that in the Legislature he worked to lower prescription-drug prices, pass universal school meals, and expand rural health care.",
+        "He says he protected union jobs, delivered property-tax relief, and backed strong reproductive-health laws.",
+        "He says he is running because working families are being squeezed while the wealthiest keep gaining more."
+      ],
+      "site": "https://www.jacksonformaine.com/",
+      "siteLabel": "Campaign site",
+      "donate": "https://secure.actblue.com/donate/loc_tdj_fr_web?refcode=top-nav",
+      "source": "https://www.jacksonformaine.com/about"
+    },
+    "chellie pingree": {
+      "role": "U.S. representative for Maine's 1st District",
+      "bio": "The campaign says Chellie Pingree has lived on the island of North Haven since she was a teenager, where she farmed organically, raised three children, and started small businesses including North Island Yarn and Nebo Lodge. She later chaired the local school board, served in the state Senate, and was elected to Congress in 2008. She sits on the Appropriations Committee.",
+      "issues": [
+        "She says her Appropriations work has focused on opportunities for working families, support for farmers, veterans, and wider access to health care.",
+        "The campaign says she knows meeting payroll and offering benefits is hard because she has run an organic farm and island businesses."
+      ],
+      "site": "https://www.chelliepingree.com/",
+      "siteLabel": "Chellie Pingree for Congress",
+      "donate": "https://secure.actblue.com/donate/cp-web-fr",
+      "source": "https://www.chelliepingree.com/meet-chellie/"
+    },
+    "paul lepage": {
+      "role": "Former Maine governor running for Congress",
+      "bio": "The campaign says Paul LePage left home as a child, finished school, built businesses, served as a Republican mayor, and then as Maine's governor. He says he is running for Congress to bring that same direct style to Washington.",
+      "issues": [
+        "He says he will cut wasteful spending that he argues drove inflation, and he pledges to protect Social Security and Medicare.",
+        "He says he will finish a border wall, end illegal immigration, and lower taxes and red tape so Maine gets more jobs.",
+        "He says he will defend the Second Amendment and veterans' health care and benefits."
+      ],
+      "site": "https://lepageforcongress.com/",
+      "siteLabel": "LePage for Congress",
+      "donate": "https://secure.anedot.com/paul-lepage-for-congress/donate",
+      "source": "https://lepageforcongress.com/"
+    }
+  },
+  "measures": {}
+}

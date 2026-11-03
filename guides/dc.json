@@ -1,0 +1,86 @@
+{
+  "code": "dc",
+  "ballotSource": "https://dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en",
+  "where": {
+    "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool",
+    "label": "Vote center locator"
+  },
+  "offices": {
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. The District office enforces District law, defends and advises District government agencies, and protects the interests of DC residents."
+    },
+    "Mayor": {
+      "kicker": "City · Vote for one",
+      "job": "The mayor is the city's chief executive."
+    }
+  },
+  "people": {
+    "manuel rivera": {
+      "role": "Attorney",
+      "bio": "He says he has practiced law for decades and has spent his life in this community. He says he is running to bring that legal experience to the Office of the Attorney General.",
+      "issues": [
+        "He says the office should put public safety first, enforce the law fairly, and stand with residents rather than special interests.",
+        "He says it should protect victims, defend consumers, and fight corruption.",
+        "He says it should work with the Metropolitan Police Department, the mayor, and the D.C. Council to make neighborhoods safer."
+      ],
+      "site": "https://riverafordc.com/",
+      "siteLabel": "riverafordc.com",
+      "donate": "https://secure.anedot.com/manuel-rivera-for-dc-attorney-general/manuelriveraag",
+      "source": "https://riverafordc.com/"
+    },
+    "brian schwalb": {
+      "role": "Attorney General of the District of Columbia",
+      "bio": "He says that as attorney general he has worked to protect residents' rights, make neighborhoods safer, and keep businesses competing on a level field. He says he is running for reelection to continue that work.",
+      "issues": [
+        "He says the office has prosecuted juvenile crime, pursued opioid companies, and sued landlords over dangerous housing.",
+        "He says he has opposed a federal takeover of the Metropolitan Police Department and filed cases against federal orders, including a National Guard deployment in the District.",
+        "He says the office has gone after unpaid wages and benefits, won rent refunds, and sued what he calls a housing cartel for illegally raising rents."
+      ],
+      "site": "https://brianfordc.com/",
+      "siteLabel": "brianfordc.com",
+      "donate": "https://secure.actblue.com/donate/brianfordc2026/",
+      "source": "https://brianfordc.com/meet-brian/"
+    },
+    "janeese lewis george": {
+      "role": "D.C. Councilmember for Ward 4",
+      "bio": "She says she is a third-generation Washingtonian raised in Ward 4, a graduate of D.C. public schools and Howard University School of Law, and a former assistant attorney general who was elected to the Council in 2020. She says her family left a childhood home because the rent went up.",
+      "issues": [
+        "She says that as mayor she would side with working people to make the District safe and affordable in all eight wards.",
+        "She says she has worked to keep tenant protections and to make housing more affordable, and has voted for raises and stronger worker protections.",
+        "She says she led bills that raised wages for early-childhood educators, ended the subminimum wage for restaurant workers, and increased SNAP food assistance."
+      ],
+      "site": "https://janeesefordc.com/",
+      "siteLabel": "janeesefordc.com",
+      "donate": "https://secure.actblue.com/donate/web-ms-jlg-donate",
+      "source": "https://janeesefordc.com/about/"
+    },
+    "rhonda hamilton": {
+      "role": "Small-business owner and mental-health advocate",
+      "bio": "She says she is a Washingtonian, an independent, a small-business owner for more than 20 years, and the daughter of a military veteran. She says she is running for mayor to raise standards for residents' health and well-being.",
+      "issues": [
+        "She says housing is health care and that she would take on the causes of housing instability.",
+        "She says she would raise the standard of care and invest in preventive, patient-focused practices.",
+        "She says she would match the budget to community needs, cut waste, and support small businesses, youth programs, and public safety."
+      ],
+      "site": "https://www.rhondahamilton4dc.com/",
+      "siteLabel": "rhondahamilton4dc.com",
+      "donate": "https://rhondahamilton4dc.com/donate-now/",
+      "source": "https://www.rhondahamilton4dc.com/"
+    },
+    "robert gross": {
+      "role": "D.C. Statehood Green Party nominee for mayor",
+      "bio": "He describes himself as a native Washingtonian, an advocate, and an eco-socialist, and as the Gen-Z candidate in the mayor's race. He says his agenda uses a Human Life Standard to judge whether a policy improves daily life.",
+      "issues": [
+        "He says he would use artificial intelligence to improve city budgeting, shorten permits, and update government technology.",
+        "He says that work would speed public services, including public Wi-Fi, and publish real-time performance dashboards.",
+        "He says the platform covers affordable housing, economic opportunity, public safety, education, and transparent city government."
+      ],
+      "site": "https://www.grossformayor.com/",
+      "siteLabel": "grossformayor.com",
+      "donate": "https://www.grossformayor.com/donate",
+      "source": "https://www.grossformayor.com/"
+    }
+  },
+  "measures": {}
+}

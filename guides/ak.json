@@ -1,0 +1,133 @@
+{
+  "code": "ak",
+  "ballotSource": "",
+  "where": {
+    "url": "https://www.elections.alaska.gov/election-polls/",
+    "label": "Alaska polling places"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    }
+  },
+  "people": {
+    "dave bronson": {
+      "role": "Former mayor of Anchorage",
+      "bio": "Dave Bronson is a retired commercial pilot and former U.S. Air Force pilot who later served as mayor of Anchorage. His campaign says that as mayor he reopened the local economy during COVID, worked on homelessness, and put money into public safety.",
+      "issues": [
+        "He wants Alaska's oil, gas, mining, critical minerals, and timber developed to create jobs and support the state budget without raising taxes.",
+        "He says he supports a full statutory Permanent Fund Dividend and that the dividend should not be used to cover budget gaps.",
+        "He says schools should drop political agendas, focus on reading, writing, and math, reward strong teachers, and restore parents' rights."
+      ],
+      "site": "https://www.davebronson.com/",
+      "siteLabel": "davebronson.com",
+      "donate": "https://secure.anedot.com/bronson-for-governor/donate",
+      "source": "https://www.davebronson.com/"
+    },
+    "treg taylor": {
+      "role": "Former Alaska attorney general",
+      "bio": "Treg Taylor joined the Alaska Department of Law in 2018 as deputy attorney general for the civil division, became attorney general in 2021, and served until August 2025. Before state service he was counsel at McKinley Capital Management and senior counsel at ASRC Energy Services.",
+      "issues": [
+        "He says Alaska should unleash its energy resources and reform permitting so families pay less for energy and businesses can hire.",
+        "His campaign says that as attorney general he helped drive crime to a 40-year low and cut sexual assaults by 25 percent, and that he will keep pressing prosecutions.",
+        "He says the state should pay the largest Permanent Fund Dividend it can afford and protect the dividend in the constitution."
+      ],
+      "site": "https://tregforak.com/",
+      "siteLabel": "tregforak.com",
+      "donate": "",
+      "source": "https://tregforak.com/"
+    },
+    "bernadette wilson": {
+      "role": "Small-business owner",
+      "bio": "Bernadette Wilson is a lifelong Alaskan who started a commercial waste company in 2016 and has led the Alaska Policy Forum and worked with Americans for Prosperity. She also served as a senior advisor on Nick Begich's congressional campaign.",
+      "issues": [
+        "She says Alaska should move from talk to construction on projects including AKLNG, ANWR, Willow, the Ambler Road, and West Susitna access.",
+        "She says she will restore the statutory Permanent Fund Dividend.",
+        "She says Alaska's children should be able to attend strong schools in the state."
+      ],
+      "site": "https://bernadetteforgovernor.com/",
+      "siteLabel": "bernadetteforgovernor.com",
+      "donate": "https://secure.winred.com/bernadette-for-governor/0d09bec8-2d3a-4076-b9e1-1a258d234c60",
+      "source": "https://bernadetteforgovernor.com/"
+    },
+    "jonathan kreiss-tomkins": {
+      "role": "Former Alaska state representative",
+      "bio": "Jonathan Kreiss-Tomkins, who goes by JKT, was born and raised in Sitka and represented Southeast Alaska in the state House for a decade. He says he left the legislature about three years ago and is running to fund schools, lower energy and housing costs, and balance the budget.",
+      "issues": [
+        "He wants public schools fully funded, teachers paid so Alaska can keep them, and a constitutional amendment to forward-fund education.",
+        "He supports renewables, hydro, and natural gas, and wants the Railbelt utilities to cooperate so electricity costs less.",
+        "He says the state should cut red tape on housing and open state land in and next to cities and towns for homes."
+      ],
+      "site": "https://www.jktforak.com/",
+      "siteLabel": "jktforak.com",
+      "donate": "https://secure.actblue.com/donate/kreiss-tomkins-website",
+      "source": "https://www.jktforak.com/platform"
+    },
+    "dan s. sullivan": {
+      "role": "U.S. senator from Alaska",
+      "bio": "Dan Sullivan has served in the U.S. Senate since January 2015 and was reelected in 2020. He was a Marine Corps infantry officer for more than 30 years, retired as a colonel in the Reserve in early 2024, and sits on the Armed Services, Commerce, Environment and Public Works, and Veterans' Affairs committees.",
+      "issues": [
+        "He says he is running again to keep developing Alaska's energy resources.",
+        "His campaign points to a large tax cut and says families and businesses should keep more of what they earn.",
+        "He cites military investment and a stronger Alaska health-care system as reasons for another term."
+      ],
+      "site": "https://dansullivanforalaska.com/",
+      "siteLabel": "dansullivanforalaska.com",
+      "donate": "",
+      "source": "https://dansullivanforalaska.com/"
+    },
+    "mary peltola": {
+      "role": "Candidate for U.S. Senate",
+      "bio": "Mary Peltola says she grew up on the Kuskokwim fishing salmon and is running for Senate because she has seen government fail Alaskans. Her campaign says she backed oil and gas development, including approval of the Willow project, and wants energy costs brought down.",
+      "issues": [
+        "She wants permitting reform and more refining of Alaska oil, including the Alaska LNG pipeline, so energy costs fall and jobs stay in the state.",
+        "She says she will push to modernize aging grids, including the Railbelt, and restore federal tax credits for solar, wind, and hydropower.",
+        "She says she will expand heating assistance so families are not left without heat when federal funding is delayed."
+      ],
+      "site": "https://marypeltola.com/",
+      "siteLabel": "marypeltola.com",
+      "donate": "https://marypeltola.com/donate",
+      "source": "https://marypeltola.com/priorities/energy/"
+    },
+    "daniel j. sullivan jr.": {
+      "role": "Retired elementary school teacher",
+      "bio": "Daniel J. Sullivan Jr. says he has lived in Petersburg for nearly 50 years and worked in logging, construction, forestry, and the U.S. Forest Service before teaching elementary school. He says he is running because he believes Alaska's senator should answer the phone and put the state first.",
+      "issues": [],
+      "site": "https://www.sullivanforsenate.com/",
+      "siteLabel": "sullivanforsenate.com",
+      "donate": "",
+      "source": "https://www.sullivanforsenate.com/"
+    },
+    "nick begich": {
+      "role": "U.S. representative for Alaska",
+      "bio": "The campaign says Nick Begich was born in Anchorage, studied entrepreneurship at Baylor and earned an MBA at Indiana University, then worked at Ford before returning to Alaska in 2004 to build businesses. Elected to the House in 2024, he serves on Natural Resources, Transportation and Infrastructure, and Science, Space, and Technology.",
+      "issues": [
+        "He says he is trying to lower Alaska's costs through energy, transportation, infrastructure, taxes, and less federal red tape.",
+        "His campaign says he helped pass tax relief that includes no tax on tips or overtime, relief for seniors, and lasting relief for small businesses.",
+        "He says he backed the SPEED Act to speed federal permitting and shorten delays so projects can get built."
+      ],
+      "site": "https://www.alaskansfornickbegich.com/",
+      "siteLabel": "Nick Begich For Alaska",
+      "donate": "https://secure.winred.com/alaskans-for-nick-begich/donations",
+      "source": "https://www.alaskansfornickbegich.com/solutions"
+    },
+    "eric hafner": {
+      "role": "Democratic candidate for Alaska's at-large U.S. House seat.",
+      "bio": "His candidate statement, which he filed with the Alaska Division of Elections, says he studied criminal justice at Denver College and Pacific Island, ethnic, and women's studies at City College of San Francisco. He describes work on Native Hawaiian and Native American legal defense, public-education campaigns, and the Fight for $15.",
+      "issues": [
+        "He says war should be avoided, both for service members and for families caught in it.",
+        "He says higher education should stay open, including Indigenous history, Black history, and women's medical choices.",
+        "He says Alaska's lands, including the Arctic National Wildlife Refuge, should not be used for short-term exploitation."
+      ],
+      "site": "https://www.elections.alaska.gov/doc/oep/2026/HAFNER%2C%20ERIC_US%20Rep_Eng_v1.pdf",
+      "siteLabel": "Alaska candidate statement",
+      "source": "https://www.elections.alaska.gov/doc/oep/2026/HAFNER%2C%20ERIC_US%20Rep_Eng_v1.pdf"
+    }
+  },
+  "measures": {}
+}

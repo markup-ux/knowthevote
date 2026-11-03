@@ -1,0 +1,207 @@
+{
+  "code": "nm",
+  "ballotSource": "",
+  "where": {
+    "url": "https://voterportal.servis.sos.state.nm.us/wheretovote.aspx",
+    "label": "Find your voting location"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The governor of New Mexico holds the supreme executive power of the state and sees that the laws are faithfully executed."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The Constitution provides two senators from each state."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. New Mexico gives this office primary authority over consumer-protection and antitrust enforcement, criminal appeals, some complex white-collar crimes, peace-officer training, and most natural-resource and environmental matters."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. In New Mexico, the secretary of state is the chief election officer and maintains the statewide list of registered voters."
+    }
+  },
+  "people": {
+    "greggory hull": {
+      "role": "Mayor of Rio Rancho, running for governor.",
+      "bio": "Greggory Hull's campaign calls him the mayor of Rio Rancho. It says the city police budget more than doubled under him and that he secured more than $6 billion in investment there.",
+      "issues": [
+        "His Four Steps to Zero plan would phase out state tax on eligible personal income, starting with the first $25,000 for single filers and $50,000 for married couples filing jointly, while still taxing net business profits.",
+        "He says he would strengthen rural health care, recruit doctors and nurses, and change medical-malpractice law.",
+        "He says he would add police, treat fentanyl as a border problem, and use a zero-tolerance approach to violent crime and crimes against children."
+      ],
+      "site": "https://gregghull.com/",
+      "siteLabel": "Gregg Hull for Governor",
+      "donate": "https://secure.anedot.com/hull-for-new-mexico/donate",
+      "source": "https://gregghull.com/priorities/"
+    },
+    "deb haaland": {
+      "role": "Candidate for governor and a former U.S. secretary of the interior.",
+      "bio": "Deb Haaland's campaign says she is a New Mexican who has faced homelessness and financial insecurity, built a salsa business, marked more than three decades of sobriety, and became the first Native American cabinet secretary. It says she also served in Congress.",
+      "issues": [
+        "She says that as governor she would concentrate on crime, schools, and prices from health care to groceries.",
+        "She says she would protect communities from Donald Trump and immigration enforcement so the state can focus on those problems."
+      ],
+      "site": "https://debhaaland.com/",
+      "siteLabel": "Deb Haaland for New Mexico",
+      "donate": "https://secure.actblue.com/donate/deb_web",
+      "source": "https://debhaaland.com/about/"
+    },
+    "larry marker": {
+      "role": "Republican candidate for U.S. Senate.",
+      "bio": "Larry Marker's campaign says that for nearly a decade, as a private citizen, he challenged political elites in New Mexico at personal cost. It says he is running to defend energy jobs, schools, and border security.",
+      "issues": [
+        "He says he would defend oil and gas, including hydrogen and nuclear development, and oppose federal permitting delays that he says threaten school funding.",
+        "He says the border is still a path for fentanyl and that he would back Border Patrol and local police.",
+        "He says farmers and ranchers should not lose grazing, water, or working land to agency enforcement."
+      ],
+      "site": "https://larrymarker.com/",
+      "siteLabel": "Larry Marker for U.S. Senate",
+      "donate": "https://secure.winred.com/friends-of-larry-marker/donate-today",
+      "source": "https://larrymarker.com/"
+    },
+    "ben ray lujan": {
+      "role": "U.S. senator running for another term.",
+      "bio": "Ben Ray Luján's campaign says he filed for another Senate term and has focused on costs, health care, and internet access for New Mexico.",
+      "issues": [
+        "He says he has worked to lower prescription prices and to protect Medicare, Medicaid, and Social Security.",
+        "He says he has defended nutrition assistance for working families, seniors, veterans, and rural communities.",
+        "He says he has worked to connect families to the internet and to deliver results in all 33 counties."
+      ],
+      "site": "https://benraylujan.com/",
+      "siteLabel": "Ben Ray Luján for U.S. Senate",
+      "donate": "https://secure.actblue.com/donate/ben-ray-luj-n-1",
+      "source": "https://benraylujan.com/ben-ray-lujan-files-for-re-election-to-the-u-s-senate-new-mexico-is-a-special-place-that-we-are-proud-to-call-home/"
+    },
+    "samuel kane sr.": {
+      "role": "Attorney running for attorney general.",
+      "bio": "Samuel Kane Sr.'s campaign says he is an attorney with decades of experience who was not born in New Mexico and later made it home. It says he is a cyclist, a pilot, and married to Jessica, his business partner.",
+      "issues": [
+        "He says he would challenge license-plate reader surveillance that tracks people without a warrant.",
+        "He says methamphetamine and fentanyl are driving a crime crisis and that he would back officers on those cases.",
+        "He says he would scrutinize data-center projects and utility rate increases, and that environmental laws should be enforced so the land stays intact."
+      ],
+      "site": "https://samfornewmexico.org/",
+      "siteLabel": "Sam Kane for Attorney General",
+      "donate": "https://secure.winred.com/sam-kane-for-nm-attorney-general/donate-today",
+      "source": "https://samfornewmexico.org/"
+    },
+    "raul torrez": {
+      "role": "New Mexico's attorney general, running for another term.",
+      "bio": "Raúl Torrez's campaign says he is the state's 32nd attorney general, a former federal prosecutor, and a former district attorney for the Albuquerque area.",
+      "issues": [
+        "He says protecting children is his priority, including lawsuits against Meta and Snap over online abuse and investigations of the child-welfare system.",
+        "He says the office has pursued online predators and school harms such as cyberbullying.",
+        "He says he is also working on consumer rules for online markets, oversight of higher education, and protection of natural resources."
+      ],
+      "site": "https://www.raultorrez.com/",
+      "siteLabel": "Raúl Torrez for Attorney General",
+      "donate": "https://secure.actblue.com/donate/rt-web",
+      "source": "https://www.raultorrez.com/"
+    },
+    "ramona goolsby": {
+      "role": "Candidate for secretary of state.",
+      "bio": "Ramona Goolsby says she came to New Mexico in 2019, worked as a primary-care provider for the Veterans Administration, and is a retired family nurse practitioner. She says she serves on the Ciudad Soil and Water Conservation District board.",
+      "issues": [
+        "She says every eligible voter should be able to register and vote under clear rules.",
+        "She says public money should be managed in the open, and that trust depends on professional oversight.",
+        "She says her campaign is built on access, responsibility, and trust in elections."
+      ],
+      "site": "https://www.ramonanm.com/",
+      "siteLabel": "Ramona for New Mexico",
+      "donate": "https://secure.anedot.com/ramonanm/donate",
+      "source": "https://www.ramonanm.com/about/"
+    },
+    "amanda lópez askin": {
+      "role": "Doña Ana County clerk running for secretary of state.",
+      "bio": "Amanda López Askin says she is in her second term as clerk of Doña Ana County, grew up in Las Cruces, and previously worked as a family and mental health therapist.",
+      "issues": [
+        "She says she is running to protect the right to vote and to keep elections safe, secure, and fair.",
+        "She says the office should make campaign finance more transparent.",
+        "She says she would give small businesses clearer, more stable dealings with the state."
+      ],
+      "site": "https://amandafornm.com/",
+      "siteLabel": "Amanda for New Mexico",
+      "donate": "https://secure.actblue.com/donate/ala-web",
+      "source": "https://amandafornm.com/press/2025/04/16/amanda-lopez-askin-announces-bid-for-open-new-mexico-secretary-of-state-seat/"
+    },
+    "ndidiamaka okpareke": {
+      "role": "Pharmacist and business owner running for Congress.",
+      "bio": "Ndidiamaka Okpareke's campaign says she goes by Didi, has lived in New Mexico for almost 30 years, graduated from the University of New Mexico, and owns Olive Tree Compounding Pharmacy. It says she is a mother of three.",
+      "issues": [
+        "She says she would use her work as a pharmacist to make care more affordable, protect quality, and expand access.",
+        "She says she would bring federal investment to New Mexico to create jobs and grow paychecks.",
+        "She says she answers to New Mexico families rather than party leaders in Washington."
+      ],
+      "site": "https://www.didiforcongress.com/",
+      "siteLabel": "Didi Okpareke for Congress",
+      "source": "https://www.didiforcongress.com/"
+    },
+    "melanie stansbury": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Melanie Stansbury's campaign says she grew up in a working family in Albuquerque, served in the New Mexico House from 2019 to 2021, and has been in Congress since 2021. It says her work has focused on land, water, jobs, and hunger.",
+      "issues": [
+        "She says she would expand the economy, support local businesses, and raise the federal minimum wage to $15 an hour.",
+        "She says health care is a human right and that she supports Medicare for All, lower out-of-pocket costs, and protection for pre-existing conditions.",
+        "She says she would keep working on climate, renewable energy, water security, and public lands."
+      ],
+      "site": "https://www.melaniefornewmexico.com/",
+      "siteLabel": "Melanie Stansbury for New Mexico",
+      "donate": "https://secure.actblue.com/donate/melanie-for-nm-s",
+      "source": "https://www.melaniefornewmexico.com/issues"
+    },
+    "gregory cunningham": {
+      "role": "Former Marine and police officer running for Congress.",
+      "bio": "Greg Cunningham's campaign says he is a lifelong New Mexican, a combat veteran of the Marine Corps, a former Albuquerque police officer, and a business owner. It says he is a husband, father, and grandfather.",
+      "issues": [
+        "He says he would listen to people who live and work in New Mexico rather than take direction from Washington.",
+        "He says he would be a steady voice that puts people ahead of party politics.",
+        "He says his campaign is about restoring trust and strengthening communities for the next generation."
+      ],
+      "site": "https://www.cunninghamfornm.com/",
+      "siteLabel": "Greg Cunningham for Congress",
+      "source": "https://www.cunninghamfornm.com/"
+    },
+    "gabriel vasquez": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Gabe Vasquez's campaign says he worked his way through New Mexico State University, helped build a Las Cruces small business, served on the city council, and was elected to Congress. It says he has worked on rural hospitals, insulin prices, and wildfire legislation.",
+      "issues": [
+        "He says he would raise wages, support the right to join a union, and cut taxes on working families while lowering the cost of health care, child care, and utilities.",
+        "He says he would keep public lands open for hunting, fishing, and hiking, and keep working on wildfire risk.",
+        "He says he would fund border security, deport people convicted of violent crimes, and provide a path to legal status for Dreamers and other working families."
+      ],
+      "site": "https://gabeforcongress.com/",
+      "siteLabel": "Gabe Vasquez for Congress",
+      "donate": "https://secure.actblue.com/donate/vas-website",
+      "source": "https://gabeforcongress.com/issues/"
+    },
+    "martin zamora": {
+      "role": "State representative running for Congress.",
+      "bio": "Martin Zamora's campaign says he was born on a farm near Clovis, has worked in agriculture, cattle, and other businesses, and has represented New Mexico House District 63 since 2019. It says he and his wife Debbie live in Clovis.",
+      "issues": [
+        "He says he would defend private property and water rights and cut federal rules he says burden farmers and ranchers.",
+        "He says he would lower taxes, cut red tape, and support small businesses as the source of jobs.",
+        "He says he would stand with law enforcement against fentanyl and other drug trafficking, and would secure the southern border."
+      ],
+      "site": "https://zamorafornewmexico.com/",
+      "siteLabel": "Martin Zamora for New Mexico",
+      "source": "https://zamorafornewmexico.com/about/"
+    },
+    "teresa leger fernandez": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Teresa Leger Fernández's campaign says she grew up in rural Las Vegas, New Mexico, worked as an acequia commissioner and as an attorney for tribal communities, and is the first woman to represent the 3rd District. She says she is a cancer survivor running for another term.",
+      "issues": [
+        "She says every person should have affordable health care in their own community.",
+        "She says the country should invest in broadband, transportation, housing, and clean energy.",
+        "She says she would protect land, air, and water, and keep working on education and the right to vote."
+      ],
+      "site": "https://www.teresaforall.com/",
+      "siteLabel": "Teresa Leger Fernandez for Congress",
+      "donate": "https://secure.actblue.com/donate/teresa-for-nm",
+      "source": "https://www.teresaforall.com/meet-teresa"
+    }
+  },
+  "measures": {}
+}

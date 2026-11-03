@@ -1,0 +1,46 @@
+{
+  "code": "nd",
+  "ballotSource": "",
+  "where": {
+    "url": "https://vip.sos.nd.gov/WhereToVote.aspx",
+    "label": "North Dakota Secretary of State"
+  },
+  "offices": {
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. The attorney general's office issues legal opinions, takes consumer-protection complaints, and handles requests for public records."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. With the state's 53 counties, the office administers elections, and it also registers businesses, keeps official records, and holds the Great Seal of North Dakota."
+    }
+  },
+  "people": {
+    "michael howe": {
+      "role": "Secretary of state of North Dakota.",
+      "bio": "His campaign says he was elected the state's 15th secretary of state in 2022, after six years as a state representative and work as a fifth-generation farmer at Howe Seed Farms in Casselton. He is running for another term.",
+      "issues": [
+        "He says he wants elections that stay secure and open to every eligible voter, including a citizenship check and a valid North Dakota ID for every form of voting.",
+        "He says the state uses paper ballots, keeps ballot equipment off the internet, audits elections after the vote, and counts only ballots in by the close of polls.",
+        "He says he will keep cutting red tape so North Dakota stays an easy place to start and grow a business."
+      ],
+      "site": "https://www.howefornd.com/",
+      "siteLabel": "howefornd.com",
+      "donate": "https://secure.anedot.com/howe-for-north-dakota/donate",
+      "source": "https://www.howefornd.com/issues"
+    },
+    "julie fedorchak": {
+      "role": "Candidate for Congress",
+      "bio": "The campaign says Julie Fedorchak is a fourth-generation North Dakotan, born in Williston and a University of North Dakota graduate, who later ran a communications business and served on the Public Service Commission. She says she is running to be a practical voice for the state's energy and farm economy.",
+      "issues": [
+        "She says that on the Public Service Commission she pushed to finish the Dakota Access Pipeline and to keep coal and oil energy reliable and affordable.",
+        "Her issues list includes securing the border, reducing the federal debt, backing law enforcement, and defending the Second Amendment.",
+        "She says she will work with President Trump to secure North Dakota's energy and agricultural future and to support farmers and ranchers."
+      ],
+      "site": "https://fedorchaknd.com/",
+      "siteLabel": "Julie Fedorchak for US Congress",
+      "source": "https://fedorchaknd.com/issues/"
+    }
+  },
+  "measures": {}
+}

@@ -1,0 +1,182 @@
+{
+  "code": "ks",
+  "ballotSource": "https://www.jocoelection.org/sites/default/files/2026-09/11-03-2026%20-%20Notice%20of%20Election%20%28candidates%29.pdf",
+  "where": {
+    "url": "https://myvoteinfo.voteks.org/",
+    "label": "VoterView"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The Kansas Constitution vests the supreme executive power in the governor, who is responsible for enforcing the laws of the state."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The Senate has the sole power to try impeachments."
+    },
+    "Attorney General": {
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. The Kansas office takes consumer-protection complaints and prepares legal opinions for elected officials and government agencies."
+    },
+    "Secretary Of State": {
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. In Kansas the secretary administers national and state elections, keeps the statewide voter registration database, and receives campaign-finance filings."
+    }
+  },
+  "people": {
+    "ty masterson": {
+      "role": "President of the Kansas Senate, running for governor.",
+      "bio": "Ty Masterson's site says he was born and raised in Butler County, has been married to Marlo for 30 years, and has six children and seven grandchildren. He says he won local office in Andover more than twenty years ago and has stayed in public office since.",
+      "issues": [
+        "He says that as Senate president he led a tax-cut package he calls the largest in Kansas history, and that he wants lower taxes, safer streets, and a government that answers to the people who pay for it.",
+        "He proposes a Homeowners Bill of Rights aimed at property taxes and a stronger voice for taxpayers.",
+        "He offers a Kansas Ratepayer Protection Pledge against higher costs he says outside interests would push onto families, farms, schools, hospitals, and small businesses."
+      ],
+      "site": "https://www.mastersonforgovernor.com/",
+      "siteLabel": "mastersonforgovernor.com",
+      "donate": "https://secure.winred.com/ty-masterson-for-governor-4b4f973d/donate-today",
+      "source": "https://www.mastersonforgovernor.com/"
+    },
+    "cindy holscher": {
+      "role": "Kansas state senator running for governor.",
+      "bio": "Cindy Holscher's site says she was raised on a farm and that her work in the Legislature included cleaning up after a failed tax experiment, lowering costs, and making health care more accessible.",
+      "issues": [
+        "She says she will lower the cost of living, including health care, housing, child care, and groceries, and fully fund public schools.",
+        "She says she will expand Medicaid, protect rural hospitals, and protect Social Security, Medicare, and Medicaid.",
+        "She calls for a pause on new data centers until guardrails are set, and she supports legalizing recreational and medical marijuana."
+      ],
+      "site": "https://cindyforkansas.com/",
+      "siteLabel": "cindyforkansas.com",
+      "donate": "https://secure.actblue.com/donate/psd_holscher_website_1",
+      "source": "https://cindyforkansas.com/"
+    },
+    "roger marshall": {
+      "role": "U.S. senator from Kansas and an OB-GYN from Great Bend.",
+      "bio": "Roger Marshall's campaign says he spent twenty-five years delivering babies and has spent nearly a decade writing bills he ties to Kansas households.",
+      "issues": [
+        "He highlights farm bills on fertilizer costs, whole milk in schools, and interstate sale of state-inspected beef.",
+        "He points to hospital and Medicare bills on prior authorization, price transparency, Medicare Advantage, and lasting telehealth.",
+        "He also lists border legislation, energy production including ethanol and natural gas, aerospace work in Wichita, and water conservation over the aquifer."
+      ],
+      "site": "https://kansansformarshall.com/",
+      "siteLabel": "kansansformarshall.com",
+      "donate": "https://secure.anedot.com/kansans-for-marshall/donate",
+      "source": "https://kansansformarshall.com/"
+    },
+    "adam hamilton": {
+      "role": "Pastor running as the Democratic nominee for U.S. Senate.",
+      "bio": "Adam Hamilton's site says he is a fifth-generation Kansan who grew up in Prairie Village, has been married to LaVon for 44 years, and in 1990 started a Kansas City-area church that he has pastored for 36 years.",
+      "issues": [
+        "He says tariffs, foreign wars, and erratic leadership have raised the cost of food, medicine, and gas, and that farmers, ranchers, and small businesses are facing higher fuel, input, and health-care costs.",
+        "His listed focus is listening to Kansans, the cost of food, energy, and health care, and working with Democrats, Republicans, and independents.",
+        "He says Washington should not be a bully or a place of gridlock, and that he went on a listening tour before deciding to run."
+      ],
+      "site": "https://hamiltonforkansas.com/",
+      "siteLabel": "hamiltonforkansas.com",
+      "donate": "https://secure.actblue.com/donate/ksvf-web",
+      "source": "https://hamiltonforkansas.com/"
+    },
+    "david graham": {
+      "role": "Libertarian nominee for U.S. Senate and a solo-practice lawyer.",
+      "bio": "David Graham's site says he grew up in a working-class Kansas home, graduated from Shawnee Mission North, earned a bachelor's degree at Washburn University, and a law degree at the University of Kansas.",
+      "issues": [
+        "He says he will vote against bailouts, pork, and agencies he cannot explain, and that he wants every Epstein-related file released.",
+        "He wants license-plate cameras he says track where people drive taken down unless the government gets a warrant.",
+        "He also says he will vote to ban congressional stock trading, legalize marijuana, oppose new gun restrictions, defend the unborn, scrap climate mandates, and require Congress to vote before the country goes to war."
+      ],
+      "site": "https://grahamforliberty.com/",
+      "siteLabel": "grahamforliberty.com",
+      "donate": "",
+      "source": "https://grahamforliberty.com/"
+    },
+    "kris kobach": {
+      "role": "Kansas attorney general running for re-election.",
+      "bio": "Kris Kobach's campaign site presents him as the sitting attorney general who filed for another term and highlights work with sheriffs and other law enforcement.",
+      "issues": [
+        "The site points to prosecutions involving fentanyl trafficking and to a partnership with federal immigration enforcement that detained people with serious criminal records.",
+        "It describes a multistate settlement with Meta that requires new safety features for children on Instagram and Facebook.",
+        "It also describes a push to cut off phone numbers used for scam robocalls."
+      ],
+      "site": "https://kriskobach.com/",
+      "siteLabel": "kriskobach.com",
+      "donate": "https://secure.winred.com/kris-kobach/donate",
+      "source": "https://kriskobach.com/"
+    },
+    "chris mann": {
+      "role": "Former police officer and prosecutor running for attorney general.",
+      "bio": "Chris Mann's site says he followed his father into law enforcement, left uniformed work after a drunk driver hit him during a traffic stop, and then prosecuted cases as an assistant district attorney in Wyandotte County and as a senior staff attorney at the Kansas Securities Commission.",
+      "issues": [
+        "He says the attorney general should answer when local departments ask for help investigating and prosecuting major crimes, including drug distribution and child sexual abuse.",
+        "He wants officer training held around the state, mental-health care for first responders, and workers' compensation coverage for PTSD.",
+        "He says he will prosecute scams, push treatment access outside the northeast corner of the state, and fund shelters for people leaving domestic violence."
+      ],
+      "site": "https://chrismannforkansas.com/",
+      "siteLabel": "chrismannforkansas.com",
+      "donate": "https://secure.actblue.com/donate/cmwebsite",
+      "source": "https://chrismannforkansas.com/priorities/"
+    },
+    "pat proctor": {
+      "role": "Kansas state representative and chair of the House Elections Committee, running for secretary of state.",
+      "bio": "Pat Proctor's site says he served in the Army from 1989 to 2019, including Iraq and Afghanistan, and that he and his wife own a Thai restaurant business based in Leavenworth. He also says he teaches national-security courses at Wichita State University and chairs the Joint Committee on Kansas Security.",
+      "issues": [
+        "He says he has backed laws so that only U.S. citizens vote, so Election Day is the deadline for casting ballots, and so paper audits of elections are stronger.",
+        "He says he will watch foreign and domestic threats to elections and work with law enforcement and other states.",
+        "He says the office should help people start and run businesses and should recruit jobs to Kansas."
+      ],
+      "site": "https://patproctor4ks.com/",
+      "siteLabel": "patproctor4ks.com",
+      "donate": "https://secure.anedot.com/proctor-for-kansas/contribute",
+      "source": "https://patproctor4ks.com/"
+    },
+    "jennifer day": {
+      "role": "Former state representative running for secretary of state.",
+      "bio": "Jennifer Day's site says she has 16 years of business experience in technology, real estate, and finance, founded an interior-design company, worked eight years as an election worker, and represented Kansas House District 48.",
+      "issues": [
+        "She says voting systems should stay accurate and free of disinformation, and that she will coordinate with county election officials.",
+        "She says she will look at states with higher turnout and consider similar ways to bring eligible Kansans into voting.",
+        "She says she will keep modernizing business registration so it is easier to start and run a company."
+      ],
+      "site": "https://www.electjenday.com/",
+      "siteLabel": "electjenday.com",
+      "donate": "https://secure.actblue.com/donate/electjenday",
+      "source": "https://www.electjenday.com/"
+    },
+    "scott morgan": {
+      "role": "United Kansas candidate for secretary of state.",
+      "bio": "Scott Morgan's site says he is a fifth-generation Kansan who has worked in law and business, served on the staff of Senators Nancy Kassebaum and Bob Dole, represented the Senate on the Federal Election Commission, was chief counsel to Governor Mike Hayden, and served on the Lawrence school board.",
+      "issues": [
+        "He says the secretary of state should be a referee, not a partisan player, and that elections should be fair, secure, accessible, and professionally run.",
+        "He supports voter participation, local election officials, public transparency, secure systems, and reliable audits.",
+        "He says he will keep modernizing the office and favor practical reforms that reduce polarization."
+      ],
+      "site": "https://www.scottmorgansos.com/",
+      "siteLabel": "scottmorgansos.com",
+      "donate": "https://www.scottmorgansos.com/donate",
+      "source": "https://www.scottmorgansos.com/"
+    },
+    "tracey mann": {
+      "role": "Former Kansas lieutenant governor",
+      "bio": "The campaign says Tracey Mann served as Kansas's 50th lieutenant governor. A fifth-generation Kansan, he was born and raised on his family's farm south of Quinter and worked in the fields and feed yard with his grandfather, father, and brother.",
+      "issues": [
+        "He says life begins at conception and that he will protect unborn life.",
+        "He says he will be a voice for farmers and ranchers and wants rural communities to thrive, not just survive.",
+        "He supports the Second Amendment and says the southern border should be secured with a wall."
+      ],
+      "site": "https://www.traceymann.com/",
+      "siteLabel": "Tracey Mann for Congress",
+      "source": "https://www.traceymann.com/"
+    },
+    "sharice davids": {
+      "role": "U.S. representative for Kansas's 3rd District",
+      "bio": "The campaign says Sharice Davids was raised by a single mother who served more than 20 years in the Army, graduated from Leavenworth High, and was the first in her family to attend college. She worked her way from Johnson County Community College to Cornell Law School.",
+      "issues": [
+        "She says she is focused on lowering the cost of living for Kansas families.",
+        "She says she wants good jobs in the community.",
+        "She says government should work for people rather than special interests."
+      ],
+      "site": "https://shariceforcongress.com/",
+      "siteLabel": "Sharice Davids for U.S. Congress",
+      "donate": "https://secure.actblue.com/donate/sharice-for-congress-1?refcode=website",
+      "source": "https://shariceforcongress.com/"
+    }
+  },
+  "measures": {}
+}

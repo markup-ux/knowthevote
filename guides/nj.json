@@ -1,0 +1,338 @@
+{
+  "code": "nj",
+  "ballotSource": "https://nj.gov/state/elections/assets/pdf/election-results/2026/2026-official-general-candidates-us-senate.pdf",
+  "where": {
+    "url": "https://voter.svrs.nj.gov/polling-place-search",
+    "label": "New Jersey polling place search"
+  },
+  "offices": {
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The Constitution provides two senators from each state."
+    }
+  },
+  "people": {
+    "justin murphy": {
+      "role": "Republican candidate for U.S. Senate.",
+      "bio": "Justin Murphy is the Republican nominee. His campaign says it is dedicated to members of the armed forces and publishes a written pledge of his positions.",
+      "issues": [
+        "He says he wants the Pinelands kept intact and the Jersey Shore kept free of pollution and offshore wind turbines.",
+        "He lists parental rights, medical freedom, and Medicare for seniors among his national priorities.",
+        "He says he would argue conservative positions and calls the race a break from a long stretch without a Republican senator from New Jersey."
+      ],
+      "site": "https://jerseyjustin4senate.org/",
+      "siteLabel": "Murphy for U.S. Senate",
+      "donate": "https://secure.anedot.com/committee-to-elect-justin-murphy/dfcaeb26-8817-461c-958a-5470a64bd2ea",
+      "source": "https://jerseyjustin4senate.org/"
+    },
+    "cory booker": {
+      "role": "Candidate for U.S. Senate.",
+      "bio": "Cory Booker's campaign calls him a fighter for New Jersey and says the effort is aimed at justice and opportunity.",
+      "issues": [
+        "The site says the campaign takes no money from federal lobbyists, corporate PACs, or executives in the fossil-fuel and pharmaceutical industries.",
+        "It asks supporters to give directly and says the campaign is powered by grassroots donors."
+      ],
+      "site": "https://corybooker.com/",
+      "siteLabel": "Cory Booker for Senate",
+      "donate": "https://secure.actblue.com/donate/corybooker-2020-website",
+      "source": "https://corybooker.com/"
+    },
+    "veronica fernandez": {
+      "role": "Independent candidate for U.S. Senate.",
+      "bio": "Veronica Fernandez says she has lived in New Jersey her whole life, is married to a Navy veteran and electrician, and co-owns a small commercial electrical business. She says she previously worked as an insurance underwriter.",
+      "issues": [
+        "She says Congress has to be cleaned up so big money and special interests stop controlling it, and that the people who created the problem will not be the ones to fix it.",
+        "She says she has lived with the same costs for health care and groceries, help for a child with special needs, and trying to save for retirement.",
+        "She says she is not a lawyer and is not connected to people in power, and that new leadership has to come from outside the circle that created the problem."
+      ],
+      "site": "https://veronicaforsenate.com/",
+      "siteLabel": "Veronica Fernandez for Senate",
+      "donate": "https://secure.anedot.com/veronica/donate",
+      "source": "https://veronicaforsenate.com/about-me"
+    },
+    "donald norcross": {
+      "role": "Electrician and U.S. representative for New Jersey's 1st District.",
+      "bio": "His campaign says he is an electrician who attended community college and a skilled apprenticeship, and that he raised his first son as a single father. He says he has relied on unemployment and disability insurance, has a son in the military, and is now a grandfather.",
+      "issues": [
+        "He says he supports higher wages, jobs in skilled trades, and fair pay and safe workplaces.",
+        "He says students need affordable education that does not leave them in debt, and that every American should have affordable health care, including reproductive freedom.",
+        "He says he will protect Social Security and Medicare and keep seeking South Jersey funding for water, clean energy, and community projects."
+      ],
+      "site": "https://www.donaldnorcrossforcongress.com/",
+      "siteLabel": "donaldnorcrossforcongress.com",
+      "source": "https://www.donaldnorcrossforcongress.com/issues/"
+    },
+    "herb conaway": {
+      "role": "Physician and U.S. representative for New Jersey's 3rd District.",
+      "bio": "His campaign says he is a lifelong Burlington County resident, the son of a teacher and a nurse, who earned degrees from Princeton, Jefferson Medical College, and Rutgers Law School. He says he served 25 years in the Assembly, including as health committee chair, before his first term in Congress.",
+      "issues": [
+        "He says government does not belong in the exam room and that he is fighting to keep health care, including abortion, affordable.",
+        "He says he wants safe communities, strong public schools, good jobs, and a healthy environment.",
+        "He says he has worked to ease taxes on middle-class families, protect small businesses, and open manufacturing pathways for students."
+      ],
+      "site": "https://www.herbforcongress.com/",
+      "siteLabel": "herbforcongress.com",
+      "source": "https://www.herbforcongress.com/about"
+    },
+    "christopher smith": {
+      "role": "U.S. representative for New Jersey's 4th District.",
+      "bio": "His campaign says he has served 46 years and is running again after Ocean and Monmouth County Republican conventions endorsed him. It says he is known for constituent work and for turning local problems into national law.",
+      "issues": [
+        "He says his laws cover veterans' health care and benefits, autism, Lyme disease, Alzheimer's, and international parental child abduction.",
+        "He says he wrote the Trafficking Victims Protection Act and later anti-trafficking laws, and that he is worried crowded events such as the World Cup raise trafficking risks.",
+        "He says he backed the Working Families Tax Cut and has fought offshore wind projects he says endanger the Jersey coast."
+      ],
+      "site": "https://smith4nj.com/",
+      "siteLabel": "smith4nj.com",
+      "source": "https://smith4nj.com/about/"
+    },
+    "josh gottheimer": {
+      "role": "U.S. representative for New Jersey's 5th District.",
+      "bio": "His campaign says he was first elected in 2016 and represents most of Bergen County and parts of Sussex and Passaic. It says he draws on private-sector work and on growing up in New Jersey, including time in his father's store.",
+      "issues": [
+        "He says voters sent him to Congress to fight for lower taxes and what he calls Jersey values.",
+        "He says he works across party lines to find common ground rather than follow a national political agenda."
+      ],
+      "site": "https://josh4jersey.com/",
+      "siteLabel": "josh4jersey.com",
+      "source": "https://josh4jersey.com/about/"
+    },
+    "frank pallone jr.": {
+      "role": "U.S. representative and ranking Democrat on Energy and Commerce.",
+      "bio": "His campaign says he has represented New Jersey's 6th District, covering most of Middlesex County and the Bayshore and oceanfront of Monmouth County, since he arrived in Congress. Colleagues elected him ranking member of Energy and Commerce.",
+      "issues": [
+        "He says health care should be a right and that he has worked to make it more affordable.",
+        "He says he has fought offshore oil and gas drilling and worked to restore New Jersey's environment.",
+        "He says his focus is also growing and strengthening the middle class."
+      ],
+      "site": "https://www.pallonefornewjersey.com/",
+      "siteLabel": "pallonefornewjersey.com",
+      "source": "https://www.pallonefornewjersey.com/about"
+    },
+    "thomas kean jr.": {
+      "role": "U.S. representative for New Jersey's 7th District.",
+      "bio": "His campaign says he is in his second term and serves on Energy and Commerce and Foreign Affairs. He says he is an independent leader focused on costs, health care, and communities.",
+      "issues": [
+        "He says he is working to lower the cost of living and protect health care.",
+        "He says he wants stronger communities, reliable infrastructure, more innovation at home, and help for students.",
+        "He says he brings both parties together on common-sense solutions and wants America strong at home and abroad."
+      ],
+      "site": "https://tomkean.com/",
+      "siteLabel": "tomkean.com",
+      "source": "https://tomkean.com/meet-tom/"
+    },
+    "rob menendez": {
+      "role": "U.S. representative for New Jersey's 8th District.",
+      "bio": "His campaign says he was born and raised in Hudson County and elected to the House in 2022. He says his priorities are working families, organized labor, infrastructure, climate, and reproductive choice.",
+      "issues": [
+        "He says he is running again to defend freedoms and not back down, including over immigration enforcement.",
+        "He says the district shares values of respect, hard work, and a chance for everyone to succeed.",
+        "He says he serves as a regional whip and as northeast vice chair of the Democratic Congressional Campaign Committee."
+      ],
+      "site": "https://www.robmenendez.com/",
+      "siteLabel": "robmenendez.com",
+      "source": "https://www.robmenendez.com/meet-rob/"
+    },
+    "nellie pou": {
+      "role": "U.S. representative and former New Jersey legislator.",
+      "bio": "Her campaign says she was born and raised in a blue-collar family in Paterson, attended Paterson public schools and Kean University, and later served as the city's human-services director and business administrator. She says she was the first Latina elected to the Assembly from the 35th District and later served in the state Senate.",
+      "issues": [
+        "She says she is fighting to lower housing, grocery, and child-care costs and to extend Affordable Care Act tax credits.",
+        "She says she wants to expand health coverage, lower drug prices, and protect Medicaid for mothers and working families.",
+        "She says she supports police and first responders, and she wants to protect VA benefits for veterans."
+      ],
+      "site": "https://nelliepoufornewjersey.com/",
+      "siteLabel": "nelliepoufornewjersey.com",
+      "source": "https://nelliepoufornewjersey.com/meet-nellie/"
+    },
+    "lamonica mciver": {
+      "role": "U.S. representative for New Jersey's 10th District.",
+      "bio": "Her campaign says she was born and raised in New Jersey, is a mother, and was the youngest woman elected to the Newark council, where she served as council president. It says she is the first Black woman to represent the 10th District and the youngest person New Jersey has elected to the House.",
+      "issues": [
+        "She says she will not back down from attacks on women's rights or from a Justice Department prosecution she ties to her opposition to immigration enforcement.",
+        "She says these are hard times and that she will keep protecting her community."
+      ],
+      "site": "https://www.lamonicaforcongress.com/",
+      "siteLabel": "lamonicaforcongress.com",
+      "source": "https://www.lamonicaforcongress.com/meet-lamonica"
+    },
+    "jeff van drew": {
+      "role": "U.S. representative for New Jersey's 2nd District.",
+      "bio": "His campaign says he is focused on middle-class families and retirees in South Jersey, and that health-care costs remain one of his top priorities.",
+      "issues": [
+        "He says he is working to lower health-care costs and everyday expenses, including energy bills and delivery fees.",
+        "He says he will protect veterans' benefits, back law enforcement, and keep investing in South Jersey beaches, aviation, and infrastructure.",
+        "He says he supports border enforcement and proof of citizenship plus photo identification for federal voting, and that he will not back cuts to Social Security, Medicare, or Medicaid for people who qualify."
+      ],
+      "site": "https://vandrewforcongress.com/",
+      "siteLabel": "vandrewforcongress.com",
+      "source": "https://vandrewforcongress.com/wins/"
+    },
+    "zack mullock": {
+      "role": "Mayor of Cape May running for Congress in New Jersey's 2nd District.",
+      "bio": "His campaign says he was born and raised in South Jersey, built a business in Cape May, and is a father of three serving a second term as the city's mayor. He says he is running as an independent voice for working families.",
+      "issues": [
+        "He says he would create good-paying jobs and support small businesses.",
+        "He says he is fighting for affordable health care and lower prescription costs.",
+        "He says he wants to address housing costs so working families can stay in their communities."
+      ],
+      "site": "https://mullockforcongress.com/",
+      "siteLabel": "mullockforcongress.com",
+      "source": "https://mullockforcongress.com/about"
+    },
+    "rachel peace": {
+      "role": "Candidate for Congress in New Jersey's 4th District.",
+      "bio": "Her campaign says she is a millennial who was born and raised at the Jersey Shore and is now a single mother raising her son there. She says she is not a career politician and decided to run so regular people would have a representative.",
+      "issues": [
+        "She says people belong in power so families can go from surviving to thriving.",
+        "She says she does not accept money from corporate PACs, foreign lobbies, or billionaires."
+      ],
+      "site": "https://www.peace4shore.com/",
+      "siteLabel": "peace4shore.com",
+      "source": "https://www.peace4shore.com/about"
+    },
+    "hillary herzig": {
+      "role": "Civil servant running for Congress in New Jersey's 6th District.",
+      "bio": "Her campaign says she is a Monmouth County mother of three and the spouse of an Army veteran, with a criminal-justice degree and years of civil service in police, military, veterans, agriculture, and immigration agencies. She says she attended school in New Jersey and is running because the district needs new leadership.",
+      "issues": [
+        "She says she will fight for parental rights and transparency in education, lower taxes, and medical freedom.",
+        "She says she wants fair immigration reform, respect for veterans and seniors, and clean water and air.",
+        "She also lists equal rights and expanded liberty under the Constitution."
+      ],
+      "site": "https://www.herzigforcongress.com/",
+      "siteLabel": "herzigforcongress.com",
+      "source": "https://www.herzigforcongress.com/about-hillary"
+    },
+    "rebecca bennett": {
+      "role": "Navy helicopter pilot and health-care executive running for Congress in New Jersey's 7th District.",
+      "bio": "Her campaign says she served more than a decade as a Navy helicopter pilot and aircraft commander, earned an MBA from Wharton, and is now an Air National Guard officer, a health-care business leader, and a mother of two. She says she is running because of inflation and the cost of raising a family.",
+      "issues": [
+        "She says she would bring down costs for New Jersey families and use private-sector experience to support good-paying jobs.",
+        "She says she would expand access to health care and stand up to anyone trying to strip coverage away.",
+        "She says national security should be a priority and that the campaign is powered by people rather than billionaires, lobbyists, or corporate interests."
+      ],
+      "site": "https://rebeccabennettforcongress.com/",
+      "siteLabel": "rebeccabennettforcongress.com",
+      "source": "https://rebeccabennettforcongress.com/priorities/"
+    },
+    "joe hathaway": {
+      "role": "Mayor of Randolph running for Congress in New Jersey's 11th District.",
+      "bio": "His campaign says he grew up in a middle-class family in Clifton, played football at Yale, and worked in government and corporate communications, including as an aide to former Governor Chris Christie. He says he joined the Randolph council in 2022, became mayor in 2025, and lives there with his wife and three children.",
+      "issues": [
+        "He says he would cut taxes for first-time homebuyers, including a tax freeze and a refundable credit for closing costs.",
+        "He says he would cap federal student-loan interest rather than cancel debt outright, and invest in vocational and technical training.",
+        "He says he would expand the child tax credit and childcare tax relief, require upfront health-care prices, and finish the Gateway Tunnel."
+      ],
+      "site": "https://www.joehathawayforcongress.com/",
+      "siteLabel": "joehathawayforcongress.com",
+      "source": "https://www.joehathawayforcongress.com/platform"
+    },
+    "analilia mejia": {
+      "role": "U.S. representative and former union organizer for New Jersey's 11th District.",
+      "bio": "Her campaign says she is an Afro-Latina mother from New Jersey, the daughter of Colombian and Dominican immigrants, who watched her mother work as a seamstress until a union job changed the family's finances. She says she led New Jersey Working Families, directed politics for Bernie Sanders's 2020 campaign, and served in the Labor Department.",
+      "issues": [
+        "She says she has spent 25 years fighting for working families, including New Jersey's $15 minimum wage and paid sick days.",
+        "She says she is taking that fight to Washington and will take on bosses and bullies in both parties."
+      ],
+      "site": "https://www.analiliafornj.com/",
+      "siteLabel": "analiliafornj.com",
+      "source": "https://www.analiliafornj.com/biography"
+    },
+    "adam hamawy": {
+      "role": "Surgeon and Army veteran running for Congress in New Jersey's 12th District.",
+      "bio": "His campaign says he grew up working-class in Old Bridge, paid for Rutgers with an ROTC scholarship, and became an Army combat trauma surgeon after treating people at Ground Zero. He says he built a Princeton practice, has volunteered in disaster zones, and takes no corporate PAC money.",
+      "issues": [
+        "He says health care is a right and that he supports Medicare for All, Medicare drug-price negotiation, and a federal right to abortion.",
+        "He says public schools, including the ones he attended in Plainfield and Old Bridge, should be fully funded, with free school meals and tuition-free public college.",
+        "He says he would abolish ICE, offer a path to citizenship, and hold administrations accountable on civil rights."
+      ],
+      "site": "https://hamawyfornj.com/",
+      "siteLabel": "hamawyfornj.com",
+      "source": "https://hamawyfornj.com/priorities"
+    },
+    "damon galdo": {
+      "role": "Union carpenter running for Congress in New Jersey's 1st District.",
+      "bio": "His campaign says he is a working husband, father, and tradesman, not a career politician, who started Americas Pulse Network and the Jersey Sure podcast after an earlier run for Congress. He says South Jersey families are working harder and falling behind.",
+      "issues": [
+        "He says he would cut unnecessary federal spending and regulations, support American energy, and secure the border.",
+        "He says he would require proof of citizenship and voter identification, and give parents more say over school curriculum.",
+        "He says he would expand apprenticeships, back law enforcement against fentanyl trafficking, and make health prices and prescriptions more affordable, including through health savings accounts."
+      ],
+      "site": "https://votedamongaldo.com/",
+      "siteLabel": "votedamongaldo.com",
+      "source": "https://votedamongaldo.com/platform"
+    },
+    "michael mcguire": {
+      "role": "Marine and Navy reservist running for Congress in New Jersey's 3rd District.",
+      "bio": "His campaign says he is a husband, father, and veteran who served twice as a Marine and now serves in the Naval Reserve. He says he is not a politician and is running to put service ahead of self-interest.",
+      "issues": [
+        "He says his first priority is affordability: cutting wasteful spending and lowering taxes so working families can keep more of what they earn.",
+        "He says he wants people to feel safe at home and wants government held accountable.",
+        "He says he fully supports a ban on stock trading by members of Congress and term limits."
+      ],
+      "site": "https://michaelmcguireforcongress.com/",
+      "siteLabel": "michaelmcguireforcongress.com",
+      "source": "https://michaelmcguireforcongress.com/about/"
+    },
+    "sean kirrane": {
+      "role": "Health-care and finance executive running for Congress in New Jersey's 5th District.",
+      "bio": "His campaign says he is a lifelong New Jerseyan, a husband, and a father of two who has spent more than 20 years fixing systems in health care, finance, and technology. He says he is running as a socially moderate, fiscally disciplined Republican.",
+      "issues": [
+        "He says he would restore the full state-and-local tax deduction, end taxes on retirement income, and cap administrative waste in federal programs.",
+        "He says he would reduce taxes for working families and secure the border.",
+        "He says he wants to preserve what he calls immigrant-American values and protect elderly and disabled people."
+      ],
+      "site": "https://www.seankirrane.com/",
+      "siteLabel": "seankirrane.com",
+      "source": "https://www.seankirrane.com/platform"
+    },
+    "aristotle eliopoulos": {
+      "role": "Teacher and union representative running for Congress in New Jersey's 8th District.",
+      "bio": "His campaign says he is the son of immigrants, raised in Jersey City by parents who owned a small business, and that he is a teacher, union representative, husband, and father. He says working-class families need a voice that is not a career politician.",
+      "issues": [
+        "He says families are dealing with underfunded classrooms, rising costs, and barriers for children with special needs.",
+        "He says Washington needs practical solutions from people who understand those everyday struggles."
+      ],
+      "site": "https://arieliopoulosforcongress.com/",
+      "siteLabel": "arieliopoulosforcongress.com",
+      "source": "https://arieliopoulosforcongress.com/"
+    },
+    "rosie pino": {
+      "role": "Clifton council member running for Congress in New Jersey's 9th District.",
+      "bio": "Her campaign says she is a mother, wife, educator, cancer survivor, and Clifton councilwoman who left the Democratic Party. She says she is running because working-class families in Passaic, Bergen, and Hudson counties have been forgotten.",
+      "issues": [
+        "She says she would lower the cost of living, create good-paying jobs, and keep neighborhoods safe.",
+        "She says she will oppose large spending bills that fuel inflation and support tax cuts for working families.",
+        "She says affordable American energy brings down the cost of groceries, transportation, housing, and utilities."
+      ],
+      "site": "https://rosiepinofornj.com/",
+      "siteLabel": "rosiepinofornj.com",
+      "source": "https://rosiepinofornj.com/issues/"
+    },
+    "carmen bucco": {
+      "role": "Small-business owner running for Congress in New Jersey's 10th District.",
+      "bio": "Her campaign says she grew up in foster care, has lived on the streets, and built a small business, a home, and a foundation called Bucco's Rising Stars. She says public service should be about people rather than politics.",
+      "issues": [
+        "She says she would focus on local needs, refuse to vote for personal gain, and fight irresponsible spending.",
+        "She says her priorities are roads, schools, public safety, mental-health support, and holding the line on property taxes.",
+        "She says schools should return to the basics and taxpayer dollars should reach people who need help."
+      ],
+      "site": "https://carmenbucco.com/",
+      "siteLabel": "carmenbucco.com",
+      "source": "https://carmenbucco.com/bucco-message/"
+    },
+    "gregg mele": {
+      "role": "Attorney and professor running for Congress in New Jersey's 12th District.",
+      "bio": "His campaign says he is a lifelong New Jersey resident raised by blue-collar parents, and that he is a businessman, attorney, and graduate professor with degrees from Montclair State, Stevens, Baruch, New York Law School, and NYU. He says he is running to restore accountability and individual liberty.",
+      "issues": [
+        "He says he would cut wasteful federal programs, lower barriers to American energy, and ease rules that raise the cost of housing, food, and transportation.",
+        "He says he supports legal immigration, a secure border, and law enforcement.",
+        "He says New Jersey should get a fairer share of federal resources for its infrastructure, and that he will stand with parents, seniors, small businesses, and veterans."
+      ],
+      "site": "https://mele4america.com/",
+      "siteLabel": "mele4america.com",
+      "source": "https://www.mele4america.com/platform.html"
+    }
+  },
+  "measures": {}
+}

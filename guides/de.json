@@ -1,0 +1,98 @@
+{
+  "code": "de",
+  "ballotSource": "https://elections.delaware.gov/candidates/candidatelist/genl_fcddt_2026.html",
+  "where": {
+    "url": "https://ivote.de.gov/",
+    "label": "Delaware Department of Elections"
+  },
+  "offices": {
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    }
+  },
+  "people": {
+    "mike katz": {
+      "role": "Physician and former Delaware state senator",
+      "bio": "He says he has spent 30 years in Delaware treating patients, building businesses, and filing legislation in the state Senate. The campaign describes him as a physician and pediatric critical-care anesthesiologist.",
+      "issues": [
+        "He says he would halt wasteful spending, cut red tape, and lower energy and housing costs.",
+        "He says he would expand early-childhood education, line up schooling with the workforce, and close what he calls the zip-code gap.",
+        "He says each vote in Washington should be judged by whether it helps Delaware, including on health-care access and affordability."
+      ],
+      "site": "https://drmikekatz.com/",
+      "siteLabel": "drmikekatz.com",
+      "donate": "https://secure.winred.com/dr-mike-katz-for-u-s-senate/donate-today",
+      "source": "https://drmikekatz.com/"
+    },
+    "chris coons": {
+      "role": "U.S. senator from Delaware",
+      "bio": "He says he grew up in Hockessin and, before the Senate, spent a decade in New Castle County government, including as county executive. He says he previously worked as an attorney at W.L. Gore & Associates.",
+      "issues": [
+        "He says he has fought cuts to Medicaid and to affordable health care for Delawareans.",
+        "He says he has secured funding for affordable housing and for protecting the state's natural areas.",
+        "He says he has backed bipartisan laws on housing access, children's online safety, and health-care research."
+      ],
+      "site": "https://www.chriscoons.com/",
+      "siteLabel": "chriscoons.com",
+      "donate": "https://secure.actblue.com/contribute/page/chriscoons.com",
+      "source": "https://www.chriscoons.com/meet-chris/"
+    },
+    "david graham": {
+      "role": "U.S. Army veteran and retired executive",
+      "bio": "He says he is a former Army sergeant and a retired senior executive, and that he is running from outside a career in politics. He says military, business, and working life shaped his view of discipline, responsibility, and accountability.",
+      "issues": [
+        "He says he would bring discipline, responsibility, and accountability to Delaware's Department of Justice.",
+        "He says public safety would come first."
+      ],
+      "site": "https://grahamofdelaware.net/",
+      "siteLabel": "grahamofdelaware.net",
+      "donate": "",
+      "source": "https://grahamofdelaware.net/"
+    },
+    "kathy jennings": {
+      "role": "Attorney General of Delaware",
+      "bio": "She says she was born and raised in Wilmington, graduated from the University of Delaware and Villanova University Law School, and started as a prosecutor in the Delaware Department of Justice. She says she later served as state prosecutor and chief deputy attorney general before returning to lead the office.",
+      "issues": [
+        "She says she is running to make Delaware safer and to make justice fair and equal.",
+        "She says she prosecuted domestic violence, sexual assault, and homicide cases, and that she built the office's consumer-fraud work.",
+        "She says that as attorney general she has pursued child predators, opioid manufacturers, corruption, and elder abuse, and is pushing stronger laws on online predators."
+      ],
+      "site": "https://www.kathyfordelaware.com/",
+      "siteLabel": "kathyfordelaware.com",
+      "donate": "https://secure.actblue.com/donate/kj2026",
+      "source": "https://www.kathyfordelaware.com/meet-kathy"
+    },
+    "joseph arminio": {
+      "role": "Candidate for Congress",
+      "bio": "The campaign says Joe Arminio was born and raised in Wilmington, earned a political-science doctorate from MIT, and has taught and done policy work tied to defense. He says he is running as an America First candidate who wants Main Street to rise.",
+      "issues": [
+        "He says private and public debt are national emergencies and calls for a one-time debt jubilee plus action on the federal debt.",
+        "He says he wants to stop endless wars, reform education, and restore what he calls constitutional government.",
+        "He describes the campaign as a populist alternative to an incumbent he says is continuing a failing economy and those wars."
+      ],
+      "site": "https://www.drjoeforcongress.com/",
+      "siteLabel": "Dr. Joe For Congress",
+      "donate": "https://www.drjoeforcongress.com/donate",
+      "source": "https://www.drjoeforcongress.com/"
+    },
+    "sarah mcbride": {
+      "role": "U.S. representative for Delaware",
+      "bio": "The campaign says Sarah McBride, a Wilmington native, represents Delaware's at-large House seat after serving the state's 1st Senate District from 2020 to 2025. In Congress she sits on Foreign Affairs and on Science, Space, and Technology and is a House Democratic deputy whip for policy.",
+      "issues": [
+        "She says working people are being squeezed by grocery, gas, health, housing, and energy bills, and that policy should focus on them rather than the wealthiest.",
+        "Her priorities include a care economy, health care, making life more affordable, and workers' rights.",
+        "As a state senator she highlights the Healthy Delaware Families Act, a paid family and medical leave program, and a Medicaid bill she says brought large new funding to the state."
+      ],
+      "site": "https://sarahmcbride.com/",
+      "siteLabel": "Sarah McBride for Congress",
+      "donate": "https://secure.actblue.com/donate/mcb_web?refcode=web_nav",
+      "source": "https://sarahmcbride.com/about/"
+    }
+  },
+  "measures": {}
+}

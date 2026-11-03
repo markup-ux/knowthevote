@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <defs>
+    <clipPath id="al-flag">
+      <rect width="300" height="200"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#al-flag)">
+    <rect width="300" height="200" fill="#FFFFFF"/>
+    <g stroke="#9E1B32" stroke-width="64">
+      <line x1="-60" y1="-40" x2="360" y2="240"/>
+      <line x1="360" y1="-40" x2="-60" y2="240"/>
+    </g>
+  </g>
+</svg>

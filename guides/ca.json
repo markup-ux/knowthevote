@@ -1,0 +1,1477 @@
+{
+  "code": "ca",
+  "ballotSource": "California Secretary of State, Certified List of Candidates for the November 3, 2026, General Election, https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf; Los Angeles City Clerk, certified candidate contact list for the November 3, 2026 general municipal election, https://cityclerk.lacity.org/election/CANDIDATE_VIDEOS_AND_CONTACT_INFO_NOV2026.pdf; City of Oakland, qualified candidates for the November 3, 2026 election, https://www.oaklandca.gov/files/assets/city/v/23/city-clerk/documents/elections/nov-2026-election-candidate-list.pdf",
+  "where": {
+    "url": "https://www.sos.ca.gov/elections/polling-place",
+    "label": "Find Your Polling Place"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials."
+    },
+    "Lt. Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The lieutenant governor is next in line if the governor cannot finish the term. Any other duties are set by state law."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state."
+    },
+    "Los Angeles Mayor": {
+      "kicker": "City · Vote for one",
+      "job": "The mayor is the city's chief executive."
+    },
+    "Oakland Mayor": {
+      "kicker": "City · Vote for one",
+      "job": "The mayor is the city's chief executive."
+    }
+  },
+  "people": {
+    "steve hilton": {
+      "role": "Candidate for governor of California.",
+      "bio": "Steve Hilton says California has become more expensive because insiders built a system that protects the political class. His campaign plan has two priorities, which he calls Califordable and CaliFuture.",
+      "issues": [
+        "He says he will bring gasoline to $3, cut utility bills in half, and eliminate state income tax on the first $150,000.",
+        "He says he will clear the rules and fees that keep young families from buying starter homes.",
+        "He says every student should read by third grade, every school should offer skills training, and the annual $800 small-business tax should end."
+      ],
+      "site": "https://stevehiltonforgovernor.com/",
+      "siteLabel": "stevehiltonforgovernor.com",
+      "donate": "",
+      "source": "https://stevehiltonforgovernor.com/plan"
+    },
+    "xavier becerra": {
+      "role": "Former California attorney general running for governor.",
+      "bio": "Xavier Becerra says he is running for governor so families can afford what he calls the California Dream. He points to his record as the state's attorney general challenging the Trump administration.",
+      "issues": [
+        "He says health care is a human right and that he would strengthen Medi-Cal and build toward a universal single-payer system.",
+        "He says he would treat housing as essential infrastructure and build more homes so costs stop rising out of control.",
+        "He says he would take on insurance, childcare, and grocery costs by standing up to price gouging and unjustified rate hikes."
+      ],
+      "site": "https://www.xavierbecerra2026.com/",
+      "siteLabel": "xavierbecerra2026.com",
+      "donate": "https://secure.actblue.com/donate/mw_xb_2025_web",
+      "source": "https://www.xavierbecerra2026.com/priorities/"
+    },
+    "gloria romero": {
+      "role": "Former California state senator running for lieutenant governor.",
+      "bio": "Gloria Romero, a former state senator and education-committee chair, says she wrote the Parent Trigger and Open Enrollment laws and became a Republican in 2024. She says she is running to keep working on schools and to lower the cost of living.",
+      "issues": [
+        "She says she will use the lieutenant governor's seats on public college and university boards to restore merit in admissions and to hold campuses accountable for student safety.",
+        "She says community colleges need tighter oversight so public money goes to students learning job skills.",
+        "She says she will push faster rebuilding after wildfires, simpler coastal and land permitting, and land management that puts communities ahead of paperwork."
+      ],
+      "site": "https://gloriajromero.com/",
+      "siteLabel": "gloriajromero.com",
+      "donate": "https://secure.anedot.com/gloria-romero-for-lt-governor-2026/donate",
+      "source": "https://gloriajromero.com/"
+    },
+    "fiona ma": {
+      "role": "California state treasurer and certified public accountant running for lieutenant governor.",
+      "bio": "Fiona Ma, a CPA, is California's state treasurer and says she is running for lieutenant governor. She describes that office as the state's banker, overseeing investments, bond debt, and financing for schools, roads, housing, and other public projects.",
+      "issues": [],
+      "site": "https://fionama.com/",
+      "siteLabel": "fionama.com",
+      "donate": "https://secure.actblue.com/donate/fiona-ma-for-lieutenant-governor-2026-1",
+      "source": "https://fionama.com/about/"
+    },
+    "michael gates": {
+      "role": "Former Huntington Beach city attorney running for attorney general.",
+      "bio": "Michael Gates says that as Huntington Beach city attorney he started a local criminal prosecution program aimed at quality-of-life crimes. He says public safety would be his first priority as attorney general.",
+      "issues": [
+        "He says he will make statewide enforcement of Proposition 36 his top task and will prioritize prosecution of violent and repeat offenders.",
+        "He says cities and counties, not the state, should control zoning and housing decisions, and that he will defend that local authority.",
+        "He says he will investigate fraud in state programs and sue to recover public money."
+      ],
+      "site": "https://www.gates4ag.com/",
+      "siteLabel": "gates4ag.com",
+      "donate": "https://secure.anedot.com/gates-for-attorney-general/donate",
+      "source": "https://www.gates4ag.com/issues"
+    },
+    "rob bonta": {
+      "role": "California attorney general running for re-election.",
+      "bio": "Rob Bonta, the attorney general, says he is the people's lawyer and that the job is to hold lawbreakers accountable, including people in positions of power. His campaign is asking voters to re-elect him.",
+      "issues": [
+        "He says he is defending California's gun laws, including the assault-weapons ban, and expanding programs that take guns from people barred from having them.",
+        "He says health care is a human right and that he is defending the state's reproductive-care laws and coverage expansions.",
+        "He says he is taking polluters to court, especially where pollution falls on poorer communities, and pursuing employers who steal wages."
+      ],
+      "site": "https://robbonta.com/",
+      "siteLabel": "robbonta.com",
+      "donate": "https://secure.actblue.com/donate/rb-web-26",
+      "source": "https://robbonta.com/issues/"
+    },
+    "donald wagner": {
+      "role": "Candidate for California secretary of state.",
+      "bio": "Don Wagner says he is running for secretary of state so every eligible voter can take part and only eligible voters cast ballots.",
+      "issues": [
+        "He says elections should be secure, efficient, accurate, and accessible.",
+        "He says the office's business division should be friendly to small business.",
+        "He says he supports the voter-identification initiative on the November ballot."
+      ],
+      "site": "https://wagnerforcalifornia.com/",
+      "siteLabel": "wagnerforcalifornia.com",
+      "donate": "",
+      "source": "https://wagnerforcalifornia.com/"
+    },
+    "shirley weber": {
+      "role": "California secretary of state running for re-election.",
+      "bio": "Dr. Shirley Weber says that in her first year as secretary of state she oversaw a statewide election and worked to make vote-by-mail permanent. Her campaign says she is running for the office again in 2026.",
+      "issues": [
+        "She says she will work with local elections officials to protect and expand access to the ballot.",
+        "She says she will make elections, lobbyist registration, and campaign finance easier for the public to see.",
+        "She says she will tighten the office's cybersecurity and rebuild voter-education programs for people who were incarcerated, including people on parole after Proposition 17."
+      ],
+      "site": "https://drshirleyweber.com/",
+      "siteLabel": "drshirleyweber.com",
+      "donate": "https://secure.actblue.com/donate/2025-website",
+      "source": "https://drshirleyweber.com/priorities/"
+    },
+    "karen bass": {
+      "role": "Mayor of Los Angeles running for re-election.",
+      "bio": "Karen Bass is campaigning for another term as mayor. Her campaign page says she is standing up for Angelenos against federal immigration raids.",
+      "issues": [
+        "She says the Trump administration's ICE raids and militarized actions have no purpose other than to create fear.",
+        "She says those actions damage the city's economy and tear families apart."
+      ],
+      "site": "https://www.karenbass.com/",
+      "siteLabel": "karenbass.com",
+      "donate": "https://secure.actblue.com/donate/krb-web-2026-general?refcode=web",
+      "source": "https://www.karenbass.com/"
+    },
+    "nithya raman": {
+      "role": "Los Angeles councilmember running for mayor.",
+      "bio": "Nithya Raman, a councilmember, describes herself as a progressive Democrat, a mother, an urban planner, and an immigrant. She says she won her council seat as an outsider and has focused on affordability and holding city government to account.",
+      "issues": [
+        "She says Los Angeles must build much more housing, at every price level, so more people can afford a home.",
+        "She says she will fill potholes, pave roads, plant trees, turn streetlights on, and put a park near where people live.",
+        "She says a 911 call should bring the right response, including unarmed responders where armed officers are not needed, and that she will protect residents from immigration raids and landlord harassment."
+      ],
+      "site": "https://www.nithyaforthecity.com/",
+      "siteLabel": "nithyaforthecity.com",
+      "donate": "https://secure.actblue.com/donate/nithyaraman?refcode=website",
+      "source": "https://www.nithyaforthecity.com/"
+    },
+    "barbara lee": {
+      "role": "Oakland mayor running for re-election.",
+      "bio": "Barbara Lee says that in her year as mayor she has worked to root out corruption at City Hall, reopen fire stations, and stabilize the budget. She is asking voters for another four years.",
+      "issues": [
+        "She says streets are getting cleaner and that she wants more good-paying local jobs.",
+        "She says she will keep a broad approach to homelessness and add affordable housing across the city.",
+        "She says she is using prevention programs against crime and wants Oakland to be a model of accountable city government."
+      ],
+      "site": "https://barbaralee4oakland.com/",
+      "siteLabel": "barbaralee4oakland.com",
+      "donate": "https://barbaralee4oakland.com/donate",
+      "source": "https://barbaralee4oakland.com/"
+    },
+    "brenda grisham": {
+      "role": "Business owner and victims' rights advocate running for Oakland mayor.",
+      "bio": "Brenda Grisham says she is a longtime community advocate and business owner who has stood with Oakland families for safer neighborhoods. She says she announced for mayor in 2025 and is on the November 3, 2026 ballot.",
+      "issues": [
+        "She says she will focus on safer neighborhoods and stronger public safety.",
+        "She says city government should be more accountable and transparent, and that local businesses need support to grow.",
+        "She says she wants more stable housing, cleaner streets, and stronger neighborhood services."
+      ],
+      "site": "https://www.brendaforoakland.com/",
+      "siteLabel": "brendaforoakland.com",
+      "donate": "",
+      "source": "https://www.brendaforoakland.com/meet_brenda"
+    },
+    "julius robinson": {
+      "role": "Community finance executive running for Oakland mayor.",
+      "bio": "Julius Robinson says he grew up in Watts and has spent more than four decades connecting capital, opportunity, and communities. He says he is running because Oakland needs practical results on safety, housing, and trust in City Hall.",
+      "issues": [
+        "He says the city should be safer and cleaner, and that businesses need support to grow.",
+        "He says housing, homelessness, and economic opportunity have to be handled together.",
+        "He says local government should operate with more transparency and accountability."
+      ],
+      "site": "https://www.julius4mayor.com/",
+      "siteLabel": "julius4mayor.com",
+      "donate": "https://secure.actblue.com/donate/julius-robinson-1",
+      "source": "https://www.julius4mayor.com/about"
+    },
+    "mindy pechenuk": {
+      "role": "Educator running for Oakland mayor.",
+      "bio": "Mindy Pechenuk says she is a classical musician and educator running for mayor on what she calls a common-sense platform. She says Oakland should put residents first and rebuild the local economy.",
+      "issues": [
+        "She says she will grow the police force, end federal oversight of the department, and target open-air drug markets and fentanyl trafficking.",
+        "She says she will bring in an outside audit of city finances, including nonprofits, and use tax incentives to reopen businesses and add manufacturing.",
+        "She says people without housing who need drug or mental-health treatment should get it, and that the job training and housing help she describes would be limited to American citizens."
+      ],
+      "site": "https://electmindy.com/",
+      "siteLabel": "electmindy.com",
+      "donate": "https://secure.anedot.com/pechenuk-for-oakland-mayor-2026/6ae56951-8282-4eca-bdcb-9facf56ceec4",
+      "source": "https://electmindy.com/issues"
+    },
+    "james gallagher": {
+      "role": "California assemblymember running for Congress.",
+      "bio": "James Gallagher's campaign says he was born in Yuba City, earned degrees from UC Berkeley and UC Davis School of Law, and has represented an Assembly district since 2014, including as Assembly minority leader. It says he previously served on the Sutter County Board of Supervisors and works as an attorney and in his family's farming operation.",
+      "issues": [
+        "He says he would lower taxes, fees, and regulations to make life more affordable for North State families.",
+        "He says he would pass tougher crime laws, expand energy production to bring prices down, and continue the president's border security approach.",
+        "He says he would defend property rights and parental rights and shield farms and businesses from excessive regulation."
+      ],
+      "site": "https://electjamesgallagher.com/",
+      "siteLabel": "James Gallagher for Congress",
+      "source": "https://electjamesgallagher.com/"
+    },
+    "mike mcguire": {
+      "role": "California Senate leader running for Congress.",
+      "bio": "Mike McGuire's campaign says he was raised by his mother and grandmother on a small ranch in Sonoma County, won a school board seat at 19, and later served as a county supervisor and as leader of the state Senate. It says he is running to represent the 1st Congressional District.",
+      "issues": [
+        "He says he would pass Medicare for All, guarantee coverage and mental health care, and keep rural hospitals open.",
+        "He says he would raise wages, challenge corporate price gouging, and build on state steps he describes as lowering utility bills, expanding child care, and making college more affordable.",
+        "He says he would defend abortion, contraception, and IVF access, and he highlights work to double the number of state firefighters and fund wildfire prevention."
+      ],
+      "site": "https://www.votemikemcguire.com/",
+      "siteLabel": "Mike McGuire for Congress",
+      "donate": "https://secure.actblue.com/donate/mmca-web?refcode=web",
+      "source": "https://www.votemikemcguire.com/issues"
+    },
+    "robin littau": {
+      "role": "School board member and small-business owner running for Congress.",
+      "bio": "Robin Littau's campaign says she is a Republican, an Enterprise Elementary school board member, a Coast Guard veteran, and the owner of a cleaning company and a local magazine. It says she was born in South Dakota, later settled in Redding, and is running to represent the 2nd Congressional District.",
+      "issues": [
+        "She says she would cut excessive regulation, support local control, and require more responsible federal spending.",
+        "She says she would change immigration policy, including citizenship requirements, and back a parental bill of rights against mandates.",
+        "She says she would support law enforcement, stronger deterrence against people who harm children, small businesses, and constitutional rights."
+      ],
+      "site": "https://www.littauforcongress.com/",
+      "siteLabel": "Littau for Congress",
+      "source": "https://www.littauforcongress.com/about-5"
+    },
+    "jared huffman": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Jared Huffman's campaign says he has represented a North Coast district since 2012 and was chosen in 2025 as the top Democrat on the House Natural Resources Committee. It says he previously served in the California Assembly, was a senior attorney at the Natural Resources Defense Council, and lives in Marin.",
+      "issues": [
+        "He says he has worked on climate action, wildfire disaster relief, dam removal on the Klamath River, and offshore wind in Humboldt County.",
+        "He says he has pushed federal money for local infrastructure, tribal clean energy and broadband, salmon habitat, and toxic-site cleanup.",
+        "He says he has defended democracy and the separation of church and state, and sought stronger school funding for students with disabilities."
+      ],
+      "site": "https://www.jaredhuffman.com/",
+      "siteLabel": "Jared Huffman for Congress",
+      "donate": "https://secure.actblue.com/donate/jh-website-up?refcode=header&amount=10",
+      "source": "https://www.jaredhuffman.com/about-jared"
+    },
+    "robb tucker": {
+      "role": "Nevada County supervisor running for Congress.",
+      "bio": "Robb Tucker's campaign says he was born in Nevada County, holds degrees from Pepperdine and Wheaton, and led a family mobile-home business before it was sold. It says he was elected to the Board of Supervisors in 2024 and has focused there on public safety, small businesses, and local quality of life.",
+      "issues": [
+        "He says federal rules written for big cities stall rural work on forests, water, housing, and roads, and he wants early county consultation and rural-impact reviews.",
+        "He says Washington should back border enforcement, fentanyl prosecutions, and equipment and hiring for rural sheriff's offices.",
+        "He says homelessness funding should require treatment and fewer unsheltered encampments, and that federal land managers should help clear hazardous fuels before wildfires."
+      ],
+      "site": "https://robbtucker.com/",
+      "siteLabel": "Robb Tucker for Congress",
+      "source": "https://robbtucker.com/platform/"
+    },
+    "ami bera": {
+      "role": "Physician and U.S. representative running in a new district.",
+      "bio": "Ami Bera's campaign says he is a physician first elected to Congress in 2012 after working as Sacramento County's chief medical officer and teaching at UC Davis. It says he is a first-generation American who attended California public schools through medical school and is running in the new 3rd Congressional District.",
+      "issues": [
+        "He says every American should have affordable coverage, and he opposes turning Medicare into a voucher system.",
+        "He says he would cut waste and fraud, strengthen the doctor-patient relationship, and invest in research including stem cell research.",
+        "He says rural and mountain communities need primary care, telehealth, broadband, and stable funding for rural hospitals and clinics."
+      ],
+      "site": "https://www.beraforcongress.com/",
+      "siteLabel": "Dr. Ami Bera for Congress",
+      "donate": "https://secure.actblue.com/donate/ami-bera-1",
+      "source": "https://www.beraforcongress.com/issues/healthcare"
+    },
+    "mike thompson": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Mike Thompson's campaign says he was first elected to Congress in 1998 after serving in the California Senate, where he chaired the Budget Committee. It says he is a Vietnam veteran who received a Purple Heart, sits on Ways and Means, and owns a small vineyard.",
+      "issues": [
+        "He says he voted for the Affordable Care Act, helped let Medicare negotiate some drug prices, and wants telehealth expanded and made permanent.",
+        "He says he is fighting health-coverage cuts that he argues would take insurance away from millions of people.",
+        "He says jobs and a lower cost of living are his priority, pointing to infrastructure investment and an effort to restore clean-energy tax credits ended by a recent law."
+      ],
+      "site": "https://www.mikethompsonforcongress.com/",
+      "siteLabel": "Mike Thompson for Congress",
+      "source": "https://www.mikethompsonforcongress.com/issues/health-care"
+    },
+    "eric jones": {
+      "role": "Business leader running for Congress.",
+      "bio": "Eric Jones's campaign says he grew up in rural Maine, attended Yale, and helped build companies in health care, banking, and education before moving to Napa with his family. It says he accepts no corporate PAC money, has signed a term-limits pledge, and is running in the 4th Congressional District.",
+      "issues": [
+        "He says corruption and corporate money drive the cost of living, and he wants corporate funds out of politics, a ban on congressional stock trading, and an end to gerrymandering.",
+        "He says he would cut taxes for working people, challenge utility monopolies, add Medicare coverage for vision, dental, hearing, and in-home care, and lower prescription prices.",
+        "He says he would defend Social Security, secure water and family farms, and refuse blank checks for war."
+      ],
+      "site": "https://www.ericjones.us/",
+      "siteLabel": "Eric Jones for Congress",
+      "donate": "https://secure.actblue.com/donate/ejfc",
+      "source": "https://www.ericjones.us/priorities"
+    },
+    "tom mcclintock": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Tom McClintock's campaign says he is running for re-election in a district covering the Sierra foothills and Central Valley counties. It says he serves on the Budget and Natural Resources committees, chairs the Federal Lands Subcommittee, and previously spent 22 years in the California Legislature.",
+      "issues": [
+        "He says the national debt is the country's greatest danger and wants a balanced-budget amendment, yearly review of mandatory spending, and no spending that Congress has not authorized.",
+        "He says environmental review and lawsuits have blocked routine forest thinning, leaving overcrowded federal forests to burn.",
+        "He says he has pushed legislation to speed removal of dead timber, replanting, and management that reduces catastrophic fire."
+      ],
+      "site": "https://www.tommcclintock.com/",
+      "siteLabel": "Tom McClintock for Congress",
+      "source": "https://www.tommcclintock.com/issues/forest-policy/"
+    },
+    "michael masuda": {
+      "role": "Engineer running for Congress.",
+      "bio": "Michael Masuda's campaign says he grew up in Amador County, studied electrical engineering at Cal Poly, and helped develop military technology at the Johns Hopkins Applied Physics Laboratory. It says he later served as a foreign affairs officer at the State Department and lives in the 5th District with his wife and two young children.",
+      "issues": [
+        "He says he would lower housing, health-care, and energy costs and send more federal money back to rural communities.",
+        "He says wildfire work should include thinning, prescribed fire, home hardening, and faster disaster aid so insurance is more available.",
+        "He says he would keep rural hospitals open, expand telehealth, protect Medicare and Medi-Cal, and support water and markets for farmers."
+      ],
+      "site": "https://www.votemasuda.com/",
+      "siteLabel": "Michael Masuda for Congress",
+      "donate": "https://secure.actblue.com/donate/masuda_websiteform",
+      "source": "https://www.votemasuda.com/issues"
+    },
+    "richard pan": {
+      "role": "Physician and former state senator running for Congress.",
+      "bio": "Richard Pan's campaign says he is a doctor and public-health advocate who, in the California Senate, expanded health coverage, cut the price of insulin, and wrote child-safety laws. It says he is the son of immigrants from Taiwan and is running for the 6th Congressional District.",
+      "issues": [
+        "He says he would defend the Affordable Care Act and Medicare, stop insurers from denying care doctors prescribe, and lower prescription prices.",
+        "He says he would require universal background checks, ban assault weapons, and fund first responders and violence-prevention programs.",
+        "He says he would create a path to citizenship, overhaul immigration enforcement, and write abortion rights into federal law."
+      ],
+      "site": "https://drpanforcongress.com/",
+      "siteLabel": "Dr. Pan for Congress",
+      "donate": "https://secure.actblue.com/donate/pan-web",
+      "source": "https://drpanforcongress.com/"
+    },
+    "kevin kiley": {
+      "role": "Independent U.S. representative running for another term.",
+      "bio": "Kevin Kiley's campaign says he grew up in the communities of the new 6th District, taught high school English, and prosecuted cases as a deputy attorney general before serving in the Assembly and winning a House seat in 2022. It says he chairs the subcommittee covering K-12 education and child care.",
+      "issues": [
+        "He says he has worked across parties on measures to lower the cost of gasoline, groceries, utilities, and insurance.",
+        "He points to a federal grant to ease traffic near Highways 65 and 80 and to a Lake Tahoe restoration law he says funds wildfire mitigation.",
+        "He says he helped restore Medicare funding for senior programs and is focused on prosecuting violent crime and protecting children from fentanyl."
+      ],
+      "site": "https://electkevinkiley.com/",
+      "siteLabel": "Kevin Kiley for Congress",
+      "source": "https://electkevinkiley.com/about/"
+    },
+    "doris matsui": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Doris Matsui's campaign says she was born in a Japanese American incarceration camp, grew up on a Central Valley farm, and graduated from UC Berkeley. It says she has served in Congress for more than two decades and is running in the redrawn 7th District.",
+      "issues": [
+        "She says she has secured billions for flood protection, including Folsom Dam and levee work, and helped pass the Affordable Care Act and Medicare drug-price provisions.",
+        "She says she would expand telehealth and mental-health clinics and keep pushing clean-energy and grid programs that lower bills.",
+        "She says she opposes immigration raids she calls unlawful, votes against funding ICE, and objects to masked agents operating outside the rule of law."
+      ],
+      "site": "https://matsuiforcongress.com/",
+      "siteLabel": "Doris Matsui for Congress",
+      "donate": "https://secure.actblue.com/donate/doris-matsui-2",
+      "source": "https://matsuiforcongress.com/issues/"
+    },
+    "mai vang": {
+      "role": "Sacramento City Council member running for Congress.",
+      "bio": "Mai Vang's campaign says she is the daughter of Hmong refugees, the oldest of 16 children, and the first in her family to attend college. It says she has been a teacher, a school board member, and a Sacramento City Council member focused on neighborhoods the city had overlooked.",
+      "issues": [
+        "She says she takes no corporate PAC money and would raise the minimum wage with inflation, tax billionaires, and pass the PRO Act.",
+        "She says she would fight for Medicare for All, an end to medical debt, and federal protection of reproductive care.",
+        "She says she would fund more affordable housing, stop corporations from buying up single-family homes, and pause new data centers so households do not pay their power costs."
+      ],
+      "site": "https://www.maiforus.com/",
+      "siteLabel": "Mai Vang for Congress",
+      "donate": "https://secure.numero.ai/contribute/Mai-Vang-for-Congress?refcode=website",
+      "source": "https://www.maiforus.com/platform"
+    },
+    "rudy recile": {
+      "role": "Retired Army major running for Congress.",
+      "bio": "Rudy Recile's campaign says he is a retired Army major with more than 26 years of service, a small-business owner, and a former Agriculture Department employee. It says his last post brought him to Fairfield and that he and his wife stayed in California after he retired in 2014.",
+      "issues": [
+        "He says public-school results are too low and wants a return to reading, writing, and math, with parents told what their children are taught.",
+        "He says education money should follow the child, including tax credits for private school, home school, and extra tuition.",
+        "He says Congress should move long-stalled veterans disability bills, and he wants election systems open to verification so no one company controls voting."
+      ],
+      "site": "https://rudyforuscongress.com/",
+      "siteLabel": "Rudy Recile for Congress",
+      "donate": "https://secure.anedot.com/rudy-for-congress/donate?embed=true",
+      "source": "https://rudyforuscongress.com/index.php/issues/education-and-school-choice/"
+    },
+    "john garamendi": {
+      "role": "U.S. representative running for another term.",
+      "bio": "John Garamendi's campaign says he was raised on a ranch in Mokelumne Hill, served in the Peace Corps, and held office as a legislator, insurance commissioner, and lieutenant governor before his election to Congress in 2009. It says he and his wife still raise cattle and grow pears.",
+      "issues": [
+        "He says Make It In America rules should steer federal purchases to U.S. manufacturing, and he highlights a higher Buy America share for buses and rail.",
+        "He supports a national public option, rural hospitals and clinics, and letting Medicare negotiate drug prices.",
+        "He says he would stop Delta tunnel projects that could drain the estuary and keep pushing water storage such as Sites Reservoir."
+      ],
+      "site": "https://www.garamendi.org/",
+      "siteLabel": "John Garamendi for Congress",
+      "source": "https://www.garamendi.org/issues"
+    },
+    "john mcbride": {
+      "role": "Strength coach running for Congress.",
+      "bio": "John McBride's campaign says he moved from Connecticut to California in 1989 to be the first strength and conditioning coach at the University of the Pacific and later coached at St. Mary's High School. It says he has been married since 1994, has five children, and is running in the 9th Congressional District.",
+      "issues": [
+        "He says he would remove dangerous chemicals from food and water, emphasize medical freedom and natural healing, and oppose what he calls death boards.",
+        "He says he would back local police, prosecute crime, support youth mental health, and strengthen the southern border.",
+        "He says farms need water rights and less federal control, and he wants lower taxes, no tax on Social Security, and deep cuts in spending."
+      ],
+      "site": "https://www.johnmcbrideforcongress.com/",
+      "siteLabel": "John McBride for Congress",
+      "source": "https://www.johnmcbrideforcongress.com/priorities"
+    },
+    "josh harder": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Josh Harder's campaign says his family settled in Manteca generations ago to farm peaches, and that he worked through Stanford and Harvard before a business career. It says he lives in Tracy with his wife and two daughters and first ran to protect coverage for people with pre-existing conditions, including his brother.",
+      "issues": [
+        "He says he would cut insulin and other drug prices, repeal federal and state gas taxes, and get housing costs under control.",
+        "He says he would bring ag-tech, technology, and clean-energy jobs to the Valley, treat homelessness as an emergency with mental-health and job help, and fund police work against methamphetamine and fentanyl.",
+        "He says he would stop a Delta tunnel he argues would send Valley water south, build storage, and keep a path to citizenship for Dreamers alongside border enforcement against traffickers."
+      ],
+      "site": "https://harderforcongress.com/",
+      "siteLabel": "Josh Harder for Congress",
+      "donate": "https://secure.actblue.com/donate/jhca-09-website",
+      "source": "https://harderforcongress.com/issues/"
+    },
+    "jeff frese": {
+      "role": "Small-business owner running for Congress.",
+      "bio": "Jeff Frese's campaign says he is a husband, father, and coach in Moraga who built a national snack brand from his kitchen and has run consumer companies. It says he is not a politician and is running in the 10th Congressional District without PAC money.",
+      "issues": [
+        "He says he would set an eight-year congressional term limit, ban members from trading stocks, withhold pay if there is no budget, and close the lobbying revolving door.",
+        "He says he would stop deficit spending that raises mortgage rates, cut building red tape, and bar Wall Street and foreign buyers from single-family homes and farmland.",
+        "He says he would back police and fentanyl prosecutions, require voter ID with paper ballots, put classrooms ahead of bureaucracy, and refuse cuts to Social Security and Medicare."
+      ],
+      "site": "https://freseforcongress.com/",
+      "siteLabel": "Frese for Congress",
+      "donate": "https://secure.winred.com/frese-for-congress/donate-today",
+      "source": "https://freseforcongress.com/"
+    },
+    "mark desaulnier": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Mark DeSaulnier's campaign says he drove trucks, waited tables, and ran Bay Area restaurants before serving on the Concord council, as county supervisor, and in the Legislature. It says he has represented an East Bay House district, sits on Transportation and Infrastructure, and is the top Democrat on Ethics.",
+      "issues": [
+        "He says workers need a voice as artificial intelligence changes jobs, and he points to proposals on layoffs, CEO pay, and the right to organize.",
+        "He says housing, transit, and wages have to be tackled together so families are not pushed out of the Bay Area, and he highlights clean-air rules and a national electric-vehicle charging program.",
+        "He says he would protect cancer-research funding, codify abortion and contraception access, and pursue immigration enforcement that does not separate families."
+      ],
+      "site": "https://desaulnierforcongress.com/",
+      "siteLabel": "Mark DeSaulnier for Congress",
+      "donate": "https://secure.actblue.com/donate/desaulnier2024",
+      "source": "https://desaulnierforcongress.com/issues/"
+    },
+    "connie chan": {
+      "role": "San Francisco supervisor running for Congress.",
+      "bio": "Connie Chan's campaign says she was born in Hong Kong, moved to San Francisco at 13, and graduated from Galileo High School and UC Davis. It says she is the District 1 supervisor and has chaired the Board of Supervisors budget committee since 2023.",
+      "issues": [
+        "She says Washington should stop cutting public programs to pay for tax breaks for billionaires and corporations, and should rebuild worker bargaining power.",
+        "She says she would reform the tax and budget system and defend rights she says are under threat.",
+        "She points to her work on affordable housing, small-business and union protections, and legal help for immigrants facing enforcement."
+      ],
+      "site": "https://www.conniechansf.com/",
+      "siteLabel": "Connie Chan for Congress",
+      "donate": "https://secure.actblue.com/donate/chan-website",
+      "source": "https://www.conniechansf.com/issues"
+    },
+    "scott wiener": {
+      "role": "California state senator running for Congress.",
+      "bio": "Scott Wiener's campaign says he has worked for San Francisco for 28 years as a deputy city attorney, supervisor, and state senator, and that he has written a large body of state law. It says he is a gay man who helped build the city's LGBT Community Center and chaired the Senate Budget Committee.",
+      "issues": [
+        "He says he would abolish ICE, ban face coverings that hide agents, let people sue federal officers, end private immigration prisons, and create a path to citizenship.",
+        "He says he would push a plan to build 8 million homes in a decade, including social housing and a larger housing tax credit, paid for by reversing parts of corporate and high-end tax cuts.",
+        "He says he would pass the Equality Act, defend Medicaid and the Affordable Care Act on the way to Medicare for All, and increase federal transit operating funds."
+      ],
+      "site": "https://www.scottwiener.com/",
+      "siteLabel": "Scott Wiener for Congress",
+      "donate": "https://secure.actblue.com/donate/sw_website",
+      "source": "https://www.scottwiener.com/platform"
+    },
+    "lateefah simon": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Lateefah Simon's campaign says she is a civil-rights advocate running for re-election in the 12th District, a vice chair of the Progressive and Equality caucuses, and the first Muslim woman elected to Congress from California. It says she was born blind, started organizing as a teenager, and lives in Oakland.",
+      "issues": [
+        "Her campaign names public safety, affordable housing, homelessness, and job creation among her priorities.",
+        "She also lists health care for all, reproductive freedom, immigration, disability rights, and LGBTQ rights.",
+        "She highlights voting rights, climate, transportation, and what she calls a care economy."
+      ],
+      "site": "https://www.lateefahsimon.com/",
+      "siteLabel": "Lateefah Simon for Congress",
+      "donate": "https://secure.actblue.com/donate/ls-website?refcode=nav-button",
+      "source": "https://www.lateefahsimon.com/priorities"
+    },
+    "jamie joyce": {
+      "role": "Researcher running for Congress.",
+      "bio": "Jamie Joyce's campaign says she is a Berkeley researcher who has worked on electric-grid policy, democracy technology, and artificial intelligence, including fellowships and tools for reading legislation. It says her mother left school at 13 to work, and that Joyce now opens a community space in the East Bay.",
+      "issues": [
+        "She says a bill she wrote, the MAD Act, would set guardrails for artificial intelligence, limit immigration enforcement and surveillance, and require a government plan for how AI affects jobs and the environment.",
+        "She says she takes no corporate or pro-Israel PAC money and wants more Epstein files released, dark money disclosed, and stronger checks on the presidency.",
+        "She also says she would seek affordable health care and housing, higher teacher pay, and more support for people who are homeless."
+      ],
+      "site": "https://www.jamiejoyce.com/",
+      "siteLabel": "Jamie Joyce for Congress",
+      "source": "https://www.jamiejoyce.com/about-jamie"
+    },
+    "kevin lincoln": {
+      "role": "Former Stockton mayor and Marine veteran running for Congress.",
+      "bio": "Kevin Lincoln's campaign says he was born in Stockton, raised in a military family, and joined the Marines in 2001, later serving on Marine One. It says he then managed a private-security district in Silicon Valley, became a Stockton pastor, and was elected mayor in 2019.",
+      "issues": [
+        "He says he would secure the border, enforce immigration laws, and treat fentanyl trafficking as a threat to Valley families.",
+        "He says he would cut wasteful spending and lower taxes as grocery, gas, and rent costs climb, pointing to budgets he balanced as mayor without a tax increase.",
+        "He says he would oppose early release and shorter sentences for repeat offenders, and he highlights police pay and budget increases he backed as mayor."
+      ],
+      "site": "https://www.kevinlincolnforcongress.com/",
+      "siteLabel": "Kevin Lincoln for Congress",
+      "donate": "https://secure.winred.com/kevin-lincoln-for-congress/website",
+      "source": "https://www.kevinlincolnforcongress.com/issues"
+    },
+    "adam gray": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Adam Gray's campaign says he was born and raised in Merced, worked in his family's dairy supply store, and later represented Merced and Stanislaus Counties in the Assembly. It says he now serves on Agriculture and Natural Resources and is whip of the Blue Dog Coalition.",
+      "issues": [
+        "He says he is working to lower the cost of food, housing, health care, and utilities, including by limiting tariffs he argues raise prices for families and farmers.",
+        "He says water is the issue he hears about most, and he has pushed storage projects, faster environmental review, and funding for local water systems.",
+        "He says he would cut red tape that stalls infrastructure, support agriculture, and strengthen public safety so families are not choosing between health care and rent."
+      ],
+      "site": "https://www.adamgrayforcongress.com/",
+      "siteLabel": "Adam Gray for Congress",
+      "donate": "https://secure.actblue.com/donate/graywebsite",
+      "source": "https://www.adamgrayforcongress.com/issues"
+    },
+    "aisha wahab": {
+      "role": "California state senator running for Congress.",
+      "bio": "Aisha Wahab's campaign says she entered foster care as a child after her parents died, was adopted by a Fremont couple, and later earned a doctorate in social work from USC. It says she is a state senator and assistant majority leader who started out advocating for renters and workers in Hayward.",
+      "issues": [
+        "She says she has taken on powerful interests over affordable housing, homeownership, and living conditions.",
+        "She says she has fought for jobs, career training, and small businesses, and for funding for food, health care, and public education.",
+        "She says she has worked with law enforcement on public safety and pushed for a cleaner environment."
+      ],
+      "site": "https://www.aishawahab.com/",
+      "siteLabel": "Dr. Aisha Wahab for Congress",
+      "donate": "https://secure.actblue.com/donate/draishawahab",
+      "source": "https://www.aishawahab.com/about"
+    },
+    "melissa hernandez": {
+      "role": "Former Dublin mayor and BART director running for Congress.",
+      "bio": "Melissa Hernandez's campaign says she is the daughter of migrant farmworkers, a working mother who paid her way through college, and the first Latina mayor of Dublin. It says she also serves on the BART board and as a county health-care director.",
+      "issues": [
+        "She says her first priority is lowering housing, health-care, and child-care costs, protecting Social Security and Medicare, and growing small businesses without raising taxes.",
+        "She says public safety should support police and firefighters and also demand that enforcement work fairly.",
+        "She says she would lower drug prices, restore insurance subsidies, and protect reproductive care."
+      ],
+      "site": "https://melissahernandez2026.com/",
+      "siteLabel": "Melissa Hernandez for Congress",
+      "donate": "https://secure.actblue.com/donate/melissa-hernandez-1?refcode=website&amount=25",
+      "source": "https://melissahernandez2026.com/issues/"
+    },
+    "charles hoelter": {
+      "role": "Conservative candidate running for Congress.",
+      "bio": "Charles Hoelter's campaign describes him as a conservative advocate for faith and family who has spent years listening to families, small businesses, veterans, and law enforcement. It says he is running to restore accountability and constitutional freedoms.",
+      "issues": [
+        "He says he would secure the border, lower taxes, support law enforcement, and defend constitutional rights.",
+        "He says immigration should be legal and controlled, and that parents should have a voice in what schools teach.",
+        "He says veterans need better health care and support, and that government spending should come down."
+      ],
+      "site": "https://www.hoelterforuscongress.com/",
+      "siteLabel": "Charles Hoelter for Congress",
+      "source": "https://www.hoelterforuscongress.com/about-me/"
+    },
+    "kevin mullin": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Kevin Mullin's campaign says he was raised in South San Francisco, has lived on the Peninsula his whole life, and has been a local business owner and a D.J. It says he has served in local, state, and federal office and sits on the Energy and Commerce Committee.",
+      "issues": [
+        "He says he would lower housing costs, send federal money to local child-care programs, and update the federal poverty line.",
+        "He says he is defending medical research and the innovation economy in his district.",
+        "His campaign also lists health-care costs, climate action, reproductive rights, and a fairer tax policy among his priorities."
+      ],
+      "site": "https://www.kevinmullinforcongress.com/",
+      "siteLabel": "Kevin Mullin for Congress",
+      "donate": "https://secure.actblue.com/donate/kevinmullinforcongress",
+      "source": "https://www.kevinmullinforcongress.com/priorities"
+    },
+    "peter soulé": {
+      "role": "Candidate running for Congress in the Bay Area.",
+      "bio": "Peter Soulé's campaign says his grandfather started a reinforcing-steel company in 1911 to help San Francisco rebuild after the 1906 earthquake. It says Soulé is running to speak for taxpayers and the next generation.",
+      "issues": [
+        "He says he would withhold federal money from sanctuary cities that he argues block deportation of people here illegally who commit crimes, and he would defend Second Amendment rights.",
+        "He says he would end spending he calls waste, make energy and housing cheaper, and reform the H-1B visa program to favor hiring Americans.",
+        "He says he would stop drugs from reaching young people, protect parental choice in schools, and fund only schools that emphasize reading, writing, math, and vocational training."
+      ],
+      "site": "https://souleforcongress.com/",
+      "siteLabel": "Peter Soule for Congress",
+      "source": "https://souleforcongress.com/issues"
+    },
+    "sam liccardo": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Sam Liccardo's campaign says his first term has focused on homelessness, the cost of living, and the Constitution, and that both chambers have passed housing bills he wrote. It says he has also worked on health-care costs and local funding for housing, infrastructure, and public safety.",
+      "issues": [
+        "He says he is trying to make housing more affordable, including by turning vacant buildings into homes and protecting low-income families from homelessness.",
+        "He says he has written bipartisan bills to lower health-insurance premiums and bank fees.",
+        "He says he wants technology used so more Americans benefit from innovation, and he is working to protect constitutional rights."
+      ],
+      "site": "https://www.samliccardo.com/",
+      "siteLabel": "Sam Liccardo for Congress",
+      "donate": "https://secure.numero.ai/contribute/Sam-Liccardo-for-Congress",
+      "source": "https://www.samliccardo.com/about"
+    },
+    "ritesh tandon": {
+      "role": "Business researcher running for Congress.",
+      "bio": "Ritesh Tandon's campaign says he has lived in the Bay Area for 26 years and is a research fellow at UC Berkeley's Haas School of Business. It says his grandfather fought in India's independence movement, and that this history shapes his view of public service.",
+      "issues": [
+        "He says he would cut everyday costs for groceries, utilities, transportation, and insurance by increasing competition and cracking down on junk fees.",
+        "He says he would speed housing permits, help first-time buyers, and expand workforce housing near jobs and transit.",
+        "He says he would lower out-of-pocket medical and drug costs, make job training cheaper, and oppose new layers of taxes and fees."
+      ],
+      "site": "https://www.tandonforcongress.com/",
+      "siteLabel": "Ritesh Tandon for Congress",
+      "donate": "https://secure.anedot.com/tandon-for-congress/donate",
+      "source": "https://www.tandonforcongress.com/"
+    },
+    "ro khanna": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Ro Khanna's campaign says he grew up in a middle-class immigrant family in Bucks County, Pennsylvania, studied economics at the University of Chicago, and earned a law degree at Yale. It says he later taught economics at Stanford and represents Silicon Valley after winning a House seat on his third try.",
+      "issues": [
+        "He says his platform is Medicare for All, taxes on billionaires, good jobs in every town, and no foreign wars.",
+        "He also campaigns on free child care, free college and trade school, and a path to homeownership by age 35.",
+        "He says technology should put humans first, and he lists reproductive rights, a living wage, and expanding Social Security among his priorities."
+      ],
+      "site": "https://www.rokhanna.com/",
+      "siteLabel": "Ro Khanna for Congress",
+      "source": "https://www.rokhanna.com/"
+    },
+    "shane lewis": {
+      "role": "Marine veteran and engineer running for Congress.",
+      "bio": "Shane Lewis's campaign says he joined the Marines soon after high school, trained at Parris Island, and earned paratrooper wings at Fort Benning. It says he later led worship at a San Jose church, ran a music business, and now works as an electrical test engineer for a medical-device company.",
+      "issues": [
+        "He says Title I money should go only to schools that improve core instruction and show measurable gains in student proficiency.",
+        "He says students from third through twelfth grade should get civics that teaches responsibility, critical thinking, and American history.",
+        "His campaign also lists immigration, tax reform, and water infrastructure among his priorities."
+      ],
+      "site": "https://www.shanelewisforcongress.com/",
+      "siteLabel": "Shane Lewis for Congress",
+      "donate": "https://secure.anedot.com/shane-lewis-for-congress-committee/donate",
+      "source": "https://www.shanelewisforcongress.com/issues"
+    },
+    "zoe lofgren": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Zoe Lofgren's campaign says she has lived in the Bay Area her whole life, the daughter of a Teamster beer-truck driver and a cafeteria cook, and that she is running for re-election. It says she is the top Democrat on the House Science, Space, and Technology Committee.",
+      "issues": [
+        "She says she wants faster research on fusion energy and a stronger federal science agenda on wildfires and flooding.",
+        "Her campaign points to her work on immigration, health care, technology, transportation, and women's issues.",
+        "She says the district she represents is unusually diverse, including a large Hispanic population and the country's largest concentration of Vietnamese Americans."
+      ],
+      "site": "https://www.zoelofgren.com/",
+      "siteLabel": "Zoe Lofgren for Congress",
+      "donate": "https://secure.actblue.com/donate/zoebbq26",
+      "source": "https://www.zoelofgren.com/meet-zoe/"
+    },
+    "peter verbica": {
+      "role": "Financial adviser running for Congress.",
+      "bio": "Peter Verbica's campaign says he is a Republican and a certified financial planner who is a principal at a Silicon Valley wealth firm. It says he grew up working summers on a cattle ranch and wrote a book of Western aphorisms.",
+      "issues": [
+        "He says he would end high gas taxes, send more water to farmers to lower food costs, and fix California's insurance crisis.",
+        "He says neighborhoods should have more say over housing, and he opposes the state's private-attorney general law and limits on independent contractors.",
+        "He says immigration policy should serve both tech and agriculture, and he also backs school choice and merit-based education."
+      ],
+      "site": "https://peterverbica.com/",
+      "siteLabel": "Peter Verbica for Congress",
+      "source": "https://peterverbica.com/about"
+    },
+    "jimmy panetta": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Jimmy Panetta's campaign says he was elected to the House in 2016 and began as a prosecutor in the Alameda County District Attorney's Office in 1996. It says he serves on Ways and Means and the Budget Committee.",
+      "issues": [
+        "He says he would ease inflation by investing in roads, rail, research, manufacturing, broadband, and water, and by expanding child care and equal pay.",
+        "He says he has written bills to block offshore oil drilling, cut carbon emissions, and fund wildfire prevention and reforestation.",
+        "He says he has pushed housing tax credits for low- and middle-income homes and grants for veterans and people who are homeless."
+      ],
+      "site": "https://www.jimmypanetta.com/",
+      "siteLabel": "Jimmy Panetta for Congress",
+      "donate": "https://secure.actblue.com/donate/panetta-wbst",
+      "source": "https://www.jimmypanetta.com/issues"
+    },
+    "vince fong": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Vince Fong's campaign says he was born and raised in Bakersfield, earned degrees from UCLA and Princeton, and spent nearly a decade as district director for Kevin McCarthy. It says he was elected to the House in 2024.",
+      "issues": [
+        "He says domestic energy production should lower costs for families and small businesses while the country still protects the environment.",
+        "He says farmers need more storage and conveyance and fewer rules that send water out to sea.",
+        "He says border enforcement should come before other immigration changes, and he opposes new gun limits on people who follow the law."
+      ],
+      "site": "https://vincefong.com/",
+      "siteLabel": "Vince Fong for Congress",
+      "source": "https://vincefong.com/issues/"
+    },
+    "sandra van scotter": {
+      "role": "Respiratory therapist and disability worker running for Congress.",
+      "bio": "Sandra Van Scotter's campaign says she grew up in a working-class family of eight children and spent decades as a respiratory therapist before moving to Ridgecrest in 2014. It says she now supports adults with developmental disabilities, and that her own son uses the state's regional-center system.",
+      "issues": [
+        "She says she supports Medicare for All and would work to reverse health-care cuts she argues will hurt Medi-Cal recipients, people with disabilities, and seniors.",
+        "She says disability services are underfunded and too hard to navigate, and she would bring that experience to Congress.",
+        "She says immigration policy should combine a path to legal status for longtime workers with border security, and she wants water policy that serves Valley farms and residents."
+      ],
+      "site": "https://www.electsandravanscotter.com/",
+      "siteLabel": "Sandra Van Scotter for Congress",
+      "donate": "https://secure.actblue.com/donate/sandra-van-scotter-ca-20",
+      "source": "https://www.electsandravanscotter.com/issues"
+    },
+    "kyle kirkland": {
+      "role": "Business owner running for Congress.",
+      "bio": "Kyle Kirkland's campaign says he arrived in California 40 years ago with $700 and went on to build businesses that created more than 1,000 jobs. It says he owns Club One Casino in Fresno, leads the California Gaming Association, and previously chaired Steinway Musical Instruments.",
+      "issues": [
+        "He says housing, food, gas, and health care are too expensive because of over-regulation, and he would restart domestic production to bring costs down.",
+        "He says government should be audited so tax dollars are not lost to waste and fraud.",
+        "He says law enforcement needs tools against fentanyl and trafficking, and farmers need more water storage and fewer regulatory barriers."
+      ],
+      "site": "https://kirkland2026.com/",
+      "siteLabel": "Kyle Kirkland for Congress",
+      "source": "https://kirkland2026.com/"
+    },
+    "jim costa": {
+      "role": "Farmer and U.S. representative running for another term.",
+      "bio": "Jim Costa's campaign describes him as a farmer and member of Congress whose priority is the future of the San Joaquin Valley. It says his work has centered on water, health care, crime, and veterans.",
+      "issues": [
+        "He says he helped win federal money for drinking water, aging water projects, storage, highways, and wildfire risk reduction.",
+        "He says he has funded hospitals, community clinics, and a Valley medical school, and sought more officers to fight gangs and drugs.",
+        "He says he has defended Dreamers, opposed family separations, and supports a path to citizenship."
+      ],
+      "site": "https://www.jimcosta.com/",
+      "siteLabel": "Jim Costa for Congress",
+      "source": "https://www.jimcosta.com/about"
+    },
+    "david valadao": {
+      "role": "Dairy farmer and U.S. representative running for another term.",
+      "bio": "David Valadao's campaign says he was born and raised in Hanford after his family emigrated from the Azores and started a dairy. It says he still works the family farm, served in the Assembly, and sits on an Agriculture Appropriations subcommittee.",
+      "issues": [
+        "He says California should stay an agricultural leader, and that farms and towns need a reliable water supply.",
+        "He says health care should be more affordable while protecting seniors, people with low incomes, and people with pre-existing conditions.",
+        "He says the immigration system is broken and needs a full repair, and he wants Washington to balance its budget."
+      ],
+      "site": "https://valadaoforcongress.com/",
+      "siteLabel": "David Valadao for Congress",
+      "donate": "https://secure.winred.com/valadao-for-congress/",
+      "source": "https://valadaoforcongress.com/issues/"
+    },
+    "randy villegas": {
+      "role": "College professor running for Congress.",
+      "bio": "Randy Villegas's campaign says he was raised in Kern County and was the first in his family to earn a Ph.D. It says he has worked as a professor, mentor, and community organizer and is running in the 22nd District.",
+      "issues": [
+        "He says he is running to fight for working families, protect democracy, and bring people-first leadership to Washington.",
+        "His campaign lists the cost of living, health care, jobs, immigration, housing, and water among its top issues.",
+        "He says education changed his life and that he wants the next generation to have the same chance."
+      ],
+      "site": "https://www.villegasforcongress.com/",
+      "siteLabel": "Randy Villegas for Congress",
+      "donate": "https://secure.actblue.com/donate/rvfc-web-2026?refcode=main-button",
+      "source": "https://www.villegasforcongress.com/about"
+    },
+    "jay obernolte": {
+      "role": "Software entrepreneur and U.S. representative running for another term.",
+      "bio": "Jay Obernolte's campaign says he is a business owner who started FarSight Studios in a dorm room in 1990 and has lived in the 23rd District for more than 25 years. It says he earned engineering degrees from Caltech and UCLA, served as mayor of Big Bear Lake, and was elected to Congress in 2020.",
+      "issues": [
+        "He says he is fighting to balance the federal budget and stop spending he argues is driving up prices.",
+        "He says he has worked to lower taxes, repeal gas taxes, help small businesses, and expand the child tax credit.",
+        "He says he wrote a bill to hold fentanyl dealers accountable, voted to fund the military and a border-security bill, and wants the border wall finished."
+      ],
+      "site": "https://electjay.com/",
+      "siteLabel": "Jay Obernolte for Congress",
+      "donate": "https://secure.winred.com/JayObernolte/donate",
+      "source": "https://electjay.com/"
+    },
+    "tessa hodge": {
+      "role": "Clinical social worker running for Congress.",
+      "bio": "Tessa Hodge's campaign says she has lived her whole life in the High Desert, where her grandfather retired from the Air Force and her grandmother worked as a nurse. It says she is a licensed clinical social worker who has served foster children, students, and county workers.",
+      "issues": [
+        "She says lasting change has to address inequality, injustice, addiction, mental health, and poverty at the policy level.",
+        "Her site lists health-care access, livable wages, lower housing costs, and a humane immigration policy among her priorities.",
+        "She also lists the environment, public education, and veterans and the military."
+      ],
+      "site": "https://www.tessaforca.com/",
+      "siteLabel": "Tessa Hodge for Congress",
+      "donate": "https://secure.actblue.com/donate/tessa-lynn-hodge-1",
+      "source": "https://www.tessaforca.com/about"
+    },
+    "bob smith": {
+      "role": "Retired Navy commander running for Congress.",
+      "bio": "Bob Smith's campaign says he enlisted in the Navy and rose to commander over 26 years, including combat deployments, and was named the Navy's engineer of the year in 2023. It says he holds engineering degrees and lives in Carpinteria with his family.",
+      "issues": [
+        "He says he would cut wasteful spending, lower housing, energy, and food costs, and expand homeownership while protecting Social Security and Medicare.",
+        "He says schools should emphasize reading, math, and STEM, plus vocational paths and research ties to local universities.",
+        "He says immigration policy should secure the border, remove people convicted of violent crimes, and update farmworker visas."
+      ],
+      "site": "https://bobsmithforcongress.com/",
+      "siteLabel": "Bob Smith for Congress",
+      "donate": "https://secure.anedot.com/bob-smith-for-congress/donate",
+      "source": "https://bobsmithforcongress.com/issues/"
+    },
+    "salud carbajal": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Salud Carbajal's campaign says he immigrated from Mexico at age five, grew up in a mining and then a farmworker family, and earned degrees from UC Santa Barbara and Fielding Graduate University. It says he served in the Marine Corps Reserve, including during the 1991 Gulf War, and on the Santa Barbara County Board of Supervisors before his election to Congress in 2016.",
+      "issues": [
+        "He says he is running to lower the cost of living and expand opportunity for working families.",
+        "He says he would defend immigrant communities from immigration raids he calls extreme.",
+        "He says he would protect the local environment, pointing to his opposition to new offshore oil drilling and work on a county climate plan."
+      ],
+      "site": "https://www.saludcarbajal.com/",
+      "siteLabel": "Salud Carbajal for Congress",
+      "source": "https://www.saludcarbajal.com/meet-salud"
+    },
+    "joe males": {
+      "role": "Marine veteran and city council member running for Congress.",
+      "bio": "Joe Males's campaign says he enlisted in the Marines after turning 18, served in the Philippines and Guam, and later built a computer-networking business. It says he is a Hemet council member and a father.",
+      "issues": [
+        "He says he ran for council after his son, also a Marine, was murdered, because he wants the rule of law so other families do not face that loss.",
+        "He says his council work has focused on infrastructure, business growth, and safer, cleaner neighborhoods.",
+        "He says he would bring that same results-focused approach to Washington for the Inland Empire and Imperial County."
+      ],
+      "site": "https://joemalesforca.com/",
+      "siteLabel": "Joe Males for Congress",
+      "donate": "https://secure.winred.com/males-for-congress/f9772dea-b387-4bca-a4ec-a4b2c9502f37?recurring=true",
+      "source": "https://joemalesforca.com/"
+    },
+    "raul ruiz": {
+      "role": "Emergency physician and U.S. representative running for another term.",
+      "bio": "Raul Ruiz's campaign says he is the son of farmworkers from Coachella who put himself through school and returned home as an emergency physician after studying at UCLA and Harvard. It says he founded a local health-care initiative and serves on the Energy and Commerce Committee.",
+      "issues": [
+        "He says he will protect and expand Medicare and Social Security and oppose cuts or a higher retirement age.",
+        "He says he would cut red tape for small businesses and develop Imperial Valley lithium and Salton Sea projects that create jobs.",
+        "He says he opposes congressional pay raises and first-class flights at taxpayer expense, and he highlights work for veterans."
+      ],
+      "site": "https://drraulruiz.com/",
+      "siteLabel": "Dr. Raul Ruiz for Congress",
+      "donate": "https://secure.actblue.com/contribute/page/contributeonline?amount=25",
+      "source": "https://drraulruiz.com/issues/"
+    },
+    "sam gallucci": {
+      "role": "Pastor and business leader running for Congress.",
+      "bio": "Sam Gallucci's campaign describes him as a business leader, pastor, and community servant running in the 26th District. It says he is offering results rather than more talk from Washington.",
+      "issues": [
+        "He says he would back law enforcement, first responders, and community-based prevention.",
+        "He says he would defend the coast, forests, and reliable water with practical, science-guided solutions.",
+        "His site also lists the cost of living, parent-centered education, homelessness, immigration, and veterans among his priorities."
+      ],
+      "site": "https://samgallucci.com/",
+      "siteLabel": "Sam Gallucci for Congress",
+      "source": "https://samgallucci.com/"
+    },
+    "jacqui irwin": {
+      "role": "State assemblymember running for Congress.",
+      "bio": "Jacqui Irwin's campaign says she is a mother, an engineer, and a community leader with two decades in local public life. It says she is running for the new 26th District to focus on public safety, affordability, and Ventura and Los Angeles counties.",
+      "issues": [
+        "She says she would stand up for the district against what she calls an assault on democracy and California values.",
+        "Her campaign highlights laws she wrote on housing and services for homeless veterans, a state climate law, and gun-safety measures.",
+        "It says she has worked to create jobs, balance budgets, and keep communities safe."
+      ],
+      "site": "https://jacquiirwin.com/",
+      "siteLabel": "Jacqui Irwin for Congress",
+      "donate": "https://secure.actblue.com/donate/jacqui-irwin-5",
+      "source": "https://jacquiirwin.com/"
+    },
+    "jason gibbs": {
+      "role": "Santa Clarita council member and engineer running for Congress.",
+      "bio": "Jason Gibbs's campaign says he is a mechanical engineer who worked on rocket fueling systems and earned engineering degrees from Cal Poly San Luis Obispo. It says he was elected to the Santa Clarita council in 2020, served as mayor in 2023, and is raising two children there.",
+      "issues": [
+        "He says he would oppose new taxes, push energy affordability, and cut wasteful spending to lower the cost of housing, groceries, gas, and energy.",
+        "He says he would back law enforcement and end what he calls catch-and-release treatment of repeat offenders.",
+        "He says he is running to put local values and practical problem-solving ahead of party politics."
+      ],
+      "site": "https://www.jasongibbsforcongress.com/",
+      "siteLabel": "Jason Gibbs for Congress",
+      "source": "https://www.jasongibbsforcongress.com/"
+    },
+    "george whitesides": {
+      "role": "U.S. representative running for another term.",
+      "bio": "George Whitesides's campaign says he helped lead NASA as chief of staff, created jobs in the Antelope Valley as chief executive of Virgin Galactic, and co-founded a wildfire group. It says he is in his first House term and lives with his wife and two children.",
+      "issues": [
+        "He says he is fighting to lower daily costs, create local jobs, defend Social Security and Medicare, and root out corruption.",
+        "He says he has brought back federal money for public safety, clean water, and youth programs, and he is focused on the wildfire crisis.",
+        "He says he has introduced bills on tax relief after environmental disasters, firefighter pay, and housing for veterans."
+      ],
+      "site": "https://www.georgewhitesides.com/",
+      "siteLabel": "George Whitesides for Congress",
+      "donate": "https://secure.actblue.com/donate/george-whitesides-for-congress-2?express_lane=true&amount=25",
+      "source": "https://www.georgewhitesides.com/bio/"
+    },
+    "april verlato": {
+      "role": "Attorney and former mayor running for Congress.",
+      "bio": "April Verlato's campaign says she was born and raised in Arcadia, studied political science at UCLA, and earned a law degree at Southwestern. It says she took over her father's law practice in 2000 and later won a city council seat, serving as mayor.",
+      "issues": [
+        "She says the economy should reward innovation and hard work rather than regulations she argues hold back workers and small businesses.",
+        "She points to her role founding the Downtown Arcadia Improvement Association and says she focused on opportunities for minority-owned businesses.",
+        "She says she would go to Congress to bring back good-paying jobs and economic growth."
+      ],
+      "site": "https://verlatoforcongress.com/",
+      "siteLabel": "April Verlato for Congress",
+      "source": "https://verlatoforcongress.com/?page_id=120"
+    },
+    "judy chu": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Judy Chu's campaign says she was elected to the House in 2009 and represents Pasadena and the west San Gabriel Valley. It says she serves on Ways and Means and the Budget Committee and is chair emerita of the Congressional Asian Pacific American Caucus.",
+      "issues": [
+        "She says her Ways and Means work covers taxes, trade, Social Security, and Medicare, including health care and safety-net programs.",
+        "She says the caucus she led expanded language access in federal agencies and pushed for data that reflects Asian American, Native Hawaiian, and Pacific Islander communities.",
+        "She says she co-chairs a bipartisan caucus on creative rights."
+      ],
+      "site": "https://www.judychu.org/",
+      "siteLabel": "Judy Chu for Congress",
+      "donate": "https://secure.actblue.com/donate/jc-website",
+      "source": "https://www.judychu.org/about"
+    },
+    "luz rivas": {
+      "role": "Engineer and U.S. representative running for another term.",
+      "bio": "Luz Rivas's campaign says she grew up in Pacoima with a single mother who had immigrated from Mexico, then earned an electrical-engineering degree from MIT and a master's in education from Harvard. It says she worked at Motorola, founded a girls' science nonprofit, served six years in the Assembly, and was elected to the House in 2025.",
+      "issues": [
+        "She says her Assembly priority was funding for infrastructure, education, and health care in the Valley, along with environmental justice.",
+        "She says she worked to expand computer-science and climate education across California.",
+        "Her campaign says that in her first House term she joined Democratic leadership and co-chairs a bipartisan STEM education caucus."
+      ],
+      "site": "https://www.luzforcongress.com/",
+      "siteLabel": "Luz Rivas for Congress",
+      "donate": "https://secure.actblue.com/donate/luz-rivas-for-congress-1",
+      "source": "https://www.luzforcongress.com/about"
+    },
+    "angélica dueñas": {
+      "role": "Neighborhood-council leader running for Congress.",
+      "bio": "Angélica Dueñas's campaign says she was born in Sun Valley to parents who immigrated from Mexico, raised five children, and was the first in her family to finish college. It says she earned degrees from Cal State Los Angeles and Woodbury and served as president of the Sun Valley Area Neighborhood Council.",
+      "issues": [
+        "She says she takes no corporate PAC, AIPAC, oil, or drug-company money, and she supports Medicare for All and housing as a right.",
+        "She says she would abolish ICE, create a path to legal status, and pass the DREAM Act.",
+        "She says she would raise the minimum wage, protect the right to unionize, and cancel student debt by making public college and trade school tuition-free."
+      ],
+      "site": "https://angelica4congress.com/",
+      "siteLabel": "Angélica Dueñas for Congress",
+      "source": "https://angelica4congress.com/"
+    },
+    "laura friedman": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Laura Friedman's campaign says she served on the Glendale council and as mayor, then in the Assembly, before her election to Congress. It says her earlier work focused on climate, gun violence, reproductive freedom, LGBTQ rights, and housing.",
+      "issues": [
+        "She says she is focused on affordable housing, universal health care and child care, and economic security for families.",
+        "She says she has been a voice for public education, the environment, and safeguarding democracy.",
+        "She says her legislative work expanded affordable housing and services for people with severe mental illness and people who are homeless."
+      ],
+      "site": "https://www.lauraforcongress.org/",
+      "siteLabel": "Laura Friedman for Congress",
+      "donate": "https://secure.actblue.com/donate/laura-friedman-for-congress-1",
+      "source": "https://www.lauraforcongress.org/"
+    },
+    "gil cisneros": {
+      "role": "Former defense official and U.S. representative running for another term.",
+      "bio": "Gil Cisneros's campaign says he enlisted in the Navy after high school, later earned degrees from George Washington, Regis, and Brown, and worked in logistics before a lottery win led him into college scholarships. It says he served in Congress, then as under secretary of defense, and is running again in the 31st District.",
+      "issues": [
+        "He says he would require universal background checks, restore an assault-weapons ban, and fund gun-violence research.",
+        "He says reproductive decisions belong with a patient and a doctor, and he highlights a Pentagon policy he led on reproductive care for service members.",
+        "He says he would raise the minimum wage, lower drug prices, and push a public option while defending veterans' benefits."
+      ],
+      "site": "https://www.gilonthehill.com/",
+      "siteLabel": "Gil Cisneros for Congress",
+      "source": "https://gilonthehill.com/on-the-issues/"
+    },
+    "brad sherman": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Brad Sherman's campaign says he was born and raised in Southern California and represents the San Fernando Valley and much of the Westside. It says he is a senior member of Foreign Affairs and Financial Services and helped create the Consumer Financial Protection Bureau.",
+      "issues": [
+        "He says he has a perfect rating from the Brady Campaign and an F from the NRA, and he has pushed an assault-weapons ban and longer background checks.",
+        "He says he cosponsors a safe-storage bill named for a teenager killed by an unsecured firearm.",
+        "He says he has championed consumer protections and helped create the Consumer Financial Protection Bureau."
+      ],
+      "site": "https://www.bradsherman.com/",
+      "siteLabel": "Brad Sherman for Congress",
+      "source": "https://www.bradsherman.com/priorities"
+    },
+    "pete aguilar": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Pete Aguilar's campaign says he is a fourth-generation San Bernardino County resident running for re-election. It says he has worked with both parties on veterans, small businesses, health care, and immigration.",
+      "issues": [
+        "He says he is working to lower prescription costs, make housing more affordable, and expand American manufacturing.",
+        "He says he has backed protections and jobs for veterans and tax and red-tape cuts for small businesses.",
+        "He says he wants health care to be more affordable and the immigration system fixed."
+      ],
+      "site": "https://peteaguilar.com/",
+      "siteLabel": "Pete Aguilar for Congress",
+      "source": "https://peteaguilar.com/"
+    },
+    "ted lieu": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Ted Lieu's campaign says he is in his sixth term, is vice chair of the House Democratic Caucus, and serves on Foreign Affairs and Judiciary. It says he is a veteran and that his parents were immigrants.",
+      "issues": [
+        "He says he secured safety funding for the West Los Angeles VA and wrote a law for a campus plan to house veterans who are homeless.",
+        "He says he co-authored an impeachment article after January 6 and served as an impeachment manager.",
+        "He says he has led on artificial intelligence, including a bipartisan House task force and a bill to create a national AI commission."
+      ],
+      "site": "https://www.lieuforcongress.com/",
+      "siteLabel": "Ted Lieu for Congress",
+      "donate": "https://secure.actblue.com/donate/ted-lieu-5",
+      "source": "https://www.lieuforcongress.com/about-ted"
+    },
+    "young kim": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Young Kim's campaign says she was born in South Korea, came to the United States with her family, and was the first Korean American woman elected to represent Southern California in the Assembly. It says she is running for re-election to lower costs and hold Washington accountable.",
+      "issues": [
+        "She says she is working to lower the cost of gas, groceries, utilities, health care, and prescription drugs, and to protect Medicare.",
+        "She says she led a bill to recover taxpayer money lost to fraud after billions were stolen.",
+        "She says her Assembly work included public safety, help for victims of domestic violence, and resources for veterans and homeless children."
+      ],
+      "site": "https://youngkimforcongress.com/",
+      "siteLabel": "Young Kim for Congress",
+      "donate": "https://secure.anedot.com/youngkimcd40/donate?web_id=youngkimforcongress_meet-young-kim_navbtn",
+      "source": "https://youngkimforcongress.com/meet-young-kim/"
+    },
+    "ken calvert": {
+      "role": "U.S. representative running in a newly drawn district.",
+      "bio": "Ken Calvert's campaign says he is a lifelong Corona resident and a former small-business owner who now chairs the Defense Appropriations Subcommittee. It says that after Proposition 50 he is running in the 40th District, where Corona is the largest city.",
+      "issues": [
+        "He says he wrote the law that created E-Verify and wants employers required to use it.",
+        "He says he has secured more than a billion dollars for transportation, water, and clean-air projects in Riverside County.",
+        "He says his office has helped veterans and seniors get benefits they are owed."
+      ],
+      "site": "https://calvertforcongress.com/",
+      "siteLabel": "Ken Calvert for Congress",
+      "donate": "https://secure.winred.com/kencalvert/donate",
+      "source": "https://calvertforcongress.com/meet-ken"
+    },
+    "scott meyers": {
+      "role": "Attorney and small-business owner running for Congress.",
+      "bio": "Scott Meyers's campaign says he is a lifelong Southern Californian, raised by a teacher and a minister, who started working at 14. It says he earned a political-science degree from UCLA and a law degree from Pepperdine, passed the bar on his first try, and has practiced civil law for 37 years.",
+      "issues": [
+        "He says California families are being squeezed by inflation, energy costs, housing prices, and taxes, and he wants lower taxes and less federal spending.",
+        "He says he would support American energy production to lower gas and utility bills and cut rules he argues drive up housing and small-business costs.",
+        "He says he would secure the border, restore law and order, and protect constitutional freedoms."
+      ],
+      "site": "https://meyersforcongress.com/",
+      "siteLabel": "Scott Meyers for Congress",
+      "source": "https://meyersforcongress.com/about.html"
+    },
+    "larry thompson": {
+      "role": "Businessman running for Congress in California's 32nd District.",
+      "bio": "Larry Thompson's campaign describes him as a Catholic, a conservative, and an independent-minded Republican who has worked in business. He says he is running to bring together dissatisfied Democrats, conservatives, and no-party-preference voters.",
+      "issues": [
+        "He says he will protect family values and wants people to use common sense and civility to find common ground.",
+        "He says his goal is to get something done, and he asks for a vote in the November 3, 2026 general election."
+      ],
+      "site": "https://www.larrythompsonforcongress.com/",
+      "siteLabel": "Larry Thompson for Congress",
+      "donate": "https://secure.anedot.com/larry-thompson-for-congress/donate",
+      "source": "https://www.larrythompsonforcongress.com/"
+    },
+    "stephanie vargas": {
+      "role": "City clerk and mother running for Congress.",
+      "bio": "Stephanie Vargas's campaign says she is a wife, a mother of three boys, and a lifelong resident of the 33rd District who works as a chief deputy city clerk and elections official. She says she is running because she does not want the next generation to inherit higher costs and less opportunity.",
+      "issues": [
+        "She says she would support law enforcement and firefighters and focus on the causes of danger in the community.",
+        "She says she wants to lower taxes, energy costs, and the cost of living, and to address the housing crisis.",
+        "She says she would protect children and family values and fight for elections people can trust."
+      ],
+      "site": "https://www.stephanievargas4congress.com/",
+      "siteLabel": "Stephanie Vargas for Congress",
+      "source": "https://www.stephanievargas4congress.com/"
+    },
+    "jimmy gomez": {
+      "role": "U.S. representative and former union organizer running for another term.",
+      "bio": "Jimmy Gomez's campaign says he is the son of Mexican immigrants, grew up without health insurance, and worked his way from community college to UCLA and a public-policy degree at Harvard. It says he organized with a public-employee union and a nurses' union, served in the Assembly, and was elected to Congress in 2017.",
+      "issues": [
+        "He says he is fighting for Medicare for All so a medical bill does not bankrupt a family.",
+        "He says he championed an expansion of paid family leave in the Assembly and wants a national paid-family-leave program.",
+        "He says he voted for the Inflation Reduction Act and has worked to lower prescription prices for seniors."
+      ],
+      "site": "https://jimmygomezforcongress.com/",
+      "siteLabel": "Jimmy Gomez for Congress",
+      "donate": "https://secure.actblue.com/contribute/page/jimmygomezforcongress?amount=25",
+      "source": "https://jimmygomezforcongress.com/bio/"
+    },
+    "angela gonzales-torres": {
+      "role": "Community advocate running for Congress in Los Angeles.",
+      "bio": "Angela Gonzales-Torres's campaign says she is a democratic socialist and a lifelong Angeleno from Highland Park, the daughter of a deportee who was raised by a single mother. It says she helps people leaving prison enter college and works on affordable housing that brings younger and older residents together.",
+      "issues": [
+        "She says she would abolish ICE, make Los Angeles more affordable, and increase access to critical services.",
+        "She says housing, health care, and education should be affordable, and she wants higher taxes on the wealthy to pay for them.",
+        "She says she would abolish super PACs so elections answer to voters rather than donors."
+      ],
+      "site": "https://www.angela4congress.com/",
+      "siteLabel": "Angela Gonzales-Torres for Congress",
+      "donate": "https://secure.actblue.com/donate/web_ms_agt",
+      "source": "https://www.angela4congress.com/about"
+    },
+    "mike cargile": {
+      "role": "Army veteran running for Congress.",
+      "bio": "Mike Cargile's campaign says that as a young Army officer he swore an oath to defend the Constitution, and that he is running to fulfill it. It says the campaign takes no money from AIPAC, political parties, super PACs, corporations, or other special interests.",
+      "issues": [
+        "He says the country should end endless wars, break up corporate monopolies, and become energy independent.",
+        "He says fair and transparent elections are required to do that.",
+        "He describes himself as pro-life, pro-jobs, and pro-police."
+      ],
+      "site": "https://www.cargileforcongress.com/",
+      "siteLabel": "Mike Cargile for Congress",
+      "donate": "https://secure.anedot.com/cargile-for-congress/donate",
+      "source": "https://www.cargileforcongress.com/"
+    },
+    "norma torres": {
+      "role": "U.S. representative and former mayor running for another term.",
+      "bio": "Norma Torres's campaign says she has been a 911 dispatcher, a union member, a mayor, and now a member of Congress. It says she is a mother of three sons, including an Air Force veteran and a law-enforcement officer, and that she is running in the district as drawn after Proposition 50.",
+      "issues": [
+        "She says her work has been about safer communities and lower costs for Inland Empire families.",
+        "She says working families need a champion in Congress who will help them get ahead."
+      ],
+      "site": "https://www.normatorres.com/",
+      "siteLabel": "Norma Torres for Congress",
+      "source": "https://www.normatorres.com/"
+    },
+    "houston brignano": {
+      "role": "South Bay native and Marine Corps veteran running for Congress.",
+      "bio": "Houston Brignano's campaign says he was born and raised in the South Bay, joined the Marine Corps out of high school, and deployed twice to Iraq. It says he and his wife are raising three daughters there and that they homeschool.",
+      "issues": [
+        "He says student debt and housing costs, including a first-time homebuyer age he puts at 40, are shutting people out of a stable life.",
+        "He says he would train young people to use artificial intelligence and protect jobs from automation with reskilling programs."
+      ],
+      "site": "https://www.voteforhouston.com/",
+      "siteLabel": "Houston Brignano for Congress",
+      "donate": "https://secure.anedot.com/houston-brignano-for-congress/donate",
+      "source": "https://www.voteforhouston.com/"
+    },
+    "sydney kamlager-dove": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Sydney Kamlager-Dove's campaign says that since joining the legislature in 2018 she has been working for her constituents. It says she is running in the 37th District as someone who can both build consensus and fight.",
+      "issues": [],
+      "site": "https://sydneykamlager.com/",
+      "siteLabel": "Sydney Kamlager-Dove for Congress",
+      "source": "https://sydneykamlager.com/"
+    },
+    "samantha mota": {
+      "role": "Working-class organizer running for Congress.",
+      "bio": "Samantha Mota's campaign says she is a 27-year-old mother and a working-class candidate, not a career politician. She says she is running to make government more accessible and to reduce corruption and the influence of money.",
+      "issues": [
+        "Her site lists economic security, community-based projects, immigration reform, and universal health care among her priorities.",
+        "She says she wants politics to be more affordable and more open to participation."
+      ],
+      "site": "https://www.motaforcongress.com/",
+      "siteLabel": "Samantha Mota for Congress",
+      "donate": "https://secure.actblue.com/donate/motaforcongress",
+      "source": "https://www.motaforcongress.com/about"
+    },
+    "pedro casas": {
+      "role": "Retired Army colonel and psychologist running for Congress.",
+      "bio": "Pedro Casas's campaign says he is a retired Army colonel with a Ph.D. who has worked as a clinical, forensic, and aero-medical psychologist. He says he grew up in the heart of the 38th District and is not an outsider to it.",
+      "issues": [
+        "He says he wants to raise the standard of education and fight the fentanyl epidemic.",
+        "He says the justice system should not reward criminal behavior that leaves victims and businesses behind.",
+        "He says he would secure the southern border and pursue immigration changes that put national security first."
+      ],
+      "site": "https://casasforcongress.com/",
+      "siteLabel": "Pedro Casas for Congress",
+      "donate": "https://secure.winred.com/dr-pedro-antonio-casas/donate?sc=winred-directory&money_bomb=false&recurring=false&exitintent=true",
+      "source": "https://casasforcongress.com/"
+    },
+    "hilda solis": {
+      "role": "County supervisor and former labor secretary running for Congress.",
+      "bio": "Hilda Solis's campaign says she has stood up for working people as a county supervisor and is now running for the House. It says she served as secretary of labor in President Obama's Cabinet and helped implement the Affordable Care Act.",
+      "issues": [
+        "She says she is running to defend workers, immigrants, educators, affordable housing, reproductive rights, veterans, unions, Medicaid, and democracy.",
+        "She says she has prioritized clean air, water, and open space, and she cites environmental-justice laws recognized with a Profile in Courage award.",
+        "She says she wants to create and preserve affordable housing and find better ways to help people who are homeless."
+      ],
+      "site": "https://www.hildasolis.com/",
+      "siteLabel": "Hilda Solis for Congress",
+      "donate": "https://secure.actblue.com/donate/hilda-solis-4",
+      "source": "https://www.hildasolis.com/"
+    },
+    "steve manos": {
+      "role": "Inland Empire candidate running for Congress.",
+      "bio": "Steve Manos's campaign says he grew up in the Inland Empire and began in public life as an advocate and volunteer. It says he has been part of city leadership that improved his hometown through fiscal discipline.",
+      "issues": [
+        "His site frames the race around faith, family, and affordability.",
+        "He says he listens to residents so their voices are heard, and that he knows how to get tangible results from government."
+      ],
+      "site": "https://manosforcongress.com/",
+      "siteLabel": "Steve Manos for Congress",
+      "donate": "https://secure.anedot.com/steve-manos-for-congress/4d8cbcd5-a4d1-48d8-a11f-98ca813247a8",
+      "source": "https://manosforcongress.com/"
+    },
+    "mark takano": {
+      "role": "U.S. representative and former teacher running for another term.",
+      "bio": "Mark Takano's campaign says he was born and raised in Riverside, taught high school, and served on a community-college board before Congress. It says his parents and grandparents were sent to Japanese American incarceration camps during World War II, and that in 2012 he became the first openly gay person of color elected to Congress.",
+      "issues": [
+        "He says that as a teacher and trustee he worked on public education and job training for adults.",
+        "His campaign says he is the ranking Democrat on the House Veterans' Affairs Committee and also serves on Education and the Workforce."
+      ],
+      "site": "https://www.marktakano.com/",
+      "siteLabel": "Mark Takano for Congress",
+      "donate": "https://secure.numero.ai/contribute/Mark-Takano-For-Congress",
+      "source": "https://www.marktakano.com/about"
+    },
+    "linda sánchez": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Linda Sánchez's campaign says she was born in Orange County to Mexican immigrant parents, a mechanic and a teacher, and earned degrees from UC Berkeley and UCLA's law school. It says she is the first woman from the electrical workers' union elected to Congress and a co-founder of the Labor Caucus.",
+      "issues": [
+        "She says she is fighting to lower costs for working families and to protect her community from the Trump administration and ICE.",
+        "She says she wants safe, quality education for children and job growth through innovation and manufacturing.",
+        "She says workers deserve safe jobs, good wages, and a dignified retirement."
+      ],
+      "site": "https://voteforlinda.com/",
+      "siteLabel": "Linda Sánchez for Congress",
+      "donate": "https://secure.actblue.com/contribute/page/ls_support?ref=website-header",
+      "source": "https://voteforlinda.com/meet-linda/"
+    },
+    "brian burley": {
+      "role": "School board member running for Congress.",
+      "bio": "Brian Burley's campaign says he is running because Washington is stuck in partisanship and he has tried to get things done by listening. It says that as a school board member he has worked to protect parents' voices, help students succeed, and watch taxpayer dollars.",
+      "issues": [
+        "He says he would advocate tax relief for families and business owners.",
+        "He says he would take a stand against illegal immigration and fully support law enforcement and the military.",
+        "He says he would fight to restore what he calls American family values."
+      ],
+      "site": "https://www.burley4congress.com/",
+      "siteLabel": "Brian Burley for Congress",
+      "donate": "https://secure.anedot.com/brian-burley-for-congress/donate",
+      "source": "https://www.burley4congress.com/"
+    },
+    "robert garcia": {
+      "role": "U.S. representative and former mayor running for another term.",
+      "bio": "Robert Garcia's campaign says his mother brought him to the United States without English or a formal education, and that a 1980s immigration law let the family apply for permanent residency. It says he became a citizen in his early twenties and later served as mayor of Long Beach.",
+      "issues": [
+        "He says he supports Proposition 50 and sees defending democracy against the far right as Congress's most important job.",
+        "He says he supports the Green New Deal and is leading a transportation version of it to electrify public transit.",
+        "He says every young adult should have a tuition-free college or trade program, undocumented families should have a path to citizenship, and everyone should have health care and housing."
+      ],
+      "site": "https://robertgarcia.com/",
+      "siteLabel": "Robert Garcia for Congress",
+      "donate": "https://secure.actblue.com/donate/rg-web?refcode=web-en-takeover&amount=10&express_lane=true",
+      "source": "https://robertgarcia.com/what-im-fighting-for/"
+    },
+    "nanette barragan": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Nanette Barragan's campaign says she is the youngest of eleven children of immigrants from Mexico, lives in San Pedro, and was elected to Congress in 2016. It says she was the only new Democratic Latina in the House that year and was chosen president of the Democratic freshman class.",
+      "issues": [
+        "She says she is fighting for Dreamers, deported veterans, Social Security, Medicare, and the environment, including opposition to offshore oil drilling.",
+        "She says seniors who paid into Medicare and Social Security should not have to choose between medication and groceries.",
+        "She says education is a right and that college, including community college, needs to be more affordable."
+      ],
+      "site": "https://barraganforcongress.com/",
+      "siteLabel": "Nanette Barragan for Congress",
+      "source": "https://barraganforcongress.com/issues/"
+    },
+    "chuong vo": {
+      "role": "Former mayor and retired law-enforcement officer running for Congress.",
+      "bio": "Chuong Vo's campaign says he is a husband, a father, a former mayor of Cerritos, and a 28-year law-enforcement officer who answered 911 calls for nearly three decades. It says his wife is a classroom teacher and that his family, like many immigrant families, was given a chance in this country.",
+      "issues": [
+        "He says he is running to keep families safe, lower costs, and hold government accountable.",
+        "He says that on the council he focused on safe neighborhoods, responsive city services, and balanced budgets.",
+        "He says he returned campaign contributions after a council election and supports ending insider stock trading in Congress."
+      ],
+      "site": "https://www.vo4congress.com/",
+      "siteLabel": "Chuong Vo for Congress",
+      "source": "https://www.vo4congress.com/"
+    },
+    "derek tran": {
+      "role": "U.S. representative, Army veteran, and small-business owner running for another term.",
+      "bio": "Derek Tran's campaign says he is the son of Vietnamese refugees who worked in the family market, enlisted in the Army at 18, and later opened a law practice for immigrants, workers, and consumers. It says he and his wife, a pharmacist, run an Orange County pharmacy and are raising three children in public schools.",
+      "issues": [
+        "He says he has introduced a bill to protect veterans' jobs and reinstate veterans laid off from federal jobs.",
+        "He says he opposes cuts to Medicaid and Medicare and has fought to lower prescription prices.",
+        "He says he is defending abortion rights and funding for Planned Parenthood, and he wants higher teacher pay and more vocational training."
+      ],
+      "site": "https://www.derektranforcongress.com/",
+      "siteLabel": "Derek Tran for Congress",
+      "donate": "https://secure.actblue.com/donate/derektran-website",
+      "source": "https://www.derektranforcongress.com/issues"
+    },
+    "david pan": {
+      "role": "Candidate for California's 46th Congressional District.",
+      "bio": "David Pan's campaign says he is running to support families in a district that includes Anaheim, Fullerton, Orange, Placentia, Santa Ana, and Stanton. He says he wants to take on the country's biggest problems with a sense of responsibility for the future.",
+      "issues": [
+        "He says he supports charter schools and vouchers so parents can choose a school.",
+        "He says rising crime requires more police and enforcement of the law.",
+        "He says the border should be secured before the country can have a serious immigration debate."
+      ],
+      "site": "https://www.davidpan4congress.com/",
+      "siteLabel": "David Pan for Congress",
+      "donate": "https://secure.anedot.com/davidpanforcongress2024/donate",
+      "source": "https://www.davidpan4congress.com/issues"
+    },
+    "lou correa": {
+      "role": "U.S. representative and former state legislator running for another term.",
+      "bio": "Lou Correa's campaign says he was raised by working-class parents and has focused since 1998 on helping Orange County families reach the middle class. It says he served in the Assembly, the state Senate, and as an Orange County supervisor before Congress.",
+      "issues": [
+        "He says public service should be about people rather than partisan games.",
+        "He says he wants practical results for a blue-collar district he describes as home to many veterans and Dreamers."
+      ],
+      "site": "https://www.loucorrea.com/",
+      "siteLabel": "Lou Correa for Congress",
+      "donate": "https://secure.actblue.com/donate/hmlou2026",
+      "source": "https://www.loucorrea.com/"
+    },
+    "dave min": {
+      "role": "U.S. representative and former state senator running for another term.",
+      "bio": "Dave Min's campaign says he is the son of Korean immigrants and a product of California public schools who studied at Wharton and Harvard Law. It says he prosecuted securities fraud at the SEC, taught at UC Irvine, was elected to the state Senate in 2020, and joined Congress in 2025.",
+      "issues": [
+        "He says the cost of housing is the biggest challenge in his district, the main reason people leave, and the top driver of homelessness.",
+        "He says he voted against cuts to Medicaid and Medicare and to keep premium tax credits that help people afford care.",
+        "He says he cannot be bought and is focused on cleaning up corruption in Washington."
+      ],
+      "site": "https://www.davemin.com/",
+      "siteLabel": "Dave Min for Congress",
+      "donate": "https://secure.actblue.com/donate/dm-launch?refcode=website-ed",
+      "source": "https://www.davemin.com/issues"
+    },
+    "jim desmond": {
+      "role": "County supervisor, pilot, and former mayor running for Congress.",
+      "bio": "Jim Desmond's campaign says he is a father, a husband, a Navy veteran, a Delta Air Lines pilot for 33 years, a former mayor of San Marcos, and a San Diego County supervisor. He says he is running to bring common sense back to government and to focus on fixing problems.",
+      "issues": [
+        "He says it is time for common sense to return to government and for leaders to fix problems.",
+        "His site lists the cost of living, homelessness, the border, energy, and vocational and military education among his priorities."
+      ],
+      "site": "https://www.desmondforcongress.com/",
+      "siteLabel": "Jim Desmond for Congress",
+      "source": "https://www.desmondforcongress.com/"
+    },
+    "marni von wilpert": {
+      "role": "Attorney and former prosecutor running for Congress.",
+      "bio": "Marni von Wilpert's campaign says she is a workers'-rights attorney from the Obama years and a former prosecutor. It says she has gone after wage theft, opioid companies, and chemical polluters, launched first-time homebuyer grants, and defended abortion rights.",
+      "issues": [
+        "She says she is running to lower costs for working families and to clean up corruption in Washington.",
+        "She says that as the daughter of an immigrant Army veteran she is fighting ICE tactics she calls unconstitutional, including masked agents.",
+        "She says she wants a secure border and a path to citizenship for long-term residents and Dreamers."
+      ],
+      "site": "https://www.marnivonwilpert.com/",
+      "siteLabel": "Marni von Wilpert for Congress",
+      "donate": "https://secure.actblue.com/donate/marni_vonwilpert?refcode=website",
+      "source": "https://www.marnivonwilpert.com/issues"
+    },
+    "mike levin": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Mike Levin's campaign says he has represented the 49th District since 2019 and that, after Proposition 50, the district includes coastal communities from Camp Pendleton through parts of San Diego and Orange counties. He says he works with members of both parties while defending democracy.",
+      "issues": [
+        "He says ethics reform should start by banning members of Congress from trading individual stocks.",
+        "He says clean energy, a modern grid, and desalination should make energy and water more affordable.",
+        "He says the country should build more homes people can afford, fix California's insurance market, and protect Medicaid and Medicare."
+      ],
+      "site": "https://www.mikelevin.org/",
+      "siteLabel": "Mike Levin for Congress",
+      "donate": "https://secure.actblue.com/contribute/page/mikelevin?refcode=website",
+      "source": "https://www.mikelevin.org/10bigsteps/"
+    },
+    "scott peters": {
+      "role": "U.S. representative and former San Diego council president running for another term.",
+      "bio": "Scott Peters's campaign says he is an environmental lawyer who was San Diego's first city council president and later chair of the Port Commission. It says his father was a Lutheran minister, he put himself through college, and he practiced environmental law for 16 years before Congress.",
+      "issues": [
+        "He says he co-led a bipartisan law to make it easier to build affordable manufactured homes and has worked to get homelessness aid to local nonprofits.",
+        "He says his work laid groundwork for Medicare drug-price negotiation, a $35 insulin cap, and a yearly cap on what seniors pay for medicine.",
+        "He says he helped win federal money to repair and expand the plant that treats sewage crossing the border at the Tijuana River."
+      ],
+      "site": "https://www.scottpeters.com/",
+      "siteLabel": "Scott Peters for Congress",
+      "donate": "https://secure.actblue.com/donate/sp2018?refcode=website_26",
+      "source": "https://www.scottpeters.com/issues"
+    },
+    "sara jacobs": {
+      "role": "U.S. representative running for another term.",
+      "bio": "Sara Jacobs's campaign says she is a third-generation San Diegan who graduated from San Diego public schools. It says she has worked in policy roles at the State Department, UNICEF, and the United Nations.",
+      "issues": [
+        "She says the country must act on climate change and on gun violence in schools and communities.",
+        "She says she is fighting for housing people can afford, health care as a human right, and access to reproductive care.",
+        "She says that in Congress she is working so every child has the same opportunities."
+      ],
+      "site": "https://sarajacobsca.com/",
+      "siteLabel": "Sara Jacobs for Congress",
+      "source": "https://sarajacobsca.com/"
+    },
+    "juan vargas": {
+      "role": "U.S. representative and former state legislator running for another term.",
+      "bio": "Juan Vargas's campaign says he was born in National City to Mexican immigrant parents who raised ten children on a chicken ranch. It says he earned degrees from the University of San Diego, Fordham, and Harvard Law, worked with the Jesuits in El Salvador, and served on the city council, in the Legislature, and in Congress.",
+      "issues": [
+        "He says he is working to grow good-paying jobs through clean energy, infrastructure, and small businesses.",
+        "He says he has championed public education and services for communities that have been left out.",
+        "His site says he is also fighting to protect health care and veterans."
+      ],
+      "site": "https://www.votevargas.com/",
+      "siteLabel": "Juan Vargas for Congress",
+      "donate": "https://secure.actblue.com/donate/juanvargasforca-main",
+      "source": "https://www.votevargas.com/meet-juan"
+    },
+    "mitch clemmons": {
+      "role": "Plumber and small-business owner running for Congress.",
+      "bio": "Mitch Clemmons's campaign says he is a plumber and small-business owner who has served customers and met a payroll. He says Congress needs more people who have fixed practical problems, and he is running in the 41st District.",
+      "issues": [
+        "He says he would lower barriers that raise housing costs and open practical paths to homeownership.",
+        "He says he would cut red tape so local employers can invest, hire, and grow.",
+        "He says he would support law enforcement, first responders, secure borders, and public safety."
+      ],
+      "site": "https://electmitchclemmons.com/",
+      "siteLabel": "Mitch Clemmons for Congress",
+      "donate": "https://secure.anedot.com/elect-mitch-clemmons-872f35e2-190f-4171-a21a-131162f7071d/donate",
+      "source": "https://electmitchclemmons.com/"
+    },
+    "cristian morales": {
+      "role": "Manufacturing executive running for Congress.",
+      "bio": "Cristian Morales's campaign says he was born in Guatemala, came to the United States with his family in the 1970s, and earned degrees from Purdue and Cornell. It says he has spent more than 20 years in automotive, aerospace, and defense manufacturing.",
+      "issues": [
+        "He says he wants better education and job skills, a state where business is affordable, and more work for blue-collar families.",
+        "He says immigration, housing costs, crime, homelessness, health care, and civil rights are the pillars of his campaign.",
+        "He says government should protect freedoms, secure the border, and stay accountable rather than grow larger."
+      ],
+      "site": "https://forallvoices.com/",
+      "siteLabel": "Cristian Morales for Congress",
+      "donate": "https://secure.winred.com/cristian-morales-for-congress/donate-today",
+      "source": "https://forallvoices.com/meet-cristian/"
+    },
+    "genevieve angel": {
+      "role": "Family nurse practitioner running for Congress.",
+      "bio": "Genevieve Angel's campaign says she is a nurse, a mother, a health-care executive, and a small-business owner who has lived and worked in the 44th District for nearly 30 years. She says she is running to solve problems for families rather than to play politics.",
+      "issues": [
+        "She says she would lower costs and create more economic opportunity.",
+        "She says she wants safe communities with real accountability and health care that is affordable and accessible.",
+        "She says immigration policy should be secure, fair, and practical."
+      ],
+      "site": "https://www.angelforcongress.com/",
+      "siteLabel": "Genevieve Angel for Congress",
+      "source": "https://www.angelforcongress.com/"
+    },
+    "armen kurdian": {
+      "role": "Retired Navy captain running for Congress.",
+      "bio": "Armen Kurdian's campaign says he is a retired Navy captain who served 25 years and is a husband, father, and neighbor in Southern California. He says he is running to put working families ahead of party politics.",
+      "issues": [
+        "He says housing, groceries, and gas are squeezing families, and he would lower those costs and stop wasteful spending.",
+        "He says California's utility bills are among the nation's highest and he would fight to make power cheaper and more reliable.",
+        "He says he would bring back good-paying jobs, support small business, and cut regulations he argues are pushing employers out."
+      ],
+      "site": "https://kurdianforcongress.com/",
+      "siteLabel": "Armen Kurdian for Congress",
+      "source": "https://kurdianforcongress.com/"
+    },
+    "steve cohen": {
+      "role": "Former television news director running for Congress.",
+      "bio": "Steve Cohen's campaign says he spent 50 years as a broadcast journalist, including 20 years as news director at KUSI-TV, questioning people in power. He says he is a San Diegan running because he is tired of watching housing, grocery, and health-care costs from behind a camera.",
+      "issues": [
+        "He says he would expand the housing supply and go after corporate price manipulation.",
+        "He says he would lower prescription costs, protect coverage for pre-existing conditions, and hold insurers accountable.",
+        "He says he would defend Social Security and Medicare from cuts and oppose wasteful federal spending."
+      ],
+      "site": "https://cohenforcongressca50.com/",
+      "siteLabel": "Steve Cohen for Congress",
+      "source": "https://cohenforcongressca50.com/"
+    },
+    "ricardo cabrera": {
+      "role": "Candidate running for Congress in California's 51st District.",
+      "bio": "Ricardo Cabrera's campaign says he is running so government serves the public rather than political insiders. He says his purpose is honest leadership that lowers costs, restores trust, and helps the next generation build.",
+      "issues": [
+        "He says he is fighting for congressional term limits and a lower cost of living.",
+        "He says he wants to confront corruption and create more opportunity for young entrepreneurs."
+      ],
+      "site": "https://www.cabreraforcongress2026.com/",
+      "siteLabel": "Ricardo Cabrera for Congress",
+      "source": "https://www.cabreraforcongress2026.com/"
+    },
+    "jeff belle": {
+      "role": "Navy veteran and former elected official running for Congress.",
+      "bio": "Jeff Belle's campaign says he is a Navy veteran, a private-equity executive, and a former elected official with 25 years in public service. It says he lives in Chula Vista and is running to accelerate growth in South Bay San Diego.",
+      "issues": [
+        "He says he would safeguard constitutional rights, secure the border, and provide financial relief to families and small businesses.",
+        "He says housing policy should add supply, speed approvals, and make starter homes and apartments easier to build.",
+        "He says he would invest in public schools and make federal small-business programs easier for neighborhood employers to use."
+      ],
+      "site": "https://www.belleforcongress.com/",
+      "siteLabel": "Jeff Belle for Congress",
+      "source": "https://www.belleforcongress.com/"
+    }
+  },
+  "measures": {}
+}

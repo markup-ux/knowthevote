@@ -1,0 +1,260 @@
+{
+  "code": "in",
+  "ballotSource": "https://www.in.gov/counties/harrison/files/2026generalelectioncandidates/Candidate_List_2026_General_Harp.pdf",
+  "where": {
+    "url": "https://indianavoters.in.gov/",
+    "label": "Find my polling location"
+  },
+  "offices": {
+    "Secretary Of State": {
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. Indiana's secretary charters businesses, regulates securities, oversees elections, commissions notaries, registers trademarks, and licenses vehicle dealerships."
+    }
+  },
+  "people": {
+    "max engling": {
+      "role": "Republican nominee for Indiana secretary of state.",
+      "bio": "Max Engling says he worked through college in construction, earned a degree at IUPUI, and later a master's in national defense and strategic planning at the U.S. Naval War College. He describes work on the U.S. House Administration Committee, in House leadership, at an Indiana seed company, and most recently on the staff of U.S. Senator Jim Banks.",
+      "issues": [
+        "He says he will work so that only eligible citizens vote in Indiana and will advocate closed primaries.",
+        "He wants business filings screened for fraud, including shell companies, and he wants regulations on small businesses cut back.",
+        "He proposes a public portal where people can report possible election problems."
+      ],
+      "site": "https://maxforindiana.com/",
+      "siteLabel": "maxforindiana.com",
+      "donate": "https://secure.winred.com/max-for-indiana-7974e77a/donate-today",
+      "source": "https://maxforindiana.com/"
+    },
+    "beau bayh": {
+      "role": "Marine infantry officer and attorney running for Indiana secretary of state.",
+      "bio": "Beau Bayh's campaign describes him as a seventh-generation Hoosier who served as a Marine infantry officer and rose to captain, including the Scout Sniper Unit Leader's Course.",
+      "issues": [
+        "He says his first priority is to stop waste and insider dealing in the secretary of state's office, including unnecessary travel, luxury vehicles, no-bid contracts, and high-paying jobs for family and friends.",
+        "He says illegal votes should not count and that every eligible Hoosier should be able to vote.",
+        "He supports statewide ballot referendums, including on redistricting, and says he will advocate for new small businesses and for working families."
+      ],
+      "site": "https://beaubayh.com/",
+      "siteLabel": "beaubayh.com",
+      "donate": "https://secure.actblue.com/donate/bayh-web",
+      "source": "https://beaubayh.com/priorities/"
+    },
+    "greg ballard": {
+      "role": "Former mayor of Indianapolis running for secretary of state as an independent.",
+      "bio": "Greg Ballard's site says he served 23 years as a Marine, including wartime service, then returned to Indianapolis, ran for mayor without establishment backing, and served two terms.",
+      "issues": [
+        "He says the secretary of state should run elections and should not endorse, raise money for, or donate to candidates who appear on those ballots.",
+        "He says he will not take sides in other state or local races.",
+        "He says the campaign is meant to give voters more choices at the ballot box."
+      ],
+      "site": "https://gregballard.com/",
+      "siteLabel": "gregballard.com",
+      "donate": "https://secure.anedot.com/gregballard/donate",
+      "source": "https://gregballard.com/"
+    },
+    "lauri shillings": {
+      "role": "Libertarian nominee for Indiana secretary of state.",
+      "bio": "Lauri Shillings's site says she is a creative director at the University of Indianapolis, has owned a small business since 2000, chairs the Hamilton County Libertarian Party, and holds a degree in community and nonprofit leadership.",
+      "issues": [
+        "She says she is running to restore trust in elections and to keep the office from being used as a party tool.",
+        "She wants simpler, reliable online services for business filings and records.",
+        "She says government systems should be efficient and that voters should have clear guides for registration and voting."
+      ],
+      "site": "https://lauriforliberty.com/",
+      "siteLabel": "lauriforliberty.com",
+      "donate": "",
+      "source": "https://lauriforliberty.com/"
+    },
+    "barb regnitz": {
+      "role": "Porter County commissioner running for Congress.",
+      "bio": "A Purdue graduate in mathematics and German, she worked as a software engineer and project manager at United Airlines and later as a financial advisor and certified financial planner. Elected to the Porter County Board of Commissioners in 2022, she says she knocked on more than 11,000 doors and has volunteered with Rotary and SCORE.",
+      "issues": [
+        "She says safe cities, secure borders, and smarter spending are her vision, including arresting and prosecuting criminals and ending catch-and-release.",
+        "She says she would curb inflation and waste so families keep more purchasing power, and reduce the national debt by putting American families and businesses ahead of foreign interests.",
+        "She says schools should teach students how to think, that girls' sports and facilities should be reserved for biological females, and that law-abiding people should keep the right to bear arms."
+      ],
+      "site": "https://barbregnitzforcongress.com/",
+      "siteLabel": "barbregnitzforcongress.com",
+      "source": "https://barbregnitzforcongress.com/"
+    },
+    "frank mrvan": {
+      "role": "U.S. representative for northwest Indiana, serving a third term.",
+      "bio": "A Morton High School and Ball State graduate, he and his wife Jane live in Lake County and have two daughters. Before Congress he was North Township Trustee for 15 years, and he says he is proud to represent Hammond, where he was born, and Highland, where he raised his family.",
+      "issues": [
+        "He says he supported the bipartisan infrastructure law and has delivered community-project funding for local infrastructure, the environment, first responders, and colleges, including work on the South Shore rail expansion.",
+        "He says the Inflation Reduction Act let Medicare negotiate drug prices, capped insulin at $35 a month for Medicare, and capped Medicare Part D out-of-pocket drug costs at $2,000.",
+        "He says he would ban stock trading by members of Congress, backs the Protecting the Right to Organize Act, and supports codifying Roe v. Wade."
+      ],
+      "site": "https://mrvanforcongress.com/",
+      "siteLabel": "mrvanforcongress.com",
+      "donate": "https://secure.actblue.com/donate/veracitysite?refcode=actionbutton",
+      "source": "https://mrvanforcongress.com/issues/"
+    },
+    "rudy yakym": {
+      "role": "U.S. representative and fourth-generation Hoosier from South Bend.",
+      "bio": "He says he was born and raised in South Bend, earned a business degree from Indiana University South Bend and an executive MBA from Notre Dame, and represents Indiana's Second District. He describes himself as a Christian, a family man, and a conservative.",
+      "issues": [
+        "He says Washington is stuck in gridlock and bureaucracy, and that he wants limited government, individual liberty, and fiscal responsibility.",
+        "He says power should sit with the people rather than an expanding federal bureaucracy, and that he would cut red tape and restore a balance between federal and state power.",
+        "He says his priorities in Congress are shrinking the federal bureaucracy, restoring fiscal responsibility, and making sure veterans get the care and benefits they earned."
+      ],
+      "site": "https://rudyforindiana.com/",
+      "siteLabel": "rudyforindiana.com",
+      "donate": "https://secure.winred.com/rudy-for-indiana/donate-today",
+      "source": "https://rudyforindiana.com/about/"
+    },
+    "jamee decio": {
+      "role": "Lawyer and former deputy prosecutor running for Congress.",
+      "bio": "An Elkhart native and daughter of businessman Art Decio, she says she was among the first women admitted to Notre Dame and one of the first to graduate from Notre Dame Law. She says eight years in court to adopt her son taught her persistence.",
+      "issues": [
+        "She says gas, groceries, housing, utilities, and health care should be affordable, and that tax dollars should go to Indiana families rather than Wall Street or endless foreign conflicts.",
+        "She says universal health care alongside private payers would help small businesses compete and improve life for Hoosiers.",
+        "She says data-center growth should not raise utility bills or silence local voices, and that the president and members of Congress must be held to the Constitution."
+      ],
+      "site": "https://decioforcongress.com/",
+      "siteLabel": "decioforcongress.com",
+      "donate": "https://secure.actblue.com/donate/decio-homepage",
+      "source": "https://decioforcongress.com/about/"
+    },
+    "marlin stutzman": {
+      "role": "Farmer, business owner, and U.S. representative from Howe, Indiana.",
+      "bio": "A fourth-generation farmer, he says he started a beef cattle operation at 16, served in the Indiana House and Senate, and was elected to Congress in 2010. He and his wife Christy still farm at Schonbrook Farm and own businesses including a farm-to-fork restaurant.",
+      "issues": [
+        "He says Washington's debt and spending, which he puts at $37 trillion, are the biggest threat to the American dream, and that waste should be cut without raising taxes.",
+        "He says a repaired tax system should let workers keep more of what they earn, and that Social Security and Medicare can be preserved alongside entitlement reforms that reduce the debt.",
+        "He says he wants to finish a border wall and strengthen national security."
+      ],
+      "site": "https://www.gomarlin.com/",
+      "siteLabel": "gomarlin.com",
+      "donate": "https://secure.winred.com/stutzman-for-congress/donate",
+      "source": "https://www.gomarlin.com/issues/restoring-a-healthy-economy"
+    },
+    "kelly thompson": {
+      "role": "Mother, concrete-business owner, and nonprofit founder running for Congress.",
+      "bio": "She says she is a mother of six and grandmother of 12, married to her high school sweetheart, with a business degree from the University of Central Florida. She co-owns a concrete contracting company serving northern Indiana and founded a nonprofit for at-risk youth.",
+      "issues": [
+        "She says she would lower costs for housing, health care, education, utilities, and energy, and fight for Medicare for All.",
+        "She says she would fully fund education from child care to college by taxing Wall Street, and put Hoosiers ahead of corporations and foreign governments.",
+        "She says she would end U.S. wars in the Middle East and bring troops home, ban stock trading by Congress and the president, and release the Epstein files."
+      ],
+      "site": "https://www.kellythompsonforcongress.com/",
+      "siteLabel": "kellythompsonforcongress.com",
+      "donate": "https://secure.actblue.com/donate/kelly-thompson",
+      "source": "https://www.kellythompsonforcongress.com/"
+    },
+    "drew cox": {
+      "role": "Marine veteran running for Congress in Indiana's Fourth District.",
+      "bio": "He says he is a lifelong Hoosier and veteran raised by a farmer and a public schoolteacher. He says the campaign refuses corporate PAC donations so it answers to residents rather than corporate interests.",
+      "issues": [
+        "He says he supports a single-payer Medicare for All system and would overturn Citizens United to get big money out of politics.",
+        "He says he would raise the minimum wage, support unions, and fight poverty, and he wants affordable-housing legislation.",
+        "He says that as a Marine veteran he would vote against further wars he calls needless, rein in unilateral military action, and fund the VA."
+      ],
+      "site": "https://www.drewcox.org/",
+      "siteLabel": "drewcox.org",
+      "donate": "https://secure.actblue.com/donate/drew-cox-2",
+      "source": "https://www.drewcox.org/the-issues"
+    },
+    "victoria spartz": {
+      "role": "Businesswoman and U.S. representative for Indiana's 5th District.",
+      "bio": "Born in Ukraine, she says she immigrated after meeting her husband, became a U.S. citizen, and worked from bank teller to CPA, finance executive, and business owner. She served in the Indiana Senate and was elected to Congress in 2020.",
+      "issues": [
+        "She says the national debt should be cut by reducing spending and balancing the budget, not by raising taxes on citizens.",
+        "She says the legal immigration process is too long, expensive, and bureaucratic, and that a stronger work-visa program should serve the national interest.",
+        "She says health-care costs need more transparency, competition, and consumer choice, and that politics should be a duty rather than a career."
+      ],
+      "site": "https://www.spartzforcongress.com/",
+      "siteLabel": "spartzforcongress.com",
+      "source": "https://www.spartzforcongress.com/issues/"
+    },
+    "j.d. ford": {
+      "role": "Indiana state senator running for Congress in the 5th District.",
+      "bio": "He says he entered the state Senate in 2018, flipped a long-held Republican district, and is the first openly LGBTQ+ legislator in Indiana history. He says he is not independently wealthy and knows the pressure of rising health-care and grocery costs.",
+      "issues": [
+        "He says he would cap health-care and prescription costs and push corporations to account for prices on groceries, housing, and energy.",
+        "He says Washington needs a Democratic check so federal agencies are not above the law.",
+        "He says he grew up in a union family, with a father who drove trucks and a mother who was a school secretary, and that he is running because that middle-class promise is no longer guaranteed."
+      ],
+      "site": "https://www.electjdford.com/",
+      "siteLabel": "electjdford.com",
+      "donate": "https://secure.actblue.com/donate/jd-ford-cd5/",
+      "source": "https://www.electjdford.com/"
+    },
+    "patrick mcauley": {
+      "role": "Republican nominee for Congress from Indianapolis.",
+      "bio": "A lifelong Indianapolis resident, North Central High School graduate, and Wabash College All-American, he says he earned a master's in international economics and finance and has worked in the district since 2022. He says he has Senate experience and spent more than four years building relationships in the district.",
+      "issues": [
+        "He says he would push for closer community-police ties, more officers living in the precincts they patrol, and resources aimed at reducing crime.",
+        "He says he would expand housing supply, put vacant properties to use, and support practical paths off the street.",
+        "He says not every young person needs a four-year degree, and he would expand trades, apprenticeships, and skilled jobs."
+      ],
+      "site": "https://mcauleyforthe7th.com/",
+      "siteLabel": "mcauleyforthe7th.com",
+      "donate": "https://secure.winred.com/mcauley-for-congress/donate-today",
+      "source": "https://mcauleyforthe7th.com/issues/"
+    },
+    "andré carson": {
+      "role": "U.S. representative for Indianapolis and a former law enforcement officer.",
+      "bio": "Born and raised in Indianapolis, he says he has focused on the economy, national security, and the middle class, and he serves on Intelligence, Transportation and Infrastructure, and a select committee on the Chinese Communist Party. He says he hosts an annual job fair and a youth opportunities fair.",
+      "issues": [
+        "He says he would invest in early childhood and K-12 schools, raise teacher pay, and expand Pell Grants and workforce training as alternatives to a four-year degree.",
+        "He says tariffs are raising household costs, and he wants tax cuts for working families, small businesses, and entrepreneurs rather than policy aimed at the ultra-wealthy.",
+        "He says he opposes cuts to SNAP, introduced a Food Deserts Act to finance grocery stores in underserved areas, and supports military and humanitarian aid to Ukraine."
+      ],
+      "site": "https://andrecarson.com/",
+      "siteLabel": "andrecarson.com",
+      "source": "https://andrecarson.com/on-the-issues/"
+    },
+    "mark messmer": {
+      "role": "Small-business owner and U.S. representative from southern Indiana.",
+      "bio": "A lifelong Hoosier from the Jasper area, he says he and his wife Kim have been married 40 years and have four children. He says less government creates more jobs, and that in the state legislature he fought for economic growth, individual liberties, and constitutional values.",
+      "issues": [
+        "He says voters should know he is a Hoosier businessman and a Christian who will stand up to what he calls the woke mob in Washington.",
+        "He says he is a pro-Trump conservative and will keep fighting for the values he learned growing up in Jasper.",
+        "He says faith, family, and hard work are what make communities strong, and that he wants those communities more prosperous."
+      ],
+      "site": "https://www.markmessmer.com/",
+      "siteLabel": "markmessmer.com",
+      "donate": "https://secure.winred.com/messmer-for-congress/donate-today",
+      "source": "https://www.markmessmer.com/"
+    },
+    "mary allen": {
+      "role": "Evansville city councilor, small-business owner, and Army Reserve veteran running for Congress.",
+      "bio": "She says she has lived in Indiana more than 30 years, returned to Evansville after military training to raise three daughters, and serves as an at-large city councilor and vice president of the council. She says she has owned a small business for more than 15 years and chairs the Enterprise Zone board.",
+      "issues": [
+        "She says health care is a human right and that she would protect and expand Medicaid and Medicare and keep rural hospitals open.",
+        "She says universal coverage, not tied to a job, would lower costs by focusing on prevention and let people change jobs or start businesses without losing doctors.",
+        "She says every Hoosier deserves a decent place to live, food on the table, and a home they can keep livable."
+      ],
+      "site": "https://www.maryallenforcongress.com/",
+      "siteLabel": "maryallenforcongress.com",
+      "donate": "https://secure.actblue.com/donate/mary-allen-1",
+      "source": "https://www.maryallenforcongress.com/priorities"
+    },
+    "erin houchin": {
+      "role": "U.S. representative and House Republican Conference secretary from Salem, Indiana.",
+      "bio": "Born and raised in Scottsburg, she says she interned in the Indiana Senate while at Indiana University, worked in child services and for Senator Dan Coats, and later built a small business helping law enforcement communicate with communities. She lives in Salem with her husband Dustin and their three children.",
+      "issues": [
+        "She says she supports finishing a border wall, backing law enforcement, and deporting people she calls criminal illegal aliens.",
+        "She says the federal government spends too much, and she backs a balanced-budget amendment and opposes late-term abortion.",
+        "She says parents should direct their children's education, that she would not defund the police, and that cutting red tape and taxes is how small businesses create jobs."
+      ],
+      "site": "https://www.erinhouchin.com/",
+      "siteLabel": "erinhouchin.com",
+      "donate": "https://secure.winred.com/houchinforcongress/donate-today",
+      "source": "https://www.erinhouchin.com/issues"
+    },
+    "brad meyer": {
+      "role": "Former Navy civilian engineer and manufacturer running for Congress.",
+      "bio": "A seventh-generation Hoosier from Brownsburg, he says he spent 25 years in local manufacturing and then nine years as a Navy civilian engineer in electromagnetic warfare after moving to Bloomington. He says he walked away from a secure retirement because he could not ignore the country's direction.",
+      "issues": [
+        "He says he supports Medicare for All so no one goes broke trying to stay alive, and he wants higher wages, fair taxes, and restored collective bargaining.",
+        "He says he is focused on making a first home possible again, lowering the cost of education, and an immigration system that respects the dignity of work.",
+        "He says policy has shifted wealth upward, and he is running so working people are not left behind from their first jobs through retirement."
+      ],
+      "site": "https://bradmeyer.org/",
+      "siteLabel": "bradmeyer.org",
+      "donate": "https://secure.actblue.com/donate/brad-meyer-1",
+      "source": "https://bradmeyer.org/about-brad/"
+    }
+  },
+  "measures": {}
+}

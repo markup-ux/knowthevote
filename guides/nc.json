@@ -1,0 +1,387 @@
+{
+  "code": "nc",
+  "ballotSource": "https://dl.ncsbe.gov/Elections/2026/Candidate%20Filing/2026_general_candidate_list_by_contest_federal_and_state.pdf",
+  "where": {
+    "url": "https://vt.ncsbe.gov/PPLkup/",
+    "label": "North Carolina State Board of Elections"
+  },
+  "offices": {
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The U.S. Senate has the sole power to conduct impeachment trials."
+    }
+  },
+  "people": {
+    "michael whatley": {
+      "role": "Republican candidate for U.S. Senate.",
+      "bio": "His campaign says he has spent his career fighting for the country and for North Carolina's conservative values. He says he is running to take that fight to Washington and to put North Carolina first.",
+      "issues": [
+        "He says he is running to fight for secure borders.",
+        "He says he wants strong leadership and what he calls North Carolina values.",
+        "He asks voters to stand with him and with President Trump."
+      ],
+      "site": "https://votemichaelwhatley.com/",
+      "siteLabel": "votemichaelwhatley.com",
+      "donate": "",
+      "source": "https://votemichaelwhatley.com/"
+    },
+    "roy cooper": {
+      "role": "Former governor and former attorney general of North Carolina.",
+      "bio": "His campaign says he was born and raised in Nash County, practiced law in Rocky Mount, served in the legislature, and was attorney general for four terms before he was elected governor. He says that as governor he worked with both parties on jobs and on a Medicaid expansion.",
+      "issues": [
+        "He says he is running to lower the cost of food, health care, energy, child care, and housing.",
+        "He says the middle class feels out of reach while the largest corporations and the richest Americans have gained wealth.",
+        "He says that as attorney general he prosecuted crimes and went after scammers, predatory lenders, drug companies, and big banks."
+      ],
+      "site": "https://roycooper.com/",
+      "siteLabel": "roycooper.com",
+      "donate": "https://secure.actblue.com/donate/cvf_web",
+      "source": "https://roycooper.com/about/"
+    },
+    "michael dublin": {
+      "role": "Retired public school teacher.",
+      "bio": "His campaign says he is a native North Carolinian, a recently retired teacher, and a community activist who has led a prison ministry for more than twenty years. He says he is a veteran and that this campaign refuses corporate PAC money.",
+      "issues": [
+        "He says he would try to overturn Citizens United, end gerrymandering, and stop what he calls voter suppression.",
+        "He says he wants a Green New Deal for the state, with renewable energy, union jobs, and accountability for corporate polluters.",
+        "He says he prefers diplomacy to war and would reduce military spending in favor of schools, hospitals, and communities."
+      ],
+      "site": "https://www.dublinforcongress.com/",
+      "siteLabel": "dublinforcongress.com",
+      "donate": "https://www.dublinforcongress.com/donate",
+      "source": "https://www.dublinforcongress.com/issues"
+    },
+    "shannon bray": {
+      "role": "Navy veteran and cybersecurity professional running for the U.S. Senate.",
+      "bio": "His campaign describes a volunteer-led effort, built county by county, centered on privacy, accountability, and government that works. He says rights should hold as technology advances, and that security should not depend on a surveillance state.",
+      "issues": [
+        "He calls for lower costs, simpler taxes, and an end to wasteful spending, and he says inflation should not quietly drain people's savings.",
+        "He argues people should own their data, with consent that is specific and revocable, and he says he will defend privacy, free speech, and due process.",
+        "He also wants secure borders with a workable legal process, and elections that are secure and auditable."
+      ],
+      "site": "https://www.shannonbray.us/",
+      "siteLabel": "shannonbray.us",
+      "donate": "https://www.shannonbray.us/donate",
+      "source": "https://www.shannonbray.us/issues"
+    },
+    "laurie buckhout": {
+      "role": "Retired Army colonel running for Congress in North Carolina's 1st District.",
+      "bio": "She says she is a combat commander and business leader, an Iraq War veteran who led troops in combat, and that she lives in Edenton with her husband, a fellow Army veteran. She says she is running because career politicians are making life harder for working families in eastern North Carolina.",
+      "issues": [
+        "She says she will fight to cut taxes and lower health-care and living costs so families can get ahead.",
+        "She says border security is national security and that Border Patrol agents need the resources to keep dangerous drugs out of the country.",
+        "She says she grew up on a farm and will cut regulations on farmers, fishermen, and the seafood industry, defend the Second Amendment, and invest in a ready military."
+      ],
+      "site": "https://www.lauriebuckhoutforcongress.com/",
+      "siteLabel": "lauriebuckhoutforcongress.com",
+      "donate": "https://secure.winred.com/laurie-buckhout-for-congress/donate-today-2026",
+      "source": "https://www.lauriebuckhoutforcongress.com/issues"
+    },
+    "valerie foushee": {
+      "role": "U.S. representative for North Carolina's 4th District.",
+      "bio": "She says she grew up watching her parents work multiple jobs and first ran to speak for students who were overlooked, especially Black and brown children. She describes herself as a mother, a public servant, and a lifelong North Carolinian.",
+      "issues": [
+        "She says Donald Trump is the biggest threat to democracy the country has faced, and she points to court briefs, impeachment support, and a boycott of his joint address.",
+        "She wants to limit ICE, ban agents from wearing masks, require body cameras, and she says she introduced articles of impeachment against Secretary Kristi Noem and voted against a Homeland Security bill that funded ICE.",
+        "She calls health care a universal right, supports Medicare for All and extended Affordable Care Act subsidies, and says she will protect abortion access and focus on schools, jobs, and a fair shot."
+      ],
+      "site": "https://valeriefoushee.com/",
+      "siteLabel": "valeriefoushee.com",
+      "donate": "https://secure.actblue.com/donate/foushee-web",
+      "source": "https://valeriefoushee.com/issues/"
+    },
+    "addison mcdowell": {
+      "role": "U.S. representative for North Carolina's 6th District.",
+      "bio": "He says he was raised in Davidson County, graduated from UNC Charlotte, worked as a constituent liaison for Ted Budd, and was first elected to Congress in 2024. He says a Baptist scholarship helped him through school and that he met his wife, Rachel, through Young Life.",
+      "issues": [
+        "He says securing the border and stopping illegal drugs is personal because his younger brother died of a fentanyl overdose.",
+        "He supports an America First trade agenda to protect U.S. jobs, says he will vote against federalizing elections, and wants federal grants tied to voter ID plus tighter absentee-ballot rules.",
+        "He says every life, born or unborn, is a gift, that he will vote entirely for what he calls pro-life bills, and that he opposes taxpayer funding of abortion. He also says he will oppose gun rules that punish law-abiding owners."
+      ],
+      "site": "https://www.mcdowellfornc.com/",
+      "siteLabel": "mcdowellfornc.com",
+      "donate": "https://secure.winred.com/mcdowell-for-congress/donate",
+      "source": "https://www.mcdowellfornc.com/issues"
+    },
+    "jamie ager": {
+      "role": "Farmer running for Congress in North Carolina's 11th District.",
+      "bio": "He says he is a husband and father of three from Fairview, a graduate of A.C. Reynolds High School and Warren Wilson College, and that generations of his family have farmed at Hickory Nut Gap. He and his wife Amy say they built the farm into a sustainable meat company that supports about 25 employees and works with farmers across the region.",
+      "issues": [
+        "He says he is running because of Hurricane Helene recovery, affordability for working families, and the need to preserve the region's environment and culture.",
+        "He says people in western North Carolina work hard and still struggle to pay bills, and he distinguishes a hand up from a handout.",
+        "His platform also covers health-care costs, government waste, immigration, veterans, small business, local farms, public lands, and community safety."
+      ],
+      "site": "https://agerforcongress.com/",
+      "siteLabel": "agerforcongress.com",
+      "donate": "https://secure.actblue.com/donate/agerwebsite",
+      "source": "https://agerforcongress.com/platform"
+    },
+    "don davis": {
+      "role": "U.S. representative for North Carolina's 1st District.",
+      "bio": "His campaign says he learned the value of hard work in the tobacco fields of eastern North Carolina and is running so the region is not forgotten in Washington. He says families there are dealing with higher gas, grocery, and health-care bills.",
+      "issues": [
+        "He says he is working to make life more affordable and to expand opportunity in coastal and rural communities.",
+        "His campaign lists lowering the cost of living, jobs and economic growth, education, rural infrastructure, and support for the military and veterans."
+      ],
+      "site": "https://www.votedondavis.com/",
+      "siteLabel": "votedondavis.com",
+      "source": "https://www.votedondavis.com/delivering-new-page"
+    },
+    "deborah ross": {
+      "role": "U.S. representative and vice ranking Democrat on the House Judiciary Committee.",
+      "bio": "Her campaign says she has spent her career improving life in North Carolina and now represents the 2nd District, which she describes as a fight for fairness, equality, and progress.",
+      "issues": [
+        "She says she is working for affordable health care, public education, smaller classes, higher teacher pay, and relief from student-loan debt.",
+        "She says housing should be more affordable, retirement benefits should be protected, and workers and unions should have a champion.",
+        "She says she supports clean energy, a woman's decisions about her own health care, accessible transit, and an immigration overhaul that keeps families together while securing the border."
+      ],
+      "site": "https://deborahross.com/",
+      "siteLabel": "deborahross.com",
+      "source": "https://deborahross.com/priorities/"
+    },
+    "greg murphy": {
+      "role": "Physician and U.S. representative for North Carolina's 3rd District.",
+      "bio": "His campaign says he has practiced medicine for more than 30 years and serves as a senior member of Ways and Means and vice chair of the Congressional Doctors Caucus. He says making life more affordable is his top priority.",
+      "issues": [
+        "He says he helped write the Working Families Tax Cut, including no tax on tips or overtime, relief for seniors, and a larger child tax credit and standard deduction.",
+        "He says he supports the president's border enforcement and opposes returning to earlier policies he says let millions of people enter illegally.",
+        "He says he is focused on Camp Lejeune water contamination, hyperbaric oxygen therapy, and faster VA care."
+      ],
+      "site": "https://murphy4congress.com/",
+      "siteLabel": "murphy4congress.com",
+      "source": "https://murphy4congress.com/issues/improving-the-economy/"
+    },
+    "virginia foxx": {
+      "role": "U.S. representative for North Carolina's 5th District.",
+      "bio": "Her campaign says she is a mother and grandmother and the granddaughter of Italian immigrants who came seeking opportunity. She says the right to life and religious liberty are central to her work.",
+      "issues": [
+        "She says she would ban elective abortion later in pregnancy, end federal funding of abortion, and protect people punished for living out their faith.",
+        "She says immigration changes should secure the border and uphold the law, and that Americans need the Second Amendment to defend themselves.",
+        "She says patients, including people with preexisting conditions, should have lower costs and more choices, and she opposes Medicare for All."
+      ],
+      "site": "https://virginiafoxx.com/",
+      "siteLabel": "virginiafoxx.com",
+      "source": "https://virginiafoxx.com/issues/"
+    },
+    "david rouzer": {
+      "role": "U.S. representative for North Carolina's 7th District.",
+      "bio": "His campaign says his career has focused on small businesses, entrepreneurs, and farm families, and that as a state senator he chaired committees that cut spending and regulation. He says he led floor debate against the Affordable Care Act.",
+      "issues": [
+        "He says he would fund dredging, beach nourishment, and flood insurance so coastal homeowners are not priced out.",
+        "He says he supports a strong military, intervention only when the national interest is threatened, and a strong alliance with Israel.",
+        "He says taxes and rules are crushing small businesses and farms, and he backs an all-of-the-above energy policy aimed at exporting oil and gas."
+      ],
+      "site": "https://davidrouzer.com/",
+      "siteLabel": "davidrouzer.com",
+      "source": "https://davidrouzer.com/the-issues/"
+    },
+    "richard hudson": {
+      "role": "U.S. representative for North Carolina's 9th District.",
+      "bio": "His campaign says he lives in Southern Pines and was first elected to Congress in 2013. He says he wants to keep fighting for service members, veterans, parents, farmers, gun owners, and small businesses.",
+      "issues": [
+        "He says he would finish a border wall, restore Remain in Mexico, and keep working on the opioid epidemic.",
+        "He says he backs police and wants bipartisan work that keeps communities safe."
+      ],
+      "site": "https://richardhudson.org/",
+      "siteLabel": "richardhudson.org",
+      "source": "https://richardhudson.org/issues/"
+    },
+    "alma adams": {
+      "role": "U.S. representative and retired educator for North Carolina's 12th District.",
+      "bio": "Her campaign says she has represented the Charlotte area since 2014 and organizes her work around health care, food, housing, and education, which she calls the 4 H's. She says she knows personally how hard it is to live without them.",
+      "issues": [
+        "She says abortion is a private medical decision and that she is still fighting for equal pay and paid family leave.",
+        "She says she champions public schools, teachers, and historically Black colleges, and she sponsored permanent federal funding for minority-serving institutions.",
+        "She says Congress should restore the Voting Rights Act and stop what she calls an assault on the working class and the poor."
+      ],
+      "site": "https://almaadamsforcongress.com/",
+      "siteLabel": "almaadamsforcongress.com",
+      "source": "https://almaadamsforcongress.com/about-alma/"
+    },
+    "tim moore": {
+      "role": "U.S. representative and former North Carolina House speaker.",
+      "bio": "His campaign says he spent more than two decades in the General Assembly, including ten years as speaker, before representing the 14th District. It says that as speaker the state required voter identification, banned sanctuary cities, balanced the budget every year, and cut the personal income tax.",
+      "issues": [
+        "He says he serves on Financial Services and the Budget and is standing up for fiscal responsibility and smarter regulation.",
+        "He says he wants stronger support for working families and local economies, and a government that is accountable."
+      ],
+      "site": "https://www.timmoore.com/",
+      "siteLabel": "timmoore.com",
+      "source": "https://www.timmoore.com/"
+    },
+    "chuck hubbard": {
+      "role": "Journalist running for Congress in North Carolina's 5th District.",
+      "bio": "His campaign says he is a Wilkes County native who started at his grandfather's paper, the Wilkes Journal-Patriot, and spent more than 40 years as a local journalist after graduating from Wofford College. He and his wife Shari live in Wilkesboro.",
+      "issues": [
+        "He says he would raise the minimum wage, shift taxes toward the wealthy, and support public schools, small businesses, and farms.",
+        "He says he would protect Medicare, Medicaid, Social Security, and veterans' benefits, and add a public option so rural towns have a hospital nearby.",
+        "He says abortion belongs between a patient and a doctor, and he wants to overturn Citizens United and ban members of Congress from trading stocks."
+      ],
+      "site": "https://hubbardforcongress.com/",
+      "siteLabel": "hubbardforcongress.com",
+      "source": "https://hubbardforcongress.com/platform"
+    },
+    "kimberly hardy": {
+      "role": "Social worker and professor running for Congress in North Carolina's 7th District.",
+      "bio": "Her campaign says she is a mother, social worker, and professor who was raised by a Marine and a federal agent. She says she is running because policymakers have ignored hard-working neighbors in southeastern North Carolina.",
+      "issues": [
+        "She says she would raise the federal minimum wage, close the overtime salary loophole, and end taxes on tips.",
+        "She says she would protect Medicare and Medicaid, lower drug costs, and restore cancer-research funding.",
+        "She says she would fund Head Start, Title I, and career education, and protect drinking water and coastal towns from flooding."
+      ],
+      "site": "https://www.kimberlyhardyforcongress.com/",
+      "siteLabel": "kimberlyhardyforcongress.com",
+      "source": "https://www.kimberlyhardyforcongress.com/priorities"
+    },
+    "mark harris": {
+      "role": "Pastor and U.S. representative for North Carolina's 8th District.",
+      "bio": "His campaign says he was born and raised in Winston-Salem, the youngest of five children, and is a husband, father, and pastor. He says he is running again as an America First voice for the district.",
+      "issues": [
+        "He says he believes in the sanctity of life from conception to natural death and in what he calls traditional family values.",
+        "He says he would fortify the border, enforce immigration law, and keep a strong military that honors veterans.",
+        "He says parents, not Washington, should choose public, private, charter, or home schools, and he wants to cut spending that he says drove inflation."
+      ],
+      "site": "https://www.markharrisforcongress.org/",
+      "siteLabel": "markharrisforcongress.org",
+      "source": "https://www.markharrisforcongress.org/issues"
+    },
+    "richard ojeda ii": {
+      "role": "Retired Army major running for Congress in North Carolina's 9th District.",
+      "bio": "His campaign says he has served in the military, taught, and served in a state legislature, and that he is running to fight for families, veterans, and rural towns. He says the campaign is built by listening at fish fries, union halls, and community meetings.",
+      "issues": [
+        "He says he would improve VA care, pensions, and mental-health support, and raise teacher pay while cutting student debt.",
+        "He says he would strengthen Medicare and Medicaid, fund rural hospitals, cap drug prices, and codify a national right to abortion.",
+        "He says he would raise wages, repeal right-to-work laws, back farmers and skilled trades, and block a higher Social Security retirement age."
+      ],
+      "site": "https://ojedafornc.com/",
+      "siteLabel": "ojedafornc.com",
+      "source": "https://ojedafornc.com/policies/"
+    },
+    "pat harrigan": {
+      "role": "Green Beret and businessman representing North Carolina's 10th District.",
+      "bio": "His campaign says he is a Green Beret, a husband, and a father who came to North Carolina to serve and stayed to raise a family and build businesses, including defense manufacturing. He says hard work and personal responsibility are the benchmark of the American dream.",
+      "issues": [
+        "His campaign organizes its platform around the economy, energy, national security, immigration, the Second Amendment, election integrity, and crime."
+      ],
+      "site": "https://www.harriganforcongress.com/",
+      "siteLabel": "harriganforcongress.com",
+      "source": "https://www.harriganforcongress.com/"
+    },
+    "jennifer balkcom": {
+      "role": "State representative and mortgage lender running for Congress in North Carolina's 11th District.",
+      "bio": "Her campaign says she is an eighth-generation western North Carolinian who grew up on her family's apple farm in Henderson County and has worked in banking since 1998. She says she is a mortgage loan officer who represents Henderson County in the state House and lives in Hendersonville.",
+      "issues": [
+        "She says working families should be able to own a home and keep more of what they earn.",
+        "She says she supports local credit unions and helped change state law so more rural towns can be served by them.",
+        "She says she supports ending the state income tax on tips, overtime, and bonuses."
+      ],
+      "site": "https://www.jenniferbalkcom.com/",
+      "siteLabel": "jenniferbalkcom.com",
+      "source": "https://ncneedsbalkcom.com/"
+    },
+    "brad knott": {
+      "role": "Former federal prosecutor and U.S. representative for North Carolina's 13th District.",
+      "bio": "His campaign says he and his wife grew up in Raleigh and are raising two daughters there, and that he resigned as a federal prosecutor in eastern North Carolina to run in 2024. He says he is running again so the district stays safer and more prosperous.",
+      "issues": [
+        "He says he would finish the border wall and send an immigrant who commits a felony to prison for at least five years before deportation.",
+        "He says he supports school choice, a balanced-budget amendment, and police, and he opposes new gun laws aimed at law-abiding owners.",
+        "He says he is pro-life, supports state laws protecting the unborn, and would defend faith-based pregnancy centers."
+      ],
+      "site": "https://www.bradknott.com/",
+      "siteLabel": "bradknott.com",
+      "source": "https://www.bradknott.com/priorities"
+    },
+    "lakesha womack": {
+      "role": "Democratic nominee for Congress in North Carolina's 14th District.",
+      "bio": "Her campaign says she is running to bring the experience of working families, entrepreneurs, and community leaders to Washington. She says her agenda comes from listening to families, workers, business owners, and faith leaders.",
+      "issues": [
+        "She says health care is a necessity and that she would protect the Affordable Care Act, cap drug costs, and fund rural hospitals.",
+        "She says she would raise the federal minimum wage, help small businesses get capital, and invest in affordable housing.",
+        "She says she would put more federal money into public schools, apprenticeships, and student-debt relief, and demand oversight of federal spending."
+      ],
+      "site": "https://www.womack4nc14.com/",
+      "siteLabel": "womack4nc14.com",
+      "source": "https://www.womack4nc14.com/issues"
+    },
+    "raymond smith": {
+      "role": "Former state legislator and Army veteran running for Congress in North Carolina's 3rd District.",
+      "bio": "His campaign says he was born and raised in Goldsboro, the son of a Marine and a longtime school-board member, and that he has been a teacher, football coach, transportation planner, school-board member, and two-term legislator. He says he is a husband and father who will put eastern North Carolina first.",
+      "issues": [
+        "He says that in the legislature he worked to expand rural health care, fund public education, and improve infrastructure, and that he would keep doing that in Washington.",
+        "He says Congress is controlled by billionaires and lobbyists, and he wants campaign-finance reform, an end to Citizens United, and a ban on stock trading by members."
+      ],
+      "site": "https://raymondsmithfornc.com/",
+      "siteLabel": "raymondsmithfornc.com",
+      "source": "https://raymondsmithfornc.com/about"
+    },
+    "max ganorkar": {
+      "role": "Candidate for Congress in North Carolina's 4th District.",
+      "bio": "His campaign describes him as a constitutionalist and calls him an anti-socialism warrior. He says he is not a traditional Republican and does not see people by race.",
+      "issues": [
+        "He says his policies are meant to expand opportunity, strengthen families, and increase prosperity for every American.",
+        "He says he is running to represent all of the people, not some of them."
+      ],
+      "site": "https://maxforcongress.com/",
+      "siteLabel": "maxforcongress.com",
+      "source": "https://maxforcongress.com/issues"
+    },
+    "cyril jefferson": {
+      "role": "Mayor of High Point running for Congress in North Carolina's 6th District.",
+      "bio": "His campaign says he is a husband, father, former teacher, small-business owner, and mayor who was raised in the district. It says he was the youngest person elected mayor of High Point.",
+      "issues": [
+        "He says his priorities are affordability, health care and hunger, democracy and accountability, education and the workforce, economic development, and immigration.",
+        "He says that as mayor he focused on violent crime, workforce funding, housing, and small businesses.",
+        "He says Washington should make paychecks, schools, neighborhoods, and businesses better, not score political points."
+      ],
+      "site": "https://www.cyrilforcongress.com/",
+      "siteLabel": "cyrilforcongress.com",
+      "source": "https://www.cyrilforcongress.com/about"
+    },
+    "colby watson": {
+      "role": "Small-business owner running for Congress in North Carolina's 8th District.",
+      "bio": "His campaign says he was born and raised in Union County, started in masonry, was homeschooled, and worked in construction and farming before starting a business more than a decade ago. He says he and his wife have two children and that he never planned to run.",
+      "issues": [
+        "He says he will not take money from lobbyists for corporate or foreign interests and will not trade stocks in office.",
+        "He says homeownership should be back in reach and that health care should heal people rather than maximize profit.",
+        "He says markets should reward work and entrepreneurship, and that corporate monopolies are squeezing small businesses and family farms."
+      ],
+      "site": "https://www.colbyforcongress.com/",
+      "siteLabel": "colbyforcongress.com",
+      "source": "https://www.colbyforcongress.com/about"
+    },
+    "ashley bell": {
+      "role": "Clinician running for Congress in North Carolina's 10th District.",
+      "bio": "Her campaign says she treats patients who cannot afford to be sick and is running because the 10th District needs someone who sees that directly.",
+      "issues": [
+        "Her campaign lists universal health care, rules for artificial intelligence and data centers, anti-corruption, and affordability as its top issues."
+      ],
+      "site": "https://www.ashleybellforcongress.com/",
+      "siteLabel": "ashleybellforcongress.com",
+      "source": "https://www.ashleybellforcongress.com/issues"
+    },
+    "jack codiga": {
+      "role": "Financial professional running for Congress in North Carolina's 12th District.",
+      "bio": "His campaign says he is a Christian and a financial professional who decided to run because of housing costs, personal debt, and what he calls an erosion of civility. He says America should work for everyone.",
+      "issues": [
+        "He pledges not to accept PAC money and not to trade individual stocks.",
+        "He says he would hold more than 10 town halls a year."
+      ],
+      "site": "https://ihatepolitics.com/",
+      "siteLabel": "ihatepolitics.com",
+      "source": "https://ihatepolitics.com/"
+    },
+    "paul barringer": {
+      "role": "Lawyer running for Congress in North Carolina's 13th District.",
+      "bio": "His campaign says he is a husband, father, lawyer, Eagle Scout, Sunday School teacher, and endurance athlete who lives on a farm in Lee County. He says his work has been at the intersection of health care, law, technology, and government.",
+      "issues": [
+        "He says he would put the district ahead of corporations, a partisan agenda, or the Washington establishment.",
+        "He says he believes in fiscal responsibility, local control, and practical health and justice reforms.",
+        "He says Congress should independently make laws, control spending, and oversee the other branches."
+      ],
+      "site": "https://paulbarringer.com/",
+      "siteLabel": "paulbarringer.com",
+      "source": "https://paulbarringer.com/about"
+    }
+  },
+  "measures": {}
+}

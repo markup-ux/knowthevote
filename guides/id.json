@@ -1,0 +1,218 @@
+{
+  "code": "id",
+  "ballotSource": "",
+  "where": {
+    "url": "https://votertools.voteidaho.gov/ElectionLink/ElectionLink/ViewPollingLocation.aspx",
+    "label": "Find your polling place"
+  },
+  "offices": {
+    "Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials. The governor is commander-in-chief of the state's military forces, except when they are called into actual service of the United States, and is chairman of the State Board of Land Commissioners."
+    },
+    "Lt. Governor": {
+      "kicker": "State · Vote for one",
+      "job": "The lieutenant governor is next in line if the governor cannot finish the term. Any other duties are set by state law. The Idaho Constitution makes the lieutenant governor president of the Senate, with a vote only when the Senate is equally divided."
+    },
+    "Senate": {
+      "kicker": "Federal · Vote for one",
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. Senate committees gather information through investigations and hearings in order to recommend legislation, and they evaluate presidential nominees for executive and judicial posts."
+    },
+    "Attorney General": {
+      "kicker": "State · Vote for one",
+      "job": "The attorney general is the state's chief legal officer. Which cases the office files, and whether it prosecutes crimes, depends on that state's law. Idaho law assigns the attorney general the duty to represent the state and its agencies in court and, when the public service requires it, to assist a county prosecuting attorney."
+    },
+    "Secretary Of State": {
+      "kicker": "State · Vote for one",
+      "job": "The secretary of state runs the duties this state assigns that office. Those duties are not the same in every state. Idaho law charges the secretary of state with custody of legislative acts and resolutions, the legislative journals, and the great seal."
+    }
+  },
+  "people": {
+    "brad little": {
+      "role": "Governor of Idaho, first elected in 2018 and reelected in 2022.",
+      "bio": "His campaign says he is committed to leading so Idahoans can thrive, so children and grandchildren choose to stay, and so people who have left choose to come back. The site calls that experienced leadership the state can trust.",
+      "issues": [],
+      "site": "https://www.bradlittleforidaho.com/",
+      "siteLabel": "bradlittleforidaho.com",
+      "donate": "https://secure.winred.com/brad-little-for-governor/donate?utm_source=website&utm_medium=website&utm_campaign=navbar_website_website_20210817__no_1_",
+      "source": "https://www.bradlittleforidaho.com/"
+    },
+    "terri pickens": {
+      "role": "Candidate for governor of Idaho.",
+      "bio": "Her issues page says economic growth has to work for everyday Idahoans, not billionaires, and that a strong economy depends on education and a solid workforce. She says health care must be affordable and that small businesses need a stable tax structure and a living wage to compete.",
+      "issues": [
+        "She says growth should rest on small business, a stable tax structure, a living wage, and health care that is affordable.",
+        "She says she would repeal the school-voucher program, raise teacher pay, and fund rural districts, pre-K, and full-day kindergarten.",
+        "She says public lands must stay public and open for recreation, hunting, and fishing, and that women, not the state, should make family-planning decisions."
+      ],
+      "site": "https://www.terriforidaho.com/",
+      "siteLabel": "terriforidaho.com",
+      "donate": "https://secure.actblue.com/donate/terriforidaho-website?refcode=2026",
+      "source": "https://www.terriforidaho.com/issues"
+    },
+    "john stegner": {
+      "role": "Former Idaho Supreme Court justice running for governor as an independent.",
+      "bio": "He is a lifelong Idahoan raised in Grangeville who served as a Latah County district judge and then on the Idaho Supreme Court, a judicial career he puts at 26 years. He says he helped pioneer drug and treatment courts and is running because he is frustrated with Idaho politics and is not a member of a party.",
+      "issues": [],
+      "site": "https://www.stegnerforidaho.com/",
+      "siteLabel": "stegnerforidaho.com",
+      "donate": "https://www.stegnerforidaho.com/donate",
+      "source": "https://www.stegnerforidaho.com/"
+    },
+    "pro-life": {
+      "role": "Constitution Party candidate for governor; he says Pro-Life is his only name.",
+      "bio": "He says he ran for lieutenant governor in 2022 and is running for governor in 2026. The site, which he shares with his wife's legislative campaign, says they are organic farmers and that he will not compromise to get elected.",
+      "issues": [
+        "He says legal personhood begins when sperm meets egg, that abortion is murder, and that as governor he would keep abortion facilities closed and block abortifacient drugs from being sold or shipped into Idaho.",
+        "He says he would also bar transgender medical treatment at any age and would veto bills that expand government.",
+        "He says education, welfare, health, and recreation should be phased out of government and returned to faith communities."
+      ],
+      "site": "https://www.prolife-idaho.com/",
+      "siteLabel": "prolife-idaho.com",
+      "donate": "",
+      "source": "https://www.prolife-idaho.com/"
+    },
+    "paul sand": {
+      "role": "Libertarian nominee for governor and a former city council member.",
+      "bio": "He says he won the Libertarian nomination for governor in the May 19, 2026 primary, after ten years on his local city council and 30 years as an Idaho property and business owner. He says his campaign is not endorsed by the Libertarian Party of Idaho or the national party.",
+      "issues": [
+        "He says he would invert Idaho government so counties set their own rules, fund their own social programs, and collect taxes, with state revenue sharing running from the county upward.",
+        "He says he opposes abortion, open borders, and legalizing narcotic drugs, and he supports large cuts to state agencies and state taxes.",
+        "He says he opposes public benefits for any immigrant, whether here legally or not."
+      ],
+      "site": "https://paulsand.org/",
+      "siteLabel": "paulsand.org",
+      "donate": "",
+      "source": "https://paulsand.org/"
+    },
+    "scott bedke": {
+      "role": "Lieutenant governor, cattle rancher, and former Speaker of the Idaho House.",
+      "bio": "He says his family ranching in the Oakley Basin goes back to the 1870s. He was born in Twin Falls, graduated from Oakley High School, and started in public service on the Oakley City Council.",
+      "issues": [
+        "He says he has an A+ rating from the NRA and a 100 percent pro-life record with Idaho Chooses Life.",
+        "He says he led a fight to keep critical race theory out of Idaho schools.",
+        "He says he was named legislator of the year by the Fraternal Order of Police and will oppose defunding the police, work to secure the border, and keep families safe."
+      ],
+      "site": "https://bedkeforidaho.com/",
+      "siteLabel": "bedkeforidaho.com",
+      "donate": "https://bedkeforidaho.com/donate/",
+      "source": "https://bedkeforidaho.com/"
+    },
+    "eric myricks": {
+      "role": "Democratic candidate for lieutenant governor, and an entrepreneur.",
+      "bio": "He describes himself as a moderate Democrat, a father, and a brain-health advocate who wants government in the style of the late Governor Cecil Andrus. He says he came to Idaho after marrying Lesley, who is from Idaho Falls, and that they are raising two boys in the Treasure Valley.",
+      "issues": [
+        "He says taxes should stay low, but that roads, schools, and senior care cannot be met by cuts alone.",
+        "He says he will fight House Bill 328, which he says adds Medicaid work rules, shifts care to profit-driven companies, and lets officials cut benefits overnight.",
+        "He says he will fully fund public schools, repeal the voucher program, and connect career training to jobs that keep young people in Idaho."
+      ],
+      "site": "https://ericforidaho.com/",
+      "siteLabel": "ericforidaho.com",
+      "donate": "",
+      "source": "https://ericforidaho.com/"
+    },
+    "jim risch": {
+      "role": "U.S. senator from Idaho seeking another term.",
+      "bio": "He is a small-business owner, a farmer and beef producer, and a former county prosecuting attorney. He says that as governor he cut property taxes by 20 percent, and that he is a former chairman of the Senate Small Business Committee.",
+      "issues": [
+        "He says he led the Senate fight against selling some of Idaho's public lands and will keep defending multiple use, including hunting, logging, and grazing.",
+        "He says he will keep cutting taxes and red tape for small businesses and farms, and he cites a 100 percent approval rating from the American Farm Bureau.",
+        "He says he supports border enforcement, Second Amendment rights, and returning natural-resource decisions to state and local leaders."
+      ],
+      "site": "https://senatorrisch.com/",
+      "siteLabel": "senatorrisch.com",
+      "donate": "https://secure.winred.com/risch/support-jim-risch",
+      "source": "https://senatorrisch.com/issues/"
+    },
+    "todd achilles": {
+      "role": "Candidate for the U.S. Senate and an Army veteran.",
+      "bio": "He says he served as an Army officer, was trained on weapons, and deployed to the Persian Gulf. He describes himself as a capitalist who wants an economy that rewards work and strengthens Idaho's middle class.",
+      "issues": [
+        "He says he will seek a constitutional amendment limiting senators to two terms and House members to three, ban members of Congress from trading individual stocks, and close tax loopholes he says the wealthy and corporations use.",
+        "He says he will protect health-insurance tax credits, require upfront medical prices, and build on a housing bill that limits large investors from buying single-family homes.",
+        "He says he will oppose selling Idaho public lands, vote against new federal bans on firearms or magazines, and staff Customs and Border Protection while updating legal visas for farm work."
+      ],
+      "site": "https://www.achillesforidaho.com/",
+      "siteLabel": "achillesforidaho.com",
+      "donate": "https://secure.numero.ai/contribute/Achilles-For-Idaho",
+      "source": "https://www.achillesforidaho.com/policies"
+    },
+    "natalie fleming": {
+      "role": "Candidate for the U.S. Senate.",
+      "bio": "She says she was born in the Mountain West and has watched families work hard and still struggle under broken systems. Her campaign says she is running for Idahoans rather than for a party or for special interests.",
+      "issues": [
+        "She says she will curb corporate landlords and reopen paths to homeownership and homesteading.",
+        "She says personal data should be treated as private property, with a ban on exploitative surveillance by companies and government.",
+        "She says the economy should favor small businesses, cooperatives, and local supply chains, and she wants the food supply shifted from global toward local, with regenerative farming and rural infrastructure."
+      ],
+      "site": "https://nataliefleming.info/",
+      "siteLabel": "nataliefleming.info",
+      "donate": "https://nataliefleming.info/donate/",
+      "source": "https://nataliefleming.info/just-a-few-issues/"
+    },
+    "raul labrador": {
+      "role": "Idaho attorney general.",
+      "bio": "The campaign site identifies him as Attorney General Raúl Labrador and says the campaign is about protecting Idaho families. It invites supporters to watch an ad titled as a fight for Idaho.",
+      "issues": [
+        "The site's headline says he is protecting Idaho families.",
+        "It highlights his defense of women's sports at the U.S. Supreme Court."
+      ],
+      "site": "https://www.raullabrador.com/",
+      "siteLabel": "raullabrador.com",
+      "donate": "https://secure.winred.com/labrador-for-idaho/donate-today",
+      "source": "https://www.raullabrador.com/"
+    },
+    "lori hickman": {
+      "role": "Attorney running for attorney general.",
+      "bio": "She says she never planned to run, and that she has practiced at a large New York firm, at Micron Technology, and for clients in Idaho. She says earlier attorneys general such as Jim Jones, Larry EchoHawk, and Lawrence Wasden kept the office on the law rather than on politics.",
+      "issues": [
+        "She says she will give state agencies and the Land Board legal advice based on the law, and hire for ethics and skill rather than ideology.",
+        "She says she will issue prompt opinions for legislators and state officials and follow the statute even when that is politically inconvenient.",
+        "She says she will oppose selling federal public lands in Idaho or closing them to the public."
+      ],
+      "site": "https://www.lori4idaho.com/",
+      "siteLabel": "lori4idaho.com",
+      "donate": "https://secure.actblue.com/donate/lorihickman-website?amount=25",
+      "source": "https://www.lori4idaho.com/"
+    },
+    "phil mcgrane": {
+      "role": "Incumbent who says he has overseen Idaho elections and modernized services for voters and businesses.",
+      "bio": "He says that since taking office he has worked to strengthen elections, expand transparency, and modernize services for voters and businesses. He says he oversaw the largest election in Idaho history.",
+      "issues": [
+        "He says he strengthened safeguards that keep Idaho elections secure, transparent, and accessible.",
+        "He says he trained as a wildland firefighter and works with timber, mining, agriculture, and recreation on public-land challenges.",
+        "He says he will protect faith, family, personal responsibility, and limited government."
+      ],
+      "site": "https://www.mcgraneforidaho.com/",
+      "siteLabel": "mcgraneforidaho.com",
+      "donate": "https://secure.anedot.com/mcgrane-for-idaho/donate",
+      "source": "https://www.mcgraneforidaho.com/"
+    },
+    "russ fulcher": {
+      "role": "Member of Congress from Idaho",
+      "bio": "The campaign says Russ Fulcher has voted to fund a border wall, toured the border, and backed a balanced-budget amendment and a one-subject-at-a-time bill. It presents him as a conservative delivering on issues important to Idaho.",
+      "issues": [
+        "He supports full enforcement of immigration law and an orderly legal process, and he opposes illegal immigration.",
+        "He opposes breaching the lower four Snake River dams, which he says supply hydropower, irrigation, and a path for Idaho wheat to market.",
+        "He says he is pro-life, will defend the Second Amendment, and wants local communities to have more say over Idaho's forests, minerals, and energy."
+      ],
+      "site": "https://www.russfulcher.com/",
+      "siteLabel": "Russ Fulcher",
+      "source": "https://www.russfulcher.com/issues"
+    },
+    "mike simpson": {
+      "role": "U.S. representative for Idaho's 2nd District",
+      "bio": "The campaign says Mike Simpson is serving his eleventh term for Idaho's 2nd District. Born in Burley and raised in Blackfoot, he earned a dental degree and joined his family's dental practice before Congress. He sits on House Appropriations, including Energy and Water and Interior and Environment.",
+      "issues": [
+        "He says securing the border is the country's top issue and that he is fighting to build a wall and add Border Patrol agents.",
+        "He says promoting Idaho agriculture, including potatoes, sugar, and dairy, has been one of his top priorities.",
+        "He says he wants the country to meet its obligations to veterans and to fully fund the VA."
+      ],
+      "site": "https://simpsonforcongress.com/",
+      "siteLabel": "Mike Simpson for Congress",
+      "donate": "https://secure.winred.com/MichaelSimpson/donate",
+      "source": "https://simpsonforcongress.com/issues/"
+    }
+  },
+  "measures": {}
+}

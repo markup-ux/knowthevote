@@ -1,0 +1,406 @@
+{
+  "code": "mo",
+  "ballotSource": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf",
+  "where": {
+    "url": "https://voteroutreach.sos.mo.gov/portal",
+    "label": "Missouri Secretary of State"
+  },
+  "offices": {
+    "U.S. House": {
+      "kicker": "Federal",
+      "job": "Each district elects one representative. The winner votes on federal law and spending. The term is two years."
+    }
+  },
+  "people": {
+    "district 1|wesley bell": {
+      "role": "U.S. representative for Missouri's 1st District.",
+      "bio": "His campaign says the job is to bring federal results home to St. Louis, and it points to infrastructure, public safety, workforce, and neighborhood projects he pursued while Republicans controlled Congress and the White House.",
+      "issues": [
+        "He says every family in St. Louis should have a safe, affordable home, and he highlights federal housing grants meant to add supply and lower costs for renters and buyers.",
+        "He wants Lambert Airport modernized so flights stay on schedule and the region stays connected.",
+        "He says he fought to expand the Radiation Exposure Compensation Act for North County families sickened by radioactive contamination at Coldwater Creek."
+      ],
+      "site": "https://www.bell4mo.com/",
+      "siteLabel": "bell4mo.com",
+      "donate": "https://secure.actblue.com/donate/bell-for-missouri-2",
+      "source": "https://www.bell4mo.com/issues/"
+    },
+    "wesley bell": {
+      "role": "U.S. representative for Missouri's 1st District.",
+      "bio": "His campaign says the job is to bring federal results home to St. Louis, and it points to infrastructure, public safety, workforce, and neighborhood projects he pursued while Republicans controlled Congress and the White House.",
+      "issues": [
+        "He says every family in St. Louis should have a safe, affordable home, and he highlights federal housing grants meant to add supply and lower costs for renters and buyers.",
+        "He wants Lambert Airport modernized so flights stay on schedule and the region stays connected.",
+        "He says he fought to expand the Radiation Exposure Compensation Act for North County families sickened by radioactive contamination at Coldwater Creek."
+      ],
+      "site": "https://www.bell4mo.com/",
+      "siteLabel": "bell4mo.com",
+      "donate": "https://secure.actblue.com/donate/bell-for-missouri-2",
+      "source": "https://www.bell4mo.com/issues/"
+    },
+    "district 2|ann wagner": {
+      "role": "U.S. representative for Missouri's 2nd District.",
+      "bio": "She grew up working at her parents' carpet store in Manchester, studied business at the University of Missouri, and later held management jobs at Hallmark and Ralston Purina before coming to Congress.",
+      "issues": [
+        "She says she has worked to cut taxes and regulation so local businesses can hire, and she voted for a tax bill that removes taxes on tips, overtime, and Social Security.",
+        "She highlights the Fight Online Sex Trafficking Act and funding for rape-kit testing through the Debbie Smith Act.",
+        "She says she will keep defending a right to life, and she introduced a bill to require medical care for infants born alive after an abortion."
+      ],
+      "site": "https://annwagner.com/",
+      "siteLabel": "annwagner.com",
+      "donate": "https://secure.winred.com/ann-wagner/annwagner",
+      "source": "https://annwagner.com/about/"
+    },
+    "ann wagner": {
+      "role": "U.S. representative for Missouri's 2nd District.",
+      "bio": "She grew up working at her parents' carpet store in Manchester, studied business at the University of Missouri, and later held management jobs at Hallmark and Ralston Purina before coming to Congress.",
+      "issues": [
+        "She says she has worked to cut taxes and regulation so local businesses can hire, and she voted for a tax bill that removes taxes on tips, overtime, and Social Security.",
+        "She highlights the Fight Online Sex Trafficking Act and funding for rape-kit testing through the Debbie Smith Act.",
+        "She says she will keep defending a right to life, and she introduced a bill to require medical care for infants born alive after an abortion."
+      ],
+      "site": "https://annwagner.com/",
+      "siteLabel": "annwagner.com",
+      "donate": "https://secure.winred.com/ann-wagner/annwagner",
+      "source": "https://annwagner.com/about/"
+    },
+    "district 2|fred wellman": {
+      "role": "Retired Army veteran running for Congress in Missouri.",
+      "bio": "His campaign says he served 22 years and four combat tours, then spent a decade in Washington advocating for veterans.",
+      "issues": [
+        "He says housing, health care, child care, and groceries are outrunning wages, and he wants lower costs, higher pay, and the right to organize, including a higher federal minimum wage and paid family leave.",
+        "On health care he supports restoring ACA subsidies, reversing Medicaid cuts, a public option, and a lower Medicare eligibility age, with universal coverage as the longer-term goal.",
+        "He says Social Security, Medicare, and pensions should be protected so people can retire without choosing between medicine, rent, and heat."
+      ],
+      "site": "https://www.wellmanformo.com/",
+      "siteLabel": "wellmanformo.com",
+      "donate": "https://secure.actblue.com/donate/fwhomepage",
+      "source": "https://www.wellmanformo.com/policy"
+    },
+    "fred wellman": {
+      "role": "Retired Army veteran running for Congress in Missouri.",
+      "bio": "His campaign says he served 22 years and four combat tours, then spent a decade in Washington advocating for veterans.",
+      "issues": [
+        "He says housing, health care, child care, and groceries are outrunning wages, and he wants lower costs, higher pay, and the right to organize, including a higher federal minimum wage and paid family leave.",
+        "On health care he supports restoring ACA subsidies, reversing Medicaid cuts, a public option, and a lower Medicare eligibility age, with universal coverage as the longer-term goal.",
+        "He says Social Security, Medicare, and pensions should be protected so people can retire without choosing between medicine, rent, and heat."
+      ],
+      "site": "https://www.wellmanformo.com/",
+      "siteLabel": "wellmanformo.com",
+      "donate": "https://secure.actblue.com/donate/fwhomepage",
+      "source": "https://www.wellmanformo.com/policy"
+    },
+    "district 3|bob onder": {
+      "role": "U.S. representative and physician from Missouri.",
+      "bio": "His campaign describes a record in Congress and in Jefferson City centered on immigration enforcement, abortion limits, gun laws, and taxes.",
+      "issues": [
+        "He highlights a bill aimed at visa overstays and earlier Missouri legislation against sanctuary cities and employment of people without legal status.",
+        "He says he co-chairs the Pro-Life Caucus and has backed federal abortion limits, after authoring Missouri clinic rules and helping write the 2019 heartbeat bill.",
+        "He points to work on constitutional carry and the Second Amendment Preservation Act, and to the tax bill he says he passed with House Republicans."
+      ],
+      "site": "https://www.bobondermo.com/",
+      "siteLabel": "bobondermo.com",
+      "donate": "https://secure.winred.com/onder-for-congress/donate-today",
+      "source": "https://www.bobondermo.com/issues"
+    },
+    "bob onder": {
+      "role": "U.S. representative and physician from Missouri.",
+      "bio": "His campaign describes a record in Congress and in Jefferson City centered on immigration enforcement, abortion limits, gun laws, and taxes.",
+      "issues": [
+        "He highlights a bill aimed at visa overstays and earlier Missouri legislation against sanctuary cities and employment of people without legal status.",
+        "He says he co-chairs the Pro-Life Caucus and has backed federal abortion limits, after authoring Missouri clinic rules and helping write the 2019 heartbeat bill.",
+        "He points to work on constitutional carry and the Second Amendment Preservation Act, and to the tax bill he says he passed with House Republicans."
+      ],
+      "site": "https://www.bobondermo.com/",
+      "siteLabel": "bobondermo.com",
+      "donate": "https://secure.winred.com/onder-for-congress/donate-today",
+      "source": "https://www.bobondermo.com/issues"
+    },
+    "district 3|bethany mann": {
+      "role": "Scientist and working mother running for Missouri's 3rd District.",
+      "bio": "She grew up in Foristell, lives in St. Peters, and has worked as an environmental chemist testing crops and checking communities for lead and forever chemicals.",
+      "issues": [
+        "She supports full, equal funding for public schools from pre-K through college and union apprenticeships.",
+        "She wants affordable physical and mental health care, and federal infrastructure money for rural roads, bridges, broadband, and water.",
+        "She ties her environmental work to clean air and water, and she supports the Women's Health Protection Act, the Equal Rights Amendment, and Medicare for All."
+      ],
+      "site": "https://www.bethanymannforcongress.com/",
+      "siteLabel": "bethanymannforcongress.com",
+      "donate": "https://secure.actblue.com/donate/mannupmo",
+      "source": "https://www.bethanymannforcongress.com/"
+    },
+    "bethany mann": {
+      "role": "Scientist and working mother running for Missouri's 3rd District.",
+      "bio": "She grew up in Foristell, lives in St. Peters, and has worked as an environmental chemist testing crops and checking communities for lead and forever chemicals.",
+      "issues": [
+        "She supports full, equal funding for public schools from pre-K through college and union apprenticeships.",
+        "She wants affordable physical and mental health care, and federal infrastructure money for rural roads, bridges, broadband, and water.",
+        "She ties her environmental work to clean air and water, and she supports the Women's Health Protection Act, the Equal Rights Amendment, and Medicare for All."
+      ],
+      "site": "https://www.bethanymannforcongress.com/",
+      "siteLabel": "bethanymannforcongress.com",
+      "donate": "https://secure.actblue.com/donate/mannupmo",
+      "source": "https://www.bethanymannforcongress.com/"
+    },
+    "district 4|mark alford": {
+      "role": "U.S. representative campaigning as a conservative voice for rural Missouri.",
+      "bio": "He tells voters he spent more than 23 years as a local television anchor before taking that platform to Congress.",
+      "issues": [
+        "He says he is fully opposed to abortion and will defend what he calls a right to life for the unborn.",
+        "He wants federal spending, waste, and fraud cut back in order to slow the national debt.",
+        "He says he will defend the Second Amendment for law-abiding owners and will oppose efforts to reduce police funding."
+      ],
+      "site": "https://alfordforcongress.com/",
+      "siteLabel": "alfordforcongress.com",
+      "donate": "https://secure.winred.com/mark-alford-for-congress/",
+      "source": "https://alfordforcongress.com/on-the-issues/"
+    },
+    "mark alford": {
+      "role": "U.S. representative campaigning as a conservative voice for rural Missouri.",
+      "bio": "He tells voters he spent more than 23 years as a local television anchor before taking that platform to Congress.",
+      "issues": [
+        "He says he is fully opposed to abortion and will defend what he calls a right to life for the unborn.",
+        "He wants federal spending, waste, and fraud cut back in order to slow the national debt.",
+        "He says he will defend the Second Amendment for law-abiding owners and will oppose efforts to reduce police funding."
+      ],
+      "site": "https://alfordforcongress.com/",
+      "siteLabel": "alfordforcongress.com",
+      "donate": "https://secure.winred.com/mark-alford-for-congress/",
+      "source": "https://alfordforcongress.com/on-the-issues/"
+    },
+    "district 4|jordan herrera": {
+      "role": "Air Force veteran, attorney, and former Missouri assistant attorney general running for Congress.",
+      "bio": "He says he grew up in a working-class Midwestern family, spent nearly 16 years in service, and then went to court for Missourians when the rules were unfair.",
+      "issues": [
+        "He says he is running to work on the cost of living with practical proposals.",
+        "He wants safer communities through what he calls common-sense policy.",
+        "He says government should treat people with dignity, and he describes the campaign as youth-led and people-powered."
+      ],
+      "site": "https://jordanjherrera.com/",
+      "siteLabel": "jordanjherrera.com",
+      "donate": "https://secure.actblue.com/donate/jordan-herrera-1",
+      "source": "https://jordanjherrera.com/"
+    },
+    "jordan herrera": {
+      "role": "Air Force veteran, attorney, and former Missouri assistant attorney general running for Congress.",
+      "bio": "He says he grew up in a working-class Midwestern family, spent nearly 16 years in service, and then went to court for Missourians when the rules were unfair.",
+      "issues": [
+        "He says he is running to work on the cost of living with practical proposals.",
+        "He wants safer communities through what he calls common-sense policy.",
+        "He says government should treat people with dignity, and he describes the campaign as youth-led and people-powered."
+      ],
+      "site": "https://jordanjherrera.com/",
+      "siteLabel": "jordanjherrera.com",
+      "donate": "https://secure.actblue.com/donate/jordan-herrera-1",
+      "source": "https://jordanjherrera.com/"
+    },
+    "district 5|rick brattin": {
+      "role": "Missouri legislator running for Congress on a conservative platform.",
+      "bio": "His campaign says he is done accepting the status quo and wants to carry the fight he led in Jefferson City into the U.S. House, alongside President Trump.",
+      "issues": [
+        "He says he will defend the Second Amendment in Congress after helping write Missouri laws he calls among the strongest gun protections in the country.",
+        "He says he is fully opposed to abortion, wants Planned Parenthood's federal funding ended, and cites votes to lengthen Missouri's waiting period and to notify parents of minors.",
+        "He supports a border wall, full funding for ICE, and deportation of people he calls criminal illegal aliens, and he says grocery and gas prices have to come down."
+      ],
+      "site": "https://rickbrattin.com/",
+      "siteLabel": "rickbrattin.com",
+      "donate": "https://secure.winred.com/rick-brattin-for-congress-822a75d3/donate-today",
+      "source": "https://rickbrattin.com/issues/"
+    },
+    "rick brattin": {
+      "role": "Missouri legislator running for Congress on a conservative platform.",
+      "bio": "His campaign says he is done accepting the status quo and wants to carry the fight he led in Jefferson City into the U.S. House, alongside President Trump.",
+      "issues": [
+        "He says he will defend the Second Amendment in Congress after helping write Missouri laws he calls among the strongest gun protections in the country.",
+        "He says he is fully opposed to abortion, wants Planned Parenthood's federal funding ended, and cites votes to lengthen Missouri's waiting period and to notify parents of minors.",
+        "He supports a border wall, full funding for ICE, and deportation of people he calls criminal illegal aliens, and he says grocery and gas prices have to come down."
+      ],
+      "site": "https://rickbrattin.com/",
+      "siteLabel": "rickbrattin.com",
+      "donate": "https://secure.winred.com/rick-brattin-for-congress-822a75d3/donate-today",
+      "source": "https://rickbrattin.com/issues/"
+    },
+    "district 5|emanuel cleaver ii": {
+      "role": "U.S. representative for Missouri's 5th District.",
+      "bio": "His campaign says he grew up in public housing and has treated affordable housing as a lifelong cause, including work on a major federal housing law.",
+      "issues": [
+        "He says Social Security and Medicare should be kept solvent, and he supports expanding Medicaid so rural patients do not have to travel hours for care.",
+        "He supports the Affordable Care Act, wants it strengthened, and says he has fought to lower prescription drug prices.",
+        "He opposes the decision overturning Roe v. Wade and supports bipartisan gun laws that he says can protect children while allowing responsible ownership."
+      ],
+      "site": "https://www.cleaver4congress.com/",
+      "siteLabel": "cleaver4congress.com",
+      "donate": "https://secure.actblue.com/donate/cleaver-congress",
+      "source": "https://www.cleaver4congress.com/issues"
+    },
+    "emanuel cleaver ii": {
+      "role": "U.S. representative for Missouri's 5th District.",
+      "bio": "His campaign says he grew up in public housing and has treated affordable housing as a lifelong cause, including work on a major federal housing law.",
+      "issues": [
+        "He says Social Security and Medicare should be kept solvent, and he supports expanding Medicaid so rural patients do not have to travel hours for care.",
+        "He supports the Affordable Care Act, wants it strengthened, and says he has fought to lower prescription drug prices.",
+        "He opposes the decision overturning Roe v. Wade and supports bipartisan gun laws that he says can protect children while allowing responsible ownership."
+      ],
+      "site": "https://www.cleaver4congress.com/",
+      "siteLabel": "cleaver4congress.com",
+      "donate": "https://secure.actblue.com/donate/cleaver-congress",
+      "source": "https://www.cleaver4congress.com/issues"
+    },
+    "district 6|chris stigall": {
+      "role": "Candidate for Congress campaigning on north Missouri farms, taxes, and rural hospitals.",
+      "bio": "His issues page presents a conservative platform he ties to President Trump, aimed at gun rights, small-town hospitals, abortion, taxes, and agriculture.",
+      "issues": [
+        "He says the Second Amendment is not negotiable and that he will oppose federal gun restrictions aimed at law-abiding owners.",
+        "He wants less red tape for rural hospitals, and he opposes taxpayer funding of abortion.",
+        "He supports making the Trump tax cuts permanent and giving farms more market access with fewer regulations."
+      ],
+      "site": "https://www.stigallforcongress.com/",
+      "siteLabel": "stigallforcongress.com",
+      "donate": "https://secure.anedot.com/chris-stigall-for-congress/donate",
+      "source": "https://www.stigallforcongress.com/issues"
+    },
+    "chris stigall": {
+      "role": "Candidate for Congress campaigning on north Missouri farms, taxes, and rural hospitals.",
+      "bio": "His issues page presents a conservative platform he ties to President Trump, aimed at gun rights, small-town hospitals, abortion, taxes, and agriculture.",
+      "issues": [
+        "He says the Second Amendment is not negotiable and that he will oppose federal gun restrictions aimed at law-abiding owners.",
+        "He wants less red tape for rural hospitals, and he opposes taxpayer funding of abortion.",
+        "He supports making the Trump tax cuts permanent and giving farms more market access with fewer regulations."
+      ],
+      "site": "https://www.stigallforcongress.com/",
+      "siteLabel": "stigallforcongress.com",
+      "donate": "https://secure.anedot.com/chris-stigall-for-congress/donate",
+      "source": "https://www.stigallforcongress.com/issues"
+    },
+    "district 6|josh smead": {
+      "role": "Architect and small-business owner from Liberty running for Missouri's 6th District.",
+      "bio": "He is a licensed architect and project professional raising four children, and he says that experience with budgets and deadlines is how he wants government to work.",
+      "issues": [
+        "He says voters should judge officials by the plan they propose, the work they do, and what actually changes.",
+        "He describes the job as planning the problem, building the response, managing the constraints, and finishing it."
+      ],
+      "site": "https://votesmead.com/",
+      "siteLabel": "votesmead.com",
+      "donate": "https://secure.actblue.com/donate/votesmead",
+      "source": "https://votesmead.com/"
+    },
+    "josh smead": {
+      "role": "Architect and small-business owner from Liberty running for Missouri's 6th District.",
+      "bio": "He is a licensed architect and project professional raising four children, and he says that experience with budgets and deadlines is how he wants government to work.",
+      "issues": [
+        "He says voters should judge officials by the plan they propose, the work they do, and what actually changes.",
+        "He describes the job as planning the problem, building the response, managing the constraints, and finishing it."
+      ],
+      "site": "https://votesmead.com/",
+      "siteLabel": "votesmead.com",
+      "donate": "https://secure.actblue.com/donate/votesmead",
+      "source": "https://votesmead.com/"
+    },
+    "district 7|eric burlison": {
+      "role": "U.S. representative campaigning on taxes, health care, and the border.",
+      "bio": "His campaign calls him a conservative family man and says the agenda is meant to put Missouri families first.",
+      "issues": [
+        "He wants spending cut so Missourians keep more of their pay.",
+        "He says health care should be affordable and directed by patients rather than bureaucrats.",
+        "He wants the southern border secured, constitutional rights of law-abiding people defended, and federal waste investigated."
+      ],
+      "site": "https://www.ericburlisonforcongress.com/",
+      "siteLabel": "ericburlisonforcongress.com",
+      "donate": "https://winred.ericburlisonforcongress.com/eric-burlison-for-congress/send-proven-conservative-leadership-back-to-washin",
+      "source": "https://www.ericburlisonforcongress.com/"
+    },
+    "eric burlison": {
+      "role": "U.S. representative campaigning on taxes, health care, and the border.",
+      "bio": "His campaign calls him a conservative family man and says the agenda is meant to put Missouri families first.",
+      "issues": [
+        "He wants spending cut so Missourians keep more of their pay.",
+        "He says health care should be affordable and directed by patients rather than bureaucrats.",
+        "He wants the southern border secured, constitutional rights of law-abiding people defended, and federal waste investigated."
+      ],
+      "site": "https://www.ericburlisonforcongress.com/",
+      "siteLabel": "ericburlisonforcongress.com",
+      "donate": "https://winred.ericburlisonforcongress.com/eric-burlison-for-congress/send-proven-conservative-leadership-back-to-washin",
+      "source": "https://www.ericburlisonforcongress.com/"
+    },
+    "district 7|missi hesketh": {
+      "role": "Candidate for Congress who published five priorities and the bills she pairs with each one.",
+      "bio": "She groups the race around household costs, children's futures, health care, farms and natural resources, and government accountability.",
+      "issues": [
+        "She wants affordability measures that include closing tax loopholes, protecting Social Security, paid family leave, and bans on grocery price gouging and junk fees.",
+        "She supports rural education funding, higher teacher pay, Medicare available to anyone who wants it, rural hospital stabilization, and Medicare drug-price negotiation.",
+        "She opposes new AI data centers, backs a right to repair and crop-insurance reform, and wants congressional stock trading, dark money, and Citizens United ended."
+      ],
+      "site": "https://www.missiformo.com/",
+      "siteLabel": "missiformo.com",
+      "donate": "https://secure.actblue.com/donate/missiformo",
+      "source": "https://www.missiformo.com/top-5-issues"
+    },
+    "missi hesketh": {
+      "role": "Candidate for Congress who published five priorities and the bills she pairs with each one.",
+      "bio": "She groups the race around household costs, children's futures, health care, farms and natural resources, and government accountability.",
+      "issues": [
+        "She wants affordability measures that include closing tax loopholes, protecting Social Security, paid family leave, and bans on grocery price gouging and junk fees.",
+        "She supports rural education funding, higher teacher pay, Medicare available to anyone who wants it, rural hospital stabilization, and Medicare drug-price negotiation.",
+        "She opposes new AI data centers, backs a right to repair and crop-insurance reform, and wants congressional stock trading, dark money, and Citizens United ended."
+      ],
+      "site": "https://www.missiformo.com/",
+      "siteLabel": "missiformo.com",
+      "donate": "https://secure.actblue.com/donate/missiformo",
+      "source": "https://www.missiformo.com/top-5-issues"
+    },
+    "district 8|jason smith": {
+      "role": "U.S. representative for Missouri's 8th District.",
+      "bio": "He says he grew up on a farm, used an FFA project to help pay for college, finished a double major in three years, and later ran the family farm and a small business in Dent County while paying off law-school debt.",
+      "issues": [
+        "He describes his state House years as a push for smaller government and fiscal conservatism, and his colleagues later chose him as majority whip and speaker pro tem.",
+        "On Ways and Means he says he has focused on simplifying the tax code and lowering the federal tax burden on small businesses, farmers, and families."
+      ],
+      "site": "https://electjasonsmith.com/home/",
+      "siteLabel": "electjasonsmith.com",
+      "donate": "https://secure.winred.com/JasonSmith/donate",
+      "source": "https://electjasonsmith.com/meet-jason/"
+    },
+    "jason smith": {
+      "role": "U.S. representative for Missouri's 8th District.",
+      "bio": "He says he grew up on a farm, used an FFA project to help pay for college, finished a double major in three years, and later ran the family farm and a small business in Dent County while paying off law-school debt.",
+      "issues": [
+        "He describes his state House years as a push for smaller government and fiscal conservatism, and his colleagues later chose him as majority whip and speaker pro tem.",
+        "On Ways and Means he says he has focused on simplifying the tax code and lowering the federal tax burden on small businesses, farmers, and families."
+      ],
+      "site": "https://electjasonsmith.com/home/",
+      "siteLabel": "electjasonsmith.com",
+      "donate": "https://secure.winred.com/JasonSmith/donate",
+      "source": "https://electjasonsmith.com/meet-jason/"
+    },
+    "district 8|chris reichard": {
+      "role": "Disabled Army veteran and IBEW Local 1 member running for Missouri's 8th District.",
+      "bio": "He says he is a second-generation union electrician from Arnold running a grassroots campaign that takes no corporate PAC or dark money.",
+      "issues": [
+        "He supports the PRO Act to protect organizing and the Major Richard Star Act so combat-injured veterans receive full benefits.",
+        "He wants the United States kept out of another long war and supports a bill to count the full human and financial cost of war up front.",
+        "He wants Citizens United overturned and backs the Equality Act, and he says rural hospitals and public schools in the district are underfunded."
+      ],
+      "site": "https://www.reichardforrep.com/",
+      "siteLabel": "reichardforrep.com",
+      "donate": "https://secure.actblue.com/donate/chris-reichard-1",
+      "source": "https://www.reichardforrep.com/"
+    },
+    "chris reichard": {
+      "role": "Disabled Army veteran and IBEW Local 1 member running for Missouri's 8th District.",
+      "bio": "He says he is a second-generation union electrician from Arnold running a grassroots campaign that takes no corporate PAC or dark money.",
+      "issues": [
+        "He supports the PRO Act to protect organizing and the Major Richard Star Act so combat-injured veterans receive full benefits.",
+        "He wants the United States kept out of another long war and supports a bill to count the full human and financial cost of war up front.",
+        "He wants Citizens United overturned and backs the Equality Act, and he says rural hospitals and public schools in the district are underfunded."
+      ],
+      "site": "https://www.reichardforrep.com/",
+      "siteLabel": "reichardforrep.com",
+      "donate": "https://secure.actblue.com/donate/chris-reichard-1",
+      "source": "https://www.reichardforrep.com/"
+    }
+  },
+  "measures": {
+    "Amendment 3: Repeal abortion rights and prohibit gender transition": "A yes vote would repeal the 2024 constitutional right to reproductive care, including abortion through fetal viability, permit limits tied to medical emergencies, rape and incest under twelve weeks, and fetal anomalies, and prohibit gender-transition surgeries, cross-sex hormones, and puberty blockers for minors except for specific medical conditions.",
+    "Proposition A: Approve 2025 congressional map": "A yes vote would approve House Bill 1 from the 2025 extraordinary session, which redraws congressional district boundaries, and a no vote would leave the 2022 boundaries in place."
+  }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaders.vote · Kentucky, November 3, 2026</title>
+<meta name="description" content="Leaders.vote guide to the Kentucky general election on November 3, 2026. Candidates, sample ballot, and unofficial results. Not an endorsement.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="guide.css?v=maphover">
+</head>
+<body data-state="ky">
+<header>
+  <div class="wrap bar">
+    <div class="bar-top">
+      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      <div class="lang notranslate" translate="no">
+        <span class="visually-hidden">Language</span>
+        <select id="lang" class="visually-hidden" aria-hidden="true" tabindex="-1">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-CN">中文</option>
+          <option value="pl">Polski</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ko">한국어</option>
+          <option value="tl">Tagalog</option>
+          <option value="ar">العربية</option>
+          <option value="ur">اردو</option>
+          <option value="uk">Українська</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="fr">Français</option>
+        </select>
+        <button type="button" class="lang-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">English</button>
+        <ul id="lang-list" class="lang-menu" role="listbox" aria-label="Translate this page" hidden>
+          <li role="none"><button type="button" role="option" data-lang="en" aria-selected="true">English</button></li>
+          <li role="none"><button type="button" role="option" data-lang="es">Español</button></li>
+          <li role="none"><button type="button" role="option" data-lang="zh-CN">中文</button></li>
+          <li role="none"><button type="button" role="option" data-lang="pl">Polski</button></li>
+          <li role="none"><button type="button" role="option" data-lang="hi">हिन्दी</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ko">한국어</button></li>
+          <li role="none"><button type="button" role="option" data-lang="tl">Tagalog</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ar">العربية</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ur">اردو</button></li>
+          <li role="none"><button type="button" role="option" data-lang="uk">Українська</button></li>
+          <li role="none"><button type="button" role="option" data-lang="vi">Tiếng Việt</button></li>
+          <li role="none"><button type="button" role="option" data-lang="fr">Français</button></li>
+        </ul>
+</div>
+    </div>
+    <p class="here notranslate" translate="no"><img src="flags/ky.svg" alt=""><span>Kentucky</span></p>
+    <nav>
+      <a href="index.html">All states</a>
+      <a href="#results">Results</a>
+      <a href="#sample">The ballot</a>
+      <a href="#read">Before you go</a>
+      <a href="#senate">Senate</a>
+      <a href="#house">U.S. House</a>
+      <a href="#where">Where to vote</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero">
+    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record. A street address you type is not sent for translation.</p>
+    <p class="kicker">Kentucky · General election · Tuesday, November 3, 2026</p>
+    <h1>Know who you're voting for.</h1>
+    <p class="deck">What each office does is on this page. A candidate's priorities are included only when they come from that candidate's own site. This is not an endorsement and not a government site.</p>
+    <p class="when">Polls begin closing at 6:00 PM ET. This page does not call a race.</p>
+    <div class="finder where" id="where">
+      <p class="kicker">Where to vote</p>
+      <h2>Find your polling place.</h2>
+      <p class="zip-note">Election Day is Tuesday, November 3. A polling place comes from the home address. Type the street number, street name, and ZIP here. This page does not keep them. The election office lookup is the list for that address.</p>
+      <form id="where-form" data-lookup="https://vrsws.sos.ky.gov/vic/" data-lookup-label="Voter Information Center">
+        <div>
+          <label for="where-number">Street number</label>
+          <input id="where-number" class="num" name="number" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-street">Street name</label>
+          <input id="where-street" class="street" name="street" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-zip">ZIP code</label>
+          <input id="where-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="40601" required>
+        </div>
+        <button type="submit">Find this address</button>
+      </form>
+      <div id="where-result" aria-live="polite"></div>
+    </div>
+    <div class="races"><a href="#senate"><strong>Senate</strong><span>Andy Barr, Charles Booker, Christopher Campbell</span></a></div>
+  </div>
+  <section class="block" id="results">
+    <div class="wrap">
+      <p class="kicker">Unofficial · November 3, 2026</p>
+      <h2>Results across Kentucky.</h2>
+      <p class="sub">Each county is colored by who is ahead there. A blank county has not reported votes. This page does not call a race.</p>
+      <div class="result-legend">
+        <span><i class="swatch blank"></i> No votes reported</span>
+        <span><i class="swatch d"></i> Democratic lead</span>
+        <span><i class="swatch r"></i> Republican lead</span>
+        <span><i class="swatch o"></i> Another lead</span>
+      </div>
+      <div class="result-layout">
+        <div><div id="state-slot"></div></div>
+        <div>
+          <div id="result-races" class="sheet-switch" role="group" aria-label="Races"></div>
+          <div id="result-summary"></div>
+          <label for="result-place">County, parish, or city</label>
+          <select id="result-place"><option value="">Statewide totals</option></select>
+          <div id="result-detail"></div>
+          <p id="result-status" class="note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="sample">
+    <div class="wrap">
+      <p class="kicker">How you vote</p>
+      <h2>What the ballot looks like.</h2>
+      <p class="sub">This sample lists the statewide contests NBC News is publishing for Kentucky. It is not a precinct ballot.</p>
+      <div class="sample-layout">
+        <div>
+          <ol class="steps" id="sample-steps">
+            <li><button type="button" data-step="mark">Mark one choice on a contest. Next and Back move one contest at a time. This sample puts the mark to the left of a name.</button></li>
+            <li><button type="button" data-step="order">Party order here is Republican, then Democratic, then any other candidate. Your county may print a different order.</button></li>
+            <li><button type="button" data-step="house">U.S. House depends on your district and is listed farther down this page. This sample does not include it.</button></li>
+          </ol>
+          <p class="zip-note">The address lookup above opens the election office. A ZIP code alone does not pick a district.</p>
+        </div>
+        <div>
+          <div class="sheet" id="sample-candidates">
+            <p class="kicker">Sample ballot · Kentucky · November 3, 2026</p>
+            <div class="contest" data-kind="race"><h3>Senate</h3>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Andy Barr</span><span class="pill r">Republican</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Charles Booker</span><span class="pill d">Democratic</span></button>
+<button type="button" class="choice" aria-pressed="false"><span class="oval" aria-hidden="true"></span><span class="notranslate" translate="no">Christopher Campbell</span><span class="pill o">Other</span></button></div>
+          </div>
+          <div class="sheet-move">
+            <button type="button" id="contest-back" class="notranslate" translate="no" data-phrase="back">Back</button>
+            <p id="sample-status"></p>
+            <button type="button" id="contest-next" class="notranslate" translate="no" data-phrase="next">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="read">
+    <div class="wrap">
+      <p class="kicker">Before you go</p>
+      <h2>Statewide contests, then your district.</h2>
+      <div class="facts">
+        <div class="fact">
+          <h3>What to bring</h3>
+          <p>Bring what this state's election office requires. The address lookup on this page opens that office. This page does not keep the address.</p>
+        </div>
+        <div class="fact">
+          <h3>How names got here</h3>
+          <p>Statewide names were compared with the candidate list linked at the bottom of this page. Photos are the ones NBC News is publishing. On this site the order is Republican, then Democratic, then any other party. A printed ballot may use a different order.</p>
+        </div>
+        <div class="fact">
+          <h3 class="notranslate" translate="no" data-phrase="writeins">Write-ins</h3>
+          <p>A write-in counts only if that person filed. This page lists the names being published.</p>
+        </div>
+        <div class="fact">
+          <h3>What you are choosing</h3>
+          <p>The sample lists the statewide contests on this page. U.S. Senate is one seat. The term is six years. U.S. House is one seat in your district and is listed farther down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="senate"><div class="wrap"><p class="kicker">Federal · Vote for one</p><h2>Senate</h2><p class="sub">The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years. The Senate has the sole power to try impeachments.</p><article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_S00_R_A_BARR.png" alt="" data-letter="A" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Andy Barr</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative from Kentucky running for the Senate.</p><p class="bio">Andy Barr&#x27;s campaign calls him an eighth-generation Kentuckian and says he was the first member of the state&#x27;s House delegation to endorse Donald Trump and chaired Trump&#x27;s 2024 Kentucky primary campaign.</p><ul><li>He says he would deport people he calls criminal illegal immigrants, restart border-wall construction, hire more border agents, restore Remain in Mexico, and end catch-and-release.</li><li>He says he voted for tax cuts that end taxes on Social Security for seniors, on overtime, and on tips, and he wants to expand Kentucky coal and block climate rules he says were imposed through financial regulators.</li><li>He says he will defend girls&#x27; sports and private spaces, veterans&#x27; disability and health benefits, the Second Amendment, police funding, sanctions on fentanyl tied to China, and Kentucky farmers, including a federal framework for hemp products.</li></ul><p class="links"><a href="https://barrforsenate.com/" target="_blank" rel="noopener noreferrer">barrforsenate.com</a> · <a href="https://secure.winred.com/andybarrforsenate/donate-1" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_S00_D_C_BOOKER.png" alt="" data-letter="C" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Charles Booker</h3><span class="pill d">Democratic</span></div><p class="role">Former Kentucky state representative running for the U.S. Senate.</p><p class="bio">Charles Booker&#x27;s site says he is a lifelong Kentuckian and the son of a West Louisville family, and that he grew up rationing insulin. He says he built a campaign that reaches from the city to the hollers around health care, jobs, and leaders who fight for people instead of corporations.</p><ul><li>He says Kentucky needs a senator who treats poverty as an emergency, because families can be one medical bill, layoff, or storm from losing everything.</li><li>He says health care is a human right and that he wants union jobs in every county.</li><li>He also calls for clean water, clean air, and a politics grounded in the dignity of the people it serves.</li></ul><p class="links"><a href="https://charlesbooker.org/" target="_blank" rel="noopener noreferrer">charlesbooker.org</a> · <a href="https://secure.actblue.com/donate/booker-for-senate" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><div class="avatar mono" aria-hidden="true">C</div><div><div class="who"><h3 class="notranslate" translate="no">Christopher Campbell</h3><span class="pill o">Other</span></div><p class="role">Kentucky Party candidate for U.S. Senate.</p><p class="bio">Christopher Campbell&#x27;s site says he is a dues-paying member of a labor union, served in the Kentucky National Guard, and is a Kentucky Colonel.</p><ul><li>He supports Medicare for All and says the federal government should provide basic medical care.</li><li>He says workers need safe conditions, strong benefits, good pay, and a way to raise grievances without retaliation.</li><li>He wants a constitutional environmental amendment and a ban on carbon credits that he says let facilities keep polluting.</li></ul><p class="links"><a href="https://campbellforsenate.org/" target="_blank" rel="noopener noreferrer">campbellforsenate.org</a></p></div></article></div></section>
+  
+  <section class="block" id="house"><div class="wrap"><h2>U.S. House.</h2><p class="office-note">Every district NBC News is publishing for this state. This list is not filtered to one address. A written note is added only from that candidate's own site.</p><h3>District 1</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H01_R_J_COMER.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">James Comer</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative and chair of the House Oversight Committee.</p><p class="bio">He grew up in rural Monroe County, studied agriculture at Western Kentucky University, and bought his first farm after graduating in 1993. He served six terms in the Kentucky House, was state agriculture commissioner, and was elected to Congress in 2016.</p><ul><li>He says that as Oversight chair he is leading major investigations and pushing to reduce government waste, fraud, and abuse.</li><li>He says he wants a balanced federal budget, rebuilt infrastructure, and business-friendly policies that create opportunity for families.</li><li>He says his record includes work on the 2018 farm bill and legislation to lift regulations and increase government accountability.</li></ul><p class="links"><a href="https://jamescomer.com/" target="_blank" rel="noopener noreferrer">jamescomer.com</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H01_D_J_WILLIAMS.png" alt="" data-letter="J" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">John Williams</h3><span class="pill d">Democratic</span></div><p class="role">Western Kentucky boat-dock builder running for Congress.</p><p class="bio">He says he has spent his life in western Kentucky, graduated from Murray State in 2016 with a history degree, and has built boat docks on Kentucky Lake and Lake Barkley since he was 14 while working in the family business. He says neighbors and elders shaped him and that he is running to take those values to Washington.</p><ul><li>The campaign says it is grassroots and does not take corporate money.</li><li>His site says he stands for farm resilience, congressional accountability, workplace dignity, fairer drug prices, and veterans&#x27; services.</li><li>He also lists infrastructure, data-center rules, child care, tax policy for everyday Americans, and health-insurance reform among the issues he is running on.</li></ul><p class="links"><a href="https://www.williamsforky.com/" target="_blank" rel="noopener noreferrer">williamsforky.com</a> · <a href="https://secure.actblue.com/donate/williamsforky1" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 2</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H02_R_B_GUTHRIE.png" alt="" data-letter="B" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Brett Guthrie</h3><span class="pill r">Republican</span></div><p class="role">U.S. representative and chair of the House Energy and Commerce Committee.</p><p class="bio">After Army service he joined a Bowling Green manufacturing business his father started, represented Kentucky&#x27;s 32nd Senate district, and was elected to the U.S. House in 2008. He says representing the Second District is the honor of a lifetime.</p><ul><li>He says he is focused on lower health-care and prescription costs, energy independence, and cutting taxes and regulations.</li><li>He says he wants to protect seniors, strengthen domestic manufacturing, and keep government out of the doctor-patient relationship.</li><li>The campaign says he is pro-life, has an A rating from the NRA, and has been called a friend of the Farm Bureau.</li></ul><p class="links"><a href="https://brettguthrie.com/" target="_blank" rel="noopener noreferrer">brettguthrie.com</a> · <a href="https://secure.winred.com/BrettGuthrie/donate" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H02_D_M_WINGFIELD.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Megan Wingfield</h3><span class="pill d">Democratic</span></div><p class="role">Mechanic and community advocate from Bowling Green running for Congress.</p><p class="bio">Born and raised in Bowling Green, she says she earned an automotive technology degree at Southcentral Kentucky Community and Technical College and works as a mechanic. She says she is also a caregiver and activist running because the district needs someone who knows what it is to struggle.</p><ul><li>She says one job should support a family, workers need a living wage, and health care should be universal so illness does not cause bankruptcy.</li><li>She says she would protect reproductive freedom, support universal pre-K and affordable child care, and expand VA care, mental-health services, and housing for veterans.</li><li>She says she signed a term-limits pledge and wants independent mechanics to have access to vehicle diagnostics that manufacturers now lock behind paywalls.</li></ul><p class="links"><a href="https://www.wingfieldforcongress.com/" target="_blank" rel="noopener noreferrer">wingfieldforcongress.com</a> · <a href="https://secure.actblue.com/donate/megan-wingfield-1" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 3</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H03_R_M_RODRIGUEZ.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Maria Rodriguez</h3><span class="pill r">Republican</span></div><p class="role">Louisville trauma nurse and small-business owner running for Congress.</p><p class="bio">Born in Cuba, she says she arrived in the United States at 21 after an 11-year asylum process, became a citizen, built a small business, and later earned a nursing degree as a single mother of two. She says she is running to defend freedoms she once lived without.</p><ul><li>She says she believes in free enterprise, safe communities, legal immigration, and constitutional rights.</li><li>Her campaign lists defending capitalism, a safer Louisville, lower taxes, and protecting the unborn among her priorities.</li><li>She also lists protecting women&#x27;s sports.</li></ul><p class="links"><a href="https://mariaforuscongress.com/" target="_blank" rel="noopener noreferrer">mariaforuscongress.com</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H03_D_M_MCGARVEY.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Morgan McGarvey</h3><span class="pill d">Democratic</span></div><p class="role">U.S. representative for Louisville and Kentucky&#x27;s only Democrat in Congress.</p><p class="bio">First elected in 2022, he says he serves on Veterans Affairs, Small Business, and Budget, and that he was minority leader in the Kentucky Senate for part of a decade before Congress. He says public schools in Louisville opened possibilities he wants every child to have.</p><ul><li>He says health care is a human right and that he supports Medicare for All, Medicare drug-price negotiation, and coverage for vision, dental, and hearing.</li><li>He says he has brought home federal funding, including money for Simmons College, and that his office has returned Social Security, veterans&#x27; benefits, and tax refunds to families.</li><li>He says he passed a House bill to protect veterans&#x27; benefits and is pushing a nationwide ban on no-knock search warrants in Breonna Taylor&#x27;s name.</li></ul><p class="links"><a href="https://www.morganmcgarvey.com/" target="_blank" rel="noopener noreferrer">morganmcgarvey.com</a> · <a href="https://secure.actblue.com/donate/bs_mcg_web_fr?refcode=site_chipb_lb&amp;amount=5" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 4</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H04_R_E_GALLREIN.png" alt="" data-letter="E" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Ed Gallrein</h3><span class="pill r">Republican</span></div><p class="role">Navy SEAL, farmer, and Trump-endorsed candidate for Congress.</p><p class="bio">A fifth-generation Kentucky farmer, he says he served three decades as a Navy SEAL officer, rising to captain, including SEAL Team Six, and earned three Bronze Stars. He says he returned home to keep farming and support veterans.</p><ul><li>He says he would cut taxes and regulations, stop spending he blames for inflation, and bring jobs back to Kentucky.</li><li>He says he would finish a border wall, fund Border Patrol and ICE, and rebuild the military.</li><li>He says he would defend gun rights without compromise, that he is pro-life, and that he would eliminate DEI programs in schools, the military, and government.</li></ul><p class="links"><a href="https://www.edgallrein.com/" target="_blank" rel="noopener noreferrer">edgallrein.com</a> · <a href="https://secure.winred.com/gallrein-for-congress/donate" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H04_D_M_STRANGE.png" alt="" data-letter="M" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Melissa Strange</h3><span class="pill d">Democratic</span></div><p class="role">Supply-chain director from northern Kentucky running for Congress.</p><p class="bio">A lifelong northern Kentuckian from Villa Hills, she says she earned degrees at Northern Kentucky University and Thomas More while working, and has spent about 27 years in food manufacturing and supply chain. She and her husband Andy live in Erlanger and have two sons.</p><ul><li>She says she would protect and expand Medicare, Medicaid, and Social Security, lower drug costs, and make treatment easier to find than a dealer.</li><li>She says she takes no corporate or foreign PAC money and supports term limits, a ban on congressional stock trading, and an end to Citizens United.</li><li>She says data centers should need community approval, and she wants the government out of reproductive health care and a right to repair farm and consumer equipment.</li></ul><p class="links"><a href="https://strangeforky.com/" target="_blank" rel="noopener noreferrer">strangeforky.com</a> · <a href="https://secure.actblue.com/donate/strangeforky" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 5</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H05_R_H_ROGERS.png" alt="" data-letter="H" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Hal Rogers</h3><span class="pill r">Republican</span></div><p class="role">Dean of the U.S. House, representing southern and eastern Kentucky since 1981.</p><p class="bio">Born in rural Kentucky, he says he has been elected to 23 consecutive terms and became the longest-serving House member in 2022. He points to Operation UNITE, the Center for Rural Development, and SOAR as regional projects he helped build.</p><ul><li>He says that as Appropriations chair from 2011 to 2016 he cut discretionary spending by $126 billion and pushed oversight of federal agencies.</li><li>He says he led the first Homeland Security appropriations subcommittee and pressed for immigration enforcement and border security.</li><li>After winning the 2026 primary he said he would keep fighting for conservative values, jobs at home, and energy independence.</li></ul><p class="links"><a href="https://www.congressmanhalrogers.com/" target="_blank" rel="noopener noreferrer">congressmanhalrogers.com</a> · <a href="https://secure.winred.com/halrogers/donate?utm_source=website&amp;utm_medium=banner&amp;utm_campaign=congressmanhalrogers" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H05_D_N_PILLERSDORF.png" alt="" data-letter="N" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Ned Pillersdorf</h3><span class="pill d">Democratic</span></div><p class="role">Poverty-law lawyer running for Congress in eastern Kentucky.</p><p class="bio">He says he has had an underdog, high-volume poverty law practice for 44 years and has worked with several nonprofits. He announced on the Fourth of July because he says he fears for vulnerable neighbors in Appalachia.</p><ul><li>He says he opposes cuts to Medicaid, Medicare, food stamps, utility aid, public media, Job Corps, and cancer research that he says fund tax breaks for billionaires.</li><li>He says the incumbent&#x27;s vote for the tax-and-spending bill betrayed a district that depends on rural hospitals and the Affordable Care Act.</li><li>He says he will campaign on health-care access, better internet, education, and clean drinking water, and that he supports uncapping the House and term limits.</li></ul><p class="links"><a href="https://nedforcongress.com/" target="_blank" rel="noopener noreferrer">nedforcongress.com</a> · <a href="https://secure.actblue.com/donate/ned-pillersdorf-launch" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<h3>District 6</h3>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H06_R_R_ALVARADO.png" alt="" data-letter="R" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Ralph Alvarado</h3><span class="pill r">Republican</span></div><p class="role">Physician running for Congress in Kentucky&#x27;s Sixth District.</p><p class="bio">He says he is a Christian, husband, father, and doctor who has cared for patients across central Kentucky for nearly three decades. He says he is running to bring independent leadership, lower the cost of living, and strengthen the state&#x27;s economy.</p><ul><li>He says he will work with both parties on affordable health care, lower costs, more transparency, and more patient control.</li><li>He says he wants groceries, gas, and health care to cost less, good-paying jobs to grow, and wasteful spending that feeds inflation to end.</li><li>His campaign says he would toughen punishments for Medicare and Medicaid fraud and make big insurers disclose profits, denial rates, and wait times.</li></ul><p class="links"><a href="https://alvaradoforcongress.com/" target="_blank" rel="noopener noreferrer">alvaradoforcongress.com</a> · <a href="https://secure.winred.com/alvarado-for-kentucky/donate-today" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article>
+<article class="candidate"><img class="avatar" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H06_D_Z_DEMBO.png" alt="" data-letter="Z" onerror="this.outerHTML='<div class=&quot;avatar mono&quot; aria-hidden=&quot;true&quot;>'+this.dataset.letter+'</div>'"><div><div class="who"><h3 class="notranslate" translate="no">Zach Dembo</h3><span class="pill d">Democratic</span></div><p class="role">Former federal prosecutor, Navy JAG officer, and teacher running for Congress.</p><p class="bio">Raised in Lexington, he says he is a ninth-generation Kentuckian who taught eighth grade in the Mississippi Delta, served more than four years as a Navy lawyer, and later prosecuted civil-rights cases and advised Governor Andy Beshear. He says he resigned as a prosecutor because he believed the Justice Department had been politicized.</p><ul><li>He says tariffs are taxes crushing small businesses and that full-time work should cover a family&#x27;s bills, including a living wage of at least $15 an hour.</li><li>He says Medicaid cuts hurt families and hospitals, that one in three Kentuckians relies on Medicaid, and that women should make their own health-care decisions.</li><li>He says data centers are driving up energy bills and taking farmland without enough local say, and that he left the Justice Department to fight corruption.</li></ul><p class="links"><a href="https://zachdembo.com/" target="_blank" rel="noopener noreferrer">zachdembo.com</a> · <a href="https://secure.actblue.com/donate/zach-dembo-web" target="_blank" rel="noopener noreferrer">Donate</a></p></div></article></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Leaders.vote is an independent voter guide for the November 3, 2026 general election. It is not a campaign, not an endorsement, and not a site of any state or election authority. This page is Kentucky.</p>
+    <p>Statewide names were compared with <a href="https://web.sos.ky.gov/candidatefilings/default.aspx?id=3" target="_blank" rel="noopener noreferrer">this state candidate list</a>. Photos are the ones NBC News is publishing. An issue line is added only from a candidate's own site.</p>
+  </div>
+</footer>
+<div id="google_translate_element" aria-hidden="true"></div>
+<script src="lang.js"></script>
+<script src="state.js"></script>
+</body>
+</html>

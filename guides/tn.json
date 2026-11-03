@@ -1,0 +1,449 @@
+{
+  "code": "tn",
+  "ballotSource": "",
+  "where": {
+    "url": "https://tnmap.tn.gov/voterlookup",
+    "label": "Tennessee voter lookup"
+  },
+  "offices": {
+    "Governor": {
+      "job": "The governor signs or vetoes bills, proposes the state budget, and appoints executive officials.",
+      "kicker": "State · Vote for one."
+    },
+    "Senate": {
+      "job": "The winner is one of 100 votes on federal law, spending, treaties, and judges. The term is six years.",
+      "kicker": "Federal · Vote for one."
+    }
+  },
+  "people": {
+    "marsha blackburn": {
+      "role": "Candidate for governor of Tennessee.",
+      "bio": "Her campaign says that, as a member of the Tennessee Senate, she led the fight against a state income tax. She is running for governor on a promise to keep that low-tax direction and draw more jobs to the state.",
+      "issues": [
+        "She says she will keep taxes and prices low and cut spending and regulation she calls unnecessary so more companies move to Tennessee.",
+        "She says she will help Tennessee-grown small businesses expand at home while the state recruits outside employers.",
+        "She says she will work with businesses on workforce gaps, including training, and commit to filling them."
+      ],
+      "site": "https://marshablackburn.com/",
+      "siteLabel": "marshablackburn.com",
+      "donate": "https://secure.winred.com/marsha-for-governor/website?amount=25&utm_medium=website&utm_source=home-donate&utm_campaign=marshaforgovernor",
+      "source": "https://marshablackburn.com/issue/fighting-for-tennessees-continued-economic-growth/"
+    },
+    "jerri green": {
+      "role": "Candidate for governor of Tennessee.",
+      "bio": "She describes herself as a lifelong Tennessean, a lawyer, an educator, and a mother of three who has lived in Memphis, Nashville, and Knoxville. She says her public work has included public defense, the Memphis City Council, and county government.",
+      "issues": [
+        "She says she will expand paid family and medical leave, support collective bargaining, and invest in small businesses, especially in underserved areas.",
+        "She says public schools should be fully funded, with respected teachers and without what she calls censorship and political interference.",
+        "She says the state should expand Medicaid, especially in rural Tennessee, and she supports background checks, red-flag laws, and gun locks."
+      ],
+      "site": "https://greenforgovernor.com/",
+      "siteLabel": "greenforgovernor.com",
+      "donate": "",
+      "source": "https://greenforgovernor.com/"
+    },
+    "misam abidi": {
+      "role": "Independent candidate for governor of Tennessee.",
+      "bio": "His campaign says he has worked across many parts of the American economy and is running so state decisions start with individual Tennesseans. He says government should give people tools to build wealth and protect their rights rather than grow stronger while they struggle.",
+      "issues": [
+        "He says Tennessee exists in its workers, parents, entrepreneurs, and students, and that government should support those people rather than overpower them.",
+        "He says the campaign's mission is to restore a balance in which citizens can build wealth, protect their rights, and live meaningful lives."
+      ],
+      "site": "https://www.misamforgovernor.com/",
+      "siteLabel": "misamforgovernor.com",
+      "donate": "",
+      "source": "https://www.misamforgovernor.com/"
+    },
+    "david hatley": {
+      "role": "Independent candidate for governor of Tennessee.",
+      "bio": "He says he grew up in East Tennessee, built nine companies, kept the jobs in the state, and shared ownership with the people who worked beside him. He says he is running as an independent so he answers to Tennesseans rather than to a party or to donors.",
+      "issues": [
+        "He says the state should help pay for water, sewer, and roads when a city sets aside part of a new development for lower-priced homes and speeds approvals, and that Tennessee should drop energy-code changes that raise the price of a starter home.",
+        "He says he would pause new data-center approvals until the state writes rules, end tax breaks for them, and send at least half of a data center's new tax revenue to cut property taxes for homeowners in the host county.",
+        "He says he would create an elected independent state auditor and post disclosable contracts, grants, and payments within 30 days."
+      ],
+      "site": "https://hatleyforgovernor.com/",
+      "siteLabel": "hatleyforgovernor.com",
+      "donate": "",
+      "source": "https://hatleyforgovernor.com/"
+    },
+    "wendell jackson": {
+      "role": "Candidate for governor of Tennessee.",
+      "bio": "He says he is seeking the job of governor on a campaign that accepts no money and describes itself as nonpartisan. He says the work is to improve jobs, housing, health care, and daily life for Tennesseans.",
+      "issues": [
+        "He says he wants health care for everyone, covering both mental and physical health, with the details still to come and with people placed ahead of profit.",
+        "He says secure housing should be a priority so people can thrive rather than only get by.",
+        "He says he would push job growth, workforce training, and incentives for businesses that hire and train local workers."
+      ],
+      "site": "https://www.wendelljackson4tngov2026.com/",
+      "siteLabel": "wendelljackson4tngov2026.com",
+      "donate": "",
+      "source": "https://www.wendelljackson4tngov2026.com/"
+    },
+    "lauren pinkston": {
+      "role": "Candidate for governor of Tennessee.",
+      "bio": "She says she is a seventh-generation Tennessean who has started businesses with survivors of human trafficking, studied workforce gaps, led nonprofits, and advised organizations. She says she is running because she does not believe a person must be a political extremist to be represented.",
+      "issues": [
+        "She says she would eliminate the grocery tax, cap property taxes, and make it possible to own a home.",
+        "On schools, she says she would end vouchers, reduce testing, limit screens, and add 50,000 child-care slots.",
+        "She says she would close health-care deserts, challenge middlemen who raise costs, and allow no new data centers until the state sets the rules."
+      ],
+      "site": "https://www.pinkstonfortn.com/",
+      "siteLabel": "pinkstonfortn.com",
+      "donate": "",
+      "source": "https://www.pinkstonfortn.com/"
+    },
+    "victor scoggin": {
+      "role": "Independent candidate for governor of Tennessee.",
+      "bio": "He says he is a Navy veteran, a retired Ford journeyman, a longtime volunteer firefighter, and an active armed guard and river captain. He says he founded Save the Cumberland and answers to Tennessee taxpayers rather than to donors.",
+      "issues": [
+        "He says he would fund law enforcement, restore gun rights and voting rights to people with nonviolent felony convictions, and change bail and plea practice.",
+        "He lists property-tax reform, English as the only official language, and keeping lobbyists out of health-care decisions.",
+        "He says he opposes a Duck River dam at Columbia and opposes new data centers, and he wants campaign spending limits and term limits."
+      ],
+      "site": "https://captvicscoggin4tngov.us/",
+      "siteLabel": "captvicscoggin4tngov.us",
+      "donate": "",
+      "source": "https://captvicscoggin4tngov.us/"
+    },
+    "dave seeman": {
+      "role": "Candidate for governor of Tennessee.",
+      "bio": "He says he was raised in Tennessee, became an engineer, started a small business, and is running to build government that puts people ahead of profit. He says climate action is his first priority.",
+      "issues": [
+        "He says he would end the state grocery tax, close corporate tax loopholes, cancel a large share of medical debt, and phase in a livable minimum wage with 12 weeks of family leave.",
+        "He says he would end private-school vouchers, cover child care for household incomes under $99,000, and put a community health center in every county.",
+        "He calls for a 24-month pause on new data centers, open primaries, fairer districts, and ranked ballots in a future governor's race."
+      ],
+      "site": "https://davefortn.com/",
+      "siteLabel": "davefortn.com",
+      "donate": "",
+      "source": "https://davefortn.com/"
+    },
+    "robert vick": {
+      "role": "Candidate for governor of Tennessee.",
+      "bio": "He says he was born and raised in White Pine and has spent his career in education, including a doctorate in school leadership. He says he is running so family concerns are treated as real priorities, and that his faith is a private foundation for stewardship rather than something he would impose.",
+      "issues": [
+        "He says his schooling background is meant to guide how the state spends on teachers and on student results.",
+        "He says Tennessee needs community mental-health systems that can handle a crisis and support students.",
+        "He says the state budget should be managed within the state's means."
+      ],
+      "site": "https://www.drvick4tn.com/",
+      "siteLabel": "drvick4tn.com",
+      "donate": "",
+      "source": "https://www.drvick4tn.com/meet_dr_robert_c"
+    },
+    "bill hagerty": {
+      "role": "U.S. senator running for re-election.",
+      "bio": "He says he is a businessman and a former U.S. ambassador to Japan, and that serving Tennessee in the Senate has been the honor of his life. He says his business career shapes how he approaches the debates in the Senate.",
+      "issues": [
+        "He says he is running to keep fighting for lower taxes, energy independence, secure borders, and the rule of law.",
+        "He says his Senate work has included securing the southern border, supporting small businesses, and strengthening national security.",
+        "He says he will keep pushing an America First agenda and treat the Chinese Communist Party as a serious adversary."
+      ],
+      "site": "https://www.teamhagerty.com/",
+      "siteLabel": "teamhagerty.com",
+      "donate": "https://secure.winred.com/teamhagerty/website?amount=5&utm_medium=website&utm_campaign=team-hagerty-5&utm_source=home",
+      "source": "https://teamhagerty.com/news/senator-bill-hagerty-announces-re-election-for-united-states-senate/"
+    },
+    "marquita bradshaw": {
+      "role": "Candidate for the U.S. Senate.",
+      "bio": "Her campaign site calls her a champion for Tennessee and says the campaign is powered by ordinary people.",
+      "issues": [],
+      "site": "https://www.marquitabradshaw.com/",
+      "siteLabel": "marquitabradshaw.com",
+      "donate": "",
+      "source": "https://www.marquitabradshaw.com/"
+    },
+    "andrew gerena": {
+      "role": "Independent candidate for the U.S. Senate.",
+      "bio": "He says he is a working-class candidate whose jobs have included military service, security, commercial trucking, information technology, food service, maintenance, and scientific research. He says he is running without political connections because he is tired of the status quo.",
+      "issues": [
+        "He says government should keep life safe, affordable, peaceful, healthy, and fair, with personal liberty as the minimum.",
+        "He says tax money should not go mainly to regime-change wars or to tax breaks for corporations that have not shown loyalty to the public.",
+        "He says candidates, including himself, have a duty to serve the public rather than foreign governments or corporations."
+      ],
+      "site": "https://www.jeranimo4senate.org/",
+      "siteLabel": "jeranimo4senate.org",
+      "donate": "",
+      "source": "https://www.jeranimo4senate.org/"
+    },
+    "jeremy hearn": {
+      "role": "Independent candidate for the U.S. Senate.",
+      "bio": "He says he is an independent running with a plan he calls American, and that he wants voters of every party involved. He says supporters may mail a one-dollar pledge and that unused campaign money will be returned on request.",
+      "issues": [
+        "He lists his priorities as defending the Constitution, clarifying history, and restoring what he calls equality for people.",
+        "He says he would draft an Equal Earnings Act and use assets at Fort Knox toward legislation and the national debt.",
+        "He says he wants economic alternatives to war and protection of what he calls American human freedom."
+      ],
+      "site": "https://www.jeremydeanhearnforsenate.com/",
+      "siteLabel": "jeremydeanhearnforsenate.com",
+      "donate": "",
+      "source": "https://www.jeremydeanhearnforsenate.com/"
+    },
+    "robert jones": {
+      "role": "Independent candidate for the U.S. Senate.",
+      "bio": "He says he will not take campaign donations, from a party, a business, or a PAC, so that money cannot buy his vote. He asks people to give to local nonprofits instead and to spread his campaign by word of mouth.",
+      "issues": [
+        "He says he would seek an Accountability Act so constituents can be polled on major issues and officials must explain votes that go against that result.",
+        "On daily costs, he says communities should buy food together, use simpler construction to make housing cheaper, and rethink a health system that charges cash patients and insured patients very different prices.",
+        "He says he supports the Second Amendment for law-abiding people, wants an open debate about modern limits, and says immigration enforcement should use due process."
+      ],
+      "site": "https://www.robertfortn.com/",
+      "siteLabel": "robertfortn.com",
+      "donate": "",
+      "source": "https://www.robertfortn.com/issues"
+    },
+    "yoshi matthews": {
+      "role": "Candidate for the U.S. Senate.",
+      "bio": "She says her background is in business, accounting, nonprofit work, and community outreach, and that she founded FTP Nonprofit to help local people, including people with disabilities. She says her campaign stresses fiscal responsibility, local communities, public safety, and limited government.",
+      "issues": [
+        "She says independent leadership should put hardworking Tennesseans first, with practical steps to strengthen the economy and widen opportunity.",
+        "She describes a reparations proposal as a fair, lawful, and limited Tennessee-based solution.",
+        "She says she wants to protect seniors from losing their homes to property taxes."
+      ],
+      "site": "https://yoshimatthewssenate.com/",
+      "siteLabel": "yoshimatthewssenate.com",
+      "donate": "",
+      "source": "https://yoshimatthewssenate.com/"
+    },
+    "david sutman jr.": {
+      "role": "Independent candidate for the U.S. Senate.",
+      "bio": "He says he is a working Tennessean, not a career politician, and that he is running because party loyalty and special interests have left families behind. He says his experience comes from business and from living with the same costs as other Tennesseans.",
+      "issues": [
+        "He says groceries, housing, and fuel are crushing working families, and that he will focus on practical ways to cut those everyday costs.",
+        "He says he would push term limits, clearer spending records, and performance standards for elected officials.",
+        "He says he answers to Tennessee rather than to either party, and that he will support constitutional rights and the rule of law."
+      ],
+      "site": "https://sutmanjr4senate.com/",
+      "siteLabel": "sutmanjr4senate.com",
+      "donate": "",
+      "source": "https://sutmanjr4senate.com/"
+    },
+    "catherine whitson": {
+      "role": "Independent candidate for the U.S. Senate.",
+      "bio": "She says she is on the ballot as an independent, worked in insurance, and has spent the last 20 years as a life coach, pastor, and mentor. She says she is running to spend her time on what Tennesseans want rather than on rehearsing what is wrong.",
+      "issues": [
+        "She says she would lower costs, seek high-paying jobs, back local small businesses, and promote cleaner energy, safe water, and recycling.",
+        "On health care, she says she would cut prescription prices, protect rural hospitals, and use existing law to help people who do not have group coverage.",
+        "She says she would boost public-school funding and vocational training, support private and home schooling, and push for safe, affordable housing and child, adult, and elder care."
+      ],
+      "site": "https://senatorbarcy.org/",
+      "siteLabel": "senatorbarcy.org",
+      "donate": "",
+      "source": "https://senatorbarcy.org/"
+    },
+    "diana harshbarger": {
+      "role": "Pharmacist and U.S. representative for Tennessee's 1st District.",
+      "bio": "Her campaign says she was born in Kingsport, grew up in Bloomingdale, and was the first in her family to graduate from college, earning a pharmacy doctorate from Mercer University. She says she has been a licensed pharmacist since 1987 and a business owner for more than 30 years.",
+      "issues": [
+        "She says she would finish the border wall, end catch-and-release, restore Remain in Mexico, and defund sanctuary cities.",
+        "She says she will defend the Second Amendment, support term limits, and treat the opioid crisis with border enforcement, treatment funding, and accountability.",
+        "Drawing on her pharmacy work, she says health-care choices should stay with patients, drug prices should come down, and the country should not rely on China for medicines."
+      ],
+      "site": "https://www.votediana.com/",
+      "siteLabel": "votediana.com",
+      "donate": "https://secure.winred.com/diana-for-congress/donate",
+      "source": "https://www.votediana.com/issues"
+    },
+    "kristi burke": {
+      "role": "Muralist running for Congress in Tennessee's 1st District.",
+      "bio": "Her campaign says she is a muralist and neighbor, not a career politician, who decided to run because the district's seat was not representing local people. She says corporate interests have been put ahead of human dignity.",
+      "issues": [
+        "She says health care should be a right and that workers should be empowered.",
+        "She says people should have the freedom to live with integrity, and that the campaign relies on grassroots donations rather than corporate PAC money."
+      ],
+      "site": "https://www.votekristiburke.com/",
+      "siteLabel": "votekristiburke.com",
+      "source": "https://www.votekristiburke.com/"
+    },
+    "tim burchett": {
+      "role": "U.S. representative for Tennessee's 2nd District.",
+      "bio": "His campaign says he is a lifelong East Tennessean, born in Knoxville, who attended Bearden High School and earned an education degree from the University of Tennessee. He says he is a husband, a father, and a former small-business owner who ran for Congress because he was fed up with the status quo.",
+      "issues": [
+        "He says members of Congress should not trade stocks, and he supports term limits because long tenure ties politicians to special interests.",
+        "He says the federal government already taxes and spends too much, and that regulations once put his mulch company out of business.",
+        "He says he is pro-life, a gun owner who expanded gun rights in the legislature, and that veterans and American security should come first."
+      ],
+      "site": "https://burchettforcongress.com/",
+      "siteLabel": "burchettforcongress.com",
+      "source": "https://burchettforcongress.com/issues/"
+    },
+    "michaela barnett": {
+      "role": "Engineer and small-business owner running for Congress in Tennessee's 2nd District.",
+      "bio": "Her campaign says she grew up doing barn chores on her family's horse farm, started a composting program in college, and later earned a doctorate in civil engineering while building a Knox County business. She says a year as a science-policy fellow in Congress convinced her the institution is not working for East Tennessee.",
+      "issues": [
+        "She says gas, groceries, infrastructure, and rent are squeezing East Tennessee, and that both parties' insiders are waiting the problems out.",
+        "She wants to limit corporate political spending, overturn Citizens United, ban congressional stock trading, and require independent redistricting commissions.",
+        "She also calls for term limits, a lobbying ban after members leave office, and age limits for Congress and the presidency."
+      ],
+      "site": "https://www.michaelafortennessee.com/",
+      "siteLabel": "michaelafortennessee.com",
+      "source": "https://www.michaelafortennessee.com/about"
+    },
+    "chuck fleischmann": {
+      "role": "U.S. representative for Tennessee's 3rd District.",
+      "bio": "His campaign describes him as a fiscal and social conservative representing Tennessee's 3rd District.",
+      "issues": [
+        "He says massive federal spending meant to stem unemployment is counterproductive, and that the tax system does not support the growth the economy needs.",
+        "He says the country's founding values still matter to him, and that environmentally safe energy exploration should be part of energy policy."
+      ],
+      "site": "https://www.chuckforcongress.com/",
+      "siteLabel": "chuckforcongress.com",
+      "source": "https://www.chuckforcongress.com/"
+    },
+    "anna golladay": {
+      "role": "Faith leader and small-business owner running for Congress in Tennessee's 3rd District.",
+      "bio": "Her campaign says she is a progressive faith leader who owns Biased Apparel and is chief executive of Work of Place, a firm that helps congregations use their buildings for neighbors' economic stability. She and her husband Mike live in Chattanooga's Park Central neighborhood.",
+      "issues": [
+        "She says workers deserve wages that cover the bills and the freedom to organize, and that rural counties need funded hospitals, schools, and infrastructure.",
+        "She says she takes no corporate PAC money and wants fair elections and fair maps.",
+        "She says she would protect reproductive freedom and LGBTQ+ people, treat health care as a human right, and fund Oak Ridge's science without sacrificing the land."
+      ],
+      "site": "https://annagolladay.com/",
+      "siteLabel": "annagolladay.com",
+      "source": "https://annagolladay.com/about-anna/"
+    },
+    "scott desjarlais": {
+      "role": "U.S. representative and physician for Tennessee's 4th District.",
+      "bio": "His campaign says he was raised in rural America, that his father was a second-generation barber, and that his mother was a nurse for 44 years at a veterans hospital. He says he had not sought office before he ran for Congress.",
+      "issues": [
+        "He supports a constitutional amendment requiring a balanced budget, and he says people and businesses should keep more of their money.",
+        "He says health coverage should compete across state lines, with tort reform and health savings accounts, and that he would repeal the Affordable Care Act.",
+        "He says the military must stay a top priority and that energy policy should use domestic oil, gas, nuclear, coal, hydroelectric power, and renewables."
+      ],
+      "site": "https://scottdesjarlais.com/",
+      "siteLabel": "scottdesjarlais.com",
+      "source": "https://scottdesjarlais.com/issues/"
+    },
+    "victoria broderick": {
+      "role": "Working parent running for Congress in Tennessee's 4th District.",
+      "bio": "Her campaign says she is a working-class mother from rural Tennessee who grew up across the South before landing in Lincoln County. She says she previously built a short campaign while working full time after learning her opponent might otherwise run unopposed.",
+      "issues": [
+        "She says her SAFE plan covers community safety, including rural hospitals and gun violence, and bringing down everyday costs, including pre-K and a path to homeownership.",
+        "She says she would protect privacy, keep the federal government out of personal decisions, secure the border with a fair immigration process, and end federal marijuana penalties.",
+        "She also says corporate taxes should encourage American investment and that data centers should be accountable to communities."
+      ],
+      "site": "https://www.victoria4tennessee.org/",
+      "siteLabel": "victoria4tennessee.org",
+      "source": "https://www.victoria4tennessee.org/about"
+    },
+    "charlie hatcher": {
+      "role": "Farmer and former agriculture commissioner running for Congress in Tennessee's 5th District.",
+      "bio": "His campaign says he is a fifth-generation dairy farmer and livestock veterinarian who started several businesses, including Hatcher Family Dairy, and served as state veterinarian and agriculture commissioner. He says the family has worked the same land for more than 200 years.",
+      "issues": [
+        "He says he would fight inflationary spending and rules that raise energy and business costs, and let families keep more of what they earn.",
+        "He says food security is national security and that he would protect farmers from foreign disease threats and dependence on other countries for food.",
+        "He says he would enforce immigration law, defend the Second Amendment for law-abiding owners, and make constituent service a priority."
+      ],
+      "site": "https://charliehatcher.com/",
+      "siteLabel": "charliehatcher.com",
+      "source": "https://charliehatcher.com/platform/"
+    },
+    "chaz molder": {
+      "role": "Mayor of Columbia running for Congress in Tennessee's 5th District.",
+      "bio": "His campaign says he was born and raised in Tennessee, attended Columbia's public schools, the University of Tennessee, and the University of Memphis law school. Elected mayor in 2018, he says he was then the youngest mayor in the state.",
+      "issues": [
+        "He says he would ban stock trading by members of Congress and restore trust through transparency and accountability.",
+        "He says he would lower the cost of health care, housing, and groceries, and stand up for the right to organize.",
+        "He says affordable health care is a basic right and that rural hospitals need support so they can stay open."
+      ],
+      "site": "https://chazmolder.com/",
+      "siteLabel": "chazmolder.com",
+      "source": "https://chazmolder.com/issues/"
+    },
+    "johnny garrett": {
+      "role": "Tennessee House majority whip running for Congress in the 6th District.",
+      "bio": "His campaign says he is a Christian conservative, a husband, and a father of three who has served as House majority whip since 2019. He says he first ran for the state House in 2018 to back an America First agenda.",
+      "issues": [
+        "He says he would work with the president on that agenda, including deportations and securing the southern border.",
+        "He says he would fight inflation, seek lower taxes, and defend the Second Amendment.",
+        "He also lists keeping men out of women's sports, standing with Israel, backing police, protecting what he calls the sanctity of life, and supporting farmers."
+      ],
+      "site": "https://johnnygarrettforcongress.com/",
+      "siteLabel": "johnnygarrettforcongress.com",
+      "donate": "https://secure.winred.com/johnny-garrett-for-congress/website?amount=10&utm_medium=website&utm_source=home-donate-bar&utm_campaign=donate-10",
+      "source": "https://johnnygarrettforcongress.com/meet-johnny/"
+    },
+    "mike croley": {
+      "role": "Navy veteran and engineer running for Congress in Tennessee's 6th District.",
+      "bio": "His campaign says he is a husband and father, a Navy veteran, an engineer, a former Tennessee state park ranger, and a former federal employee whose work connected to the State Department and NOAA. He says he earned degrees from Vanderbilt and Tennessee Tech.",
+      "issues": [
+        "He organizes the campaign around affordability, accountability, and accessibility, including lower everyday costs and easier access to health care, voting, and veterans' services.",
+        "He says he is not taking corporate PAC money and wants government to serve families rather than a powerful few.",
+        "He says public officials, agencies, and corporations should be transparent and accountable."
+      ],
+      "site": "https://croleyforcongress.com/",
+      "siteLabel": "croleyforcongress.com",
+      "source": "https://croleyforcongress.com/meet-mike/"
+    },
+    "matt van epps": {
+      "role": "U.S. representative, West Point graduate, and Army helicopter pilot.",
+      "bio": "His campaign says he is a decorated combat veteran who served 10 years on active duty, including as an air mission commander, and that he was a commissioner in Governor Bill Lee's administration. He says he lives Tennessee's values with his wife and daughter.",
+      "issues": [
+        "He says he would cut red tape, bring manufacturing back, unleash American energy, and set rules for crypto and artificial intelligence that protect privacy.",
+        "He says he would reform the VA so veterans get the care and benefits they earned, finish the border wall, and stop fentanyl trafficking.",
+        "He says he would protect farmers from overregulation and foreign land purchases and expand rural health care."
+      ],
+      "site": "https://www.mattfortn.com/",
+      "siteLabel": "mattfortn.com",
+      "source": "https://www.mattfortn.com/issues"
+    },
+    "darden copeland": {
+      "role": "Public-affairs consultant running for Congress in Tennessee's 7th District.",
+      "bio": "His campaign says he is a husband and father with working-class roots whose father started an industrial uniform company and whose mother worked overnight factory shifts for health benefits. He says student loans and several jobs got him through the University of Richmond, and that he later built the public-affairs firm Calvert Street Group.",
+      "issues": [
+        "He says too many politicians are serving billionaires while cutting safety nets, including expanded Medicaid, Medicare, health-care premiums, student loans, and food assistance.",
+        "He says his career has been about protecting the working and middle class, including work on solar farms, affordable housing, rural hospitals, and transit funding."
+      ],
+      "site": "https://www.dardenforcongress.com/",
+      "siteLabel": "dardenforcongress.com",
+      "source": "https://www.dardenforcongress.com/"
+    },
+    "david kustoff": {
+      "role": "U.S. representative and former U.S. attorney for West Tennessee.",
+      "bio": "His campaign says he was born and raised in Shelby County, graduated from the University of Memphis, and was appointed U.S. attorney for the Western District of Tennessee in 2006. He and his wife Roberta have two children.",
+      "issues": [
+        "He says public safety is his top priority and points to his work prosecuting public corruption, violent crime, and drugs.",
+        "He says teachers do not need national mandates, that he would secure the border and stop drug trafficking, and that he supports legal immigration for people who follow the rules.",
+        "He says life begins at conception, that people have a right to keep and bear arms, and that he is working on a farm bill for the district's agriculture."
+      ],
+      "site": "https://www.kustoffforcongress.com/",
+      "siteLabel": "kustoffforcongress.com",
+      "source": "https://www.kustoffforcongress.com/issues/"
+    },
+    "heidi kuhn": {
+      "role": "Candidate for Congress in Tennessee's 8th District.",
+      "bio": "Her campaign says the district needs fresh ideas and leaders who show up for people, and she is asking voters to make a plan for Election Day.",
+      "issues": [
+        "She says data centers should not get a blank check.",
+        "She says communities deserve a say in whether and where data centers are built, and in how much water and power they use."
+      ],
+      "site": "https://kuhnforcongress.com/",
+      "siteLabel": "kuhnforcongress.com",
+      "source": "https://kuhnforcongress.com/"
+    },
+    "brent taylor": {
+      "role": "State senator and funeral-business owner running for Congress in Tennessee's 9th District.",
+      "bio": "His campaign says he is a small-business owner in the funeral business and a West Tennessee state senator. He says he is ready to take that work to Congress.",
+      "issues": [],
+      "site": "https://brenttaylorforcongress.com/",
+      "siteLabel": "brenttaylorforcongress.com",
+      "source": "https://brenttaylorforcongress.com/"
+    },
+    "justin pearson": {
+      "role": "State representative running for Congress in Tennessee's 9th District.",
+      "bio": "His campaign says he is the fourth of five sons of teenage parents in Memphis, and that his parents worked their way through college and out of poverty. He says he is a state representative who was expelled after a protest, then reappointed and reelected, and that he is married to Oceana R. Gilliam.",
+      "issues": [
+        "He says he would guarantee jobs, raise the minimum wage to a living wage, pass the PRO Act, and make billionaires and large corporations pay more.",
+        "He supports Medicare for All, rural hospitals, and the veterans' health system, and he wants permits to carry, a ban on assault rifles, and background checks.",
+        "He says he would pause large data-center construction, overturn Citizens United, and ban members of Congress from trading stock."
+      ],
+      "site": "https://www.votejustinj.com/",
+      "siteLabel": "votejustinj.com",
+      "source": "https://www.votejustinj.com/issues"
+    }
+  },
+  "measures": {
+    "Amendment 2: Prohibit state property tax": "This amendment adds text to Article II, section 28 of the Tennessee Constitution that prohibits the Legislature from imposing a State property tax on real, personal, or mixed property."
+  }
+}
