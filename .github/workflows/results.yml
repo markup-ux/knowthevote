@@ -20,11 +20,12 @@ jobs:
         run: |
           python scripts/build_results.py
           python scripts/build_leads.py --fetch
+          python scripts/build_preview.py --results
       - name: Publish the totals file
         run: |
-          git diff --quiet -- results.json preview/leads.json && exit 0
+          git diff --quiet -- results.json preview/leads.json preview/states && exit 0
           git config user.name "leaders-results"
           git config user.email "actions@leaders.vote"
-          git add results.json preview/leads.json
+          git add results.json preview/leads.json preview/states
           git commit -m "Update unofficial election totals."
           git push

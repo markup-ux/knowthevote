@@ -5,6 +5,7 @@ Does not invent races. A state only lists offices NBC News is publishing.
 """
 import json
 import os
+import sys
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -13,6 +14,8 @@ from datetime import datetime, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PREVIEW = os.path.join(ROOT, "preview")
 TEMP = os.environ.get("TEMP", "/tmp")
+WINDOW_START = datetime(2026, 11, 3, 12, tzinfo=timezone.utc)
+WINDOW_END = datetime(2026, 11, 6, 18, tzinfo=timezone.utc)
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 BASE = "https://www.nbcnews.com/firecracker/api/v2/state-results/2026-elections/"
 
@@ -392,6 +395,62 @@ def slim_state(code, name, slug, payload, error):
     }
 
 
+def in_window():
+    now = datetime.now(timezone.utc)
+    return WINDOW_START <= now <= WINDOW_END
+
+
+def refresh_results():
+    """Rewrite preview/states from NBC. Leave the maps alone."""
+    forced = os.environ.get("RESULTS_FORCE") == "1"
+    folder = os.path.join(PREVIEW, "states")
+    if not forced and not in_window() and os.path.isdir(folder):
+        print("outside the election window")
+        return
+    national = json.load(open(os.path.join(PREVIEW, "national.json"), encoding="utf-8"))
+    catalog = national.get("states") or []
+    loaded = {}
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures = {pool.submit(fetch_state, item["name"]): item for item in catalog}
+        for future in as_completed(futures):
+            item = futures[future]
+            loaded[item["code"]] = future.result()
+            print("feed", item["code"], loaded[item["code"]][2] or "ok")
+    details = {}
+    slugs = []
+    for slug, payload, error in loaded.values():
+        for item in feed_items(payload):
+            detail = detail_slug(item)
+            if detail and detail not in slugs:
+                slugs.append(detail)
+    print("details", len(slugs))
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures = [pool.submit(fetch_detail, slug) for slug in slugs]
+        for future in as_completed(futures):
+            slug, payload = future.result()
+            details[slug] = payload
+    written = 0
+    for item in catalog:
+        slug, payload, error = loaded[item["code"]]
+        if not payload:
+            print("keep", item["code"], error)
+            continue
+        for race in feed_items(payload):
+            detail = detail_slug(race)
+            if detail and details.get(detail):
+                apply_detail(race, details[detail])
+        state = slim_state(item["code"], item["name"], slug, payload, error)
+        stamp = payload.get("currentTime") or payload.get("lastModified") or ""
+        state["updated"] = stamp if isinstance(stamp, str) and stamp else datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        path = os.path.join(folder, item["code"].lower() + ".json")
+        json.dump(state, open(path, "w", encoding="utf-8", newline="\n"), separators=(",", ":"))
+        senate = next((race for race in state["races"] if race.get("office") == "Senate"), None)
+        votes = senate.get("votes") if senate else 0
+        print("races", item["code"], len(state["races"]), "senate", votes)
+        written += 1
+    print("wrote", written, "states")
+
+
 def main():
     os.makedirs(os.path.join(PREVIEW, "maps"), exist_ok=True)
     os.makedirs(os.path.join(PREVIEW, "states"), exist_ok=True)
@@ -494,4 +553,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if "--results" in sys.argv:
+        refresh_results()
+    else:
+        main()
