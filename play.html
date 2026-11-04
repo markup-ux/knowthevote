@@ -7,6 +7,7 @@
 <meta name="description" content="Questions, a count, and a sheet, using facts already printed on Leaders.vote. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="guide.css?v=play">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <style>
   .play-switch { margin-top: 8px; }
   .play-switch button { font-size: 18px; }
@@ -369,6 +370,313 @@
     .scene.scene-sheet .scene-frame { height: 220px; }
     .sheet { width: 100%; }
   }
+
+  main {
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(191, 10, 48, 0.35) 0%, transparent 42%),
+      #041428;
+    color: #f4f7fb;
+  }
+  main .kicker {
+    color: #bf0a30;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  main h1 {
+    color: #f4f7fb;
+    font-family: Cinzel, Palatino, "Palatino Linotype", serif;
+    font-weight: 700;
+  }
+  main .deck { color: #c5d4e8; }
+  #play-root > .deck { margin-top: 0; font-size: 16px; }
+
+  .play-switch.sheet-switch { gap: 8px; }
+  .play-switch.sheet-switch button {
+    font-family: Cinzel, Palatino, serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f4f7fb;
+    background: #0a3161;
+    border: 1px solid #f4f7fb;
+    border-bottom: 1px solid #f4f7fb;
+    padding: 10px 14px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  .play-switch.sheet-switch button[aria-pressed="true"] {
+    color: #fff;
+    background: linear-gradient(180deg, #d4213f 0%, #bf0a30 100%);
+    border-color: #fff;
+  }
+
+  .scene .sheet:not(.is-paper) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "art"
+      "copy"
+      "move";
+    width: min(100%, 880px);
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+    border: 2px solid #f4f7fb;
+    background: #061833;
+    color: #f4f7fb;
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    box-shadow:
+      0 0 0 4px #bf0a30,
+      0 0 0 8px #0a3161,
+      0 22px 48px rgba(0, 0, 0, 0.45);
+  }
+  .scene .sheet:not(.is-paper)::before,
+  .scene .sheet:not(.is-paper)::after {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+    border: 2px solid #f4f7fb;
+  }
+  .scene .sheet:not(.is-paper)::before {
+    top: 7px;
+    left: 7px;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  .scene .sheet:not(.is-paper)::after {
+    right: 7px;
+    bottom: 7px;
+    border-left: 0;
+    border-top: 0;
+  }
+  .scene .sheet[data-shot] .sheet-photo,
+  .scene .sheet-photo {
+    position: relative;
+    grid-area: art;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    align-self: start;
+    object-fit: contain;
+    object-position: center center;
+    background: #041428;
+    border-left: 0;
+    border-bottom: 1px solid rgba(244, 247, 251, 0.35);
+  }
+  .scene .sheet[data-shot] .sheet-copy,
+  .scene .sheet .sheet-copy {
+    grid-area: copy;
+    width: auto;
+    max-width: none;
+    min-height: 0;
+    padding: 26px 26px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #f4f7fb;
+    background: linear-gradient(180deg, #0c2d5c 0%, #061833 100%);
+    text-shadow: none;
+  }
+  .scene .sheet .scene-credit {
+    position: relative;
+    grid-area: art;
+    align-self: end;
+    justify-self: stretch;
+    z-index: 2;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    max-width: none;
+    margin: 0;
+    padding: 28px 14px 10px;
+    background: linear-gradient(transparent, rgba(4, 20, 40, 0.88));
+    color: #f4f7fb;
+    font-size: 12px;
+    pointer-events: none;
+  }
+  .scene .sheet .scene-credit a { pointer-events: auto; }
+  .scene .sheet-head { text-align: left; margin-bottom: 14px; }
+  .scene .sheet-head strong {
+    font-family: Cinzel, Palatino, serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: #fff;
+  }
+  .scene .sheet.is-retain .sheet-head strong { color: #fff; }
+  .scene .sheet-head span {
+    margin-top: 4px;
+    color: #c5d4e8;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .quest-meter { display: flex; gap: 5px; margin-top: 12px; }
+  .quest-meter i {
+    display: block;
+    width: 34px;
+    height: 7px;
+    background: #14325f;
+    border: 1px solid rgba(244, 247, 251, 0.35);
+  }
+  .quest-meter i.is-done { background: #f4f7fb; }
+  .quest-meter i.is-now {
+    background: #bf0a30;
+    border-color: #fff;
+  }
+  .scene .contest {
+    border-top: 1px solid rgba(244, 247, 251, 0.35);
+    padding: 14px 0 8px;
+  }
+  .scene .contest h3 {
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.35;
+    color: #f4f7fb;
+  }
+  .scene .contest .vote-for,
+  .scene .sheet-instruct { color: #c5d4e8; font-weight: 600; }
+  .scene .choice {
+    align-items: center;
+    margin-top: 8px;
+    padding: 10px 12px;
+    border: 1px solid rgba(244, 247, 251, 0.4);
+    background: rgba(0, 0, 0, 0.22);
+    color: #f4f7fb;
+  }
+  .scene .choice:hover:not(:disabled) {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .scene .choice .oval {
+    width: 9px;
+    height: 9px;
+    margin-top: 0;
+    border-radius: 1px;
+    border: 1px solid #f4f7fb;
+    transform: rotate(45deg);
+    background: transparent;
+  }
+  .scene .choice[aria-pressed="true"],
+  .scene .choice.is-right {
+    border-color: #fff;
+    background: rgba(191, 10, 48, 0.28);
+  }
+  .scene .choice.is-wrong { border-color: #bf0a30; background: rgba(90, 8, 22, 0.45); }
+  .scene .choice[aria-pressed="true"] .oval,
+  .scene .choice.is-right .oval { background: #bf0a30; border-color: #fff; }
+  .scene .choice.is-wrong .oval { background: transparent; border-color: #bf0a30; }
+  .scene .who-name { font-size: 17px; font-weight: 600; }
+  .scene .mark { color: #fff; }
+  .scene .choice.is-wrong .mark { color: #ffb3c0; }
+  .scene .tally strong { color: #fff; font-family: Cinzel, Palatino, serif; }
+  .scene .tally span { color: #c5d4e8; }
+  .scene .sheet-move {
+    grid-area: move;
+    align-self: end;
+    margin: 0;
+    padding: 8px 26px 22px;
+  }
+  .scene .sheet-move button {
+    font-family: Cinzel, Palatino, serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(180deg, #d4213f 0%, #bf0a30 100%);
+    border: 1px solid #fff;
+    padding: 11px 22px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  }
+  .scene .sheet-move button:disabled {
+    color: #c5d4e8;
+    background: transparent;
+    border-color: rgba(244, 247, 251, 0.45);
+    box-shadow: none;
+  }
+  .scene #play-status { color: #f4f7fb; font-size: 16px; }
+  .scene .misses a { color: #fff; }
+
+  .sheet.is-paper {
+    width: min(100%, 680px);
+    padding: 22px 22px 8px;
+    border: 2px solid #f4f7fb;
+    background: #061833;
+    color: #f4f7fb;
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    box-shadow: 0 0 0 4px #bf0a30, 0 0 0 8px #0a3161;
+  }
+  .sheet.is-paper .sheet-copy {
+    color: #f4f7fb;
+    background: none;
+    text-shadow: none;
+  }
+  .sheet.is-paper .sheet-move { padding: 8px 0 16px; }
+
+  .scene.scene-sheet {
+    width: min(100%, 880px);
+    padding: 0 0 8px;
+    border: 2px solid #f4f7fb;
+    background: #061833;
+    box-shadow: 0 0 0 4px #bf0a30, 0 0 0 8px #0a3161, 0 22px 48px rgba(0, 0, 0, 0.45);
+  }
+  .scene.scene-sheet .scene-frame { border: 0; height: auto; overflow: visible; }
+  .scene.scene-sheet .scene-frame img {
+    position: relative;
+    inset: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+    background: #041428;
+  }
+  .scene.scene-sheet .play-layout { margin: 0; padding: 18px 18px 8px; color: #f4f7fb; }
+  .scene.scene-sheet .cell {
+    background: #0a3161;
+    color: #f4f7fb;
+    border-color: rgba(244, 247, 251, 0.45);
+  }
+  .scene.scene-sheet .cell .term { color: #bf0a30; }
+  .scene.scene-sheet .cell.is-on { background: #14325f; }
+  .scene.scene-sheet .cell.is-bad { background: #6e1024; color: #ffd5dc; }
+  .scene.scene-sheet .keys button {
+    color: #f4f7fb;
+    background: #0a3161;
+    border: 1px solid #f4f7fb;
+    font-family: Cinzel, Palatino, serif;
+  }
+  .scene.scene-sheet .keys button:hover,
+  .scene.scene-sheet .cell:hover { background: #14325f; }
+  .scene.scene-sheet .rule,
+  .scene.scene-sheet .note { color: #c5d4e8; }
+  .scene.scene-sheet .note a { color: #fff; }
+
+  @media (max-width: 800px) {
+    .scene .sheet:not(.is-paper) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "art"
+        "copy"
+        "move";
+      min-height: 0;
+    }
+    .scene .sheet[data-shot] .sheet-photo,
+    .scene .sheet-photo {
+      height: auto;
+      min-height: 0;
+      object-fit: contain;
+      border-left: 0;
+      border-bottom: 1px solid rgba(244, 247, 251, 0.35);
+    }
+  }
 </style>
 </head>
 <body>
@@ -726,6 +1034,20 @@
     var head = el("div", "sheet-head");
     head.appendChild(el("strong", "", title));
     head.appendChild(el("span", "", line));
+    var match = /Question (\d+) of (\d+)/.exec(line);
+    if (match) {
+      var meter = el("div", "quest-meter");
+      meter.setAttribute("aria-hidden", "true");
+      var current = Number(match[1]);
+      var total = Number(match[2]);
+      for (var step = 1; step <= total; step++) {
+        var pip = document.createElement("i");
+        if (step < current) pip.className = "is-done";
+        else if (step === current) pip.className = "is-now";
+        meter.appendChild(pip);
+      }
+      head.appendChild(meter);
+    }
     return head;
   }
 
@@ -791,8 +1113,8 @@
   }
 
   function photoSrc(photo, shape) {
-    var size = shape === "card" ? "w=1400&h=1800" : "w=1600&h=700";
-    return "https://images.unsplash.com/" + photo.id + "?auto=format&fit=crop&" + size + "&q=80";
+    var size = shape === "card" ? "w=1600" : "w=1600";
+    return "https://images.unsplash.com/" + photo.id + "?auto=format&fit=max&" + size + "&q=80";
   }
 
   function fillCredit(node, photo) {
@@ -866,12 +1188,12 @@
     var move = el("div", "sheet-move");
     var status = el("p", "");
     status.id = "play-status";
-    var next = el("button", "", "Next");
+    var next = el("button", "", "Continue");
     next.type = "button";
     next.disabled = true;
     move.appendChild(next);
     move.appendChild(status);
-    root.appendChild(move);
+    stage.card.appendChild(move);
 
     function ask() {
       locked = false;
@@ -891,7 +1213,7 @@
       sheet.appendChild(block);
       status.textContent = "";
       next.disabled = true;
-      next.textContent = index === round.length - 1 ? "Done" : "Next";
+      next.textContent = index === round.length - 1 ? "Complete" : "Continue";
     }
 
     function pick(choice, button) {
@@ -956,12 +1278,12 @@
     var move = el("div", "sheet-move");
     var status = el("p", "");
     status.id = "play-status";
-    var next = el("button", "", "Next");
+    var next = el("button", "", "Continue");
     next.type = "button";
     next.disabled = true;
     move.appendChild(next);
     move.appendChild(status);
-    root.appendChild(move);
+    stage.card.appendChild(move);
 
     function tally(yes, no) {
       var row = el("div", "tally");
@@ -1019,7 +1341,7 @@
       sheet.appendChild(block);
       status.textContent = "";
       next.disabled = true;
-      next.textContent = index === COUNTS.length - 1 ? "Done" : "Next";
+      next.textContent = index === COUNTS.length - 1 ? "Complete" : "Continue";
     }
 
     function pick(hit, button, fact) {
