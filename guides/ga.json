@@ -389,6 +389,19 @@
       "siteLabel": "jasmine4ga.com",
       "donate": "https://secure.actblue.com/donate/jasmine-clark-1",
       "source": "https://www.jasmine4ga.com/agenda"
+    },
+    "jim duffie": {
+      "role": "Navy veteran and businessman running for Congress in Georgia's 4th District.",
+      "bio": "His campaign says he grew up with very little, served in the Navy's nuclear submarine force, and then built a business. He describes himself as a husband, father, grandfather, and great-grandfather, and not a career politician.",
+      "issues": [
+        "He says he supports the FairTax Act, H.R. 25, which would end the federal income, payroll, estate, and gift taxes, abolish the IRS, and replace them with a national sales tax plus a monthly rebate so households at or below the poverty level pay no net federal tax.",
+        "He says families should be able to go to school, church, and the store without fear, and he would back law enforcement and first responders.",
+        "He says he would cut regulations that make it harder for small businesses to hire and grow, and defend the Second Amendment, religious liberty, and free speech."
+      ],
+      "site": "https://jimduffie.com/",
+      "siteLabel": "jimduffie.com",
+      "donate": "https://secure.anedot.com/friends-of-jim-duffie-b1daf0de-f8c7-44a4-b1c1-c21eba0edb44",
+      "source": "https://jimduffie.com/issues"
     }
   },
   "measures": {}
