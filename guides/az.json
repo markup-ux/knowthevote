@@ -290,6 +290,32 @@
       "site": "https://drpaulgosar.com/",
       "siteLabel": "drpaulgosar.com",
       "source": "https://drpaulgosar.com/issues/"
+    },
+    "district 5|mark lamb": {
+      "role": "Retired Pinal County sheriff running for Congress in Arizona's 5th District.",
+      "bio": "His campaign says he is not a career politician. It says he spent eight years as sheriff protecting Arizona communities, confronting cartels, and fighting human trafficking.",
+      "issues": [
+        "He says he will secure the border, stop the cartels, and restore order to immigration while protecting legal immigration and commerce.",
+        "He says he will defend the Constitution, support law enforcement, and stand with families and small businesses.",
+        "He says he wants lower costs, protection for taxpayers, and stronger American jobs."
+      ],
+      "site": "https://marklamb.us/",
+      "siteLabel": "marklamb.us",
+      "donate": "https://secure.anedot.com/mark-lamb-for-congress/donate-online-web",
+      "source": "https://marklamb.us/"
+    },
+    "district 5|elizabeth lee": {
+      "role": "Nurse and patient advocate running for Congress in Arizona's 5th District.",
+      "bio": "Her campaign says she grew up in poverty in Ohio, became a nurse, and was 37 when she was diagnosed with Ehlers-Danlos syndrome. She and her husband Sean became parents through adoption and IVF, and she says she has spent more than a decade in reproductive health care.",
+      "issues": [
+        "She says she would cosponsor Medicare for All, cap insulin at $35 for everyone, and let Medicare negotiate the price of every drug.",
+        "She says billionaires should not pay a lower tax rate than a nurse, and she wants the expanded child tax credit restored and tariffs that raise grocery and medicine prices stopped.",
+        "She says she would protect abortion and fertility care, and she supports early voting, vote by mail, and the John Lewis Voting Rights Advancement Act."
+      ],
+      "site": "https://www.nurselee4az.com/",
+      "siteLabel": "nurselee4az.com",
+      "donate": "https://secure.actblue.com/donate/nurselee4az",
+      "source": "https://www.nurselee4az.com/about"
     }
   },
   "measures": {}
