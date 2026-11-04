@@ -1,11 +1,129 @@
 {
   "source": "https://volby.statistics.sk/osk/osk2026/files/OSK2026_SK_csv.zip",
-  "fetchedAt": "2026-11-04T17:04:08.567045+00:00",
-  "status": "Statistical Office file for the 24 October 2026 regional elections. A region is colored only when one chair candidate has more reported votes than the others. The office did not publish a color. This page does not declare a result.",
+  "fetchedAt": "2026-11-04T17:57:19.339803+00:00",
+  "status": "Statistical Office file for the 24 October 2026 regional elections. The file marks every region fully counted. A region is colored only from the chair vote. The council vote is in a separate table and is not the color on the map. The office did not publish a color. This page does not declare a result.",
   "strings": {
     "blank": "No votes reported"
   },
-  "tables": [],
+  "tables": [
+    {
+      "title": "Council vote, added across the regions",
+      "note": "Votes for council candidates, added from the official district totals. Parties under 1 percent of those votes are left off this table. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the map.",
+      "column": "Party",
+      "rows": [
+        {
+          "name": "NEKA",
+          "votes": 2475563,
+          "percent": 32.9433900447356
+        },
+        {
+          "name": "Magyar Szövetség - Maďarská aliancia",
+          "votes": 470195,
+          "percent": 6.257088703492682
+        },
+        {
+          "name": "Progresívne Slovensko, SaS, Demokrati, Team Bratislava",
+          "votes": 326148,
+          "percent": 4.340192827373178
+        },
+        {
+          "name": "Tím Kraj Nitra, SaS, Progresívne Slovensko, KDH, SLOVENSKO, Demokrati, Maďarské fórum, OKS",
+          "votes": 315727,
+          "percent": 4.201516062671092
+        },
+        {
+          "name": "KDH, SLOVENSKO, Progresívne Slovensko, SaS, Demokrati, ZA ĽUDÍ, Konzervatívci",
+          "votes": 283951,
+          "percent": 3.7786590551695585
+        },
+        {
+          "name": "KDH, SLOVENSKO, SaS, ZA ĽUDÍ, Konzervatívci",
+          "votes": 275264,
+          "percent": 3.6630573801895165
+        },
+        {
+          "name": "HLAS - sociálna demokracia",
+          "votes": 266196,
+          "percent": 3.5423855730387137
+        },
+        {
+          "name": "SMER - SD, HLAS - sociálna demokracia, SNS",
+          "votes": 244911,
+          "percent": 3.2591368505856004
+        },
+        {
+          "name": "Progresívne Slovensko, SLOVENSKO, SaS, KDH, Demokrati, ZA ĽUDÍ, OKS, DS-ODS",
+          "votes": 230162,
+          "percent": 3.0628655136130387
+        },
+        {
+          "name": "Progresívne Slovensko, SaS, KDH, Demokrati, SLOVENSKO, Maďarské fórum, OKS",
+          "votes": 227510,
+          "percent": 3.0275741999205015
+        },
+        {
+          "name": "SMER - SD, HLAS - sociálna demokracia, DOMOV-NS",
+          "votes": 201974,
+          "percent": 2.6877555775778794
+        },
+        {
+          "name": "SMER - SD",
+          "votes": 193344,
+          "percent": 2.5729124263084233
+        },
+        {
+          "name": "REPUBLIKA",
+          "votes": 190809,
+          "percent": 2.5391780823376155
+        },
+        {
+          "name": "Demokrati, SLOVENSKO, KDH, OKS, Progresívne Slovensko, SaS",
+          "votes": 190377,
+          "percent": 2.5334292710573836
+        },
+        {
+          "name": "SMER - SD, HLAS - sociálna demokracia, REPUBLIKA, SNS",
+          "votes": 175129,
+          "percent": 2.330517524758813
+        },
+        {
+          "name": "Progresívne Slovensko, Demokrati",
+          "votes": 142100,
+          "percent": 1.890986303057902
+        },
+        {
+          "name": "SaS, KDH, Progresívne Slovensko, SLOVENSKO, Demokrati",
+          "votes": 140014,
+          "percent": 1.8632269967371504
+        },
+        {
+          "name": "STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI",
+          "votes": 113682,
+          "percent": 1.5128156573133595
+        },
+        {
+          "name": "SMER - SD, HLAS - sociálna demokracia, SNS, REPUBLIKA",
+          "votes": 105702,
+          "percent": 1.4066223378312903
+        },
+        {
+          "name": "KRAJINA",
+          "votes": 96721,
+          "percent": 1.2871082773966456
+        },
+        {
+          "name": "SNS",
+          "votes": 82527,
+          "percent": 1.0982225660271603
+        },
+        {
+          "name": "PRAVDA",
+          "votes": 79827,
+          "percent": 1.0622924955257083
+        }
+      ]
+    }
+  ],
   "places": [
     {
       "slug": "region-of-bratislava",
@@ -50,6 +168,150 @@
           "name": "Ľudovít Líška · Jednota Slovanov",
           "votes": 2358,
           "percent": 0.8866628312294832
+        }
+      ],
+      "tables": [
+        {
+          "title": "Council vote in this region",
+          "note": "Votes for council candidates, added from the official district totals inside this region. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the country map.",
+          "column": "Party",
+          "rows": [
+            {
+              "name": "Progresívne Slovensko, SaS, Demokrati, Team Bratislava",
+              "votes": 326148,
+              "percent": 40.49696783069519
+            },
+            {
+              "name": "NEKA",
+              "votes": 100895,
+              "percent": 12.527875594141282
+            },
+            {
+              "name": "KRAJINA",
+              "votes": 90392,
+              "percent": 11.22374479117517
+            },
+            {
+              "name": "SMER - SD, HLAS - sociálna demokracia, SNS",
+              "votes": 85269,
+              "percent": 10.587634907942247
+            },
+            {
+              "name": "STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI",
+              "votes": 45642,
+              "percent": 5.667251081498552
+            },
+            {
+              "name": "TÍM RUŽINOV",
+              "votes": 32350,
+              "percent": 4.016817240403097
+            },
+            {
+              "name": "SOM SLOVENSKO",
+              "votes": 31227,
+              "percent": 3.877377185968084
+            },
+            {
+              "name": "Dunaj",
+              "votes": 22725,
+              "percent": 2.8217054648581263
+            },
+            {
+              "name": "Zmena zdola, DÚ",
+              "votes": 14301,
+              "percent": 1.7757188054097277
+            },
+            {
+              "name": "PRAVDA",
+              "votes": 14258,
+              "percent": 1.7703796047501503
+            },
+            {
+              "name": "KDH, SLOVENSKO, NOVA, ZA ĽUDÍ, Konzervatívci",
+              "votes": 9621,
+              "percent": 1.1946151057161731
+            },
+            {
+              "name": "Spoločný Cieľ",
+              "votes": 5952,
+              "percent": 0.7390447052512901
+            },
+            {
+              "name": "OKS",
+              "votes": 3987,
+              "percent": 0.4950556518543168
+            },
+            {
+              "name": "DS-ODS",
+              "votes": 3740,
+              "percent": 0.46438628992604586
+            },
+            {
+              "name": "Piráti",
+              "votes": 3258,
+              "percent": 0.4045375755558977
+            },
+            {
+              "name": "Magyar Szövetség - Maďarská aliancia",
+              "votes": 3164,
+              "percent": 0.3928658345791468
+            },
+            {
+              "name": "SLOVEXIT",
+              "votes": 2475,
+              "percent": 0.3073144565687068
+            },
+            {
+              "name": "REPUBLIKA",
+              "votes": 2333,
+              "percent": 0.289682677646381
+            },
+            {
+              "name": "Jednota Slovanov",
+              "votes": 2037,
+              "percent": 0.25292911031533566
+            },
+            {
+              "name": "Volt SK",
+              "votes": 1768,
+              "percent": 0.21952806432867622
+            },
+            {
+              "name": "MySlovensko",
+              "votes": 1511,
+              "percent": 0.1876170278284105
+            },
+            {
+              "name": "Bratia Slovenska",
+              "votes": 1440,
+              "percent": 0.1788011383672476
+            },
+            {
+              "name": "KSS",
+              "votes": 311,
+              "percent": 0.038616079189037505
+            },
+            {
+              "name": "Slovenské Hnutie Obrody",
+              "votes": 197,
+              "percent": 0.02446098906829707
+            },
+            {
+              "name": "DOMOV-NS",
+              "votes": 171,
+              "percent": 0.021232635181110654
+            },
+            {
+              "name": "ÚSVIT",
+              "votes": 134,
+              "percent": 0.016638439264729986
+            },
+            {
+              "name": "ĽS Naše Slovensko",
+              "votes": 58,
+              "percent": 0.007201712517569695
+            }
+          ]
         }
       ]
     },
@@ -97,6 +359,120 @@
           "votes": 2519,
           "percent": 1.3207774707557112
         }
+      ],
+      "tables": [
+        {
+          "title": "Council vote in this region",
+          "note": "Votes for council candidates, added from the official district totals inside this region. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the country map.",
+          "column": "Party",
+          "rows": [
+            {
+              "name": "NEKA",
+              "votes": 243169,
+              "percent": 29.241839921402537
+            },
+            {
+              "name": "Progresívne Slovensko, SaS, KDH, Demokrati, SLOVENSKO, Maďarské fórum, OKS",
+              "votes": 227510,
+              "percent": 27.35879573678508
+            },
+            {
+              "name": "Magyar Szövetség - Maďarská aliancia",
+              "votes": 162950,
+              "percent": 19.595251924351142
+            },
+            {
+              "name": "SMER - SD, HLAS - sociálna demokracia, SNS, REPUBLIKA",
+              "votes": 105702,
+              "percent": 12.71099919550638
+            },
+            {
+              "name": "TPK",
+              "votes": 28719,
+              "percent": 3.4535504143322524
+            },
+            {
+              "name": "PRAVDA",
+              "votes": 18417,
+              "percent": 2.2147023914745323
+            },
+            {
+              "name": "STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI",
+              "votes": 16502,
+              "percent": 1.9844175959229369
+            },
+            {
+              "name": "SV",
+              "votes": 5077,
+              "percent": 0.6105252778148559
+            },
+            {
+              "name": "SLOVEXIT",
+              "votes": 4148,
+              "percent": 0.4988100950120193
+            },
+            {
+              "name": "ApS",
+              "votes": 3195,
+              "percent": 0.3842088364424787
+            },
+            {
+              "name": "DS-ODS",
+              "votes": 2869,
+              "percent": 0.3450063072780818
+            },
+            {
+              "name": "Konzervatívci, SME RODINA",
+              "votes": 2554,
+              "percent": 0.30712656284009093
+            },
+            {
+              "name": "SPOLOČNE OBČANIA SLOVENSKA",
+              "votes": 2368,
+              "percent": 0.2847594756481345
+            },
+            {
+              "name": "SOM SLOVENSKO",
+              "votes": 2109,
+              "percent": 0.25361390799911976
+            },
+            {
+              "name": "NOVA",
+              "votes": 1500,
+              "percent": 0.1803797354190041
+            },
+            {
+              "name": "Slovenské Hnutie Obrody",
+              "votes": 1486,
+              "percent": 0.17869619122176006
+            },
+            {
+              "name": "Bratia Slovenska",
+              "votes": 860,
+              "percent": 0.10341771497356235
+            },
+            {
+              "name": "ŽIVOT",
+              "votes": 732,
+              "percent": 0.08802531088447399
+            },
+            {
+              "name": "ĽS Naše Slovensko",
+              "votes": 685,
+              "percent": 0.08237341250801186
+            },
+            {
+              "name": "MySlovensko",
+              "votes": 573,
+              "percent": 0.06890505893005956
+            },
+            {
+              "name": "Volt SK",
+              "votes": 454,
+              "percent": 0.05459493325348524
+            }
+          ]
+        }
       ]
     },
     {
@@ -127,6 +503,105 @@
           "name": "Lubomír Choleva · VLASTENCI SK",
           "votes": 2595,
           "percent": 1.2439540000671112
+        }
+      ],
+      "tables": [
+        {
+          "title": "Council vote in this region",
+          "note": "Votes for council candidates, added from the official district totals inside this region. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the country map.",
+          "column": "Party",
+          "rows": [
+            {
+              "name": "NEKA",
+              "votes": 383101,
+              "percent": 47.38364075106152
+            },
+            {
+              "name": "Demokrati, SLOVENSKO, KDH, OKS, Progresívne Slovensko, SaS",
+              "votes": 190377,
+              "percent": 23.546676660371126
+            },
+            {
+              "name": "SMER - SD, HLAS - sociálna demokracia, REPUBLIKA, SNS",
+              "votes": 175129,
+              "percent": 21.66073599675452
+            },
+            {
+              "name": "STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI",
+              "votes": 18847,
+              "percent": 2.3310810392957904
+            },
+            {
+              "name": "KSS",
+              "votes": 6853,
+              "percent": 0.8476096122615827
+            },
+            {
+              "name": "SLOVEXIT",
+              "votes": 5133,
+              "percent": 0.6348723390834239
+            },
+            {
+              "name": "SME RODINA",
+              "votes": 4857,
+              "percent": 0.6007354278059984
+            },
+            {
+              "name": "DOMOV-NS",
+              "votes": 4022,
+              "percent": 0.49745890274567134
+            },
+            {
+              "name": "DS-ODS",
+              "votes": 3647,
+              "percent": 0.45107722981438675
+            },
+            {
+              "name": "Zmena zdola, DÚ",
+              "votes": 3227,
+              "percent": 0.39912975613134793
+            },
+            {
+              "name": "ZA ĽUDÍ",
+              "votes": 3046,
+              "percent": 0.37674286866318124
+            },
+            {
+              "name": "SV",
+              "votes": 2574,
+              "percent": 0.3183638030003377
+            },
+            {
+              "name": "Piráti",
+              "votes": 1851,
+              "percent": 0.2289399375888209
+            },
+            {
+              "name": "VLASTENCI SK",
+              "votes": 1747,
+              "percent": 0.2160767536292113
+            },
+            {
+              "name": "ŽIVOT",
+              "votes": 1430,
+              "percent": 0.17686877944463203
+            },
+            {
+              "name": "MySlovensko",
+              "votes": 1274,
+              "percent": 0.15757400350521764
+            },
+            {
+              "name": "PRAVDA",
+              "votes": 789,
+              "percent": 0.09758703984742285
+            },
+            {
+              "name": "Volt SK",
+              "votes": 605,
+              "percent": 0.07482909899580586
+            }
+          ]
         }
       ]
     },
@@ -174,6 +649,100 @@
           "votes": 1961,
           "percent": 0.8602348647356346
         }
+      ],
+      "tables": [
+        {
+          "title": "Council vote in this region",
+          "note": "Votes for council candidates, added from the official district totals inside this region. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the country map.",
+          "column": "Party",
+          "rows": [
+            {
+              "name": "NEKA",
+              "votes": 360087,
+              "percent": 32.70043017920047
+            },
+            {
+              "name": "Tím Kraj Nitra, SaS, Progresívne Slovensko, KDH, SLOVENSKO, Demokrati, Maďarské fórum, OKS",
+              "votes": 315727,
+              "percent": 28.671984046045612
+            },
+            {
+              "name": "SMER - SD, HLAS - sociálna demokracia, SNS",
+              "votes": 159642,
+              "percent": 14.497502199934797
+            },
+            {
+              "name": "Magyar Szövetség - Maďarská aliancia",
+              "votes": 149142,
+              "percent": 13.543970089968026
+            },
+            {
+              "name": "REPUBLIKA",
+              "votes": 52401,
+              "percent": 4.7586701042256
+            },
+            {
+              "name": "SME RODINA",
+              "votes": 17848,
+              "percent": 1.6208229617797087
+            },
+            {
+              "name": "PRAVDA",
+              "votes": 10946,
+              "percent": 0.994034521494884
+            },
+            {
+              "name": "SLOVEXIT",
+              "votes": 8085,
+              "percent": 0.7342197246744142
+            },
+            {
+              "name": "Konzervatívci",
+              "votes": 7852,
+              "percent": 0.7130603930913421
+            },
+            {
+              "name": "STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI",
+              "votes": 5716,
+              "percent": 0.5190847181495302
+            },
+            {
+              "name": "Jednota Slovanov",
+              "votes": 4217,
+              "percent": 0.3829566578790358
+            },
+            {
+              "name": "KRAJINA",
+              "votes": 3526,
+              "percent": 0.3202051637850321
+            },
+            {
+              "name": "Slovenské Hnutie Obrody",
+              "votes": 2389,
+              "percent": 0.21695125816291597
+            },
+            {
+              "name": "SV",
+              "votes": 1718,
+              "percent": 0.15601601570694418
+            },
+            {
+              "name": "ÚSVIT",
+              "votes": 854,
+              "percent": 0.0775539449439641
+            },
+            {
+              "name": "Volt SK",
+              "votes": 783,
+              "percent": 0.07110625162895069
+            },
+            {
+              "name": "ĽS Naše Slovensko",
+              "votes": 236,
+              "percent": 0.021431769328776964
+            }
+          ]
+        }
       ]
     },
     {
@@ -220,6 +789,115 @@
           "votes": 1896,
           "percent": 0.7333346225995475
         }
+      ],
+      "tables": [
+        {
+          "title": "Council vote in this region",
+          "note": "Votes for council candidates, added from the official district totals inside this region. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the country map.",
+          "column": "Party",
+          "rows": [
+            {
+              "name": "NEKA",
+              "votes": 454470,
+              "percent": 41.76607249855716
+            },
+            {
+              "name": "KDH, SLOVENSKO, Progresívne Slovensko, SaS, Demokrati, ZA ĽUDÍ, Konzervatívci",
+              "votes": 283951,
+              "percent": 26.095271529557074
+            },
+            {
+              "name": "SMER - SD, HLAS - sociálna demokracia, DOMOV-NS",
+              "votes": 201974,
+              "percent": 18.561534813790974
+            },
+            {
+              "name": "REPUBLIKA",
+              "votes": 45704,
+              "percent": 4.2002257079104375
+            },
+            {
+              "name": "SNS",
+              "votes": 32180,
+              "percent": 2.9573617906651033
+            },
+            {
+              "name": "PRAVDA",
+              "votes": 13334,
+              "percent": 1.2254028003955402
+            },
+            {
+              "name": "STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI",
+              "votes": 9013,
+              "percent": 0.8283002429852261
+            },
+            {
+              "name": "SOM SLOVENSKO",
+              "votes": 8354,
+              "percent": 0.7677377377009407
+            },
+            {
+              "name": "SLOVEXIT",
+              "votes": 8172,
+              "percent": 0.751011825771138
+            },
+            {
+              "name": "SV",
+              "votes": 7345,
+              "percent": 0.6750100171670349
+            },
+            {
+              "name": "OKS",
+              "votes": 7049,
+              "percent": 0.6478074351273558
+            },
+            {
+              "name": "KSS",
+              "votes": 2669,
+              "percent": 0.24528274143210566
+            },
+            {
+              "name": "DS-ODS",
+              "votes": 2418,
+              "percent": 0.22221568706737785
+            },
+            {
+              "name": "ŽIVOT",
+              "votes": 2144,
+              "percent": 0.197034918557675
+            },
+            {
+              "name": "SME RODINA",
+              "votes": 2092,
+              "percent": 0.19225608657773138
+            },
+            {
+              "name": "SPOLOČNE OBČANIA SLOVENSKA",
+              "votes": 1909,
+              "percent": 0.17543827403292983
+            },
+            {
+              "name": "VLASTENCI SK",
+              "votes": 1722,
+              "percent": 0.1582528590281326
+            },
+            {
+              "name": "Bratia Slovenska",
+              "votes": 1474,
+              "percent": 0.13546150650840155
+            },
+            {
+              "name": "Piráti",
+              "votes": 1119,
+              "percent": 0.10283678818378653
+            },
+            {
+              "name": "ĽS Naše Slovensko",
+              "votes": 1039,
+              "percent": 0.09548473898387327
+            }
+          ]
+        }
       ]
     },
     {
@@ -265,6 +943,110 @@
           "name": "Peter Plančík · KSS",
           "votes": 2234,
           "percent": 1.0649860798596544
+        }
+      ],
+      "tables": [
+        {
+          "title": "Council vote in this region",
+          "note": "Votes for council candidates, added from the official district totals inside this region. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the country map.",
+          "column": "Party",
+          "rows": [
+            {
+              "name": "NEKA",
+              "votes": 283242,
+              "percent": 40.31191558524734
+            },
+            {
+              "name": "SaS, KDH, Progresívne Slovensko, SLOVENSKO, Demokrati",
+              "votes": 140014,
+              "percent": 19.927244366135042
+            },
+            {
+              "name": "Magyar Szövetség - Maďarská aliancia",
+              "votes": 72926,
+              "percent": 10.379063683951347
+            },
+            {
+              "name": "SMER - SD, SNS",
+              "votes": 59159,
+              "percent": 8.419699811848693
+            },
+            {
+              "name": "HLAS - sociálna demokracia",
+              "votes": 55607,
+              "percent": 7.91416770799828
+            },
+            {
+              "name": "REPUBLIKA",
+              "votes": 25666,
+              "percent": 3.65286795535605
+            },
+            {
+              "name": "PRAVDA",
+              "votes": 11305,
+              "percent": 1.6089640861567889
+            },
+            {
+              "name": "SV",
+              "votes": 9726,
+              "percent": 1.3842357100363494
+            },
+            {
+              "name": "DS-ODS",
+              "votes": 8853,
+              "percent": 1.2599875324852767
+            },
+            {
+              "name": "ĽS Naše Slovensko",
+              "votes": 6693,
+              "percent": 0.9525693612248907
+            },
+            {
+              "name": "Bratia Slovenska",
+              "votes": 6382,
+              "percent": 0.9083068374924924
+            },
+            {
+              "name": "Piráti",
+              "votes": 5663,
+              "percent": 0.8059764369664658
+            },
+            {
+              "name": "NOVA",
+              "votes": 4875,
+              "percent": 0.6938257337473991
+            },
+            {
+              "name": "SME RODINA",
+              "votes": 3594,
+              "percent": 0.5115096794026979
+            },
+            {
+              "name": "KSS",
+              "votes": 2827,
+              "percent": 0.4023477639597738
+            },
+            {
+              "name": "ZA ĽUDÍ",
+              "votes": 2550,
+              "percent": 0.362924229960178
+            },
+            {
+              "name": "Maďarské fórum",
+              "votes": 2065,
+              "percent": 0.29389746465402644
+            },
+            {
+              "name": "KRAJINA",
+              "votes": 1125,
+              "percent": 0.1601136308647844
+            },
+            {
+              "name": "MySlovensko",
+              "votes": 354,
+              "percent": 0.05038242251211882
+            }
+          ]
         }
       ]
     },
@@ -332,6 +1114,150 @@
           "votes": 1228,
           "percent": 0.43149187966014746
         }
+      ],
+      "tables": [
+        {
+          "title": "Council vote in this region",
+          "note": "Votes for council candidates, added from the official district totals inside this region. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the country map.",
+          "column": "Party",
+          "rows": [
+            {
+              "name": "NEKA",
+              "votes": 407440,
+              "percent": 33.273011165045375
+            },
+            {
+              "name": "KDH, SLOVENSKO, SaS, ZA ĽUDÍ, Konzervatívci",
+              "votes": 275264,
+              "percent": 22.47904512403065
+            },
+            {
+              "name": "Progresívne Slovensko, Demokrati",
+              "votes": 142100,
+              "percent": 11.60439546081128
+            },
+            {
+              "name": "HLAS - sociálna demokracia",
+              "votes": 130227,
+              "percent": 10.634803713406548
+            },
+            {
+              "name": "SMER - SD",
+              "votes": 91721,
+              "percent": 7.4902657006408955
+            },
+            {
+              "name": "REPUBLIKA",
+              "votes": 52009,
+              "percent": 4.247241404091019
+            },
+            {
+              "name": "SNS",
+              "votes": 27947,
+              "percent": 2.282252216349703
+            },
+            {
+              "name": "STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI",
+              "votes": 17962,
+              "percent": 1.466841317854273
+            },
+            {
+              "name": "OKS",
+              "votes": 10964,
+              "percent": 0.8953595484330391
+            },
+            {
+              "name": "SV",
+              "votes": 9476,
+              "percent": 0.7738441336146916
+            },
+            {
+              "name": "ÚSVIT",
+              "votes": 8139,
+              "percent": 0.6646599201656791
+            },
+            {
+              "name": "SME RODINA",
+              "votes": 7690,
+              "percent": 0.6279929703985836
+            },
+            {
+              "name": "Slovenské Hnutie Obrody",
+              "votes": 5745,
+              "percent": 0.4691572971313216
+            },
+            {
+              "name": "Jednota Slovanov",
+              "votes": 5420,
+              "percent": 0.44261663193242173
+            },
+            {
+              "name": "DS-ODS",
+              "votes": 4336,
+              "percent": 0.3540933055459374
+            },
+            {
+              "name": "Bratia Slovenska",
+              "votes": 3955,
+              "percent": 0.32297947957430406
+            },
+            {
+              "name": "MySlovensko",
+              "votes": 3934,
+              "percent": 0.321264544284529
+            },
+            {
+              "name": "SLOVEXIT",
+              "votes": 3176,
+              "percent": 0.2593635466821719
+            },
+            {
+              "name": "TÍM KOŠICE",
+              "votes": 3042,
+              "percent": 0.2484206262617024
+            },
+            {
+              "name": "NOVA",
+              "votes": 2897,
+              "percent": 0.2365794064037317
+            },
+            {
+              "name": "PRAVDA",
+              "votes": 2693,
+              "percent": 0.21992003501734533
+            },
+            {
+              "name": "KSS",
+              "votes": 2302,
+              "percent": 0.18798957319343818
+            },
+            {
+              "name": "SPOLOČNE OBČANIA SLOVENSKA",
+              "votes": 2127,
+              "percent": 0.17369844577864596
+            },
+            {
+              "name": "SRK",
+              "votes": 1778,
+              "percent": 0.1451978545342889
+            },
+            {
+              "name": "ĽS Naše Slovensko",
+              "votes": 1527,
+              "percent": 0.1247002946422155
+            },
+            {
+              "name": "ŽIVOT",
+              "votes": 372,
+              "percent": 0.03037885370458688
+            },
+            {
+              "name": "DOMOV-NS",
+              "votes": 293,
+              "percent": 0.02392743047162354
+            }
+          ]
+        }
       ]
     },
     {
@@ -373,7 +1299,157 @@
           "votes": 3319,
           "percent": 1.3900231600725375
         }
+      ],
+      "tables": [
+        {
+          "title": "Council vote in this region",
+          "note": "Votes for council candidates, added from the official district totals inside this region. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the country map.",
+          "column": "Party",
+          "rows": [
+            {
+              "name": "NEKA",
+              "votes": 243159,
+              "percent": 25.523626981511143
+            },
+            {
+              "name": "Progresívne Slovensko, SLOVENSKO, SaS, KDH, Demokrati, ZA ĽUDÍ, OKS, DS-ODS",
+              "votes": 230162,
+              "percent": 24.159373222124486
+            },
+            {
+              "name": "SMER - SD",
+              "votes": 101623,
+              "percent": 10.667043147661024
+            },
+            {
+              "name": "Magyar Szövetség - Maďarská aliancia",
+              "votes": 82013,
+              "percent": 8.608643807692388
+            },
+            {
+              "name": "HLAS - sociálna demokracia",
+              "votes": 80362,
+              "percent": 8.435343587891868
+            },
+            {
+              "name": "Košická strana",
+              "votes": 40305,
+              "percent": 4.230687679624471
+            },
+            {
+              "name": "TÍM KOŠICE, STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI",
+              "votes": 35021,
+              "percent": 3.676043002806813
+            },
+            {
+              "name": "SNS",
+              "votes": 22400,
+              "percent": 2.351256767735719
+            },
+            {
+              "name": "Konzervatívci",
+              "votes": 18959,
+              "percent": 1.9900659401563165
+            },
+            {
+              "name": "SME RODINA",
+              "votes": 18679,
+              "percent": 1.96067523055962
+            },
+            {
+              "name": "Maďarské fórum",
+              "votes": 17681,
+              "percent": 1.8559183442113947
+            },
+            {
+              "name": "REPUBLIKA",
+              "votes": 12696,
+              "percent": 1.332658746570209
+            },
+            {
+              "name": "PRAVDA",
+              "votes": 8085,
+              "percent": 0.848656739604611
+            },
+            {
+              "name": "Jednota Slovanov",
+              "votes": 5196,
+              "percent": 0.5454075966586962
+            },
+            {
+              "name": "SV",
+              "votes": 4938,
+              "percent": 0.5183261571017401
+            },
+            {
+              "name": "SLOVEXIT",
+              "votes": 4103,
+              "percent": 0.4306788624115917
+            },
+            {
+              "name": "KSS",
+              "votes": 3894,
+              "percent": 0.4087407970340575
+            },
+            {
+              "name": "Bratia Slovenska",
+              "votes": 3730,
+              "percent": 0.39152623855599245
+            },
+            {
+              "name": "Slovenské Hnutie Obrody",
+              "votes": 2620,
+              "percent": 0.2750130683690885
+            },
+            {
+              "name": "SRK",
+              "votes": 2422,
+              "percent": 0.25422963801142456
+            },
+            {
+              "name": "Zmena zdola, DÚ",
+              "votes": 2366,
+              "percent": 0.2483514960920853
+            },
+            {
+              "name": "ĽS Naše Slovensko",
+              "votes": 2220,
+              "percent": 0.23302634037380784
+            },
+            {
+              "name": "Demokrati Slovenska",
+              "votes": 2152,
+              "percent": 0.2258885966146101
+            },
+            {
+              "name": "SPOLOČNE OBČANIA SLOVENSKA",
+              "votes": 2036,
+              "percent": 0.21371244549597873
+            },
+            {
+              "name": "DOMOV-NS",
+              "votes": 1969,
+              "percent": 0.2066796685567692
+            },
+            {
+              "name": "KRAJINA",
+              "votes": 1678,
+              "percent": 0.1761343239402025
+            },
+            {
+              "name": "Volt SK",
+              "votes": 1551,
+              "percent": 0.16280353780170087
+            },
+            {
+              "name": "MySlovensko",
+              "votes": 662,
+              "percent": 0.06948803483218954
+            }
+          ]
+        }
       ]
     }
-  ]
+  ],
+  "card": "Regional chairs on 24 October 2026. The Statistical Office file is a finished count. The map is the chair. The council vote is in a table."
 }

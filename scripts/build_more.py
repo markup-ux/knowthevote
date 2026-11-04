@@ -767,6 +767,8 @@ def build_switzerland():
         "strings": {"blank": "No votes reported"},
         "tables": tables,
         "places": places,
+        "card": "Two yes-or-no questions on 27 September 2026. %s The map is the neutrality question, by canton."
+        % ("The official file still marks the count provisional." if provisional else "The official file marks the count finished."),
     }
     spec = {
         "code": "ch",
@@ -796,6 +798,22 @@ def build_slovakia():
     raw = fetch("https://volby.statistics.sk/osk/osk2026/files/OSK2026_SK_csv.zip")
     archive = zipfile.ZipFile(io.BytesIO(raw))
     text = archive.read("OSK2026_SK_tab06a.csv").decode("utf-8-sig")
+    counted = archive.read("OSK2026_SK_tab02a.csv").decode("utf-8-sig")
+    council_text = archive.read("OSK2026_SK_tab09b.csv").decode("utf-8-sig")
+    fully_counted = True
+    for row in csv.DictReader(io.StringIO(counted)):
+        if (row.get("Počet volebných okrskov") or "") != (row.get("Počet potvrdených okrskových zápisníc") or ""):
+            fully_counted = False
+    council = {}
+    for row in csv.DictReader(io.StringIO(council_text)):
+        region = row["Názov kraja"]
+        party = (row.get("Politický subjekt") or "").strip()
+        if not party:
+            print("SK council row without a party", region)
+            continue
+        votes = int((row.get("Počet platných hlasov") or "0").replace(" ", "") or 0)
+        parties = council.setdefault(region, {})
+        parties[party] = parties.get(party, 0) + votes
     grouped = {}
     elected = {}
     for row in csv.DictReader(io.StringIO(text)):
@@ -818,21 +836,64 @@ def build_slovakia():
         note = ""
         if elected.get(region):
             note = " The Statistical Office marks %s as elected." % elected[region]
+        council_rows = [
+            {"name": party, "votes": votes}
+            for party, votes in council.get(region, {}).items()
+            if votes
+        ]
         rows_by_key[norm(key)] = {
             "rows": rows,
             "summary": "%(short)s has more reported votes for regional chair than the others." + note + " The office did not publish a color, so a mark only means someone is ahead. This site does not declare the result.",
             "tie": "Votes are reported, and the top candidates are tied. The map stays beige.",
+            "tables": [
+                {
+                    "title": "Council vote in this region",
+                    "note": "Votes for council candidates, added from the official district totals inside this region. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the country map.",
+                    "column": "Party",
+                    "rows": [
+                        {"name": item["name"], "votes": item["votes"], "percent": item["percent"]}
+                        for item in percent_rows(council_rows)
+                    ],
+                }
+            ],
         }
     places, missed = match_shapes(shapes, rows_by_key)
     if missed:
         print("SK missed", missed)
+    national_council = {}
+    for parties in council.values():
+        for party, votes in parties.items():
+            national_council[party] = national_council.get(party, 0) + votes
+    council_national = [
+        item
+        for item in percent_rows([{"name": party, "votes": votes} for party, votes in national_council.items()])
+        if item["votes"] and (item["percent"] or 0) >= 1
+    ]
+    print("SK council parties", len(national_council), "shown", len(council_national), "fully", fully_counted)
     data = {
         "source": "https://volby.statistics.sk/osk/osk2026/files/OSK2026_SK_csv.zip",
         "fetchedAt": datetime.now(timezone.utc).isoformat(),
-        "status": "Statistical Office file for the 24 October 2026 regional elections. A region is colored only when one chair candidate has more reported votes than the others. The office did not publish a color. This page does not declare a result.",
+        "status": "Statistical Office file for the 24 October 2026 regional elections. %s A region is colored only from the chair vote. The council vote is in a separate table and is not the color on the map. The office did not publish a color. This page does not declare a result."
+        % ("The file marks every region fully counted." if fully_counted else "A region that is not fully counted stays blank."),
         "strings": {"blank": "No votes reported"},
-        "tables": [],
+        "tables": [
+            {
+                "title": "Council vote, added across the regions",
+                "note": "Votes for council candidates, added from the official district totals. Parties under 1 percent of those votes are left off this table. A voter can mark more than one candidate, so this is not a count of ballots. This table is not the color on the map.",
+                "column": "Party",
+                "rows": [
+                    {"name": item["name"], "votes": item["votes"], "percent": item["percent"]}
+                    for item in council_national
+                ],
+            }
+        ],
         "places": places,
+        "card": "Regional chairs on 24 October 2026. %s The map is the chair. The council vote is in a table."
+        % (
+            "The Statistical Office file is a finished count."
+            if fully_counted
+            else "The file has not marked every region fully counted."
+        ),
     }
     spec = {
         "code": "sk",
@@ -845,12 +906,13 @@ def build_slovakia():
         "source": "https://volby.statistics.sk/osk/osk2026/sk/suhrnne_vysledky.html",
         "footer": 'Vote totals are copied from the <a href="https://volby.statistics.sk/osk/osk2026/sk/subory_na_stiahnutie.html">Statistical Office results file</a> for the 24 October 2026 regional elections. A region is colored only from reported votes. This site does not declare a result. It does not ask for a home address, a phone number, or an email address.',
         "list_title": "The eight regions",
-        "list_note": "A region is one of Slovakia's eight large areas. Open a name for the people who ran to chair that region. The council election is a separate vote and is not drawn here.",
-        "place_note": "You are looking at one region in Slovakia. The numbers are the vote for the person who chairs the region. They are not the national parliament, and they are not the separate vote for the regional council.",
+        "list_note": "A region is one of Slovakia's eight large areas. Open a name for the chair vote and the council vote. The map color is only the chair.",
+        "place_note": "You are looking at one region in Slovakia. The first numbers are the vote for the person who chairs the region. The second table is the council vote. The council is not drawn on the country map.",
         "intro": """    <p class="kicker">Slovakia · Regional elections · 24 October 2026</p>
     <h1>Slovakia has counted the vote for regional chairs.</h1>
     <p class="deck">Each region voted for a chair, and it also voted for a council. This map is the chair. It is not the national parliament.</p>
-    <p class="deck">There are eight regions. A mark means one candidate has more reported votes than the others. The Statistical Office did not publish a color, so the mark does not stand for a party. The candidate's name is on the region page.</p>""",
+    <p class="deck">There are eight regions. A mark means one candidate has more reported votes than the others. The Statistical Office did not publish a color, so the mark does not stand for a party. The candidate's name is on the region page.</p>
+    <p class="deck">The council vote is in the table below, and again on each region page. It is not the color on this map.</p>""",
     }
     write_pages(spec, shapes, data)
 
@@ -964,16 +1026,33 @@ def write_flags():
         open(os.path.join(folder, name), "w", encoding="utf-8", newline="\n").write(markup)
 
 
+def country_card(code, fallback):
+    path = os.path.join(ROOT, code, "results.json")
+    if not os.path.exists(path):
+        return fallback
+    data = json.load(open(path, encoding="utf-8"))
+    return data.get("card") or fallback
+
+
 def write_countries():
     menu = lang_menu()
     cards = """
-      <a href="index.html"><img src="flags/us.svg" alt=""><strong>United States</strong><span>Countrywide election on 3 November 2026. Open a state, then see its counties. Color means a party is ahead on reported votes.</span></a>
-      <a href="za/index.html"><img src="flags/za.svg" alt=""><strong>South Africa</strong><span>Local councils on 4 November 2026, not a presidential election. A municipality is the area one council governs.</span></a>
-      <a href="br/index.html"><img src="flags/br.svg" alt=""><strong>Brazil</strong><span>Presidential runoff on 25 October 2026. A state is colored from the votes the electoral court reported there.</span></a>
-      <a href="ch/index.html"><img src="flags/ch.svg" alt=""><strong>Switzerland</strong><span>Two yes-or-no questions on 27 September 2026. The map is the neutrality question, by canton.</span></a>
-      <a href="sk/index.html"><img src="flags/sk.svg" alt=""><strong>Slovakia</strong><span>Regional chairs on 24 October 2026. A region is one of eight large areas.</span></a>
-      <a href="se/index.html"><img src="flags/se.svg" alt=""><strong>Sweden</strong><span>Parliament on 13 September 2026. A county adds the official constituency votes inside it.</span></a>
-      <a href="cy/index.html"><img src="flags/cy.svg" alt=""><strong>Cyprus</strong><span>Parliamentary election, 2026. A district is an area that elects members of the House.</span></a>"""
+      <a href="index.html"><img src="flags/us.svg" alt=""><strong>United States</strong><span>Countrywide election on 3 November 2026. Open a state, then see its counties. A state is colored only where reported votes have one party ahead.</span></a>
+      <a href="za/index.html"><img src="flags/za.svg" alt=""><strong>South Africa</strong><span>Local councils on 4 November 2026. A municipality stays blank until the Commission reports votes there.</span></a>
+      <a href="br/index.html"><img src="flags/br.svg" alt=""><strong>Brazil</strong><span>Presidential runoff on 25 October 2026. The court's file marks the count finished. A state is colored from the votes reported there.</span></a>
+      <a href="ch/index.html"><img src="flags/ch.svg" alt=""><strong>Switzerland</strong><span>%s</span></a>
+      <a href="sk/index.html"><img src="flags/sk.svg" alt=""><strong>Slovakia</strong><span>%s</span></a>
+      <a href="se/index.html"><img src="flags/se.svg" alt=""><strong>Sweden</strong><span>Parliament on 13 September 2026. The Election Authority marks the count final. A county adds the official constituency votes inside it.</span></a>
+      <a href="cy/index.html"><img src="flags/cy.svg" alt=""><strong>Cyprus</strong><span>Parliamentary election, 2026. The open-data file is the published count. A district is an area that elects members of the House.</span></a>""" % (
+        esc(country_card(
+            "ch",
+            "Two yes-or-no questions on 27 September 2026. The official file still marks the count provisional. The map is the neutrality question, by canton.",
+        )),
+        esc(country_card(
+            "sk",
+            "Regional chairs on 24 October 2026. The Statistical Office file is a finished count. The map is the chair. The council vote is in a table.",
+        )),
+    )
     nav = """
       <a href="index.html">United States</a>
       <a href="za/index.html">South Africa</a>
