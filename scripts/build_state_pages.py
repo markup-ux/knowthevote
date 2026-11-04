@@ -267,7 +267,8 @@ def header(title_nav, code, label):
     </div>
     %s
     <nav>
-      <a href="index.html">All states</a>%s
+      <a href="index.html">All states</a>
+      <a href="countries.html">Countries</a>%s
     </nav>
   </div>
 </header>""" % (LANG, here(code, label), extra)
@@ -637,6 +638,7 @@ def index_page(states):
     <p class="deck">You can also enter your street address to access your state's official election-office lookup. Your address is never stored on Leaders.vote.</p>
     <p class="deck">Independent. Informational. No endorsements. Leaders.vote is not affiliated with any government agency.</p>
     <p class="note deck">Leaders.vote is still collecting candidate information, so some entries currently show only a name.</p>
+    <p class="deck">Leaders.vote also follows elections <a href="countries.html">outside the United States</a>. A place on those maps is colored only from reported vote totals.</p>
     <div id="us-slot"></div>
     <p class="sub">Each state is colored by the party ahead in that state's top statewide race. The colors are the same ones used for a county on a state map. A blank state has not reported votes. This map does not call a race.</p>
     <div class="result-legend">

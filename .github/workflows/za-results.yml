@@ -1,0 +1,35 @@
+name: Update South Africa results
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: za-results
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh Electoral Commission totals
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          python scripts/build_za.py --results
+          git add -- za/results.json
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Update South Africa totals from the Electoral Commission."
+            git push
+          fi

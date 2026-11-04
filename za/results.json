@@ -1,0 +1,274 @@
+{
+  "source": "https://results.elections.org.za/dashboards/lge/MapsJason/2026/EEID1887LiteMapsNational.js",
+  "partySource": "https://results.elections.org.za/dashboards/lge/MapsJason/2016/PartyList.js",
+  "eventId": 1887,
+  "reportDate": "2026-10-30T00:33:08.0228836+02:00",
+  "fetchedAt": "2026-11-04T16:14:19+00:00",
+  "progress": {
+    "vdComplete": 0,
+    "vdExpected": 23696,
+    "wardsComplete": 0,
+    "wardsExpected": 4485,
+    "municipalitiesComplete": 0,
+    "municipalitiesExpected": 213
+  },
+  "parties": {
+    "-2": {
+      "abbr": "OTHER",
+      "name": "OTHER",
+      "color": "#bae5f2"
+    },
+    "0": {
+      "abbr": "IND",
+      "name": "INDEPENDENTS",
+      "color": "#9ebbd7"
+    },
+    "3": {
+      "abbr": "IFP",
+      "name": "INKATHA FREEDOM PARTY",
+      "color": "#ffca93"
+    },
+    "4": {
+      "abbr": "VF PLUS",
+      "name": "VRYHEIDSFRONT PLUS | FREEDOM FRONT PLUS",
+      "color": "#bf7fff"
+    },
+    "6": {
+      "abbr": "UDM",
+      "name": "UNITED DEMOCRATIC MOVEMENT",
+      "color": "#00a39a"
+    },
+    "7": {
+      "abbr": "ANC",
+      "name": "AFRICAN NATIONAL CONGRESS",
+      "color": "#06fb06"
+    },
+    "8": {
+      "abbr": "PAC",
+      "name": "PAN AFRICANIST CONGRESS OF AZANIA",
+      "color": "#900090"
+    },
+    "18": {
+      "abbr": "ACDP",
+      "name": "AFRICAN CHRISTIAN DEMOCRATIC PARTY",
+      "color": "#9f7b6f"
+    },
+    "52": {
+      "abbr": "DA",
+      "name": "DEMOCRATIC ALLIANCE",
+      "color": "#f4f400"
+    },
+    "330": {
+      "abbr": "AIC",
+      "name": "AFRICAN INDEPENDENT CONGRESS",
+      "color": "#ff9090"
+    },
+    "445": {
+      "abbr": "SACP",
+      "name": "SOUTH AFRICAN COMMUNIST PARTY",
+      "color": "#bae5f2"
+    },
+    "447": {
+      "abbr": "ALJAMA",
+      "name": "AL JAMA-AH",
+      "color": "#5d5d5d"
+    },
+    "945": {
+      "abbr": "EFF",
+      "name": "ECONOMIC FREEDOM FIGHTERS",
+      "color": "#ff0000"
+    },
+    "957": {
+      "abbr": "PA",
+      "name": "PATRIOTIC ALLIANCE",
+      "color": "#006ba0"
+    },
+    "1318": {
+      "abbr": "ATM",
+      "name": "AFRICAN TRANSFORMATION MOVEMENT",
+      "color": "#b0e5ff"
+    },
+    "1368": {
+      "abbr": "GOOD",
+      "name": "GOOD",
+      "color": "#de8532"
+    },
+    "1492": {
+      "abbr": "CCC",
+      "name": "NATIONAL COLOURED CONGRESS",
+      "color": "#765995"
+    },
+    "1511": {
+      "abbr": "ACTIONSA",
+      "name": "ACTIONSA",
+      "color": "#bc4542"
+    },
+    "1707": {
+      "abbr": "UAT",
+      "name": "UNITED AFRICANS TRANSFORMATION",
+      "color": "#71d0ff"
+    },
+    "1711": {
+      "abbr": "BOSA",
+      "name": "BUILD ONE SOUTH AFRICA",
+      "color": "#00cccc"
+    },
+    "1748": {
+      "abbr": "MKP",
+      "name": "UMKHONTO WESIZWE PARTY",
+      "color": "#e600a9"
+    },
+    "1755": {
+      "abbr": "RISE",
+      "name": "RISE MZANSI",
+      "color": "#d0ffe8"
+    },
+    "1909": {
+      "abbr": "MAYIBUYE",
+      "name": "AFRIKA MAYIBUYE MOVEMENT",
+      "color": "#bae5f2"
+    }
+  },
+  "national": [
+    {
+      "id": 4,
+      "votes": 0,
+      "percent": 0,
+      "order": 1
+    },
+    {
+      "id": 1511,
+      "votes": 0,
+      "percent": 0,
+      "order": 2
+    },
+    {
+      "id": 18,
+      "votes": 0,
+      "percent": 0,
+      "order": 3
+    },
+    {
+      "id": 330,
+      "votes": 0,
+      "percent": 0,
+      "order": 4
+    },
+    {
+      "id": 7,
+      "votes": 0,
+      "percent": 0,
+      "order": 5
+    },
+    {
+      "id": 1909,
+      "votes": 0,
+      "percent": 0,
+      "order": 6
+    },
+    {
+      "id": 1318,
+      "votes": 0,
+      "percent": 0,
+      "order": 7
+    },
+    {
+      "id": 447,
+      "votes": 0,
+      "percent": 0,
+      "order": 8
+    },
+    {
+      "id": 1711,
+      "votes": 0,
+      "percent": 0,
+      "order": 9
+    },
+    {
+      "id": 52,
+      "votes": 0,
+      "percent": 0,
+      "order": 10
+    },
+    {
+      "id": 945,
+      "votes": 0,
+      "percent": 0,
+      "order": 11
+    },
+    {
+      "id": 1368,
+      "votes": 0,
+      "percent": 0,
+      "order": 12
+    },
+    {
+      "id": 3,
+      "votes": 0,
+      "percent": 0,
+      "order": 13
+    },
+    {
+      "id": -2,
+      "votes": 0,
+      "percent": 0,
+      "order": 14
+    },
+    {
+      "id": 0,
+      "votes": 0,
+      "percent": 0,
+      "order": 14
+    },
+    {
+      "id": 1492,
+      "votes": 0,
+      "percent": 0,
+      "order": 14
+    },
+    {
+      "id": 1707,
+      "votes": 0,
+      "percent": 0,
+      "order": 14
+    },
+    {
+      "id": 1748,
+      "votes": 0,
+      "percent": 0,
+      "order": 14
+    },
+    {
+      "id": 1755,
+      "votes": 0,
+      "percent": 0,
+      "order": 14
+    },
+    {
+      "id": 445,
+      "votes": 0,
+      "percent": 0,
+      "order": 14
+    },
+    {
+      "id": 6,
+      "votes": 0,
+      "percent": 0,
+      "order": 14
+    },
+    {
+      "id": 8,
+      "votes": 0,
+      "percent": 0,
+      "order": 14
+    },
+    {
+      "id": 957,
+      "votes": 0,
+      "percent": 0,
+      "order": 14
+    }
+  ],
+  "places": [],
+  "unmatched": []
+}

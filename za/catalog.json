@@ -1,0 +1,1493 @@
+[
+  {
+    "slug": "abaqulusi",
+    "name": "Abaqulusi",
+    "label": "Abaqulusi",
+    "key": "abaqulusi",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "alfred-duma",
+    "name": "Alfred Duma",
+    "label": "Alfred Duma",
+    "key": "alfred duma",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "amahlathi",
+    "name": "Amahlathi",
+    "label": "Amahlathi",
+    "key": "amahlathi",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "ba-phalaborwa",
+    "name": "Ba-Phalaborwa",
+    "label": "Ba-Phalaborwa",
+    "key": "ba phalaborwa",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "beaufort-west",
+    "name": "Beaufort West",
+    "label": "Beaufort West",
+    "key": "beaufort west",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "bela-bela",
+    "name": "Bela-Bela",
+    "label": "Bela-Bela",
+    "key": "bela bela",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "bergrivier",
+    "name": "Bergrivier",
+    "label": "Bergrivier",
+    "key": "bergrivier",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "big-five-hlabisa",
+    "name": "Big Five Hlabisa",
+    "label": "Big Five Hlabisa",
+    "key": "big five hlabisa",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "bitou",
+    "name": "Bitou",
+    "label": "Bitou",
+    "key": "bitou",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "blouberg",
+    "name": "Blouberg",
+    "label": "Blouberg",
+    "key": "blouberg",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "blue-crane-route",
+    "name": "Blue Crane Route",
+    "label": "Blue Crane Route",
+    "key": "blue crane route",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "breede-valley",
+    "name": "Breede Valley",
+    "label": "Breede Valley",
+    "key": "breede valley",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "buffalo-city",
+    "name": "Buffalo City",
+    "label": "Buffalo City",
+    "key": "buffalo city",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "bushbuckridge",
+    "name": "Bushbuckridge",
+    "label": "Bushbuckridge",
+    "key": "bushbuckridge",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "cape-agulhas",
+    "name": "Cape Agulhas",
+    "label": "Cape Agulhas",
+    "key": "cape agulhas",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "cederberg",
+    "name": "Cederberg",
+    "label": "Cederberg",
+    "key": "cederberg",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "chief-albert-luthuli",
+    "name": "Chief Albert Luthuli",
+    "label": "Chief Albert Luthuli",
+    "key": "chief albert luthuli",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "city-of-cape-town",
+    "name": "City of Cape Town",
+    "label": "City of Cape Town",
+    "key": "city of cape town",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "city-of-johannesburg",
+    "name": "City of Johannesburg",
+    "label": "City of Johannesburg",
+    "key": "city of johannesburg",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "city-of-matlosana",
+    "name": "City of Matlosana",
+    "label": "City of Matlosana",
+    "key": "city of matlosana",
+    "province": "North West"
+  },
+  {
+    "slug": "city-of-tshwane",
+    "name": "City of Tshwane",
+    "label": "City of Tshwane",
+    "key": "city of tshwane",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "collins-chabane",
+    "name": "Collins Chabane",
+    "label": "Collins Chabane",
+    "key": "collins chabane",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "dannhauser",
+    "name": "Dannhauser",
+    "label": "Dannhauser",
+    "key": "dannhauser",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "dawid-kruiper",
+    "name": "Dawid Kruiper",
+    "label": "Dawid Kruiper",
+    "key": "dawid kruiper",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "dihlabeng",
+    "name": "Dihlabeng",
+    "label": "Dihlabeng",
+    "key": "dihlabeng",
+    "province": "Free State"
+  },
+  {
+    "slug": "dikgatlong",
+    "name": "Dikgatlong",
+    "label": "Dikgatlong",
+    "key": "dikgatlong",
+    "province": "North West"
+  },
+  {
+    "slug": "dipaleseng",
+    "name": "Dipaleseng",
+    "label": "Dipaleseng",
+    "key": "dipaleseng",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "ditsobotla",
+    "name": "Ditsobotla",
+    "label": "Ditsobotla",
+    "key": "ditsobotla",
+    "province": "North West"
+  },
+  {
+    "slug": "dr-beyers-naude",
+    "name": "Dr Beyers Naude",
+    "label": "Dr Beyers Naude",
+    "key": "dr beyers naude",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "dr-js-moroka",
+    "name": "Dr JS Moroka",
+    "label": "Dr JS Moroka",
+    "key": "dr js moroka",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "dr-nkosazana-dlamini-zuma",
+    "name": "Dr Nkosazana Dlamini Zuma",
+    "label": "Dr Nkosazana Dlamini Zuma",
+    "key": "dr nkosazana dlamini zuma",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "dr-pixley-ka-isaka-seme",
+    "name": "Dr Pixley Ka Isaka Seme",
+    "label": "Dr Pixley Ka Isaka Seme",
+    "key": "dr pixley ka isaka seme",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "drakenstein",
+    "name": "Drakenstein",
+    "label": "Drakenstein",
+    "key": "drakenstein",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "edumbe",
+    "name": "eDumbe",
+    "label": "eDumbe",
+    "key": "edumbe",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "ekurhuleni",
+    "name": "Ekurhuleni",
+    "label": "Ekurhuleni",
+    "key": "ekurhuleni",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "elias-motsoaledi",
+    "name": "Elias Motsoaledi",
+    "label": "Elias Motsoaledi",
+    "key": "elias motsoaledi",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "elundini",
+    "name": "Elundini",
+    "label": "Elundini",
+    "key": "elundini",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "emadlangeni",
+    "name": "Emadlangeni",
+    "label": "Emadlangeni",
+    "key": "emadlangeni",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "emakhazeni",
+    "name": "Emakhazeni",
+    "label": "Emakhazeni",
+    "key": "emakhazeni",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "emalahleni-eastern-cape",
+    "name": "Emalahleni",
+    "label": "Emalahleni, Eastern Cape",
+    "key": "emalahleni",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "emalahleni-mpumalanga",
+    "name": "Emalahleni",
+    "label": "Emalahleni, Mpumalanga",
+    "key": "emalahleni",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "emfuleni",
+    "name": "Emfuleni",
+    "label": "Emfuleni",
+    "key": "emfuleni",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "emthanjeni",
+    "name": "Emthanjeni",
+    "label": "Emthanjeni",
+    "key": "emthanjeni",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "endumeni",
+    "name": "Endumeni",
+    "label": "Endumeni",
+    "key": "endumeni",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "engcobo",
+    "name": "Engcobo",
+    "label": "Engcobo",
+    "key": "engcobo",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "enoch-mgijima",
+    "name": "Enoch Mgijima",
+    "label": "Enoch Mgijima",
+    "key": "enoch mgijima",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "ephraim-mogale",
+    "name": "Ephraim Mogale",
+    "label": "Ephraim Mogale",
+    "key": "ephraim mogale",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "ethekwini",
+    "name": "eThekwini",
+    "label": "eThekwini",
+    "key": "ethekwini",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "ga-segonyana",
+    "name": "Ga-Segonyana",
+    "label": "Ga-Segonyana",
+    "key": "ga segonyana",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "gamagara",
+    "name": "Gamagara",
+    "label": "Gamagara",
+    "key": "gamagara",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "george",
+    "name": "George",
+    "label": "George",
+    "key": "george",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "govan-mbeki",
+    "name": "Govan Mbeki",
+    "label": "Govan Mbeki",
+    "key": "govan mbeki",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "great-kei",
+    "name": "Great Kei",
+    "label": "Great Kei",
+    "key": "great kei",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "greater-giyani",
+    "name": "Greater Giyani",
+    "label": "Greater Giyani",
+    "key": "greater giyani",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "greater-kokstad",
+    "name": "Greater Kokstad",
+    "label": "Greater Kokstad",
+    "key": "greater kokstad",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "greater-letaba",
+    "name": "Greater Letaba",
+    "label": "Greater Letaba",
+    "key": "greater letaba",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "greater-taung",
+    "name": "Greater Taung",
+    "label": "Greater Taung",
+    "key": "greater taung",
+    "province": "North West"
+  },
+  {
+    "slug": "greater-tubatse-fetakgomo",
+    "name": "Greater Tubatse/Fetakgomo",
+    "label": "Greater Tubatse/Fetakgomo",
+    "key": "greater tubatse fetakgomo",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "greater-tzaneen",
+    "name": "Greater Tzaneen",
+    "label": "Greater Tzaneen",
+    "key": "greater tzaneen",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "hantam",
+    "name": "Hantam",
+    "label": "Hantam",
+    "key": "hantam",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "hessequa",
+    "name": "Hessequa",
+    "label": "Hessequa",
+    "key": "hessequa",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "impendle",
+    "name": "Impendle",
+    "label": "Impendle",
+    "key": "impendle",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "inkosi-langalibalele",
+    "name": "Inkosi Langalibalele",
+    "label": "Inkosi Langalibalele",
+    "key": "inkosi langalibalele",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "intsika-yethu",
+    "name": "Intsika Yethu",
+    "label": "Intsika Yethu",
+    "key": "intsika yethu",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "inxuba-yethemba",
+    "name": "Inxuba Yethemba",
+    "label": "Inxuba Yethemba",
+    "key": "inxuba yethemba",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "joe-morolong",
+    "name": "Joe Morolong",
+    "label": "Joe Morolong",
+    "key": "joe morolong",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "jozini",
+    "name": "Jozini",
+    "label": "Jozini",
+    "key": "jozini",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "kagisano-molopo",
+    "name": "Kagisano/Molopo",
+    "label": "Kagisano/Molopo",
+    "key": "kagisano molopo",
+    "province": "North West"
+  },
+  {
+    "slug": "kai-garib",
+    "name": "Kai Garib",
+    "label": "Kai Garib",
+    "key": "kai garib",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "kamiesberg",
+    "name": "Kamiesberg",
+    "label": "Kamiesberg",
+    "key": "kamiesberg",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "kannaland",
+    "name": "Kannaland",
+    "label": "Kannaland",
+    "key": "kannaland",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "kareeberg",
+    "name": "Kareeberg",
+    "label": "Kareeberg",
+    "key": "kareeberg",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "karoo-hoogland",
+    "name": "Karoo Hoogland",
+    "label": "Karoo Hoogland",
+    "key": "karoo hoogland",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "kgatelopele",
+    "name": "Kgatelopele",
+    "label": "Kgatelopele",
+    "key": "kgatelopele",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "kgetlengrivier",
+    "name": "Kgetlengrivier",
+    "label": "Kgetlengrivier",
+    "key": "kgetlengrivier",
+    "province": "North West"
+  },
+  {
+    "slug": "khâi-ma",
+    "name": "Khâi-Ma",
+    "label": "Khâi-Ma",
+    "key": "kh i ma",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "kheis",
+    "name": "Kheis",
+    "label": "Kheis",
+    "key": "kheis",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "king-sabata-dalindyebo",
+    "name": "King Sabata Dalindyebo",
+    "label": "King Sabata Dalindyebo",
+    "key": "king sabata dalindyebo",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "knysna",
+    "name": "Knysna",
+    "label": "Knysna",
+    "key": "knysna",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "kopanong",
+    "name": "Kopanong",
+    "label": "Kopanong",
+    "key": "kopanong",
+    "province": "Free State"
+  },
+  {
+    "slug": "kou-kamma",
+    "name": "Kou-Kamma",
+    "label": "Kou-Kamma",
+    "key": "kou kamma",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "kouga",
+    "name": "Kouga",
+    "label": "Kouga",
+    "key": "kouga",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "kwadukuza",
+    "name": "KwaDukuza",
+    "label": "KwaDukuza",
+    "key": "kwadukuza",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "laingsburg",
+    "name": "Laingsburg",
+    "label": "Laingsburg",
+    "key": "laingsburg",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "langeberg",
+    "name": "Langeberg",
+    "label": "Langeberg",
+    "key": "langeberg",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "lekwa",
+    "name": "Lekwa",
+    "label": "Lekwa",
+    "key": "lekwa",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "lekwa-teemane",
+    "name": "Lekwa-Teemane",
+    "label": "Lekwa-Teemane",
+    "key": "lekwa teemane",
+    "province": "North West"
+  },
+  {
+    "slug": "lepele-nkumpi",
+    "name": "Lepele-Nkumpi",
+    "label": "Lepele-Nkumpi",
+    "key": "lepele nkumpi",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "lephalale",
+    "name": "Lephalale",
+    "label": "Lephalale",
+    "key": "lephalale",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "lesedi",
+    "name": "Lesedi",
+    "label": "Lesedi",
+    "key": "lesedi",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "letsemeng",
+    "name": "Letsemeng",
+    "label": "Letsemeng",
+    "key": "letsemeng",
+    "province": "Free State"
+  },
+  {
+    "slug": "local-municipality-of-madibeng",
+    "name": "Local Municipality of Madibeng",
+    "label": "Local Municipality of Madibeng",
+    "key": "local municipality of madibeng",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "mafikeng",
+    "name": "Mafikeng",
+    "label": "Mafikeng",
+    "key": "mafikeng",
+    "province": "North West"
+  },
+  {
+    "slug": "mafube",
+    "name": "Mafube",
+    "label": "Mafube",
+    "key": "mafube",
+    "province": "Free State"
+  },
+  {
+    "slug": "magareng",
+    "name": "Magareng",
+    "label": "Magareng",
+    "key": "magareng",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "makana",
+    "name": "Makana",
+    "label": "Makana",
+    "key": "makana",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "makhado",
+    "name": "Makhado",
+    "label": "Makhado",
+    "key": "makhado",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "makhuduthamaga",
+    "name": "Makhuduthamaga",
+    "label": "Makhuduthamaga",
+    "key": "makhuduthamaga",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "maluti-a-phofung",
+    "name": "Maluti a Phofung",
+    "label": "Maluti a Phofung",
+    "key": "maluti a phofung",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "mamusa",
+    "name": "Mamusa",
+    "label": "Mamusa",
+    "key": "mamusa",
+    "province": "North West"
+  },
+  {
+    "slug": "mandeni",
+    "name": "Mandeni",
+    "label": "Mandeni",
+    "key": "mandeni",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "mangaung",
+    "name": "Mangaung",
+    "label": "Mangaung",
+    "key": "mangaung",
+    "province": "Free State"
+  },
+  {
+    "slug": "mantsopa",
+    "name": "Mantsopa",
+    "label": "Mantsopa",
+    "key": "mantsopa",
+    "province": "Free State"
+  },
+  {
+    "slug": "maphumulo",
+    "name": "Maphumulo",
+    "label": "Maphumulo",
+    "key": "maphumulo",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "maquassi-hills",
+    "name": "Maquassi Hills",
+    "label": "Maquassi Hills",
+    "key": "maquassi hills",
+    "province": "North West"
+  },
+  {
+    "slug": "maruleng",
+    "name": "Maruleng",
+    "label": "Maruleng",
+    "key": "maruleng",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "masilonyana",
+    "name": "Masilonyana",
+    "label": "Masilonyana",
+    "key": "masilonyana",
+    "province": "Free State"
+  },
+  {
+    "slug": "matatiele",
+    "name": "Matatiele",
+    "label": "Matatiele",
+    "key": "matatiele",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "matjhabeng",
+    "name": "Matjhabeng",
+    "label": "Matjhabeng",
+    "key": "matjhabeng",
+    "province": "Free State"
+  },
+  {
+    "slug": "matzikama",
+    "name": "Matzikama",
+    "label": "Matzikama",
+    "key": "matzikama",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "mbhashe",
+    "name": "Mbhashe",
+    "label": "Mbhashe",
+    "key": "mbhashe",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "mbizana",
+    "name": "Mbizana",
+    "label": "Mbizana",
+    "key": "mbizana",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "mbombela",
+    "name": "Mbombela",
+    "label": "Mbombela",
+    "key": "mbombela",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "merafong-city",
+    "name": "Merafong City",
+    "label": "Merafong City",
+    "key": "merafong city",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "metsimaholo",
+    "name": "Metsimaholo",
+    "label": "Metsimaholo",
+    "key": "metsimaholo",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "mfolozi",
+    "name": "Mfolozi",
+    "label": "Mfolozi",
+    "key": "mfolozi",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "mhlontlo",
+    "name": "Mhlontlo",
+    "label": "Mhlontlo",
+    "key": "mhlontlo",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "midvaal",
+    "name": "Midvaal",
+    "label": "Midvaal",
+    "key": "midvaal",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "mkhambathini",
+    "name": "Mkhambathini",
+    "label": "Mkhambathini",
+    "key": "mkhambathini",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "mkhondo",
+    "name": "Mkhondo",
+    "label": "Mkhondo",
+    "key": "mkhondo",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "mnquma",
+    "name": "Mnquma",
+    "label": "Mnquma",
+    "key": "mnquma",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "modimolle-mookgophong",
+    "name": "Modimolle/Mookgophong",
+    "label": "Modimolle/Mookgophong",
+    "key": "modimolle mookgophong",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "mogalakwena",
+    "name": "Mogalakwena",
+    "label": "Mogalakwena",
+    "key": "mogalakwena",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "mogale-city",
+    "name": "Mogale City",
+    "label": "Mogale City",
+    "key": "mogale city",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "mohokare",
+    "name": "Mohokare",
+    "label": "Mohokare",
+    "key": "mohokare",
+    "province": "Free State"
+  },
+  {
+    "slug": "molemole",
+    "name": "Molemole",
+    "label": "Molemole",
+    "key": "molemole",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "moqhaka",
+    "name": "Moqhaka",
+    "label": "Moqhaka",
+    "key": "moqhaka",
+    "province": "North West"
+  },
+  {
+    "slug": "moretele",
+    "name": "Moretele",
+    "label": "Moretele",
+    "key": "moretele",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "moses-kotane",
+    "name": "Moses Kotane",
+    "label": "Moses Kotane",
+    "key": "moses kotane",
+    "province": "North West"
+  },
+  {
+    "slug": "mossel-bay",
+    "name": "Mossel Bay",
+    "label": "Mossel Bay",
+    "key": "mossel bay",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "mpofana",
+    "name": "Mpofana",
+    "label": "Mpofana",
+    "key": "mpofana",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "msinga",
+    "name": "Msinga",
+    "label": "Msinga",
+    "key": "msinga",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "msukaligwa",
+    "name": "Msukaligwa",
+    "label": "Msukaligwa",
+    "key": "msukaligwa",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "mthonjaneni",
+    "name": "Mthonjaneni",
+    "label": "Mthonjaneni",
+    "key": "mthonjaneni",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "mtubatuba",
+    "name": "Mtubatuba",
+    "label": "Mtubatuba",
+    "key": "mtubatuba",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "musina",
+    "name": "Musina",
+    "label": "Musina",
+    "key": "musina",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "nala",
+    "name": "Nala",
+    "label": "Nala",
+    "key": "nala",
+    "province": "North West"
+  },
+  {
+    "slug": "naledi",
+    "name": "Naledi",
+    "label": "Naledi",
+    "key": "naledi",
+    "province": "North West"
+  },
+  {
+    "slug": "nama-khoi",
+    "name": "Nama Khoi",
+    "label": "Nama Khoi",
+    "key": "nama khoi",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "ndlambe",
+    "name": "Ndlambe",
+    "label": "Ndlambe",
+    "key": "ndlambe",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "ndwedwe",
+    "name": "Ndwedwe",
+    "label": "Ndwedwe",
+    "key": "ndwedwe",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "nelson-mandela-bay",
+    "name": "Nelson Mandela Bay",
+    "label": "Nelson Mandela Bay",
+    "key": "nelson mandela bay",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "newcastle",
+    "name": "Newcastle",
+    "label": "Newcastle",
+    "key": "newcastle",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "ngqushwa",
+    "name": "Ngqushwa",
+    "label": "Ngqushwa",
+    "key": "ngqushwa",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "ngquza-hill",
+    "name": "Ngquza Hill",
+    "label": "Ngquza Hill",
+    "key": "ngquza hill",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "ngwathe",
+    "name": "Ngwathe",
+    "label": "Ngwathe",
+    "key": "ngwathe",
+    "province": "Free State"
+  },
+  {
+    "slug": "nkandla",
+    "name": "Nkandla",
+    "label": "Nkandla",
+    "key": "nkandla",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "nketoana",
+    "name": "Nketoana",
+    "label": "Nketoana",
+    "key": "nketoana",
+    "province": "Free State"
+  },
+  {
+    "slug": "nkomazi",
+    "name": "Nkomazi",
+    "label": "Nkomazi",
+    "key": "nkomazi",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "nongoma",
+    "name": "Nongoma",
+    "label": "Nongoma",
+    "key": "nongoma",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "nqutu",
+    "name": "Nqutu",
+    "label": "Nqutu",
+    "key": "nqutu",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "ntabankulu",
+    "name": "Ntabankulu",
+    "label": "Ntabankulu",
+    "key": "ntabankulu",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "nyandeni",
+    "name": "Nyandeni",
+    "label": "Nyandeni",
+    "key": "nyandeni",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "okhahlamba",
+    "name": "Okhahlamba",
+    "label": "Okhahlamba",
+    "key": "okhahlamba",
+    "province": "Free State"
+  },
+  {
+    "slug": "oudtshoorn",
+    "name": "Oudtshoorn",
+    "label": "Oudtshoorn",
+    "key": "oudtshoorn",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "overstrand",
+    "name": "Overstrand",
+    "label": "Overstrand",
+    "key": "overstrand",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "phokwane",
+    "name": "Phokwane",
+    "label": "Phokwane",
+    "key": "phokwane",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "phumelela",
+    "name": "Phumelela",
+    "label": "Phumelela",
+    "key": "phumelela",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "polokwane",
+    "name": "Polokwane",
+    "label": "Polokwane",
+    "key": "polokwane",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "port-st-johns",
+    "name": "Port St Johns",
+    "label": "Port St Johns",
+    "key": "port st johns",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "prince-albert",
+    "name": "Prince Albert",
+    "label": "Prince Albert",
+    "key": "prince albert",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "ramotshere-moiloa",
+    "name": "Ramotshere Moiloa",
+    "label": "Ramotshere Moiloa",
+    "key": "ramotshere moiloa",
+    "province": "North West"
+  },
+  {
+    "slug": "rand-west-city",
+    "name": "Rand West City",
+    "label": "Rand West City",
+    "key": "rand west city",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "ratlou",
+    "name": "Ratlou",
+    "label": "Ratlou",
+    "key": "ratlou",
+    "province": "North West"
+  },
+  {
+    "slug": "ray-nkonyeni",
+    "name": "Ray Nkonyeni",
+    "label": "Ray Nkonyeni",
+    "key": "ray nkonyeni",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "raymond-mhlaba",
+    "name": "Raymond Mhlaba",
+    "label": "Raymond Mhlaba",
+    "key": "raymond mhlaba",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "renosterberg",
+    "name": "Renosterberg",
+    "label": "Renosterberg",
+    "key": "renosterberg",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "richmond",
+    "name": "Richmond",
+    "label": "Richmond",
+    "key": "richmond",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "richtersveld",
+    "name": "Richtersveld",
+    "label": "Richtersveld",
+    "key": "richtersveld",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "rustenburg",
+    "name": "Rustenburg",
+    "label": "Rustenburg",
+    "key": "rustenburg",
+    "province": "North West"
+  },
+  {
+    "slug": "sakhisizwe",
+    "name": "Sakhisizwe",
+    "label": "Sakhisizwe",
+    "key": "sakhisizwe",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "saldanha-bay",
+    "name": "Saldanha Bay",
+    "label": "Saldanha Bay",
+    "key": "saldanha bay",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "senqu",
+    "name": "Senqu",
+    "label": "Senqu",
+    "key": "senqu",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "setsoto",
+    "name": "Setsoto",
+    "label": "Setsoto",
+    "key": "setsoto",
+    "province": "Free State"
+  },
+  {
+    "slug": "siyancuma",
+    "name": "Siyancuma",
+    "label": "Siyancuma",
+    "key": "siyancuma",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "siyathemba",
+    "name": "Siyathemba",
+    "label": "Siyathemba",
+    "key": "siyathemba",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "sol-plaatjie",
+    "name": "Sol Plaatjie",
+    "label": "Sol Plaatjie",
+    "key": "sol plaatjie",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "stellenbosch",
+    "name": "Stellenbosch",
+    "label": "Stellenbosch",
+    "key": "stellenbosch",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "steve-tshwete",
+    "name": "Steve Tshwete",
+    "label": "Steve Tshwete",
+    "key": "steve tshwete",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "sundays-river-valley",
+    "name": "Sundays River Valley",
+    "label": "Sundays River Valley",
+    "key": "sundays river valley",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "swartland",
+    "name": "Swartland",
+    "label": "Swartland",
+    "key": "swartland",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "swellendam",
+    "name": "Swellendam",
+    "label": "Swellendam",
+    "key": "swellendam",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "thaba-chweu",
+    "name": "Thaba Chweu",
+    "label": "Thaba Chweu",
+    "key": "thaba chweu",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "thabazimbi",
+    "name": "Thabazimbi",
+    "label": "Thabazimbi",
+    "key": "thabazimbi",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "the-msunduzi",
+    "name": "The Msunduzi",
+    "label": "The Msunduzi",
+    "key": "the msunduzi",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "theewaterskloof",
+    "name": "Theewaterskloof",
+    "label": "Theewaterskloof",
+    "key": "theewaterskloof",
+    "province": "Western Cape"
+  },
+  {
+    "slug": "thembelihle",
+    "name": "Thembelihle",
+    "label": "Thembelihle",
+    "key": "thembelihle",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "thembisile",
+    "name": "Thembisile",
+    "label": "Thembisile",
+    "key": "thembisile",
+    "province": "Gauteng"
+  },
+  {
+    "slug": "thulamela",
+    "name": "Thulamela",
+    "label": "Thulamela",
+    "key": "thulamela",
+    "province": "Limpopo"
+  },
+  {
+    "slug": "tokologo",
+    "name": "Tokologo",
+    "label": "Tokologo",
+    "key": "tokologo",
+    "province": "Free State"
+  },
+  {
+    "slug": "tsantsabane",
+    "name": "Tsantsabane",
+    "label": "Tsantsabane",
+    "key": "tsantsabane",
+    "province": "Nothern Cape"
+  },
+  {
+    "slug": "tswaing",
+    "name": "Tswaing",
+    "label": "Tswaing",
+    "key": "tswaing",
+    "province": "North West"
+  },
+  {
+    "slug": "tswelopele",
+    "name": "Tswelopele",
+    "label": "Tswelopele",
+    "key": "tswelopele",
+    "province": "Free State"
+  },
+  {
+    "slug": "ubuhlebezwe",
+    "name": "Ubuhlebezwe",
+    "label": "Ubuhlebezwe",
+    "key": "ubuhlebezwe",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "ubuntu",
+    "name": "Ubuntu",
+    "label": "Ubuntu",
+    "key": "ubuntu",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "ulundi",
+    "name": "Ulundi",
+    "label": "Ulundi",
+    "key": "ulundi",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "umdoni",
+    "name": "Umdoni",
+    "label": "Umdoni",
+    "key": "umdoni",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "umhlabuyalingana",
+    "name": "Umhlabuyalingana",
+    "label": "Umhlabuyalingana",
+    "key": "umhlabuyalingana",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "umhlathuze",
+    "name": "uMhlathuze",
+    "label": "uMhlathuze",
+    "key": "umhlathuze",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "umlalazi",
+    "name": "uMlalazi",
+    "label": "uMlalazi",
+    "key": "umlalazi",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "umngeni",
+    "name": "uMngeni",
+    "label": "uMngeni",
+    "key": "umngeni",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "umshwathi",
+    "name": "uMshwathi",
+    "label": "uMshwathi",
+    "key": "umshwathi",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "umsobomvu",
+    "name": "Umsobomvu",
+    "label": "Umsobomvu",
+    "key": "umsobomvu",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "umuziwabantu",
+    "name": "uMuziwabantu",
+    "label": "uMuziwabantu",
+    "key": "umuziwabantu",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "umvoti",
+    "name": "Umvoti",
+    "label": "Umvoti",
+    "key": "umvoti",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "umzimkhulu",
+    "name": "Umzimkhulu",
+    "label": "Umzimkhulu",
+    "key": "umzimkhulu",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "umzimvubu",
+    "name": "Umzimvubu",
+    "label": "Umzimvubu",
+    "key": "umzimvubu",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "umzumbe",
+    "name": "Umzumbe",
+    "label": "Umzumbe",
+    "key": "umzumbe",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "uphongolo",
+    "name": "uPhongolo",
+    "label": "uPhongolo",
+    "key": "uphongolo",
+    "province": "KwaZulu-Natal"
+  },
+  {
+    "slug": "ventersdorp-tlokwe",
+    "name": "Ventersdorp/Tlokwe",
+    "label": "Ventersdorp/Tlokwe",
+    "key": "ventersdorp tlokwe",
+    "province": "North West"
+  },
+  {
+    "slug": "victor-khanye",
+    "name": "Victor Khanye",
+    "label": "Victor Khanye",
+    "key": "victor khanye",
+    "province": "Mpumalanga"
+  },
+  {
+    "slug": "walter-sisulu",
+    "name": "Walter Sisulu",
+    "label": "Walter Sisulu",
+    "key": "walter sisulu",
+    "province": "Eastern Cape"
+  },
+  {
+    "slug": "witzenberg",
+    "name": "Witzenberg",
+    "label": "Witzenberg",
+    "key": "witzenberg",
+    "province": "Western Cape"
+  }
+]

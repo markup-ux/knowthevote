@@ -107,10 +107,15 @@ h3 { font-size: 26px; margin: 0; }
 .races a:hover { outline: 2px solid #0a3161; }
 .races strong { display: block; font-size: 18px; }
 .races span { color: var(--muted); font-size: 14px; }
-#us-map, #state-map { width: 100%; height: auto; }
+.races img { width: 56px; height: auto; margin-bottom: 8px; border: 1px solid var(--line); }
+#us-map, #state-map, #place-map { width: 100%; height: auto; }
 #us-map path { fill: var(--lead, var(--chip)); stroke: var(--ink); stroke-width: 0.8; cursor: pointer; }
 #state-map path { fill: var(--chip); stroke: var(--ink); stroke-width: 0.8; cursor: pointer; }
-#us-map path:hover, #us-map path.is-on, #state-map path.is-on { fill: #8eafd4; stroke: #0a3161; stroke-width: 2.2; }
+#place-map path { fill: var(--lead, var(--chip)); stroke: var(--ink); stroke-width: 0.45; cursor: pointer; }
+#us-map path:hover, #us-map path.is-on, #state-map path.is-on, #place-map path:hover, #place-map path.is-on { fill: #8eafd4; stroke: #0a3161; stroke-width: 2.2; }
+.totals { width: 100%; max-width: 720px; border-collapse: collapse; margin: 8px 0 18px; }
+.totals th, .totals td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: baseline; }
+.totals td.num, .totals th.num { text-align: right; font-variant-numeric: tabular-nums; }
 #us-map text.map-code {
   font-family: "Segoe UI", sans-serif;
   font-weight: 650;
