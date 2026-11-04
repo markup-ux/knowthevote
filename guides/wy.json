@@ -80,6 +80,29 @@
       "site": "https://chuckforwyoming.com/",
       "siteLabel": "Chuck Gray for Congress",
       "source": "https://chuckforwyoming.com/"
+    },
+    "kenneth casner": {
+      "role": "Third-generation Wyomingite and Vietnam veteran running for governor.",
+      "bio": "He told Wyoming Public Media he was born in Cheyenne in 1950, that his family has worked in Wyoming for three generations, and that he ran a small business in Elk Mountain for 28 years. He does not have a campaign website.",
+      "issues": [
+        "He says his first issue is free and open elections: a person should be able to file and run without having to join a party.",
+        "He says health care is the main reason young people leave, and he wants a statewide system that connects rural clinics.",
+        "He says he wants small business to grow, and he wants property tax ended for people once they turn 65."
+      ],
+      "source": "https://www.wyomingpublicmedia.org/2026-10-09/interview-with-ken-casner-democratic-party-candidate-for-governor"
+    },
+    "rebecca bextel": {
+      "role": "Small-business owner running for governor of Wyoming.",
+      "bio": "Her campaign says she has lived in Wyoming for more than 20 years, raised a family and run small businesses with her husband, Jonathan, and served as a Republican precinct committeewoman, state committeewoman, and an alternate delegate to the 2020 and 2024 Republican National Conventions.",
+      "issues": [
+        "She says she would defend gun rights, religious liberty, private property, and parents' authority over their children's education, and veto bills she says infringe on those freedoms.",
+        "She says she would take Wyoming out of the federal refugee resettlement program and end policies that let people without legal status get a Wyoming driver's license.",
+        "She says she would defend coal, oil, natural gas, uranium, and critical-mineral jobs, and fight property-tax bills that rise faster than a family can pay."
+      ],
+      "site": "https://www.rebeccaforwyoming.com/",
+      "siteLabel": "rebeccaforwyoming.com",
+      "donate": "https://secure.anedot.com/rebecca-for-wyoming/donate",
+      "source": "https://www.rebeccaforwyoming.com/issues"
     }
   },
   "measures": {}
