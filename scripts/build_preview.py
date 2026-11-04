@@ -240,7 +240,12 @@ def slim_counties(map_data, ordered_names, state_code=""):
                 "candidates": labeled,
             }
             continue
-        fips = towns.get(ct_towns.place_key(unit.get("raceName") or text))
+        # A 10-digit Census county-subdivision code starts with the county FIPS.
+        # Maine reports by town, and the map is the 16 counties.
+        code = str(unit.get("fips_code") or "")
+        fips = code[:5] if code.isdigit() and len(code) >= 5 else ""
+        if not fips:
+            fips = towns.get(ct_towns.place_key(unit.get("raceName") or text))
         if not fips:
             continue
         bucket = rolled.setdefault(fips, [0] * len(votes_by_name))
@@ -475,6 +480,23 @@ def fetch_detail(slug):
         return slug, None
 
 
+def stamp_place_fips(item, race):
+    """Copy each place's Census code onto mapData. Town codes roll up to a county."""
+    data = item.get("mapData")
+    if not isinstance(data, dict):
+        return
+    by_feature = {}
+    for unit in (race or {}).get("voteShiftMapUnits") or []:
+        code = str(unit.get("fips_code") or "")
+        feature = unit.get("feature_id")
+        if feature and code.isdigit() and len(code) >= 5:
+            by_feature[str(feature)] = code
+    for key, row in data.items():
+        code = by_feature.get(str(key))
+        if code and isinstance(row, dict):
+            row["fips_code"] = code
+
+
 def apply_detail(item, payload):
     race = ((payload or {}).get("races") or [None])[0]
     if not race:
@@ -484,6 +506,7 @@ def apply_detail(item, payload):
         item["candidates"] = summary["candidates"]
     if isinstance(race.get("mapData"), dict):
         item["mapData"] = race["mapData"]
+        stamp_place_fips(item, race)
     for key in ("percentIn", "percentInFormatted", "votes", "callStatusText", "pollsCloseFormatted"):
         if summary.get(key) not in (None, ""):
             item[key] = summary[key]
@@ -565,6 +588,7 @@ def detail_item(payload):
         return None
     if isinstance(race.get("mapData"), dict):
         summary["mapData"] = race["mapData"]
+        stamp_place_fips(summary, race)
     areas = county_areas(race)
     if areas:
         summary["areas"] = areas
