@@ -342,6 +342,19 @@
       "siteLabel": "bgp4az.com",
       "donate": "https://secure.actblue.com/donate/bgp_website",
       "source": "https://bgp4az.com/priorities/"
+    },
+    "district 9|danielle sterbinsky": {
+      "role": "Navy veteran and working mother running for Congress in Arizona's 9th District.",
+      "bio": "Her campaign says she lives in Wittmann and served as an operations specialist on the destroyer USS Bainbridge. She earned a social-sciences degree from the University of Hawaii and a master's in industrial-organizational psychology from Grand Canyon University.",
+      "issues": [
+        "She says she will help first-time buyers with down payments, assist renters, and bring down child-care costs.",
+        "She says she will lower prescription prices, offer a public health-care option, raise the federal minimum wage, and support small businesses and gig workers.",
+        "She says she will expand rural broadband and protect water, she signed a pledge to limit House members to three terms, and the campaign takes no corporate PAC money."
+      ],
+      "site": "https://www.sterbinskyforcongress.com/",
+      "siteLabel": "sterbinskyforcongress.com",
+      "donate": "https://secure.actblue.com/donate/sterbinsky-for-congress",
+      "source": "https://www.sterbinskyforcongress.com/"
     }
   },
   "measures": {}
