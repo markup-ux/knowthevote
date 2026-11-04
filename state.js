@@ -117,6 +117,13 @@
     if (winner) summaryEl.appendChild(el("p", "", "The Associated Press reports a winner: " + winner.name + "."));
     if (item.kind === "house") {
       summaryEl.appendChild(el("p", "note", "House districts are not counties, so this map is not colored for that race."));
+      (item.districts || []).forEach(function (district) {
+        var rows = district.candidates || [];
+        var called = rows.filter(function (person) { return person.winner && (person.votes || 0) > 0; })[0];
+        summaryEl.appendChild(el("h3", "", district.name || "District"));
+        if (called) summaryEl.appendChild(el("p", "", "The Associated Press reports a winner: " + called.name + "."));
+        people(summaryEl, rows);
+      });
     } else {
       people(summaryEl, item.candidates || []);
     }

@@ -252,7 +252,7 @@ def footer(state_name, guide):
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
 <script src="live.js?v=16"></script>
-<script src="state.js"></script>
+<script src="state.js?v=house1"></script>
 </body>
 </html>
 """ % (esc(state_name), names)
