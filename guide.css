@@ -135,6 +135,8 @@ h3 { font-size: 26px; margin: 0; }
 .person.no-photo { grid-template-columns: 1fr; }
 .person img { width: 72px; height: 90px; object-fit: cover; object-position: center top; background: #e4ddd0; }
 .person strong { font-size: 20px; }
+.person strong a, .result-person a { color: inherit; text-underline-offset: 3px; }
+article.candidate, section.block { scroll-margin-top: 120px; }
 .chip, .pill {
   display: inline-block;
   margin-left: 8px;

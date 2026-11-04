@@ -522,6 +522,8 @@
   .result-person.no-photo { grid-template-columns: 1fr; }
   .result-person img { width: 72px; height: 90px; object-fit: cover; object-position: center top; background: #e4ddd0; }
   .result-person strong { font-family: Georgia, "Palatino Linotype", serif; font-weight: 500; font-size: 22px; }
+  .result-person a { color: inherit; text-underline-offset: 3px; }
+  article.candidate { scroll-margin-top: 120px; }
   .result-meta { color: var(--muted); font-size: 14px; }
   .result-bar { height: 8px; background: var(--line); margin-top: 6px; }
   .result-bar i { display: block; height: 100%; }
@@ -596,9 +598,9 @@
       <a href="#sos">Secretary of state</a>
       <a href="#comptroller">Comptroller</a>
       <a href="#treasurer">Treasurer</a>
-      <a href="#sample">The ballot</a>
       <a href="#where">Where to vote</a>
       <a href="#zip">Your ballot</a>
+      <a href="#sample">The ballot</a>
     </nav>
   </div>
 </header>
@@ -611,38 +613,9 @@
     <p class="deck">Six offices are on every ballot in the state. Leaders.vote lists the printed candidates, what the job does, and what each campaign says it will do. Enter a ZIP code for the district races on that ballot.</p>
     <p class="note deck">Leaders.vote is still collecting candidate information, so some entries currently show only a name.</p>
     <p class="when">Polls are open 6 a.m. to 7 p.m. If you are in line by 7, you can still vote. This is not an endorsement and not a government site.</p>
-    <div class="finder" id="zip">
-      <form id="zip-form">
-        <div>
-          <label for="zip-code">ZIP code</label>
-          <input id="zip-code" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="60614" required>
-        </div>
-        <button type="submit">Show this ballot</button>
-      </form>
-      <p class="zip-note">A ZIP code can cross a district line. This shows every district that covers a real part of that ZIP. Your precinct uses only one. Sheriff, clerk, county board, and local questions come from the county clerk and are not in this list.</p>
-    </div>
-    <div class="finder where" id="where">
-      <p class="kicker">Where to vote</p>
-      <h2>Find your polling place.</h2>
-      <p class="zip-note">Election Day is Tuesday, November 3. Polls are open 6 a.m. to 7 p.m. If you are in line by 7, you can still vote. The State Board of Elections assigns the precinct polling place from the home address, not from a ZIP code alone.</p>
-      <form id="where-form">
-        <div>
-          <label for="where-number">Street number</label>
-          <input id="where-number" class="num" name="number" autocomplete="off" required>
-        </div>
-        <div>
-          <label for="where-street">Street name</label>
-          <input id="where-street" class="street" name="street" autocomplete="off" required>
-        </div>
-        <div>
-          <label for="where-zip">ZIP code</label>
-          <input id="where-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="60614" required>
-        </div>
-        <button type="submit">Find this address</button>
-      </form>
-      <div id="where-result" aria-live="polite"></div>
-    </div>
-    <div id="zip-result" aria-live="polite"></div>
+    
+    
+    
     <div class="races">
       <a href="#senate"><strong>U.S. Senate</strong><span>Open seat. Dick Durbin is retiring.</span></a>
       <a href="#governor"><strong>Governor</strong><span>Joint ticket with lieutenant governor. Pritzker is seeking a third term.</span></a>
@@ -652,8 +625,7 @@
       <a href="#treasurer"><strong>Treasurer</strong><span>Invests state money. Frerichs is the incumbent.</span></a>
     </div>
   </div>
-
-  <section class="block" id="results">
+<section class="block" id="results">
     <div class="wrap">
       <p class="kicker">Unofficial · November 3, 2026</p>
       <h2>Results across Illinois.</h2>
@@ -684,7 +656,395 @@
     </div>
   </section>
 
-  <section class="block" id="sample">
+  <section class="block" id="senate">
+    <div class="wrap">
+      <p class="kicker">Federal · Vote for one · Open seat</p>
+      <h2>U.S. Senate</h2>
+      <p class="sub">Durbin is retiring. The winner is one of 100 votes on federal law, spending, treaties, and judges. Six-year term. Primary was March 17.</p>
+
+      <article id="senate-don-tracy" class="candidate">
+        <img class="avatar" src="photos/don-tracy.webp" alt="Don Tracy">
+        <div>
+          <div class="who"><h3>Don Tracy</h3><span class="pill r">Republican</span></div>
+          <p class="role">Attorney · former Illinois Republican Party chair · won the primary with 40%</p>
+          <p class="bio">Springfield lawyer and former chair of the Illinois Gaming Board, from Mt. Sterling. He says he is running on costs, safety, and a voice for the whole state, not only Chicago and Cook County.</p>
+          <ul>
+            <li>Lower taxes, energy bills, and health-care costs, with an all-of-the-above energy policy so rates fall and the lights stay on.</li>
+            <li>Back police, hold violent offenders accountable, and enforce immigration law. He opposes taxpayer-funded benefits for people here illegally.</li>
+            <li>Less federal regulation on small business, manufacturing, and farms, and tighter control of federal spending.</li>
+          </ul>
+          <p class="links"><a href="https://dontracyforil.com/" target="_blank" rel="noopener noreferrer">dontracyforil.com</a> · <a href="https://secure.winred.com/dontracyforil/contribute" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+
+      <article id="senate-juliana-stratton" class="candidate">
+        <img class="avatar" src="photos/juliana-stratton.webp" alt="Juliana Stratton">
+        <div>
+          <div class="who"><h3>Juliana Stratton</h3><span class="pill d">Democratic</span></div>
+          <p class="role">Lieutenant governor since 2019 · former state representative · won the primary with 40.4%</p>
+          <p class="bio">South Side of Chicago. Daughter of a Navy veteran and a Chicago public-school teacher, and a mother of four. She finished ahead of Raja Krishnamoorthi and Robin Kelly, and she is not taking corporate PAC money in this race.</p>
+          <ul>
+            <li>$25 federal minimum wage, a larger earned-income credit and child tax credit, and a middle-class tax cut paid for by higher taxes on income above $1 million.</li>
+            <li>Medicare for All, including home care, hearing, and vision. She opposes the current tariffs, which she calls a tax on groceries and goods.</li>
+            <li>Restore Roe-level abortion protections, pass the John Lewis Voting Rights Act and gun laws, and abolish ICE. Her housing plan targets hedge-fund home purchases and algorithm-set rents.</li>
+          </ul>
+          <p class="links"><a href="https://www.julianastratton.com/" target="_blank" rel="noopener noreferrer">julianastratton.com</a> · <a href="https://secure.actblue.com/donate/jfi-landingpage" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+
+      <article id="senate-whitfield-harrington-jr" class="candidate">
+        <img class="avatar" src="photos/whitfield-harrington-jr.webp" alt="Whitfield Harrington Jr.">
+        <div>
+          <div class="who"><h3>Whitfield Harrington Jr.</h3><span class="pill o">American Center</span></div>
+          <p class="role">Schaumburg pastor · former financial-services professional · party he founded</p>
+          <p class="bio">Degree from Delta State. He worked in banks and insurance, then has pastored in Chicago since 2013. He built the American Center Party for voters who think both major parties have moved to the edges. A finish of 5% would make it an established party in Illinois.</p>
+          <ul>
+            <li>End the Iran war, then ban oil-market speculation by people who never take delivery. He says that would cut prices across the economy.</li>
+            <li>Direct primary care, paying the doctor instead of routing routine care through insurance. Free community college.</li>
+            <li>Keep tariffs off food. Use them to stop dumping that hurts U.S. factories, and negotiate them in private. He says current immigration enforcement has “crossed the line.”</li>
+          </ul>
+          <p class="links"><a href="https://whit4ilsenate.com/" target="_blank" rel="noopener noreferrer">whit4ilsenate.com</a> · <a href="https://secure.anedot.com/whitfield-harrington-for-illinois/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="governor">
+    <div class="wrap">
+      <p class="kicker">State · Vote for one ticket</p>
+      <h2>Governor and lieutenant governor</h2>
+      <p class="sub">One choice elects both. The governor signs or vetoes laws, proposes the budget, and appoints agency heads. The lieutenant governor succeeds the governor and takes the duties assigned. A write-in line is on this race. The names below are not printed on it.</p>
+
+      <article id="governor-darren-bailey" class="candidate">
+        <img class="avatar" src="photos/darren-bailey.webp" alt="Darren Bailey">
+        <div>
+          <div class="who"><h3>Darren Bailey</h3><span class="pill r">Republican</span></div>
+          <p class="role">With Aaron Del Mar, Cook County Republican Party chair · farmer from Xenia · 2022 nominee</p>
+          <p class="bio">Former state representative and senator, in a rematch with Pritzker. He won the March primary with 53.3%. Donald Trump endorsed him in September 2026. This guide has no separate photo of Del Mar.</p>
+          <ul>
+            <li>Cut property taxes and state spending. He argues Springfield should audit what it already spends instead of adding programs.</li>
+            <li>Repeal the SAFE-T Act and bring back cash bail. Repeal the TRUST Act so local police can work with federal immigration enforcement, and end state spending on undocumented residents.</li>
+            <li>He personally opposes abortion and has said he will not try to change Illinois abortion law.</li>
+          </ul>
+          <p class="links"><a href="https://baileyforillinois.com/" target="_blank" rel="noopener noreferrer">baileyforillinois.com</a> · <a href="https://secure.winred.com/bailey-for-illinois/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+
+      <article id="governor-jb-pritzker" class="candidate">
+        <img class="avatar" src="photos/jb-pritzker.webp" alt="J.B. Pritzker">
+        <div>
+          <div class="who"><h3>J.B. Pritzker</h3><span class="pill d">Democratic</span></div>
+          <p class="role">Incumbent since 2019, with Christian Mitchell, a former state representative and deputy governor</p>
+          <p class="bio">Businessman seeking a third term, which no Illinois Democrat has won. Mitchell would replace Stratton, who is running for Senate. This guide has no separate photo of Mitchell. Pritzker campaigns on wages, abortion access, schools, and budgets he says are balanced, along with credit-rating upgrades.</p>
+          <ul>
+            <li>Points to the $15 minimum wage, the ended state grocery tax, a doubled child tax credit, a $35 insulin cap, and medical-debt relief. Wants more housing.</li>
+            <li>Abortion-access laws that made Illinois a destination for care. He says health care is a right and opposes federal Medicaid cuts.</li>
+            <li>Signed limits on civil immigration arrests near courthouses, hospitals, colleges, and day cares. Says people convicted of violent crimes should be deported, and that he is open to changes in SAFE-T pretrial rules.</li>
+          </ul>
+          <p class="links"><a href="https://jbpritzker.com/" target="_blank" rel="noopener noreferrer">jbpritzker.com</a></p>
+        </div>
+      </article>
+
+      <article id="governor-collin-corbett" class="candidate">
+        <img class="avatar" src="photos/collin-corbett.webp" alt="Collin Corbett">
+        <div>
+          <div class="who"><h3>Collin Corbett</h3><span class="pill i">Independent</span></div>
+          <p class="role">With Carolyn Schofield, a former McHenry County Board member · Palatine consultant</p>
+          <p class="bio">Owner of Cor Strategies. A Republican strategist for about 20 years who left the party to run. This guide has no separate photo of Schofield. He calls affordability the race and says neither major-party nominee will fix property taxes.</p>
+          <ul>
+            <li>Property-tax relief first, then spending restraint, cheaper gas and power, fewer data centers, and more housing.</li>
+            <li>Has proposed taxing some services so property taxes and the sales tax on essentials can come down.</li>
+            <li>Supports abortion rights. Would amend the TRUST Act so police can work with federal agents on violent cases. Supports more gun laws and health-care price transparency, including direct primary care.</li>
+          </ul>
+          <p class="links"><a href="https://www.collinforil.com/" target="_blank" rel="noopener noreferrer">collinforil.com</a> · <a href="https://www.collinforil.com/contribute/" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+
+      <h3>Filed for governor</h3>
+      <p class="sub">These people filed a declaration of intent to be a write-in. The lists do not state a party. A vote counts only in the places where that declaration was filed. The State Board of Elections does not take these filings. Sources: the <a href="https://clerk.kanecountyil.gov/Elections/Documents/List%20of%20Write-in%20Candidates%20Who%20Filed%20Declaration%20of%20Intent%20%20GE2026.pdf" target="_blank" rel="noopener noreferrer">Kane County Clerk’s list</a>, September 3, 2026, and the <a href="https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/will-il.connect.clarityelections.com/Elections/2026GeneralElection/Candidates/WRITEINLIST.pdf" target="_blank" rel="noopener noreferrer">Will County Clerk’s list</a>, September 8, 2026, marked final. This page does not have every county’s list.</p>
+
+      <article id="governor-richard-benedict-mayers" class="candidate">
+        <div class="avatar mono" aria-hidden="true">R</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Richard Benedict Mayers</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Will County’s list names governor. Kane County’s list names governor and lieutenant governor.</p>
+        </div>
+      </article>
+      <article id="governor-misty-metroz" class="candidate">
+        <div class="avatar mono" aria-hidden="true">M</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Misty Metroz</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Governor on the Kane County list. Not on the Will County list.</p>
+        </div>
+      </article>
+      <article id="governor-griselda-romero" class="candidate">
+        <div class="avatar mono" aria-hidden="true">G</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Griselda Romero</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Governor on the Kane County list and the Will County list.</p>
+        </div>
+      </article>
+      <article id="governor-elizabeth-ann-sebesta" class="candidate">
+        <div class="avatar mono" aria-hidden="true">E</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Elizabeth Ann Sebesta</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Governor on the Kane County list. Not on the Will County list.</p>
+        </div>
+      </article>
+      <article id="governor-patricia-l-tilman" class="candidate">
+        <div class="avatar mono" aria-hidden="true">P</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Patricia L. Tilman</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Governor on the Kane County list. Not on the Will County list.</p>
+        </div>
+      </article>
+      <article id="governor-rafael-varela" class="candidate">
+        <div class="avatar mono" aria-hidden="true">R</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Rafael Varela</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Governor. Will County’s list spells the name Rafael Varela. Kane County’s list spells it Rafael Verala.</p>
+        </div>
+      </article>
+      <article id="governor-mike-vick" class="candidate">
+        <div class="avatar mono" aria-hidden="true">M</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Mike Vick</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Governor on the Kane County list and the Will County list.</p>
+        </div>
+      </article>
+
+      <h3>Filed for lieutenant governor</h3>
+      <p class="sub">The ballot is one ticket. These declarations name lieutenant governor, not a full ticket, so they are listed on their own.</p>
+      <article id="governor-eyde-arndell" class="candidate">
+        <div class="avatar mono" aria-hidden="true">E</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Eyde Arndell</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Lieutenant governor on the Will County list. Not on the Kane County list.</p>
+        </div>
+      </article>
+      <article id="governor-joseph-l-mosley" class="candidate">
+        <div class="avatar mono" aria-hidden="true">J</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Joseph L. Mosley</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Lieutenant governor on the Kane County list. Not on the Will County list.</p>
+        </div>
+      </article>
+      <article id="governor-gary-pierce" class="candidate">
+        <div class="avatar mono" aria-hidden="true">G</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Gary Pierce</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Lieutenant governor on the Kane County list and the Will County list.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="ag">
+    <div class="wrap">
+      <p class="kicker">State · Vote for one</p>
+      <h2>Attorney general</h2>
+      <p class="sub">Lawyer for the state. Consumer fraud, civil rights, antitrust, some public-corruption work, and lawsuits to defend Illinois statutes and funding. Criminal cases are mostly local state’s attorneys. Four-year term.</p>
+
+      <article id="ag-robert-w-fioretti" class="candidate">
+        <img class="avatar" src="photos/robert-w-fioretti.webp" alt="Robert W. Fioretti">
+        <div>
+          <div class="who"><h3>Robert W. Fioretti</h3><span class="pill r">Republican</span></div>
+          <p class="role">Former Chicago alderman · attorney · Democrat until he switched parties</p>
+          <p class="bio">Known as Bob Fioretti. Has run for Chicago mayor, Cook County board president, and Cook County state’s attorney. He says the office spends too much time on national lawsuits and too little on crime and corruption in Illinois.</p>
+          <ul>
+            <li>Push state’s attorneys to prosecute violent crime more aggressively. He says the office should “represent the victims of crime.”</li>
+            <li>“Restore the rule of law” and “break this cycle of crime and corruption.”</li>
+            <li>He says he agreed with only three of Raoul’s suits against the Trump administration, and that Raoul is rarely the lead plaintiff when many Democratic states sue together.</li>
+          </ul>
+          <p class="links"><a href="https://www.bobforillinois.com/" target="_blank" rel="noopener noreferrer">bobforillinois.com</a> · <a href="https://www.bobforillinois.com/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+
+      <article id="ag-kwame-raoul" class="candidate">
+        <img class="avatar" src="photos/kwame-raoul.webp" alt="Kwame Raoul">
+        <div>
+          <div class="who"><h3>Kwame Raoul</h3><span class="pill d">Democratic</span></div>
+          <p class="role">Incumbent · seeking a third term · former state senator</p>
+          <p class="bio">Unopposed in the Democratic primary. His office’s public docket has leaned on consumer protection, workers, civil rights, guns, and reproductive rights. Capitol News Illinois counted roughly 90 legal fights with the Trump administration in the last two years. The office says those cases kept Illinois from losing access to more than $8 billion in federal funds.</p>
+          <ul>
+            <li>If reelected, keep lawyers on staff and rebuild capacity after lawmakers cut the office budget by $10 million this year.</li>
+            <li>Says corruption has been a priority for eight years, including cases the office cannot announce because the U.S. attorney takes the public lead.</li>
+            <li>Will keep defending state laws on abortion, guns, and civil rights, and joining multistate cases when federal policy hits Illinois funding.</li>
+          </ul>
+          <p class="links"><a href="https://kwameraoul.com/" target="_blank" rel="noopener noreferrer">kwameraoul.com</a> · <a href="https://secure.actblue.com/donate/raoul-for-illinois-2" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="sos">
+    <div class="wrap">
+      <p class="kicker">State · Vote for one</p>
+      <h2>Secretary of state</h2>
+      <p class="sub">The office most people actually visit. Driver’s licenses and Real ID, vehicle titles and plates, business filings, organ-donor registration, and the state library. Four-year term.</p>
+
+      <article id="sos-diane-m-harris" class="candidate">
+        <img class="avatar" src="photos/diane-m-harris.webp" alt="Diane M. Harris">
+        <div>
+          <div class="who"><h3>Diane M. Harris</h3><span class="pill r">Republican</span></div>
+          <p class="role">Joliet Junior College trustee · Will County</p>
+          <p class="bio">She told Capitol News Illinois she would rather have voters than the incumbent’s campaign cash, and that she has advertised mainly on Joliet radio. She says she would keep much of the appointment system and still take walk-ins.</p>
+          <ul>
+            <li>Rules-of-the-road tests in English only. The office now offers them in Spanish and other languages, including Chinese and Polish.</li>
+            <li>Faster service at the counter and online, and a simpler business-licensing process.</li>
+            <li>Clean up voter rolls and “election integrity.” The secretary of state maintains some records used in elections. Illinois elections themselves are run by the State Board of Elections and local clerks.</li>
+          </ul>
+          <p class="links"><a href="https://www.harrisforsos.com/" target="_blank" rel="noopener noreferrer">harrisforsos.com</a> · <a href="https://www.harrisforsos.com/contribute" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+
+      <article id="sos-alexi-giannoulias" class="candidate">
+        <img class="avatar" src="photos/alexi-giannoulias.webp" alt="Alexi Giannoulias">
+        <div>
+          <div class="who"><h3>Alexi Giannoulias</h3><span class="pill d">Democratic</span></div>
+          <p class="role">Incumbent · also running for mayor of Chicago</p>
+          <p class="bio">He has filed for Chicago’s next mayoral race while seeking this second term. He told Capitol News Illinois he is focused on the job in front of him. Critics say a win in Chicago would mean leaving this office months into the term.</p>
+          <ul>
+            <li>Cites appointments, kiosks, a Chicago Real ID supercenter, and more services online so a license stop is not a lost workday.</li>
+            <li>Backed digital driver’s licenses, limits on state grants to libraries that ban books, and rules for e-bikes and e-scooters.</li>
+            <li>Second term: finish that work. He has also said license-plate-reader companies should not hand data to police to track immigrants or people seeking abortion care.</li>
+          </ul>
+          <p class="links"><a href="https://alexiforus.com/" target="_blank" rel="noopener noreferrer">alexiforus.com</a> · <a href="https://go.alexiforus.com/a/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="comptroller">
+    <div class="wrap">
+      <p class="kicker">State · Vote for one · Open seat</p>
+      <h2>Comptroller</h2>
+      <p class="sub">Pays the bills the legislature and governor have already approved, publishes the state’s checkbook, and enforces some wage rules by holding payments. Does not write the budget. Susana Mendoza is leaving after a decade to run for mayor of Chicago. A write-in line is on this race. The name below is not printed on it.</p>
+
+      <article id="comptroller-bryan-drew" class="candidate">
+        <img class="avatar" src="photos/bryan-drew.webp" alt="Bryan Drew">
+        <div>
+          <div class="who"><h3>Bryan Drew</h3><span class="pill r">Republican</span></div>
+          <p class="role">Attorney from Benton</p>
+          <p class="bio">Says he is not a politician and that his only client would be the taxpayer. He argues a Democrat who voted for the current budgets cannot be the watchdog of a Democratic governor and legislature. Spending decisions still sit with those two branches. The comptroller’s leverage is disclosure and which bills get paid when.</p>
+          <ul>
+            <li>Rebuild the office website so a resident can see, in plain language, where money went.</li>
+            <li>Track grants to nonprofits and use artificial intelligence to flag waste, fraud, and abuse.</li>
+            <li>Treat transparency as the path to lower spending and lower taxes. Says he would help the legislature if it takes up pension changes.</li>
+          </ul>
+          <p class="links"><a href="https://www.drewforillinois.com/" target="_blank" rel="noopener noreferrer">drewforillinois.com</a> · <a href="https://www.drewforillinois.com/contribute" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+
+      <article id="comptroller-margaret-croke" class="candidate">
+        <img class="avatar" src="photos/margaret-croke.webp" alt="Margaret Croke">
+        <div>
+          <div class="who"><h3>Margaret Croke</h3><span class="pill d">Democratic</span></div>
+          <p class="role">State representative, 12th District, since 2021 · chairs Financial Institutions</p>
+          <p class="bio">Chicago. Previously deputy chief of staff at the Department of Commerce and Economic Opportunity. She voted for the recent budgets Democrats credit with paying down the bill backlog and lifting the state’s credit. She calls the budget a moral document and says the job is to make every dollar traceable.</p>
+          <ul>
+            <li>A public “budget to bill” tool: from the line in the budget to the day the check goes out.</li>
+            <li>Connect the office’s software to other agencies, use predictive models to catch missed federal matches and fraud, and send staff to help small vendors and local governments with late audits.</li>
+            <li>Keep withholding pay from contractors who violate the Prevailing Wage Act. Change the Vendor Payment Program so finance firms cannot cherry-pick the receivables of larger vendors. Rebuild the rainy-day fund and make pension payments.</li>
+          </ul>
+          <p class="links"><a href="https://crokeforillinois.com/" target="_blank" rel="noopener noreferrer">crokeforillinois.com</a> · <a href="https://secure.actblue.com/donate/crokewebsite" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+
+      <h3>Filed write-in</h3>
+      <article id="comptroller-anna-schiefelbein" class="candidate">
+        <div class="avatar mono" aria-hidden="true">A</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Anna Schiefelbein</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Comptroller on the Kane County list and the Will County list. The lists do not state a party. A vote counts only where this declaration was filed.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="treasurer">
+    <div class="wrap">
+      <p class="kicker">State · Vote for one</p>
+      <h2>Treasurer</h2>
+      <p class="sub">Invests state cash, runs the Illinois Funds for local governments, holds the unclaimed-property list, and oversees Bright Start and Bright Directions college savings. Four-year term. No Republican filed for the primary. Solomon won the line as a write-in and is printed on the general-election ballot. A separate write-in line is also on that ballot. The name below is not printed on it.</p>
+
+      <article id="treasurer-max-solomon" class="candidate">
+        <img class="avatar" src="photos/max-solomon.jpg" alt="Max Solomon">
+        <div>
+          <div class="who"><h3>Max Solomon</h3><span class="pill r">Republican</span></div>
+          <p class="role">Attorney from Hazel Crest</p>
+          <p class="bio">DePaul and Valparaiso Law. Has been a Grande Prairie library trustee and an adjunct political-science instructor at South Suburban College. He dropped a long-shot race for governor and won more than 60,000 write-in votes in March to make this ballot. He had under $5,000 on hand on October 1, against Frerichs’s roughly $1.6 million.</p>
+          <ul>
+            <li>“Illinois first.” He says state money should not be invested with foreign governments, and that he would take a lower return to keep investments here. He did not name a Frerichs investment he considers political.</li>
+            <li>Use the office as “whistleblower-in-chief” on waste and fraud, including pressure on the legislature. Much of that is outside the treasurer’s formal powers.</li>
+            <li>His campaign also lists a public dashboard of state funds and a stronger Bright Start and Bright Directions.</li>
+          </ul>
+          <p class="links"><a href="https://maxsolomon.info/" target="_blank" rel="noopener noreferrer">maxsolomon.info</a> · <a href="https://secure.winred.com/friends-of-max-solomon/donate-copy-a8fecc4db938370d" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+
+      <article id="treasurer-michael-w-frerichs" class="candidate">
+        <img class="avatar" src="photos/mike-frerichs.jpg" alt="Michael W. Frerichs">
+        <div>
+          <div class="who"><h3>Michael W. Frerichs</h3><span class="pill d">Democratic</span></div>
+          <p class="role">Incumbent since 2015 · former state senator · grew up in Gifford</p>
+          <p class="bio">Won his first race by fewer than 10,000 votes. A win now would make him the longest-serving treasurer in state history. He describes the job as making money for the state, helping families save, and giving money back.</p>
+          <ul>
+            <li>Unclaimed property: he says the office returns about $1 million a day. This year that included $8.65 owed to Robert Prevost, now Pope Leo XIV, from an old PayPal account.</li>
+            <li>Cites a Morningstar turnaround for Bright Start, and investment earnings above $1.4 billion in fiscal 2026. Local governments in the Illinois Funds earn interest he says they then do not have to raise in property taxes.</li>
+            <li>Will keep Israel bonds. His test is return, safety, and diversification, and he says dropping them is a question for the legislature, not his office.</li>
+          </ul>
+          <p class="links"><a href="https://www.mikeforillinois.com/" target="_blank" rel="noopener noreferrer">mikeforillinois.com</a> · <a href="https://secure.actblue.com/donate/friends-of-frerichs" target="_blank" rel="noopener noreferrer">Donate</a></p>
+        </div>
+      </article>
+
+      <h3>Filed write-in</h3>
+      <article id="treasurer-timothea-papas" class="candidate">
+        <div class="avatar mono" aria-hidden="true">T</div>
+        <div>
+          <div class="who"><h3 class="notranslate" translate="no">Timothea Papas</h3><span class="pill o">Write-in</span></div>
+          <p class="role">Treasurer on the Kane County list and the Will County list. The lists do not state a party. A vote counts only where this declaration was filed.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <div class="finder" id="zip">
+      <form id="zip-form">
+        <div>
+          <label for="zip-code">ZIP code</label>
+          <input id="zip-code" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="60614" required>
+        </div>
+        <button type="submit">Show this ballot</button>
+      </form>
+      <p class="zip-note">A ZIP code can cross a district line. This shows every district that covers a real part of that ZIP. Your precinct uses only one. Sheriff, clerk, county board, and local questions come from the county clerk and are not in this list.</p>
+    </div>
+
+  <div class="finder where" id="where">
+      <p class="kicker">Where to vote</p>
+      <h2>Find your polling place.</h2>
+      <p class="zip-note">Election Day is Tuesday, November 3. Polls are open 6 a.m. to 7 p.m. If you are in line by 7, you can still vote. The State Board of Elections assigns the precinct polling place from the home address, not from a ZIP code alone.</p>
+      <form id="where-form">
+        <div>
+          <label for="where-number">Street number</label>
+          <input id="where-number" class="num" name="number" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-street">Street name</label>
+          <input id="where-street" class="street" name="street" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="where-zip">ZIP code</label>
+          <input id="where-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="60614" required>
+        </div>
+        <button type="submit">Find this address</button>
+      </form>
+      <div id="where-result" aria-live="polite"></div>
+    </div>
+
+  <div id="zip-result" aria-live="polite"></div>
+<section class="block" id="sample">
     <div class="wrap">
       <p class="kicker">How you vote</p>
       <h2>What the ballot looks like.</h2>
@@ -742,360 +1102,7 @@
     </div>
   </section>
 
-  <section class="block" id="senate">
-    <div class="wrap">
-      <p class="kicker">Federal · Vote for one · Open seat</p>
-      <h2>U.S. Senate</h2>
-      <p class="sub">Durbin is retiring. The winner is one of 100 votes on federal law, spending, treaties, and judges. Six-year term. Primary was March 17.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/don-tracy.webp" alt="Don Tracy">
-        <div>
-          <div class="who"><h3>Don Tracy</h3><span class="pill r">Republican</span></div>
-          <p class="role">Attorney · former Illinois Republican Party chair · won the primary with 40%</p>
-          <p class="bio">Springfield lawyer and former chair of the Illinois Gaming Board, from Mt. Sterling. He says he is running on costs, safety, and a voice for the whole state, not only Chicago and Cook County.</p>
-          <ul>
-            <li>Lower taxes, energy bills, and health-care costs, with an all-of-the-above energy policy so rates fall and the lights stay on.</li>
-            <li>Back police, hold violent offenders accountable, and enforce immigration law. He opposes taxpayer-funded benefits for people here illegally.</li>
-            <li>Less federal regulation on small business, manufacturing, and farms, and tighter control of federal spending.</li>
-          </ul>
-          <p class="links"><a href="https://dontracyforil.com/" target="_blank" rel="noopener noreferrer">dontracyforil.com</a> · <a href="https://secure.winred.com/dontracyforil/contribute" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/juliana-stratton.webp" alt="Juliana Stratton">
-        <div>
-          <div class="who"><h3>Juliana Stratton</h3><span class="pill d">Democratic</span></div>
-          <p class="role">Lieutenant governor since 2019 · former state representative · won the primary with 40.4%</p>
-          <p class="bio">South Side of Chicago. Daughter of a Navy veteran and a Chicago public-school teacher, and a mother of four. She finished ahead of Raja Krishnamoorthi and Robin Kelly, and she is not taking corporate PAC money in this race.</p>
-          <ul>
-            <li>$25 federal minimum wage, a larger earned-income credit and child tax credit, and a middle-class tax cut paid for by higher taxes on income above $1 million.</li>
-            <li>Medicare for All, including home care, hearing, and vision. She opposes the current tariffs, which she calls a tax on groceries and goods.</li>
-            <li>Restore Roe-level abortion protections, pass the John Lewis Voting Rights Act and gun laws, and abolish ICE. Her housing plan targets hedge-fund home purchases and algorithm-set rents.</li>
-          </ul>
-          <p class="links"><a href="https://www.julianastratton.com/" target="_blank" rel="noopener noreferrer">julianastratton.com</a> · <a href="https://secure.actblue.com/donate/jfi-landingpage" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/whitfield-harrington-jr.webp" alt="Whitfield Harrington Jr.">
-        <div>
-          <div class="who"><h3>Whitfield Harrington Jr.</h3><span class="pill o">American Center</span></div>
-          <p class="role">Schaumburg pastor · former financial-services professional · party he founded</p>
-          <p class="bio">Degree from Delta State. He worked in banks and insurance, then has pastored in Chicago since 2013. He built the American Center Party for voters who think both major parties have moved to the edges. A finish of 5% would make it an established party in Illinois.</p>
-          <ul>
-            <li>End the Iran war, then ban oil-market speculation by people who never take delivery. He says that would cut prices across the economy.</li>
-            <li>Direct primary care, paying the doctor instead of routing routine care through insurance. Free community college.</li>
-            <li>Keep tariffs off food. Use them to stop dumping that hurts U.S. factories, and negotiate them in private. He says current immigration enforcement has “crossed the line.”</li>
-          </ul>
-          <p class="links"><a href="https://whit4ilsenate.com/" target="_blank" rel="noopener noreferrer">whit4ilsenate.com</a> · <a href="https://secure.anedot.com/whitfield-harrington-for-illinois/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="block" id="governor">
-    <div class="wrap">
-      <p class="kicker">State · Vote for one ticket</p>
-      <h2>Governor and lieutenant governor</h2>
-      <p class="sub">One choice elects both. The governor signs or vetoes laws, proposes the budget, and appoints agency heads. The lieutenant governor succeeds the governor and takes the duties assigned. A write-in line is on this race. The names below are not printed on it.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/darren-bailey.webp" alt="Darren Bailey">
-        <div>
-          <div class="who"><h3>Darren Bailey</h3><span class="pill r">Republican</span></div>
-          <p class="role">With Aaron Del Mar, Cook County Republican Party chair · farmer from Xenia · 2022 nominee</p>
-          <p class="bio">Former state representative and senator, in a rematch with Pritzker. He won the March primary with 53.3%. Donald Trump endorsed him in September 2026. This guide has no separate photo of Del Mar.</p>
-          <ul>
-            <li>Cut property taxes and state spending. He argues Springfield should audit what it already spends instead of adding programs.</li>
-            <li>Repeal the SAFE-T Act and bring back cash bail. Repeal the TRUST Act so local police can work with federal immigration enforcement, and end state spending on undocumented residents.</li>
-            <li>He personally opposes abortion and has said he will not try to change Illinois abortion law.</li>
-          </ul>
-          <p class="links"><a href="https://baileyforillinois.com/" target="_blank" rel="noopener noreferrer">baileyforillinois.com</a> · <a href="https://secure.winred.com/bailey-for-illinois/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/jb-pritzker.webp" alt="J.B. Pritzker">
-        <div>
-          <div class="who"><h3>J.B. Pritzker</h3><span class="pill d">Democratic</span></div>
-          <p class="role">Incumbent since 2019, with Christian Mitchell, a former state representative and deputy governor</p>
-          <p class="bio">Businessman seeking a third term, which no Illinois Democrat has won. Mitchell would replace Stratton, who is running for Senate. This guide has no separate photo of Mitchell. Pritzker campaigns on wages, abortion access, schools, and budgets he says are balanced, along with credit-rating upgrades.</p>
-          <ul>
-            <li>Points to the $15 minimum wage, the ended state grocery tax, a doubled child tax credit, a $35 insulin cap, and medical-debt relief. Wants more housing.</li>
-            <li>Abortion-access laws that made Illinois a destination for care. He says health care is a right and opposes federal Medicaid cuts.</li>
-            <li>Signed limits on civil immigration arrests near courthouses, hospitals, colleges, and day cares. Says people convicted of violent crimes should be deported, and that he is open to changes in SAFE-T pretrial rules.</li>
-          </ul>
-          <p class="links"><a href="https://jbpritzker.com/" target="_blank" rel="noopener noreferrer">jbpritzker.com</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/collin-corbett.webp" alt="Collin Corbett">
-        <div>
-          <div class="who"><h3>Collin Corbett</h3><span class="pill i">Independent</span></div>
-          <p class="role">With Carolyn Schofield, a former McHenry County Board member · Palatine consultant</p>
-          <p class="bio">Owner of Cor Strategies. A Republican strategist for about 20 years who left the party to run. This guide has no separate photo of Schofield. He calls affordability the race and says neither major-party nominee will fix property taxes.</p>
-          <ul>
-            <li>Property-tax relief first, then spending restraint, cheaper gas and power, fewer data centers, and more housing.</li>
-            <li>Has proposed taxing some services so property taxes and the sales tax on essentials can come down.</li>
-            <li>Supports abortion rights. Would amend the TRUST Act so police can work with federal agents on violent cases. Supports more gun laws and health-care price transparency, including direct primary care.</li>
-          </ul>
-          <p class="links"><a href="https://www.collinforil.com/" target="_blank" rel="noopener noreferrer">collinforil.com</a> · <a href="https://www.collinforil.com/contribute/" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <h3>Filed for governor</h3>
-      <p class="sub">These people filed a declaration of intent to be a write-in. The lists do not state a party. A vote counts only in the places where that declaration was filed. The State Board of Elections does not take these filings. Sources: the <a href="https://clerk.kanecountyil.gov/Elections/Documents/List%20of%20Write-in%20Candidates%20Who%20Filed%20Declaration%20of%20Intent%20%20GE2026.pdf" target="_blank" rel="noopener noreferrer">Kane County Clerk’s list</a>, September 3, 2026, and the <a href="https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/will-il.connect.clarityelections.com/Elections/2026GeneralElection/Candidates/WRITEINLIST.pdf" target="_blank" rel="noopener noreferrer">Will County Clerk’s list</a>, September 8, 2026, marked final. This page does not have every county’s list.</p>
-
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">R</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Richard Benedict Mayers</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Will County’s list names governor. Kane County’s list names governor and lieutenant governor.</p>
-        </div>
-      </article>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">M</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Misty Metroz</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Governor on the Kane County list. Not on the Will County list.</p>
-        </div>
-      </article>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">G</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Griselda Romero</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Governor on the Kane County list and the Will County list.</p>
-        </div>
-      </article>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">E</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Elizabeth Ann Sebesta</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Governor on the Kane County list. Not on the Will County list.</p>
-        </div>
-      </article>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">P</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Patricia L. Tilman</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Governor on the Kane County list. Not on the Will County list.</p>
-        </div>
-      </article>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">R</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Rafael Varela</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Governor. Will County’s list spells the name Rafael Varela. Kane County’s list spells it Rafael Verala.</p>
-        </div>
-      </article>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">M</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Mike Vick</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Governor on the Kane County list and the Will County list.</p>
-        </div>
-      </article>
-
-      <h3>Filed for lieutenant governor</h3>
-      <p class="sub">The ballot is one ticket. These declarations name lieutenant governor, not a full ticket, so they are listed on their own.</p>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">E</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Eyde Arndell</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Lieutenant governor on the Will County list. Not on the Kane County list.</p>
-        </div>
-      </article>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">J</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Joseph L. Mosley</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Lieutenant governor on the Kane County list. Not on the Will County list.</p>
-        </div>
-      </article>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">G</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Gary Pierce</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Lieutenant governor on the Kane County list and the Will County list.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="block" id="ag">
-    <div class="wrap">
-      <p class="kicker">State · Vote for one</p>
-      <h2>Attorney general</h2>
-      <p class="sub">Lawyer for the state. Consumer fraud, civil rights, antitrust, some public-corruption work, and lawsuits to defend Illinois statutes and funding. Criminal cases are mostly local state’s attorneys. Four-year term.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/robert-w-fioretti.webp" alt="Robert W. Fioretti">
-        <div>
-          <div class="who"><h3>Robert W. Fioretti</h3><span class="pill r">Republican</span></div>
-          <p class="role">Former Chicago alderman · attorney · Democrat until he switched parties</p>
-          <p class="bio">Known as Bob Fioretti. Has run for Chicago mayor, Cook County board president, and Cook County state’s attorney. He says the office spends too much time on national lawsuits and too little on crime and corruption in Illinois.</p>
-          <ul>
-            <li>Push state’s attorneys to prosecute violent crime more aggressively. He says the office should “represent the victims of crime.”</li>
-            <li>“Restore the rule of law” and “break this cycle of crime and corruption.”</li>
-            <li>He says he agreed with only three of Raoul’s suits against the Trump administration, and that Raoul is rarely the lead plaintiff when many Democratic states sue together.</li>
-          </ul>
-          <p class="links"><a href="https://www.bobforillinois.com/" target="_blank" rel="noopener noreferrer">bobforillinois.com</a> · <a href="https://www.bobforillinois.com/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/kwame-raoul.webp" alt="Kwame Raoul">
-        <div>
-          <div class="who"><h3>Kwame Raoul</h3><span class="pill d">Democratic</span></div>
-          <p class="role">Incumbent · seeking a third term · former state senator</p>
-          <p class="bio">Unopposed in the Democratic primary. His office’s public docket has leaned on consumer protection, workers, civil rights, guns, and reproductive rights. Capitol News Illinois counted roughly 90 legal fights with the Trump administration in the last two years. The office says those cases kept Illinois from losing access to more than $8 billion in federal funds.</p>
-          <ul>
-            <li>If reelected, keep lawyers on staff and rebuild capacity after lawmakers cut the office budget by $10 million this year.</li>
-            <li>Says corruption has been a priority for eight years, including cases the office cannot announce because the U.S. attorney takes the public lead.</li>
-            <li>Will keep defending state laws on abortion, guns, and civil rights, and joining multistate cases when federal policy hits Illinois funding.</li>
-          </ul>
-          <p class="links"><a href="https://kwameraoul.com/" target="_blank" rel="noopener noreferrer">kwameraoul.com</a> · <a href="https://secure.actblue.com/donate/raoul-for-illinois-2" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="block" id="sos">
-    <div class="wrap">
-      <p class="kicker">State · Vote for one</p>
-      <h2>Secretary of state</h2>
-      <p class="sub">The office most people actually visit. Driver’s licenses and Real ID, vehicle titles and plates, business filings, organ-donor registration, and the state library. Four-year term.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/diane-m-harris.webp" alt="Diane M. Harris">
-        <div>
-          <div class="who"><h3>Diane M. Harris</h3><span class="pill r">Republican</span></div>
-          <p class="role">Joliet Junior College trustee · Will County</p>
-          <p class="bio">She told Capitol News Illinois she would rather have voters than the incumbent’s campaign cash, and that she has advertised mainly on Joliet radio. She says she would keep much of the appointment system and still take walk-ins.</p>
-          <ul>
-            <li>Rules-of-the-road tests in English only. The office now offers them in Spanish and other languages, including Chinese and Polish.</li>
-            <li>Faster service at the counter and online, and a simpler business-licensing process.</li>
-            <li>Clean up voter rolls and “election integrity.” The secretary of state maintains some records used in elections. Illinois elections themselves are run by the State Board of Elections and local clerks.</li>
-          </ul>
-          <p class="links"><a href="https://www.harrisforsos.com/" target="_blank" rel="noopener noreferrer">harrisforsos.com</a> · <a href="https://www.harrisforsos.com/contribute" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/alexi-giannoulias.webp" alt="Alexi Giannoulias">
-        <div>
-          <div class="who"><h3>Alexi Giannoulias</h3><span class="pill d">Democratic</span></div>
-          <p class="role">Incumbent · also running for mayor of Chicago</p>
-          <p class="bio">He has filed for Chicago’s next mayoral race while seeking this second term. He told Capitol News Illinois he is focused on the job in front of him. Critics say a win in Chicago would mean leaving this office months into the term.</p>
-          <ul>
-            <li>Cites appointments, kiosks, a Chicago Real ID supercenter, and more services online so a license stop is not a lost workday.</li>
-            <li>Backed digital driver’s licenses, limits on state grants to libraries that ban books, and rules for e-bikes and e-scooters.</li>
-            <li>Second term: finish that work. He has also said license-plate-reader companies should not hand data to police to track immigrants or people seeking abortion care.</li>
-          </ul>
-          <p class="links"><a href="https://alexiforus.com/" target="_blank" rel="noopener noreferrer">alexiforus.com</a> · <a href="https://go.alexiforus.com/a/donate" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="block" id="comptroller">
-    <div class="wrap">
-      <p class="kicker">State · Vote for one · Open seat</p>
-      <h2>Comptroller</h2>
-      <p class="sub">Pays the bills the legislature and governor have already approved, publishes the state’s checkbook, and enforces some wage rules by holding payments. Does not write the budget. Susana Mendoza is leaving after a decade to run for mayor of Chicago. A write-in line is on this race. The name below is not printed on it.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/bryan-drew.webp" alt="Bryan Drew">
-        <div>
-          <div class="who"><h3>Bryan Drew</h3><span class="pill r">Republican</span></div>
-          <p class="role">Attorney from Benton</p>
-          <p class="bio">Says he is not a politician and that his only client would be the taxpayer. He argues a Democrat who voted for the current budgets cannot be the watchdog of a Democratic governor and legislature. Spending decisions still sit with those two branches. The comptroller’s leverage is disclosure and which bills get paid when.</p>
-          <ul>
-            <li>Rebuild the office website so a resident can see, in plain language, where money went.</li>
-            <li>Track grants to nonprofits and use artificial intelligence to flag waste, fraud, and abuse.</li>
-            <li>Treat transparency as the path to lower spending and lower taxes. Says he would help the legislature if it takes up pension changes.</li>
-          </ul>
-          <p class="links"><a href="https://www.drewforillinois.com/" target="_blank" rel="noopener noreferrer">drewforillinois.com</a> · <a href="https://www.drewforillinois.com/contribute" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/margaret-croke.webp" alt="Margaret Croke">
-        <div>
-          <div class="who"><h3>Margaret Croke</h3><span class="pill d">Democratic</span></div>
-          <p class="role">State representative, 12th District, since 2021 · chairs Financial Institutions</p>
-          <p class="bio">Chicago. Previously deputy chief of staff at the Department of Commerce and Economic Opportunity. She voted for the recent budgets Democrats credit with paying down the bill backlog and lifting the state’s credit. She calls the budget a moral document and says the job is to make every dollar traceable.</p>
-          <ul>
-            <li>A public “budget to bill” tool: from the line in the budget to the day the check goes out.</li>
-            <li>Connect the office’s software to other agencies, use predictive models to catch missed federal matches and fraud, and send staff to help small vendors and local governments with late audits.</li>
-            <li>Keep withholding pay from contractors who violate the Prevailing Wage Act. Change the Vendor Payment Program so finance firms cannot cherry-pick the receivables of larger vendors. Rebuild the rainy-day fund and make pension payments.</li>
-          </ul>
-          <p class="links"><a href="https://crokeforillinois.com/" target="_blank" rel="noopener noreferrer">crokeforillinois.com</a> · <a href="https://secure.actblue.com/donate/crokewebsite" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <h3>Filed write-in</h3>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">A</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Anna Schiefelbein</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Comptroller on the Kane County list and the Will County list. The lists do not state a party. A vote counts only where this declaration was filed.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="block" id="treasurer">
-    <div class="wrap">
-      <p class="kicker">State · Vote for one</p>
-      <h2>Treasurer</h2>
-      <p class="sub">Invests state cash, runs the Illinois Funds for local governments, holds the unclaimed-property list, and oversees Bright Start and Bright Directions college savings. Four-year term. No Republican filed for the primary. Solomon won the line as a write-in and is printed on the general-election ballot. A separate write-in line is also on that ballot. The name below is not printed on it.</p>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/max-solomon.jpg" alt="Max Solomon">
-        <div>
-          <div class="who"><h3>Max Solomon</h3><span class="pill r">Republican</span></div>
-          <p class="role">Attorney from Hazel Crest</p>
-          <p class="bio">DePaul and Valparaiso Law. Has been a Grande Prairie library trustee and an adjunct political-science instructor at South Suburban College. He dropped a long-shot race for governor and won more than 60,000 write-in votes in March to make this ballot. He had under $5,000 on hand on October 1, against Frerichs’s roughly $1.6 million.</p>
-          <ul>
-            <li>“Illinois first.” He says state money should not be invested with foreign governments, and that he would take a lower return to keep investments here. He did not name a Frerichs investment he considers political.</li>
-            <li>Use the office as “whistleblower-in-chief” on waste and fraud, including pressure on the legislature. Much of that is outside the treasurer’s formal powers.</li>
-            <li>His campaign also lists a public dashboard of state funds and a stronger Bright Start and Bright Directions.</li>
-          </ul>
-          <p class="links"><a href="https://maxsolomon.info/" target="_blank" rel="noopener noreferrer">maxsolomon.info</a> · <a href="https://secure.winred.com/friends-of-max-solomon/donate-copy-a8fecc4db938370d" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <img class="avatar" src="photos/mike-frerichs.jpg" alt="Michael W. Frerichs">
-        <div>
-          <div class="who"><h3>Michael W. Frerichs</h3><span class="pill d">Democratic</span></div>
-          <p class="role">Incumbent since 2015 · former state senator · grew up in Gifford</p>
-          <p class="bio">Won his first race by fewer than 10,000 votes. A win now would make him the longest-serving treasurer in state history. He describes the job as making money for the state, helping families save, and giving money back.</p>
-          <ul>
-            <li>Unclaimed property: he says the office returns about $1 million a day. This year that included $8.65 owed to Robert Prevost, now Pope Leo XIV, from an old PayPal account.</li>
-            <li>Cites a Morningstar turnaround for Bright Start, and investment earnings above $1.4 billion in fiscal 2026. Local governments in the Illinois Funds earn interest he says they then do not have to raise in property taxes.</li>
-            <li>Will keep Israel bonds. His test is return, safety, and diversification, and he says dropping them is a question for the legislature, not his office.</li>
-          </ul>
-          <p class="links"><a href="https://www.mikeforillinois.com/" target="_blank" rel="noopener noreferrer">mikeforillinois.com</a> · <a href="https://secure.actblue.com/donate/friends-of-frerichs" target="_blank" rel="noopener noreferrer">Donate</a></p>
-        </div>
-      </article>
-
-      <h3>Filed write-in</h3>
-      <article class="candidate">
-        <div class="avatar mono" aria-hidden="true">T</div>
-        <div>
-          <div class="who"><h3 class="notranslate" translate="no">Timothea Papas</h3><span class="pill o">Write-in</span></div>
-          <p class="role">Treasurer on the Kane County list and the Will County list. The lists do not state a party. A vote counts only where this declaration was filed.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-</main>
+  </main>
 
 <footer>
   <div class="wrap">
@@ -2056,7 +2063,16 @@
     });
   }
 
-  function paintPeople(parent, people, heading, lockName) {
+  function candidateSlug(text) {
+    var out = "";
+    String(text || "").toLowerCase().split("").forEach(function (char) {
+      if ((char >= "a" && char <= "z") || (char >= "0" && char <= "9")) out += char;
+      else if ((char === " " || char === "-") && out && out.charAt(out.length - 1) !== "-") out += "-";
+    });
+    return out.replace(/^-+|-+$/g, "") || "item";
+  }
+
+  function paintPeople(parent, people, heading, lockName, prefix) {
     parent.replaceChildren();
     if (heading) parent.appendChild(el("h3", lockName ? "notranslate" : "", heading));
     var called = people.filter(function (person) { return person.winner; })[0];
@@ -2082,7 +2098,18 @@
         block.appendChild(img);
       }
       var copy = el("div");
-      copy.appendChild(el("strong", "notranslate", person.name));
+      var strong = el("strong", "notranslate");
+      strong.setAttribute("translate", "no");
+      var anchor = prefix ? candidateSlug(prefix) + "-" + candidateSlug(person.name) : "";
+      if (anchor && document.getElementById(anchor)) {
+        var jump = document.createElement("a");
+        jump.href = "#" + anchor;
+        jump.textContent = person.name;
+        strong.appendChild(jump);
+      } else {
+        strong.textContent = person.name;
+      }
+      copy.appendChild(strong);
       copy.appendChild(document.createTextNode(" "));
       copy.appendChild(el("span", "pill " + info[2], info[0]));
       copy.appendChild(el("div", "result-meta", commas(person.votes) + " votes · " + person.percentLabel));
@@ -2125,14 +2152,14 @@
         winner: !!person.winner,
         percent: pct(person.percentLabel, person.percent)
       };
-    }), current.office);
+    }), current.office, false, current.id);
     paintMap(current);
     var county = selected && current.counties[selected];
     if (county) {
       var named = slot.querySelector('path[data-fips="' + selected + '"]');
       var place = (named && named.getAttribute("data-name")) || county.name || "This county";
       if (place.toLowerCase().slice(-6) !== "county") place += " County";
-      paintPeople(detailEl, countyRows(current, county), place, true);
+      paintPeople(detailEl, countyRows(current, county), place, true, current.id);
       detailEl.appendChild(el("p", "result-meta", (county.percentIn || 0) + "% of this county’s expected vote is in."));
     } else {
       detailEl.replaceChildren();

@@ -7,6 +7,8 @@ county results map. Issue text is not invented.
 import html
 import json
 import os
+import re
+from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PREVIEW = os.path.join(ROOT, "preview")
@@ -33,6 +35,39 @@ def office_id(text):
             chars.append("-")
     slug = "".join(chars).strip("-")
     return slug or "race"
+
+
+def candidate_id(prefix, name):
+    return office_id(prefix) + "-" + office_id(name)
+
+
+def polls_closed(races, now=None):
+    """True after the latest close time NBC published for this state.
+
+    'Begin closing' means the first polls close then, so those states get one
+    more hour before this page treats the polls as closed.
+    """
+    now = now or datetime.now(timezone.utc)
+    et = timezone(timedelta(hours=-5))
+    closes = []
+    for race in races or []:
+        text = race.get("pollsClose") or ""
+        match = re.search(r"(\d{1,2})(?::(\d{2}))?\s*(AM|PM)", text, re.I)
+        if not match:
+            continue
+        hour = int(match.group(1))
+        minute = int(match.group(2) or 0)
+        if match.group(3).upper() == "PM" and hour != 12:
+            hour += 12
+        if match.group(3).upper() == "AM" and hour == 12:
+            hour = 0
+        close = datetime(2026, 11, 3, hour, minute, tzinfo=et)
+        if "begin closing" in text.lower():
+            close += timedelta(hours=1)
+        closes.append(close.astimezone(timezone.utc))
+    if not closes:
+        return now >= datetime(2026, 11, 4, 12, tzinfo=timezone.utc)
+    return now >= max(closes)
 
 
 def party_of(code):
@@ -116,7 +151,7 @@ def photo(person, compact):
     return '<div class="avatar mono" aria-hidden="true">%s</div>' % esc(letter)
 
 
-def person_row(person, compact, guide, district=None):
+def person_row(person, compact, guide, district=None, anchor=""):
     info = person_info(guide, person, district)
     issues = [item.strip() for item in (info.get("issues") or []) if isinstance(item, str) and item.strip()][:4]
     bio = (info.get("bio") or "").strip()
@@ -146,8 +181,9 @@ def person_row(person, compact, guide, district=None):
         links.append('<a href="%s" target="_blank" rel="noopener noreferrer">Donate</a>' % esc(donate))
     if links:
         bits.append('<p class="links">%s</p>' % " · ".join(links))
+    ident = (' id="%s"' % esc(anchor)) if anchor else ""
     return (
-        '<article class="candidate%s">' % (" compact" if use_compact else "")
+        '<article class="candidate%s"%s>' % (" compact" if use_compact else "", ident)
         + photo(person, use_compact)
         + "<div>%s</div></article>" % "".join(bits)
     )
@@ -254,7 +290,7 @@ def footer(state_name, guide):
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
 <script src="live.js?v=16"></script>
-<script src="state.js?v=uthouse"></script>
+<script src="state.js?v=closedtop"></script>
 </body>
 </html>
 """ % (esc(state_name), names)
@@ -320,7 +356,7 @@ def office_head(race, guide):
     return "".join(parts)
 
 
-def how_you_vote(data, statewide, measures, house, sheet):
+def how_you_vote(data, statewide, measures, house, sheet, house_below=True):
     steps = [
         '<li><button type="button" data-step="mark">Mark one choice on a contest. Next and Back move one contest at a time. This sample puts the mark to the left of a name.</button></li>',
         '<li><button type="button" data-step="order">Party order here is Republican, then Democratic, then any other candidate. Your county may print a different order.</button></li>',
@@ -328,7 +364,8 @@ def how_you_vote(data, statewide, measures, house, sheet):
     if measures:
         steps.append('<li><button type="button" data-step="measure">A measure is a yes or no question. It is not a race between candidates.</button></li>')
     if house:
-        steps.append('<li><button type="button" data-step="house">U.S. House depends on your district and is listed farther down this page. This sample does not include it.</button></li>')
+        where = "farther down this page" if house_below else "with the candidates above"
+        steps.append('<li><button type="button" data-step="house">U.S. House depends on your district and is listed %s. This sample does not include it.</button></li>' % where)
     return """<section class="block" id="sample">
     <div class="wrap">
       <p class="kicker">How you vote</p>
@@ -357,7 +394,7 @@ def how_you_vote(data, statewide, measures, house, sheet):
   </section>""" % (esc(data["name"]), "\n            ".join(steps), esc(data["name"]), sheet)
 
 
-def before_you_go(data, guide, statewide, house):
+def before_you_go(data, guide, statewide, house, house_below=True):
     source = guide.get("ballotSource") if valid_url(guide.get("ballotSource")) else ""
     if source:
         names = (
@@ -375,7 +412,7 @@ def before_you_go(data, guide, statewide, house):
     if any(office == "Senate" for office in offices):
         choosing += " U.S. Senate is one seat. The term is six years."
     if house:
-        choosing += " U.S. House is one seat in your district and is listed farther down."
+        choosing += " U.S. House is one seat in your district and is listed " + ("farther down." if house_below else "with the candidates above.")
     heading = "Statewide contests, then your district." if house else "Statewide contests on this page."
     return """<section class="block" id="read">
     <div class="wrap">
@@ -411,18 +448,33 @@ def page(data):
     house = next((race for race in races if race.get("kind") == "house"), None)
     close = next((race.get("pollsClose") for race in races if race.get("pollsClose")), "")
     when = (close + ".") if close else "Poll times come from your state election office."
-    nav = ['<a href="#results">Results</a>', '<a href="#sample">The ballot</a>', '<a href="#read">Before you go</a>']
+    closed = polls_closed(races)
+    office_links = []
     for race in statewide:
-        nav.append('<a href="#%s">%s</a>' % (office_id(race.get("office")), esc(race.get("office", "").replace(" Of ", " of "))))
+        office_links.append('<a href="#%s">%s</a>' % (office_id(race.get("office")), esc(race.get("office", "").replace(" Of ", " of "))))
     if measures:
-        nav.append('<a href="#measures">Measures</a>')
+        office_links.append('<a href="#measures">Measures</a>')
     if house:
-        nav.append('<a href="#house">U.S. House</a>')
-    nav.append('<a href="#where">Where to vote</a>')
+        office_links.append('<a href="#house">U.S. House</a>')
+    if closed:
+        nav = ['<a href="#results">Results</a>'] + office_links + [
+            '<a href="#where">Where to vote</a>',
+            '<a href="#sample">The ballot</a>',
+            '<a href="#read">Before you go</a>',
+        ]
+    else:
+        nav = [
+            '<a href="#results">Results</a>',
+            '<a href="#sample">The ballot</a>',
+            '<a href="#read">Before you go</a>',
+        ] + office_links + ['<a href="#where">Where to vote</a>']
     cards = []
     for race in statewide:
         people = [with_found(data.get("code"), person) for person in race.get("candidates") or [] if not is_writein(person)]
-        body = "\n".join(person_row(person, False, guide) for person in people)
+        body = "\n".join(
+            person_row(person, False, guide, anchor=candidate_id(race.get("office"), person.get("name")))
+            for person in people
+        )
         cards.append(
             '<section class="block" id="%s"><div class="wrap">%s%s</div></section>'
             % (office_id(race.get("office")), office_head(race, guide), body)
@@ -447,7 +499,13 @@ def page(data):
             people = [with_found(data.get("code"), person) for person in district.get("candidates") or [] if not is_writein(person)]
             districts.append("<h3>%s</h3>\n%s" % (
                 esc(district.get("name")),
-                "\n".join(person_row(person, True, guide, district.get("name")) for person in people),
+                "\n".join(
+                    person_row(
+                        person, True, guide, district.get("name"),
+                        anchor=candidate_id(district.get("name"), person.get("name")),
+                    )
+                    for person in people
+                ),
             ))
         house_html = (
             '<section class="block" id="house"><div class="wrap"><h2>U.S. House.</h2>'
@@ -455,6 +513,16 @@ def page(data):
             % "\n".join(districts)
         )
     sheet = "\n".join(contest(race) for race in statewide + measures)
+    where = address_form(data, guide)
+    sample = how_you_vote(data, statewide, measures, house, sheet, house_below=not closed)
+    before = before_you_go(data, guide, statewide, house, house_below=not closed)
+    lists = "\n".join(part for part in ("\n".join(cards), measure_html, house_html) if part.strip())
+    if closed:
+        hero_where = ""
+        after_results = "\n".join(part for part in (lists, where, sample, before) if part.strip())
+    else:
+        hero_where = where
+        after_results = "\n".join(part for part in (sample, before, lists) if part.strip())
     links = []
     for race in statewide:
         links.append('<a href="#%s"><strong>%s</strong><span>%s</span></a>' % (
@@ -477,7 +545,7 @@ def page(data):
 <title>Leaders.vote · %s, November 3, 2026</title>
 <meta name="description" content="Leaders.vote guide to the %s general election on November 3, 2026. Candidates, sample ballot, and unofficial results. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%%3E%%3Crect width='32' height='32' fill='%%231c1915'/%%3E%%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%%23f4f0e6'%%3EL%%3C/text%%3E%%3C/svg%%3E">
-<link rel="stylesheet" href="guide.css?v=maphover">
+<link rel="stylesheet" href="guide.css?v=closedtop">
 </head>
 <body data-state="%s">
 %s
@@ -517,10 +585,6 @@ def page(data):
     </div>
   </section>
   %s
-  %s
-  %s
-  %s
-  %s
 </main>
 %s""" % (
         esc(data["name"]),
@@ -530,14 +594,10 @@ def page(data):
         esc(data["name"]),
         deck,
         esc(when),
-        address_form(data, guide),
+        hero_where,
         "\n".join(links),
         esc(data["name"]),
-        how_you_vote(data, statewide, measures, house, sheet),
-        before_you_go(data, guide, statewide, house),
-        "\n".join(cards),
-        measure_html,
-        house_html,
+        after_results,
         footer(data["name"], guide),
     )
 
@@ -556,7 +616,7 @@ def index_page(states):
 <title>Leaders.vote · November 3, 2026</title>
 <meta name="description" content="Leaders.vote is an independent voter guide for every state in the November 3, 2026 general election. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%%3E%%3Crect width='32' height='32' fill='%%231c1915'/%%3E%%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%%23f4f0e6'%%3EL%%3C/text%%3E%%3C/svg%%3E">
-<link rel="stylesheet" href="guide.css?v=maphover">
+<link rel="stylesheet" href="guide.css?v=closedtop">
 </head>
 <body>
 %s

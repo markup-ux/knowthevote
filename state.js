@@ -61,7 +61,31 @@
     return el("span", "chip " + (PARTY_CLASS[party] || "o"), PARTY_LABEL[party] || party.toUpperCase());
   }
 
-  function people(parent, rows) {
+  function candidateSlug(text) {
+    var out = "";
+    String(text || "").toLowerCase().split("").forEach(function (char) {
+      if ((char >= "a" && char <= "z") || (char >= "0" && char <= "9")) out += char;
+      else if ((char === " " || char === "-") && out && out.charAt(out.length - 1) !== "-") out += "-";
+    });
+    return out.replace(/^-+|-+$/g, "") || "item";
+  }
+
+  function nameNode(person, prefix) {
+    var strong = el("strong", "notranslate");
+    strong.setAttribute("translate", "no");
+    var id = prefix ? candidateSlug(prefix) + "-" + candidateSlug(person.name) : "";
+    if (id && document.getElementById(id)) {
+      var link = document.createElement("a");
+      link.href = "#" + id;
+      link.textContent = person.name;
+      strong.appendChild(link);
+    } else {
+      strong.textContent = person.name;
+    }
+    return strong;
+  }
+
+  function people(parent, rows, prefix) {
     rows.forEach(function (person) {
       var block = el("div", "person" + (person.photo ? "" : " no-photo"));
       if (person.photo) {
@@ -76,9 +100,7 @@
       }
       var copy = el("div");
       var title = el("div");
-      var name = el("strong", "notranslate", person.name);
-      name.setAttribute("translate", "no");
-      title.appendChild(name);
+      title.appendChild(nameNode(person, prefix));
       var mark = chip(person.party);
       if (mark) title.appendChild(mark);
       copy.appendChild(title);
@@ -142,10 +164,10 @@
         var called = rows.filter(function (person) { return person.winner && (person.votes || 0) > 0; })[0];
         summaryEl.appendChild(el("h3", "", district.name || "District"));
         if (called) summaryEl.appendChild(el("p", "", "The Associated Press reports a winner: " + called.name + "."));
-        people(summaryEl, rows);
+        people(summaryEl, rows, district.name || "District");
       });
     } else {
-      people(summaryEl, item.candidates || []);
+      people(summaryEl, item.candidates || [], item.office || "");
     }
     paintMap(item);
     detailEl.textContent = "";
@@ -155,7 +177,7 @@
       detailEl.appendChild(el("h3", "", housePlace));
       (item.counties[selected].slices || []).forEach(function (slice) {
         detailEl.appendChild(el("h3", "", slice.name || "District"));
-        people(detailEl, slice.candidates || []);
+        people(detailEl, slice.candidates || [], slice.name || "District");
       });
     } else if (selected && item.kind !== "house" && (item.counties || oneShape())) {
       var path = svg && svg.querySelector('[data-fips="' + selected + '"]');
@@ -163,7 +185,7 @@
       detailEl.appendChild(el("h3", "", place));
       var row = item.counties && item.counties[selected];
       if (!row && oneShape()) {
-        people(detailEl, item.candidates || []);
+        people(detailEl, item.candidates || [], item.office || "");
       } else {
         var local = (row && row.candidates) || (item.candidates || []).map(function () { return [0, "0%", false]; });
         var paired = (item.candidates || []).map(function (person, index) {
@@ -172,7 +194,7 @@
         });
         var total = paired.reduce(function (sum, person) { return sum + person.votes; }, 0);
         paired.forEach(function (person) { person.percent = total ? person.votes / total * 100 : 0; });
-        people(detailEl, paired);
+        people(detailEl, paired, item.office || "");
       }
     }
     statusEl.textContent = "";
