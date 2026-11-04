@@ -86,10 +86,12 @@ FOUND = load_found()
 
 
 def with_found(code, person):
-    if person.get("photo") or not FOUND:
+    if not FOUND:
         return person
     url = FOUND.get((code or "").lower() + "|" + norm(person.get("name")))
     if not url or not url.startswith("photos/") or ".." in url:
+        return person
+    if person.get("photo") == url:
         return person
     copy = dict(person)
     copy["photo"] = url
