@@ -1,0 +1,1474 @@
+{
+  "source": "https://descargas.interior.gob.es/datasets/resultados_electorales/Elecciones-Congreso.xlsx",
+  "fetchedAt": "2026-11-04T19:01:21.170840+00:00",
+  "status": "Interior Ministry file for the Congress election of 23 July 2023. A community adds the province columns in that file. Seat columns are not used. This page does not declare a result.",
+  "strings": {
+    "blank": "No votes reported"
+  },
+  "tables": [
+    {
+      "title": "Congress votes, added across the communities",
+      "note": "Each list's community totals added together. The community total is the sum of the ministry's province columns. Lists under one percent are left off this table. Seat columns are not included.",
+      "column": "Party",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 7687217,
+          "percent": 31.3925227057459
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 5576280,
+          "percent": 22.77202484508981
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 3057000,
+          "percent": 12.483964211165786
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 1223884,
+          "percent": 4.998012448354081
+        },
+        {
+          "name": "PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) - PSC",
+          "votes": 1221335,
+          "percent": 4.987603019248991
+        },
+        {
+          "name": "SUMAR - EN COMÚ PODEM - SUMAR - ECP",
+          "votes": 497617,
+          "percent": 2.0321337320470017
+        },
+        {
+          "name": "PARTIDO DOS SOCIALISTAS DE GALICIA-PSOE - PSdeG-PSOE",
+          "votes": 486832,
+          "percent": 1.9880906983481392
+        },
+        {
+          "name": "SUMAR ANDALUCÍA - SUMAR",
+          "votes": 466804,
+          "percent": 1.9063017434180678
+        },
+        {
+          "name": "ESQUERRA REPUBLICANA DE CATALUNYA - ERC",
+          "votes": 466020,
+          "percent": 1.9031000986874318
+        },
+        {
+          "name": "COMPROMÍS - SUMAR: SUMEM PER GUANYAR - SUMAR - COMPROMÍS",
+          "votes": 402813,
+          "percent": 1.644979743471483
+        },
+        {
+          "name": "JUNTS PER CATALUNYA - JUNTS - JxCAT - JUNTS",
+          "votes": 395429,
+          "percent": 1.6148254772839632
+        },
+        {
+          "name": "PARTIDO POPULAR / PARTIT POPULAR - PP",
+          "votes": 391218,
+          "percent": 1.5976288880483664
+        },
+        {
+          "name": "EUSKAL HERRIA BILDU - EH Bildu",
+          "votes": 335129,
+          "percent": 1.3685765267006145
+        },
+        {
+          "name": "PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) - PSE-EE (PSOE)",
+          "votes": 291932,
+          "percent": 1.1921716192653091
+        },
+        {
+          "name": "EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO - EAJ-PNV",
+          "votes": 277289,
+          "percent": 1.1323735532057406
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "slug": "canarias",
+      "name": "Canarias",
+      "votes": 1015560,
+      "leader": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE ahead",
+      "color": "#e3000f",
+      "amount": 0.5368367613058627,
+      "summary": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 341261,
+          "percent": 33.60323368387885
+        },
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 311627,
+          "percent": 30.685237701366734
+        },
+        {
+          "name": "COALICIÓN CANARIA - CCa",
+          "votes": 116363,
+          "percent": 11.458013312852023
+        },
+        {
+          "name": "SUMAR CANARIAS - SUMAR",
+          "votes": 108001,
+          "percent": 10.634625231399426
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 77343,
+          "percent": 7.615798180314309
+        },
+        {
+          "name": "NUEVA CANARIAS - BLOQUE CANARISTA - NC-bc",
+          "votes": 45595,
+          "percent": 4.48964118318957
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 9717,
+          "percent": 0.9568120051991019
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 2254,
+          "percent": 0.22194651226909293
+        },
+        {
+          "name": "AHORA CANARIAS-PARTIDO COMUNISTA DEL PUEBLO CANARIO - AHORA CANARIAS-PCPC",
+          "votes": 1674,
+          "percent": 0.16483516483516483
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 1162,
+          "percent": 0.1144196305486628
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 563,
+          "percent": 0.055437394147071564
+        }
+      ]
+    },
+    {
+      "slug": "ciudad-autónoma-de-melilla",
+      "name": "Ciudad Autónoma de Melilla",
+      "votes": 27096,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.9336382567306263,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 13446,
+          "percent": 49.62356067316209
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 6943,
+          "percent": 25.623708296427516
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 4359,
+          "percent": 16.08724534986714
+        },
+        {
+          "name": "COALICIÓN POR MELILLA - CpM",
+          "votes": 1298,
+          "percent": 4.790374963094184
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 827,
+          "percent": 3.052111012695601
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 160,
+          "percent": 0.5904930617065249
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 40,
+          "percent": 0.14762326542663123
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 23,
+          "percent": 0.08488337762031296
+        }
+      ]
+    },
+    {
+      "slug": "ciudad-autónoma-de-ceuta",
+      "name": "Ciudad Autónoma de Ceuta",
+      "votes": 32993,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.5727744232853383,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 12918,
+          "percent": 39.15375988846119
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 11332,
+          "percent": 34.34667959870276
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 7752,
+          "percent": 23.495893068226593
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 821,
+          "percent": 2.4884066317097564
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 53,
+          "percent": 0.16064013578637892
+        },
+        {
+          "name": "LIBRES - LB",
+          "votes": 53,
+          "percent": 0.16064013578637892
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 33,
+          "percent": 0.10002121662170764
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 31,
+          "percent": 0.0939593247052405
+        }
+      ]
+    },
+    {
+      "slug": "la-rioja",
+      "name": "La Rioja",
+      "votes": 173055,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.6681898011666563,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 79715,
+          "percent": 46.0633902516541
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 62322,
+          "percent": 36.0128282915836
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 17056,
+          "percent": 9.855826182427553
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 11470,
+          "percent": 6.627950651526971
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 723,
+          "percent": 0.4177862529253705
+        },
+        {
+          "name": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS - ESCAÑOS EN BLANCO",
+          "votes": 608,
+          "percent": 0.35133339111843054
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 295,
+          "percent": 0.17046603680910694
+        },
+        {
+          "name": "TERCERA EDAD EN ACCIÓN - 3e",
+          "votes": 286,
+          "percent": 0.16526537805899857
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 232,
+          "percent": 0.1340614255583485
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 224,
+          "percent": 0.1294386177804744
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 124,
+          "percent": 0.07165352055704834
+        }
+      ]
+    },
+    {
+      "slug": "país-vasco-euskadi",
+      "name": "País Vasco/Euskadi",
+      "votes": 1149303,
+      "leader": "PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) - PSE-EE (PSOE) ahead",
+      "color": "#3f4f3a",
+      "amount": 0.5001589411232753,
+      "summary": "PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) - PSE-EE (PSOE) has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) - PSE-EE (PSOE)",
+          "votes": 291932,
+          "percent": 25.400786389663995
+        },
+        {
+          "name": "EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO - EAJ-PNV",
+          "votes": 277289,
+          "percent": 24.12670984065995
+        },
+        {
+          "name": "EUSKAL HERRIA BILDU - EH Bildu",
+          "votes": 276175,
+          "percent": 24.029781528456812
+        },
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 133466,
+          "percent": 11.612777483396458
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 128234,
+          "percent": 11.157545051218
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 30519,
+          "percent": 2.655435511784099
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 5070,
+          "percent": 0.44113693255825487
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 1813,
+          "percent": 0.15774778278661067
+        },
+        {
+          "name": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS - ESCAÑOS EN BLANCO",
+          "votes": 1552,
+          "percent": 0.1350383667318366
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 1152,
+          "percent": 0.10023466396589933
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 804,
+          "percent": 0.06995544255953391
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 783,
+          "percent": 0.0681282481643222
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE EUSKADI/EUSKADIKO LANGILEEN ALDERDI KOMUNISTA - PCTE/ELAK",
+          "votes": 259,
+          "percent": 0.02253539754094438
+        },
+        {
+          "name": "BIDEZKO MUNDURANTZ - PUM+J",
+          "votes": 255,
+          "percent": 0.022187360513285008
+        }
+      ]
+    },
+    {
+      "slug": "comunidad-foral-de-navarra",
+      "name": "Comunidad Foral de Navarra",
+      "votes": 338954,
+      "leader": "PARTIDO SOCIALISTA DE NAVARRA-PSOE - PSN-PSOE ahead",
+      "color": "#3f4f3a",
+      "amount": 0.8198331427105492,
+      "summary": "PARTIDO SOCIALISTA DE NAVARRA-PSOE - PSN-PSOE has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO SOCIALISTA DE NAVARRA-PSOE - PSN-PSOE",
+          "votes": 93553,
+          "percent": 27.6005003628811
+        },
+        {
+          "name": "EUSKAL HERRIA BILDU - EH Bildu",
+          "votes": 58954,
+          "percent": 17.392920573293132
+        },
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 57134,
+          "percent": 16.855974557019536
+        },
+        {
+          "name": "UNION DEL PUEBLO NAVARRO - U.P.N.",
+          "votes": 52188,
+          "percent": 15.396779504003494
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 43922,
+          "percent": 12.95810050921364
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 19491,
+          "percent": 5.750337803949798
+        },
+        {
+          "name": "GEROA BAI - GBAI",
+          "votes": 9938,
+          "percent": 2.93196126908076
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 1530,
+          "percent": 0.4513886840102197
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 1002,
+          "percent": 0.2956153342341439
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 679,
+          "percent": 0.20032216760976415
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 311,
+          "percent": 0.09175286322037798
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 252,
+          "percent": 0.07434637148403618
+        }
+      ]
+    },
+    {
+      "slug": "región-de-murcia",
+      "name": "Región de Murcia",
+      "votes": 742763,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.8356259659969087,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 307972,
+          "percent": 41.46302387167912
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 189210,
+          "percent": 25.47380523800997
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 163124,
+          "percent": 21.961783233682883
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 71578,
+          "percent": 9.636721269099295
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 5063,
+          "percent": 0.6816440775859863
+        },
+        {
+          "name": "POR MI REGIÓN - POR MI REGIÓN",
+          "votes": 1698,
+          "percent": 0.22860589447778093
+        },
+        {
+          "name": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS - ESCAÑOS EN BLANCO",
+          "votes": 1377,
+          "percent": 0.18538887909063861
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 1201,
+          "percent": 0.16169356847338923
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 546,
+          "percent": 0.07350931589214864
+        },
+        {
+          "name": "CAMINANDO JUNTOS - CJ",
+          "votes": 453,
+          "percent": 0.06098849835007936
+        },
+        {
+          "name": "FALANGE ESPAÑOLA DE LAS J.O.N.S. - FE de las JONS",
+          "votes": 376,
+          "percent": 0.05062179995503276
+        },
+        {
+          "name": "REFERÉNDUM SISTEMA DINERO - +RDS+",
+          "votes": 165,
+          "percent": 0.02221435370367129
+        }
+      ]
+    },
+    {
+      "slug": "comunidad-de-madrid",
+      "name": "Comunidad de Madrid",
+      "votes": 3579713,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.7634153417583447,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 1463183,
+          "percent": 40.87431031482133
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 1004599,
+          "percent": 28.06367437836497
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 557780,
+          "percent": 15.581696074517705
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 506164,
+          "percent": 14.139792771096454
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 21742,
+          "percent": 0.6073671269177165
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 7652,
+          "percent": 0.21376015339777238
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 6749,
+          "percent": 0.18853466744401018
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 3784,
+          "percent": 0.10570679828243214
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 3407,
+          "percent": 0.0951752277347374
+        },
+        {
+          "name": "PARTIDO HUMANISTA - PH",
+          "votes": 2902,
+          "percent": 0.08106795153689696
+        },
+        {
+          "name": "FALANGE ESPAÑOLA DE LAS J.O.N.S. - FE de las JONS",
+          "votes": 1751,
+          "percent": 0.04891453588597745
+        }
+      ]
+    },
+    {
+      "slug": "galicia",
+      "name": "Galicia",
+      "votes": 1624241,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.7670921935077524,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 712881,
+          "percent": 43.89010005288624
+        },
+        {
+          "name": "PARTIDO DOS SOCIALISTAS DE GALICIA-PSOE - PSdeG-PSOE",
+          "votes": 486832,
+          "percent": 29.972891953841824
+        },
+        {
+          "name": "SUMAR GALICIA - SUMAR",
+          "votes": 178691,
+          "percent": 11.001507781172867
+        },
+        {
+          "name": "BLOQUE NACIONALISTA GALEGO - B.N.G.",
+          "votes": 153995,
+          "percent": 9.481043761362999
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 79672,
+          "percent": 4.905183405664554
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 7444,
+          "percent": 0.45830637202237845
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 2310,
+          "percent": 0.1422202739618074
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 1268,
+          "percent": 0.07806723263358085
+        },
+        {
+          "name": "PARTIDO COMUNISTA DOS TRABALLADORES DE GALIZA - PCTG",
+          "votes": 702,
+          "percent": 0.04322018715202978
+        },
+        {
+          "name": "POR UN MUNDO MAIS XUSTO - PUM+J",
+          "votes": 293,
+          "percent": 0.018039194922428385
+        },
+        {
+          "name": "COALICIÓN DE CENTRO DEMOCRÁTICO - CCD",
+          "votes": 153,
+          "percent": 0.009419784379288542
+        }
+      ]
+    },
+    {
+      "slug": "extremadura",
+      "name": "Extremadura",
+      "votes": 622366,
+      "leader": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE ahead",
+      "color": "#e3000f",
+      "amount": 0.48044480247996246,
+      "summary": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 245165,
+          "percent": 39.392415395442555
+        },
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 237701,
+          "percent": 38.19312108951967
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 85568,
+          "percent": 13.748823039819014
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 43132,
+          "percent": 6.930327170828741
+        },
+        {
+          "name": "BLOQUE EXTREMEÑO - BQEX",
+          "votes": 5807,
+          "percent": 0.9330522554252643
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 2209,
+          "percent": 0.35493584161088493
+        },
+        {
+          "name": "SOMOS CÁCERES - Somos Cc",
+          "votes": 963,
+          "percent": 0.1547321029747769
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 793,
+          "percent": 0.12741698614641545
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 713,
+          "percent": 0.11456281352130418
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 315,
+          "percent": 0.05061330471137562
+        }
+      ]
+    },
+    {
+      "slug": "comunitat-valenciana",
+      "name": "Comunitat Valenciana",
+      "votes": 2624243,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.5285672144232938,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 922064,
+          "percent": 35.13638028185652
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 849620,
+          "percent": 32.375812758193504
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 413703,
+          "percent": 15.764660513527138
+        },
+        {
+          "name": "COMPROMÍS - SUMAR: SUMEM PER GUANYAR - SUMAR - COMPROMÍS",
+          "votes": 402813,
+          "percent": 15.349683699261082
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 19637,
+          "percent": 0.7482919836310891
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 5364,
+          "percent": 0.20440180272939662
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 3401,
+          "percent": 0.12959927872533145
+        },
+        {
+          "name": "CAMINANDO JUNTOS - CJ",
+          "votes": 2083,
+          "percent": 0.07937527126870492
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 1778,
+          "percent": 0.0677528719710789
+        },
+        {
+          "name": "PARTIDO AUTÓNOMOS - PARTIDO AUTÓNOMOS",
+          "votes": 1446,
+          "percent": 0.05510160453890894
+        },
+        {
+          "name": "ESTAT VALENCIÀ DEL BENESTAR - EVB",
+          "votes": 1442,
+          "percent": 0.05494917963008761
+        },
+        {
+          "name": "FALANGE ESPAÑOLA DE LAS J.O.N.S. - FE de las JONS",
+          "votes": 892,
+          "percent": 0.03399075466715544
+        }
+      ]
+    },
+    {
+      "slug": "cataluña-catalunya",
+      "name": "Cataluña/Catalunya",
+      "votes": 3513762,
+      "leader": "PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) - PSC ahead",
+      "color": "#3f4f3a",
+      "amount": 1,
+      "summary": "PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) - PSC has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) - PSC",
+          "votes": 1221335,
+          "percent": 34.75861484073196
+        },
+        {
+          "name": "SUMAR - EN COMÚ PODEM - SUMAR - ECP",
+          "votes": 497617,
+          "percent": 14.161943808374044
+        },
+        {
+          "name": "ESQUERRA REPUBLICANA DE CATALUNYA - ERC",
+          "votes": 466020,
+          "percent": 13.262708174315733
+        },
+        {
+          "name": "JUNTS PER CATALUNYA - JUNTS - JxCAT - JUNTS",
+          "votes": 395429,
+          "percent": 11.25372179447555
+        },
+        {
+          "name": "PARTIDO POPULAR / PARTIT POPULAR - PP",
+          "votes": 391218,
+          "percent": 11.133878731684161
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 275080,
+          "percent": 7.828646334043114
+        },
+        {
+          "name": "CANDIDATURA D'UNITAT POPULAR-PER LA RUPTURA - CUP-PR",
+          "votes": 99644,
+          "percent": 2.8358209804761962
+        },
+        {
+          "name": "PARTIT POPULAR / PARTIDO POPULAR - PP",
+          "votes": 82402,
+          "percent": 2.3451218380755443
+        },
+        {
+          "name": "PARTIT ANIMALISTA AMB EL MEDI AMBIENT - PACMA",
+          "votes": 36881,
+          "percent": 1.049615767943304
+        },
+        {
+          "name": "PARTIT DEMÒCRATA EUROPEU CATALÀ-ESPAI CIU - PDeCAT-E-CiU",
+          "votes": 32016,
+          "percent": 0.9111601753334461
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 7526,
+          "percent": 0.21418639054096436
+        },
+        {
+          "name": "PARTIT COMUNISTA DELS TREBALLADORS DE CATALUNYA - PCTC",
+          "votes": 3875,
+          "percent": 0.11028066215070913
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 3739,
+          "percent": 0.10641016665329069
+        },
+        {
+          "name": "ESCONS EN BLANC - ESCONS EN BLANC",
+          "votes": 462,
+          "percent": 0.013148300880936159
+        },
+        {
+          "name": "ENTRE VEÏNS CATALUNYA - EVC",
+          "votes": 265,
+          "percent": 0.007541774314822689
+        },
+        {
+          "name": "UNIDOS POR LA SOLIDARIDAD INTERNACIONAL - UNIDOS SI",
+          "votes": 253,
+          "percent": 0.007200260006226944
+        }
+      ]
+    },
+    {
+      "slug": "castilla-la-mancha",
+      "name": "Castilla-La Mancha",
+      "votes": 1137181,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.5721728689592391,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 445991,
+          "percent": 39.218998558716684
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 391503,
+          "percent": 34.427500987090006
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 203666,
+          "percent": 17.909725892360143
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 84347,
+          "percent": 7.417200955696587
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 6030,
+          "percent": 0.5302585955973588
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 2324,
+          "percent": 0.20436500433967855
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 1549,
+          "percent": 0.13621402397683394
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 913,
+          "percent": 0.08028625170487372
+        },
+        {
+          "name": "FALANGE ESPAÑOLA DE LAS J.O.N.S. - FE de las JONS",
+          "votes": 399,
+          "percent": 0.035086762793258064
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 291,
+          "percent": 0.025589593916887463
+        },
+        {
+          "name": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS - ESCAÑOS EN BLANCO",
+          "votes": 168,
+          "percent": 0.014773373807687607
+        }
+      ]
+    },
+    {
+      "slug": "castilla-y-león",
+      "name": "Castilla y León",
+      "votes": 1419895,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.6715312413265263,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 594485,
+          "percent": 41.868236735814975
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 462788,
+          "percent": 32.59311427957701
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 197172,
+          "percent": 13.886378922385106
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 100737,
+          "percent": 7.094679536162885
+        },
+        {
+          "name": "UNIÓN DEL PUEBLO LEONÉS - U.P.L.",
+          "votes": 23201,
+          "percent": 1.633994062941274
+        },
+        {
+          "name": "SORIA ¡YA! - SY",
+          "votes": 9697,
+          "percent": 0.6829378228671839
+        },
+        {
+          "name": "POR ÁVILA - XAV",
+          "votes": 7362,
+          "percent": 0.5184890432038989
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 4858,
+          "percent": 0.3421379749911085
+        },
+        {
+          "name": "ESPAÑA VACIADA - ESPAÑA VACIADA",
+          "votes": 3158,
+          "percent": 0.22241081206708946
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 2521,
+          "percent": 0.17754833984203058
+        },
+        {
+          "name": "VAMOS PALENCIA - VP",
+          "votes": 1917,
+          "percent": 0.13500998313255558
+        },
+        {
+          "name": "ZAMORA SÍ - Zsi",
+          "votes": 1843,
+          "percent": 0.12979833015821593
+        },
+        {
+          "name": "VÍA BURGALESA - VB",
+          "votes": 1774,
+          "percent": 0.12493881589835869
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 1730,
+          "percent": 0.12183999521091349
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 1520,
+          "percent": 0.10705016920265231
+        },
+        {
+          "name": "ESPAÑA VACIADA-PARTIDO CASTELLANO-TIERRA COMUNERA - EV-PCAS-TC",
+          "votes": 1184,
+          "percent": 0.08338644758943443
+        },
+        {
+          "name": "PARTIDO REGIONALISTA DEL PAÍS LEONÉS - PREPAL",
+          "votes": 964,
+          "percent": 0.06789234415220843
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 672,
+          "percent": 0.047327443226435756
+        },
+        {
+          "name": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS - ESCAÑOS EN BLANCO",
+          "votes": 583,
+          "percent": 0.04105937410864888
+        },
+        {
+          "name": "UNIDAD CASTELLANA - Ud.Ca",
+          "votes": 463,
+          "percent": 0.032608044961071066
+        },
+        {
+          "name": "GRUPO INDEPENDIENTE PALENCIA TIERRA VIVA - GITV",
+          "votes": 366,
+          "percent": 0.025776553900112333
+        },
+        {
+          "name": "FALANGE ESPAÑOLA DE LAS J.O.N.S. - FE de las JONS",
+          "votes": 312,
+          "percent": 0.021973455783702318
+        },
+        {
+          "name": "CAMINANDO JUNTOS - CJ",
+          "votes": 275,
+          "percent": 0.01936762929653249
+        },
+        {
+          "name": "TERCERA EDAD EN ACCIÓN - 3e",
+          "votes": 198,
+          "percent": 0.013944693093503394
+        },
+        {
+          "name": "FUERZA CÍVICA - FUERZA CÍVICA",
+          "votes": 115,
+          "percent": 0.008099190433095404
+        }
+      ]
+    },
+    {
+      "slug": "cantabria",
+      "name": "Cantabria",
+      "votes": 346888,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.6585850426944327,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 147326,
+          "percent": 42.470768663084336
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 116596,
+          "percent": 33.612001568229516
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 49243,
+          "percent": 14.19564816309587
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 29713,
+          "percent": 8.565588893245081
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 2089,
+          "percent": 0.6022116648601278
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 790,
+          "percent": 0.22773921265653468
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 598,
+          "percent": 0.1723899356564655
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 533,
+          "percent": 0.15365189917206706
+        }
+      ]
+    },
+    {
+      "slug": "illes-balears",
+      "name": "Illes Balears",
+      "votes": 498576,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.6034664785307552,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 179303,
+          "percent": 35.96302268861718
+        },
+        {
+          "name": "PARTIDO SOCIALISTA DE ISLAS BALEARES-PSOE - PSIB-PSOE",
+          "votes": 151786,
+          "percent": 30.44390423927345
+        },
+        {
+          "name": "SUMAR MÉS - MÉS PER MALLORCA-MÉS PER MENORCA-SUMAR",
+          "votes": 83487,
+          "percent": 16.74509001636661
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 76547,
+          "percent": 15.353125701999295
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 4969,
+          "percent": 0.9966384262379256
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 1039,
+          "percent": 0.20839350470138956
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 726,
+          "percent": 0.14561471069606238
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 719,
+          "percent": 0.1442107121080838
+        }
+      ]
+    },
+    {
+      "slug": "principado-de-asturias",
+      "name": "Principado de Asturias",
+      "votes": 590953,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.48649631606646115,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 212816,
+          "percent": 36.01233939078065
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 205049,
+          "percent": 34.698021670082056
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 88630,
+          "percent": 14.997808624374528
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 74571,
+          "percent": 12.618770020627698
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 3167,
+          "percent": 0.5359140236194757
+        },
+        {
+          "name": "ASTURIAS EXISTE-ESPAÑA VACIADA - ASTURIAS EXISTE EV",
+          "votes": 2314,
+          "percent": 0.3915709032698032
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 1598,
+          "percent": 0.2704106756374872
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 1176,
+          "percent": 0.1990005973402284
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 773,
+          "percent": 0.13080566474829639
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 590,
+          "percent": 0.0998387350601486
+        },
+        {
+          "name": "PARTIDO UNIONISTA ESTADO DE ESPAÑA - PUEDE",
+          "votes": 269,
+          "percent": 0.04551969445962708
+        }
+      ]
+    },
+    {
+      "slug": "aragón",
+      "name": "Aragón",
+      "votes": 708193,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.5918279341681298,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 259145,
+          "percent": 36.592426075942576
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 222391,
+          "percent": 31.402597879391635
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 104463,
+          "percent": 14.750640009150048
+        },
+        {
+          "name": "SUMAR ARAGÓN - SUMAR ARAGÓN",
+          "votes": 83699,
+          "percent": 11.818670899034585
+        },
+        {
+          "name": "TERUEL EXISTE - COALICIÓN EXISTE - EXISTE",
+          "votes": 11348,
+          "percent": 1.602388049585353
+        },
+        {
+          "name": "ARAGÓN EXISTE - COALICIÓN EXISTE - EXISTE",
+          "votes": 9092,
+          "percent": 1.283830820129541
+        },
+        {
+          "name": "PARTIDO ARAGONÉS - PAR",
+          "votes": 4173,
+          "percent": 0.5892461518258441
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 4126,
+          "percent": 0.582609542878848
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 3098,
+          "percent": 0.4374513727190187
+        },
+        {
+          "name": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS - ESCAÑOS EN BLANCO",
+          "votes": 2756,
+          "percent": 0.3891594522961961
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 1378,
+          "percent": 0.19457972614809804
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 758,
+          "percent": 0.107032969826022
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 569,
+          "percent": 0.08034532959235688
+        },
+        {
+          "name": "FEDERACIÓN DE LOS INDEPENDIENTES DE ARAGÓN - F.I.A.",
+          "votes": 506,
+          "percent": 0.07144944951446851
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 419,
+          "percent": 0.059164662740241715
+        },
+        {
+          "name": "FALANGE ESPAÑOLA DE LAS J.O.N.S. - FE de las JONS",
+          "votes": 272,
+          "percent": 0.038407609225168844
+        }
+      ]
+    },
+    {
+      "slug": "andalucía",
+      "name": "Andalucía",
+      "votes": 4341679,
+      "leader": "PARTIDO POPULAR - PP ahead",
+      "color": "#1d4e89",
+      "amount": 0.5305385064572155,
+      "summary": "PARTIDO POPULAR - PP has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "PARTIDO POPULAR - PP",
+          "votes": 1596044,
+          "percent": 36.76098578453175
+        },
+        {
+          "name": "PARTIDO SOCIALISTA OBRERO ESPAÑOL - PSOE",
+          "votes": 1467501,
+          "percent": 33.80031089355063
+        },
+        {
+          "name": "VOX - VOX",
+          "votes": 671507,
+          "percent": 15.46652804134069
+        },
+        {
+          "name": "SUMAR ANDALUCÍA - SUMAR",
+          "votes": 466804,
+          "percent": 10.751693066207796
+        },
+        {
+          "name": "SUMAR - SUMAR",
+          "votes": 58567,
+          "percent": 1.3489481834101509
+        },
+        {
+          "name": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE - PACMA",
+          "votes": 34850,
+          "percent": 0.8026848599355226
+        },
+        {
+          "name": "ADELANTE ANDALUCÍA - ADELANTE ANDALUCÍA",
+          "votes": 9191,
+          "percent": 0.21169229692015462
+        },
+        {
+          "name": "JAÉN MERECE MÁS - JM+",
+          "votes": 8293,
+          "percent": 0.1910090543312852
+        },
+        {
+          "name": "FRENTE OBRERO - FO",
+          "votes": 7106,
+          "percent": 0.16366940070880412
+        },
+        {
+          "name": "POR UN MUNDO MÁS JUSTO - PUM+J",
+          "votes": 6419,
+          "percent": 0.1478460291513951
+        },
+        {
+          "name": "RECORTES CERO - RECORTES CERO",
+          "votes": 3769,
+          "percent": 0.0868097342065132
+        },
+        {
+          "name": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA - PCTE",
+          "votes": 2963,
+          "percent": 0.06824548751761703
+        },
+        {
+          "name": "CAMINANDO JUNTOS - CJ",
+          "votes": 2809,
+          "percent": 0.06469847264157484
+        },
+        {
+          "name": "POR HUELVA - XH",
+          "votes": 1931,
+          "percent": 0.0444758813353083
+        },
+        {
+          "name": "JUNTOS POR GRANADA - JxG",
+          "votes": 1218,
+          "percent": 0.02805366311051554
+        },
+        {
+          "name": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS - ESCAÑOS EN BLANCO",
+          "votes": 942,
+          "percent": 0.021696675410595764
+        },
+        {
+          "name": "ALMERIENSES - REGIONALISTAS PRO ALMERÍA - ALM",
+          "votes": 874,
+          "percent": 0.020130461049745963
+        },
+        {
+          "name": "FALANGE ESPAÑOLA DE LAS J.O.N.S. - FE de las JONS",
+          "votes": 681,
+          "percent": 0.015685176172628146
+        },
+        {
+          "name": "LIBRES - LB",
+          "votes": 210,
+          "percent": 0.004836838467330265
+        }
+      ]
+    }
+  ],
+  "card": "Congress on 23 July 2023. The ministry file is the published count. The map adds each province's votes into its autonomous community."
+}

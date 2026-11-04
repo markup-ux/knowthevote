@@ -1,0 +1,575 @@
+{
+  "source": "https://documenti.camera.it/leg19/risultatiElettorali2022/UGE/VotiListe/ItaliaVotiListeCIRC.csv",
+  "fetchedAt": "2026-11-04T19:03:41.385104+00:00",
+  "status": "Chamber of Deputies file for the 25 September 2022 election. The map adds each list's circoscrizione figure into the five areas drawn by the outline file. That figure is the list's valid votes plus the votes the Chamber assigns to the list. Nord-Ovest adds Piemonte, Liguria, and Lombardia. Valle d'Aosta is not a row in this list-vote file, so it is not included. Candidate-name files are not used. This page does not declare a result.",
+  "strings": {
+    "blank": "No votes reported"
+  },
+  "tables": [
+    {
+      "title": "Circoscrizione figures, added across the file",
+      "note": "Each list's circoscrizione figures added together. A figure is the list's valid votes plus the votes the Chamber assigns to that list, and the lists add up to the valid ballots. Valle d'Aosta is not a row in this file, so it is not in this table. Lists under one percent are left off this table. The names are the Chamber's abbreviations. This is not a count of seats.",
+      "column": "Party",
+      "rows": [
+        {
+          "name": "FDI",
+          "votes": 7325018,
+          "percent": 26.06561858347002
+        },
+        {
+          "name": "PD-IDP",
+          "votes": 5370857,
+          "percent": 19.111858841624695
+        },
+        {
+          "name": "M5S",
+          "votes": 4337526,
+          "percent": 15.434815083305512
+        },
+        {
+          "name": "LEGA",
+          "votes": 2456909,
+          "percent": 8.742757067394884
+        },
+        {
+          "name": "FI",
+          "votes": 2278587,
+          "percent": 8.108209379315273
+        },
+        {
+          "name": "AZ-IV",
+          "votes": 2187752,
+          "percent": 7.784978710936096
+        },
+        {
+          "name": "ALL-VER-SIN",
+          "votes": 1014427,
+          "percent": 3.609775056221533
+        },
+        {
+          "name": "+EUROPA",
+          "votes": 791905,
+          "percent": 2.81794443158267
+        },
+        {
+          "name": "ITALEXIT",
+          "votes": 534487,
+          "percent": 1.9019385726865299
+        },
+        {
+          "name": "UPDM",
+          "votes": 403169,
+          "percent": 1.4346516798564897
+        },
+        {
+          "name": "ISP",
+          "votes": 348206,
+          "percent": 1.2390692807138168
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "slug": "nord-ovest",
+      "name": "Nord-Ovest",
+      "votes": 7902062,
+      "leader": "FDI ahead",
+      "color": "#1d4e89",
+      "amount": 0.7430342222187745,
+      "summary": "FDI has the largest circoscrizione figure. That figure is the list's valid votes plus the votes the Chamber assigns to the list in each circoscrizione. Nord-Ovest adds Piemonte, Liguria, and Lombardia. Valle d'Aosta is not a row in this list-vote file, so it is not included. The names are the abbreviations printed in the Chamber file. The file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "FDI",
+          "votes": 2191471,
+          "percent": 27.732900602399727
+        },
+        {
+          "name": "PD-IDP",
+          "votes": 1549295,
+          "percent": 19.606211644504942
+        },
+        {
+          "name": "LEGA",
+          "votes": 964450,
+          "percent": 12.205042177598708
+        },
+        {
+          "name": "AZ-IV",
+          "votes": 762850,
+          "percent": 9.65380934748424
+        },
+        {
+          "name": "M5S",
+          "votes": 690692,
+          "percent": 8.740655287189597
+        },
+        {
+          "name": "FI",
+          "votes": 610109,
+          "percent": 7.720883485854705
+        },
+        {
+          "name": "ALL-VER-SIN",
+          "votes": 310107,
+          "percent": 3.924380750239621
+        },
+        {
+          "name": "+EUROPA",
+          "votes": 288584,
+          "percent": 3.6520088047904458
+        },
+        {
+          "name": "ITALEXIT",
+          "votes": 165825,
+          "percent": 2.0985028970919237
+        },
+        {
+          "name": "UPDM",
+          "votes": 99986,
+          "percent": 1.265315306308657
+        },
+        {
+          "name": "ISP",
+          "votes": 99591,
+          "percent": 1.2603166110313992
+        },
+        {
+          "name": "NOI MODERATI",
+          "votes": 75070,
+          "percent": 0.9500052011740733
+        },
+        {
+          "name": "VITA",
+          "votes": 54086,
+          "percent": 0.6844542601665237
+        },
+        {
+          "name": "IMP CIV-CD",
+          "votes": 31244,
+          "percent": 0.3953904689687325
+        },
+        {
+          "name": "NDCE",
+          "votes": 5741,
+          "percent": 0.07265192300440063
+        },
+        {
+          "name": "API-NGP",
+          "votes": 2132,
+          "percent": 0.026980299572440712
+        },
+        {
+          "name": "FREE",
+          "votes": 829,
+          "percent": 0.01049093261986555
+        }
+      ]
+    },
+    {
+      "slug": "nord-est",
+      "name": "Nord-Est",
+      "votes": 5916518,
+      "leader": "FDI ahead",
+      "color": "#1d4e89",
+      "amount": 0.7040224115557131,
+      "summary": "FDI has the largest circoscrizione figure. That figure is the list's valid votes plus the votes the Chamber assigns to the list in each circoscrizione. Nord-Est adds Trentino-Alto Adige, Veneto, Friuli-Venezia Giulia, and Emilia-Romagna. The names are the abbreviations printed in the Chamber file. The file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "FDI",
+          "votes": 1681454,
+          "percent": 28.419654938935366
+        },
+        {
+          "name": "PD-IDP",
+          "votes": 1254327,
+          "percent": 21.200425655765773
+        },
+        {
+          "name": "LEGA",
+          "votes": 646523,
+          "percent": 10.927423866537717
+        },
+        {
+          "name": "AZ-IV",
+          "votes": 490348,
+          "percent": 8.287780076051488
+        },
+        {
+          "name": "M5S",
+          "votes": 443026,
+          "percent": 7.4879515282468505
+        },
+        {
+          "name": "FI",
+          "votes": 365810,
+          "percent": 6.182859580584391
+        },
+        {
+          "name": "ALL-VER-SIN",
+          "votes": 234383,
+          "percent": 3.9615023566225944
+        },
+        {
+          "name": "+EUROPA",
+          "votes": 183953,
+          "percent": 3.109142911421887
+        },
+        {
+          "name": "ITALEXIT",
+          "votes": 134916,
+          "percent": 2.2803277197838323
+        },
+        {
+          "name": "SVP-PATT",
+          "votes": 117025,
+          "percent": 1.9779370230936506
+        },
+        {
+          "name": "VITA",
+          "votes": 101076,
+          "percent": 1.708369686359443
+        },
+        {
+          "name": "ISP",
+          "votes": 78671,
+          "percent": 1.3296841148797316
+        },
+        {
+          "name": "NOI MODERATI",
+          "votes": 70707,
+          "percent": 1.1950779157605875
+        },
+        {
+          "name": "UPDM",
+          "votes": 68970,
+          "percent": 1.1657194315981123
+        },
+        {
+          "name": "IMP CIV-CD",
+          "votes": 20441,
+          "percent": 0.345490371194679
+        },
+        {
+          "name": "PA-UCDL-10V",
+          "votes": 14558,
+          "percent": 0.24605688683783267
+        },
+        {
+          "name": "API-NGP",
+          "votes": 6107,
+          "percent": 0.10321949497998655
+        },
+        {
+          "name": "NDCE",
+          "votes": 2622,
+          "percent": 0.04431660649050675
+        },
+        {
+          "name": "SCN",
+          "votes": 1601,
+          "percent": 0.027059834855568766
+        }
+      ]
+    },
+    {
+      "slug": "centro",
+      "name": "Centro",
+      "votes": 5786964,
+      "leader": "FDI ahead",
+      "color": "#1d4e89",
+      "amount": 0.7036134817596218,
+      "summary": "FDI has the largest circoscrizione figure. That figure is the list's valid votes plus the votes the Chamber assigns to the list in each circoscrizione. Centro adds Toscana, Umbria, Marche, and Lazio. The names are the abbreviations printed in the Chamber file. The file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "FDI",
+          "votes": 1695387,
+          "percent": 29.29665710725002
+        },
+        {
+          "name": "PD-IDP",
+          "votes": 1265414,
+          "percent": 21.86662989436257
+        },
+        {
+          "name": "M5S",
+          "votes": 774532,
+          "percent": 13.384081877820563
+        },
+        {
+          "name": "AZ-IV",
+          "votes": 494853,
+          "percent": 8.551167762578098
+        },
+        {
+          "name": "LEGA",
+          "votes": 385135,
+          "percent": 6.655216794160116
+        },
+        {
+          "name": "FI",
+          "votes": 369878,
+          "percent": 6.391572506758293
+        },
+        {
+          "name": "ALL-VER-SIN",
+          "votes": 238208,
+          "percent": 4.116286190824757
+        },
+        {
+          "name": "+EUROPA",
+          "votes": 162830,
+          "percent": 2.813737911623435
+        },
+        {
+          "name": "ITALEXIT",
+          "votes": 105427,
+          "percent": 1.821801552593035
+        },
+        {
+          "name": "UPDM",
+          "votes": 104511,
+          "percent": 1.8059728728224334
+        },
+        {
+          "name": "ISP",
+          "votes": 81040,
+          "percent": 1.4003888740279014
+        },
+        {
+          "name": "VITA",
+          "votes": 31978,
+          "percent": 0.5525868140876632
+        },
+        {
+          "name": "NOI MODERATI",
+          "votes": 29096,
+          "percent": 0.5027852255517746
+        },
+        {
+          "name": "IMP CIV-CD",
+          "votes": 27701,
+          "percent": 0.47867932131597846
+        },
+        {
+          "name": "PCI",
+          "votes": 14253,
+          "percent": 0.24629494843928526
+        },
+        {
+          "name": "API-NGP",
+          "votes": 5022,
+          "percent": 0.08678125524886625
+        },
+        {
+          "name": "PFC",
+          "votes": 1421,
+          "percent": 0.024555189906140768
+        },
+        {
+          "name": "NDCE",
+          "votes": 278,
+          "percent": 0.00480390062906906
+        }
+      ]
+    },
+    {
+      "slug": "sud",
+      "name": "Sud",
+      "votes": 5768091,
+      "leader": "M5S ahead",
+      "color": "#e6a817",
+      "amount": 0.7440069794812643,
+      "summary": "M5S has the largest circoscrizione figure. That figure is the list's valid votes plus the votes the Chamber assigns to the list in each circoscrizione. Sud adds Abruzzo, Molise, Campania, Puglia, Basilicata, and Calabria. The names are the abbreviations printed in the Chamber file. The file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "M5S",
+          "votes": 1703565,
+          "percent": 29.534294795279756
+        },
+        {
+          "name": "FDI",
+          "votes": 1202705,
+          "percent": 20.85100599141033
+        },
+        {
+          "name": "PD-IDP",
+          "votes": 928160,
+          "percent": 16.091285661061868
+        },
+        {
+          "name": "FI",
+          "votes": 645527,
+          "percent": 11.191345628909113
+        },
+        {
+          "name": "LEGA",
+          "votes": 315280,
+          "percent": 5.465933183092985
+        },
+        {
+          "name": "AZ-IV",
+          "votes": 303473,
+          "percent": 5.261238076861131
+        },
+        {
+          "name": "ALL-VER-SIN",
+          "votes": 155528,
+          "percent": 2.6963513578409217
+        },
+        {
+          "name": "+EUROPA",
+          "votes": 106933,
+          "percent": 1.8538715842035085
+        },
+        {
+          "name": "UPDM",
+          "votes": 99763,
+          "percent": 1.7295670265951075
+        },
+        {
+          "name": "ITALEXIT",
+          "votes": 76227,
+          "percent": 1.3215290812852987
+        },
+        {
+          "name": "IMP CIV-CD",
+          "votes": 63393,
+          "percent": 1.0990291241937757
+        },
+        {
+          "name": "ISP",
+          "votes": 56586,
+          "percent": 0.9810178098785196
+        },
+        {
+          "name": "NOI MODERATI",
+          "votes": 41600,
+          "percent": 0.721209148746093
+        },
+        {
+          "name": "NDCE",
+          "votes": 37346,
+          "percent": 0.6474585785834516
+        },
+        {
+          "name": "PCI",
+          "votes": 10301,
+          "percent": 0.1785859481065746
+        },
+        {
+          "name": "PA-UCDL-10V",
+          "votes": 6860,
+          "percent": 0.11893016250957206
+        },
+        {
+          "name": "VITA",
+          "votes": 6696,
+          "percent": 0.11608693413470765
+        },
+        {
+          "name": "API-NGP",
+          "votes": 3737,
+          "percent": 0.06478746607846513
+        },
+        {
+          "name": "SCN",
+          "votes": 3595,
+          "percent": 0.062325646388033756
+        },
+        {
+          "name": "FDP",
+          "votes": 816,
+          "percent": 0.014146794840788747
+        }
+      ]
+    },
+    {
+      "slug": "isole",
+      "name": "Isole",
+      "votes": 2728587,
+      "leader": "M5S ahead",
+      "color": "#e6a817",
+      "amount": 0.6866093389792907,
+      "summary": "M5S has the largest circoscrizione figure. That figure is the list's valid votes plus the votes the Chamber assigns to the list in each circoscrizione. Isole adds Sicilia and Sardegna. The names are the abbreviations printed in the Chamber file. The file has no color code, so the mark is only there to tell lists apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "M5S",
+          "votes": 725711,
+          "percent": 26.596586438328703
+        },
+        {
+          "name": "FDI",
+          "votes": 554001,
+          "percent": 20.30358570205018
+        },
+        {
+          "name": "PD-IDP",
+          "votes": 373661,
+          "percent": 13.6943040482125
+        },
+        {
+          "name": "FI",
+          "votes": 287263,
+          "percent": 10.527903270080815
+        },
+        {
+          "name": "SCN",
+          "votes": 207732,
+          "percent": 7.6131712127925555
+        },
+        {
+          "name": "LEGA",
+          "votes": 145521,
+          "percent": 5.333199930953274
+        },
+        {
+          "name": "AZ-IV",
+          "votes": 136228,
+          "percent": 4.992620722740378
+        },
+        {
+          "name": "ALL-VER-SIN",
+          "votes": 76201,
+          "percent": 2.792690868936926
+        },
+        {
+          "name": "ITALEXIT",
+          "votes": 52092,
+          "percent": 1.9091199950743736
+        },
+        {
+          "name": "+EUROPA",
+          "votes": 49605,
+          "percent": 1.817973918368738
+        },
+        {
+          "name": "ISP",
+          "votes": 32318,
+          "percent": 1.1844225601016203
+        },
+        {
+          "name": "UPDM",
+          "votes": 29939,
+          "percent": 1.0972345759911633
+        },
+        {
+          "name": "NOI MODERATI",
+          "votes": 29513,
+          "percent": 1.081622099643515
+        },
+        {
+          "name": "IMP CIV-CD",
+          "votes": 21021,
+          "percent": 0.7703987448448593
+        },
+        {
+          "name": "VITA",
+          "votes": 7781,
+          "percent": 0.2851659118803982
+        }
+      ]
+    }
+  ],
+  "card": "Chamber of Deputies on 25 September 2022. The Chamber file is the published count. The map is five areas, from each list's circoscrizione figure. Valle d'Aosta is not in the file."
+}

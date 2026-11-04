@@ -1,0 +1,1509 @@
+{
+  "source": "https://www.volby.cz/pls/ps2021/vysledky",
+  "fetchedAt": "2026-11-04T19:00:46.384445+00:00",
+  "status": "Czech Statistical Office file for the Chamber of Deputies election of 8 and 9 October 2021. The Statistical Office file is the published count. A region is colored only from list votes. Seats are not used. This page does not declare a result.",
+  "strings": {
+    "blank": "No votes reported"
+  },
+  "tables": [
+    {
+      "title": "List votes, added across the regions",
+      "note": "Each party's regional totals added together. Parties under one percent are left off this table. This is the Chamber list vote, not a count of seats.",
+      "column": "Party",
+      "rows": [
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 1493905,
+          "percent": 27.79311602224335
+        },
+        {
+          "name": "ANO 2011",
+          "votes": 1458140,
+          "percent": 27.127731814723102
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 839776,
+          "percent": 15.623477932462526
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 513910,
+          "percent": 9.560956188640562
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 251562,
+          "percent": 4.68014489059718
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 250397,
+          "percent": 4.65847083490695
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 193817,
+          "percent": 3.60583729760804
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 148463,
+          "percent": 2.762056077200568
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 71587,
+          "percent": 1.3318288624004435
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "slug": "hlavní-město-praha",
+      "name": "Hlavní město Praha",
+      "votes": 627399,
+      "leader": "SPOLU – ODS, KDU-ČSL, TOP 09 ahead",
+      "color": "#0047ab",
+      "amount": 0.8840674658488988,
+      "summary": "SPOLU – ODS, KDU-ČSL, TOP 09 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 251090,
+          "percent": 40.02078422184288
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 142100,
+          "percent": 22.64906383338195
+        },
+        {
+          "name": "ANO 2011",
+          "votes": 109588,
+          "percent": 17.46703453464223
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 28859,
+          "percent": 4.5997841883713555
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 25116,
+          "percent": 4.003194139614504
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 21418,
+          "percent": 3.413776560051897
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 16083,
+          "percent": 2.5634404900230954
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 13469,
+          "percent": 2.14679972393963
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 6058,
+          "percent": 0.965573741749668
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 4659,
+          "percent": 0.7425896439108127
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 1590,
+          "percent": 0.25342724486331664
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 1578,
+          "percent": 0.251514586411518
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 1059,
+          "percent": 0.16879210837122788
+        },
+        {
+          "name": "SENIOŘI 21",
+          "votes": 892,
+          "percent": 0.1421742782503638
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 873,
+          "percent": 0.13914590236834934
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 807,
+          "percent": 0.12862628088345693
+        },
+        {
+          "name": "Volte Pravý Blok www.cibulka.net",
+          "votes": 586,
+          "percent": 0.09340148772949909
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 525,
+          "percent": 0.08367880726618945
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 478,
+          "percent": 0.07618756166331155
+        },
+        {
+          "name": "Moravané",
+          "votes": 349,
+          "percent": 0.05562648330647642
+        },
+        {
+          "name": "Levice",
+          "votes": 222,
+          "percent": 0.0353841813582744
+        }
+      ]
+    },
+    {
+      "slug": "středočeský-kraj",
+      "name": "Středočeský kraj",
+      "votes": 706634,
+      "leader": "SPOLU – ODS, KDU-ČSL, TOP 09 ahead",
+      "color": "#0047ab",
+      "amount": 0.5829010148160184,
+      "summary": "SPOLU – ODS, KDU-ČSL, TOP 09 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 203091,
+          "percent": 28.74062102870793
+        },
+        {
+          "name": "ANO 2011",
+          "votes": 176100,
+          "percent": 24.920963327550048
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 137532,
+          "percent": 19.462975175267538
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 55105,
+          "percent": 7.798237843070104
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 32427,
+          "percent": 4.588938545272375
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 32245,
+          "percent": 4.5631826376879685
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 24618,
+          "percent": 3.4838402907304205
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 18062,
+          "percent": 2.5560615537888074
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 6847,
+          "percent": 0.9689598858815172
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 6619,
+          "percent": 0.9366942434131389
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 3835,
+          "percent": 0.5427137669571518
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 3576,
+          "percent": 0.50606112924088
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 1452,
+          "percent": 0.20548119677230361
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 1420,
+          "percent": 0.2009526855486716
+        },
+        {
+          "name": "SENIOŘI 21",
+          "votes": 1091,
+          "percent": 0.15439392953070472
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 1052,
+          "percent": 0.14887480647690318
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 816,
+          "percent": 0.11547703620261691
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 746,
+          "percent": 0.10557091790092184
+        }
+      ]
+    },
+    {
+      "slug": "jihočeský-kraj",
+      "name": "Jihočeský kraj",
+      "votes": 335839,
+      "leader": "SPOLU – ODS, KDU-ČSL, TOP 09 ahead",
+      "color": "#0047ab",
+      "amount": 0.5338195254764683,
+      "summary": "SPOLU – ODS, KDU-ČSL, TOP 09 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 97698,
+          "percent": 29.090725020024475
+        },
+        {
+          "name": "ANO 2011",
+          "votes": 89509,
+          "percent": 26.6523542530796
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 45357,
+          "percent": 13.50557856591998
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 30183,
+          "percent": 8.987342149065475
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 18304,
+          "percent": 5.4502306164561
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 15165,
+          "percent": 4.515556561328494
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 14974,
+          "percent": 4.458684071832039
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 11438,
+          "percent": 3.4057986118348373
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 3745,
+          "percent": 1.115117660545678
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 3342,
+          "percent": 0.995119685325409
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 1496,
+          "percent": 0.4454515407680466
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 1038,
+          "percent": 0.30907667066659916
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 941,
+          "percent": 0.2801937833307031
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 642,
+          "percent": 0.19116302752211625
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 608,
+          "percent": 0.181039128868297
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 530,
+          "percent": 0.15781371430953522
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 479,
+          "percent": 0.14262786632880636
+        },
+        {
+          "name": "Moravané",
+          "votes": 390,
+          "percent": 0.11612707279380893
+        }
+      ]
+    },
+    {
+      "slug": "plzeňský-kraj",
+      "name": "Plzeňský kraj",
+      "votes": 289679,
+      "leader": "ANO 2011 ahead",
+      "color": "#1d4e89",
+      "amount": 0.5345708442816888,
+      "summary": "ANO 2011 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "ANO 2011",
+          "votes": 84107,
+          "percent": 29.03455203863587
+        },
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 76994,
+          "percent": 26.579075459387806
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 40210,
+          "percent": 13.880881941735508
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 28874,
+          "percent": 9.967584809392465
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 14466,
+          "percent": 4.993803485927526
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 13695,
+          "percent": 4.72764680905416
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 11997,
+          "percent": 4.141480742477017
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 7246,
+          "percent": 2.501389469032964
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 3657,
+          "percent": 1.26243186423593
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 2902,
+          "percent": 1.0017985425246565
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 1365,
+          "percent": 0.4712112372660773
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 855,
+          "percent": 0.2951542914743561
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 855,
+          "percent": 0.2951542914743561
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 737,
+          "percent": 0.2544195471539186
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 626,
+          "percent": 0.21610127071689697
+        },
+        {
+          "name": "SENIOŘI 21",
+          "votes": 495,
+          "percent": 0.1708788003272588
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 301,
+          "percent": 0.10390811898687857
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 297,
+          "percent": 0.10252728019635528
+        }
+      ]
+    },
+    {
+      "slug": "karlovarský-kraj",
+      "name": "Karlovarský kraj",
+      "votes": 130303,
+      "leader": "ANO 2011 ahead",
+      "color": "#1d4e89",
+      "amount": 0.8382453982033844,
+      "summary": "ANO 2011 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "ANO 2011",
+          "votes": 43081,
+          "percent": 33.06217047957453
+        },
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 26355,
+          "percent": 20.22593493626394
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 18546,
+          "percent": 14.232980054181407
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 16629,
+          "percent": 12.76179366553341
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 6447,
+          "percent": 4.947698825046238
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 4930,
+          "percent": 3.7834892519742445
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 4454,
+          "percent": 3.4181868414388004
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 3584,
+          "percent": 2.7505122675609925
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 2026,
+          "percent": 1.5548375708924584
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 1446,
+          "percent": 1.109721188307253
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 948,
+          "percent": 0.7275350529151285
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 543,
+          "percent": 0.41672102714442494
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 539,
+          "percent": 0.4136512589886649
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 224,
+          "percent": 0.17190701672256203
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 214,
+          "percent": 0.16423259633316195
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 205,
+          "percent": 0.15732561798270187
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 132,
+          "percent": 0.1013023491400812
+        }
+      ]
+    },
+    {
+      "slug": "ústecký-kraj",
+      "name": "Ústecký kraj",
+      "votes": 377126,
+      "leader": "ANO 2011 ahead",
+      "color": "#1d4e89",
+      "amount": 0.894878724259615,
+      "summary": "ANO 2011 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "ANO 2011",
+          "votes": 134322,
+          "percent": 35.617273802389654
+        },
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 74565,
+          "percent": 19.77190647157714
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 52797,
+          "percent": 13.999830295445024
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 44774,
+          "percent": 11.87242460079655
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 16452,
+          "percent": 4.362467716360049
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 14804,
+          "percent": 3.925478487296023
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 12062,
+          "percent": 3.1984005345693483
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 11538,
+          "percent": 3.0594549301824854
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 4853,
+          "percent": 1.2868378207813833
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 4653,
+          "percent": 1.2338051473512832
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 2218,
+          "percent": 0.5881323483398122
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 1213,
+          "percent": 0.3216431643535582
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 867,
+          "percent": 0.22989663931948473
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 584,
+          "percent": 0.15485540641589282
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 568,
+          "percent": 0.1506127925414848
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 445,
+          "percent": 0.11799769838197313
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 411,
+          "percent": 0.10898214389885609
+        }
+      ]
+    },
+    {
+      "slug": "liberecký-kraj",
+      "name": "Liberecký kraj",
+      "votes": 221549,
+      "leader": "ANO 2011 ahead",
+      "color": "#1d4e89",
+      "amount": 0.6020793077375451,
+      "summary": "ANO 2011 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "ANO 2011",
+          "votes": 59515,
+          "percent": 26.8631318579637
+        },
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 50464,
+          "percent": 22.777805361342185
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 47350,
+          "percent": 21.372247222961963
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 24384,
+          "percent": 11.006143110553422
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 9524,
+          "percent": 4.298823285142339
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 7725,
+          "percent": 3.4868133008950615
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 6671,
+          "percent": 3.0110720427535216
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 6156,
+          "percent": 2.778617822693851
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 3163,
+          "percent": 1.427675141842211
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 2744,
+          "percent": 1.2385521938713333
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 1215,
+          "percent": 0.5484114123737864
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 677,
+          "percent": 0.30557574170950896
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 565,
+          "percent": 0.25502259093925045
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 383,
+          "percent": 0.1728737209375804
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 382,
+          "percent": 0.1724223535199888
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 347,
+          "percent": 0.156624493904283
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 284,
+          "percent": 0.1281883465960126
+        }
+      ]
+    },
+    {
+      "slug": "královéhradecký-kraj",
+      "name": "Královéhradecký kraj",
+      "votes": 294415,
+      "leader": "SPOLU – ODS, KDU-ČSL, TOP 09 ahead",
+      "color": "#0047ab",
+      "amount": 0.5058776703181808,
+      "summary": "SPOLU – ODS, KDU-ČSL, TOP 09 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 84166,
+          "percent": 28.587537999082926
+        },
+        {
+          "name": "ANO 2011",
+          "votes": 79463,
+          "percent": 26.990132975561707
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 44551,
+          "percent": 15.132041506037396
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 26661,
+          "percent": 9.055584803763395
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 14534,
+          "percent": 4.936569128610975
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 13930,
+          "percent": 4.731416537880203
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 10150,
+          "percent": 3.4475145627770325
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 8663,
+          "percent": 2.942445187915018
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 3941,
+          "percent": 1.338586688857565
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 3185,
+          "percent": 1.0818062938369308
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 1736,
+          "percent": 0.5896438700473821
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 981,
+          "percent": 0.3332031316339181
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 692,
+          "percent": 0.23504237216174448
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 621,
+          "percent": 0.21092675305266376
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 438,
+          "percent": 0.14876959394052613
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 430,
+          "percent": 0.14605234108316492
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 273,
+          "percent": 0.09272625375745122
+        }
+      ]
+    },
+    {
+      "slug": "pardubický-kraj",
+      "name": "Pardubický kraj",
+      "votes": 273992,
+      "leader": "SPOLU – ODS, KDU-ČSL, TOP 09 ahead",
+      "color": "#0047ab",
+      "amount": 0.5089409311310978,
+      "summary": "SPOLU – ODS, KDU-ČSL, TOP 09 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 78163,
+          "percent": 28.527475254751963
+        },
+        {
+          "name": "ANO 2011",
+          "votes": 73556,
+          "percent": 26.84603930041753
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 38628,
+          "percent": 14.098221845893312
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 25673,
+          "percent": 9.369981605302344
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 13843,
+          "percent": 5.052337294519548
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 13569,
+          "percent": 4.952334374726269
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 10461,
+          "percent": 3.817994685976233
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 7866,
+          "percent": 2.8708867412187216
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 4316,
+          "percent": 1.5752284738240532
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 2719,
+          "percent": 0.9923647405763671
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 1313,
+          "percent": 0.4792110718561126
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 778,
+          "percent": 0.2839498963473386
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 757,
+          "percent": 0.27628543899091945
+        },
+        {
+          "name": "Moravané",
+          "votes": 564,
+          "percent": 0.20584542614382903
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 544,
+          "percent": 0.19854594294723935
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 479,
+          "percent": 0.17482262255832287
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 384,
+          "percent": 0.1401500773745219
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 379,
+          "percent": 0.13832520657537448
+        }
+      ]
+    },
+    {
+      "slug": "kraj-vysočina",
+      "name": "Kraj Vysočina",
+      "votes": 277194,
+      "leader": "SPOLU – ODS, KDU-ČSL, TOP 09 ahead",
+      "color": "#0047ab",
+      "amount": 0.4953169481263928,
+      "summary": "SPOLU – ODS, KDU-ČSL, TOP 09 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 77631,
+          "percent": 28.00601744626507
+        },
+        {
+          "name": "ANO 2011",
+          "votes": 74113,
+          "percent": 26.736870206425824
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 37451,
+          "percent": 13.510754201028883
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 24729,
+          "percent": 8.921188770319704
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 18168,
+          "percent": 6.554254421091366
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 14504,
+          "percent": 5.232436488524282
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 12959,
+          "percent": 4.675065116849571
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 7341,
+          "percent": 2.6483257213359597
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 3182,
+          "percent": 1.1479324949313476
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 2299,
+          "percent": 0.8293830313787456
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 1052,
+          "percent": 0.3795175941759201
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 763,
+          "percent": 0.2752584832283527
+        },
+        {
+          "name": "Moravané",
+          "votes": 697,
+          "percent": 0.2514484440500155
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 633,
+          "percent": 0.22835992121041582
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 416,
+          "percent": 0.15007539845739806
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 370,
+          "percent": 0.13348052266643579
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 350,
+          "percent": 0.12626535927906088
+        },
+        {
+          "name": "Moravské zemské hnutí",
+          "votes": 304,
+          "percent": 0.10967048348809859
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 232,
+          "percent": 0.08369589529354893
+        }
+      ]
+    },
+    {
+      "slug": "jihomoravský-kraj",
+      "name": "Jihomoravský kraj",
+      "votes": 624290,
+      "leader": "SPOLU – ODS, KDU-ČSL, TOP 09 ahead",
+      "color": "#0047ab",
+      "amount": 0.605389152893113,
+      "summary": "SPOLU – ODS, KDU-ČSL, TOP 09 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 187497,
+          "percent": 30.03363821300998
+        },
+        {
+          "name": "ANO 2011",
+          "votes": 158362,
+          "percent": 25.36673661279213
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 88601,
+          "percent": 14.19228243284371
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 58427,
+          "percent": 9.358951769209822
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 37740,
+          "percent": 6.04526742379343
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 27555,
+          "percent": 4.413814092809432
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 22825,
+          "percent": 3.6561533902513257
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 15964,
+          "percent": 2.5571449166252864
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 9231,
+          "percent": 1.478639734738663
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 5590,
+          "percent": 0.8954171939323071
+        },
+        {
+          "name": "Moravané",
+          "votes": 4080,
+          "percent": 0.6535424241938842
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 1537,
+          "percent": 0.24619968283970592
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 1421,
+          "percent": 0.22761857470086017
+        },
+        {
+          "name": "Moravské zemské hnutí",
+          "votes": 1057,
+          "percent": 0.169312338816896
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 953,
+          "percent": 0.1526534142786205
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 770,
+          "percent": 0.12334011436992423
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 746,
+          "percent": 0.11949574716878374
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 636,
+          "percent": 0.10187573083022314
+        },
+        {
+          "name": "SENIOŘI 21",
+          "votes": 550,
+          "percent": 0.08810008169280302
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 469,
+          "percent": 0.07512534238895385
+        },
+        {
+          "name": "Levice",
+          "votes": 279,
+          "percent": 0.044690768713258264
+        }
+      ]
+    },
+    {
+      "slug": "olomoucký-kraj",
+      "name": "Olomoucký kraj",
+      "votes": 324828,
+      "leader": "ANO 2011 ahead",
+      "color": "#1d4e89",
+      "amount": 0.6257656595735881,
+      "summary": "ANO 2011 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "ANO 2011",
+          "votes": 96714,
+          "percent": 29.773911116036796
+        },
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 79715,
+          "percent": 24.540679990641202
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 40124,
+          "percent": 12.352383415222826
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 39759,
+          "percent": 12.240016254756364
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 15257,
+          "percent": 4.696947307498122
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 14742,
+          "percent": 4.538401861908456
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 12914,
+          "percent": 3.9756424938736807
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 9907,
+          "percent": 3.0499218047705248
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 5230,
+          "percent": 1.6100828746290345
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 2906,
+          "percent": 0.8946273104535323
+        },
+        {
+          "name": "Moravané",
+          "votes": 2798,
+          "percent": 0.8613789451648257
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 912,
+          "percent": 0.2807639735490783
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 829,
+          "percent": 0.2552119891142389
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 666,
+          "percent": 0.20503158594702428
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 644,
+          "percent": 0.19825877079562107
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 595,
+          "percent": 0.1831738643220412
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 498,
+          "percent": 0.15331190660903618
+        },
+        {
+          "name": "Moravské zemské hnutí",
+          "votes": 287,
+          "percent": 0.08835445220239635
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 193,
+          "percent": 0.05941606019185538
+        },
+        {
+          "name": "Levice",
+          "votes": 138,
+          "percent": 0.04248402231334737
+        }
+      ]
+    },
+    {
+      "slug": "moravskoslezský-kraj",
+      "name": "Moravskoslezský kraj",
+      "votes": 578627,
+      "leader": "ANO 2011 ahead",
+      "color": "#1d4e89",
+      "amount": 0.8379524121818256,
+      "summary": "ANO 2011 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "ANO 2011",
+          "votes": 195176,
+          "percent": 33.730883626239354
+        },
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 119457,
+          "percent": 20.644905958415354
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 74191,
+          "percent": 12.821904266479097
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 64412,
+          "percent": 11.131869062453013
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 31369,
+          "percent": 5.421281758369381
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 28164,
+          "percent": 4.867384342590304
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 23095,
+          "percent": 3.991345028835502
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 14239,
+          "percent": 2.4608253676375282
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 11734,
+          "percent": 2.0279039865059874
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 5688,
+          "percent": 0.9830166929645523
+        },
+        {
+          "name": "Moravané",
+          "votes": 2823,
+          "percent": 0.48787906544285004
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 1933,
+          "percent": 0.3340666785338396
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 1928,
+          "percent": 0.3332025640006429
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 1080,
+          "percent": 0.1866487391704846
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 831,
+          "percent": 0.14361583541728956
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 782,
+          "percent": 0.135147512991962
+        },
+        {
+          "name": "SENIOŘI 21",
+          "votes": 670,
+          "percent": 0.11579134744835619
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 619,
+          "percent": 0.10697737920974998
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 436,
+          "percent": 0.0753507872947512
+        }
+      ]
+    },
+    {
+      "slug": "zlínský-kraj",
+      "name": "Zlínský kraj",
+      "votes": 313215,
+      "leader": "SPOLU – ODS, KDU-ČSL, TOP 09 ahead",
+      "color": "#0047ab",
+      "amount": 0.47855698180857054,
+      "summary": "SPOLU – ODS, KDU-ČSL, TOP 09 has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "votes": 87019,
+          "percent": 27.78251360886292
+        },
+        {
+          "name": "ANO 2011",
+          "votes": 84534,
+          "percent": 26.98912887313826
+        },
+        {
+          "name": "PIRÁTI a STAROSTOVÉ",
+          "votes": 42117,
+          "percent": 13.446674009865427
+        },
+        {
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "votes": 35662,
+          "percent": 11.385789314049456
+        },
+        {
+          "name": "Česká strana sociálně demokratická",
+          "votes": 15338,
+          "percent": 4.896955765209201
+        },
+        {
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "votes": 13270,
+          "percent": 4.236706415720831
+        },
+        {
+          "name": "Komunistická strana Čech a Moravy",
+          "votes": 10426,
+          "percent": 3.328703925418642
+        },
+        {
+          "name": "Trikolora Svobodní Soukromníci",
+          "votes": 10376,
+          "percent": 3.3127404498507413
+        },
+        {
+          "name": "VOLNÝ blok",
+          "votes": 5431,
+          "percent": 1.7339527161853678
+        },
+        {
+          "name": "Strana zelených",
+          "votes": 2764,
+          "percent": 0.8824609293935476
+        },
+        {
+          "name": "Moravané",
+          "votes": 2584,
+          "percent": 0.8249924173491052
+        },
+        {
+          "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+          "votes": 914,
+          "percent": 0.29181233338122375
+        },
+        {
+          "name": "Otevřeme Česko normálnímu životu",
+          "votes": 754,
+          "percent": 0.2407292115639417
+        },
+        {
+          "name": "Urza.cz: Nechceme vaše hlasy",
+          "votes": 491,
+          "percent": 0.1567613300767843
+        },
+        {
+          "name": "Aliance pro budoucnost",
+          "votes": 470,
+          "percent": 0.15005667033826606
+        },
+        {
+          "name": "Hnutí Prameny",
+          "votes": 457,
+          "percent": 0.14590616669061188
+        },
+        {
+          "name": "Koruna Česká (monarch.str.Čech, Moravy a Slezska)",
+          "votes": 376,
+          "percent": 0.12004533627061284
+        },
+        {
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "votes": 232,
+          "percent": 0.07407052663505899
+        }
+      ]
+    }
+  ],
+  "card": "Chamber of Deputies on 8 and 9 October 2021. The Statistical Office file is the published count. The map is list votes, by region."
+}

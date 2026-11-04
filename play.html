@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaders.vote · Play</title>
+<meta name="description" content="Questions, a count, and a sheet, using facts already printed on Leaders.vote. Not an endorsement.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="guide.css?v=play">
+<style>
+  .play-switch { margin-top: 8px; }
+  .play-switch button { font-size: 18px; }
+  .scene { position: relative; }
+  .scene-frame { position: relative; height: 300px; overflow: hidden; border: 1px solid var(--ink); }
+  .scene-frame img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+  }
+  .scene-credit {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: min(46%, 360px);
+    margin: 0;
+    padding: 36px 14px 12px;
+    background: linear-gradient(transparent, rgba(12, 10, 8, 0.9));
+    color: #f4f0e6;
+    font-size: 13px;
+    z-index: 1;
+  }
+  .scene-credit a { color: inherit; }
+  .scene.scene-sheet .scene-credit { max-width: none; right: 0; }
+  .scene.scene-sheet .play-layout {
+    margin: 16px 0 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .play-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 440px) 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  .sheet {
+    position: relative;
+    width: min(100%, 560px);
+    min-height: 760px;
+    overflow: hidden;
+    border: 1px solid #1c1915;
+    background: #14110e;
+    color: #f4f0e6;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .sheet-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .sheet-copy {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    min-height: 760px;
+    padding: 28px 26px 64px;
+    display: flex;
+    flex-direction: column;
+  }
+  .sheet .scene-credit {
+    max-width: none;
+    right: 0;
+    z-index: 2;
+    font-size: 12px;
+  }
+  .sheet[data-place="top"] .sheet-copy { justify-content: flex-start; }
+  .sheet[data-place="bottom"] .sheet-copy { justify-content: flex-end; padding-top: 72px; }
+  .sheet[data-place="top"] .scene-credit { top: auto; }
+  .sheet[data-place="bottom"] .scene-credit {
+    top: 0;
+    bottom: auto;
+    padding: 12px 14px 28px;
+    background: linear-gradient(rgba(12, 10, 8, 0.72), transparent);
+  }
+  .sheet[data-shot="illinois"] { border-color: #6e3a34; }
+  .sheet[data-shot="illinois"] .sheet-photo { object-position: 78% 10%; }
+  .sheet[data-shot="illinois"] .sheet-copy {
+    width: min(68%, 390px);
+    justify-content: flex-start;
+    color: #1c1915;
+    background: linear-gradient(90deg, rgba(176, 188, 202, 0.22) 0%, rgba(176, 188, 202, 0.08) 70%, rgba(176, 188, 202, 0) 100%);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85), 0 0 14px rgba(236, 240, 246, 0.9);
+  }
+  .sheet[data-shot="illinois"] .scene-credit {
+    color: #f4efe8;
+    text-shadow: 0 1px 2px rgba(40, 16, 12, 0.85);
+  }
+  .sheet[data-shot="senate"] { border-color: #0a3161; }
+  .sheet[data-shot="senate"] .sheet-photo { object-position: center 36%; }
+  .sheet[data-shot="senate"] .sheet-copy {
+    color: #f4f7ef;
+    background: linear-gradient(180deg, transparent 46%, rgba(16, 38, 14, 0.22) 68%, rgba(10, 28, 8, 0.62) 100%);
+    text-shadow: 0 1px 2px rgba(8, 20, 6, 0.45);
+  }
+  .sheet[data-shot="court"] { border-color: #c4b48a; }
+  .sheet[data-shot="court"] .sheet-photo { object-position: center 28%; }
+  .sheet[data-shot="court"] .sheet-copy {
+    width: min(66%, 380px);
+    color: #1c1915;
+    background: linear-gradient(90deg, rgba(236, 226, 200, 0.5) 0%, rgba(236, 226, 200, 0.22) 72%, rgba(236, 226, 200, 0) 100%);
+    text-shadow: 0 1px 0 rgba(255, 248, 236, 0.9), 0 0 12px rgba(255, 248, 236, 0.85);
+  }
+  .sheet.is-retain .sheet-head strong { color: #1b4d2e; }
+  .sheet[data-shot="box"] { border-color: #111; }
+  .sheet[data-shot="box"] .sheet-photo { object-position: center 40%; }
+  .sheet[data-shot="box"] .sheet-copy {
+    color: #f7f4ee;
+    background: linear-gradient(180deg, transparent 26%, rgba(0, 0, 0, 0.78) 44%, #000 100%);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  .sheet[data-shot="alps"] { border-color: #1c2430; }
+  .sheet[data-shot="alps"] .sheet-photo { object-position: center 32%; }
+  .sheet[data-shot="alps"] .sheet-copy {
+    color: #f3f0ea;
+    background: linear-gradient(180deg, transparent 48%, rgba(8, 10, 16, 0.2) 70%, rgba(6, 8, 12, 0.55) 100%);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+  }
+  .sheet[data-shot="brazil"] { border-color: #0d4ea3; }
+  .sheet[data-shot="brazil"] .sheet-photo { object-position: center 72%; }
+  .sheet[data-shot="brazil"] .sheet-copy {
+    color: #f7f4ea;
+    background: linear-gradient(180deg, rgba(6, 48, 130, 0.22) 0%, rgba(6, 48, 130, 0.06) 40%, transparent 62%);
+    text-shadow: 0 1px 2px rgba(4, 24, 80, 0.9), 0 0 14px rgba(4, 24, 80, 0.65);
+  }
+  .sheet[data-shot="cape"] { border-color: #163a66; }
+  .sheet[data-shot="cape"] .sheet-photo { object-position: center bottom; }
+  .sheet[data-shot="cape"] .sheet-copy {
+    color: #f4f7fb;
+    background: linear-gradient(180deg, rgba(8, 36, 78, 0.22) 0%, rgba(8, 36, 78, 0.06) 40%, transparent 60%);
+    text-shadow: 0 1px 2px rgba(6, 20, 48, 0.9), 0 0 14px rgba(6, 20, 48, 0.65);
+  }
+  .sheet:not(.is-paper) .contest { border-top-color: color-mix(in srgb, currentColor 55%, transparent); }
+  .sheet:not(.is-paper) .contest h3 { font-size: 22px; line-height: 1.28; }
+  .sheet:not(.is-paper) .who-name { font-size: 18px; }
+  .sheet:not(.is-paper) .oval { border-color: currentColor; }
+  .sheet:not(.is-paper) .choice[aria-pressed="true"] .oval,
+  .sheet:not(.is-paper) .choice.is-right .oval { background: currentColor; }
+  .sheet:not(.is-paper) .choice.is-wrong .oval { background: transparent; }
+  .sheet:not(.is-paper) .choice:hover { background: color-mix(in srgb, currentColor 14%, transparent); }
+  .sheet.is-paper {
+    min-height: 0;
+    padding: 16px 16px 20px;
+    background: #fff;
+    color: #161616;
+  }
+  .sheet.is-paper .sheet-photo { display: none; }
+  .sheet.is-paper .sheet-copy {
+    min-height: 0;
+    padding: 0;
+    display: block;
+    background: none;
+    color: inherit;
+    text-shadow: none;
+  }
+  .sheet-head { margin: 0 0 8px; text-align: center; }
+  .sheet-head strong {
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+  }
+  .sheet-head span { display: block; font-size: 14px; }
+  .sheet-instruct { margin: 0 0 12px; font-size: 15px; line-height: 1.35; }
+  .contest { padding: 8px 6px 10px; border-top: 1px solid #161616; }
+  .contest h3 {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .contest .detail, .contest .vote-for { margin: 2px 0 0; font-size: 14px; font-weight: 700; }
+  .choice {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 8px;
+    width: 100%;
+    margin: 7px 0 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .choice:disabled { cursor: default; }
+  .oval {
+    width: 18px;
+    height: 13px;
+    margin-top: 4px;
+    border: 2px solid #161616;
+    border-radius: 50%;
+  }
+  .choice[aria-pressed="true"] .oval,
+  .choice.is-right .oval { background: #161616; }
+  .choice.is-wrong .oval { background: transparent; }
+  .mark { display: block; margin-top: 2px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+  .salute {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .salute-flag {
+    position: absolute;
+    right: 3%;
+    top: 12%;
+    width: 27%;
+    min-width: 128px;
+    max-width: 196px;
+    height: 118px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+    transform-origin: left center;
+  }
+  .sheet[data-place="top"] .salute.is-hit .salute-flag { top: auto; bottom: 16%; }
+  .sheet[data-place="top"] .salute.is-miss .salute-flag { top: 46%; }
+  .salute-bar { flex: 1; }
+  .salute-bar:nth-child(odd) { background: #bf0a30; }
+  .salute-bar:nth-child(even) { background: #fff; }
+  .salute-canton {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44%;
+    height: 54%;
+    background:
+      radial-gradient(circle, #fff 1.15px, transparent 1.35px) 5px 5px / 13px 12px,
+      #0a3161;
+  }
+  .salute-star {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    opacity: 0;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+  .salute-star { filter: drop-shadow(0 1px 1px rgba(12, 16, 24, 0.7)); }
+  .salute-star.is-red { background: #bf0a30; }
+  .salute-star.is-white { background: #fff; }
+  .salute-star.is-blue { background: #0a3161; }
+  .salute.is-hit .salute-flag { animation: flag-raise 1.9s ease-out forwards; }
+  .salute.is-hit .salute-star { animation: star-up 1.7s cubic-bezier(.12, .7, .2, 1) forwards; }
+  .salute.is-miss .salute-flag {
+    top: 4%;
+    transform-origin: right top;
+    animation: flag-lower 1.45s cubic-bezier(.2, .6, .4, 1) forwards;
+  }
+  .salute.is-miss .salute-star { animation: star-down 1.45s linear forwards; }
+  @keyframes flag-raise {
+    0% { transform: scaleX(0.06) rotate(-14deg); opacity: 0; }
+    14% { opacity: 1; }
+    40% { transform: scaleX(1) rotate(4deg); }
+    56% { transform: scaleX(1) rotate(-3deg); }
+    72% { transform: scaleX(1) rotate(2deg); }
+    100% { transform: scaleX(1) translateY(-16px); opacity: 0; }
+  }
+  @keyframes flag-lower {
+    0% { transform: translateY(0) rotate(0deg) scaleY(1); opacity: 0; }
+    8% { opacity: 1; }
+    40% { transform: translateY(78px) rotate(18deg) scaleY(0.78); filter: grayscale(0.2); opacity: 1; }
+    100% { transform: translateY(270px) rotate(36deg) scaleY(0.4); filter: grayscale(0.7); opacity: 0; }
+  }
+  @keyframes star-up {
+    0% { transform: translate(0, 24px) scale(0.3) rotate(0deg); opacity: 0; }
+    14% { opacity: 1; }
+    68% { opacity: 1; }
+    100% { transform: translate(var(--drift), var(--travel)) scale(1) rotate(var(--spin)); opacity: 0; }
+  }
+  @keyframes star-down {
+    0% { transform: translate(0, -10px) scale(1) rotate(0deg); opacity: 0; }
+    14% { opacity: 1; }
+    60% { opacity: 1; }
+    100% { transform: translate(var(--drift), var(--travel)) scale(0.4) rotate(var(--spin)); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .salute { display: none; }
+  }
+  .who-name { display: block; font-size: 17px; font-weight: 700; }
+  .sheet-move { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 10px; }
+  .sheet-move button {
+    font: inherit;
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .sheet-move button:disabled { color: var(--muted); border-color: var(--line); cursor: default; }
+  #play-status { flex: 1 0 100%; width: 100%; max-width: none; margin: 0; color: var(--ink); font-size: 17px; line-height: 1.4; }
+  #play-status:empty { display: none; }
+  .tally {
+    display: flex;
+    gap: 18px;
+    margin: 8px 0 0;
+    font-variant-numeric: tabular-nums;
+    font-size: 16px;
+  }
+  .tally span { display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .tally strong { display: block; font-family: Georgia, "Palatino Linotype", serif; font-size: 28px; font-weight: 500; }
+  .misses { margin: 8px 0 0; padding-left: 1.2em; }
+  .misses li { margin: 6px 0; }
+  .misses a { text-underline-offset: 3px; }
+  .board {
+    display: grid;
+    grid-template-columns: repeat(4, 76px);
+    width: max-content;
+    background: #fff;
+  }
+  .cell {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    padding: 18px 0 0;
+    border: 0;
+    background: #fff;
+    color: var(--ink);
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .cell .term {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 12px;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .cell.is-on { background: var(--chip); }
+  .cell.is-bad { background: #f3e4e1; }
+  .keys { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .keys button {
+    font: inherit;
+    min-width: 44px;
+    height: 44px;
+    padding: 0 12px;
+    background: transparent;
+    border: 1px solid var(--ink);
+    cursor: pointer;
+  }
+  .keys button:hover, .cell:hover { background: var(--chip); }
+  .cell.is-bad:hover { background: #f3e4e1; }
+  button:focus-visible, .cell:focus-visible { outline: 2px solid #0a3161; outline-offset: 2px; }
+  .rule { margin: 0 0 12px; max-width: 46ch; }
+  @media (max-width: 800px) {
+    .play-layout { grid-template-columns: 1fr; }
+    .scene.scene-sheet .scene-frame { height: 220px; }
+    .sheet { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="bar-top">
+      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+    </div>
+    <p class="here notranslate" translate="no"><span>Play</span></p>
+    <nav>
+      <a href="index.html">All states</a>
+      <a href="countries.html">Countries</a>
+      <a href="play.html" aria-current="page">Play</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero">
+    <p class="kicker">From the guide</p>
+    <h1>Questions from the pages.</h1>
+    <p class="deck">Three short games. Every answer is a fact already printed on Leaders.vote. Nothing here endorses a candidate, calls a race, or keeps score against anyone else.</p>
+    <div class="sheet-switch play-switch" role="tablist" aria-label="Games">
+      <button type="button" id="tab-ballot" role="tab" aria-controls="play-root" aria-pressed="true">Know the ballot</button>
+      <button type="button" id="tab-count" role="tab" aria-controls="play-root" aria-pressed="false">The count</button>
+      <button type="button" id="tab-sheet" role="tab" aria-controls="play-root" aria-pressed="false">The sheet</button>
+    </div>
+  </div>
+  <div class="wrap block" id="play-root"></div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any election authority. Play repeats facts from those pages. A finished sheet is a puzzle, not a result.</p>
+    <p>Illinois facts are from the Illinois page: the sample ballot, the retention rule, and the note on terms. Country facts are from the country list. Names are printed as they are printed there. Photographs are used under the Unsplash License. The photographer is credited on the picture.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  var root = document.getElementById("play-root");
+  var sheetKey = null;
+  var tabs = {
+    ballot: document.getElementById("tab-ballot"),
+    count: document.getElementById("tab-count"),
+    sheet: document.getElementById("tab-sheet")
+  };
+
+  var PHOTOS = {
+    cape: {
+      id: "photo-1644102723501-ca5184c20e66",
+      slug: "FSfUQExedM4",
+      user: "jalome",
+      by: "Jolame Chirwa",
+      place: "top",
+      alt: "Cape Town’s towers, with Table Mountain on the horizon"
+    },
+    alps: {
+      id: "photo-1531743579253-fa8d52993ba5",
+      slug: "JSeROcGUxkY",
+      user: "fabulu75",
+      by: "Fabrice Villard",
+      place: "bottom",
+      alt: "The Matterhorn above Zermatt, Switzerland"
+    },
+    brazil: {
+      id: "photo-1749094193595-838dc6e6b7c4",
+      slug: "Spg_nmwVfds",
+      user: "fabian_lp",
+      by: "Fabian Lozano",
+      place: "top",
+      alt: "The National Congress in Brasília, two towers between two bowls"
+    },
+    illinois: {
+      id: "photo-1551301285-bdfcd0f17a02",
+      slug: "T2gyvHmkS98",
+      user: "tuckergood",
+      by: "Tucker Good",
+      place: "side",
+      alt: "The dome of the Illinois State Capitol in Springfield"
+    },
+    senate: {
+      id: "photo-1597335586198-e31434d3a856",
+      slug: "CDsAkr_mBeg",
+      user: "minimouche",
+      by: "Florian Pintar",
+      place: "bottom",
+      alt: "The United States Capitol in Washington"
+    },
+    court: {
+      id: "photo-1701606115482-bed68b482c89",
+      slug: "UMK1mwunTZ8",
+      user: "nathan_cima",
+      by: "Nathan Cima",
+      place: "top",
+      alt: "The courthouse in Montpellier, a columned front under a pediment"
+    },
+    box: {
+      id: "photo-1540910419892-4a36d2c3266c",
+      slug: "T9CXBZLUvic",
+      user: "element5digital",
+      by: "Element5 Digital",
+      place: "bottom",
+      alt: "A hand putting a ballot into a box"
+    }
+  };
+
+  var BANK = [
+    {
+      shot: "illinois",
+      prompt: "The dome in this photograph is the Illinois State Capitol. How do you vote for governor and lieutenant governor there?",
+      choices: ["One oval for each name", "One oval for the ticket", "A vote for governor only", "The legislature fills the second office"],
+      answer: 1,
+      fact: "Governor and lieutenant governor share one oval. The two names are a single ticket.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "illinois",
+      prompt: "The dome in this photograph is the Illinois State Capitol. How long is a term for the other statewide offices chosen there?",
+      choices: ["Two years", "Four years", "Six years", "Eight years"],
+      answer: 1,
+      fact: "Terms are four years, except the Senate, which is six.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "senate",
+      prompt: "This is the United States Capitol, where the Senate meets. How long is that term on the Illinois ballot?",
+      choices: ["Two years", "Four years", "Six years", "It follows the governor"],
+      answer: 2,
+      fact: "Terms are four years, except the Senate, which is six.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "box",
+      prompt: "The hand in this photograph is casting a ballot. Which Illinois offices include a write-in line on that kind of sheet?",
+      choices: ["Senate, attorney general, and secretary of state", "Governor, comptroller, and treasurer", "Every statewide office", "Only judges up for retention"],
+      answer: 1,
+      fact: "Governor, comptroller, and treasurer include a write-in line.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "court",
+      prompt: "The columns in this photograph are a courthouse. On Illinois’s green ballot, what does a judge need in order to stay?",
+      choices: ["More yes votes than no votes", "Three-fifths of the vote on that question", "Two-thirds of the vote", "A unanimous yes"],
+      answer: 1,
+      fact: "A judge needs three-fifths of the vote on that question to stay. No judge on that sheet is running against another judge.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "box",
+      prompt: "One ballot is going into this box. What happens when two ovals are marked for one office?",
+      choices: ["Both choices are counted", "The whole ballot is rejected", "That office is not counted", "The first oval is the one that counts"],
+      answer: 2,
+      fact: "Marking two ovals for one office means that office is not counted.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "illinois",
+      prompt: "This is the Illinois State Capitol, where the governor serves. What does the Illinois page say about limiting that office?",
+      choices: ["The governor is limited to two terms", "Illinois does not limit the governor to two terms", "The governor may serve one term", "The limit is three terms"],
+      answer: 1,
+      fact: "Illinois does not limit the governor to two terms.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "illinois",
+      prompt: "The governor chosen under this dome runs on one ticket. Who is on the ticket with JB Pritzker?",
+      choices: ["Aaron B. Del Mar", "Christian Mitchell", "Carolyn Schofield", "Juliana Stratton"],
+      answer: 1,
+      names: true,
+      fact: "The Democratic ticket is JB Pritzker and Christian Mitchell.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "illinois",
+      prompt: "On the ballot for the capitol in this photograph, who is on the ticket with Darren Bailey?",
+      choices: ["Christian Mitchell", "Carolyn Schofield", "Aaron B. Del Mar", "Don Tracy"],
+      answer: 2,
+      names: true,
+      fact: "The Republican ticket is Darren Bailey and Aaron B. Del Mar.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "illinois",
+      prompt: "On the ballot for the capitol in this photograph, who is on the ticket with Collin Corbett?",
+      choices: ["Carolyn Schofield", "Christian Mitchell", "Aaron B. Del Mar", "Diane M. Harris"],
+      answer: 0,
+      names: true,
+      fact: "The independent ticket is Collin Corbett and Carolyn Schofield.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "senate",
+      prompt: "This is the Senate’s building. Whose Illinois Senate card says he won the primary with 40%?",
+      choices: ["Juliana Stratton", "Whitfield Harrington Jr.", "Don Tracy", "Kwame Raoul"],
+      answer: 2,
+      names: true,
+      fact: "Don Tracy’s card says he won the primary with 40%.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "court",
+      prompt: "This photograph is a courthouse. Whose attorney general card mentions roughly 90 legal fights?",
+      choices: ["Robert W. Fioretti", "Kwame Raoul", "Alexi Giannoulias", "Margaret Croke"],
+      answer: 1,
+      names: true,
+      fact: "Kwame Raoul’s card says Capitol News Illinois counted roughly 90 legal fights with the Trump administration in the last two years.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "illinois",
+      prompt: "On the page for the capitol in this photograph, in what order does Leaders.vote list candidates?",
+      choices: ["Democratic, then Republican, then any other party", "Republican, then Democratic, then any other party", "Alphabetical by last name", "The order of that precinct’s ballot"],
+      answer: 1,
+      fact: "On this site the order is Republican, then Democratic, then any other party. A precinct ballot may list them differently.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "illinois",
+      prompt: "Before your own district, how many statewide races does the page for this capitol list?",
+      choices: ["Four", "Five", "Six", "Nine"],
+      answer: 2,
+      fact: "Same six races. Then your own district.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "alps",
+      prompt: "The peak in this photograph is in one of these countries. Which election on this site is two yes-or-no questions?",
+      choices: ["Brazil", "Switzerland", "Sweden", "Germany"],
+      answer: 1,
+      names: true,
+      fact: "Switzerland held two yes-or-no questions on 27 September 2026. The map is the neutrality question, by canton.",
+      href: "countries.html",
+      where: "Countries"
+    },
+    {
+      shot: "brazil",
+      prompt: "The building in this photograph is a national congress, two towers between two bowls. Which country page is a presidential runoff?",
+      choices: ["South Africa", "Japan", "Brazil", "Australia"],
+      answer: 2,
+      names: true,
+      fact: "Brazil is the presidential runoff on 25 October 2026. The court’s file marks the count finished.",
+      href: "countries.html",
+      where: "Countries"
+    },
+    {
+      shot: "cape",
+      prompt: "This is Cape Town, with Table Mountain on the horizon. What election is the South Africa page?",
+      choices: ["Parliament", "A presidential runoff", "Regional chairs", "Local councils"],
+      answer: 3,
+      fact: "South Africa is local councils on 4 November 2026. A municipality stays blank until the Commission reports votes there.",
+      href: "countries.html",
+      where: "Countries"
+    }
+  ];
+
+  var COUNTS = [
+    {
+      kind: "retain",
+      shot: "court",
+      yes: 299,
+      no: 201,
+      stays: false,
+      fact: "Three-fifths of 500 is 300. Yes has 299. That is more than half, and it is short of 300, so the judge does not stay."
+    },
+    {
+      kind: "retain",
+      shot: "court",
+      yes: 301,
+      no: 199,
+      stays: true,
+      fact: "Three-fifths of 500 is 300. Yes has 301, so the judge stays."
+    },
+    {
+      kind: "retain",
+      shot: "court",
+      yes: 90,
+      no: 60,
+      stays: true,
+      fact: "Three-fifths of 150 is 90. Yes has 90, so the judge stays."
+    },
+    {
+      kind: "over",
+      shot: "box",
+      ballots: 180,
+      spoiled: 15,
+      answer: 165,
+      choices: [150, 165, 180, 195],
+      fact: "Fifteen ballots marked two ovals, so those fifteen are not counted for treasurer. 180 minus 15 is 165."
+    },
+    {
+      kind: "year",
+      shot: "illinois",
+      answer: 2038,
+      choices: [2030, 2032, 2034, 2038],
+      fact: "The four-year offices come back in 2030, 2034, and 2038. The Senate comes back in 2032 and 2038. Both are on the ballot again in 2038."
+    }
+  ];
+
+  var CAGES = [
+    { cells: [0, 1], target: 4 },
+    { cells: [2, 3], target: 6 },
+    { cells: [4, 5], target: 6 },
+    { cells: [6, 7], target: 4 },
+    { cells: [8, 9], target: 6 },
+    { cells: [10, 11], target: 4 },
+    { cells: [12, 13], target: 4 },
+    { cells: [14, 15], target: 6 }
+  ];
+
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
+  function shuffle(list) {
+    var copy = list.slice();
+    for (var i = copy.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var hold = copy[i];
+      copy[i] = copy[j];
+      copy[j] = hold;
+    }
+    return copy;
+  }
+
+  function show(name) {
+    if (sheetKey) {
+      document.removeEventListener("keydown", sheetKey);
+      sheetKey = null;
+    }
+    Object.keys(tabs).forEach(function (key) {
+      tabs[key].setAttribute("aria-pressed", key === name ? "true" : "false");
+    });
+    root.replaceChildren();
+    if (name === "ballot") renderBallot();
+    else if (name === "count") renderCount();
+    else renderSheet();
+  }
+
+  function sheetHead(title, line) {
+    var head = el("div", "sheet-head");
+    head.appendChild(el("strong", "", title));
+    head.appendChild(el("span", "", line));
+    return head;
+  }
+
+  function choiceButton(label, names) {
+    var button = el("button", "choice");
+    button.type = "button";
+    button.setAttribute("aria-pressed", "false");
+    var mark = el("span", "oval");
+    mark.setAttribute("aria-hidden", "true");
+    button.appendChild(mark);
+    var text = el("span", "who-name" + (names ? " notranslate" : ""), label);
+    if (names) text.setAttribute("translate", "no");
+    button.appendChild(text);
+    return button;
+  }
+
+  function grade(sheet, button, hit, fact, status) {
+    button.setAttribute("aria-pressed", "true");
+    button.classList.add(hit ? "is-right" : "is-wrong");
+    sheet.querySelectorAll(".choice").forEach(function (node) {
+      node.disabled = true;
+      if (node.dataset.right === "1") node.classList.add("is-right");
+      var name = node.querySelector(".who-name");
+      if (node.classList.contains("is-wrong")) name.appendChild(el("span", "mark", "Not this one"));
+      else if (node.classList.contains("is-right") && node === button) name.appendChild(el("span", "mark", "Correct"));
+      else if (node.classList.contains("is-right")) name.appendChild(el("span", "mark", "This one"));
+    });
+    status.textContent = (hit ? "Correct. " : "Not this one. ") + fact;
+    salute(sheet.closest(".sheet"), hit);
+  }
+
+  function clearSalute(card) {
+    if (!card) return;
+    card.querySelectorAll(".salute").forEach(function (node) { node.remove(); });
+  }
+
+  function salute(card, hit) {
+    clearSalute(card);
+    if (!card || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var layer = el("div", "salute " + (hit ? "is-hit" : "is-miss"));
+    layer.setAttribute("aria-hidden", "true");
+    var flag = el("div", "salute-flag");
+    var stripe;
+    for (stripe = 0; stripe < 7; stripe += 1) flag.appendChild(el("span", "salute-bar"));
+    flag.appendChild(el("span", "salute-canton"));
+    layer.appendChild(flag);
+    var i;
+    for (i = 0; i < 18; i += 1) {
+      var star = el("span", "salute-star " + (i % 3 === 0 ? "is-red" : i % 3 === 1 ? "is-white" : "is-blue"));
+      star.style.left = (58 + Math.random() * 36) + "%";
+      star.style.top = hit ? (42 + Math.random() * 42) + "%" : (Math.random() * 8) + "%";
+      star.style.animationDelay = (Math.random() * 0.18).toFixed(2) + "s";
+      star.style.setProperty("--drift", Math.round((Math.random() - 0.5) * 70) + "px");
+      star.style.setProperty("--travel", Math.round(hit ? -(90 + Math.random() * 160) : (280 + Math.random() * 260)) + "px");
+      star.style.setProperty("--spin", Math.round((Math.random() - 0.5) * 240) + "deg");
+      star.style.setProperty("--size", (16 + Math.random() * 16).toFixed(0) + "px");
+      layer.appendChild(star);
+    }
+    card.appendChild(layer);
+    window.setTimeout(function () {
+      if (layer.parentNode) layer.remove();
+    }, 2200);
+  }
+
+  function photoSrc(photo, shape) {
+    var size = shape === "card" ? "w=1400&h=1800" : "w=1600&h=700";
+    return "https://images.unsplash.com/" + photo.id + "?auto=format&fit=crop&" + size + "&q=80";
+  }
+
+  function fillCredit(node, photo) {
+    node.replaceChildren();
+    node.appendChild(document.createTextNode("Photo by "));
+    var who = el("a", "", photo.by);
+    who.href = "https://unsplash.com/@" + photo.user + "?utm_source=leaders.vote&utm_medium=referral";
+    who.rel = "noopener noreferrer";
+    who.target = "_blank";
+    node.appendChild(who);
+    node.appendChild(document.createTextNode(" on "));
+    var site = el("a", "", "Unsplash");
+    site.href = "https://unsplash.com/photos/" + photo.slug + "?utm_source=leaders.vote&utm_medium=referral";
+    site.rel = "noopener noreferrer";
+    site.target = "_blank";
+    node.appendChild(site);
+  }
+
+  function mountScene() {
+    var scene = el("div", "scene");
+    var card = el("div", "sheet");
+    var img = document.createElement("img");
+    img.className = "sheet-photo";
+    img.alt = "";
+    var copy = el("div", "sheet-copy");
+    var credit = el("p", "scene-credit");
+    card.appendChild(img);
+    card.appendChild(copy);
+    card.appendChild(credit);
+    scene.appendChild(card);
+    root.appendChild(scene);
+    return {
+      scene: scene,
+      card: card,
+      sheet: copy,
+      show: function (key) {
+        var photo = PHOTOS[key];
+        clearSalute(card);
+        card.className = "sheet";
+        card.dataset.shot = key;
+        card.dataset.place = photo.place;
+        img.src = photoSrc(photo, "card");
+        img.alt = photo.alt;
+        fillCredit(credit, photo);
+      },
+      hide: function () {
+        clearSalute(card);
+        card.className = "sheet is-paper";
+        delete card.dataset.shot;
+        delete card.dataset.place;
+        img.removeAttribute("src");
+        img.alt = "";
+        credit.replaceChildren();
+      }
+    };
+  }
+
+  function renderBallot() {
+    var round = shuffle(BANK).slice(0, 6);
+    var index = 0;
+    var correct = 0;
+    var missed = [];
+    var locked = false;
+
+    var intro = el("p", "deck");
+    intro.textContent = "Six questions. The photograph is part of the question. The line under the sheet tells you where the fact is printed.";
+    root.appendChild(intro);
+
+    var stage = mountScene();
+    var sheet = stage.sheet;
+    var move = el("div", "sheet-move");
+    var status = el("p", "");
+    status.id = "play-status";
+    var next = el("button", "", "Next");
+    next.type = "button";
+    next.disabled = true;
+    move.appendChild(next);
+    move.appendChild(status);
+    root.appendChild(move);
+
+    function ask() {
+      locked = false;
+      var item = round[index];
+      stage.show(item.shot);
+      sheet.replaceChildren();
+      sheet.appendChild(sheetHead("KNOW THE BALLOT", "Question " + (index + 1) + " of " + round.length));
+      var block = el("div", "contest");
+      block.appendChild(el("h3", "", item.prompt));
+      block.appendChild(el("p", "vote-for", "Choose one"));
+      item.choices.forEach(function (label, choice) {
+        var button = choiceButton(label, item.names);
+        button.dataset.right = choice === item.answer ? "1" : "0";
+        button.addEventListener("click", function () { pick(choice, button); });
+        block.appendChild(button);
+      });
+      sheet.appendChild(block);
+      status.textContent = "";
+      next.disabled = true;
+      next.textContent = index === round.length - 1 ? "Done" : "Next";
+    }
+
+    function pick(choice, button) {
+      if (locked) return;
+      locked = true;
+      var item = round[index];
+      var hit = choice === item.answer;
+      if (hit) correct += 1;
+      else missed.push(item);
+      grade(sheet, button, hit, item.fact, status);
+      next.disabled = false;
+      next.focus({ preventScroll: true });
+    }
+
+    function finish() {
+      stage.hide();
+      sheet.replaceChildren();
+      sheet.appendChild(sheetHead("KNOW THE BALLOT", correct + " of " + round.length));
+      var block = el("div", "contest");
+      block.appendChild(el("h3", "", correct === round.length ? "Each of those is printed on the guide." : "The ones to reread."));
+      if (missed.length) {
+        var list = el("ul", "misses");
+        missed.forEach(function (item) {
+          var li = el("li", "");
+          var link = el("a", "", item.where);
+          link.href = item.href;
+          li.appendChild(link);
+          li.appendChild(document.createTextNode(". " + item.fact));
+          list.appendChild(li);
+        });
+        block.appendChild(list);
+      } else {
+        block.appendChild(el("p", "sheet-instruct", "Six facts, from the Illinois page and the country list."));
+      }
+      sheet.appendChild(block);
+      next.textContent = "Six more";
+      next.disabled = false;
+      next.onclick = function () { renderBallot(); };
+      status.textContent = "";
+    }
+
+    next.onclick = function () {
+      if (next.disabled) return;
+      index += 1;
+      if (index >= round.length) finish();
+      else ask();
+    };
+    ask();
+  }
+
+  function renderCount() {
+    var index = 0;
+    var correct = 0;
+    var locked = false;
+
+    var intro = el("p", "deck");
+    intro.textContent = "A judge stays with at least three-fifths of the vote on that question. A majority is not enough. Terms are four years, except the Senate, which is six. Two ovals for one office mean that office is not counted.";
+    root.appendChild(intro);
+
+    var stage = mountScene();
+    var sheet = stage.sheet;
+    var move = el("div", "sheet-move");
+    var status = el("p", "");
+    status.id = "play-status";
+    var next = el("button", "", "Next");
+    next.type = "button";
+    next.disabled = true;
+    move.appendChild(next);
+    move.appendChild(status);
+    root.appendChild(move);
+
+    function tally(yes, no) {
+      var row = el("div", "tally");
+      [["Yes", yes], ["No", no], ["Ballots", yes + no]].forEach(function (pair) {
+        var cell = el("div", "");
+        cell.appendChild(el("span", "", pair[0]));
+        cell.appendChild(el("strong", "", String(pair[1])));
+        row.appendChild(cell);
+      });
+      return row;
+    }
+
+    function ask() {
+      locked = false;
+      var item = COUNTS[index];
+      stage.show(item.shot);
+      stage.card.classList.toggle("is-retain", item.kind === "retain");
+      sheet.replaceChildren();
+      var block = el("div", "contest");
+      if (item.kind === "retain") {
+        sheet.appendChild(sheetHead("GREEN RETENTION BALLOT", "Question " + (index + 1) + " of " + COUNTS.length));
+        block.appendChild(el("h3", "", "SHALL THIS JUDGE BE RETAINED IN OFFICE?"));
+        block.appendChild(el("p", "sheet-instruct", "The columns in the photograph are a courthouse. This count is one retention question."));
+        block.appendChild(el("p", "vote-for", "Does this judge stay?"));
+        block.appendChild(tally(item.yes, item.no));
+        [["Stays", true], ["Does not stay", false]].forEach(function (pair) {
+          var button = choiceButton(pair[0], false);
+          button.dataset.right = pair[1] === item.stays ? "1" : "0";
+          button.addEventListener("click", function () { pick(pair[1] === item.stays, button, item.fact); });
+          block.appendChild(button);
+        });
+      } else if (item.kind === "over") {
+        sheet.appendChild(sheetHead("CANDIDATE BALLOT", "Question " + (index + 1) + " of " + COUNTS.length));
+        block.appendChild(el("h3", "", "FOR TREASURER"));
+        block.appendChild(el("p", "sheet-instruct", "A ballot is going into the box in the photograph. " + item.ballots + " ballots were cast for this office. " + item.spoiled + " of them had two ovals marked."));
+        block.appendChild(el("p", "vote-for", "How many ballots count for treasurer?"));
+        item.choices.forEach(function (n) {
+          var button = choiceButton(String(n), false);
+          button.dataset.right = n === item.answer ? "1" : "0";
+          button.addEventListener("click", function () { pick(n === item.answer, button, item.fact); });
+          block.appendChild(button);
+        });
+      } else {
+        sheet.appendChild(sheetHead("ONE VOTE EACH", "Question " + (index + 1) + " of " + COUNTS.length));
+        block.appendChild(el("h3", "", "BOTH OFFICES WERE JUST ELECTED IN 2026."));
+        block.appendChild(el("p", "sheet-instruct", "The dome in the photograph is the Illinois State Capitol. The other statewide offices serve four years. The Senate serves six."));
+        block.appendChild(el("p", "vote-for", "In which year are both on the ballot again?"));
+        item.choices.forEach(function (year) {
+          var button = choiceButton(String(year), false);
+          button.dataset.right = year === item.answer ? "1" : "0";
+          button.addEventListener("click", function () { pick(year === item.answer, button, item.fact); });
+          block.appendChild(button);
+        });
+      }
+      sheet.appendChild(block);
+      status.textContent = "";
+      next.disabled = true;
+      next.textContent = index === COUNTS.length - 1 ? "Done" : "Next";
+    }
+
+    function pick(hit, button, fact) {
+      if (locked) return;
+      locked = true;
+      if (hit) correct += 1;
+      grade(sheet, button, hit, fact, status);
+      next.disabled = false;
+      next.focus({ preventScroll: true });
+    }
+
+    function finish() {
+      stage.hide();
+      sheet.replaceChildren();
+      sheet.appendChild(sheetHead("THE COUNT", correct + " of " + COUNTS.length));
+      var block = el("div", "contest");
+      block.appendChild(el("h3", "", "The work was the arithmetic on the ballot."));
+      block.appendChild(el("p", "sheet-instruct", "Three-fifths of the retention vote, twelve years until a four-year office and a six-year office meet again, and a ballot with two ovals that does not count."));
+      sheet.appendChild(block);
+      next.textContent = "Same five";
+      next.disabled = false;
+      next.onclick = function () { renderCount(); };
+      status.textContent = "";
+    }
+
+    next.onclick = function () {
+      if (next.disabled) return;
+      index += 1;
+      if (index >= COUNTS.length) finish();
+      else ask();
+    };
+    ask();
+  }
+
+  function renderSheet() {
+    var values = Array(16).fill("");
+    var selected = 0;
+    var started = false;
+
+    var layout = el("div", "play-layout");
+    var left = el("div", "");
+    var board = el("div", "board");
+    board.setAttribute("role", "grid");
+    board.setAttribute("aria-label", "Four by four sheet");
+    var cells = [];
+    for (var i = 0; i < 16; i++) {
+      var button = el("button", "cell");
+      button.type = "button";
+      button.dataset.index = String(i);
+      var cage = CAGES.filter(function (item) { return item.cells[0] === i; })[0];
+      if (cage) button.appendChild(el("span", "term", String(cage.target)));
+      var digit = el("span", "digit", "");
+      button.appendChild(digit);
+      button.addEventListener("click", function (event) {
+        selected = Number(event.currentTarget.dataset.index);
+        paint();
+      });
+      cells.push(button);
+      board.appendChild(button);
+    }
+    left.appendChild(board);
+
+    var keys = el("div", "keys");
+    [1, 2, 3, 4].forEach(function (n) {
+      var key = el("button", "", String(n));
+      key.type = "button";
+      key.addEventListener("click", function () { write(String(n)); });
+      keys.appendChild(key);
+    });
+    var clear = el("button", "", "Clear");
+    clear.type = "button";
+    clear.addEventListener("click", function () { write(""); });
+    keys.appendChild(clear);
+    left.appendChild(keys);
+
+    var status = el("p", "note");
+    status.id = "play-status";
+    left.appendChild(status);
+    layout.appendChild(left);
+
+    var aside = el("div", "");
+    aside.appendChild(el("p", "rule", "The dome in the photograph is the Illinois State Capitol in Springfield. Each row and each column uses 1, 2, 3, and 4 once. A heavy box is a pair. The pair adds to the small number in the corner."));
+    aside.appendChild(el("p", "rule", "4 is a term in years for governor, attorney general, secretary of state, comptroller, and treasurer. 6 is the Senate term. Six is also how many statewide races the Illinois page lists before your own district."));
+    aside.appendChild(el("p", "rule", "The digits are only the pieces that make those totals. A finished sheet is any filling that follows the rules. It does not rank a candidate."));
+    var link = el("p", "note");
+    link.appendChild(document.createTextNode("The numbers are from the "));
+    var a = el("a", "", "Illinois page");
+    a.href = "illinois.html#read";
+    link.appendChild(a);
+    link.appendChild(document.createTextNode("."));
+    aside.appendChild(link);
+    layout.appendChild(aside);
+    var scene = el("div", "scene scene-sheet");
+    var frame = el("div", "scene-frame");
+    var img = document.createElement("img");
+    img.src = photoSrc(PHOTOS.illinois, "wide");
+    img.alt = PHOTOS.illinois.alt;
+    frame.appendChild(img);
+    var credit = el("p", "scene-credit");
+    fillCredit(credit, PHOTOS.illinois);
+    frame.appendChild(credit);
+    scene.appendChild(frame);
+    scene.appendChild(layout);
+    root.appendChild(scene);
+
+    function cageAt(index) {
+      return CAGES.filter(function (cage) { return cage.cells.indexOf(index) >= 0; })[0];
+    }
+
+    function edge(index, side) {
+      var row = Math.floor(index / 4);
+      var col = index % 4;
+      var other = side === "right" ? (col < 3 ? index + 1 : -1) : (row < 3 ? index + 4 : -1);
+      if (other < 0) return "2px solid #1c1915";
+      return cageAt(index) === cageAt(other) ? "1px solid #d8d0c2" : "2px solid #1c1915";
+    }
+
+    function write(digit) {
+      started = true;
+      values[selected] = digit;
+      if (digit && selected < 15) selected += 1;
+      paint();
+    }
+
+    function paint() {
+      var bad = {};
+      function markDup(indexes) {
+        var seen = {};
+        indexes.forEach(function (index) {
+          var digit = values[index];
+          if (!digit) return;
+          if (seen[digit] != null) {
+            bad[index] = true;
+            bad[seen[digit]] = true;
+          } else seen[digit] = index;
+        });
+      }
+      for (var row = 0; row < 4; row++) markDup([0, 1, 2, 3].map(function (col) { return row * 4 + col; }));
+      for (var col = 0; col < 4; col++) markDup([0, 1, 2, 3].map(function (row) { return row * 4 + col; }));
+      var brokenPair = false;
+      CAGES.forEach(function (cage) {
+        var digits = cage.cells.map(function (index) { return values[index]; });
+        if (digits.some(function (digit) { return !digit; })) return;
+        if (Number(digits[0]) + Number(digits[1]) !== cage.target) {
+          brokenPair = true;
+          cage.cells.forEach(function (index) { bad[index] = true; });
+        }
+      });
+      cells.forEach(function (button, index) {
+        var row = Math.floor(index / 4) + 1;
+        var col = (index % 4) + 1;
+        button.style.borderRight = edge(index, "right");
+        button.style.borderBottom = edge(index, "down");
+        button.style.borderTop = Math.floor(index / 4) === 0 ? "2px solid #1c1915" : "0";
+        button.style.borderLeft = index % 4 === 0 ? "2px solid #1c1915" : "0";
+        button.classList.toggle("is-on", index === selected);
+        button.classList.toggle("is-bad", !!bad[index]);
+        button.querySelector(".digit").textContent = values[index];
+        button.setAttribute("aria-label", "Row " + row + ", column " + col + (values[index] ? ", " + values[index] : ", empty"));
+      });
+      var filled = values.every(function (digit) { return digit; });
+      var legal = filled && !Object.keys(bad).length;
+      if (legal) status.textContent = "The sheet holds. Four and six are the term lengths on the Illinois page.";
+      else if (started && brokenPair) status.textContent = "That pair does not add to the term in the corner.";
+      else if (started && Object.keys(bad).length) status.textContent = "A digit is repeated in a row or a column.";
+      else status.textContent = "";
+    }
+
+    sheetKey = onKey;
+    document.addEventListener("keydown", onKey);
+    function onKey(event) {
+      if (event.key >= "1" && event.key <= "4") {
+        write(event.key);
+        event.preventDefault();
+      } else if (event.key === "Backspace" || event.key === "Delete" || event.key === "0") {
+        write("");
+        event.preventDefault();
+      } else if (event.key === "ArrowRight") {
+        selected = Math.min(15, selected + 1);
+        paint();
+      } else if (event.key === "ArrowLeft") {
+        selected = Math.max(0, selected - 1);
+        paint();
+      } else if (event.key === "ArrowDown") {
+        selected = Math.min(15, selected + 4);
+        paint();
+      } else if (event.key === "ArrowUp") {
+        selected = Math.max(0, selected - 4);
+        paint();
+      }
+    }
+    paint();
+  }
+
+  Object.keys(tabs).forEach(function (name) {
+    tabs[name].addEventListener("click", function () { show(name); });
+  });
+  show("ballot");
+})();
+</script>
+</body>
+</html>

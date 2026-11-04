@@ -1,0 +1,871 @@
+{
+  "source": "https://danewyborcze.kbw.gov.pl/dane/2023/sejmsenat/wyniki_gl_na_listy_po_wojewodztwach_sejm_csv.zip",
+  "fetchedAt": "2026-11-04T19:00:42.939035+00:00",
+  "status": "National Electoral Commission file for the Sejm election of 15 October 2023. The Commission's file includes every commission it lists. A voivodeship is colored only from list votes. This page does not declare a result.",
+  "strings": {
+    "blank": "No votes reported"
+  },
+  "tables": [
+    {
+      "title": "List votes, added across the voivodeships",
+      "note": "Each committee's voivodeship totals added together. Committees under one percent are left off this table. This is the Sejm list vote, not the Senate vote, and it is not a count of seats.",
+      "column": "Party",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 7548220,
+          "percent": 35.89792294146655
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 6371948,
+          "percent": 30.303793250730884
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 3041288,
+          "percent": 14.4637970629906
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 1776486,
+          "percent": 8.448635245739279
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 1496227,
+          "percent": 7.115775845025936
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 394697,
+          "percent": 1.877105130908747
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 340820,
+          "percent": 1.6208761929184137
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "slug": "subcarpathian-voivodeship",
+      "name": "Subcarpathian Voivodeship",
+      "votes": 1115772,
+      "leader": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 589478,
+          "percent": 52.83140283140283
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 189313,
+          "percent": 16.96699684164865
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 144614,
+          "percent": 12.960891651699452
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 101934,
+          "percent": 9.13573740871791
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 52578,
+          "percent": 4.712253040943849
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 19467,
+          "percent": 1.7447112851012572
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 16169,
+          "percent": 1.449131184507229
+        },
+        {
+          "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
+          "votes": 2219,
+          "percent": 0.19887575597882004
+        }
+      ]
+    },
+    {
+      "slug": "podlaskie-voivodeship",
+      "name": "Podlaskie Voivodeship",
+      "votes": 609244,
+      "leader": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ ahead",
+      "color": "#1d4e89",
+      "amount": 0.9583921526113437,
+      "summary": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 258277,
+          "percent": 42.39303136346029
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 126971,
+          "percent": 20.84074689287051
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 114898,
+          "percent": 18.8591106354761
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 59648,
+          "percent": 9.79049444885793
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 29478,
+          "percent": 4.838455528491048
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 9998,
+          "percent": 1.6410502196164427
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 7081,
+          "percent": 1.1622601125329097
+        },
+        {
+          "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
+          "votes": 2893,
+          "percent": 0.4748507986947758
+        }
+      ]
+    },
+    {
+      "slug": "łódź-voivodeship",
+      "name": "Łódź Voivodeship",
+      "votes": 1386499,
+      "leader": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ ahead",
+      "color": "#1d4e89",
+      "amount": 0.6709435022795533,
+      "summary": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 528393,
+          "percent": 38.109872419669976
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 411648,
+          "percent": 29.689743735841137
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 186075,
+          "percent": 13.42049291056106
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 122298,
+          "percent": 8.820633841062994
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 92058,
+          "percent": 6.63960089405041
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 22874,
+          "percent": 1.6497667867052195
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 18691,
+          "percent": 1.3480716538562234
+        },
+        {
+          "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
+          "votes": 4462,
+          "percent": 0.3218177582529811
+        }
+      ]
+    },
+    {
+      "slug": "lower-silesian-voivodeship",
+      "name": "Lower Silesian Voivodeship",
+      "votes": 1601284,
+      "leader": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI ahead",
+      "color": "#e87722",
+      "amount": 0.6011030617183719,
+      "summary": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 576441,
+          "percent": 35.99867356446452
+        },
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 489339,
+          "percent": 30.559163771073713
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 199797,
+          "percent": 12.47729946717759
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 161610,
+          "percent": 10.09252574808716
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 105380,
+          "percent": 6.580968772560021
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 44968,
+          "percent": 2.8082463822782215
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 23749,
+          "percent": 1.4831222943587772
+        }
+      ]
+    },
+    {
+      "slug": "opole-voivodeship",
+      "name": "Opole Voivodeship",
+      "votes": 479968,
+      "leader": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI ahead",
+      "color": "#e87722",
+      "amount": 0.5195790772818328,
+      "summary": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 161241,
+          "percent": 33.594114607640506
+        },
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 150022,
+          "percent": 31.256667111140743
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 61155,
+          "percent": 12.741474431628776
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 34763,
+          "percent": 7.24277451830122
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 31150,
+          "percent": 6.490016001066738
+        },
+        {
+          "name": "KOMITET WYBORCZY WYBORCÓW MNIEJSZOŚĆ NIEMIECKA",
+          "votes": 25778,
+          "percent": 5.370774718314554
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 8338,
+          "percent": 1.737199146609774
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 7521,
+          "percent": 1.5669794652976865
+        }
+      ]
+    },
+    {
+      "slug": "świętokrzyskie-voivodeship",
+      "name": "Świętokrzyskie Voivodeship",
+      "votes": 659132,
+      "leader": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 310266,
+          "percent": 47.07190668940364
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 137941,
+          "percent": 20.927674578081476
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 90975,
+          "percent": 13.802242949818853
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 45048,
+          "percent": 6.8344428733546545
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 43197,
+          "percent": 6.553619001960153
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 18961,
+          "percent": 2.8766620343117917
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 9090,
+          "percent": 1.379086434887094
+        },
+        {
+          "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
+          "votes": 2310,
+          "percent": 0.35046090919573014
+        },
+        {
+          "name": "KOMITET WYBORCZY NORMALNY KRAJ",
+          "votes": 1344,
+          "percent": 0.20390452898660663
+        }
+      ]
+    },
+    {
+      "slug": "masovian-voivodeship",
+      "name": "Masovian Voivodeship",
+      "votes": 3248865,
+      "leader": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ ahead",
+      "color": "#1d4e89",
+      "amount": 0.5463953932944409,
+      "summary": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 1132523,
+          "percent": 34.859035386204106
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 1023353,
+          "percent": 31.49878496028613
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 481728,
+          "percent": 14.827578246556875
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 275543,
+          "percent": 8.48120805265839
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 226425,
+          "percent": 6.969356990826027
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 59366,
+          "percent": 1.8272842977470594
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 46092,
+          "percent": 1.4187108420940853
+        },
+        {
+          "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
+          "votes": 1968,
+          "percent": 0.060575000807974476
+        },
+        {
+          "name": "KOMITET WYBORCZY NORMALNY KRAJ",
+          "votes": 1044,
+          "percent": 0.03213429920910841
+        },
+        {
+          "name": "KOMITET WYBORCZY RUCH NAPRAWY POLSKI",
+          "votes": 823,
+          "percent": 0.025331923610245423
+        }
+      ]
+    },
+    {
+      "slug": "greater-poland-voivodeship",
+      "name": "Greater Poland Voivodeship",
+      "votes": 1970783,
+      "leader": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI ahead",
+      "color": "#e87722",
+      "amount": 0.5539876944070838,
+      "summary": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 662463,
+          "percent": 33.6142030857786
+        },
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 593575,
+          "percent": 30.118739607556996
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 328953,
+          "percent": 16.691487596554264
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 191706,
+          "percent": 9.72740276326719
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 130598,
+          "percent": 6.6267062380789765
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 40140,
+          "percent": 2.0367539196349878
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 21213,
+          "percent": 1.0763742126860238
+        },
+        {
+          "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
+          "votes": 2135,
+          "percent": 0.10833257644296708
+        }
+      ]
+    },
+    {
+      "slug": "lesser-poland-voivodeship",
+      "name": "Lesser Poland Voivodeship",
+      "votes": 1953076,
+      "leader": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ ahead",
+      "color": "#1d4e89",
+      "amount": 0.8870095169363172,
+      "summary": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 814758,
+          "percent": 41.716656187470434
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 458701,
+          "percent": 23.486080418785548
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 306994,
+          "percent": 15.718487145405504
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 156731,
+          "percent": 8.024828526898084
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 135415,
+          "percent": 6.933421945689774
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 46365,
+          "percent": 2.373947557596325
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 34112,
+          "percent": 1.746578218154337
+        }
+      ]
+    },
+    {
+      "slug": "lubusz-voivodeship",
+      "name": "Lubusz Voivodeship",
+      "votes": 517041,
+      "leader": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI ahead",
+      "color": "#e87722",
+      "amount": 0.7142920483261658,
+      "summary": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 195091,
+          "percent": 37.732210791794074
+        },
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 143530,
+          "percent": 27.759887513756162
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 77933,
+          "percent": 15.072885902665359
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 47911,
+          "percent": 9.266383130157957
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 33672,
+          "percent": 6.512442920387358
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 11954,
+          "percent": 2.312002336371777
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 5794,
+          "percent": 1.1206074566620443
+        },
+        {
+          "name": "KOMITET WYBORCZY ANTYPARTIA",
+          "votes": 1156,
+          "percent": 0.22357994820526805
+        }
+      ]
+    },
+    {
+      "slug": "kuyavian-pomeranian-voivodeship",
+      "name": "Kuyavian-Pomeranian Voivodeship",
+      "votes": 1071516,
+      "leader": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ ahead",
+      "color": "#1d4e89",
+      "amount": 0.45029213210155783,
+      "summary": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 345734,
+          "percent": 32.26587377136692
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 345633,
+          "percent": 32.256447873853496
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 164734,
+          "percent": 15.373918821557494
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 113432,
+          "percent": 10.586122839043
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 68498,
+          "percent": 6.3926250284643436
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 16663,
+          "percent": 1.5550864382799696
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 14556,
+          "percent": 1.3584491505493153
+        },
+        {
+          "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
+          "votes": 2266,
+          "percent": 0.21147607688545947
+        }
+      ]
+    },
+    {
+      "slug": "pomeranian-voivodeship",
+      "name": "Pomeranian Voivodeship",
+      "votes": 1299186,
+      "leader": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI ahead",
+      "color": "#e87722",
+      "amount": 0.7618538217313604,
+      "summary": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 515918,
+          "percent": 39.7108651109233
+        },
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 355027,
+          "percent": 27.326880061823328
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 183392,
+          "percent": 14.115915657958137
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 114854,
+          "percent": 8.840458564054723
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 87609,
+          "percent": 6.743376237120782
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 22431,
+          "percent": 1.726542619763452
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 19955,
+          "percent": 1.5359617483562784
+        }
+      ]
+    },
+    {
+      "slug": "west-pomeranian-voivodeship",
+      "name": "West Pomeranian Voivodeship",
+      "votes": 876457,
+      "leader": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI ahead",
+      "color": "#e87722",
+      "amount": 0.6991096435116352,
+      "summary": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 347052,
+          "percent": 39.597150801465446
+        },
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 260598,
+          "percent": 29.73311868123593
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 109733,
+          "percent": 12.52006658626721
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 80133,
+          "percent": 9.14283301976024
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 52321,
+          "percent": 5.969602615986865
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 14249,
+          "percent": 1.6257500367958724
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 10199,
+          "percent": 1.1636623359731282
+        },
+        {
+          "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
+          "votes": 2172,
+          "percent": 0.2478159225153088
+        }
+      ]
+    },
+    {
+      "slug": "lublin-voivodeship",
+      "name": "Lublin Voivodeship",
+      "votes": 1105219,
+      "leader": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 526729,
+          "percent": 47.65833739738459
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 211213,
+          "percent": 19.11051112946846
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 162471,
+          "percent": 14.700344456619005
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 89919,
+          "percent": 8.135853618151696
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 62774,
+          "percent": 5.679779301658766
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 27822,
+          "percent": 2.517329144721544
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 19866,
+          "percent": 1.7974718132786354
+        },
+        {
+          "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
+          "votes": 4425,
+          "percent": 0.400373138717304
+        }
+      ]
+    },
+    {
+      "slug": "warmian-masurian-voivodeship",
+      "name": "Warmian-Masurian Voivodeship",
+      "votes": 690438,
+      "leader": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ ahead",
+      "color": "#1d4e89",
+      "amount": 0.48043937792541147,
+      "summary": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 231805,
+          "percent": 33.57361558894499
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 224749,
+          "percent": 32.55165561571061
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 109108,
+          "percent": 15.80272232988335
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 55900,
+          "percent": 8.096309878656736
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 46709,
+          "percent": 6.765125905584571
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 12050,
+          "percent": 1.7452689452202805
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 9141,
+          "percent": 1.3239421932164799
+        },
+        {
+          "name": "KOMITET WYBORCZY NORMALNY KRAJ",
+          "votes": 976,
+          "percent": 0.14135954278298704
+        }
+      ]
+    },
+    {
+      "slug": "silesian-voivodeship",
+      "name": "Silesian Voivodeship",
+      "votes": 2442419,
+      "leader": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ ahead",
+      "color": "#1d4e89",
+      "amount": 0.4914903577024711,
+      "summary": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
+          "votes": 818166,
+          "percent": 33.49818356309871
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
+          "votes": 784220,
+          "percent": 32.10833194468271
+        },
+        {
+          "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
+          "votes": 318728,
+          "percent": 13.049685578109242
+        },
+        {
+          "name": "KOMITET WYBORCZY NOWA LEWICA",
+          "votes": 253043,
+          "percent": 10.360343577412394
+        },
+        {
+          "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
+          "votes": 170378,
+          "percent": 6.975789166396101
+        },
+        {
+          "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
+          "votes": 51172,
+          "percent": 2.095136010651735
+        },
+        {
+          "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
+          "votes": 45470,
+          "percent": 1.8616789338766198
+        },
+        {
+          "name": "KOMITET WYBORCZY NORMALNY KRAJ",
+          "votes": 1242,
+          "percent": 0.05085122577248212
+        }
+      ]
+    }
+  ],
+  "card": "Sejm on 15 October 2023. The Commission's file is the published count. The map is list votes, by voivodeship."
+}

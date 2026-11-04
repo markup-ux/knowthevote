@@ -6,6 +6,7 @@ or a polling place, and it does not keep an address, a phone number, or
 an email address.
 """
 import csv
+from decimal import Decimal
 import html
 import io
 import json
@@ -16,6 +17,7 @@ import sys
 import unicodedata
 import urllib.request
 import zipfile
+import xlrd
 from datetime import datetime, timezone
 from string import Template
 
@@ -442,7 +444,7 @@ def match_shapes(shapes, rows_by_key):
         place = {
             "slug": shape["slug"],
             "name": shape["label"],
-            "votes": sum(item["votes"] for item in row["rows"]),
+            "votes": jp_plain(sum(item["votes"] for item in row["rows"])),
             "leader": "",
             "color": "",
             "amount": 0.7,
@@ -1243,6 +1245,196 @@ def build_australia():
     write_pages(spec, shapes, data)
 
 
+JP_URL = "https://www.soumu.go.jp/main_content/000979127.xls"
+JP_PLACES = {
+    "北海道": "Hokkaido",
+    "青森県": "Aomori",
+    "岩手県": "Iwate",
+    "宮城県": "Miyagi",
+    "秋田県": "Akita",
+    "山形県": "Yamagata",
+    "福島県": "Fukushima",
+    "茨城県": "Ibaraki",
+    "栃木県": "Tochigi",
+    "群馬県": "Gunma",
+    "埼玉県": "Saitama",
+    "千葉県": "Chiba",
+    "東京都": "Tokyo",
+    "神奈川県": "Kanagawa",
+    "新潟県": "Niigata",
+    "富山県": "Toyama",
+    "石川県": "Ishikawa Prefecture",
+    "福井県": "Fukui Prefecture",
+    "山梨県": "Yamanashi",
+    "長野県": "Nagano",
+    "岐阜県": "Gifu Prefecture",
+    "静岡県": "Shizuoka",
+    "愛知県": "Aichi Prefecture",
+    "三重県": "Mie Prefecture",
+    "滋賀県": "Shiga",
+    "京都府": "Kyoto Prefecture",
+    "大阪府": "Osaka Prefecture",
+    "兵庫県": "Hyogo Prefecture",
+    "奈良県": "Nara Prefecture",
+    "和歌山県": "Wakayama Prefecture",
+    "鳥取県": "Tottori Prefecture",
+    "島根県": "Shimane",
+    "岡山県": "Okayama Prefecture",
+    "広島県": "Hiroshima",
+    "山口県": "Yamaguchi",
+    "徳島県": "Tokushima Prefecture",
+    "香川県": "Kagawa Prefecture",
+    "愛媛県": "Ehime Prefecture",
+    "高知県": "Kochi Prefecture",
+    "福岡県": "Fukuoka Prefecture",
+    "佐賀県": "Saga Prefecture",
+    "長崎県": "Nagasaki Prefecture",
+    "熊本県": "Kumamoto",
+    "大分県": "Oita",
+    "宮崎県": "Miyazaki Prefecture",
+    "鹿児島県": "Kagoshima Prefecture",
+    "沖縄県": "Okinawa Prefecture",
+}
+JP_COLORS = {
+    "自由民主党": "#1d4e89",
+    "立憲民主党": "#00a0e9",
+    "日本維新の会": "#e87722",
+    "公明党": "#c9a400",
+    "日本共産党": "#c4121a",
+    "国民民主党": "#e6a817",
+    "れいわ新選組": "#e94b8a",
+    "社会民主党": "#6b4c9a",
+    "参政党": "#2e7d32",
+    "みんなでつくる党": "#5c564c",
+    "諸派": "#8a6a3b",
+    "無所属": "#4a5568",
+}
+
+
+def jp_votes(value):
+    text = str(value or "").strip().replace(",", "").replace(" ", "")
+    if not text:
+        return Decimal(0)
+    return Decimal(text)
+
+
+def jp_plain(number):
+    if not isinstance(number, Decimal):
+        number = Decimal(str(number))
+    if number == number.to_integral_value():
+        return int(number)
+    return float(number.quantize(Decimal("0.001")))
+
+
+def japan_votes(book):
+    grouped = {}
+    for sheet in book.sheets():
+        row = 0
+        while row < sheet.nrows:
+            if str(sheet.cell_value(row, 0)).strip() != "区分":
+                row += 1
+                continue
+            parties = {}
+            for start in (1, 4, 7, 10):
+                name = ""
+                for col in range(start, start + 3):
+                    text = "".join(str(sheet.cell_value(row, col)).split())
+                    if text:
+                        name = text
+                if name and name != "合計":
+                    parties[start + 2] = name
+            row += 1
+            while row < sheet.nrows and str(sheet.cell_value(row, 0)).strip() != "区分":
+                label = str(sheet.cell_value(row, 0)).strip()
+                place = JP_PLACES.get(label)
+                if label and label != "計" and place is None and not label.startswith("（"):
+                    print("JP unknown", label)
+                if place:
+                    bucket = grouped.setdefault(place, {})
+                    for col, name in parties.items():
+                        votes = jp_votes(sheet.cell_value(row, col))
+                        if votes:
+                            bucket[name] = bucket.get(name, 0) + votes
+                row += 1
+    return grouped
+
+
+def build_japan():
+    shapes = shapes_of("JPN")
+    book = xlrd.open_workbook(file_contents=fetch(JP_URL))
+    grouped = japan_votes(book)
+    rows_by_key = {}
+    national = {}
+    for name, parties in grouped.items():
+        party_rows = []
+        for party, votes in parties.items():
+            plain = jp_plain(votes)
+            party_rows.append(
+                {
+                    "name": party,
+                    "votes": plain,
+                    "color": JP_COLORS.get(party, AHEAD),
+                    "legend": party + " ahead",
+                    "short": party,
+                }
+            )
+            bucket = national.setdefault(party, {"name": party, "votes": Decimal(0)})
+            bucket["votes"] += votes
+        rows_by_key[norm(name)] = {
+            "rows": party_rows,
+            "summary": "%(short)s has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+            "tie": "Constituency votes are reported, and the top parties are tied. The map stays beige.",
+        }
+    for row in national.values():
+        row["votes"] = jp_plain(row["votes"])
+    places, missed = match_shapes(shapes, rows_by_key)
+    if missed:
+        print("JP missed", missed)
+    shown = [row for row in percent_rows(list(national.values())) if row["votes"] and (row["percent"] or 0) >= 1]
+    print("JP prefectures", len(grouped), "colored", sum(1 for place in places if place.get("leader")))
+    for place in places:
+        if place.get("leader"):
+            print(" ", place["name"], place["leader"], place["votes"])
+    data = {
+        "source": JP_URL,
+        "fetchedAt": datetime.now(timezone.utc).isoformat(),
+        "status": "Ministry of Internal Affairs file for the 27 October 2024 House of Representatives election. The official file is the published count. A prefecture is colored only from constituency votes. The proportional vote is a separate ballot and is not on this map. The file has no color code. This page does not declare a result.",
+        "strings": {"blank": "No votes reported"},
+        "tables": [
+            {
+                "title": "Constituency votes, added across the prefectures",
+                "note": "Each party's prefecture totals added together. Parties under 1 percent are left off this table. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and this table keeps that fraction. This is not the proportional vote, and it is not a count of seats.",
+                "column": "Party",
+                "rows": [
+                    {"name": row["name"], "votes": row["votes"], "percent": row["percent"]}
+                    for row in shown
+                ],
+            }
+        ],
+        "places": places,
+        "card": "House of Representatives on 27 October 2024. The ministry file is the published count. The map is the constituency vote, by prefecture.",
+    }
+    spec = {
+        "code": "jp",
+        "country": "Japan",
+        "flag": "jp.svg",
+        "title": "Leaders.vote · Japan, 27 October 2024",
+        "description": "Japan's House of Representatives constituency vote by prefecture, copied from the Ministry of Internal Affairs.",
+        "map_label": "Map of Japanese prefectures",
+        "kicker": "Japan · House of Representatives · 27 October 2024",
+        "source": "https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin50/index.html",
+        "footer": 'Vote totals are copied from the <a href="https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin50/index.html">Ministry of Internal Affairs results file</a> for the 27 October 2024 House of Representatives election. A prefecture is colored only from reported constituency votes. This site does not declare a result. It does not ask for a home address, a phone number, or an email address.',
+        "list_title": "The 47 prefectures",
+        "list_note": "Open a name for the constituency votes reported there. A constituency vote is a vote for a candidate in a single-member district. The proportional vote is a separate ballot and is not the color of this map. A place with no row in the file stays blank.",
+        "place_note": "You are looking at one Japanese prefecture. The numbers are constituency votes for the House of Representatives, added across the districts in this prefecture. They are not the proportional vote, and they are not a count of seats.",
+        "intro": """    <p class="kicker">Japan · House of Representatives · 27 October 2024</p>
+    <h1>Japan's published count for the House of Representatives.</h1>
+    <p class="deck">This map is the constituency vote in each prefecture. Voters also cast a proportional vote for a party list. That second ballot is not drawn here, and neither ballot is a count of seats.</p>
+    <p class="deck">There are 47 prefectures. A mark means one party has more constituency votes than the others. The ministry's file has no color code, so the color is only there to tell the parties apart.</p>""",
+    }
+    write_pages(spec, shapes, data)
+
+
 def write_flags():
     flags = {
         "br.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14">
@@ -1292,6 +1484,39 @@ def write_flags():
 <polygon fill="#fff" points="152,84 153.4,87.6 157.2,87.6 154.2,89.8 155.3,93.4 152,91.2 148.7,93.4 149.8,89.8 146.8,87.6 150.6,87.6"/>
 </svg>
 """,
+        "jp.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 60">
+<rect width="90" height="60" fill="#fff" stroke="#c8c2b8"/>
+<circle cx="45" cy="30" r="18" fill="#bc002d"/>
+</svg>
+""",
+        "pl.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 5">
+<rect width="8" height="5" fill="#fff" stroke="#c8c2b8"/>
+<rect y="2.5" width="8" height="2.5" fill="#dc143c"/>
+</svg>
+""",
+        "cz.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8">
+<rect width="12" height="4" fill="#fff"/>
+<rect y="4" width="12" height="4" fill="#d7141a"/>
+<polygon points="0,0 6,4 0,8" fill="#11457e"/>
+</svg>
+""",
+        "es.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 60">
+<rect width="90" height="60" fill="#c60b1e"/>
+<rect y="15" width="90" height="30" fill="#ffc400"/>
+</svg>
+""",
+        "fr.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 60">
+<rect width="90" height="60" fill="#fff" stroke="#c8c2b8"/>
+<rect width="30" height="60" fill="#002395"/>
+<rect x="60" width="30" height="60" fill="#ed2939"/>
+</svg>
+""",
+        "it.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 60">
+<rect width="90" height="60" fill="#fff" stroke="#c8c2b8"/>
+<rect width="30" height="60" fill="#009246"/>
+<rect x="60" width="30" height="60" fill="#ce2b37"/>
+</svg>
+""",
     }
     folder = os.path.join(ROOT, "flags")
     for name, markup in flags.items():
@@ -1317,7 +1542,13 @@ def write_countries():
       <a href="se/index.html"><img src="flags/se.svg" alt=""><strong>Sweden</strong><span>Parliament on 13 September 2026. The Election Authority marks the count final. A county adds the official constituency votes inside it.</span></a>
       <a href="cy/index.html"><img src="flags/cy.svg" alt=""><strong>Cyprus</strong><span>Parliamentary election, 2026. The open-data file is the published count. A district is an area that elects members of the House.</span></a>
       <a href="de/index.html"><img src="flags/deu.svg" alt=""><strong>Germany</strong><span>%s</span></a>
-      <a href="au/index.html"><img src="flags/au.svg" alt=""><strong>Australia</strong><span>%s</span></a>""" % (
+      <a href="au/index.html"><img src="flags/au.svg" alt=""><strong>Australia</strong><span>%s</span></a>
+      <a href="jp/index.html"><img src="flags/jp.svg" alt=""><strong>Japan</strong><span>%s</span></a>
+      <a href="pl/index.html"><img src="flags/pl.svg" alt=""><strong>Poland</strong><span>%s</span></a>
+      <a href="cz/index.html"><img src="flags/cz.svg" alt=""><strong>Czechia</strong><span>%s</span></a>
+      <a href="es/index.html"><img src="flags/es.svg" alt=""><strong>Spain</strong><span>%s</span></a>
+      <a href="fr/index.html"><img src="flags/fr.svg" alt=""><strong>France</strong><span>%s</span></a>
+      <a href="it/index.html"><img src="flags/it.svg" alt=""><strong>Italy</strong><span>%s</span></a>""" % (
         esc(country_card(
             "ch",
             "Two yes-or-no questions on 27 September 2026. The official file still marks the count provisional. The map is the neutrality question, by canton.",
@@ -1334,6 +1565,30 @@ def write_countries():
             "au",
             "House of Representatives on 3 May 2025. The official file marks the count final. The map is first-preference votes, by state.",
         )),
+        esc(country_card(
+            "jp",
+            "House of Representatives on 27 October 2024. The ministry file is the published count. The map is the constituency vote, by prefecture.",
+        )),
+        esc(country_card(
+            "pl",
+            "Sejm on 15 October 2023. The Commission's file is the published count. The map is list votes, by voivodeship.",
+        )),
+        esc(country_card(
+            "cz",
+            "Chamber of Deputies on 8 and 9 October 2021. The Statistical Office file is a finished count. The map is list votes, by region.",
+        )),
+        esc(country_card(
+            "es",
+            "Congress on 23 July 2023. The ministry file is the published count. The map adds each province's votes into its autonomous community.",
+        )),
+        esc(country_card(
+            "fr",
+            "National Assembly, first round, on 30 June 2024. The ministry file is the final first-round count. The map is metropolitan regions.",
+        )),
+        esc(country_card(
+            "it",
+            "Chamber of Deputies on 25 September 2022. The Chamber file is the published count. The map is five areas, from each list's circoscrizione figure. Valle d'Aosta is not in the file.",
+        )),
     )
     nav = """
       <a href="index.html">United States</a>
@@ -1344,7 +1599,13 @@ def write_countries():
       <a href="se/index.html">Sweden</a>
       <a href="cy/index.html">Cyprus</a>
       <a href="de/index.html">Germany</a>
-      <a href="au/index.html">Australia</a>"""
+      <a href="au/index.html">Australia</a>
+      <a href="jp/index.html">Japan</a>
+      <a href="pl/index.html">Poland</a>
+      <a href="cz/index.html">Czechia</a>
+      <a href="es/index.html">Spain</a>
+      <a href="fr/index.html">France</a>
+      <a href="it/index.html">Italy</a>"""
     page = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1404,6 +1665,9 @@ def main():
     build_cyprus()
     build_germany()
     build_australia()
+    build_japan()
+    import build_next
+    build_next.build_all()
     write_countries()
 
 

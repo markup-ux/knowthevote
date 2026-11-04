@@ -1,0 +1,2022 @@
+{
+  "source": "https://www.soumu.go.jp/main_content/000979127.xls",
+  "fetchedAt": "2026-11-04T18:46:43.838619+00:00",
+  "status": "Ministry of Internal Affairs file for the 27 October 2024 House of Representatives election. The official file is the published count. A prefecture is colored only from constituency votes. The proportional vote is a separate ballot and is not on this map. The file has no color code. This page does not declare a result.",
+  "strings": {
+    "blank": "No votes reported"
+  },
+  "tables": [
+    {
+      "title": "Constituency votes, added across the prefectures",
+      "note": "Each party's prefecture totals added together. Parties under 1 percent are left off this table. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and this table keeps that fraction. This is not the proportional vote, and it is not a count of seats.",
+      "column": "Party",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 20867762.299,
+          "percent": 38.4575010792284
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 15740860.279,
+          "percent": 29.009059164749786
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 6048103.652,
+          "percent": 11.146137731079166
+        },
+        {
+          "name": "日本共産党",
+          "votes": 3695806.959,
+          "percent": 6.811056119858783
+        },
+        {
+          "name": "無所属",
+          "votes": 2534571.071,
+          "percent": 4.670997699788567
+        },
+        {
+          "name": "国民民主党",
+          "votes": 2349583.745,
+          "percent": 4.3300818800971825
+        },
+        {
+          "name": "参政党",
+          "votes": 1357189.159,
+          "percent": 2.501183538469804
+        },
+        {
+          "name": "公明党",
+          "votes": 730401,
+          "percent": 1.346066571168274
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "slug": "osaka-prefecture",
+      "name": "Osaka Prefecture",
+      "votes": 3704650,
+      "leader": "日本維新の会 ahead",
+      "color": "#e87722",
+      "amount": 0.9042467702654631,
+      "summary": "日本維新の会 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "日本維新の会",
+          "votes": 1644485,
+          "percent": 44.3897534180017
+        },
+        {
+          "name": "自由民主党",
+          "votes": 897483,
+          "percent": 24.22585129499413
+        },
+        {
+          "name": "日本共産党",
+          "votes": 404096,
+          "percent": 10.907805055808241
+        },
+        {
+          "name": "公明党",
+          "votes": 242511,
+          "percent": 6.546124465199141
+        },
+        {
+          "name": "参政党",
+          "votes": 188606,
+          "percent": 5.0910612338547505
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 181537,
+          "percent": 4.900246986894849
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 49271,
+          "percent": 1.3299771908277436
+        },
+        {
+          "name": "国民民主党",
+          "votes": 40552,
+          "percent": 1.0946243234853494
+        },
+        {
+          "name": "無所属",
+          "votes": 28492,
+          "percent": 0.7690874981442242
+        },
+        {
+          "name": "社会民主党",
+          "votes": 27617,
+          "percent": 0.7454685327898722
+        }
+      ]
+    },
+    {
+      "slug": "oita",
+      "name": "Oita",
+      "votes": 502884,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.5891030964527227,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 185438,
+          "percent": 36.874905544817494
+        },
+        {
+          "name": "無所属",
+          "votes": 159643,
+          "percent": 31.745492002131705
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 117441,
+          "percent": 23.353497029135944
+        },
+        {
+          "name": "日本共産党",
+          "votes": 24736,
+          "percent": 4.918828198948465
+        },
+        {
+          "name": "参政党",
+          "votes": 15626,
+          "percent": 3.107277224966394
+        }
+      ]
+    },
+    {
+      "slug": "hyogo-prefecture",
+      "name": "Hyogo Prefecture",
+      "votes": 2348791,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.5952693068666564,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 680302,
+          "percent": 28.963922290233572
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 581475,
+          "percent": 24.756353374991644
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 505215,
+          "percent": 21.509576628997642
+        },
+        {
+          "name": "日本共産党",
+          "votes": 170634,
+          "percent": 7.26475876312537
+        },
+        {
+          "name": "公明党",
+          "votes": 141802,
+          "percent": 6.03723362359614
+        },
+        {
+          "name": "無所属",
+          "votes": 105253,
+          "percent": 4.481156475820965
+        },
+        {
+          "name": "参政党",
+          "votes": 104833,
+          "percent": 4.463274935913838
+        },
+        {
+          "name": "国民民主党",
+          "votes": 43802,
+          "percent": 1.8648743119332456
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 12920,
+          "percent": 0.5500702276192305
+        },
+        {
+          "name": "みんなでつくる党",
+          "votes": 2555,
+          "percent": 0.10877936776835402
+        }
+      ]
+    },
+    {
+      "slug": "fukui-prefecture",
+      "name": "Fukui Prefecture",
+      "votes": 346981,
+      "leader": "立憲民主党 ahead",
+      "color": "#00a0e9",
+      "amount": 0.751555919889414,
+      "summary": "立憲民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "立憲民主党",
+          "votes": 124428,
+          "percent": 35.860176782014
+        },
+        {
+          "name": "自由民主党",
+          "votes": 86906,
+          "percent": 25.046328185116764
+        },
+        {
+          "name": "無所属",
+          "votes": 62033,
+          "percent": 17.877924151466505
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 38749,
+          "percent": 11.16747026494246
+        },
+        {
+          "name": "参政党",
+          "votes": 19716,
+          "percent": 5.682155507073874
+        },
+        {
+          "name": "日本共産党",
+          "votes": 15149,
+          "percent": 4.365945109386393
+        }
+      ]
+    },
+    {
+      "slug": "shiga",
+      "name": "Shiga",
+      "votes": 612645,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.690727755283615,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 265254,
+          "percent": 43.29652572044169
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 201400,
+          "percent": 32.87385027218046
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 65324,
+          "percent": 10.66261864538191
+        },
+        {
+          "name": "日本共産党",
+          "votes": 53805,
+          "percent": 8.782410694611071
+        },
+        {
+          "name": "参政党",
+          "votes": 26862,
+          "percent": 4.384594667384864
+        }
+      ]
+    },
+    {
+      "slug": "nara-prefecture",
+      "name": "Nara Prefecture",
+      "votes": 633326,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.9067512162286204,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 294147,
+          "percent": 46.44480093980035
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 159795,
+          "percent": 25.231081623050372
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 119651,
+          "percent": 18.892481912948465
+        },
+        {
+          "name": "日本共産党",
+          "votes": 48367,
+          "percent": 7.636983165068227
+        },
+        {
+          "name": "参政党",
+          "votes": 11366,
+          "percent": 1.7946523591325794
+        }
+      ]
+    },
+    {
+      "slug": "gifu-prefecture",
+      "name": "Gifu Prefecture",
+      "votes": 858021,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 448587,
+          "percent": 52.28158751359233
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 173005,
+          "percent": 20.163259407403782
+        },
+        {
+          "name": "日本共産党",
+          "votes": 81959,
+          "percent": 9.552097209741953
+        },
+        {
+          "name": "国民民主党",
+          "votes": 64039,
+          "percent": 7.463570238956855
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 48002,
+          "percent": 5.594501766273786
+        },
+        {
+          "name": "無所属",
+          "votes": 22456,
+          "percent": 2.617185360265075
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 19973,
+          "percent": 2.3277985037662248
+        }
+      ]
+    },
+    {
+      "slug": "mie-prefecture",
+      "name": "Mie Prefecture",
+      "votes": 791030,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.45295356704453116,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 347038,
+          "percent": 43.87166099895074
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 346013,
+          "percent": 43.742083106835395
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 55902,
+          "percent": 7.06698860978724
+        },
+        {
+          "name": "日本共産党",
+          "votes": 42077,
+          "percent": 5.319267284426633
+        }
+      ]
+    },
+    {
+      "slug": "wakayama-prefecture",
+      "name": "Wakayama Prefecture",
+      "votes": 426612,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.733442383947374,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 141983,
+          "percent": 33.28152982100832
+        },
+        {
+          "name": "無所属",
+          "votes": 101739,
+          "percent": 23.8481336671261
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 70745,
+          "percent": 16.582984069833948
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 58214,
+          "percent": 13.645654599495561
+        },
+        {
+          "name": "日本共産党",
+          "votes": 32727,
+          "percent": 7.6713735197322155
+        },
+        {
+          "name": "参政党",
+          "votes": 13422,
+          "percent": 3.146184354870468
+        },
+        {
+          "name": "諸派",
+          "votes": 7782,
+          "percent": 1.8241399679333914
+        }
+      ]
+    },
+    {
+      "slug": "tokyo",
+      "name": "Tokyo",
+      "votes": 6223523.992,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.4828576564714379,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 1796862.538,
+          "percent": 28.872107511913967
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 1737821.846,
+          "percent": 27.92343772168108
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 677505.596,
+          "percent": 10.886205257196671
+        },
+        {
+          "name": "無所属",
+          "votes": 608861.999,
+          "percent": 9.78323534676911
+        },
+        {
+          "name": "国民民主党",
+          "votes": 495168,
+          "percent": 7.956392562100048
+        },
+        {
+          "name": "日本共産党",
+          "votes": 474004,
+          "percent": 7.616327993742874
+        },
+        {
+          "name": "参政党",
+          "votes": 295677.013,
+          "percent": 4.750958032460012
+        },
+        {
+          "name": "公明党",
+          "votes": 60100,
+          "percent": 0.9656908220688997
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 54507,
+          "percent": 0.8758221237688771
+        },
+        {
+          "name": "みんなでつくる党",
+          "votes": 22486,
+          "percent": 0.3613065528293058
+        },
+        {
+          "name": "諸派",
+          "votes": 530,
+          "percent": 0.008516075469160014
+        }
+      ]
+    },
+    {
+      "slug": "fukuoka-prefecture",
+      "name": "Fukuoka Prefecture",
+      "votes": 2096213.997,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.9195132409983422,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 796881,
+          "percent": 38.0152504057533
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 422734.819,
+          "percent": 20.16658698038452
+        },
+        {
+          "name": "無所属",
+          "votes": 279105,
+          "percent": 13.314718840702406
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 224592.178,
+          "percent": 10.714181773493806
+        },
+        {
+          "name": "日本共産党",
+          "votes": 119102,
+          "percent": 5.681767232279386
+        },
+        {
+          "name": "参政党",
+          "votes": 99973,
+          "percent": 4.769217271856619
+        },
+        {
+          "name": "国民民主党",
+          "votes": 87750,
+          "percent": 4.18611840802435
+        },
+        {
+          "name": "社会民主党",
+          "votes": 43415,
+          "percent": 2.0711148795940417
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 22661,
+          "percent": 1.0810442079115645
+        }
+      ]
+    },
+    {
+      "slug": "saitama",
+      "name": "Saitama",
+      "votes": 3037442.993,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.4553997199118138,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 1009682,
+          "percent": 33.24118353255955
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 1004230,
+          "percent": 33.06169045194653
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 338028,
+          "percent": 11.12870268772152
+        },
+        {
+          "name": "日本共産党",
+          "votes": 251979,
+          "percent": 8.295760630922233
+        },
+        {
+          "name": "国民民主党",
+          "votes": 184772.745,
+          "percent": 6.083167500618833
+        },
+        {
+          "name": "無所属",
+          "votes": 111293,
+          "percent": 3.6640358438490037
+        },
+        {
+          "name": "公明党",
+          "votes": 60249,
+          "percent": 1.9835433994596123
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 37532,
+          "percent": 1.2356445894291719
+        },
+        {
+          "name": "諸派",
+          "votes": 35443.248,
+          "percent": 1.166877800889809
+        },
+        {
+          "name": "みんなでつくる党",
+          "votes": 4234,
+          "percent": 0.13939356260372784
+        }
+      ]
+    },
+    {
+      "slug": "fukushima",
+      "name": "Fukushima",
+      "votes": 798258,
+      "leader": "立憲民主党 ahead",
+      "color": "#00a0e9",
+      "amount": 0.8292386447678388,
+      "summary": "立憲民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "立憲民主党",
+          "votes": 423219,
+          "percent": 53.017821305893584
+        },
+        {
+          "name": "自由民主党",
+          "votes": 262718,
+          "percent": 32.911414605303044
+        },
+        {
+          "name": "無所属",
+          "votes": 68133,
+          "percent": 8.535210420691055
+        },
+        {
+          "name": "日本共産党",
+          "votes": 44188,
+          "percent": 5.535553668112315
+        }
+      ]
+    },
+    {
+      "slug": "tochigi",
+      "name": "Tochigi",
+      "votes": 777850,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.7127246852483398,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 350991,
+          "percent": 45.123224272031884
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 258777,
+          "percent": 33.26823937777206
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 65589,
+          "percent": 8.432088448929742
+        },
+        {
+          "name": "無所属",
+          "votes": 58815,
+          "percent": 7.561226457543228
+        },
+        {
+          "name": "日本共産党",
+          "votes": 43678,
+          "percent": 5.615221443723083
+        }
+      ]
+    },
+    {
+      "slug": "aomori",
+      "name": "Aomori",
+      "votes": 522831,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.7724300871200573,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 232897,
+          "percent": 44.545369344969984
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 157804,
+          "percent": 30.18260202627618
+        },
+        {
+          "name": "無所属",
+          "votes": 63205,
+          "percent": 12.088992427763465
+        },
+        {
+          "name": "国民民主党",
+          "votes": 33569,
+          "percent": 6.420621577526964
+        },
+        {
+          "name": "日本共産党",
+          "votes": 27609,
+          "percent": 5.280673869759061
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 7747,
+          "percent": 1.4817407537043519
+        }
+      ]
+    },
+    {
+      "slug": "saga-prefecture",
+      "name": "Saga Prefecture",
+      "votes": 362645,
+      "leader": "立憲民主党 ahead",
+      "color": "#00a0e9",
+      "amount": 0.6346303948576676,
+      "summary": "立憲民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "立憲民主党",
+          "votes": 191664,
+          "percent": 52.85168691144232
+        },
+        {
+          "name": "自由民主党",
+          "votes": 156277,
+          "percent": 43.093659088088906
+        },
+        {
+          "name": "日本共産党",
+          "votes": 7596,
+          "percent": 2.0946104316893934
+        },
+        {
+          "name": "参政党",
+          "votes": 7108,
+          "percent": 1.960043568779385
+        }
+      ]
+    },
+    {
+      "slug": "nagasaki-prefecture",
+      "name": "Nagasaki Prefecture",
+      "votes": 553089,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.8115228094321749,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 235407,
+          "percent": 42.562227778892726
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 150302,
+          "percent": 27.175011616575272
+        },
+        {
+          "name": "国民民主党",
+          "votes": 87784,
+          "percent": 15.871586670499685
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 46151,
+          "percent": 8.344226697692415
+        },
+        {
+          "name": "参政党",
+          "votes": 24766,
+          "percent": 4.477760360448318
+        },
+        {
+          "name": "日本共産党",
+          "votes": 8679,
+          "percent": 1.5691868758915835
+        }
+      ]
+    },
+    {
+      "slug": "miyazaki-prefecture",
+      "name": "Miyazaki Prefecture",
+      "votes": 431686,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 217686,
+          "percent": 50.42693068572991
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 79605,
+          "percent": 18.44048683533865
+        },
+        {
+          "name": "国民民主党",
+          "votes": 61603,
+          "percent": 14.270326116668134
+        },
+        {
+          "name": "日本共産党",
+          "votes": 30846,
+          "percent": 7.145471476953156
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 24846,
+          "percent": 5.755572337300723
+        },
+        {
+          "name": "参政党",
+          "votes": 17100,
+          "percent": 3.9612125480094327
+        }
+      ]
+    },
+    {
+      "slug": "kumamoto",
+      "name": "Kumamoto",
+      "votes": 717220,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 437323,
+          "percent": 60.974735785393605
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 113910,
+          "percent": 15.882156102729985
+        },
+        {
+          "name": "参政党",
+          "votes": 74227,
+          "percent": 10.349265218482474
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 36203,
+          "percent": 5.04768411366108
+        },
+        {
+          "name": "社会民主党",
+          "votes": 36088,
+          "percent": 5.03164998187446
+        },
+        {
+          "name": "日本共産党",
+          "votes": 19469,
+          "percent": 2.7145087978583975
+        }
+      ]
+    },
+    {
+      "slug": "kagoshima-prefecture",
+      "name": "Kagoshima Prefecture",
+      "votes": 682164.998,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.8727210955104239,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 318182.422,
+          "percent": 46.643029609091734
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 183680,
+          "percent": 26.926037034811333
+        },
+        {
+          "name": "無所属",
+          "votes": 80397,
+          "percent": 11.785565110451474
+        },
+        {
+          "name": "社会民主党",
+          "votes": 43412,
+          "percent": 6.363856270444412
+        },
+        {
+          "name": "参政党",
+          "votes": 24589.576,
+          "percent": 3.604637598248628
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 19649,
+          "percent": 2.8803881843260446
+        },
+        {
+          "name": "日本共産党",
+          "votes": 12255,
+          "percent": 1.7964861926263769
+        }
+      ]
+    },
+    {
+      "slug": "gunma",
+      "name": "Gunma",
+      "votes": 754916,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 412511,
+          "percent": 54.64329806230097
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 177487,
+          "percent": 23.510827694736896
+        },
+        {
+          "name": "日本共産党",
+          "votes": 79739,
+          "percent": 10.56263213390629
+        },
+        {
+          "name": "無所属",
+          "votes": 48251,
+          "percent": 6.391572042452405
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 36928,
+          "percent": 4.891670066603437
+        }
+      ]
+    },
+    {
+      "slug": "kyoto-prefecture",
+      "name": "Kyoto Prefecture",
+      "votes": 1072374,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.6567322858481157,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 313831,
+          "percent": 29.265069835710303
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 248952,
+          "percent": 23.215035053069172
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 182723,
+          "percent": 17.039111354807186
+        },
+        {
+          "name": "日本共産党",
+          "votes": 152097,
+          "percent": 14.183204740137302
+        },
+        {
+          "name": "無所属",
+          "votes": 107749,
+          "percent": 10.047707236467874
+        },
+        {
+          "name": "参政党",
+          "votes": 52491,
+          "percent": 4.894840792484712
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 14531,
+          "percent": 1.3550309873234525
+        }
+      ]
+    },
+    {
+      "slug": "chiba",
+      "name": "Chiba",
+      "votes": 2651608.998,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.5842693776972567,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 1057556,
+          "percent": 39.88355752291047
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 915558.614,
+          "percent": 34.52841707395654
+        },
+        {
+          "name": "日本共産党",
+          "votes": 211322.385,
+          "percent": 7.969590733754178
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 177333,
+          "percent": 6.68775072545594
+        },
+        {
+          "name": "国民民主党",
+          "votes": 102782,
+          "percent": 3.876212521436013
+        },
+        {
+          "name": "参政党",
+          "votes": 101619.57,
+          "percent": 3.832373855898342
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 56163,
+          "percent": 2.1180724625071585
+        },
+        {
+          "name": "無所属",
+          "votes": 24569,
+          "percent": 0.92656949114788
+        },
+        {
+          "name": "社会民主党",
+          "votes": 4705.429,
+          "percent": 0.17745561293347217
+        }
+      ]
+    },
+    {
+      "slug": "ibaraki",
+      "name": "Ibaraki",
+      "votes": 1206847,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 563767,
+          "percent": 46.71404080218951
+        },
+        {
+          "name": "無所属",
+          "votes": 195332,
+          "percent": 16.185315951400632
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 183707,
+          "percent": 15.22206211723607
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 97200,
+          "percent": 8.05404496178886
+        },
+        {
+          "name": "日本共産党",
+          "votes": 87707,
+          "percent": 7.267449809296456
+        },
+        {
+          "name": "国民民主党",
+          "votes": 64351,
+          "percent": 5.332158923210647
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 14783,
+          "percent": 1.2249274348778263
+        }
+      ]
+    },
+    {
+      "slug": "kanagawa",
+      "name": "Kanagawa",
+      "votes": 4068569,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.5371017406673994,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 1579624,
+          "percent": 38.82505126495335
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 1442036,
+          "percent": 35.4433217182749
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 406031,
+          "percent": 9.979700479456044
+        },
+        {
+          "name": "日本共産党",
+          "votes": 243814,
+          "percent": 5.992622959079716
+        },
+        {
+          "name": "参政党",
+          "votes": 162291,
+          "percent": 3.9888963416867207
+        },
+        {
+          "name": "国民民主党",
+          "votes": 103174,
+          "percent": 2.5358793226807754
+        },
+        {
+          "name": "無所属",
+          "votes": 64084,
+          "percent": 1.5750992547994147
+        },
+        {
+          "name": "社会民主党",
+          "votes": 39980,
+          "percent": 0.9826550809387773
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 27535,
+          "percent": 0.6767735781302959
+        }
+      ]
+    },
+    {
+      "slug": "hiroshima",
+      "name": "Hiroshima",
+      "votes": 1061665,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.8651740106036812,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 433623,
+          "percent": 40.843674793837984
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 253594,
+          "percent": 23.88644252188779
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 142402,
+          "percent": 13.41308228113388
+        },
+        {
+          "name": "公明党",
+          "votes": 86654,
+          "percent": 8.162085026821078
+        },
+        {
+          "name": "日本共産党",
+          "votes": 66967,
+          "percent": 6.307733607117123
+        },
+        {
+          "name": "国民民主党",
+          "votes": 61679,
+          "percent": 5.809648052822689
+        },
+        {
+          "name": "無所属",
+          "votes": 16746,
+          "percent": 1.5773337163794605
+        }
+      ]
+    },
+    {
+      "slug": "tottori-prefecture",
+      "name": "Tottori Prefecture",
+      "votes": 257156,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 188196,
+          "percent": 73.18359283858825
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 56085,
+          "percent": 21.809718614381932
+        },
+        {
+          "name": "日本共産党",
+          "votes": 12875,
+          "percent": 5.006688547029818
+        }
+      ]
+    },
+    {
+      "slug": "shimane",
+      "name": "Shimane",
+      "votes": 307978,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.6970211630802063,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 163067,
+          "percent": 52.947613141198396
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 122786,
+          "percent": 39.868432160738756
+        },
+        {
+          "name": "日本共産党",
+          "votes": 22125,
+          "percent": 7.183954698062848
+        }
+      ]
+    },
+    {
+      "slug": "niigata",
+      "name": "Niigata",
+      "votes": 1037616,
+      "leader": "立憲民主党 ahead",
+      "color": "#00a0e9",
+      "amount": 0.8528033392443254,
+      "summary": "立憲民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "立憲民主党",
+          "votes": 536289,
+          "percent": 51.68472729795994
+        },
+        {
+          "name": "自由民主党",
+          "votes": 320270,
+          "percent": 30.865946554409337
+        },
+        {
+          "name": "無所属",
+          "votes": 110520,
+          "percent": 10.651339223759079
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 59692,
+          "percent": 5.752802578217761
+        },
+        {
+          "name": "日本共産党",
+          "votes": 10845,
+          "percent": 1.0451843456538836
+        }
+      ]
+    },
+    {
+      "slug": "nagano",
+      "name": "Nagano",
+      "votes": 939596,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.45555331281223194,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 396340,
+          "percent": 42.18195905474268
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 394139,
+          "percent": 41.947709441078935
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 84431,
+          "percent": 8.985883294522326
+        },
+        {
+          "name": "日本共産党",
+          "votes": 64686,
+          "percent": 6.884448209656065
+        }
+      ]
+    },
+    {
+      "slug": "aichi-prefecture",
+      "name": "Aichi Prefecture",
+      "votes": 3221902.994,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.5381024242410267,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 1064609.695,
+          "percent": 33.042884810081894
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 970815,
+          "percent": 30.131726554396685
+        },
+        {
+          "name": "国民民主党",
+          "votes": 433596,
+          "percent": 13.457760857712525
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 246481,
+          "percent": 7.6501682533276165
+        },
+        {
+          "name": "日本共産党",
+          "votes": 193244.299,
+          "percent": 5.997831075605623
+        },
+        {
+          "name": "諸派",
+          "votes": 155837,
+          "percent": 4.836799875421699
+        },
+        {
+          "name": "公明党",
+          "votes": 63095,
+          "percent": 1.9583147015133253
+        },
+        {
+          "name": "無所属",
+          "votes": 32608,
+          "percent": 1.0120726806711549
+        },
+        {
+          "name": "社会民主党",
+          "votes": 26854,
+          "percent": 0.8334825738083658
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 17529,
+          "percent": 0.544057348487631
+        },
+        {
+          "name": "参政党",
+          "votes": 17234,
+          "percent": 0.534901268973463
+        }
+      ]
+    },
+    {
+      "slug": "yamanashi",
+      "name": "Yamanashi",
+      "votes": 368026,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.9099135256219445,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 198209,
+          "percent": 53.8573361664665
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 107050,
+          "percent": 29.08761880954063
+        },
+        {
+          "name": "日本共産党",
+          "votes": 48170,
+          "percent": 13.088749164461207
+        },
+        {
+          "name": "参政党",
+          "votes": 14597,
+          "percent": 3.9662958595316633
+        }
+      ]
+    },
+    {
+      "slug": "miyagi",
+      "name": "Miyagi",
+      "votes": 964995,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.45504970844087567,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 418440,
+          "percent": 43.36188270405546
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 416327,
+          "percent": 43.142917838952535
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 98902,
+          "percent": 10.248965020544148
+        },
+        {
+          "name": "日本共産党",
+          "votes": 18413,
+          "percent": 1.9080927880455338
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 12913,
+          "percent": 1.3381416484023234
+        }
+      ]
+    },
+    {
+      "slug": "yamagata",
+      "name": "Yamagata",
+      "votes": 519713,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 291563,
+          "percent": 56.10077100245712
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 127819,
+          "percent": 24.594151002572573
+        },
+        {
+          "name": "国民民主党",
+          "votes": 56359,
+          "percent": 10.844254425038434
+        },
+        {
+          "name": "日本共産党",
+          "votes": 28161,
+          "percent": 5.4185675555547
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 15811,
+          "percent": 3.0422560143771658
+        }
+      ]
+    },
+    {
+      "slug": "akita",
+      "name": "Akita",
+      "votes": 469570,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.6889108826862498,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 200309,
+          "percent": 42.657963668888556
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 152453,
+          "percent": 32.46651191515642
+        },
+        {
+          "name": "国民民主党",
+          "votes": 83001,
+          "percent": 17.675958855974613
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 17865,
+          "percent": 3.804544583342207
+        },
+        {
+          "name": "日本共産党",
+          "votes": 15942,
+          "percent": 3.395020976638201
+        }
+      ]
+    },
+    {
+      "slug": "iwate",
+      "name": "Iwate",
+      "votes": 539600,
+      "leader": "立憲民主党 ahead",
+      "color": "#00a0e9",
+      "amount": 0.5810033548552707,
+      "summary": "立憲民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "立憲民主党",
+          "votes": 280489,
+          "percent": 51.98091178650852
+        },
+        {
+          "name": "自由民主党",
+          "votes": 243744,
+          "percent": 45.17123795404003
+        },
+        {
+          "name": "日本共産党",
+          "votes": 15367,
+          "percent": 2.8478502594514454
+        }
+      ]
+    },
+    {
+      "slug": "toyama",
+      "name": "Toyama",
+      "votes": 452886,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 251338,
+          "percent": 55.496968331986416
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 86635,
+          "percent": 19.12953811776032
+        },
+        {
+          "name": "国民民主党",
+          "votes": 46676,
+          "percent": 10.306346409471699
+        },
+        {
+          "name": "日本共産党",
+          "votes": 35372,
+          "percent": 7.8103540405311715
+        },
+        {
+          "name": "無所属",
+          "votes": 19870,
+          "percent": 4.387417584116091
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 12995,
+          "percent": 2.869375516134303
+        }
+      ]
+    },
+    {
+      "slug": "shizuoka",
+      "name": "Shizuoka",
+      "votes": 1619870.998,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.7601392129630805,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 787714,
+          "percent": 48.628193292710584
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 543413,
+          "percent": 33.546683697092774
+        },
+        {
+          "name": "国民民主党",
+          "votes": 82448,
+          "percent": 5.089788020268019
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 56063,
+          "percent": 3.4609546111523137
+        },
+        {
+          "name": "無所属",
+          "votes": 54454.072,
+          "percent": 3.3616301586504487
+        },
+        {
+          "name": "日本共産党",
+          "votes": 52289.926,
+          "percent": 3.22803026071586
+        },
+        {
+          "name": "参政党",
+          "votes": 22486,
+          "percent": 1.3881352297659941
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 21003,
+          "percent": 1.2965847296440085
+        }
+      ]
+    },
+    {
+      "slug": "ishikawa-prefecture",
+      "name": "Ishikawa Prefecture",
+      "votes": 495278.993,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.6068007642287122,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 226922.644,
+          "percent": 45.817134828490495
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 191341,
+          "percent": 38.63297307261324
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 27257,
+          "percent": 5.50336282887734
+        },
+        {
+          "name": "国民民主党",
+          "votes": 24324,
+          "percent": 4.911171348630165
+        },
+        {
+          "name": "日本共産党",
+          "votes": 23224.349,
+          "percent": 4.689144770571765
+        },
+        {
+          "name": "無所属",
+          "votes": 2210,
+          "percent": 0.44621315081699825
+        }
+      ]
+    },
+    {
+      "slug": "okayama-prefecture",
+      "name": "Okayama Prefecture",
+      "votes": 745199,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.6639529131525389,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 371951,
+          "percent": 49.912976265400246
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 292371,
+          "percent": 39.23394958930433
+        },
+        {
+          "name": "日本共産党",
+          "votes": 47631,
+          "percent": 6.391715501496916
+        },
+        {
+          "name": "国民民主党",
+          "votes": 22152,
+          "percent": 2.9726287877466286
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 11094,
+          "percent": 1.4887298560518734
+        }
+      ]
+    },
+    {
+      "slug": "tokushima-prefecture",
+      "name": "Tokushima Prefecture",
+      "votes": 298568,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 141216,
+          "percent": 47.29776801264703
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 54839,
+          "percent": 18.367340103427026
+        },
+        {
+          "name": "無所属",
+          "votes": 54469,
+          "percent": 18.243415235390263
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 31392,
+          "percent": 10.514187722729831
+        },
+        {
+          "name": "日本共産党",
+          "votes": 16652,
+          "percent": 5.5772889258058465
+        }
+      ]
+    },
+    {
+      "slug": "kochi-prefecture",
+      "name": "Kochi Prefecture",
+      "votes": 290755,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 191611,
+          "percent": 65.90118828567006
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 55750,
+          "percent": 19.174218844043956
+        },
+        {
+          "name": "日本共産党",
+          "votes": 43394,
+          "percent": 14.924592870285979
+        }
+      ]
+    },
+    {
+      "slug": "ehime-prefecture",
+      "name": "Ehime Prefecture",
+      "votes": 560377,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.8084564501407296,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 288141,
+          "percent": 51.419133904496434
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 184855,
+          "percent": 32.98761369577981
+        },
+        {
+          "name": "国民民主党",
+          "votes": 48393,
+          "percent": 8.635793403369517
+        },
+        {
+          "name": "日本共産党",
+          "votes": 21571,
+          "percent": 3.8493728329321155
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 17417,
+          "percent": 3.108086163422125
+        }
+      ]
+    },
+    {
+      "slug": "kagawa-prefecture",
+      "name": "Kagawa Prefecture",
+      "votes": 409712,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.7163722125810619,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 153278,
+          "percent": 37.41115710547897
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 112449,
+          "percent": 27.445864412074823
+        },
+        {
+          "name": "国民民主党",
+          "votes": 89899,
+          "percent": 21.941998281719844
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 27632,
+          "percent": 6.744249619244738
+        },
+        {
+          "name": "日本共産党",
+          "votes": 17278,
+          "percent": 4.217108603116335
+        },
+        {
+          "name": "参政党",
+          "votes": 9176,
+          "percent": 2.2396219783652906
+        }
+      ]
+    },
+    {
+      "slug": "okinawa-prefecture",
+      "name": "Okinawa Prefecture",
+      "votes": 574689.989,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 0.9198089695432152,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 223891,
+          "percent": 38.95856971331372
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 118705,
+          "percent": 20.65548422142429
+        },
+        {
+          "name": "社会民主党",
+          "votes": 61216,
+          "percent": 10.652003892832731
+        },
+        {
+          "name": "日本共産党",
+          "votes": 49838,
+          "percent": 8.67215384884667
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 35440.878,
+          "percent": 6.166955868096737
+        },
+        {
+          "name": "参政党",
+          "votes": 33326,
+          "percent": 5.798952589723987
+        },
+        {
+          "name": "無所属",
+          "votes": 31989,
+          "percent": 5.5663054189725925
+        },
+        {
+          "name": "れいわ新選組",
+          "votes": 20284.111,
+          "percent": 3.5295744467892582
+        }
+      ]
+    },
+    {
+      "slug": "hokkaido",
+      "name": "Hokkaido",
+      "votes": 2387057,
+      "leader": "立憲民主党 ahead",
+      "color": "#00a0e9",
+      "amount": 0.6407408501806057,
+      "summary": "立憲民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "立憲民主党",
+          "votes": 1116798,
+          "percent": 46.78556062967914
+        },
+        {
+          "name": "自由民主党",
+          "votes": 903779,
+          "percent": 37.86164301899787
+        },
+        {
+          "name": "日本共産党",
+          "votes": 174224,
+          "percent": 7.2986945850057205
+        },
+        {
+          "name": "公明党",
+          "votes": 75990,
+          "percent": 3.1834179074902695
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 73875,
+          "percent": 3.0948150798242353
+        },
+        {
+          "name": "無所属",
+          "votes": 22294,
+          "percent": 0.9339533995208326
+        },
+        {
+          "name": "参政党",
+          "votes": 20097,
+          "percent": 0.8419153794819311
+        }
+      ]
+    },
+    {
+      "slug": "yamaguchi",
+      "name": "Yamaguchi",
+      "votes": 557486,
+      "leader": "自由民主党 ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "自由民主党 has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "自由民主党",
+          "votes": 320216,
+          "percent": 57.43928995526345
+        },
+        {
+          "name": "立憲民主党",
+          "votes": 143398,
+          "percent": 25.7222602899445
+        },
+        {
+          "name": "日本維新の会",
+          "votes": 32259,
+          "percent": 5.78651302454232
+        },
+        {
+          "name": "国民民主党",
+          "votes": 31710,
+          "percent": 5.6880352152341045
+        },
+        {
+          "name": "日本共産党",
+          "votes": 29903,
+          "percent": 5.363901515015623
+        }
+      ]
+    }
+  ],
+  "card": "House of Representatives on 27 October 2024. The ministry file is the published count. The map is the constituency vote, by prefecture."
+}
