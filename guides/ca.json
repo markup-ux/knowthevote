@@ -1484,6 +1484,18 @@
       "siteLabel": "ericchingforcongress.com",
       "donate": "https://secure.winred.com/eric-ching-for-congress/donate",
       "source": "https://ericchingforcongress.com/"
+    },
+    "district 43|maxine waters": {
+      "role": "U.S. representative for California's 43rd District.",
+      "bio": "Her office says she has served in Congress since 1991, after 14 years in the California Assembly, and was the first woman and first African American to chair the House Financial Services Committee. She was born in St. Louis, the fifth of 13 children, and earned a bachelor's degree from California State University, Los Angeles.",
+      "issues": [
+        "Her office says expanding health care is a priority, including the Minority AIDS Initiative and services for diabetes, cancer, and Alzheimer's disease.",
+        "Her office says she has worked to keep families in their homes and wrote the Neighborhood Stabilization Program to fight foreclosures and blight.",
+        "Her office says she works to limit the harm of expanding Los Angeles International Airport and to preserve the Ballona wetlands."
+      ],
+      "site": "https://waters.house.gov/",
+      "siteLabel": "waters.house.gov",
+      "source": "https://waters.house.gov/about-maxine"
     }
   },
   "measures": {}
