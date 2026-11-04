@@ -109,7 +109,12 @@
     svg.querySelectorAll("path").forEach(function (path) {
       path.classList.toggle("is-on", path.getAttribute("data-fips") === selected);
       var row = item && item.counties && item.counties[path.getAttribute("data-fips")];
-      var color = row ? tone(row.candidates, item.candidates || []) : "";
+      var color = "";
+      if (row && item.kind === "house" && row.party && row.votes) {
+        color = tint(PARTY[row.party] || PARTY.other, Math.max(0.4, Math.min(1, (row.gap || 0) / 32)));
+      } else if (row && row.candidates) {
+        color = tone(row.candidates, item.candidates || []);
+      }
       if (!color && alone) color = whole;
       path.style.fill = color || "#ebe4d6";
     });
@@ -129,7 +134,9 @@
     var winner = (item.candidates || []).filter(function (person) { return person.winner; })[0];
     if (winner) summaryEl.appendChild(el("p", "", "The Associated Press reports a winner: " + winner.name + "."));
     if (item.kind === "house") {
-      summaryEl.appendChild(el("p", "note", "House districts are not counties, so this map is not colored for that race."));
+      summaryEl.appendChild(el("p", "note", item.counties
+        ? "Each county is colored by the U.S. House votes NBC News reports there."
+        : "House districts are not counties, so this map is not colored for that race."));
       (item.districts || []).forEach(function (district) {
         var rows = district.candidates || [];
         var called = rows.filter(function (person) { return person.winner && (person.votes || 0) > 0; })[0];
@@ -142,7 +149,15 @@
     }
     paintMap(item);
     detailEl.textContent = "";
-    if (selected && item.kind !== "house" && (item.counties || oneShape())) {
+    if (selected && item.kind === "house" && item.counties && item.counties[selected]) {
+      var housePath = svg && svg.querySelector('[data-fips="' + selected + '"]');
+      var housePlace = housePath ? housePath.getAttribute("data-name") : "This place";
+      detailEl.appendChild(el("h3", "", housePlace));
+      (item.counties[selected].slices || []).forEach(function (slice) {
+        detailEl.appendChild(el("h3", "", slice.name || "District"));
+        people(detailEl, slice.candidates || []);
+      });
+    } else if (selected && item.kind !== "house" && (item.counties || oneShape())) {
       var path = svg && svg.querySelector('[data-fips="' + selected + '"]');
       var place = path ? path.getAttribute("data-name") : "This place";
       detailEl.appendChild(el("h3", "", place));

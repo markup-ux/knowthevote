@@ -73,6 +73,20 @@ def top_race(races):
             continue
         ranked.append((OFFICE_ORDER.get(office.lower(), 40), office, people))
     if not ranked:
+        for race in races or []:
+            if race.get("kind") != "house":
+                continue
+            totals = {}
+            for district in race.get("districts") or []:
+                for person in district.get("candidates") or []:
+                    votes = person.get("votes") or 0
+                    party = (person.get("party") or "").lower()
+                    if votes > 0 and party not in ("yes", "no"):
+                        totals[party] = totals.get(party, 0) + votes
+            people = [{"party": party, "votes": votes} for party, votes in totals.items()]
+            lead = lead_of("U.S. House", people)
+            if lead.get("votes"):
+                return lead
         return None
     ranked.sort(key=lambda row: (row[0], row[1]))
     return lead_of(ranked[0][1], ranked[0][2])

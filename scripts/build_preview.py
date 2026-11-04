@@ -303,19 +303,99 @@ def unique_offices(races):
             race["id"] = str(race["id"]) + "-" + str(seen[label])
 
 
+def place_key(text):
+    return "".join(ch for ch in (text or "").lower() if ch.isalnum())
+
+
+def county_areas(race):
+    """County rows from a House district detail. NBC reports these beside the district total."""
+    if not isinstance(race, dict):
+        return []
+    fips_by_name = {}
+    for unit in race.get("voteShiftMapUnits") or []:
+        if not isinstance(unit, dict):
+            continue
+        fips = str(unit.get("fips_code") or unit.get("feature_id") or "")
+        if fips.isdigit():
+            fips_by_name[place_key(unit.get("county_name"))] = fips.zfill(5)
+    rows = []
+    for area in race.get("areas") or []:
+        if not isinstance(area, dict):
+            continue
+        fips = fips_by_name.get(place_key(area.get("name")))
+        if not fips:
+            continue
+        rows.append({
+            "fips": fips,
+            "name": area.get("name") or "",
+            "candidates": area.get("candidates") or [],
+        })
+    return rows
+
+
+def attach_house_areas(item, payload):
+    race = ((payload or {}).get("races") or [None])[0]
+    areas = county_areas(race)
+    if areas:
+        item["areas"] = areas
+
+
+def house_counties(districts):
+    """One color per county. A split county adds the votes from each district that reports it."""
+    buckets = {}
+    for district in districts or []:
+        for area in district.get("areas") or []:
+            fips = area.get("fips")
+            if not fips:
+                continue
+            people = candidates_of(area.get("candidates"), True)
+            for person in people:
+                person["winner"] = False
+            bucket = buckets.setdefault(fips, {"name": area.get("name") or "", "slices": [], "parties": {}})
+            bucket["slices"].append({"name": district.get("name") or "District", "candidates": people})
+            for person in people:
+                party = person.get("party") or "other"
+                votes = person.get("votes") or 0
+                if votes > 0 and party not in ("yes", "no"):
+                    bucket["parties"][party] = bucket["parties"].get(party, 0) + votes
+    out = {}
+    for fips, bucket in buckets.items():
+        ranked = sorted(bucket["parties"].items(), key=lambda item: -item[1])
+        total = sum(item[1] for item in ranked)
+        if not total or (len(ranked) > 1 and ranked[0][1] == ranked[1][1]):
+            party, gap = "", 0
+        else:
+            second = ranked[1][1] if len(ranked) > 1 else 0
+            party = ranked[0][0]
+            gap = round((ranked[0][1] - second) / total * 100, 2)
+        out[fips] = {
+            "name": bucket["name"],
+            "votes": total,
+            "party": party,
+            "gap": gap,
+            "slices": bucket["slices"],
+        }
+    return out or None
+
+
 def house_race(districts):
     rows = []
     for item in districts or []:
-        rows.append({
+        row = {
             "name": item.get("name") or ("District " + str(item.get("district") or "")),
             "number": item.get("district") or 0,
             "votes": item.get("votes") or 0,
             "percentIn": item.get("percentIn") or 0,
             "candidates": candidates_of(item.get("candidates"), True),
-        })
+        }
+        if item.get("areas"):
+            row["areas"] = item["areas"]
+        rows.append(row)
     rows.sort(key=lambda row: row["number"] or 0)
+    counties = house_counties(rows)
     for row in rows:
         row.pop("number", None)
+        row.pop("areas", None)
     if not rows:
         return None
     return {
@@ -329,9 +409,32 @@ def house_race(districts):
         "pollsClose": "",
         "called": "",
         "candidates": [],
-        "counties": None,
+        "counties": counties,
         "districts": rows,
     }
+
+
+def house_detail_slugs(payload):
+    """County totals for House live on each district page.
+
+    Fetch them only when this state has no other candidate race. A governor or
+    Senate race already has its own county map once its detail page loads.
+    """
+    block = (payload or {}).get("stateRaceResults") or {}
+    for item in feed_items(payload):
+        parties = {(candidate.get("party") or "").lower() for candidate in item.get("candidates") or []}
+        if parties and parties <= {"yes", "no"}:
+            continue
+        name = (item.get("raceName") or item.get("officeName") or "").lower()
+        if any(word in name for word in ("measure", "proposition", "amendment", "question", "issue")):
+            continue
+        return []
+    slugs = []
+    for item in block.get("house") or []:
+        detail = detail_slug(item)
+        if detail and detail not in slugs:
+            slugs.append(detail)
+    return slugs
 
 
 def fetch_state(name):
@@ -462,6 +565,9 @@ def detail_item(payload):
         return None
     if isinstance(race.get("mapData"), dict):
         summary["mapData"] = race["mapData"]
+    areas = county_areas(race)
+    if areas:
+        summary["areas"] = areas
     summary["raceName"] = summary.get("raceName") or summary.get("officeName") or "Race"
     return summary
 
@@ -550,6 +656,9 @@ def refresh_results():
             detail = detail_slug(race)
             if detail and detail not in slugs:
                 slugs.append(detail)
+        for detail in house_detail_slugs(payload):
+            if detail not in slugs:
+                slugs.append(detail)
     print("details", len(slugs), "rescue", len(rescue))
     with ThreadPoolExecutor(max_workers=8) as pool:
         futures = [pool.submit(fetch_detail, slug) for slug in slugs]
@@ -570,6 +679,11 @@ def refresh_results():
                 detail = detail_slug(race)
                 if detail and details.get(detail):
                     apply_detail(race, details[detail])
+            block = (payload or {}).get("stateRaceResults") or {}
+            for house in block.get("house") or []:
+                detail = detail_slug(house)
+                if detail and details.get(detail):
+                    attach_house_areas(house, details[detail])
             state = slim_state(item["code"], item["name"], slug, payload, error)
             stamp = payload.get("currentTime") or payload.get("lastModified") or ""
             state["updated"] = stamp if isinstance(stamp, str) and stamp else datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -646,6 +760,9 @@ def main():
             detail = detail_slug(item)
             if detail and detail not in slugs:
                 slugs.append(detail)
+        for detail in house_detail_slugs(payload):
+            if detail not in slugs:
+                slugs.append(detail)
     print("details", len(slugs))
     with ThreadPoolExecutor(max_workers=8) as pool:
         futures = [pool.submit(fetch_detail, slug) for slug in slugs]
@@ -657,6 +774,11 @@ def main():
             detail = detail_slug(item)
             if detail and details.get(detail):
                 apply_detail(item, details[detail])
+        block = (payload or {}).get("stateRaceResults") or {}
+        for house in block.get("house") or []:
+            detail = detail_slug(house)
+            if detail and details.get(detail):
+                attach_house_areas(house, details[detail])
 
     results = {}
     for item in catalog:
