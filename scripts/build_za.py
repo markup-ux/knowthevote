@@ -330,9 +330,9 @@ def shell(title, description, root, local, here, nav, body, place=""):
 <title>%s</title>
 <meta name="description" content="%s">
 <link rel="icon" href="%s">
-<link rel="stylesheet" href="%sguide.css?v=za1">
+<link rel="stylesheet" href="%sguide.css?v=za2">
 </head>
-<body data-results="%sresults.json"%s>
+<body class="theme-za" data-results="%sresults.json"%s>
 <header>
   <div class="wrap bar">
     <div class="bar-top">
@@ -452,57 +452,10 @@ def write_html(catalog):
 
 
 def write_countries():
-    menu = lang_menu()
-    page = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leaders.vote · Countries</title>
-<meta name="description" content="Leaders.vote election guides. A place is colored only from reported vote totals. Not an endorsement.">
-<link rel="icon" href="%s">
-<link rel="stylesheet" href="guide.css?v=za1">
-</head>
-<body>
-<header>
-  <div class="wrap bar">
-    <div class="bar-top">
-      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
-      <div class="lang notranslate" translate="no">%s</div>
-    </div>
-    <p class="here notranslate" translate="no"><span>Countries</span></p>
-    <nav>
-      <a href="index.html">United States</a>
-      <a href="za/index.html">South Africa</a>
-    </nav>
-  </div>
-</header>
-<main>
-  <div class="wrap hero">
-    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
-    <p class="kicker">Leaders.vote</p>
-    <h1>Pick an election.</h1>
-    <p class="deck">Leaders.vote is an independent, nonpartisan voter guide. It is not a campaign, not an endorsement, and not a government site. Each country below is a different kind of election. A place on a map is colored only from reported vote totals. A place with no total stays blank.</p>
-    <div class="races">
-      <a href="index.html"><img src="flags/us.svg" alt=""><strong>United States</strong><span>Countrywide election on 3 November 2026. Open a state, then see its counties. Color means a party is ahead on reported votes.</span></a>
-      <a href="za/index.html"><img src="flags/za.svg" alt=""><strong>South Africa</strong><span>Local councils on 4 November 2026, not a presidential election. A municipality is the area one council governs.</span></a>
-    </div>
-  </div>
-</main>
-<footer>
-  <div class="wrap">
-    <p>Leaders.vote does not ask for a home address, a phone number, or an email address, and it does not store them. An address lookup on a United States page opens that state's own election office and is not kept here.</p>
-  </div>
-</footer>
-<div id="google_translate_element" aria-hidden="true"></div>
-<script src="lang.js"></script>
-</body>
-</html>
-""" % (
-        icon(),
-        menu,
-    )
-    open(os.path.join(ROOT, "countries.html"), "w", encoding="utf-8", newline="\n").write(page)
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from build_more import write_countries as write_all
+
+    write_all()
 
 
 def number(value):

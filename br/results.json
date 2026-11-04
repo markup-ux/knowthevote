@@ -1,0 +1,597 @@
+{
+  "source": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/br/br-c0001-e006258-u.json",
+  "fetchedAt": "2026-11-04T17:03:42.690438+00:00",
+  "status": "Superior Electoral Court file dated 25/10/2026 23:26:38. The file marks the presidential count finished. A state is colored only from the votes reported there. The court does not publish a candidate color, so the legend colors only tell the two people apart. This page does not declare a winner.",
+  "strings": {
+    "blank": "No votes reported",
+    "missing": "No presidential total has been published for this state yet. It stays beige."
+  },
+  "tables": [
+    {
+      "title": "Presidential vote, whole country",
+      "note": "Second round, 25 October 2026. These are the two candidates in the court's national file. The numbers are not a vote for governor or for congress.",
+      "column": "Candidate",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 64256232,
+          "percent": 51.7851828842626
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 59826041,
+          "percent": 48.2148171157374
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "slug": "roraima",
+      "name": "Roraima",
+      "votes": 303180,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 219675,
+          "percent": 72.45695626360578
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 83505,
+          "percent": 27.54304373639422
+        }
+      ]
+    },
+    {
+      "slug": "amapa",
+      "name": "Amapá",
+      "votes": 421642,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 0.5589573391697463,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 222968,
+          "percent": 52.880879988236465
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 198674,
+          "percent": 47.119120011763535
+        }
+      ]
+    },
+    {
+      "slug": "amazonas",
+      "name": "Amazonas",
+      "votes": 2121028,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 0.5988397017585354,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 1145783,
+          "percent": 54.02017323675123
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 975245,
+          "percent": 45.97982676324877
+        }
+      ]
+    },
+    {
+      "slug": "para",
+      "name": "Pará",
+      "votes": 4890389,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 0.632314922156116,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 2690449,
+          "percent": 55.01503050166357
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 2199940,
+          "percent": 44.98496949833643
+        }
+      ]
+    },
+    {
+      "slug": "maranhao",
+      "name": "Maranhão",
+      "votes": 4038202,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 1,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 2808231,
+          "percent": 69.54161777939787
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 1229971,
+          "percent": 30.45838222060214
+        }
+      ]
+    },
+    {
+      "slug": "ceara",
+      "name": "Ceará",
+      "votes": 5855602,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 0.9992016598102536,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 4036124,
+          "percent": 68.9275671399798
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 1819478,
+          "percent": 31.0724328600202
+        }
+      ]
+    },
+    {
+      "slug": "rio-grande-do-norte",
+      "name": "Rio Grande do Norte",
+      "votes": 2151005,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 0.9283452980908266,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 1413596,
+          "percent": 65.7179318504606
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 737409,
+          "percent": 34.2820681495394
+        }
+      ]
+    },
+    {
+      "slug": "paraiba",
+      "name": "Paraíba",
+      "votes": 2659269,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 0.9677360387813332,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 1794059,
+          "percent": 67.46436708734619
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 865210,
+          "percent": 32.53563291265382
+        }
+      ]
+    },
+    {
+      "slug": "piaui",
+      "name": "Piauí",
+      "votes": 2179848,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 1,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 1653989,
+          "percent": 75.87634550665918
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 525859,
+          "percent": 24.12365449334082
+        }
+      ]
+    },
+    {
+      "slug": "pernambuco",
+      "name": "Pernambuco",
+      "votes": 5950067,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 1,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 4117513,
+          "percent": 69.20111992016224
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 1832554,
+          "percent": 30.798880079837758
+        }
+      ]
+    },
+    {
+      "slug": "alagoas",
+      "name": "Alagoas",
+      "votes": 1896761,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 0.8043931613253619,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 1152621,
+          "percent": 60.76785636144986
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 744140,
+          "percent": 39.23214363855014
+        }
+      ]
+    },
+    {
+      "slug": "acre",
+      "name": "Acre",
+      "votes": 432228,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.947721703769355,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 287715,
+          "percent": 66.56556261972848
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 144513,
+          "percent": 33.434437380271525
+        }
+      ]
+    },
+    {
+      "slug": "rondonia",
+      "name": "Rondônia",
+      "votes": 968828,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 674382,
+          "percent": 69.60802123803194
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 294446,
+          "percent": 30.39197876196807
+        }
+      ]
+    },
+    {
+      "slug": "sergipe",
+      "name": "Sergipe",
+      "votes": 1422395,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 1,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 989041,
+          "percent": 69.53349807894432
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 433354,
+          "percent": 30.466501921055684
+        }
+      ]
+    },
+    {
+      "slug": "tocantins",
+      "name": "Tocantins",
+      "votes": 910878,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.503330084887031,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 467916,
+          "percent": 51.36977729179978
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 442962,
+          "percent": 48.63022270820022
+        }
+      ]
+    },
+    {
+      "slug": "bahia",
+      "name": "Bahia",
+      "votes": 9094019,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 1,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 6485258,
+          "percent": 71.31344238449469
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 2608761,
+          "percent": 28.68655761550531
+        }
+      ]
+    },
+    {
+      "slug": "mato-grosso",
+      "name": "Mato Grosso",
+      "votes": 2045266,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.9362204768118398,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 1351099,
+          "percent": 66.05981813612509
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 694167,
+          "percent": 33.94018186387492
+        }
+      ]
+    },
+    {
+      "slug": "goias",
+      "name": "Goiás",
+      "votes": 3930889,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.7739534326454143,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 2345334,
+          "percent": 59.6642133624226
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 1585555,
+          "percent": 40.3357866375774
+        }
+      ]
+    },
+    {
+      "slug": "distrito-federal",
+      "name": "Distrito Federal",
+      "votes": 1804766,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.6075409732303465,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 979542,
+          "percent": 54.275291090368505
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 825224,
+          "percent": 45.724708909631495
+        }
+      ]
+    },
+    {
+      "slug": "minas-gerais",
+      "name": "Minas Gerais",
+      "votes": 12592885,
+      "leader": "LULA ahead",
+      "color": "#b42318",
+      "amount": 0.46721166683120513,
+      "summary": "LULA has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "LULA · PT",
+          "votes": 6351099,
+          "percent": 50.43402683340632
+        },
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 6241786,
+          "percent": 49.56597316659368
+        }
+      ]
+    },
+    {
+      "slug": "espirito-santo",
+      "name": "Espírito Santo",
+      "votes": 2296469,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.6759853967233782,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 1294504,
+          "percent": 56.36932177181578
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 1001965,
+          "percent": 43.63067822818422
+        }
+      ]
+    },
+    {
+      "slug": "mato-grosso-do-sul",
+      "name": "Mato Grosso do Sul",
+      "votes": 1556865,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.772148482797567,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 927892,
+          "percent": 59.600029546556705
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 628973,
+          "percent": 40.399970453443295
+        }
+      ]
+    },
+    {
+      "slug": "rio-de-janeiro",
+      "name": "Rio de Janeiro",
+      "votes": 9734426,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.5667800631181886,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 5169033,
+          "percent": 53.10054234322599
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 4565393,
+          "percent": 46.89945765677401
+        }
+      ]
+    },
+    {
+      "slug": "sao-paulo",
+      "name": "São Paulo",
+      "votes": 26258452,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.5928586584029143,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 14139178,
+          "percent": 53.84619778804935
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 12119274,
+          "percent": 46.15380221195065
+        }
+      ]
+    },
+    {
+      "slug": "parana",
+      "name": "Paraná",
+      "votes": 6857948,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.8519486214896431,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 4291444,
+          "percent": 62.57621084324349
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 2566504,
+          "percent": 37.42378915675651
+        }
+      ]
+    },
+    {
+      "slug": "santa-catarina",
+      "name": "Santa Catarina",
+      "votes": 4638385,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 3220071,
+          "percent": 69.42224502709456
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 1418314,
+          "percent": 30.57775497290544
+        }
+      ]
+    },
+    {
+      "slug": "rio-grande-do-sul",
+      "name": "Rio Grande do Sul",
+      "votes": 6698930,
+      "leader": "FLAVIO BOLSONARO ahead",
+      "color": "#1d4e89",
+      "amount": 0.720966333176577,
+      "summary": "FLAVIO BOLSONARO has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
+      "rows": [
+        {
+          "name": "FLAVIO BOLSONARO · PL",
+          "votes": 3874378,
+          "percent": 57.83577377282641
+        },
+        {
+          "name": "LULA · PT",
+          "votes": 2824552,
+          "percent": 42.16422622717359
+        }
+      ]
+    }
+  ]
+}

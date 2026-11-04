@@ -1,0 +1,1364 @@
+{
+  "source": "https://resultat.val.se/data/resultat/val2026/RD_S.json",
+  "fetchedAt": "2026-11-04T17:03:45.096822+00:00",
+  "status": "The Election Authority marks this as the final count for 13 September 2026. A county is colored by adding the official constituency votes inside it. This page does not declare a winner.",
+  "strings": {
+    "blank": "No votes reported"
+  },
+  "tables": [
+    {
+      "title": "Parties, counted across the whole country",
+      "note": "Parties the Election Authority records at 1 percent or more. Share is that file's own percentage. Smaller lists stay in the file and are left off this table.",
+      "column": "Party",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 1895989,
+          "percent": 28.02
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 1343448,
+          "percent": 19.85
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 1183248,
+          "percent": 17.48
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 568781,
+          "percent": 8.4
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 475780,
+          "percent": 7.03
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 417490,
+          "percent": 6.17
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 414307,
+          "percent": 6.12
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 361187,
+          "percent": 5.34
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 107199,
+          "percent": 1.58
+        }
+      ]
+    }
+  ],
+  "lists": [
+    {
+      "title": "The 29 constituencies",
+      "note": "A constituency is the area that elects some members of parliament. The map does not draw these lines. Where a county is split, its color adds these official totals together.",
+      "items": [
+        {
+          "name": "Stockholms kommun",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Stockholms län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Uppsala län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Södermanlands län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Östergötlands län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Jönköpings län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Kronobergs län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Kalmar län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Gotlands län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Blekinge län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Malmö kommun",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Skåne läns västra",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Skåne läns södra",
+          "detail": "M ahead"
+        },
+        {
+          "name": "Skåne läns norra och östra",
+          "detail": "SD ahead"
+        },
+        {
+          "name": "Hallands län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Göteborgs kommun",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Västra Götalands läns västra",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Västra Götalands läns norra",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Västra Götalands läns södra",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Västra Götalands läns östra",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Värmlands län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Örebro län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Västmanlands län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Dalarnas län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Gävleborgs län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Västernorrlands län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Jämtlands län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Västerbottens län",
+          "detail": "S ahead"
+        },
+        {
+          "name": "Norrbottens län",
+          "detail": "S ahead"
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "slug": "västernorrlands-län",
+      "name": "Västernorrlands län",
+      "votes": 158985,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.892332320977716,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 54658,
+          "percent": 34.379343963266976
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 30481,
+          "percent": 19.172248954303864
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 25812,
+          "percent": 16.235493914520237
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 11156,
+          "percent": 7.017014183728024
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 10988,
+          "percent": 6.9113438374689435
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 10072,
+          "percent": 6.33518885429443
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 7315,
+          "percent": 4.601062993364154
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 5868,
+          "percent": 3.690914237192188
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 2635,
+          "percent": 1.657389061861182
+        }
+      ]
+    },
+    {
+      "slug": "västerbottens-län",
+      "name": "Västerbottens län",
+      "votes": 181055,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 1,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 66875,
+          "percent": 36.93629007760073
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 27859,
+          "percent": 15.387037088177626
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 23081,
+          "percent": 12.748059981773494
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 16915,
+          "percent": 9.34246499682417
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 13552,
+          "percent": 7.485018364585347
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 13025,
+          "percent": 7.193946590814946
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 10697,
+          "percent": 5.908149457347215
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 6337,
+          "percent": 3.5000414238767226
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 2714,
+          "percent": 1.4989920189997514
+        }
+      ]
+    },
+    {
+      "slug": "jämtlands-län",
+      "name": "Jämtlands län",
+      "votes": 86814,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.8914658230625754,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 27343,
+          "percent": 31.496072062109796
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 15272,
+          "percent": 17.591632685972307
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 15148,
+          "percent": 17.44879858087405
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 8745,
+          "percent": 10.073260073260073
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 5762,
+          "percent": 6.6371783352915426
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 5227,
+          "percent": 6.020918285069229
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 4736,
+          "percent": 5.455341304397908
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 3072,
+          "percent": 3.5385997650148595
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 1509,
+          "percent": 1.7381989080102287
+        }
+      ]
+    },
+    {
+      "slug": "gävleborgs-län",
+      "name": "Gävleborgs län",
+      "votes": 184537,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.773450272479564,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 58720,
+          "percent": 31.82017698347757
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 39727,
+          "percent": 21.527932067823798
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 32717,
+          "percent": 17.729235871397066
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 12469,
+          "percent": 6.756910538266038
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 11411,
+          "percent": 6.183583779946569
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 11180,
+          "percent": 6.058405631390995
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 7780,
+          "percent": 4.21595669161198
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 7434,
+          "percent": 4.0284604171521154
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 3099,
+          "percent": 1.6793380189338722
+        }
+      ]
+    },
+    {
+      "slug": "dalarnas-län",
+      "name": "Dalarnas län",
+      "votes": 187850,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.6950451750193865,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 55451,
+          "percent": 29.518764972052168
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 41863,
+          "percent": 22.28533404311951
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 34477,
+          "percent": 18.353473516103275
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 13294,
+          "percent": 7.076923076923077
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 12200,
+          "percent": 6.4945435187649725
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 10814,
+          "percent": 5.7567207878626565
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 8913,
+          "percent": 4.744743146127229
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 7579,
+          "percent": 4.034602076124568
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 3259,
+          "percent": 1.7348948629225447
+        }
+      ]
+    },
+    {
+      "slug": "uppsala-län",
+      "name": "Uppsala län",
+      "votes": 265992,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.7720023606193154,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 72015,
+          "percent": 27.074122530000903
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 48826,
+          "percent": 18.35619116364402
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 41523,
+          "percent": 15.610619868266715
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 25773,
+          "percent": 9.68938915456104
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 22199,
+          "percent": 8.345739721495383
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 20548,
+          "percent": 7.725044362236458
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 17672,
+          "percent": 6.643808836355981
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 13246,
+          "percent": 4.979849018015579
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 4190,
+          "percent": 1.5752353454239225
+        }
+      ]
+    },
+    {
+      "slug": "västmanlands-län",
+      "name": "Västmanlands län",
+      "votes": 176628,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.7810724174455986,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 53813,
+          "percent": 30.466856896981227
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 35997,
+          "percent": 20.38012093212854
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 34854,
+          "percent": 19.732998165636253
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 14087,
+          "percent": 7.975519170233485
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 9894,
+          "percent": 5.601603369794144
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 9360,
+          "percent": 5.29927304844079
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 8893,
+          "percent": 5.034875557669226
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 6600,
+          "percent": 3.7366668931313267
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 3130,
+          "percent": 1.7720859659850081
+        }
+      ]
+    },
+    {
+      "slug": "örebro-län",
+      "name": "Örebro län",
+      "votes": 203013,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.8647608303981561,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 61609,
+          "percent": 30.34731765946023
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 36056,
+          "percent": 17.76043898666588
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 35795,
+          "percent": 17.631875791205488
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 15874,
+          "percent": 7.819203696315014
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 12589,
+          "percent": 6.201080718968736
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 11605,
+          "percent": 5.71638269470428
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 10584,
+          "percent": 5.213459236600611
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 9901,
+          "percent": 4.877027579514612
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 9000,
+          "percent": 4.433213636565146
+        }
+      ]
+    },
+    {
+      "slug": "värmlands-län",
+      "name": "Värmlands län",
+      "votes": 184781,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.8027484972558585,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 57395,
+          "percent": 31.061093943641392
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 37149,
+          "percent": 20.104339731898843
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 36422,
+          "percent": 19.710901012549993
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 12668,
+          "percent": 6.855683214183276
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 11185,
+          "percent": 6.053111521206184
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 10740,
+          "percent": 5.812285895194853
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 8208,
+          "percent": 4.442015142249474
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 8064,
+          "percent": 4.364085052034571
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 2950,
+          "percent": 1.5964844870414165
+        }
+      ]
+    },
+    {
+      "slug": "västra-götalands-län",
+      "name": "Västra Götalands län",
+      "votes": 1141023,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.7299209951252311,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 309348,
+          "percent": 27.111460505178247
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 222755,
+          "percent": 19.52239350127035
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 198902,
+          "percent": 17.43190102215293
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 107205,
+          "percent": 9.395516128947445
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 75494,
+          "percent": 6.6163434041206886
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 75266,
+          "percent": 6.596361335398147
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 72310,
+          "percent": 6.337295567223448
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 62361,
+          "percent": 5.465358717571863
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 17382,
+          "percent": 1.5233698181368824
+        }
+      ]
+    },
+    {
+      "slug": "hallands-län",
+      "name": "Hallands län",
+      "votes": 230235,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.5376933788442271,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 58887,
+          "percent": 25.57691054791843
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 53723,
+          "percent": 23.333984841574914
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 45064,
+          "percent": 19.573044932351728
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 17369,
+          "percent": 7.5440310986600645
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 16228,
+          "percent": 7.04845049623211
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 13695,
+          "percent": 5.948270245618607
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 12095,
+          "percent": 5.2533281212674
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 10124,
+          "percent": 4.397246291832258
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 3050,
+          "percent": 1.324733424544487
+        }
+      ]
+    },
+    {
+      "slug": "skåne-län",
+      "name": "Skåne län",
+      "votes": 891511,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.6170353141994093,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 223791,
+          "percent": 25.102438444393844
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 186410,
+          "percent": 20.909444751663187
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 181587,
+          "percent": 20.368453109383957
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 80904,
+          "percent": 9.074930090598995
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 55728,
+          "percent": 6.250960448048313
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 55724,
+          "percent": 6.250511771587788
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 50320,
+          "percent": 5.644349873417154
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 46088,
+          "percent": 5.169650178180639
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 10959,
+          "percent": 1.2292613327261246
+        }
+      ]
+    },
+    {
+      "slug": "kronobergs-län",
+      "name": "Kronobergs län",
+      "votes": 128547,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.7148952621959792,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 35565,
+          "percent": 27.666923382109267
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 26144,
+          "percent": 20.338086458649364
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 25662,
+          "percent": 19.963126327335527
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 10256,
+          "percent": 7.97840478579819
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 9798,
+          "percent": 7.62211486849168
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 8008,
+          "percent": 6.229628073778462
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 5714,
+          "percent": 4.445066784911355
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 5626,
+          "percent": 4.376609333551152
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 1774,
+          "percent": 1.380039985374999
+        }
+      ]
+    },
+    {
+      "slug": "blekinge-län",
+      "name": "Blekinge län",
+      "votes": 104309,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.5980329185066239,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 29892,
+          "percent": 28.657162852678102
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 25467,
+          "percent": 24.414959399476555
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 19092,
+          "percent": 18.303310356728566
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 7601,
+          "percent": 7.287003039047446
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 6113,
+          "percent": 5.8604722507166205
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 5672,
+          "percent": 5.437689940465348
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 5066,
+          "percent": 4.856723772637069
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 3985,
+          "percent": 3.820379832996194
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 1421,
+          "percent": 1.3622985552541007
+        }
+      ]
+    },
+    {
+      "slug": "kalmar-län",
+      "name": "Kalmar län",
+      "votes": 161796,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.7141674117596969,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 46974,
+          "percent": 29.032856189275385
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 34565,
+          "percent": 21.36332171376301
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 30324,
+          "percent": 18.74211970629682
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 13575,
+          "percent": 8.390195060446489
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 10365,
+          "percent": 6.406215233998369
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 9930,
+          "percent": 6.1373581547133425
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 6888,
+          "percent": 4.257212786471854
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 6686,
+          "percent": 4.132364211723405
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 2489,
+          "percent": 1.5383569433113302
+        }
+      ]
+    },
+    {
+      "slug": "jönköpings-län",
+      "name": "Jönköpings län",
+      "votes": 236678,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.6757408113951417,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 62904,
+          "percent": 26.577882185923492
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 48704,
+          "percent": 20.578169496108636
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 46733,
+          "percent": 19.74539247416321
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 24225,
+          "percent": 10.23542534582851
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 16567,
+          "percent": 6.999805643110048
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 14106,
+          "percent": 5.959996281868192
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 10874,
+          "percent": 4.594427872468079
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 9032,
+          "percent": 3.816155282704772
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 3533,
+          "percent": 1.4927454178250619
+        }
+      ]
+    },
+    {
+      "slug": "stockholms-län",
+      "name": "Stockholms län",
+      "votes": 1539621,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.6128664251466698,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 401071,
+          "percent": 26.04998243074107
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 335750,
+          "percent": 21.807314917112716
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 186898,
+          "percent": 12.13922127588543
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 156902,
+          "percent": 10.190949590840862
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 133169,
+          "percent": 8.649466329700621
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 123319,
+          "percent": 8.00969849073246
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 105185,
+          "percent": 6.831876156534627
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 76101,
+          "percent": 4.942839828763053
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 21226,
+          "percent": 1.3786509796891573
+        }
+      ]
+    },
+    {
+      "slug": "östergötlands-län",
+      "name": "Östergötlands län",
+      "votes": 311207,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.7254256970328662,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 88267,
+          "percent": 28.36279389602419
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 63956,
+          "percent": 20.550951617412206
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 57496,
+          "percent": 18.475162833740885
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 21957,
+          "percent": 7.05543255775095
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 21213,
+          "percent": 6.816363385142365
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 20539,
+          "percent": 6.599787279849104
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 17510,
+          "percent": 5.6264801241617315
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 15308,
+          "percent": 4.918912492328257
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 4961,
+          "percent": 1.5941158135903113
+        }
+      ]
+    },
+    {
+      "slug": "södermanlands-län",
+      "name": "Södermanlands län",
+      "votes": 190962,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.7892376412489925,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 58319,
+          "percent": 30.539583791539677
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 38535,
+          "percent": 20.179407421371792
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 37380,
+          "percent": 19.5745750463443
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 14005,
+          "percent": 7.333919837454572
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 10977,
+          "percent": 5.748264052534012
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 10664,
+          "percent": 5.584357097223531
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 9254,
+          "percent": 4.845990301735424
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 8654,
+          "percent": 4.531791665357506
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 3174,
+          "percent": 1.6621107864391869
+        }
+      ]
+    },
+    {
+      "slug": "norrbottens-län",
+      "name": "Norrbottens län",
+      "votes": 160359,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.967383500631523,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 60172,
+          "percent": 37.52330707973984
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 29040,
+          "percent": 18.10936710755243
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 26250,
+          "percent": 16.369520887508653
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 10996,
+          "percent": 6.85711434967791
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 10342,
+          "percent": 6.449279429280552
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 8238,
+          "percent": 5.137223355097001
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 7289,
+          "percent": 4.545426199963831
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 5380,
+          "percent": 3.3549722809446303
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 2652,
+          "percent": 1.65378931023516
+        }
+      ]
+    },
+    {
+      "slug": "gotlands-län",
+      "name": "Gotlands län",
+      "votes": 41526,
+      "leader": "S ahead",
+      "color": "#ff0000",
+      "amount": 0.861842105263158,
+      "summary": "S has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "S · Arbetarepartiet-Socialdemokraterna",
+          "votes": 12920,
+          "percent": 31.1130376149882
+        },
+        {
+          "name": "M · Moderaterna",
+          "votes": 7599,
+          "percent": 18.299378702499638
+        },
+        {
+          "name": "SD · Sverigedemokraterna",
+          "votes": 5601,
+          "percent": 13.48793526946973
+        },
+        {
+          "name": "C · Centerpartiet",
+          "votes": 4457,
+          "percent": 10.733034725232384
+        },
+        {
+          "name": "MP · Miljöpartiet de gröna",
+          "votes": 3274,
+          "percent": 7.884217116986948
+        },
+        {
+          "name": "V · Vänsterpartiet",
+          "votes": 2799,
+          "percent": 6.740355439965323
+        },
+        {
+          "name": "L · Liberalerna (tidigare Folkpartiet)",
+          "votes": 2193,
+          "percent": 5.281028753070365
+        },
+        {
+          "name": "KD · Kristdemokraterna",
+          "votes": 2175,
+          "percent": 5.237682415835862
+        },
+        {
+          "name": "ÖVR · Övriga anmälda partier",
+          "votes": 508,
+          "percent": 1.2233299619515485
+        }
+      ]
+    }
+  ]
+}

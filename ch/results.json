@@ -1,0 +1,1086 @@
+{
+  "source": "https://ogd-static.voteinfo-app.ch/v1/ogd/sd-t-17-02-20260927-eidgAbstimmung.json",
+  "fetchedAt": "2026-11-04T17:03:47.250006+00:00",
+  "status": "Official file dated 2026-10-01T09:10:20. The file still marks the count as provisional. A canton is colored only from the yes and no votes on the neutrality question. This page does not declare a result.",
+  "strings": {
+    "blank": "No votes reported"
+  },
+  "tables": [
+    {
+      "title": "Popular Initiative 'Safeguard Swiss neutrality (Neutrality Initiative)'",
+      "note": "Yes and no for the whole country, from the official file.",
+      "column": "Answer",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 1854861,
+          "percent": 70.15510546180458
+        },
+        {
+          "name": "Yes",
+          "votes": 789082,
+          "percent": 29.844894538195415
+        }
+      ]
+    },
+    {
+      "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+      "note": "Yes and no for the whole country, from the official file.",
+      "column": "Answer",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 1908512,
+          "percent": 72.52687201567194
+        },
+        {
+          "name": "Yes",
+          "votes": 722943,
+          "percent": 27.473127984328062
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "slug": "aargau",
+      "name": "Aargau",
+      "votes": 204562,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 144063,
+          "percent": 70.42510339163677
+        },
+        {
+          "name": "Yes",
+          "votes": 60499,
+          "percent": 29.574896608363236
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 152779,
+              "percent": 74.82784291829518
+            },
+            {
+              "name": "Yes",
+              "votes": 51395,
+              "percent": 25.17215708170482
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "appenzell-ausserrhoden",
+      "name": "Appenzell Ausserrhoden",
+      "votes": 20911,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.9197402122210026,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 13665,
+          "percent": 65.34838123475683
+        },
+        {
+          "name": "Yes",
+          "votes": 7246,
+          "percent": 34.65161876524317
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 15583,
+              "percent": 74.71710778672804
+            },
+            {
+              "name": "Yes",
+              "votes": 5273,
+              "percent": 25.28289221327196
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "appenzell-innerrhoden",
+      "name": "Appenzell Innerrhoden",
+      "votes": 5793,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.7737847222222223,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 3456,
+          "percent": 59.658208182288966
+        },
+        {
+          "name": "Yes",
+          "votes": 2337,
+          "percent": 40.341791817711034
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 4685,
+              "percent": 80.29134532990574
+            },
+            {
+              "name": "Yes",
+              "votes": 1150,
+              "percent": 19.70865467009426
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "basel-landschaft",
+      "name": "Basel-Landschaft",
+      "votes": 82412,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 60942,
+          "percent": 73.94796874241615
+        },
+        {
+          "name": "Yes",
+          "votes": 21470,
+          "percent": 26.052031257583845
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 60249,
+              "percent": 73.49500469643924
+            },
+            {
+              "name": "Yes",
+              "votes": 21728,
+              "percent": 26.504995303560754
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "basel-stadt",
+      "name": "Basel-Stadt",
+      "votes": 56702,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 45312,
+          "percent": 79.91252513138866
+        },
+        {
+          "name": "Yes",
+          "votes": 11390,
+          "percent": 20.087474868611338
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 35411,
+              "percent": 63.162870342293495
+            },
+            {
+              "name": "Yes",
+              "votes": 20652,
+              "percent": 36.837129657706505
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bern",
+      "name": "Bern",
+      "votes": 350434,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 257057,
+          "percent": 73.35389830895404
+        },
+        {
+          "name": "Yes",
+          "votes": 93377,
+          "percent": 26.64610169104596
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 250619,
+              "percent": 71.83406614194895
+            },
+            {
+              "name": "Yes",
+              "votes": 98267,
+              "percent": 28.165933858051055
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fribourg",
+      "name": "Fribourg",
+      "votes": 92205,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 65563,
+          "percent": 71.10568841169135
+        },
+        {
+          "name": "Yes",
+          "votes": 26642,
+          "percent": 28.89431158830866
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 65996,
+              "percent": 71.68413620811383
+            },
+            {
+              "name": "Yes",
+              "votes": 26069,
+              "percent": 28.315863791886166
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "genève",
+      "name": "Genève",
+      "votes": 124924,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.9480944251415656,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 83177,
+          "percent": 66.58208190579873
+        },
+        {
+          "name": "Yes",
+          "votes": 41747,
+          "percent": 33.417918094201276
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 76323,
+              "percent": 62.6291388011324
+            },
+            {
+              "name": "Yes",
+              "votes": 45542,
+              "percent": 37.3708611988676
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "glarus",
+      "name": "Glarus",
+      "votes": 11331,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.8473125884016973,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 7070,
+          "percent": 62.3951990115612
+        },
+        {
+          "name": "Yes",
+          "votes": 4261,
+          "percent": 37.6048009884388
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 8428,
+              "percent": 74.7693399574166
+            },
+            {
+              "name": "Yes",
+              "votes": 2844,
+              "percent": 25.23066004258339
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "graubünden",
+      "name": "Graubünden",
+      "votes": 65544,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.9481784020346906,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 43643,
+          "percent": 66.58580495544977
+        },
+        {
+          "name": "Yes",
+          "votes": 21901,
+          "percent": 33.414195044550226
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 49160,
+              "percent": 75.00877340209647
+            },
+            {
+              "name": "Yes",
+              "votes": 16379,
+              "percent": 24.991226597903538
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "jura",
+      "name": "Jura",
+      "votes": 23218,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 16670,
+          "percent": 71.79774313032992
+        },
+        {
+          "name": "Yes",
+          "votes": 6548,
+          "percent": 28.202256869670084
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 16299,
+              "percent": 70.4090889455268
+            },
+            {
+              "name": "Yes",
+              "votes": 6850,
+              "percent": 29.590911054473196
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "luzern",
+      "name": "Luzern",
+      "votes": 142601,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 102428,
+          "percent": 71.8283883002223
+        },
+        {
+          "name": "Yes",
+          "votes": 40173,
+          "percent": 28.171611699777703
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 106069,
+              "percent": 74.34829846143063
+            },
+            {
+              "name": "Yes",
+              "votes": 36596,
+              "percent": 25.651701538569377
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "neuchâtel",
+      "name": "Neuchâtel",
+      "votes": 45340,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 34267,
+          "percent": 75.577856197618
+        },
+        {
+          "name": "Yes",
+          "votes": 11073,
+          "percent": 24.422143802382003
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 29556,
+              "percent": 65.48500022156246
+            },
+            {
+              "name": "Yes",
+              "votes": 15578,
+              "percent": 34.51499977843754
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nidwalden",
+      "name": "Nidwalden",
+      "votes": 16742,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.9566452591205066,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 11211,
+          "percent": 66.96332576753076
+        },
+        {
+          "name": "Yes",
+          "votes": 5531,
+          "percent": 33.03667423246924
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 13299,
+              "percent": 79.85468956406869
+            },
+            {
+              "name": "Yes",
+              "votes": 3355,
+              "percent": 20.145310435931307
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "obwalden",
+      "name": "Obwalden",
+      "votes": 14361,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.8895305878517874,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 9203,
+          "percent": 64.0832811085579
+        },
+        {
+          "name": "Yes",
+          "votes": 5158,
+          "percent": 35.9167188914421
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 11570,
+              "percent": 80.25804661487237
+            },
+            {
+              "name": "Yes",
+              "votes": 2846,
+              "percent": 19.741953385127637
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "schaffhausen",
+      "name": "Schaffhausen",
+      "votes": 35504,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.8790265486725664,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 22600,
+          "percent": 63.654799459215866
+        },
+        {
+          "name": "Yes",
+          "votes": 12904,
+          "percent": 36.345200540784134
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 24981,
+              "percent": 70.43647436981898
+            },
+            {
+              "name": "Yes",
+              "votes": 10485,
+              "percent": 29.56352563018102
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "schwyz",
+      "name": "Schwyz",
+      "votes": 57560,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.7218347494520672,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 33307,
+          "percent": 57.86483669214732
+        },
+        {
+          "name": "Yes",
+          "votes": 24253,
+          "percent": 42.13516330785268
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 46686,
+              "percent": 81.01973170435416
+            },
+            {
+              "name": "Yes",
+              "votes": 10937,
+              "percent": 18.980268295645836
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "solothurn",
+      "name": "Solothurn",
+      "votes": 82233,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 59636,
+          "percent": 72.52076417010203
+        },
+        {
+          "name": "Yes",
+          "votes": 22597,
+          "percent": 27.479235829897974
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 60849,
+              "percent": 74.2323504654085
+            },
+            {
+              "name": "Yes",
+              "votes": 21122,
+              "percent": 25.767649534591502
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "st-gallen",
+      "name": "St. Gallen",
+      "votes": 160243,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.9117459586069193,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 104172,
+          "percent": 65.0087679337007
+        },
+        {
+          "name": "Yes",
+          "votes": 56071,
+          "percent": 34.99123206629931
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 121496,
+              "percent": 75.94306895107606
+            },
+            {
+              "name": "Yes",
+              "votes": 38487,
+              "percent": 24.05693104892395
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "thurgau",
+      "name": "Thurgau",
+      "votes": 86419,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.8968746630243342,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 55642,
+          "percent": 64.38630393779145
+        },
+        {
+          "name": "Yes",
+          "votes": 30777,
+          "percent": 35.61369606220854
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 65435,
+              "percent": 75.7410901346174
+            },
+            {
+              "name": "Yes",
+              "votes": 20958,
+              "percent": 24.258909865382613
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ticino",
+      "name": "Ticino",
+      "votes": 102867,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.517535834382221,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 53231,
+          "percent": 51.74740198508754
+        },
+        {
+          "name": "Yes",
+          "votes": 49636,
+          "percent": 48.25259801491246
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 70147,
+              "percent": 68.76213068794479
+            },
+            {
+              "name": "Yes",
+              "votes": 31867,
+              "percent": 31.237869312055206
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "uri",
+      "name": "Uri",
+      "votes": 11733,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.8616691485041289,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 7387,
+          "percent": 62.95917497656183
+        },
+        {
+          "name": "Yes",
+          "votes": 4346,
+          "percent": 37.04082502343817
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 9469,
+              "percent": 80.82109935131444
+            },
+            {
+              "name": "Yes",
+              "votes": 2247,
+              "percent": 19.17890064868556
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "valais",
+      "name": "Valais",
+      "votes": 98806,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 0.9595335787123636,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 66292,
+          "percent": 67.09309151266118
+        },
+        {
+          "name": "Yes",
+          "votes": 32514,
+          "percent": 32.906908487338825
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 74394,
+              "percent": 75.49624517962249
+            },
+            {
+              "name": "Yes",
+              "votes": 24146,
+              "percent": 24.503754820377512
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vaud",
+      "name": "Vaud",
+      "votes": 233661,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 170609,
+          "percent": 73.01560808179372
+        },
+        {
+          "name": "Yes",
+          "votes": 63052,
+          "percent": 26.984391918206292
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 172807,
+              "percent": 74.16927765140134
+            },
+            {
+              "name": "Yes",
+              "votes": 60183,
+              "percent": 25.830722348598652
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zug",
+      "name": "Zug",
+      "votes": 44395,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 31701,
+          "percent": 71.4066899425611
+        },
+        {
+          "name": "Yes",
+          "votes": 12694,
+          "percent": 28.593310057438902
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 33926,
+              "percent": 76.48398223504745
+            },
+            {
+              "name": "Yes",
+              "votes": 10431,
+              "percent": 23.516017764952544
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zürich",
+      "name": "Zürich",
+      "votes": 473442,
+      "leader": "No ahead",
+      "color": "#6b4423",
+      "amount": 1,
+      "summary": "No has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
+      "rows": [
+        {
+          "name": "No",
+          "votes": 352557,
+          "percent": 74.46677734548265
+        },
+        {
+          "name": "Yes",
+          "votes": 120885,
+          "percent": 25.533222654517342
+        }
+      ],
+      "tables": [
+        {
+          "title": "Popular Initiative 'For food security – through increased sustainable domestic production, more plant-based food and clean drinking water (Food Initiative)'",
+          "note": "The same canton, on the other question. This question is not the color on the country map.",
+          "column": "Answer",
+          "rows": [
+            {
+              "name": "No",
+              "votes": 332296,
+              "percent": 70.7235469892647
+            },
+            {
+              "name": "Yes",
+              "votes": 137556,
+              "percent": 29.276453010735295
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

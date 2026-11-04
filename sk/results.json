@@ -1,0 +1,379 @@
+{
+  "source": "https://volby.statistics.sk/osk/osk2026/files/OSK2026_SK_csv.zip",
+  "fetchedAt": "2026-11-04T17:04:08.567045+00:00",
+  "status": "Statistical Office file for the 24 October 2026 regional elections. A region is colored only when one chair candidate has more reported votes than the others. The office did not publish a color. This page does not declare a result.",
+  "strings": {
+    "blank": "No votes reported"
+  },
+  "tables": [],
+  "places": [
+    {
+      "slug": "region-of-bratislava",
+      "name": "Region of Bratislava",
+      "votes": 265941,
+      "leader": "Juraj Droba ahead",
+      "color": "#3f4f3a",
+      "amount": 1,
+      "summary": "Juraj Droba has more reported votes for regional chair than the others. The Statistical Office marks Juraj Droba as elected. The office did not publish a color, so a mark only means someone is ahead. This site does not declare the result.",
+      "rows": [
+        {
+          "name": "Juraj Droba · SaS, Progresívne Slovensko, Demokrati, Team Bratislava",
+          "votes": 188732,
+          "percent": 70.96762063766023
+        },
+        {
+          "name": "Rastislav Gajarský · SMER - SD, HLAS - sociálna demokracia, SNS",
+          "votes": 30695,
+          "percent": 11.54203375936768
+        },
+        {
+          "name": "Zuzana Krajčovičová · PRAVDA, STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI",
+          "votes": 25556,
+          "percent": 9.609650260772126
+        },
+        {
+          "name": "Dávid Staruch · NEKA",
+          "votes": 12291,
+          "percent": 4.6217018060396855
+        },
+        {
+          "name": "Ján Chalabala · KSS",
+          "votes": 3377,
+          "percent": 1.2698305263197476
+        },
+        {
+          "name": "Peter Poláček · SLOVEXIT",
+          "votes": 2932,
+          "percent": 1.1025001786110453
+        },
+        {
+          "name": "Ľudovít Líška · Jednota Slovanov",
+          "votes": 2358,
+          "percent": 0.8866628312294832
+        }
+      ]
+    },
+    {
+      "slug": "region-of-trnava",
+      "name": "Region of Trnava",
+      "votes": 190721,
+      "leader": "Jozef Viskupič ahead",
+      "color": "#3f4f3a",
+      "amount": 1,
+      "summary": "Jozef Viskupič has more reported votes for regional chair than the others. The Statistical Office marks Jozef Viskupič as elected. The office did not publish a color, so a mark only means someone is ahead. This site does not declare the result.",
+      "rows": [
+        {
+          "name": "Jozef Viskupič · Progresívne Slovensko, SaS, KDH, Demokrati, SLOVENSKO, Maďarské fórum, OKS",
+          "votes": 103083,
+          "percent": 54.04910838345017
+        },
+        {
+          "name": "József Berényi · Magyar Szövetség - Maďarská aliancia",
+          "votes": 39790,
+          "percent": 20.86293591161959
+        },
+        {
+          "name": "Peter Hambálek · SMER - SD, HLAS - sociálna demokracia, SNS, REPUBLIKA",
+          "votes": 22263,
+          "percent": 11.673072183975545
+        },
+        {
+          "name": "Matej Lančarič · NEKA",
+          "votes": 13644,
+          "percent": 7.1539054430293465
+        },
+        {
+          "name": "Róbert Dohál · ApS",
+          "votes": 5198,
+          "percent": 2.725447119090189
+        },
+        {
+          "name": "Jaroslav Cehlárik · PRAVDA",
+          "votes": 4224,
+          "percent": 2.2147534880794457
+        },
+        {
+          "name": "Štefan Pollák · SPOLOČNE OBČANIA SLOVENSKA",
+          "votes": 2519,
+          "percent": 1.3207774707557112
+        }
+      ]
+    },
+    {
+      "slug": "region-of-trenčín",
+      "name": "Region of Trenčín",
+      "votes": 208609,
+      "leader": "Jaroslav Baška ahead",
+      "color": "#3f4f3a",
+      "amount": 0.7706873242257588,
+      "summary": "Jaroslav Baška has more reported votes for regional chair than the others. The Statistical Office marks Jaroslav Baška as elected. The office did not publish a color, so a mark only means someone is ahead. This site does not declare the result.",
+      "rows": [
+        {
+          "name": "Jaroslav Baška · SMER - SD, HLAS - sociálna demokracia, REPUBLIKA, SNS",
+          "votes": 119827,
+          "percent": 57.44095412949585
+        },
+        {
+          "name": "Natália Svítková · Demokrati, SLOVENSKO, KDH, OKS, Progresívne Slovensko, SaS",
+          "votes": 81400,
+          "percent": 39.02036824873328
+        },
+        {
+          "name": "Daniel Galas · SLOVEXIT",
+          "votes": 4787,
+          "percent": 2.2947236217037617
+        },
+        {
+          "name": "Lubomír Choleva · VLASTENCI SK",
+          "votes": 2595,
+          "percent": 1.2439540000671112
+        }
+      ]
+    },
+    {
+      "slug": "region-of-nitra",
+      "name": "Region of Nitra",
+      "votes": 227961,
+      "leader": "Branislav Becík ahead",
+      "color": "#3f4f3a",
+      "amount": 0.8780536772758087,
+      "summary": "Branislav Becík has more reported votes for regional chair than the others. The Statistical Office marks Branislav Becík as elected. The office did not publish a color, so a mark only means someone is ahead. This site does not declare the result.",
+      "rows": [
+        {
+          "name": "Branislav Becík · HLAS - sociálna demokracia, SMER - SD, SNS, REPUBLIKA, PRAVDA, Bratia Slovenska",
+          "votes": 115058,
+          "percent": 50.47266857050109
+        },
+        {
+          "name": "Henrich Varga · Tím Kraj Nitra, SaS, Progresívne Slovensko, KDH, SLOVENSKO, Demokrati, Maďarské fórum, OKS",
+          "votes": 65807,
+          "percent": 28.867657186974967
+        },
+        {
+          "name": "Tibor Csenger · Magyar Szövetség - Maďarská aliancia",
+          "votes": 23726,
+          "percent": 10.40792065309417
+        },
+        {
+          "name": "Erik Blaško · Jednota Slovanov",
+          "votes": 7988,
+          "percent": 3.5041081588517335
+        },
+        {
+          "name": "Jolana Čuláková · NEKA",
+          "votes": 7848,
+          "percent": 3.442694145051127
+        },
+        {
+          "name": "Róbert Švec · Slovenské Hnutie Obrody",
+          "votes": 5573,
+          "percent": 2.4447164207912757
+        },
+        {
+          "name": "Karol Suchan · SLOVEXIT",
+          "votes": 1961,
+          "percent": 0.8602348647356346
+        }
+      ]
+    },
+    {
+      "slug": "region-of-žilina",
+      "name": "Region of Žilina",
+      "votes": 258545,
+      "leader": "Erika Jurinová ahead",
+      "color": "#3f4f3a",
+      "amount": 0.9543345194143384,
+      "summary": "Erika Jurinová has more reported votes for regional chair than the others. The Statistical Office marks Erika Jurinová as elected. The office did not publish a color, so a mark only means someone is ahead. This site does not declare the result.",
+      "rows": [
+        {
+          "name": "Erika Jurinová · SLOVENSKO, ZA ĽUDÍ, NOVA, Progresívne Slovensko, SaS, KDH, Demokrati, Konzervatívci, OKS, DS-ODS",
+          "votes": 134617,
+          "percent": 52.06714498443211
+        },
+        {
+          "name": "Igor Choma · SMER - SD, HLAS - sociálna demokracia, DOMOV-NS",
+          "votes": 66725,
+          "percent": 25.807886441431858
+        },
+        {
+          "name": "Martin Kapitulík · NEKA",
+          "votes": 32721,
+          "percent": 12.655823937805797
+        },
+        {
+          "name": "Anna Belousovová · REPUBLIKA",
+          "votes": 13761,
+          "percent": 5.322477711810323
+        },
+        {
+          "name": "Adam Lučanský · SNS",
+          "votes": 6000,
+          "percent": 2.320679185441606
+        },
+        {
+          "name": "Jana Chlustinová · SLOVEXIT",
+          "votes": 2825,
+          "percent": 1.092653116478756
+        },
+        {
+          "name": "Milan Pova · KSS",
+          "votes": 1896,
+          "percent": 0.7333346225995475
+        }
+      ]
+    },
+    {
+      "slug": "region-of-banská-bystrica",
+      "name": "Region of Banská Bystrica",
+      "votes": 209768,
+      "leader": "Ondrej Lunter ahead",
+      "color": "#3f4f3a",
+      "amount": 1,
+      "summary": "Ondrej Lunter has more reported votes for regional chair than the others. The Statistical Office marks Ondrej Lunter as elected. The office did not publish a color, so a mark only means someone is ahead. This site does not declare the result.",
+      "rows": [
+        {
+          "name": "Ondrej Lunter · NEKA",
+          "votes": 135971,
+          "percent": 64.81970557949735
+        },
+        {
+          "name": "Miroslav Suja · REPUBLIKA",
+          "votes": 31465,
+          "percent": 14.999904656572976
+        },
+        {
+          "name": "Marian Kotleba · ĽS Naše Slovensko",
+          "votes": 19128,
+          "percent": 9.118645360588841
+        },
+        {
+          "name": "Roman Malatinec · SV",
+          "votes": 11158,
+          "percent": 5.319209793676824
+        },
+        {
+          "name": "Michal Albert · Bratia Slovenska",
+          "votes": 7223,
+          "percent": 3.443327866976851
+        },
+        {
+          "name": "Jaroslav Rusina · NEKA",
+          "votes": 2589,
+          "percent": 1.2342206628275048
+        },
+        {
+          "name": "Peter Plančík · KSS",
+          "votes": 2234,
+          "percent": 1.0649860798596544
+        }
+      ]
+    },
+    {
+      "slug": "region-of-prešov",
+      "name": "Region of Prešov",
+      "votes": 284594,
+      "leader": "Milan Majerský ahead",
+      "color": "#3f4f3a",
+      "amount": 0.7286938387396538,
+      "summary": "Milan Majerský has more reported votes for regional chair than the others. The Statistical Office marks Milan Majerský as elected. The office did not publish a color, so a mark only means someone is ahead. This site does not declare the result.",
+      "rows": [
+        {
+          "name": "Milan Majerský · KDH, SLOVENSKO, SaS, ZA ĽUDÍ, Konzervatívci, Progresívne Slovensko",
+          "votes": 138819,
+          "percent": 48.777908177965806
+        },
+        {
+          "name": "Milan Mazurek · REPUBLIKA",
+          "votes": 100131,
+          "percent": 35.18380570215816
+        },
+        {
+          "name": "Samuel Migaľ · NEKA",
+          "votes": 17240,
+          "percent": 6.057752447346044
+        },
+        {
+          "name": "Drahomír Čureja · NEKA",
+          "votes": 9564,
+          "percent": 3.360576821717956
+        },
+        {
+          "name": "Monika Lešková · SNS",
+          "votes": 4073,
+          "percent": 1.4311615845731112
+        },
+        {
+          "name": "Judita Laššáková · SMER - SD, Bratia Slovenska",
+          "votes": 3984,
+          "percent": 1.3998889646303154
+        },
+        {
+          "name": "Marián Geci · NEKA",
+          "votes": 3702,
+          "percent": 1.3008004385194347
+        },
+        {
+          "name": "Ľubomír Goliaš · Jednota Slovanov",
+          "votes": 2156,
+          "percent": 0.7575704336704218
+        },
+        {
+          "name": "Ján Stanko · SLOVEXIT",
+          "votes": 1865,
+          "percent": 0.6553195077900448
+        },
+        {
+          "name": "Jozef Ištok · NEKA",
+          "votes": 1832,
+          "percent": 0.6437240419685587
+        },
+        {
+          "name": "Zoltán Kašo · TÍM KOŠICE",
+          "votes": 1228,
+          "percent": 0.43149187966014746
+        }
+      ]
+    },
+    {
+      "slug": "region-of-košice",
+      "name": "Region of Košice",
+      "votes": 238773,
+      "leader": "Rastislav Trnka ahead",
+      "color": "#3f4f3a",
+      "amount": 0.4907872181730153,
+      "summary": "Rastislav Trnka has more reported votes for regional chair than the others. The Statistical Office marks Rastislav Trnka as elected. The office did not publish a color, so a mark only means someone is ahead. This site does not declare the result.",
+      "rows": [
+        {
+          "name": "Rastislav Trnka · NEKA",
+          "votes": 76421,
+          "percent": 32.00571253868737
+        },
+        {
+          "name": "Marián Porvažník · Progresívne Slovensko, SLOVENSKO, SaS, KDH, Demokrati, ZA ĽUDÍ, OKS, DS-ODS",
+          "votes": 73304,
+          "percent": 30.70028855858912
+        },
+        {
+          "name": "Igor Šimko · HLAS - sociálna demokracia, SMER - SD, REPUBLIKA, PRAVDA, SNS, SV, STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI, Bratia Slovenska",
+          "votes": 57682,
+          "percent": 24.157672768696628
+        },
+        {
+          "name": "Monika Sofiya Soročinová · NEKA",
+          "votes": 23409,
+          "percent": 9.803872297119021
+        },
+        {
+          "name": "Džemal Kodrazi · NEKA",
+          "votes": 4638,
+          "percent": 1.9424306768353206
+        },
+        {
+          "name": "Tibor Géci · Jednota Slovanov",
+          "votes": 3319,
+          "percent": 1.3900231600725375
+        }
+      ]
+    }
+  ]
+}
