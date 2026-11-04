@@ -556,6 +556,45 @@
       "siteLabel": "beltranforcongress.com",
       "donate": "https://secure.winred.com/mike-beltran-for-congress/donate-today",
       "source": "https://beltranforcongress.com/about/"
+    },
+    "district 15|robert people": {
+      "role": "Retired soldier and Democratic nominee for Florida's 15th District",
+      "bio": "His campaign says he was born in Baltimore in 1979, the second of four children, and grew up with a single mother in poverty. He joined the Army the day after he turned 18, served 21 years including two tours in Iraq and one in Afghanistan, and retired in 2018. He says he took an oath to the Constitution and is still keeping it.",
+      "issues": [
+        "He says he would protect Social Security and support Medicare for All.",
+        "He says he would protect vote by mail and the environment, and oppose a data center when the community does not want it.",
+        "He says his priorities also include housing, food, utility costs, and disaster preparedness."
+      ],
+      "site": "https://www.peopleforcongress.com/",
+      "siteLabel": "peopleforcongress.com",
+      "donate": "https://secure.actblue.com/donate/people4congressweb",
+      "source": "https://www.peopleforcongress.com/"
+    },
+    "district 16|sydney gruters": {
+      "role": "Former congressional aide and Republican nominee for Florida's 16th District",
+      "bio": "Her campaign says she is a native Floridian, a working mother of three, and the wife of Republican National Committee chairman Joe Gruters. She recently led the New College Foundation, was district director for Representative Greg Steube, and in 2017 was appointed by President Trump as the Agriculture Department's rural-development director for Florida and the U.S. Virgin Islands. She also spent more than a decade working for Representative Vern Buchanan.",
+      "issues": [
+        "She says she would cut taxes and fight rising costs so families can afford gas, groceries, and everyday essentials.",
+        "She says she would work with President Trump and ICE on the border, and stand with him to keep elections secure.",
+        "She says she would curb overdevelopment, keep homeownership in reach, strengthen veterans' benefits, and protect Social Security and Medicare."
+      ],
+      "site": "https://grutersforcongress.com/",
+      "siteLabel": "grutersforcongress.com",
+      "donate": "https://secure.winred.com/sydney-gruters-for-congress/donate-today",
+      "source": "https://grutersforcongress.com/"
+    },
+    "district 16|kelly kirschner": {
+      "role": "Former Sarasota mayor and Democratic nominee for Florida's 16th District",
+      "bio": "His campaign says he is a third-generation Floridian and a single father who grew up working his family's citrus stand near the Sarasota-Bradenton airport. He earned bachelor's and master's degrees from Georgetown, then spent four years in the Peace Corps in northern Guatemala. He later served as a Sarasota commissioner and mayor, built a nonprofit that helped first-generation students reach college without debt, and was a vice president at Eckerd College.",
+      "issues": [
+        "He says he would lower insurance, health-care, and prescription costs, restore Medicare and Medicaid funding, and let the government negotiate drug prices.",
+        "He says he would expand affordable housing and stop Wall Street from buying single-family homes.",
+        "He says he would protect Tampa Bay, Sarasota Bay, and the coast by prohibiting offshore drilling and enforcing the Clean Water Act."
+      ],
+      "site": "https://kellykirschner.com/",
+      "siteLabel": "kellykirschner.com",
+      "donate": "https://secure.actblue.com/donate/kirschnerwebsite",
+      "source": "https://kellykirschner.com/"
     }
   },
   "measures": {}
