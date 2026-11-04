@@ -12,6 +12,8 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
+import ct_towns
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PREVIEW = os.path.join(ROOT, "preview")
 TEMP = os.environ.get("TEMP", "/tmp")
@@ -202,36 +204,67 @@ def candidates_of(items, partisan):
     return rows
 
 
-def slim_counties(map_data, ordered_names):
+def slim_counties(map_data, ordered_names, state_code=""):
     if not isinstance(map_data, dict):
         return None
+    towns = ct_towns.TOWNS if (state_code or "").upper() == "CT" else {}
     out = {}
+    rolled = {}
     for key, unit in map_data.items():
         text = str(key)
-        if not text.isdigit():
-            continue
-        fips = text.zfill(5)
         by_name = {item.get("name"): item for item in unit.get("candidates") or []}
-        ordered = []
+        votes_by_name = []
         total = 0
         for name in ordered_names:
             found = by_name.get(name) or {}
             votes = found.get("votes") or 0
             total += votes
-            ordered.append([votes, found.get("formattedPercentVote") or "0%", bool(found.get("isWinner"))])
+            votes_by_name.append(votes)
         reported = unit.get("totalVote") or total
         if not reported:
             continue
+        if text.isdigit():
+            fips = text.zfill(5)
+            labeled = []
+            for name in ordered_names:
+                found = by_name.get(name) or {}
+                labeled.append([
+                    found.get("votes") or 0,
+                    found.get("formattedPercentVote") or "0%",
+                    bool(found.get("isWinner")),
+                ])
+            out[fips] = {
+                "name": unit.get("raceName") or "",
+                "percentIn": unit.get("percentIn") or 0,
+                "votes": reported,
+                "candidates": labeled,
+            }
+            continue
+        fips = towns.get(ct_towns.place_key(unit.get("raceName") or text))
+        if not fips:
+            continue
+        bucket = rolled.setdefault(fips, [0] * len(votes_by_name))
+        for index, votes in enumerate(votes_by_name):
+            bucket[index] += votes
+    for fips, votes in rolled.items():
+        total = sum(votes)
+        if not total:
+            continue
+        labeled = []
+        for count in votes:
+            percent = count / total * 100
+            label = ("%.1f" % percent).rstrip("0").rstrip(".") + "%"
+            labeled.append([count, label, False])
         out[fips] = {
-            "name": unit.get("raceName") or "",
-            "percentIn": unit.get("percentIn") or 0,
-            "votes": reported,
-            "candidates": ordered,
+            "name": ct_towns.COUNTY_NAMES.get(fips) or "",
+            "percentIn": 0,
+            "votes": total,
+            "candidates": labeled,
         }
     return out
 
 
-def race_record(item, kind):
+def race_record(item, kind, state_code=""):
     people = candidates_of(item.get("candidates"), kind != "measure")
     remaining = item.get("estimatedVotesRemaining") or {}
     if not isinstance(remaining, dict):
@@ -248,7 +281,7 @@ def race_record(item, kind):
         "pollsClose": item.get("pollsCloseFormatted") or "",
         "called": item.get("callStatusText") or "",
         "candidates": people,
-        "counties": slim_counties(item.get("mapData"), [person["name"] for person in people]) if kind == "map" else None,
+        "counties": slim_counties(item.get("mapData"), [person["name"] for person in people], state_code) if kind == "map" else None,
     }
 
 
@@ -369,10 +402,10 @@ def slim_state(code, name, slug, payload, error):
         block = payload.get("stateRaceResults") or {}
         for item in block.get("discreteOffices") or []:
             kind = "map" if isinstance(item.get("mapData"), dict) else "state"
-            races.append(race_record(item, kind))
+            races.append(race_record(item, kind, code))
         for item in block.get("otherRaces") or []:
             kind = "map" if isinstance(item.get("mapData"), dict) else "state"
-            races.append(race_record(item, kind))
+            races.append(race_record(item, kind, code))
         for item in block.get("ballotProps") or []:
             races.append(race_record(item, "measure"))
         for item in block.get("supremeCourtRetention") or []:
@@ -461,7 +494,7 @@ def state_from_details(code, name, slug, payload, detail_slugs, details):
             item["name"] = "District " + str(number) if number else (item.get("raceName") or "District")
             districts.append(item)
             continue
-        races.append(race_record(item, race_kind(item)))
+        races.append(race_record(item, race_kind(item), code))
     house = house_race(districts)
     if house:
         races.append(house)
