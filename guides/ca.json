@@ -1471,6 +1471,19 @@
       "site": "https://www.belleforcongress.com/",
       "siteLabel": "Jeff Belle for Congress",
       "source": "https://www.belleforcongress.com/"
+    },
+    "district 31|eric ching": {
+      "role": "Walnut mayor and business owner running for Congress in California's 31st District.",
+      "bio": "His campaign says he served nine years on the Walnut City Council, including a term as mayor in 2016 and 2017, after leading the Chinese American Association of Walnut. It says he has 30 years of business experience and has volunteered with churches, food distributions, and treatment centers.",
+      "issues": [
+        "He says he will defend speech, religion, and the right to keep and bear arms, and secure the border against illegal weapons, drugs, and people while keeping legal trade and tourism moving.",
+        "He says he supports term limits, reasonable pay for officials, and restitution from people convicted of crimes.",
+        "He says he supports school choice, opposes identity-based admissions and racially divisive curriculum, and wants fewer regulations on U.S. businesses."
+      ],
+      "site": "https://ericchingforcongress.com/",
+      "siteLabel": "ericchingforcongress.com",
+      "donate": "https://secure.winred.com/eric-ching-for-congress/donate",
+      "source": "https://ericchingforcongress.com/"
     }
   },
   "measures": {}
