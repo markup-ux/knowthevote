@@ -329,6 +329,19 @@
       "siteLabel": "butierezforcongress.com",
       "donate": "https://butierezforcongress.com/donate1/",
       "source": "https://butierezforcongress.com/"
+    },
+    "district 8|bernadette greene-placentia": {
+      "role": "Long-haul trucker and small-business owner running for Congress in Arizona's 8th District.",
+      "bio": "Her campaign says she is a mother who grew up in a union family, earned a commercial driver's license in 1997, and logged more than 4 million miles over 27 years while running a small trucking business. She says a car accident ended an Army ROTC scholarship at the University of Arizona.",
+      "issues": [
+        "She says she will lower the cost of groceries, fuel, and housing, protect Social Security and Medicare, and force drug companies to renegotiate prices.",
+        "She says she will secure the border and stop trafficking, and support an earned path to citizenship for people who follow the law.",
+        "She says she will fight lease-purchase deals that trap truck drivers in debt, defend the right to organize, and protect reproductive care and contraception."
+      ],
+      "site": "https://bgp4az.com/",
+      "siteLabel": "bgp4az.com",
+      "donate": "https://secure.actblue.com/donate/bgp_website",
+      "source": "https://bgp4az.com/priorities/"
     }
   },
   "measures": {}
