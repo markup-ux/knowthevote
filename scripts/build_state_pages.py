@@ -552,7 +552,7 @@ def page(data):
 <title>Leaders.vote · %s, November 3, 2026</title>
 <meta name="description" content="Leaders.vote guide to the %s general election on November 3, 2026. Candidates, sample ballot, and unofficial results. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%%3E%%3Crect width='32' height='32' fill='%%231c1915'/%%3E%%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%%23f4f0e6'%%3EL%%3C/text%%3E%%3C/svg%%3E">
-<link rel="stylesheet" href="guide.css?v=closedtop">
+<link rel="stylesheet" href="guide.css?v=wherecenter">
 </head>
 <body data-state="%s">
 %s
@@ -623,7 +623,7 @@ def index_page(states):
 <title>Leaders.vote · November 3, 2026</title>
 <meta name="description" content="Leaders.vote is an independent voter guide for every state in the November 3, 2026 general election. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%%3E%%3Crect width='32' height='32' fill='%%231c1915'/%%3E%%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%%23f4f0e6'%%3EL%%3C/text%%3E%%3C/svg%%3E">
-<link rel="stylesheet" href="guide.css?v=closedtop">
+<link rel="stylesheet" href="guide.css?v=wherecenter">
 </head>
 <body>
 %s
