@@ -452,16 +452,18 @@ def page(data):
     office_links = []
     for race in statewide:
         office_links.append('<a href="#%s">%s</a>' % (office_id(race.get("office")), esc(race.get("office", "").replace(" Of ", " of "))))
-    if measures:
-        office_links.append('<a href="#measures">Measures</a>')
     if house:
         office_links.append('<a href="#house">U.S. House</a>')
+    if measures and not closed:
+        office_links.insert(-1 if house else len(office_links), '<a href="#measures">Measures</a>')
     if closed:
         nav = ['<a href="#results">Results</a>'] + office_links + [
             '<a href="#where">Where to vote</a>',
             '<a href="#sample">The ballot</a>',
-            '<a href="#read">Before you go</a>',
         ]
+        if measures:
+            nav.append('<a href="#measures">Measures</a>')
+        nav.append('<a href="#read">Before you go</a>')
     else:
         nav = [
             '<a href="#results">Results</a>',
@@ -516,11 +518,12 @@ def page(data):
     where = address_form(data, guide)
     sample = how_you_vote(data, statewide, measures, house, sheet, house_below=not closed)
     before = before_you_go(data, guide, statewide, house, house_below=not closed)
-    lists = "\n".join(part for part in ("\n".join(cards), measure_html, house_html) if part.strip())
     if closed:
+        lists = "\n".join(part for part in ("\n".join(cards), house_html) if part.strip())
         hero_where = ""
-        after_results = "\n".join(part for part in (lists, where, sample, before) if part.strip())
+        after_results = "\n".join(part for part in (lists, where, sample, measure_html, before) if part.strip())
     else:
+        lists = "\n".join(part for part in ("\n".join(cards), measure_html, house_html) if part.strip())
         hero_where = where
         after_results = "\n".join(part for part in (sample, before, lists) if part.strip())
     links = []
