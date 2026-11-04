@@ -354,6 +354,8 @@ body.theme-se { --bar: #006aa7; --bar-stripe: #fecc00; --bar-line: #fff; --bar-h
 body.theme-ch { --bar: #d52b1e; --bar-stripe: #fff; --bar-line: #fff; --bar-hover: #fff; --bar-hover-ink: #9f1d14; }
 body.theme-sk { --bar: #0b4ea2; --bar-stripe: #ee1c25; --bar-line: #fff; --bar-hover: #c4121a; --bar-hover-ink: #fff; }
 body.theme-cy { --bar: #8a3d00; --bar-stripe: #2f6b34; --bar-line: #fff; --bar-hover: #2f6b34; --bar-hover-ink: #fff; }
+body.theme-de { --bar: #111; --bar-stripe: #dd0000; --bar-line: #ffce00; --bar-hover: #ffce00; --bar-hover-ink: #1c1915; }
+body.theme-au { --bar: #012169; --bar-stripe: #c8102e; --bar-line: #fff; --bar-hover: #fff; --bar-hover-ink: #012169; }
 @media (max-width: 800px) {
   h1 { font-size: 34px; }
   .result-layout, .candidate, .sample-layout, .facts { grid-template-columns: 1fr; }

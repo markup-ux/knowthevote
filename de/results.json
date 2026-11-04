@@ -1,0 +1,1386 @@
+{
+  "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2025/ergebnisse/opendata/btw25/csv/kerg2.csv",
+  "fetchedAt": "2026-11-04T18:28:12.317369+00:00",
+  "status": "Federal Returning Officer file for the 23 February 2025 parliamentary election. The official file marks the count final. A state is colored only from second votes. The file has no color code. This page does not declare a result.",
+  "strings": {
+    "blank": "No votes reported"
+  },
+  "tables": [
+    {
+      "title": "Second votes in the whole country",
+      "note": "The party-list vote from the official national total. Parties under 1 percent are left off this table. This is not a count of seats, and it is not the color of one state.",
+      "column": "Party",
+      "rows": [
+        {
+          "name": "CDU",
+          "votes": 11196374,
+          "percent": 22.550824
+        },
+        {
+          "name": "AfD",
+          "votes": 10328780,
+          "percent": 20.803387
+        },
+        {
+          "name": "SPD",
+          "votes": 8149124,
+          "percent": 16.413301
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 5762380,
+          "percent": 11.606116
+        },
+        {
+          "name": "Die Linke",
+          "votes": 4356532,
+          "percent": 8.774572
+        },
+        {
+          "name": "CSU",
+          "votes": 2964028,
+          "percent": 5.969904
+        },
+        {
+          "name": "BSW",
+          "votes": 2472947,
+          "percent": 4.980808
+        },
+        {
+          "name": "FDP",
+          "votes": 2148757,
+          "percent": 4.327851
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 769279,
+          "percent": 1.549419
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "slug": "baden-württemberg",
+      "name": "Baden-Württemberg",
+      "votes": 6349998,
+      "leader": "CDU ahead",
+      "color": "#323232",
+      "amount": 0.8239342836043861,
+      "summary": "CDU has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "CDU",
+          "votes": 2006866,
+          "percent": 31.604198930456356
+        },
+        {
+          "name": "AfD",
+          "votes": 1256430,
+          "percent": 19.78630544450565
+        },
+        {
+          "name": "SPD",
+          "votes": 898778,
+          "percent": 14.153988709917703
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 865738,
+          "percent": 13.633673585409003
+        },
+        {
+          "name": "Die Linke",
+          "votes": 429484,
+          "percent": 6.7635296893006895
+        },
+        {
+          "name": "FDP",
+          "votes": 357539,
+          "percent": 5.630537206468412
+        },
+        {
+          "name": "BSW",
+          "votes": 260219,
+          "percent": 4.0979382985632435
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 86311,
+          "percent": 1.359228774560244
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 55906,
+          "percent": 0.8804097261132996
+        },
+        {
+          "name": "Volt",
+          "votes": 49025,
+          "percent": 0.7720474872590511
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 28041,
+          "percent": 0.4415906902647843
+        },
+        {
+          "name": "dieBasis",
+          "votes": 21845,
+          "percent": 0.3440158563829469
+        },
+        {
+          "name": "ÖDP",
+          "votes": 12258,
+          "percent": 0.1930394308785609
+        },
+        {
+          "name": "Bündnis C",
+          "votes": 11768,
+          "percent": 0.18532289301508442
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 7411,
+          "percent": 0.11670869817596793
+        },
+        {
+          "name": "MLPD",
+          "votes": 2379,
+          "percent": 0.03746457872900118
+        }
+      ]
+    },
+    {
+      "slug": "bayern",
+      "name": "Bayern",
+      "votes": 7972054,
+      "leader": "CSU ahead",
+      "color": "#0080c8",
+      "amount": 0.9386246013870314,
+      "summary": "CSU has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "CSU",
+          "votes": 2964028,
+          "percent": 37.18022983788118
+        },
+        {
+          "name": "AfD",
+          "votes": 1515731,
+          "percent": 19.013054853868276
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 957435,
+          "percent": 12.00989105191711
+        },
+        {
+          "name": "SPD",
+          "votes": 920675,
+          "percent": 11.548780276701589
+        },
+        {
+          "name": "Die Linke",
+          "votes": 456935,
+          "percent": 5.73170979524223
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 345840,
+          "percent": 4.3381542573595215
+        },
+        {
+          "name": "FDP",
+          "votes": 333257,
+          "percent": 4.180315386724676
+        },
+        {
+          "name": "BSW",
+          "votes": 246518,
+          "percent": 3.092277096968987
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 61869,
+          "percent": 0.7760735188196166
+        },
+        {
+          "name": "Volt",
+          "votes": 50671,
+          "percent": 0.6356078370768687
+        },
+        {
+          "name": "ÖDP",
+          "votes": 33367,
+          "percent": 0.41854959838455685
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 30552,
+          "percent": 0.38323874875910274
+        },
+        {
+          "name": "dieBasis",
+          "votes": 28843,
+          "percent": 0.36180136260993717
+        },
+        {
+          "name": "BP",
+          "votes": 12278,
+          "percent": 0.15401300593297537
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 6937,
+          "percent": 0.08701647028482246
+        },
+        {
+          "name": "PdH",
+          "votes": 5466,
+          "percent": 0.0685645129849848
+        },
+        {
+          "name": "MLPD",
+          "votes": 1652,
+          "percent": 0.02072238848357023
+        }
+      ]
+    },
+    {
+      "slug": "berlin",
+      "name": "Berlin",
+      "votes": 1949533,
+      "leader": "Die Linke ahead",
+      "color": "#be3075",
+      "amount": 0.5303750819943082,
+      "summary": "Die Linke has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Die Linke",
+          "votes": 387222,
+          "percent": 19.862295226600423
+        },
+        {
+          "name": "CDU",
+          "votes": 356099,
+          "percent": 18.265861619167257
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 328035,
+          "percent": 16.826337384388978
+        },
+        {
+          "name": "AfD",
+          "votes": 296990,
+          "percent": 15.233904735134004
+        },
+        {
+          "name": "SPD",
+          "votes": 295182,
+          "percent": 15.141164576337
+        },
+        {
+          "name": "BSW",
+          "votes": 129651,
+          "percent": 6.650361907184951
+        },
+        {
+          "name": "FDP",
+          "votes": 74076,
+          "percent": 3.799679205225046
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 29384,
+          "percent": 1.5072327577937896
+        },
+        {
+          "name": "Volt",
+          "votes": 18231,
+          "percent": 0.9351470326483317
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 12881,
+          "percent": 0.6607223370930372
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 6402,
+          "percent": 0.3283863366252328
+        },
+        {
+          "name": "Team Todenhöfer",
+          "votes": 4532,
+          "percent": 0.23246592901992427
+        },
+        {
+          "name": "PdF",
+          "votes": 3423,
+          "percent": 0.1755805108197707
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 2960,
+          "percent": 0.1518312334287237
+        },
+        {
+          "name": "MERA25",
+          "votes": 2439,
+          "percent": 0.12510688457184363
+        },
+        {
+          "name": "MLPD",
+          "votes": 925,
+          "percent": 0.04744726044647615
+        },
+        {
+          "name": "BüSo",
+          "votes": 676,
+          "percent": 0.03467497087764095
+        },
+        {
+          "name": "SGP",
+          "votes": 425,
+          "percent": 0.021800092637570125
+        }
+      ]
+    },
+    {
+      "slug": "brandenburg",
+      "name": "Brandenburg",
+      "votes": 1647338,
+      "leader": "AfD ahead",
+      "color": "#009ee0",
+      "amount": 0.8931871467937043,
+      "summary": "AfD has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "AfD",
+          "votes": 535275,
+          "percent": 32.4933316659969
+        },
+        {
+          "name": "CDU",
+          "votes": 298048,
+          "percent": 18.092704715122217
+        },
+        {
+          "name": "SPD",
+          "votes": 244010,
+          "percent": 14.812382158367013
+        },
+        {
+          "name": "BSW",
+          "votes": 176405,
+          "percent": 10.708488482630765
+        },
+        {
+          "name": "Die Linke",
+          "votes": 176224,
+          "percent": 10.697501059284736
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 108598,
+          "percent": 6.592332599624363
+        },
+        {
+          "name": "FDP",
+          "votes": 53467,
+          "percent": 3.2456605748182827
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 23969,
+          "percent": 1.4550140893975614
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 14706,
+          "percent": 0.892712970865724
+        },
+        {
+          "name": "Volt",
+          "votes": 11370,
+          "percent": 0.6902044389190318
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 4147,
+          "percent": 0.25173947301646654
+        },
+        {
+          "name": "MLPD",
+          "votes": 1119,
+          "percent": 0.06792777195693901
+        }
+      ]
+    },
+    {
+      "slug": "bremen",
+      "name": "Bremen",
+      "votes": 348256,
+      "leader": "SPD ahead",
+      "color": "#e3000f",
+      "amount": 0.5620415860255075,
+      "summary": "SPD has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "SPD",
+          "votes": 80604,
+          "percent": 23.145042727189193
+        },
+        {
+          "name": "CDU",
+          "votes": 71573,
+          "percent": 20.551835431406783
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 54280,
+          "percent": 15.586235413029495
+        },
+        {
+          "name": "AfD",
+          "votes": 52496,
+          "percent": 15.073968574841496
+        },
+        {
+          "name": "Die Linke",
+          "votes": 51461,
+          "percent": 14.776773408067628
+        },
+        {
+          "name": "BSW",
+          "votes": 15114,
+          "percent": 4.339910870164477
+        },
+        {
+          "name": "FDP",
+          "votes": 12295,
+          "percent": 3.5304488652026094
+        },
+        {
+          "name": "Volt",
+          "votes": 3836,
+          "percent": 1.1014885601396673
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 2582,
+          "percent": 0.7414086189469815
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 1618,
+          "percent": 0.46460075346871266
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 933,
+          "percent": 0.26790636772948634
+        },
+        {
+          "name": "MENSCHLICHE WELT",
+          "votes": 694,
+          "percent": 0.19927869153725994
+        },
+        {
+          "name": "Verjüngungsforschung",
+          "votes": 303,
+          "percent": 0.08700496186713222
+        },
+        {
+          "name": "MERA25",
+          "votes": 260,
+          "percent": 0.07465772305430488
+        },
+        {
+          "name": "MLPD",
+          "votes": 207,
+          "percent": 0.0594390333547735
+        }
+      ]
+    },
+    {
+      "slug": "hamburg",
+      "name": "Hamburg",
+      "votes": 1045620,
+      "leader": "SPD ahead",
+      "color": "#e3000f",
+      "amount": 0.5375115672583495,
+      "summary": "SPD has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "SPD",
+          "votes": 237740,
+          "percent": 22.736749488341847
+        },
+        {
+          "name": "CDU",
+          "votes": 216935,
+          "percent": 20.747020906256576
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 201713,
+          "percent": 19.291233909068303
+        },
+        {
+          "name": "Die Linke",
+          "votes": 151115,
+          "percent": 14.452191044547732
+        },
+        {
+          "name": "AfD",
+          "votes": 113608,
+          "percent": 10.86513264857214
+        },
+        {
+          "name": "FDP",
+          "votes": 47115,
+          "percent": 4.5059390600791875
+        },
+        {
+          "name": "BSW",
+          "votes": 41919,
+          "percent": 4.009009009009009
+        },
+        {
+          "name": "Volt",
+          "votes": 15549,
+          "percent": 1.4870603087163596
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 9735,
+          "percent": 0.9310265679692431
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 4518,
+          "percent": 0.4320881390945085
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 3866,
+          "percent": 0.36973279011495574
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 1279,
+          "percent": 0.12231977200130066
+        },
+        {
+          "name": "MLPD",
+          "votes": 528,
+          "percent": 0.05049635622884031
+        }
+      ]
+    },
+    {
+      "slug": "hessen",
+      "name": "Hessen",
+      "votes": 3580834,
+      "leader": "CDU ahead",
+      "color": "#323232",
+      "amount": 0.8140130696953694,
+      "summary": "CDU has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "CDU",
+          "votes": 1033842,
+          "percent": 28.87154221614294
+        },
+        {
+          "name": "SPD",
+          "votes": 657510,
+          "percent": 18.361923507205304
+        },
+        {
+          "name": "AfD",
+          "votes": 636778,
+          "percent": 17.78295223961792
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 451510,
+          "percent": 12.609073752092389
+        },
+        {
+          "name": "Die Linke",
+          "votes": 311058,
+          "percent": 8.686747277310259
+        },
+        {
+          "name": "FDP",
+          "votes": 180823,
+          "percent": 5.049745394508654
+        },
+        {
+          "name": "BSW",
+          "votes": 158653,
+          "percent": 4.4306158844559675
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 46567,
+          "percent": 1.3004512356618598
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 44516,
+          "percent": 1.2431740762068277
+        },
+        {
+          "name": "Volt",
+          "votes": 31542,
+          "percent": 0.8808562474552017
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 18111,
+          "percent": 0.5057760287128641
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 5740,
+          "percent": 0.16029785239974823
+        },
+        {
+          "name": "PdH",
+          "votes": 3014,
+          "percent": 0.08417033573742877
+        },
+        {
+          "name": "MLPD",
+          "votes": 1170,
+          "percent": 0.03267395249263161
+        }
+      ]
+    },
+    {
+      "slug": "mecklenburg-vorpommern",
+      "name": "Mecklenburg-Vorpommern",
+      "votes": 1021242,
+      "leader": "AfD ahead",
+      "color": "#009ee0",
+      "amount": 0.9408341984715736,
+      "summary": "AfD has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "AfD",
+          "votes": 357361,
+          "percent": 34.99278329720086
+        },
+        {
+          "name": "CDU",
+          "votes": 181956,
+          "percent": 17.817128555229807
+        },
+        {
+          "name": "SPD",
+          "votes": 126687,
+          "percent": 12.405188975776554
+        },
+        {
+          "name": "Die Linke",
+          "votes": 123059,
+          "percent": 12.049935274890771
+        },
+        {
+          "name": "BSW",
+          "votes": 107872,
+          "percent": 10.562824482346006
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 54719,
+          "percent": 5.358083588414891
+        },
+        {
+          "name": "FDP",
+          "votes": 32678,
+          "percent": 3.1998292275484164
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 15656,
+          "percent": 1.533035264902932
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 10814,
+          "percent": 1.0589067037979245
+        },
+        {
+          "name": "Volt",
+          "votes": 6350,
+          "percent": 0.6217918965338284
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 3248,
+          "percent": 0.31804410707746056
+        },
+        {
+          "name": "MLPD",
+          "votes": 842,
+          "percent": 0.08244862628054858
+        }
+      ]
+    },
+    {
+      "slug": "niedersachsen",
+      "name": "Niedersachsen",
+      "votes": 5015336,
+      "leader": "CDU ahead",
+      "color": "#323232",
+      "amount": 0.6321410390394904,
+      "summary": "CDU has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "CDU",
+          "votes": 1410418,
+          "percent": 28.122103882970155
+        },
+        {
+          "name": "SPD",
+          "votes": 1153523,
+          "percent": 22.999914661749482
+        },
+        {
+          "name": "AfD",
+          "votes": 894540,
+          "percent": 17.83609313513591
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 576845,
+          "percent": 11.501622224313586
+        },
+        {
+          "name": "Die Linke",
+          "votes": 405519,
+          "percent": 8.085579909302188
+        },
+        {
+          "name": "FDP",
+          "votes": 205163,
+          "percent": 4.09071296519316
+        },
+        {
+          "name": "BSW",
+          "votes": 189376,
+          "percent": 3.775938441611888
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 58107,
+          "percent": 1.1585863838434753
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 37628,
+          "percent": 0.7502588061896551
+        },
+        {
+          "name": "Volt",
+          "votes": 30488,
+          "percent": 0.6078954630357767
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 22360,
+          "percent": 0.4458325424258714
+        },
+        {
+          "name": "dieBasis",
+          "votes": 12466,
+          "percent": 0.24855762405549697
+        },
+        {
+          "name": "PIRATEN",
+          "votes": 8029,
+          "percent": 0.1600889750955868
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 6290,
+          "percent": 0.12541532611175005
+        },
+        {
+          "name": "PdH",
+          "votes": 3342,
+          "percent": 0.066635615240933
+        },
+        {
+          "name": "MLPD",
+          "votes": 1242,
+          "percent": 0.024764043725086414
+        }
+      ]
+    },
+    {
+      "slug": "nordrhein-westfalen",
+      "name": "Nordrhein-Westfalen",
+      "votes": 10526134,
+      "leader": "CDU ahead",
+      "color": "#323232",
+      "amount": 0.7850103938432367,
+      "summary": "CDU has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "CDU",
+          "votes": 3170627,
+          "percent": 30.121476697902573
+        },
+        {
+          "name": "SPD",
+          "votes": 2108434,
+          "percent": 20.030468926198356
+        },
+        {
+          "name": "AfD",
+          "votes": 1770379,
+          "percent": 16.81889096224692
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 1300901,
+          "percent": 12.358772936008604
+        },
+        {
+          "name": "Die Linke",
+          "votes": 877123,
+          "percent": 8.33281240767028
+        },
+        {
+          "name": "FDP",
+          "votes": 462446,
+          "percent": 4.393312872513309
+        },
+        {
+          "name": "BSW",
+          "votes": 432911,
+          "percent": 4.1127255267698475
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 133480,
+          "percent": 1.268081899774409
+        },
+        {
+          "name": "Volt",
+          "votes": 68915,
+          "percent": 0.6547038067347423
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 59077,
+          "percent": 0.5612411926353968
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 52891,
+          "percent": 0.5024731777117791
+        },
+        {
+          "name": "dieBasis",
+          "votes": 22219,
+          "percent": 0.21108414542319145
+        },
+        {
+          "name": "Team Todenhöfer",
+          "votes": 20021,
+          "percent": 0.19020278480209354
+        },
+        {
+          "name": "PdF",
+          "votes": 17965,
+          "percent": 0.17067044747862795
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 13669,
+          "percent": 0.12985774264321545
+        },
+        {
+          "name": "WerteUnion",
+          "votes": 6736,
+          "percent": 0.06399310516092613
+        },
+        {
+          "name": "MERA25",
+          "votes": 4295,
+          "percent": 0.04080320467134468
+        },
+        {
+          "name": "MLPD",
+          "votes": 4045,
+          "percent": 0.03842816365438631
+        }
+      ]
+    },
+    {
+      "slug": "rheinland-pfalz",
+      "name": "Rheinland-Pfalz",
+      "votes": 2482358,
+      "leader": "CDU ahead",
+      "color": "#323232",
+      "amount": 0.7943598208310819,
+      "summary": "CDU has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "CDU",
+          "votes": 760623,
+          "percent": 30.641148456427317
+        },
+        {
+          "name": "AfD",
+          "votes": 498695,
+          "percent": 20.089568063913426
+        },
+        {
+          "name": "SPD",
+          "votes": 462705,
+          "percent": 18.639736895322915
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 256869,
+          "percent": 10.34778222963811
+        },
+        {
+          "name": "Die Linke",
+          "votes": 161867,
+          "percent": 6.5206952421850515
+        },
+        {
+          "name": "FDP",
+          "votes": 114047,
+          "percent": 4.594301063746648
+        },
+        {
+          "name": "BSW",
+          "votes": 105103,
+          "percent": 4.23399848047703
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 52013,
+          "percent": 2.095306156485084
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 31542,
+          "percent": 1.2706466996299486
+        },
+        {
+          "name": "Volt",
+          "votes": 18846,
+          "percent": 0.759197504952952
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 11454,
+          "percent": 0.46141612128468174
+        },
+        {
+          "name": "ÖDP",
+          "votes": 4139,
+          "percent": 0.16673662702962264
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 3884,
+          "percent": 0.15646413611574156
+        },
+        {
+          "name": "MLPD",
+          "votes": 571,
+          "percent": 0.02300232279147488
+        }
+      ]
+    },
+    {
+      "slug": "saarland",
+      "name": "Saarland",
+      "votes": 599723,
+      "leader": "CDU ahead",
+      "color": "#323232",
+      "amount": 0.6360619565149925,
+      "summary": "CDU has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "CDU",
+          "votes": 161113,
+          "percent": 26.864569142754238
+        },
+        {
+          "name": "SPD",
+          "votes": 131136,
+          "percent": 21.866094847121087
+        },
+        {
+          "name": "AfD",
+          "votes": 129294,
+          "percent": 21.558953049991413
+        },
+        {
+          "name": "Die Linke",
+          "votes": 44080,
+          "percent": 7.350059944340971
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 43371,
+          "percent": 7.231838698865976
+        },
+        {
+          "name": "BSW",
+          "votes": 37001,
+          "percent": 6.16968166970418
+        },
+        {
+          "name": "FDP",
+          "votes": 25725,
+          "percent": 4.289480310076486
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 12263,
+          "percent": 2.044777338871446
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 8476,
+          "percent": 1.4133191490071249
+        },
+        {
+          "name": "Volt",
+          "votes": 3720,
+          "percent": 0.620286365538757
+        },
+        {
+          "name": "PIRATEN",
+          "votes": 1753,
+          "percent": 0.29230161257780674
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 1487,
+          "percent": 0.24794780256885263
+        },
+        {
+          "name": "MLPD",
+          "votes": 304,
+          "percent": 0.05069006858166187
+        }
+      ]
+    },
+    {
+      "slug": "sachsen",
+      "name": "Sachsen",
+      "votes": 2569572,
+      "leader": "AfD ahead",
+      "color": "#009ee0",
+      "amount": 0.9207361532385714,
+      "summary": "AfD has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "AfD",
+          "votes": 958401,
+          "percent": 37.298079213191926
+        },
+        {
+          "name": "CDU",
+          "votes": 507247,
+          "percent": 19.740524881186438
+        },
+        {
+          "name": "Die Linke",
+          "votes": 290462,
+          "percent": 11.303905864478597
+        },
+        {
+          "name": "BSW",
+          "votes": 232257,
+          "percent": 9.038742638851918
+        },
+        {
+          "name": "SPD",
+          "votes": 217144,
+          "percent": 8.450590215024135
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 167269,
+          "percent": 6.5096054907198555
+        },
+        {
+          "name": "FDP",
+          "votes": 83436,
+          "percent": 3.247077723449664
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 40139,
+          "percent": 1.562088939325304
+        },
+        {
+          "name": "Tierschutzpartei",
+          "votes": 29743,
+          "percent": 1.1575079429570372
+        },
+        {
+          "name": "Volt",
+          "votes": 14741,
+          "percent": 0.5736753046810908
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 13692,
+          "percent": 0.5328513853669016
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 7435,
+          "percent": 0.2893477979990442
+        },
+        {
+          "name": "PIRATEN",
+          "votes": 4018,
+          "percent": 0.1563684535790396
+        },
+        {
+          "name": "PdH",
+          "votes": 2472,
+          "percent": 0.0962027917489761
+        },
+        {
+          "name": "MLPD",
+          "votes": 1116,
+          "percent": 0.04343135744007173
+        }
+      ]
+    },
+    {
+      "slug": "sachsen-anhalt",
+      "name": "Sachsen-Anhalt",
+      "votes": 1337349,
+      "leader": "AfD ahead",
+      "color": "#009ee0",
+      "amount": 0.9329009695430449,
+      "summary": "AfD has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "AfD",
+          "votes": 496110,
+          "percent": 37.09652454221
+        },
+        {
+          "name": "CDU",
+          "votes": 256538,
+          "percent": 19.182576874099432
+        },
+        {
+          "name": "BSW",
+          "votes": 150411,
+          "percent": 11.24695199233708
+        },
+        {
+          "name": "SPD",
+          "votes": 146535,
+          "percent": 10.957124879145235
+        },
+        {
+          "name": "Die Linke",
+          "votes": 143807,
+          "percent": 10.753139232915267
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 59077,
+          "percent": 4.417470682671464
+        },
+        {
+          "name": "FDP",
+          "votes": 41251,
+          "percent": 3.084535151258198
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 18449,
+          "percent": 1.3795202299474558
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 11038,
+          "percent": 0.8253642093425126
+        },
+        {
+          "name": "Volt",
+          "votes": 8484,
+          "percent": 0.6343893777914367
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 4517,
+          "percent": 0.33775775807212627
+        },
+        {
+          "name": "MLPD",
+          "votes": 1132,
+          "percent": 0.08464507020979564
+        }
+      ]
+    },
+    {
+      "slug": "schleswig-holstein",
+      "name": "Schleswig-Holstein",
+      "votes": 1880005,
+      "leader": "CDU ahead",
+      "color": "#323232",
+      "amount": 0.7699658966405876,
+      "summary": "CDU has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "CDU",
+          "votes": 518424,
+          "percent": 27.575671341299625
+        },
+        {
+          "name": "SPD",
+          "votes": 352546,
+          "percent": 18.752396935114533
+        },
+        {
+          "name": "AfD",
+          "votes": 306165,
+          "percent": 16.285329028380243
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 279923,
+          "percent": 14.889481676910433
+        },
+        {
+          "name": "Die Linke",
+          "votes": 146428,
+          "percent": 7.788702689620506
+        },
+        {
+          "name": "FDP",
+          "votes": 88147,
+          "percent": 4.688657742931535
+        },
+        {
+          "name": "SSW",
+          "votes": 76138,
+          "percent": 4.049882846056261
+        },
+        {
+          "name": "BSW",
+          "votes": 64777,
+          "percent": 3.445575942617174
+        },
+        {
+          "name": "Volt",
+          "votes": 16496,
+          "percent": 0.8774444748817157
+        },
+        {
+          "name": "Die PARTEI",
+          "votes": 13729,
+          "percent": 0.7302640152552786
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 13675,
+          "percent": 0.7273916824689296
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 2981,
+          "percent": 0.15856340807604236
+        },
+        {
+          "name": "MLPD",
+          "votes": 576,
+          "percent": 0.030638216387722374
+        }
+      ]
+    },
+    {
+      "slug": "thüringen",
+      "name": "Thüringen",
+      "votes": 1324160,
+      "leader": "AfD ahead",
+      "color": "#009ee0",
+      "amount": 0.9680176562649967,
+      "summary": "AfD has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "AfD",
+          "votes": 510527,
+          "percent": 38.554781899468345
+        },
+        {
+          "name": "CDU",
+          "votes": 246065,
+          "percent": 18.582724142097632
+        },
+        {
+          "name": "Die Linke",
+          "votes": 200688,
+          "percent": 15.155872402126631
+        },
+        {
+          "name": "BSW",
+          "votes": 124760,
+          "percent": 9.42182213629773
+        },
+        {
+          "name": "SPD",
+          "votes": 115915,
+          "percent": 8.75385149830836
+        },
+        {
+          "name": "GRÜNE",
+          "votes": 56097,
+          "percent": 4.2364215804736585
+        },
+        {
+          "name": "FDP",
+          "votes": 37292,
+          "percent": 2.816275978733688
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "votes": 20621,
+          "percent": 1.557289149347511
+        },
+        {
+          "name": "Volt",
+          "votes": 6998,
+          "percent": 0.5284859835669405
+        },
+        {
+          "name": "BÜNDNIS DEUTSCHLAND",
+          "votes": 3454,
+          "percent": 0.26084461092315125
+        },
+        {
+          "name": "MLPD",
+          "votes": 1743,
+          "percent": 0.13163061865635572
+        }
+      ]
+    }
+  ],
+  "card": "Parliament on 23 February 2025. The official file marks the count final. The map is the second vote, by state."
+}

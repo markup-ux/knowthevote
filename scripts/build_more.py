@@ -356,8 +356,22 @@ $body
     return markup
 
 
+def same_votes(path, data):
+    if not os.path.exists(path):
+        return False
+    old = json.load(open(path, encoding="utf-8"))
+    old.pop("fetchedAt", None)
+    current = dict(data)
+    current.pop("fetchedAt", None)
+    return old == current
+
+
 def write_pages(spec, shapes, data):
     folder = os.path.join(ROOT, spec["code"])
+    result_path = os.path.join(folder, "results.json")
+    if same_votes(result_path, data):
+        print(spec["code"], "unchanged")
+        return
     places = os.path.join(folder, "m")
     os.makedirs(places, exist_ok=True)
     write_svg(folder, shapes, spec["map_label"])
@@ -994,6 +1008,241 @@ def build_cyprus():
     write_pages(spec, shapes, data)
 
 
+DE_URL = "https://www.bundeswahlleiterin.de/bundestagswahlen/2025/ergebnisse/opendata/btw25/csv/kerg2.csv"
+DE_COLORS = {
+    "SPD": "#e3000f",
+    "CDU": "#323232",
+    "CSU": "#0080c8",
+    "GRÜNE": "#46962b",
+    "FDP": "#c9a400",
+    "AfD": "#009ee0",
+    "Die Linke": "#be3075",
+    "BSW": "#7d1d4a",
+    "FREIE WÄHLER": "#e87700",
+}
+AU_URL = "https://results.aec.gov.au/31496/Website/Downloads/HouseFirstPrefsByStateByPartyDownload-31496.csv"
+AU_STATES = {
+    "NSW": "New South Wales",
+    "VIC": "Victoria",
+    "QLD": "Queensland",
+    "SA": "South Australia",
+    "WA": "Western Australia",
+    "TAS": "Tasmania",
+    "NT": "Northern Territory",
+    "ACT": "Australian Capital Territory",
+}
+AU_COLORS = {
+    "ALP": "#e1392d",
+    "LP": "#0047ab",
+    "NP": "#006644",
+    "LNP": "#0047ab",
+    "CLP": "#f58220",
+    "GRN": "#009c3d",
+    "IND": "#5c564c",
+}
+
+
+def german_number(text):
+    text = (text or "").strip()
+    if not text:
+        return 0
+    return int(float(text.replace(".", "").replace(",", ".")))
+
+
+def count_sentence(final):
+    if final is True:
+        return "The official file marks the count final."
+    if final is False:
+        return "The official file still marks the count provisional."
+    return "The official file is the published count."
+
+
+def build_germany():
+    shapes = shapes_of("DEU")
+    raw = fetch(DE_URL)
+    lines = raw.decode("utf-8-sig").splitlines()
+    status = ""
+    for line in lines:
+        if line.startswith("Status:"):
+            status = line.split(";")[1].strip()
+            break
+    final = True if status == "Endgültig" else False if "Vorläufig" in status or status == "Zwischenergebnis" else None
+    start = next(i for i, line in enumerate(lines) if line.startswith("Wahlart;"))
+    grouped = {}
+    national = []
+    for row in csv.DictReader(io.StringIO("\n".join(lines[start:])), delimiter=";"):
+        if row.get("Gruppenart") != "Partei" or row.get("Stimme") != "2":
+            continue
+        party = (row.get("Gruppenname") or "").strip()
+        votes = german_number(row.get("Anzahl"))
+        if not party or not votes:
+            continue
+        raw_percent = (row.get("Prozent") or "").strip().replace(",", ".")
+        percent = float(raw_percent) if raw_percent else None
+        item = {
+            "name": party,
+            "votes": votes,
+            "percent": percent,
+            "color": DE_COLORS.get(party, AHEAD),
+            "legend": party + " ahead",
+            "short": party,
+        }
+        if row.get("Gebietsart") == "Land":
+            grouped.setdefault(row["Gebietsname"], []).append(item)
+        elif row.get("Gebietsart") == "Bund":
+            national.append(item)
+    rows_by_key = {}
+    for name, party_rows in grouped.items():
+        rows_by_key[norm(name)] = {
+            "rows": party_rows,
+            "summary": "%(short)s has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
+            "tie": "Second votes are reported, and the top parties are tied. The map stays beige.",
+        }
+    places, missed = match_shapes(shapes, rows_by_key)
+    if missed:
+        print("DE missed", missed)
+    shown = [row for row in national if row["votes"] and (row["percent"] or 0) >= 1]
+    shown.sort(key=lambda row: (-row["votes"], row["name"]))
+    print("DE lands", len(places), "national", len(shown), "status", status)
+    data = {
+        "source": DE_URL,
+        "fetchedAt": datetime.now(timezone.utc).isoformat(),
+        "status": "Federal Returning Officer file for the 23 February 2025 parliamentary election. %s A state is colored only from second votes. The file has no color code. This page does not declare a result."
+        % count_sentence(final),
+        "strings": {"blank": "No votes reported"},
+        "tables": [
+            {
+                "title": "Second votes in the whole country",
+                "note": "The party-list vote from the official national total. Parties under 1 percent are left off this table. This is not a count of seats, and it is not the color of one state.",
+                "column": "Party",
+                "rows": [
+                    {"name": row["name"], "votes": row["votes"], "percent": row["percent"]}
+                    for row in shown
+                ],
+            }
+        ],
+        "places": places,
+        "card": "Parliament on 23 February 2025. %s The map is the second vote, by state." % count_sentence(final),
+    }
+    spec = {
+        "code": "de",
+        "country": "Germany",
+        "flag": "deu.svg",
+        "title": "Leaders.vote · Germany, 23 February 2025",
+        "description": "Germany's parliamentary second vote by state, copied from the Federal Returning Officer.",
+        "map_label": "Map of German states",
+        "kicker": "Germany · Parliament · 23 February 2025",
+        "source": "https://www.bundeswahlleiterin.de/bundestagswahlen/2025/ergebnisse/opendata.html",
+        "footer": 'Vote totals are copied from the <a href="https://www.bundeswahlleiterin.de/bundestagswahlen/2025/ergebnisse/opendata.html">Federal Returning Officer open-data file</a> for the 23 February 2025 parliamentary election. A state is colored only from reported second votes. This site does not declare a result. It does not ask for a home address, a phone number, or an email address.',
+        "list_title": "The 16 states",
+        "list_note": "A state is one of Germany's 16 Länder. Open a name for the second votes reported there. Second votes are the party-list vote, not a count of seats.",
+        "place_note": "You are looking at one German state. The numbers are second votes, the party-list vote for parliament. They are not a count of seats, and they are not a state election.",
+        "intro": """    <p class="kicker">Germany · Parliament · 23 February 2025</p>
+    <h1>Germany has a final count for parliament.</h1>
+    <p class="deck">This map is the second vote, the party-list vote, in each state. It is not the vote for a local candidate, and it is not a count of seats.</p>
+    <p class="deck">There are 16 states. A mark means one party has more second votes than the others. The official file has no color code, so the color is only there to tell the parties apart.</p>""",
+    }
+    if final is not True:
+        spec["intro"] = spec["intro"].replace(
+            "Germany has a final count for parliament.",
+            "Germany's parliamentary count follows the official file.",
+        )
+    write_pages(spec, shapes, data)
+
+
+def build_australia():
+    shapes = shapes_of("AUS")
+    raw = fetch(AU_URL)
+    lines = raw.decode("utf-8-sig").splitlines()
+    final = "Phase:FinalResults" in (lines[0] if lines else "")
+    start = next(i for i, line in enumerate(lines) if line.startswith("StateAb,"))
+    grouped = {}
+    national = {}
+    for row in csv.DictReader(io.StringIO("\n".join(lines[start:]))):
+        code = (row.get("StateAb") or "").strip()
+        name = AU_STATES.get(code)
+        if not name:
+            if code:
+                print("AU skip", code)
+            continue
+        party = (row.get("PartyNm") or "").strip()
+        short = (row.get("PartyAb") or party).strip()
+        votes = int((row.get("TotalVotes") or "0").replace(",", "") or 0)
+        if not party or not votes:
+            continue
+        label = party if short == "IND" else party
+        grouped.setdefault(name, []).append(
+            {
+                "name": label,
+                "votes": votes,
+                "color": AU_COLORS.get(short, AHEAD),
+                "legend": label + " ahead",
+                "short": label,
+            }
+        )
+        bucket = national.setdefault(label, {"name": label, "votes": 0})
+        bucket["votes"] += votes
+    rows_by_key = {}
+    for name, party_rows in grouped.items():
+        rows_by_key[norm(name)] = {
+            "rows": party_rows,
+            "summary": "%(short)s has more first-preference votes than the other rows. A first preference is the vote as marked, before any transfer. Independent is every independent candidate added together, not one person. This site does not declare a result.",
+            "tie": "First-preference votes are reported, and the top rows are tied. The map stays beige.",
+        }
+    places, missed = match_shapes(shapes, rows_by_key)
+    if missed:
+        print("AU missed", missed)
+    shown = [row for row in percent_rows(list(national.values())) if row["votes"] and (row["percent"] or 0) >= 1]
+    print("AU states", len(places), "national", len(shown), "final", final)
+    for place in places:
+        print(" ", place["name"], place["leader"], place["votes"])
+    data = {
+        "source": AU_URL,
+        "fetchedAt": datetime.now(timezone.utc).isoformat(),
+        "status": "Australian Electoral Commission file for the 3 May 2025 House of Representatives election. %s A state is colored only from first-preference votes. Preferences are not transferred on this map. The file has no color code. This page does not declare a result."
+        % count_sentence(final),
+        "strings": {"blank": "No votes reported"},
+        "tables": [
+            {
+                "title": "First preferences, added across the states",
+                "note": "Each party's state totals added together. Parties under 1 percent are left off this table. Independent is every independent candidate added together. This is not the preference count, and it is not a count of seats.",
+                "column": "Party",
+                "rows": [
+                    {"name": row["name"], "votes": row["votes"], "percent": row["percent"]}
+                    for row in shown
+                ],
+            }
+        ],
+        "places": places,
+        "card": "House of Representatives on 3 May 2025. %s The map is first-preference votes, by state."
+        % count_sentence(final),
+    }
+    spec = {
+        "code": "au",
+        "country": "Australia",
+        "flag": "au.svg",
+        "title": "Leaders.vote · Australia, 3 May 2025",
+        "description": "Australia's House of Representatives first-preference votes by state, copied from the Electoral Commission.",
+        "map_label": "Map of Australian states and territories",
+        "kicker": "Australia · House of Representatives · 3 May 2025",
+        "source": "https://results.aec.gov.au/31496/Website/HouseDownloadsMenu-31496-Csv.htm",
+        "footer": 'Vote totals are copied from the <a href="https://results.aec.gov.au/31496/Website/HouseDownloadsMenu-31496-Csv.htm">Australian Electoral Commission results file</a> for the 3 May 2025 House of Representatives election. A state is colored only from reported first-preference votes. This site does not declare a result. It does not ask for a home address, a phone number, or an email address.',
+        "list_title": "States and territories",
+        "list_note": "Open a name for the first-preference votes reported there. A first preference is the vote as marked, before preferences move to another candidate. A place with no row in the file stays blank.",
+        "place_note": "You are looking at one Australian state or territory. The numbers are first-preference votes for the House of Representatives. They are not the later preference count, and they are not a count of seats.",
+        "intro": """    <p class="kicker">Australia · House of Representatives · 3 May 2025</p>
+    <h1>Australia has a final count for the House of Representatives.</h1>
+    <p class="deck">This map is the first-preference vote in each state and territory. Australia later transfers preferences from one candidate to another. This map does not do that transfer, and it does not count seats.</p>
+    <p class="deck">A mark means one row has more first-preference votes than the others. Independent means every independent candidate added together, not one person. The commission's file has no color code, so the color is only there to tell the rows apart.</p>""",
+    }
+    if final is not True:
+        spec["intro"] = spec["intro"].replace(
+            "Australia has a final count for the House of Representatives.",
+            "Australia's House count follows the official file.",
+        )
+    write_pages(spec, shapes, data)
+
+
 def write_flags():
     flags = {
         "br.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14">
@@ -1020,6 +1269,29 @@ def write_flags():
 <rect y="40" width="90" height="20" fill="#ee1c25"/>
 </svg>
 """,
+        "deu.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 54">
+<rect width="90" height="18" fill="#000"/>
+<rect y="18" width="90" height="18" fill="#dd0000"/>
+<rect y="36" width="90" height="18" fill="#ffce00"/>
+</svg>
+""",
+        "au.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+<rect width="200" height="100" fill="#012169"/>
+<g>
+<rect width="100" height="50" fill="#012169"/>
+<path d="M0 0 L100 50 M100 0 L0 50" stroke="#fff" stroke-width="14"/>
+<path d="M0 0 L100 50 M100 0 L0 50" stroke="#c8102e" stroke-width="8"/>
+<path d="M50 0 V50 M0 25 H100" stroke="#fff" stroke-width="22"/>
+<path d="M50 0 V50 M0 25 H100" stroke="#c8102e" stroke-width="12"/>
+</g>
+<polygon fill="#fff" points="50,64 53.2,73 62.6,73 55,78.6 57.9,87.8 50,82.2 42.1,87.8 45,78.6 37.4,73 46.8,73"/>
+<polygon fill="#fff" points="150,22 152,27.2 157.5,27.2 153.1,30.5 154.8,35.8 150,32.6 145.2,35.8 146.9,30.5 142.5,27.2 148,27.2"/>
+<polygon fill="#fff" points="176,42 178,47.2 183.5,47.2 179.1,50.5 180.8,55.8 176,52.6 171.2,55.8 172.9,50.5 168.5,47.2 174,47.2"/>
+<polygon fill="#fff" points="164,68 166,73.2 171.5,73.2 167.1,76.5 168.8,81.8 164,78.6 159.2,81.8 160.9,76.5 156.5,73.2 162,73.2"/>
+<polygon fill="#fff" points="138,58 140,63.2 145.5,63.2 141.1,66.5 142.8,71.8 138,68.6 133.2,71.8 134.9,66.5 130.5,63.2 136,63.2"/>
+<polygon fill="#fff" points="152,84 153.4,87.6 157.2,87.6 154.2,89.8 155.3,93.4 152,91.2 148.7,93.4 149.8,89.8 146.8,87.6 150.6,87.6"/>
+</svg>
+""",
     }
     folder = os.path.join(ROOT, "flags")
     for name, markup in flags.items():
@@ -1043,7 +1315,9 @@ def write_countries():
       <a href="ch/index.html"><img src="flags/ch.svg" alt=""><strong>Switzerland</strong><span>%s</span></a>
       <a href="sk/index.html"><img src="flags/sk.svg" alt=""><strong>Slovakia</strong><span>%s</span></a>
       <a href="se/index.html"><img src="flags/se.svg" alt=""><strong>Sweden</strong><span>Parliament on 13 September 2026. The Election Authority marks the count final. A county adds the official constituency votes inside it.</span></a>
-      <a href="cy/index.html"><img src="flags/cy.svg" alt=""><strong>Cyprus</strong><span>Parliamentary election, 2026. The open-data file is the published count. A district is an area that elects members of the House.</span></a>""" % (
+      <a href="cy/index.html"><img src="flags/cy.svg" alt=""><strong>Cyprus</strong><span>Parliamentary election, 2026. The open-data file is the published count. A district is an area that elects members of the House.</span></a>
+      <a href="de/index.html"><img src="flags/deu.svg" alt=""><strong>Germany</strong><span>%s</span></a>
+      <a href="au/index.html"><img src="flags/au.svg" alt=""><strong>Australia</strong><span>%s</span></a>""" % (
         esc(country_card(
             "ch",
             "Two yes-or-no questions on 27 September 2026. The official file still marks the count provisional. The map is the neutrality question, by canton.",
@@ -1051,6 +1325,14 @@ def write_countries():
         esc(country_card(
             "sk",
             "Regional chairs on 24 October 2026. The Statistical Office file is a finished count. The map is the chair. The council vote is in a table.",
+        )),
+        esc(country_card(
+            "de",
+            "Parliament on 23 February 2025. The official file marks the count final. The map is the second vote, by state.",
+        )),
+        esc(country_card(
+            "au",
+            "House of Representatives on 3 May 2025. The official file marks the count final. The map is first-preference votes, by state.",
         )),
     )
     nav = """
@@ -1060,7 +1342,9 @@ def write_countries():
       <a href="ch/index.html">Switzerland</a>
       <a href="sk/index.html">Slovakia</a>
       <a href="se/index.html">Sweden</a>
-      <a href="cy/index.html">Cyprus</a>"""
+      <a href="cy/index.html">Cyprus</a>
+      <a href="de/index.html">Germany</a>
+      <a href="au/index.html">Australia</a>"""
     page = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1088,7 +1372,7 @@ def write_countries():
     <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
     <p class="kicker">Leaders.vote</p>
     <h1>Pick an election.</h1>
-    <p class="deck">Leaders.vote is an independent, nonpartisan voter guide. It is not a campaign, not an endorsement, and not a government site. Each country below is a different kind of election. A place on a map is colored only from reported vote totals. A place with no total stays blank.</p>
+    <p class="deck">Leaders.vote is an independent, nonpartisan voter guide. It is not a campaign, not an endorsement, and not a government site. Each country below is one election, copied from that country's official file. A place on a map is colored only from reported vote totals. A place with no total stays blank. When that office corrects the file, this page is rebuilt from the new file.</p>
     <div class="races">%s
     </div>
   </div>
@@ -1118,6 +1402,8 @@ def main():
     build_switzerland()
     build_slovakia()
     build_cyprus()
+    build_germany()
+    build_australia()
     write_countries()
 
 
