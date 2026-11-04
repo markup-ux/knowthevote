@@ -93,12 +93,25 @@
     });
   }
 
+  function oneShape() {
+    return svg && svg.querySelectorAll("path").length === 1;
+  }
+
+  function leadTone(item) {
+    var people = (item && item.candidates) || [];
+    return tone(people.map(function (person) { return [person.votes || 0]; }), people);
+  }
+
   function paintMap(item) {
     if (!svg) return;
+    var alone = oneShape() && item && item.kind !== "house";
+    var whole = alone ? leadTone(item) : "";
     svg.querySelectorAll("path").forEach(function (path) {
       path.classList.toggle("is-on", path.getAttribute("data-fips") === selected);
       var row = item && item.counties && item.counties[path.getAttribute("data-fips")];
-      path.style.fill = row ? (tone(row.candidates, item.candidates || []) || "#ebe4d6") : "#ebe4d6";
+      var color = row ? tone(row.candidates, item.candidates || []) : "";
+      if (!color && alone) color = whole;
+      path.style.fill = color || "#ebe4d6";
     });
   }
 
@@ -129,19 +142,23 @@
     }
     paintMap(item);
     detailEl.textContent = "";
-    if (selected && item.kind !== "house" && item.counties) {
+    if (selected && item.kind !== "house" && (item.counties || oneShape())) {
       var path = svg && svg.querySelector('[data-fips="' + selected + '"]');
       var place = path ? path.getAttribute("data-name") : "This place";
       detailEl.appendChild(el("h3", "", place));
-      var row = item.counties[selected];
-      var local = (row && row.candidates) || (item.candidates || []).map(function () { return [0, "0%", false]; });
-      var paired = (item.candidates || []).map(function (person, index) {
-        var cell = local[index] || [0, "0%", false];
-        return { name: person.name, party: person.party, photo: person.photo || "", votes: cell[0] || 0, percentLabel: cell[1] || "0%", percent: 0 };
-      });
-      var total = paired.reduce(function (sum, person) { return sum + person.votes; }, 0);
-      paired.forEach(function (person) { person.percent = total ? person.votes / total * 100 : 0; });
-      people(detailEl, paired);
+      var row = item.counties && item.counties[selected];
+      if (!row && oneShape()) {
+        people(detailEl, item.candidates || []);
+      } else {
+        var local = (row && row.candidates) || (item.candidates || []).map(function () { return [0, "0%", false]; });
+        var paired = (item.candidates || []).map(function (person, index) {
+          var cell = local[index] || [0, "0%", false];
+          return { name: person.name, party: person.party, photo: person.photo || "", votes: cell[0] || 0, percentLabel: cell[1] || "0%", percent: 0 };
+        });
+        var total = paired.reduce(function (sum, person) { return sum + person.votes; }, 0);
+        paired.forEach(function (person) { person.percent = total ? person.votes / total * 100 : 0; });
+        people(detailEl, paired);
+      }
     }
     statusEl.textContent = "";
     var when = new Date(feed.updated);
