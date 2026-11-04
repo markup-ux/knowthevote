@@ -1496,6 +1496,19 @@
       "site": "https://waters.house.gov/",
       "siteLabel": "waters.house.gov",
       "source": "https://waters.house.gov/about-maxine"
+    },
+    "district 47|jenny rae le roux": {
+      "role": "Business owner running for Congress in California's 47th District.",
+      "bio": "Her campaign says she co-built companies in energy and financial services, then bought and ran a technology services firm. She has an economics degree from the University of Virginia and an MBA from Columbia, and she is executive director of CAL DOGE, the office she says has gone through California spending line by line.",
+      "issues": [
+        "She says she will cut waste and fraud so groceries, gas, insurance, and rent cost less.",
+        "She says federal housing money should go first to cities that cut permit delays and fees, and that energy should be produced onshore rather than drilled off Orange County.",
+        "She says she will fully fund border security, end catch-and-release, and require federal homelessness grants to show they get people off the street."
+      ],
+      "site": "https://jennyraeca.com/",
+      "siteLabel": "jennyraeca.com",
+      "donate": "https://secure.anedot.com/jennyrae/donate",
+      "source": "https://jennyraeca.com/issues"
     }
   },
   "measures": {}
