@@ -105,6 +105,32 @@
       "siteLabel": "LePage for Congress",
       "donate": "https://secure.anedot.com/paul-lepage-for-congress/donate",
       "source": "https://lepageforcongress.com/"
+    },
+    "ronald russell": {
+      "role": "Retired Army officer and small-business owner running for Congress.",
+      "bio": "Ron Russell's site says he is a Maine native and West Point graduate who served 30 years in the Army as an Airborne Ranger and Special Forces-qualified Green Beret. He says that after retiring in 2006 he helped build a defense business past 150 employees and moved back to Maine in 2021.",
+      "issues": [
+        "He says Maine cannot afford more federal taxes on top of a high state and local burden, and he wants tax relief he ties to the law he calls the Big Beautiful Bill made permanent, with inflation adjustments and a larger work-linked earned-income credit.",
+        "He says energy independence is the main way to strengthen the economy and lower fuel, grocery, and heating-oil costs, and that renewable energy should be a choice rather than a mandate.",
+        "He says he supports vetted legal immigration and assimilation, and that securing the border against unlawful crossings should come first."
+      ],
+      "site": "https://ronrussellforcongress.com/",
+      "siteLabel": "ronrussellforcongress.com",
+      "source": "https://ronrussellforcongress.com/",
+      "donate": "https://secure.winred.com/russell-for-congress/donate-today"
+    },
+    "matthew dunlap": {
+      "role": "Maine state auditor running for Congress.",
+      "bio": "Matt Dunlap's site says he was born and raised on a farm near Bar Harbor, worked as a dishwasher, bartender, and fur trapper, and later led the Sportsman's Alliance of Maine. He says that as state auditor he works to cut waste and prevent fraud, and that he and his wife, Michelle Dunphy, live in Old Town.",
+      "issues": [
+        "He says he will fight blanket tariffs and the war in Iran, which he says have raised gas and grocery prices, and he supports universal child care, good-paying jobs, and more affordable housing.",
+        "He says he will protect Medicare, Social Security, and Medicaid, reverse Medicaid cuts he says are hurting rural hospitals, and support Medicare for All.",
+        "He says he is fully pro-labor, supports the PRO Act, and will defend a woman's right to make her own reproductive decisions."
+      ],
+      "site": "https://www.mattdunlapforuscongress.com/",
+      "siteLabel": "mattdunlapforuscongress.com",
+      "source": "https://www.mattdunlapforuscongress.com/issues",
+      "donate": "https://secure.actblue.com/donate/dunlap_web"
     }
   },
   "measures": {}

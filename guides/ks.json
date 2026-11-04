@@ -176,6 +176,84 @@
       "siteLabel": "Sharice Davids for U.S. Congress",
       "donate": "https://secure.actblue.com/donate/sharice-for-congress-1?refcode=website",
       "source": "https://shariceforcongress.com/"
+    },
+    "lauren reinhold": {
+      "role": "Attorney and former Social Security Administration adviser running for Congress.",
+      "bio": "Lauren Reinhold's site says she has been a Kansan for 32 years and an attorney for 28, including more than 25 years in public institutions as an attorney adviser at the Social Security Administration. She says she resigned after cuts at the agency and is running to defend working families and rural communities in the Big First.",
+      "issues": [
+        "She says rural hospitals are the lifeblood of their communities and pledges to rebuild rural health care.",
+        "She says farm policy should put producers, family operations, and main-street businesses ahead of corporate monopolies.",
+        "She calls Social Security a hard-earned promise and says she will fight underfunding and political interference that delay benefits."
+      ],
+      "site": "https://www.laurenforkansas.com/",
+      "siteLabel": "laurenforkansas.com",
+      "source": "https://www.laurenforkansas.com/about",
+      "donate": "https://secure.actblue.com/donate/lauren-reinhold-1"
+    },
+    "derek schmidt": {
+      "role": "U.S. representative for Kansas's 2nd District and a former state attorney general.",
+      "bio": "Derek Schmidt's campaign says he is a fifth-generation Kansan who took office in Congress on January 3, 2025, after serving as attorney general. It says that as attorney general he sued the Biden administration and won, and that he now serves on Armed Services, Judiciary, and Small Business.",
+      "issues": [
+        "He says his Armed Services work advocates for Fort Riley, Fort Leavenworth, and Forbes Field, and for service members and their families.",
+        "On Judiciary, he says he works to secure the southern border, reform the federal bureaucracy, fight taxpayer fraud and abuse, and support law enforcement.",
+        "On Small Business, he says he works so Kansas small businesses have the resources to grow."
+      ],
+      "site": "https://derekschmidt.com/",
+      "siteLabel": "derekschmidt.com",
+      "source": "https://derekschmidt.com/",
+      "donate": "https://secure.winred.com/derek-schmidt-for-congress-inc/donate"
+    },
+    "don coover": {
+      "role": "Rancher, veterinarian, and West Point graduate running for Congress.",
+      "bio": "Don Coover's site says he was born and raised on a small dairy, alfalfa, and soybean farm in southeast Kansas, attended West Point, and now runs a beef-cattle genetics company, a working ranch, and a veterinary practice.",
+      "issues": [
+        "He says rising grocery and housing costs and closing local hospitals are leaving people in despair, and that Washington keeps making it worse.",
+        "He says the district needs people who will work together, spend within their means, and reward hard work.",
+        "He says he is running so people who know a hard day's work are the ones making decisions again."
+      ],
+      "site": "https://doncooverforcongress.com/",
+      "siteLabel": "doncooverforcongress.com",
+      "source": "https://doncooverforcongress.com/",
+      "donate": "https://secure.actblue.com/donate/coover_website?refcode=website"
+    },
+    "eric jenkins": {
+      "role": "Retired Army colonel running for Congress.",
+      "bio": "Eric Jenkins's site describes him as a retired Army colonel with 34 years of military service and more than 20 years of public service, running in Kansas's 3rd District.",
+      "issues": [
+        "He says he will fight wasteful spending, push a balanced-budget framework, oppose new broad-based tax increases, and make Trump-era tax cuts permanent.",
+        "He says he will fully fund and modernize the military, support veterans' health care, and strengthen Kansas installations including Fort Leavenworth.",
+        "He says secure borders are a national-security need, and he lists the Second Amendment, free speech, and religious liberty as rights he will defend."
+      ],
+      "site": "https://ericjenkinsforkansas.com/",
+      "siteLabel": "ericjenkinsforkansas.com",
+      "source": "https://ericjenkinsforkansas.com/",
+      "donate": "https://secure.winred.com/eric-jenkins-for-congress/donate1"
+    },
+    "ron estes": {
+      "role": "U.S. representative for Kansas's 4th District and a former state treasurer.",
+      "bio": "Ron Estes's campaign says he is a fifth-generation Kansan and an engineer who served as Sedgwick County treasurer and Kansas state treasurer before Congress. He serves on the House Ways and Means Committee, and he and his wife Susan live in Wichita with their three children.",
+      "issues": [
+        "He highlights tax reform, free and fair trade, retirement security, lower health-care prices, Wichita's aviation industry, and the U.S.-Mexico-Canada Agreement.",
+        "He says he will defend the Second Amendment, stand for the sanctity of life, secure the border, and support the military and veterans.",
+        "He says he is working to rein in federal spending, balance the budget, and ease regulations on Kansas farmers, workers, and small businesses."
+      ],
+      "site": "https://www.estesforcongress.com/",
+      "siteLabel": "estesforcongress.com",
+      "source": "https://www.estesforcongress.com/",
+      "donate": "https://secure.winred.com/ronestes/donate"
+    },
+    "katy tyndell": {
+      "role": "Attorney and business owner running for Congress.",
+      "bio": "Katy Tyndell's site says she is an attorney and business owner whose family roots in Kansas go back five generations, and that she grew up in a small ranching and farming town. It says she was a staff attorney for the National Congress of American Indians and later co-founded Leading Kansas.",
+      "issues": [
+        "She says she will work for affordable health care, including mental health care, after her family navigated a sister's schizophrenia and she watched insurance premiums rise at her business.",
+        "She says she will look for common ground to lower taxes on working Kansans and bring costs down, instead of tax breaks aimed at corporations and the wealthy.",
+        "She says tariffs and the war with Iran have hurt Kansas farm markets and raised fertilizer and diesel costs, and that she will fight to reverse those tariff policies and end the war."
+      ],
+      "site": "https://katyforkansas.com/",
+      "siteLabel": "katyforkansas.com",
+      "source": "https://katyforkansas.com/issues/",
+      "donate": "https://secure.actblue.com/donate/tyndell_web"
     }
   },
   "measures": {}

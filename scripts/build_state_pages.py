@@ -79,7 +79,11 @@ def norm(name):
 
 
 def valid_url(url):
-    return isinstance(url, str) and url.startswith("https://") and "generated_" not in url.lower()
+    return (
+        isinstance(url, str)
+        and (url.startswith("https://") or url.startswith("http://"))
+        and "generated_" not in url.lower()
+    )
 
 
 def load_guide(code):

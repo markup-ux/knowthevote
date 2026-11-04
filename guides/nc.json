@@ -381,6 +381,18 @@
       "site": "https://paulbarringer.com/",
       "siteLabel": "paulbarringer.com",
       "source": "https://paulbarringer.com/about"
+    },
+    "eugene douglass": {
+      "role": "Republican nominee for North Carolina's 2nd District.",
+      "bio": "His campaign brochure says he was raised in Swarthmore, Pennsylvania, earned a PhD in fiber and polymer science at North Carolina State and a master of divinity, and taught college chemistry before retiring as a chemistry and education consultant. He says he moved to Wake County in 2023 and is running to replace Deborah Ross.",
+      "issues": [
+        "He proposes a flat tax with minimal deductions for people and businesses, and less federal regulation so states handle more local affairs.",
+        "He says human life should be protected from conception to natural death, and he calls for a ban on partial-birth abortion and for states to limit what he describes as gender surgeries on children and euthanasia.",
+        "He wants elementary and secondary education controlled by states and localities, with the focus on reading, writing, science, and math."
+      ],
+      "site": "https://www.gdouglass.us",
+      "siteLabel": "gdouglass.us",
+      "source": "https://efdouglass.substack.com/p/campaign-brochure-for-my-us-house"
     }
   },
   "measures": {}

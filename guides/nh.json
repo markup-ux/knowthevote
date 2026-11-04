@@ -104,6 +104,45 @@
       "siteLabel": "Maggie Goodlander for Congress",
       "donate": "https://secure.actblue.com/donate/good_website",
       "source": "https://maggiefornh.com/accomplishments/"
+    },
+    "anthony dilorenzo": {
+      "role": "Republican candidate for New Hampshire's 1st District.",
+      "bio": "His campaign says his great-grandparents came through Ellis Island and that he came to the University of New Hampshire in 1983. He says he started a business with a small amount of cash and credit and now oversees more than 20 car dealerships and 11 collision centers employing about a thousand people.",
+      "issues": [
+        "His plan leads with lower costs, higher wages, and a balanced-budget amendment.",
+        "He says he will protect the 2017 tax cuts and the elimination of taxes on tips, overtime, and Social Security, and fully support Social Security and Medicare.",
+        "He calls for securing the southern and northern borders, a common-sense immigration reform, and defense of every law-abiding citizen's right to own a firearm."
+      ],
+      "site": "https://dilorenzoforcongress.com/",
+      "siteLabel": "dilorenzoforcongress.com",
+      "source": "https://dilorenzoforcongress.com/issues/",
+      "donate": "https://secure.winred.com/anthony-dilorenzo-for-congress/website-donate"
+    },
+    "stefany shaheen": {
+      "role": "Democratic candidate for New Hampshire's 1st District.",
+      "bio": "Her campaign says she is the mother of four and that her oldest daughter was diagnosed with type 1 diabetes at eight, which led her into 15 years of advocacy for medical research and a company to help people with chronic disease. She says she served on the Manchester City Council and Police Commission.",
+      "issues": [
+        "She says she supports Medicare for All and a public option, and that insurance companies should not dictate the care people receive.",
+        "She wants to break up health-care monopolies that buy hospitals, clinics, and pharmacies, and to stop drug companies from charging Americans more than people in other countries for the same medicines.",
+        "She says tariffs are hurting small businesses and raising the price of groceries and housing, and that cuts to medical research and Medicaid are funding tax breaks for billionaires and corporations."
+      ],
+      "site": "https://stefanyshaheen.com/",
+      "siteLabel": "stefanyshaheen.com",
+      "source": "https://stefanyshaheen.com/priorities/",
+      "donate": "https://secure.actblue.com/donate/blu-ssfc-website"
+    },
+    "lily tang williams": {
+      "role": "Republican nominee for New Hampshire's 2nd District.",
+      "bio": "Her campaign says she was born to poor working-class parents in Sichuan and grew up during Mao's Cultural Revolution before coming to the United States. She says she has been married for 34 years, has three adult children, and manages rental properties while speaking about socialism and communism.",
+      "issues": [
+        "She says she has signed a pledge to cosponsor and vote for a term-limits amendment of three House terms and two Senate terms.",
+        "Her good-government plan calls for single-subject bills, on-time budgets, a ban on stock trading by members and their immediate families, a balanced-budget amendment, and an end to earmarks.",
+        "On prices she says special interests and the federal government should get out of managing the economy, energy should include nuclear, oil, solar, coal, and wind, and spending should come down so the debt can be paid down."
+      ],
+      "site": "https://www.lilytangwilliams.com/congress/",
+      "siteLabel": "lilytangwilliams.com",
+      "source": "https://www.lilytangwilliams.com/congress/issues/",
+      "donate": "https://www.lilytangwilliams.com/congress/donate/"
     }
   },
   "measures": {}

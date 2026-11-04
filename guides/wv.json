@@ -61,6 +61,29 @@
       "site": "https://rileymoore.house.gov/about",
       "siteLabel": "rileymoore.house.gov",
       "source": "https://rileymoore.house.gov/about"
+    },
+    "vince george": {
+      "role": "Former teacher and community advocate running for Congress.",
+      "bio": "His campaign says he is a public servant, former teacher, and community advocate running to speak for working-class West Virginians. He says he is running to unseat Carol Miller.",
+      "issues": [
+        "He says the minimum wage has stayed at $8.75, jobs have disappeared, hospitals are closing, and more families are struggling to put food on the table.",
+        "He says the state's members of Congress voted for cuts to SNAP, Medicaid, Medicare, and veterans' benefits, and that the biggest cuts take effect after this election."
+      ],
+      "site": "https://www.vincegeorgeforcongress.com/",
+      "siteLabel": "vincegeorgeforcongress.com",
+      "source": "https://www.vincegeorgeforcongress.com/"
+    },
+    "ace parsi": {
+      "role": "Father and community leader running for Congress.",
+      "bio": "His campaign says he fled an authoritarian regime, arrived without English, and that his family lived in severe poverty. He says he got ahead through public schools, government assistance, faith communities, and neighbors, and that he is running as a father to protect liberty and justice.",
+      "issues": [
+        "He says the campaign is values-driven and is trying to reclaim affordability, care, and empowerment.",
+        "He says he wants to reclaim what it means to be human, kind, and empowered in an age of technology, political spectacle, and concentrated control.",
+        "He says he is fighting for a future where people rise together when government steps back from its commitments."
+      ],
+      "site": "https://www.aceforcongress.com/",
+      "siteLabel": "aceforcongress.com",
+      "source": "https://www.aceforcongress.com/"
     }
   },
   "measures": {}

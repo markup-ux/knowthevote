@@ -460,6 +460,32 @@
       "site": "https://donforohio.com/",
       "siteLabel": "donforohio.com",
       "source": "https://donforohio.com/"
+    },
+    "bob latta": {
+      "role": "U.S. representative for Ohio's 5th District.",
+      "bio": "His official biography says he has represented Ohio's 5th District since 2007 and is a senior member of the Energy and Commerce Committee, where he chairs the Energy Subcommittee. He says he has held more than 1,500 meetings in the district since 2012 and has had 35 bills and provisions signed into law.",
+      "issues": [
+        "He lists rural broadband, less government spending, a strong national defense, the substance-use crisis, energy independence, and commonsense government reform as top priorities.",
+        "He points to the INFO Act on opioid data, the Advanced Nuclear Technology Development Act, and the Critical Electric Infrastructure Act to protect the power grid.",
+        "He highlights the Drinking Water Protection Act on algal toxins, faster processing of VA appeals, and laws on propane supply and precision-agriculture connectivity."
+      ],
+      "site": "https://latta.house.gov/biography/",
+      "siteLabel": "latta.house.gov",
+      "source": "https://latta.house.gov/biography/",
+      "donate": "https://secure.winred.com/latta/donate"
+    },
+    "shontel brown": {
+      "role": "U.S. representative for Ohio's 11th District.",
+      "bio": "Her campaign says she has built her service on accountability and results for Ohio's 11th District, with a focus on protecting earned benefits, strengthening communities, and bringing resources home.",
+      "issues": [
+        "She says she helped pass the Social Security Fairness Act, which restored benefits for public workers and retirees who had been penalized.",
+        "She says she co-led a bipartisan bill requiring stronger cybersecurity protections from federal contractors.",
+        "She says she introduced the Hunger Free Future Act to protect SNAP from cuts that would hurt families, seniors, and children, and that she has helped secure millions for local projects."
+      ],
+      "site": "https://shontelbrown.com/",
+      "siteLabel": "shontelbrown.com",
+      "source": "https://shontelbrown.com/",
+      "donate": "https://secure.actblue.com/donate/shontel-brown-for-congress-2"
     }
   },
   "measures": {}

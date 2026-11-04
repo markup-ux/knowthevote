@@ -269,6 +269,31 @@
       "siteLabel": "cheryl4maryland.com",
       "donate": "https://secure.anedot.com/cherylriley/congress",
       "source": "https://www.cheryl4maryland.com/"
+    },
+    "berney flowers": {
+      "role": "Retired Air Force lieutenant colonel running for Congress.",
+      "bio": "Berney Flowers's site says he served nearly 21 years in the Air Force, with later work in national defense and cybersecurity, and that he was raised in a working-class family. He describes himself as a father, mentor, and veteran rather than a career politician.",
+      "issues": [
+        "He says he advocates term limits, fiscal responsibility, and working across party lines.",
+        "He says he supports taking politics out of public schools, parental involvement, and local control of education.",
+        "He says he supports strong immigration enforcement, national defense, and public safety."
+      ],
+      "site": "https://flowersformaryland.com/",
+      "siteLabel": "flowersformaryland.com",
+      "source": "https://flowersformaryland.com/",
+      "donate": "https://secure.winred.com/flowers-for-maryland/donate"
+    },
+    "scott collier": {
+      "role": "Community and disability advocate running for Congress.",
+      "bio": "Scott Collier's site describes him as the founder of DundalkTV and the Global Brain Injury Association, and as a community, disability, and senior advocate who has run for office before, including this district. He says he has never taken campaign contributions and will not.",
+      "issues": [
+        "He says he wants to work with District 7 residents on crime, gangs, schools, drugs, and the juvenile and criminal justice systems.",
+        "He lists ending food deserts and addressing illegal immigration among his priorities, and says communities are safer when he keeps working with law enforcement.",
+        "He says he will not rubber-stamp legislation and wants constituent service aimed at quality of life in the district."
+      ],
+      "site": "http://www.scottcollier.org/",
+      "siteLabel": "scottcollier.org",
+      "source": "http://scottcollier.org/scott-collier-for-congress-the-issues/"
     }
   },
   "measures": {}

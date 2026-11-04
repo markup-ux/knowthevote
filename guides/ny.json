@@ -665,6 +665,32 @@
       "siteLabel": "kennedyforuscongress.com",
       "donate": "https://secure.ngpvan.com/cPyJ6b7wZk2UWe2rpV3WPw2",
       "source": "https://kennedyforuscongress.com/meet-tim/"
+    },
+    "aaron gies": {
+      "role": "Democratic candidate for New York's 23rd District.",
+      "bio": "His campaign says he was raised in a working family, with a father who ran a small contracting business and a mother who was a school secretary. He says he has been a teacher, a nonprofit leader, and a person of faith, and has also waited tables and kept books for a Main Street business.",
+      "issues": [
+        "He says medical debt is a leading cause of bankruptcy and he supports universal health care while opposing cuts to Medicare, Medicaid, VA benefits, and rural hospitals.",
+        "He says housing in western New York and the Southern Tier is scarce and increasingly unaffordable, and he treats housing as a basic need.",
+        "He supports higher wages and stronger bargaining power for workers, and he says he would remove the cap on earnings subject to Social Security tax so benefits last."
+      ],
+      "site": "https://aaronforny23.com/",
+      "siteLabel": "aaronforny23.com",
+      "source": "https://aaronforny23.com/",
+      "donate": "https://secure.actblue.com/donate/flip_ny23"
+    },
+    "jennifer moore": {
+      "role": "Republican candidate for New York's 10th District.",
+      "bio": "Her campaign says she is a lifelong Brooklynite who got on the ballot to give voters a choice after Brad Lander won the Democratic primary. She is the Republican and Conservative nominee for a district that includes parts of Brooklyn and Lower Manhattan.",
+      "issues": [
+        "She says she will support the NYPD and first responders and reject policies she says have made streets less safe.",
+        "She says New Yorkers are being priced out of their neighborhoods and wants practical answers to the cost of living.",
+        "She says she will stand for working families, parents, and small-business owners."
+      ],
+      "site": "http://www.mooreforny.com/",
+      "siteLabel": "mooreforny.com",
+      "donate": "https://secure.winred.com/jem-for-congress/donate-today",
+      "source": "http://www.mooreforny.com/"
     }
   },
   "measures": {}

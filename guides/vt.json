@@ -123,6 +123,18 @@
       "siteLabel": "Becca Balint for US Congress",
       "donate": "https://secure.actblue.com/donate/scrappylittlevt",
       "source": "https://beccabalint.com/issues/"
+    },
+    "gerald malloy": {
+      "role": "West Point graduate and retired Army officer running for Congress.",
+      "bio": "His campaign says he entered West Point at 18, served 22 years on active duty, and later worked in government roles supporting the military, mostly around Washington. He says he is a husband and father seeking to serve Vermont.",
+      "issues": [
+        "He says he is a commonsense, moderate Republican focused on fiscal responsibility and strong national security.",
+        "He says he wants practical solutions for working families, small businesses, and local communities.",
+        "He says Vermont's federal delegation leans one way, and that the state is stronger with more than one perspective in Washington."
+      ],
+      "site": "https://www.deploymalloy.com/",
+      "siteLabel": "deploymalloy.com",
+      "source": "https://www.deploymalloy.com/landing/about/"
     }
   },
   "measures": {}

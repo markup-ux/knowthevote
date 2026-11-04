@@ -40,6 +40,19 @@
       "site": "https://fedorchaknd.com/",
       "siteLabel": "Julie Fedorchak for US Congress",
       "source": "https://fedorchaknd.com/issues/"
+    },
+    "trygve hammer": {
+      "role": "Democratic candidate for North Dakota's U.S. House seat.",
+      "bio": "His campaign says he grew up in North Dakota, graduated from Velva High School, enlisted in the Navy, and graduated from the Naval Academy before choosing the Marine Corps. He served as a helicopter pilot and as an infantry officer in Iraq, retired as a major, and later taught science, worked in the Bakken, and counseled Job Corps students in Minot.",
+      "issues": [
+        "He says Americans pay the world's highest health-care prices and that people should not have to choose between care and rent or food.",
+        "He says he will protect Social Security and put North Dakota seniors first, and he opposes raising the retirement age.",
+        "He says profitable corporations and the ultra-wealthy should pay a fair share, and that rural towns need support for public schools and farm markets, with Congress asserting its power over tariffs."
+      ],
+      "site": "https://www.hammerfornd.com/",
+      "siteLabel": "hammerfornd.com",
+      "source": "https://www.hammerfornd.com/priorities",
+      "donate": "https://secure.actblue.com/donate/trygve-hammer-1"
     }
   },
   "measures": {}

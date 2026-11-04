@@ -209,6 +209,30 @@
       "site": "https://magaziner.house.gov/about/about",
       "siteLabel": "magaziner.house.gov",
       "source": "https://magaziner.house.gov/about/about"
+    },
+    "kellie keenan": {
+      "role": "Republican candidate and public-health worker running for Congress.",
+      "bio": "Her campaign says she was born and raised in Boston, is a mother of three daughters, attended Boston Latin School and Suffolk University, and served in AmeriCorps. She says her career began at the nation's first community health center and grew into public-health operations.",
+      "issues": [
+        "She says she would lower everyday costs and energy bills, offer tax relief for working families and seniors, and make housing more affordable.",
+        "She says she would cut red tape for small businesses, expand workforce training, invest in community health centers, and support the ocean economy.",
+        "She says she supports a parental bill of rights, curriculum transparency, school choice, stronger public safety, and secure borders."
+      ],
+      "site": "https://www.kelliekeenanforcongressri.com/",
+      "siteLabel": "kelliekeenanforcongressri.com",
+      "source": "https://www.kelliekeenanforcongressri.com/"
+    },
+    "victor mellor": {
+      "role": "Marine Corps veteran and businessman running for Congress.",
+      "bio": "His campaign says he is a U.S. Marine Corps veteran, father, and grandfather who built a business supporting working families for three decades. He says he is running to protect the next generation and is not a career politician.",
+      "issues": [
+        "He says his housing plan would speed homebuilding, empower local trades, and send federal housing funds to working families, first-time buyers, and veterans.",
+        "He says he would work to bring investment home for ports, manufacturers, and skilled trades so Rhode Island has good-paying jobs from entry level to executive level.",
+        "He says elections should be easy to vote in and hard to cheat, with accurate voter rolls and open processes."
+      ],
+      "site": "https://vicmellor.com/",
+      "siteLabel": "vicmellor.com",
+      "source": "https://vicmellor.com/"
     }
   },
   "measures": {}

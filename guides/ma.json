@@ -292,6 +292,70 @@
       "siteLabel": "kohforcongress.com",
       "donate": "https://secure.actblue.com/donate/dk-web-home?refcode=home",
       "source": "https://www.kohforcongress.com/meet-dan"
+    },
+    "gary grossi": {
+      "role": "Retired Army colonel and VA nurse running for Congress.",
+      "bio": "Gary Grossi's site says he was born and raised in a Cambridge public-housing project, served 29 years in the Army including a deployment to Iraq, and worked as a nurse at VA hospitals. He says he is married with two children.",
+      "issues": [
+        "He says energy costs are crushing families and that he will push affordable energy, fewer housing rules that limit supply, and a health system that puts patients ahead of bureaucracy and malpractice costs.",
+        "He says safe communities depend on law-enforcement partnerships, small-business growth, intact families, and community mental-health and addiction services.",
+        "He says he will defend freedom of speech and the right to bear arms, and he supports term limits with end-of-term audits."
+      ],
+      "site": "https://www.votegarygrossi.com/",
+      "siteLabel": "votegarygrossi.com",
+      "source": "https://www.votegarygrossi.com/issues",
+      "donate": "https://secure.winred.com/committee-to-elect-gary-grossi/donate-today"
+    },
+    "thomas stalcup": {
+      "role": "Physicist and electronics-company president running for Congress.",
+      "bio": "Thomas Stalcup's site says he is a physicist and entrepreneur who went years without health insurance he could not afford, did research at the National High Magnetic Field Laboratory, and is president of a company that makes environmental monitoring systems. He says he helped organize whistleblowers who exposed government misconduct.",
+      "issues": [
+        "He says he will push immediate, broad drug-price negotiation without limits on which drugs are included.",
+        "He says prices stay high because markets limit competition, and he wants lower-cost alternatives, antitrust enforcement, and fair pricing when the public helps fund innovation.",
+        "He says he will work to unify people around shared concerns, including health-care and housing costs, and reject language that divides them."
+      ],
+      "site": "https://tomstalcup.com/",
+      "siteLabel": "tomstalcup.com",
+      "source": "https://tomstalcup.com/about/",
+      "donate": "https://secure.anedot.com/stalcup-for-congress/tomstalcup"
+    },
+    "micah jones": {
+      "role": "Army veteran and attorney running for Congress.",
+      "bio": "Micah Jones's site says he is a U.S. Army veteran, an attorney, and a husband and father of two who used the GI Bill to attend Northeastern University School of Law and later practiced securities enforcement in Boston. He says his family lives in Essex on the North Shore.",
+      "issues": [
+        "He says accountability means officials are answerable to the people, and he backs conflict-of-interest rules, congressional term limits, and Congress reclaiming its constitutional duties.",
+        "He says energy, grocery, housing, and child-care costs are shrinking opportunity, and he pledges work on energy reliability, faster permitting, and tax relief tied to child care and the state and local tax deduction.",
+        "He says security should include support for service members, veterans, and first responders, a lawful and humane immigration system, and a technological edge in artificial intelligence."
+      ],
+      "site": "https://micahqjones.com/",
+      "siteLabel": "micahqjones.com",
+      "source": "https://micahqjones.com/meet-micah/",
+      "donate": "https://secure.anedot.com/micahqjones/website"
+    },
+    "robert burke": {
+      "role": "Dedham resident running again for Congress.",
+      "bio": "Rob Burke's site says he was born in Boston in 1956, grew up in Milton, worked in telecommunications, and later delivered packages in Boston before running for this seat in 2022 and 2024. He says he is running in 2026 as an American Citizens First candidate and would serve one term.",
+      "issues": [
+        "He says his Boxer Works plan would make Brockton a manufacturing hub for aerospace, defense, medical devices, and other goods, with a stated goal of 21,000 jobs and Junior ROTC training.",
+        "He says voting should require citizenship and voter identification, and he calls for a pause on immigration programs from H-1B visas to temporary protected status.",
+        "He says he would cut taxes, bring manufacturing back, support law enforcement, and shift health coverage toward catastrophic insurance people buy themselves."
+      ],
+      "site": "https://burke4congress.us/",
+      "siteLabel": "burke4congress.us",
+      "source": "https://burke4congress.us/meet-rob"
+    },
+    "tyler macallister": {
+      "role": "Mattapoisett Select Board member running for Congress.",
+      "bio": "Tyler Macallister's site says he is a lifelong Cape Codder who settled in Mattapoisett in 2001 with his wife, Cindy, and has served more than 20 years locally, including five terms on the Select Board. He describes himself as an advocate for sustainable fishing and the working waterfront.",
+      "issues": [
+        "He says he will defend the fishing fleet with practical, science-based rules and oppose industrial wind farms in fishing grounds and data centers that drain the grid and water.",
+        "He says he will take on mandates and federal spending that raise grocery, fuel, and housing costs, and he backs an all-of-the-above energy policy aimed at lower bills.",
+        "He says he will back local police and child-safety standards, and protect the benefits veterans and seniors have earned."
+      ],
+      "site": "https://macallister4congress.com/",
+      "siteLabel": "macallister4congress.com",
+      "source": "https://macallister4congress.com/solutions/",
+      "donate": "https://secure.anedot.com/tyler-macallister-for-congress/macallister4congress"
     }
   },
   "measures": {}

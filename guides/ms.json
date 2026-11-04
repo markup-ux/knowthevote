@@ -84,6 +84,71 @@
       "site": "https://ezell.house.gov/about/",
       "siteLabel": "ezell.house.gov",
       "source": "https://ezell.house.gov/about/"
+    },
+    "trent kelly": {
+      "role": "U.S. representative for Mississippi's 1st District.",
+      "bio": "His official biography says he won a 2015 special election, lives in Saltillo with his wife, Sheila, and their three children, and served 39 years in the Mississippi Army National Guard, retiring as a major general. Before Congress he was district attorney for the 1st Circuit, covering seven north Mississippi counties.",
+      "issues": [
+        "On his issues page he says the primary role of the federal government is to keep the country safe at home and abroad, and he points to his National Guard service.",
+        "He says the Second Amendment means the right to keep and bear arms shall not be infringed, and that law-abiding gun owners should be protected.",
+        "He supports an all-of-the-above energy strategy and says Washington should not pick winners and losers. He also says he will keep pushing agriculture policies that encourage rural development."
+      ],
+      "site": "https://trentkelly.house.gov/",
+      "siteLabel": "trentkelly.house.gov",
+      "source": "https://trentkelly.house.gov/issues/",
+      "donate": "https://winred.revv.co/TrentKelly/donate"
+    },
+    "cliff johnson": {
+      "role": "Democratic nominee for Mississippi's 1st District.",
+      "bio": "His campaign says he is a fifth-generation Mississippian living in rural Lafayette County with his wife of 35 years, and that his career has been spent speaking up for people who are vulnerable. A campaign release calls him a civil rights attorney.",
+      "issues": [
+        "He says he wants to combat inflation and the policies driving up costs for Mississippians.",
+        "He says he will protect and expand affordable health care.",
+        "He says north Mississippi should get its fair share of federal dollars for economic development, infrastructure, and struggling schools, and he wants the right to have a vote counted preserved."
+      ],
+      "site": "https://www.cliffjohnsonforcongress.com/",
+      "siteLabel": "cliffjohnsonforcongress.com",
+      "source": "https://www.cliffjohnsonforcongress.com/",
+      "donate": "https://secure.actblue.com/donate/cliff-website"
+    },
+    "ron eller": {
+      "role": "Republican candidate for Mississippi's 2nd District.",
+      "bio": "His campaign says he served 20 years on active duty, then worked in cardiac and thoracic surgery in Mississippi, including helping start a cardiac surgery program in Vicksburg. He says he later founded a manufacturing company, Buck Warrior Enterprises.",
+      "issues": [
+        "He says he stands for free enterprise, limited government, individual liberties, national defense, and traditional values, and he lists himself as pro-life and pro-Second Amendment.",
+        "He says Mississippi needs more business opportunity and less government interference and red tape.",
+        "He supports congressional term limits and says the general-election campaign is about economic growth, secure borders, voter integrity, and constitutional rights."
+      ],
+      "site": "https://www.voteroneller.com/",
+      "siteLabel": "voteroneller.com",
+      "source": "https://www.voteroneller.com/meet_ron",
+      "donate": "https://www.voteroneller.com/contribute"
+    },
+    "michael chiaradio": {
+      "role": "Democratic nominee for Mississippi's 3rd District.",
+      "bio": "His campaign says he is a farmer and entrepreneur who raises sheep, pigs, and cows in Shubuta, and that he earned an MBA from Felician University. He describes the race as a push for public investment that strengthens rural economies.",
+      "issues": [
+        "He says simply raising taxes or cutting spending is not enough, and he wants federal investment in factories, farms, infrastructure, and a broader safety net so more people can take part in the economy.",
+        "On health care he wants lower out-of-pocket costs and premiums, more trained medical workers, and modern facilities so people can age with access to care.",
+        "He wants to expand USDA homebuilding, help small farms with loans, equipment, and new markets, and put federal money into a more resilient electric grid."
+      ],
+      "site": "https://michaelachiaradio.com/",
+      "siteLabel": "michaelachiaradio.com",
+      "source": "https://michaelachiaradio.com/issues/",
+      "donate": "https://secure.actblue.com/donate/michael-a-chiaradio"
+    },
+    "jeffrey hulum iii": {
+      "role": "Democratic candidate for Mississippi's 4th District.",
+      "bio": "His campaign says he was born and raised in Gulfport, served 22 years in the Army, and founded Extend A Hand, Help A Friend, a nonprofit serving Gulf Coast families, children, and seniors. He says he has also represented Gulfport in the Mississippi Legislature.",
+      "issues": [
+        "He says South Mississippi needs an economy in which families can earn a living wage, support their children, and build a secure life at home.",
+        "He says every child deserves a quality education no matter their ZIP code, and that taxpayer money spent on children is an investment in the future.",
+        "He says no family should go broke to see a doctor or buy medicine, and he points to closing rural hospitals and reduced health-care funding in Mississippi."
+      ],
+      "site": "https://www.jeffreyhulumiiiforcongress.com/",
+      "siteLabel": "jeffreyhulumiiiforcongress.com",
+      "source": "https://www.jeffreyhulumiiiforcongress.com/issues",
+      "donate": "https://secure.actblue.com/donate/jeffrey-hulum-iii-1"
     }
   },
   "measures": {}

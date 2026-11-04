@@ -178,6 +178,97 @@
       "siteLabel": "Dina Titus",
       "donate": "https://secure.actblue.com/donate/titus-website",
       "source": "https://www.dinatitus.com/home"
+    },
+    "carrie buck": {
+      "role": "Republican state senator running for Nevada's 1st District.",
+      "bio": "Her campaign says she grew up working on a small farm, taught fifth grade in North Las Vegas, and as a principal turned a low-performing school around before leading the growth of Pinecrest Academy charter schools. She says she then won a state Senate seat and lives in Nevada with her husband, Eric, a retired deputy police chief, and their four sons.",
+      "issues": [
+        "She says she will protect parents' rights, secure the border, and fully fund police.",
+        "She says tips should never be taxed.",
+        "She says she will work with the president to hold Washington accountable for every taxpayer dollar."
+      ],
+      "site": "https://carriebuckforcongress.com/",
+      "siteLabel": "carriebuckforcongress.com",
+      "source": "https://carriebuckforcongress.com/about/",
+      "donate": "https://secure.anedot.com/carriebuck/donate"
+    },
+    "david flippo": {
+      "role": "Republican candidate for Nevada's 2nd District.",
+      "bio": "His campaign says he is a retired Air Force lieutenant colonel who commanded more than 1,000 personnel and stood up combat bases in Iraq, and that he is now a Nevada small-business owner. He says he grew up on a family farm and serves as Nevada state director for Turning Point Farmers and Ranchers.",
+      "issues": [
+        "On costs he says he will cut wasteful spending, slash regulations, expand American energy, and deliver tax cuts.",
+        "He says he will fully fund police, seek tougher sentences for violent and repeat offenders, and end what he calls soft-on-crime policies.",
+        "He says people in the country illegally should be deported, and he supports the SAVE Act, an end to catch-and-release and sanctuary policies, and protection of the Second Amendment."
+      ],
+      "site": "https://flippo4nv.com/",
+      "siteLabel": "flippo4nv.com",
+      "source": "https://flippo4nv.com/issues/",
+      "donate": "https://secure.winred.com/david-flippo-for-nevada-4dab26de/donate-today"
+    },
+    "teresa benitez-thompson": {
+      "role": "Democratic candidate for Nevada's 2nd District.",
+      "bio": "Her campaign says she is a social worker who arranged adoptions for children with special needs and later supported patients in hospice, then served 12 years in the Nevada Assembly, including as majority leader. She says she later was chief of staff to Attorney General Aaron Ford and is raising four children in northern Nevada.",
+      "issues": [
+        "She says her first job in Congress would be lowering costs for working families, including restoring tax dollars she says were stripped from Nevada and regulating AI so it does not cause mass layoffs.",
+        "She says public-land sales should happen only with local, tribal, and citizen input, and she opposes large land sales tucked into budget bills to pay for tax cuts.",
+        "On health care she says she will defend the Affordable Care Act, keep Medicaid coverage for mental and behavioral health, and protect reproductive freedom through federal legislation."
+      ],
+      "site": "https://electteresa.com/",
+      "siteLabel": "electteresa.com",
+      "source": "https://electteresa.com/policy/",
+      "donate": "https://secure.actblue.com/donate/ws-teresa"
+    },
+    "marty o'donnell": {
+      "role": "Republican candidate for Nevada's 3rd District.",
+      "bio": "His campaign says he earned a master of music in composition from USC, wrote commercial music and film scores, and later became audio director and composer at Bungie as the studio developed Halo. He says he is retired, has been married since 1977, and has two daughters and three grandsons.",
+      "issues": [
+        "On the economy he says automation and AI are squeezing both blue-collar and white-collar work, and he wants investment in those tools paired with safeguards for American workers.",
+        "He says securing the border is a federal duty, credits lower crossings to the current administration, and says the country should keep building border controls and target human and drug trafficking.",
+        "On the debt he says higher deficits raise mortgage rates and inflation, and he wants spending sorted into what is critical, what can wait, and what can be cut so the budget can move toward balance."
+      ],
+      "site": "https://martyforcongress.vote/",
+      "siteLabel": "martyforcongress.vote",
+      "source": "https://martyforcongress.vote/priorities/",
+      "donate": "https://secure.winred.com/marty-odonnell-for-congress/donate-today"
+    },
+    "susie lee": {
+      "role": "U.S. representative for Nevada's 3rd District.",
+      "bio": "Her campaign says she was elected in 2018 and has worked with both parties on drought, bringing supply chains back to the United States, and veterans' benefits. It says she was ranked among the most bipartisan members of the House.",
+      "issues": [
+        "She says her work has focused on affordable health care, funding for public education, and support for veterans.",
+        "Her campaign says she took on pharmaceutical companies and helped pass legislation to bring down prescription drug costs.",
+        "She says she supports legislation to codify a woman's right to choose."
+      ],
+      "site": "https://susieleeforcongress.com/",
+      "siteLabel": "susieleeforcongress.com",
+      "source": "https://www.susieleeforcongress.com/about/",
+      "donate": "https://secure.actblue.com/donate/susielee"
+    },
+    "cody whipple": {
+      "role": "Republican candidate for Nevada's 4th District.",
+      "bio": "His campaign says he is a fourth-generation Nevadan, a small-business owner, and a rancher who has also coached young athletes. He says he is running because Washington is not working for Nevada.",
+      "issues": [
+        "He says he wants housing, health care, groceries, and energy to be more affordable.",
+        "He says tipped workers should not be taxed on tips and that overtime pay should be defended.",
+        "He says waste, fraud, and abuse should be eliminated so Medicaid and Social Security last, and he wants more quality schools and career pathways."
+      ],
+      "site": "https://codyk4congress.com/",
+      "siteLabel": "codyk4congress.com",
+      "source": "https://codyk4congress.com/issues/",
+      "donate": "https://secure.anedot.com/cody-k-4-congress/donate"
+    },
+    "steven horsford": {
+      "role": "U.S. representative for Nevada's 4th District.",
+      "bio": "His campaign says Nevada was built by nurses, teachers, electricians, hospitality workers, and small-business owners, and that he is running to keep fighting for them. He says his seat on the House Ways and Means Committee is Nevada's seat at the table on taxes, health care, and Social Security.",
+      "issues": [
+        "He is pushing the TIP Improvement Act so tipped workers keep more of what they earn, including an end to taxes on tips.",
+        "He says the HOME Act would take on corporate landlords and make owning a home possible again, and the RELIEF Act would refund tariffs he says the courts found unlawful.",
+        "He says no Nevadan should go bankrupt for getting sick, and he wants apprenticeships and fully funded schools."
+      ],
+      "site": "https://stevenhorsford.com/",
+      "siteLabel": "stevenhorsford.com",
+      "source": "https://stevenhorsford.com/home/",
+      "donate": "https://secure.actblue.com/donate/shwebsite"
     }
   },
   "measures": {}

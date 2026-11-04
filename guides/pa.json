@@ -428,6 +428,18 @@
       "site": "https://scanlon.house.gov/about/",
       "siteLabel": "scanlon.house.gov",
       "source": "https://scanlon.house.gov/about/"
+    },
+    "paige cognetti": {
+      "role": "Mayor of Scranton running for Congress.",
+      "bio": "Her campaign says she first ran for mayor as an independent in a race she called Paige Against the Machine, aimed at local corruption. She says that as mayor she took on special interests, balanced the books, and put people first.",
+      "issues": [
+        "She says she would ban congressional stock trading, refuse corporate PAC money, and audit the federal government for waste, fraud, and abuse with a scalpel.",
+        "She says she would break up monopolies that hurt small businesses, make it easier to join a union, cap credit-card swipe fees, and fight for paid family leave and affordable child care.",
+        "She says she would reshore manufacturing, use targeted tariffs, and block data-center projects in northeastern Pennsylvania that do not follow local rules or supply their own energy."
+      ],
+      "site": "https://paigeforpa.com/",
+      "siteLabel": "paigeforpa.com",
+      "source": "https://paigeforpa.com/priorities/"
     }
   },
   "measures": {}

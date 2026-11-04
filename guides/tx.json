@@ -1047,6 +1047,87 @@
       "siteLabel": "Melissa McDonough for Congress",
       "donate": "https://secure.actblue.com/donate/MelissaForCongress2024",
       "source": "https://melissaforcongress.com/about-melissa/"
+    },
+    "jason pearce": {
+      "role": "Plano native and former mortgage and insurance worker running for Congress.",
+      "bio": "His campaign says he was born and raised in Plano, started working as a kid, and often worked two jobs and 80-hour weeks. He says he became a top performer in the mortgage industry, later worked in finance and insurance, and left his job to run.",
+      "issues": [
+        "He says he knows what it is like to live paycheck to paycheck and to choose among rent, food, and health insurance.",
+        "He says leadership should be about service, lifting people up, telling the truth, and making sure no one gets left behind."
+      ],
+      "site": "https://pearcefortexas.com/",
+      "siteLabel": "pearcefortexas.com",
+      "source": "https://pearcefortexas.com/"
+    },
+    "joaquin castro": {
+      "role": "U.S. representative and former Texas state legislator from San Antonio.",
+      "bio": "His official biography says he was born in San Antonio in 1974, raised on the West Side, and is a product of public schools. He graduated from Stanford and Harvard Law, served five terms in the Texas House, and was elected to Congress in 2012.",
+      "issues": [
+        "He says he wants to build what he calls an infrastructure of opportunity: strong public schools and universities, a sound health-care system, and good jobs.",
+        "His biography says that as a state legislator he helped restore funding for health care and education and worked on mental health, teen pregnancy, and juvenile justice.",
+        "He says he created a college tour for students with few resources and founded SA READS, a San Antonio literacy campaign."
+      ],
+      "site": "https://castro.house.gov/about",
+      "siteLabel": "castro.house.gov",
+      "source": "https://castro.house.gov/about"
+    },
+    "dione sims": {
+      "role": "Democratic candidate for Congress who says faith calls her to speak for people left without help.",
+      "bio": "Her campaign quotes Proverbs 31 and says her faith calls her to speak up for people who are ignored, stand with those who are struggling, and work for a more just and compassionate Texas. She says she is the Democratic candidate for the 25th District.",
+      "issues": [
+        "She says real freedom means families can afford to live, communities have a voice, and government answers to the people.",
+        "She says she will be fair in what she decides and stand up for the rights of people who are suffering and in need."
+      ],
+      "site": "https://dionesimsforcongress.com/",
+      "siteLabel": "dionesimsforcongress.com",
+      "source": "https://dionesimsforcongress.com/issues"
+    },
+    "henry cuellar": {
+      "role": "U.S. representative and former Texas secretary of state.",
+      "bio": "His official biography says he was born in Laredo, the eldest of eight children of migrant farmworkers, and was the first in his family to attend college. He has worked as a lawyer, customs broker, and educator, and served as a state representative and Texas secretary of state.",
+      "issues": [
+        "He says education is the key that opens the door to opportunity for every child.",
+        "He says his Appropriations work, including as ranking member of the Homeland Security Subcommittee, is meant to strengthen national security while delivering results for South Texas.",
+        "He says a bipartisan reputation keeps him at the table fighting for Texas families no matter which party is in power."
+      ],
+      "site": "https://cuellar.house.gov/biography/",
+      "siteLabel": "cuellar.house.gov",
+      "source": "https://cuellar.house.gov/biography/"
+    },
+    "everett jackson": {
+      "role": "Republican community leader running for Congress.",
+      "bio": "His campaign says he is not a career politician and that he was born and raised in Texas. It says he has organized community efforts and advocated for people left behind by Washington.",
+      "issues": [
+        "He says real change comes from the ground up and that he has advocated for economic justice.",
+        "He says he is fighting for working families because he has lived their struggles."
+      ],
+      "site": "https://www.jacksonfortexas.com/",
+      "siteLabel": "jacksonfortexas.com",
+      "source": "https://www.jacksonfortexas.com/"
+    },
+    "rhonda hart": {
+      "role": "Texas mother and disabled military veteran running for Congress.",
+      "bio": "Her campaign says she is a product of Texas public schools and that her family lost their 14-year-old daughter, Kimberly, in the Santa Fe school shooting in 2018. She says she has spent years fighting for safer gun storage, health-care access, women's rights, and veterans.",
+      "issues": [
+        "She says she opposes school vouchers and would invest more in public schools, including pay for teachers and support staff.",
+        "She says she believes in climate change, wants serious investment in solar and wind, and would protect natural resources while recognizing the role of energy in southeast Texas.",
+        "She says health care should not be tied to a paycheck, and she says she worked to pass the Kimberly Vaughan safe-storage law and will keep fighting gun violence."
+      ],
+      "site": "https://hart4congress.com/",
+      "siteLabel": "hart4congress.com",
+      "source": "https://hart4congress.com/"
+    },
+    "lauren peña": {
+      "role": "Republican nominee who says she is a trafficking survivor and a mother of six.",
+      "bio": "Her campaign says Lauren B. Peña grew up in Austin, survived human trafficking, and rebuilt her life through faith and family. It calls her a constitutional conservative and a longtime Austin resident running for the 37th District.",
+      "issues": [
+        "She says she would audit agencies, expose fraud, cut federal spending she ties to inflation, and cut regulations she says are raising energy costs.",
+        "She says she would defend parental rights and school choice, restore law-enforcement funding, and make veterans' care a priority.",
+        "She says her first bill would be the SAFE NIGHTS Act to fight human trafficking, and that she would press to release the Epstein files."
+      ],
+      "site": "https://www.lauren4congress.com/",
+      "siteLabel": "lauren4congress.com",
+      "source": "https://www.lauren4congress.com/"
     }
   },
   "measures": {}

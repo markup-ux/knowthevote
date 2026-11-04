@@ -76,6 +76,45 @@
       "siteLabel": "Troy Downing for Congress",
       "donate": "https://secure.winred.com/troy-downing-for-congress/donate-w",
       "source": "https://www.troydowning.com/"
+    },
+    "aaron flint": {
+      "role": "Republican candidate for Montana's 1st District.",
+      "bio": "His campaign says he is a fifth-generation Montanan, a father, and a retired Army National Guard and Reserve lieutenant colonel who earned two Bronze Stars after combat service in Iraq and Afghanistan. He hosts a statewide radio show and says he grew up in Glasgow and the Flathead.",
+      "issues": [
+        "He says borders should be secured and people in the country illegally deported, starting with those convicted of violent crimes and drug trafficking, and he opposes sanctuary policies.",
+        "To make Montana more affordable he wants to ban Wall Street from buying single-family homes, make permanent the tax breaks on tips, overtime, and Social Security, and expand American energy production.",
+        "He wants more timber harvests, mining, trade training, and public access to public lands, and he supports a ban on congressional stock trading and a balanced-budget amendment."
+      ],
+      "site": "https://flintformontana.com/",
+      "siteLabel": "flintformontana.com",
+      "source": "https://flintformontana.com/issues/",
+      "donate": "https://secure.winred.com/flint-for-montana/website"
+    },
+    "sam forstag": {
+      "role": "Democratic candidate for Montana's 1st District.",
+      "bio": "His campaign says he is a Forest Service smokejumper and a vice president of his union local, raised by a nurse and a public-school teacher. He worked his way through the University of Montana and says he has organized for public education, libraries, health care, and constitutional freedoms.",
+      "issues": [
+        "On housing he calls for federal investments matched to the shortage, zoning reform, a ban on hedge funds buying homes, and restoration of the first-time homebuyer credit.",
+        "On health care he says every Montanan should have the choice of Medicare that covers dental, vision, and hearing, and that Medicare should negotiate all drug prices.",
+        "He wants Citizens United overturned, lower contribution limits, a ban on members of Congress trading stocks, and a stop to former members becoming lobbyists."
+      ],
+      "site": "https://samformontana.com/",
+      "siteLabel": "samformontana.com",
+      "source": "https://samformontana.com/",
+      "donate": "https://secure.actblue.com/donate/sf-web"
+    },
+    "brian miller": {
+      "role": "Democratic candidate for Montana's 2nd District.",
+      "bio": "His campaign says he has lived in Montana for nearly 25 years and has practiced general civil litigation in state and federal courts across the state for nearly 15 years. He says he is an independent-minded Montanan and not a politician.",
+      "issues": [
+        "He says prices are higher, jobs are fewer, programs that help people are being destroyed, and government debt is ballooning, and he describes an attack on the Constitution from what he calls an overgrown executive.",
+        "He names data centers in Montana, the war in Iran, health care, affordability, and agriculture as the top issues.",
+        "He says he would apply common-sense judgment with the people of Montana first and use evidence-based solutions."
+      ],
+      "site": "https://www.miller4congress.com/",
+      "siteLabel": "miller4congress.com",
+      "source": "https://www.miller4congress.com/about-5",
+      "donate": "https://www.miller4congress.com/donate"
     }
   },
   "measures": {}
