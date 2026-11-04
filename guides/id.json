@@ -31,11 +31,15 @@
     "brad little": {
       "role": "Governor of Idaho, first elected in 2018 and reelected in 2022.",
       "bio": "His campaign says he is committed to leading so Idahoans can thrive, so children and grandchildren choose to stay, and so people who have left choose to come back. The site calls that experienced leadership the state can trust.",
-      "issues": [],
+      "issues": [
+        "His campaign says he cut or simplified 95 percent of Idaho regulations and calls Idaho the least regulated state.",
+        "His campaign says teacher pay rose, literacy funding increased five-fold, and school-facility spending also worked as property-tax relief, along with new school-choice options and the Idaho LAUNCH program.",
+        "His campaign says he and the Legislature delivered tax relief with a balanced budget and a AAA credit rating, and that Idaho sent more missions to the border than any other state through an effort he calls Operation No Return."
+      ],
       "site": "https://www.bradlittleforidaho.com/",
       "siteLabel": "bradlittleforidaho.com",
       "donate": "https://secure.winred.com/brad-little-for-governor/donate?utm_source=website&utm_medium=website&utm_campaign=navbar_website_website_20210817__no_1_",
-      "source": "https://www.bradlittleforidaho.com/"
+      "source": "https://www.bradlittleforidaho.com/accomplishments/"
     },
     "terri pickens": {
       "role": "Candidate for governor of Idaho.",

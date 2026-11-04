@@ -63,6 +63,27 @@
       "siteLabel": "benniethompson.com",
       "donate": "https://secure.actblue.com/donate/bennie-thompson-3",
       "source": "https://benniethompson.com/accomplishments/"
+    },
+    "michael guest": {
+      "role": "U.S. representative for Mississippi's 3rd District.",
+      "bio": "Michael Guest's office says he is in his fourth term and previously was district attorney for Madison and Rankin Counties. He chairs the Border Security and Enforcement Subcommittee of the Homeland Security Committee.",
+      "issues": [
+        "He says he believes in limited government, lower taxes, fewer regulations, the right to life of the unborn, a strong national defense, and Second Amendment rights.",
+        "He says he works to secure the border and has opposed efforts to defund the police."
+      ],
+      "site": "https://guest.house.gov/about",
+      "siteLabel": "guest.house.gov",
+      "source": "https://guest.house.gov/about"
+    },
+    "mike ezell": {
+      "role": "U.S. representative for Mississippi's 4th District.",
+      "bio": "Mike Ezell's office says he is in his second term and is a Gulf Coast native who was Jackson County sheriff after more than forty years in law enforcement. He is a graduate of the University of Southern Mississippi, the Mississippi Law Enforcement Training Academy, and the FBI National Academy, and he chairs the Coast Guard and Maritime Transportation Subcommittee.",
+      "issues": [
+        "His office lists agriculture, conservative values, crime and public safety, immigration and border security, jobs and the economy, national security, transportation and infrastructure, and veterans among the issues he works on."
+      ],
+      "site": "https://ezell.house.gov/about/",
+      "siteLabel": "ezell.house.gov",
+      "source": "https://ezell.house.gov/about/"
     }
   },
   "measures": {}

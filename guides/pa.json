@@ -28,11 +28,15 @@
     "josh shapiro": {
       "role": "Governor of Pennsylvania",
       "bio": "The campaign site presents Josh Shapiro as the governor and Austin Davis as lieutenant governor. It asks voters to support Shapiro for governor.",
-      "issues": [],
+      "issues": [
+        "His campaign says that as governor he has worked on jobs and money in people's pockets, law enforcement and community groups for public safety, education funding, and protecting freedoms.",
+        "The site says Pennsylvania has hired hundreds of new officers and created thousands of jobs, and that children can get free breakfast and more mental-health counselors in school.",
+        "It says high-school graduates have more paths through work, apprenticeships, or college, and that he and Lieutenant Governor Austin Davis are running to continue that work."
+      ],
       "site": "https://joshshapiro.org/",
       "siteLabel": "joshshapiro.org",
-      "donate": "",
-      "source": "https://joshshapiro.org/"
+      "donate": "https://secure.actblue.com/donate/s4gwebsite?refcode=website_donatebutton",
+      "source": "https://joshshapiro.org/meet-josh/"
     },
     "ken krawchuk": {
       "role": "Information technology entrepreneur and Libertarian candidate for governor",
@@ -413,6 +417,17 @@
       "site": "https://tonyguyforcongress.com/",
       "siteLabel": "tonyguyforcongress.com",
       "source": "https://tonyguyforcongress.com/issues/"
+    },
+    "mary gay scanlon": {
+      "role": "U.S. representative for Pennsylvania's 5th District.",
+      "bio": "Mary Gay Scanlon's office says she joined the House after a 2018 special election. She worked as a lawyer for low-income clients, including as national pro bono counsel and at the Education Law Center, and she was president of her local school board. She and her husband Mark live in Swarthmore and have three adult children.",
+      "issues": [
+        "Her office says her priorities are voting rights, access to justice, education, economic growth in the region, gun safety, women's rights, and ending hunger.",
+        "She says her main goal is protecting and improving the lives of children, families, veterans, and seniors."
+      ],
+      "site": "https://scanlon.house.gov/about/",
+      "siteLabel": "scanlon.house.gov",
+      "source": "https://scanlon.house.gov/about/"
     }
   },
   "measures": {}

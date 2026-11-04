@@ -75,11 +75,15 @@
     "kris mayes": {
       "role": "Arizona attorney general",
       "bio": "Kris Mayes is Arizona's attorney general. Her campaign calls her a consumer advocate and says she is the second woman, and the first mother, to serve as the state's chief law-enforcement officer and chief attorney.",
-      "issues": [],
+      "issues": [
+        "Her campaign says she took on Saudi-owned mega-farms over Arizona's water and corporations she says gouged people on rent and groceries.",
+        "She says she has gone after drug smugglers, elder abusers, and scammers, and that her priorities include protecting rural groundwater, prosecuting sexual predators, and cracking down on AI that targets kids.",
+        "Her priorities page also lists overturning tariffs, protecting $2.3 billion in Arizona tax dollars, and protecting Arizonans' freedoms."
+      ],
       "site": "https://www.krismayes.com/",
       "siteLabel": "krismayes.com",
       "donate": "https://secure.actblue.com/donate/kris-mayes-website",
-      "source": "https://www.krismayes.com/"
+      "source": "https://www.krismayes.com/priorities"
     },
     "alexander kolodin": {
       "role": "Candidate for secretary of state",

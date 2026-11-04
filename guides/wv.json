@@ -50,6 +50,17 @@
       "siteLabel": "Carol Miller for Congress",
       "donate": "https://secure.winred.com/CarolMiller/donate",
       "source": "https://www.electcarolmiller.com/"
+    },
+    "riley moore": {
+      "role": "U.S. representative for West Virginia's 2nd District.",
+      "bio": "Riley Moore's office says he started as a welder in a mining operation, later earned degrees from George Mason University and the National Defense University, served in the West Virginia House, and was state treasurer before Congress. He lives in Harpers Ferry with his wife Mina and their three children and serves on House Appropriations.",
+      "issues": [
+        "He says that as treasurer he divested state funds from BlackRock over its support for ESG policies and helped other states push back on those policies.",
+        "He says he also helped pass and administer the Hope Scholarship and Jumpstart Savings programs."
+      ],
+      "site": "https://rileymoore.house.gov/about",
+      "siteLabel": "rileymoore.house.gov",
+      "source": "https://rileymoore.house.gov/about"
     }
   },
   "measures": {}

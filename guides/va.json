@@ -89,6 +89,47 @@
       "siteLabel": "jameswalkinshaw.org",
       "donate": "https://secure.actblue.com/donate/james-walkinshaw?refcode=website",
       "source": "https://jameswalkinshaw.org/priorities/"
+    },
+    "jennifer mcclellan": {
+      "role": "U.S. representative for Virginia's 4th District.",
+      "bio": "Jennifer McClellan's office says she entered Congress in 2023 after a special election and was the first Black woman elected to Congress from Virginia. Born in Petersburg, she was valedictorian of Matoaca High School and earned degrees from the University of Richmond and the University of Virginia School of Law. She served in the Virginia House beginning in 2005 and the State Senate beginning in 2017, and she lives in Richmond with her husband David Mills and their two children.",
+      "issues": [
+        "She says that on the Energy and Commerce Committee she works on access to health care, lower energy bills, and a clean and livable planet.",
+        "She says that in the General Assembly she passed bills to protect and expand voting rights, combat climate change, preserve reproductive health care, and strengthen worker protections."
+      ],
+      "site": "https://mcclellan.house.gov/about/",
+      "siteLabel": "mcclellan.house.gov",
+      "source": "https://mcclellan.house.gov/about/"
+    },
+    "john mcguire iii": {
+      "role": "U.S. representative for Virginia's 5th District.",
+      "bio": "John McGuire's office says he is in his first term and serves on Armed Services and Oversight. He was born in central Virginia, spent his early childhood in foster care, served 10 years as a Navy SEAL, and then founded a fitness business, SEAL Team PT. He was elected to the Virginia legislature in 2018.",
+      "issues": [
+        "He says he is focused on keeping costs low for families, defending the country, shrinking the federal government, and supporting infrastructure and agriculture."
+      ],
+      "site": "https://mcguire.house.gov/about",
+      "siteLabel": "mcguire.house.gov",
+      "source": "https://mcguire.house.gov/about"
+    },
+    "ben cline": {
+      "role": "U.S. representative for Virginia's 6th District.",
+      "bio": "Ben Cline's office says he serves on Judiciary, Appropriations, Intelligence, and Budget. He represented the 24th District in the Virginia House of Delegates from 2002 to 2018, chaired its Militia, Police, and Public Safety committee, and worked as an assistant commonwealth's attorney and as chief of staff to Congressman Bob Goodlatte. He grew up in Rockbridge County and lives in Botetourt County with his wife Elizabeth and their two daughters.",
+      "issues": [
+        "His office lists the economy, energy, veterans, health care, and reforming Congress among the issues he works on."
+      ],
+      "site": "https://cline.house.gov/about/",
+      "siteLabel": "cline.house.gov",
+      "source": "https://cline.house.gov/about/"
+    },
+    "suhas subramanyam": {
+      "role": "U.S. representative for Virginia's 10th District.",
+      "bio": "Suhas Subramanyam's office says he is a lawyer who worked with technology startups, started a business, and advised the White House on technology policy. He served in the Virginia House and State Senate. He and his wife Miranda live in Loudoun County with their two daughters, and he has volunteered as a firefighter and EMT.",
+      "issues": [
+        "He says that in the legislature he passed bills to lower the cost of tolls, utility bills, and prescription drugs, and bipartisan bills on K-12 education, taxes, and gun safety."
+      ],
+      "site": "https://subramanyam.house.gov/about",
+      "siteLabel": "subramanyam.house.gov",
+      "source": "https://subramanyam.house.gov/about"
     }
   },
   "measures": {}

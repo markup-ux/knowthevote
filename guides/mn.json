@@ -191,6 +191,50 @@
       "site": "https://emmerforcongress.com/",
       "siteLabel": "emmerforcongress.com",
       "source": "https://emmerforcongress.com/principles-key-issues/"
+    },
+    "brad finstad": {
+      "role": "U.S. representative for Minnesota's 1st District.",
+      "bio": "Brad Finstad's office says he is a fourth-generation farmer from the New Ulm area who won a special election in 2022. He and his wife Jackie, who met on the school bus in second grade, have seven children and run an agriculture business alongside their family farm. He earned a University of Minnesota degree in agricultural education.",
+      "issues": [
+        "His office says his work as Minnesota's USDA Rural Development director supported rural infrastructure, business development, homeownership, schools, public safety, health care, and high-speed internet.",
+        "He previously served three terms in the Minnesota Legislature and held executive roles with the Minnesota Turkey Growers Association and the Center for Rural Policy and Development."
+      ],
+      "site": "https://finstad.house.gov/about/",
+      "siteLabel": "finstad.house.gov",
+      "source": "https://finstad.house.gov/about/"
+    },
+    "betty mccollum": {
+      "role": "U.S. representative for Minnesota's 4th District.",
+      "bio": "Betty McCollum's office says she has represented Saint Paul, Ramsey County, and most of Washington County since 2001, and that she was the second Minnesota woman elected to Congress since statehood. She serves as the top Democrat on the House Appropriations Defense Subcommittee.",
+      "issues": [
+        "Her office says she champions education, environmental protection, health-care access and affordability, fiscal responsibility, and international engagement that pairs diplomacy and development with a strong national defense.",
+        "She says she wants higher education kept affordable and public schools accountable to parents and local officials, and she supports universal health coverage and the Affordable Care Act.",
+        "On defense, she says funding should keep the armed forces trained and equipped, with priority for military health care and ending military sexual assault."
+      ],
+      "site": "https://mccollum.house.gov/about",
+      "siteLabel": "mccollum.house.gov",
+      "source": "https://mccollum.house.gov/about"
+    },
+    "michelle fischbach": {
+      "role": "U.S. representative for Minnesota's 7th District.",
+      "bio": "Michelle Fischbach's office says she has represented western Minnesota since 2021 and serves on Ways and Means and Rules. She was a Minnesota senator from 1996 to 2018, the first woman to serve as Senate president, and the state's 49th lieutenant governor. She and her husband Scott live on a hobby farm near Paynesville and have two children and seven grandchildren.",
+      "issues": [
+        "She says she stands up for agriculture, Second Amendment rights, respect for law and order, and defending the unborn."
+      ],
+      "site": "https://fischbach.house.gov/about",
+      "siteLabel": "fischbach.house.gov",
+      "source": "https://fischbach.house.gov/about"
+    },
+    "pete stauber": {
+      "role": "U.S. representative for Minnesota's 8th District.",
+      "bio": "Pete Stauber's office says he is a Duluth native in his fourth term, a former Duluth police officer, Hermantown city councilor, and St. Louis County commissioner. He played hockey at Lake Superior State and in the Detroit Red Wings organization. He and his wife Jodi, an Iraq War veteran, live in Hermantown with six children.",
+      "issues": [
+        "He says he is focused on the economy of northern Minnesota, American energy independence, and ending reliance on foreign minerals as chair of the Energy and Mineral Resources Subcommittee.",
+        "He says being shot while off duty as a police officer convinced him that more must be done to support law enforcement and safer communities."
+      ],
+      "site": "https://stauber.house.gov/about",
+      "siteLabel": "stauber.house.gov",
+      "source": "https://stauber.house.gov/about"
     }
   },
   "measures": {}

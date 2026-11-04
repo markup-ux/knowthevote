@@ -198,6 +198,17 @@
       "siteLabel": "Gabe Amo | Democrat for Congress",
       "donate": "https://www.gabeamo.com/donate",
       "source": "https://www.gabeamo.com/protecting-rhode-islands-seniors/"
+    },
+    "seth magaziner": {
+      "role": "U.S. representative for Rhode Island's 2nd District.",
+      "bio": "Seth Magaziner's office says he grew up in Bristol, started as a public school teacher, and was Rhode Island's general treasurer for eight years. He says that as treasurer he led an effort to rebuild school buildings and created programs to invest in clean-energy projects, which he says created jobs and lowered costs for ratepayers.",
+      "issues": [
+        "He says he ran to fight for working people and has introduced bills to lower drug prices, guarantee paid time off, and invest in career and technical education.",
+        "He says he is committed to protecting Social Security and Medicare, protecting abortion rights, and banning lawmakers from trading stocks."
+      ],
+      "site": "https://magaziner.house.gov/about/about",
+      "siteLabel": "magaziner.house.gov",
+      "source": "https://magaziner.house.gov/about/about"
     }
   },
   "measures": {}
