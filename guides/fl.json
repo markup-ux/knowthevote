@@ -543,6 +543,19 @@
       "siteLabel": "leelagray.com",
       "donate": "https://secure.actblue.com/donate/lg-web?refcode=web-donate-btn",
       "source": "https://www.leelagray.com/about"
+    },
+    "district 14|mike beltran": {
+      "role": "Attorney and Republican nominee for Florida's 14th District",
+      "bio": "His campaign says he grew up in Brooklyn, graduated from Harvard Law during the Great Recession, and moved to Florida to practice law for individuals and small businesses. He served six years in the Florida House, then returned to his law practice and his family. He lives in southeast Hillsborough with his wife and two sons.",
+      "issues": [
+        "He says he would expand clinics and telehealth so families do not have to travel an hour or take a day off work to see a doctor.",
+        "He says he would cut spending that drives prices up, after backing what he calls the largest tax cut in Florida history and tax holidays on gas and everyday purchases.",
+        "He says he would cut rules that block workers and small businesses, and require local approval before a data center is built so it does not raise energy bills."
+      ],
+      "site": "https://beltranforcongress.com/",
+      "siteLabel": "beltranforcongress.com",
+      "donate": "https://secure.winred.com/mike-beltran-for-congress/donate-today",
+      "source": "https://beltranforcongress.com/about/"
     }
   },
   "measures": {}
