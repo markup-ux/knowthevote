@@ -803,6 +803,70 @@
       "siteLabel": "mariodiazbalart.org",
       "donate": "https://mariodiazbalart.org/#donate",
       "source": "https://mariodiazbalart.org/"
+    },
+    "district 26|nicole locklin": {
+      "role": "Attorney and Democratic nominee for Florida's 26th District",
+      "bio": "Her campaign says she grew up in a small Oklahoma farm town, graduated first in her high school class, and was the first in her family to finish college, at the University of Oklahoma. She earned a law degree at Santa Clara, practiced litigation, and later worked as lead counsel at Databricks. She and her husband, Chris, moved to Miami in 2024.",
+      "issues": [
+        "She says she would fight price gouging on housing, insurance, health care, and groceries, and stop corporate investors from buying up neighborhoods.",
+        "She says she would protect Social Security and Medicare, oppose raising the retirement age, and treat health care as a right.",
+        "She says she refuses corporate PAC money and would ban congressional stock trading and restore abortion rights nationwide."
+      ],
+      "site": "https://locklinforcongress.com/",
+      "siteLabel": "locklinforcongress.com",
+      "donate": "https://secure.actblue.com/donate/nicole.locklin-fl.26",
+      "source": "https://locklinforcongress.com/nicole-bio"
+    },
+    "district 27|maria elvira salazar": {
+      "role": "U.S. representative for Florida's 27th District",
+      "bio": "Her campaign says she was born in Miami's Little Havana to Cuban parents who fled after Fidel Castro took power. She graduated from the University of Miami and from Harvard, which she says she paid for herself, then anchored CNN en Español, covered the White House and wars in the Gulf and El Salvador, and interviewed Fidel Castro. She says she won five Emmy Awards and was elected to Congress in 2020.",
+      "issues": [
+        "She says she has voted to lower taxes, backed small businesses, and worked to recover pandemic money lost to fraud.",
+        "She says she is funding Everglades restoration, coastal flood protection, and cleaner water in Biscayne Bay.",
+        "She says she opposes socialism and communism, has pushed sanctions on the governments of Cuba, Venezuela, and Nicaragua, and supports term limits."
+      ],
+      "site": "https://mariaelvirasalazar.com/",
+      "siteLabel": "mariaelvirasalazar.com",
+      "donate": "https://secure.winred.com/salazar/donate",
+      "source": "https://mariaelvirasalazar.com/bio/"
+    },
+    "district 27|eliott rodriguez": {
+      "role": "Journalist and Democratic nominee for Florida's 27th District",
+      "bio": "His campaign says he spent forty years telling South Florida's story and recently left the anchor desk. He says he is the son of Cuban immigrants and that his family has lived in the district since the 1960s. He says his daughters moved away because housing in South Florida had become unaffordable.",
+      "issues": [
+        "He says he would turn unused federal land into mixed-use housing, expand workforce housing, and seek a federal backstop for homeowners' insurance.",
+        "He says he would protect Medicare, Social Security, and Medicaid, oppose raising the retirement age, and let people ages 55 to 64 buy into Medicare.",
+        "He says he supports a secure border, faster immigration courts, protection for Dreamers, and removal of people who pose a genuine threat."
+      ],
+      "site": "https://eliottrodriguez.com/",
+      "siteLabel": "eliottrodriguez.com",
+      "donate": "https://secure.actblue.com/donate/eliottrodriguezforcongress",
+      "source": "https://eliottrodriguez.com/issues/"
+    },
+    "district 28|carlos gimenez": {
+      "role": "U.S. representative for Florida's 28th District",
+      "bio": "His office says he was born in Cuba in 1954, came to the United States after the communist takeover, and grew up in Miami's Little Havana. He joined the Miami Fire Department in 1975, served 25 years, and was the department's first Cuban American chief. He later was Miami's city manager, a county commissioner, and mayor of Miami-Dade before his election to Congress in 2020. He and his wife, Lourdes, have three children and six grandchildren.",
+      "issues": [
+        "He says small businesses need lower taxes, less legal liability, and fewer regulations.",
+        "He says immigration shaped South Florida and that the border should be secured in a way that keeps that community intact.",
+        "He says China is America's most aggressive adversary, and he supports domestic energy that stays environmentally conscious."
+      ],
+      "site": "https://carlosgimenezforcongress.com/",
+      "siteLabel": "carlosgimenezforcongress.com",
+      "donate": "https://secure.winred.com/carlos-gimenez-for-congress/donate",
+      "source": "https://gimenez.house.gov/about"
+    },
+    "district 28|phil ehr": {
+      "role": "Retired Navy commander and Democratic nominee for Florida's 28th District",
+      "bio": "His campaign says his first Navy mission was the Mariel boatlift, and that he rose from seaman to commander over 26 years on active duty, including Cold War reconnaissance and Desert Storm. He says he advised senior leaders in Washington, including General Colin Powell. He and his wife, Sue, have been married 28 years and have two daughters.",
+      "issues": [
+        "He says he would lower health premiums and out-of-pocket costs, and enforce anti-fraud rules to stabilize property insurance.",
+        "He says he would protect law-abiding immigrant families, open a path to permanent residency for people stuck in legal limbo, and target criminals and traffickers.",
+        "He says he would pursue a VA hospital or major VA clinic in South Dade and protect the Everglades, including a pause on large AI data centers until their effects are studied."
+      ],
+      "site": "https://ehrforcongress.us/",
+      "siteLabel": "ehrforcongress.us",
+      "source": "https://ehrforcongress.us/meet-phil/"
     }
   },
   "measures": {}
