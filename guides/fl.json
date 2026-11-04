@@ -335,6 +335,32 @@
       "siteLabel": "Brian Mast for Congress",
       "donate": "https://secure.winred.com/mast-for-congress/donate",
       "source": "https://mastforcongress.com/about/"
+    },
+    "district 2|austin rogers": {
+      "role": "Attorney and Republican nominee for Florida's 2nd District",
+      "bio": "The campaign says he is a Panama City native, a conservative attorney, and former general counsel to U.S. Senator Rick Scott. He graduated from Mosley High School, played college soccer, earned a law degree from Duke, and lives in Panama City with his wife, Hala, and their three children.",
+      "issues": [
+        "He says he is running to secure the border, defend Florida values, back law enforcement and the military, and put American families first.",
+        "He says he is fully pro-life from conception and will defend parental rights against policies he says undermine families.",
+        "He says he will defend the First and Second Amendments and work so veterans can get care and everyday essentials stay affordable."
+      ],
+      "site": "https://rogersforflorida.com/",
+      "siteLabel": "rogersforflorida.com",
+      "donate": "https://secure.winred.com/rogers-for-florida/save-america",
+      "source": "https://rogersforflorida.com/issues/"
+    },
+    "district 2|amanda green": {
+      "role": "Democratic nominee for Florida's 2nd District",
+      "bio": "Her campaign says she was born at a Navy hospital in San Diego, moved to Florida at age two, and was raised mainly in St. Petersburg. She studied economics, international affairs, emergency management, and public administration at Florida State, then spent about a decade as an operations director on U.S. government programs. She and her husband are raising their family in the Big Bend.",
+      "issues": [
+        "She says she would lower the cost of groceries, housing, insurance, and medicine by taking on corporate price gouging and expanding affordable housing and health care.",
+        "She says she wants a seat on the House Agriculture Committee, a strong Farm Bill, and full funding for nutrition programs in the district.",
+        "She says she would ban members of Congress from trading individual stocks, support term limits, and get dark money out of politics."
+      ],
+      "site": "https://www.amgforcongress.com/",
+      "siteLabel": "amgforcongress.com",
+      "donate": "https://secure.actblue.com/donate/amanda-green-1",
+      "source": "https://www.amgforcongress.com/about"
     }
   },
   "measures": {}
