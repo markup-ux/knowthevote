@@ -412,7 +412,10 @@
     border-color: #fff;
   }
 
+  header { z-index: 6; }
   .scene .sheet:not(.is-paper) {
+    position: relative;
+    z-index: 0;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -780,76 +783,367 @@
       by: "Element5 Digital",
       place: "bottom",
       alt: "A hand putting a ballot into a box"
+    },
+    capFront: {
+      id: "photo-1756963322523-1e9bb61ee31d",
+      slug: "ayZoJTphaCs",
+      user: "gabrielrana",
+      by: "Gabriel Tovar",
+      place: "bottom",
+      alt: "The United States Capitol, dome and columns, with a flag in front"
+    },
+    capStreet: {
+      id: "photo-1761060279424-fc79b2e80635",
+      slug: "WRutiX6XxV8",
+      user: "nhuenerfuerst",
+      by: "Nils Huenerfuerst",
+      place: "bottom",
+      alt: "The United States Capitol at the end of a street lined with autumn trees"
+    },
+    capWet: {
+      id: "photo-1519922838705-9d6cb8bcfaea",
+      slug: "oN_cUY1v7hs",
+      user: "someguy",
+      by: "Andy Feliciotti",
+      place: "bottom",
+      alt: "The United States Capitol reflected in a wet plaza"
+    },
+    courtroom: {
+      id: "photo-1711003596872-aa68f08a4b8e",
+      slug: "Bh6u25Qv9qA",
+      user: "fotomagi",
+      by: "Dragon White Munthe",
+      place: "bottom",
+      alt: "An empty courtroom, with a wooden bench and dark panels"
+    },
+    scotus: {
+      id: "photo-1658958327132-a80f8a9409fb",
+      slug: "osJUjMNpcak",
+      user: "finephotographics",
+      by: "Fine Photographics",
+      place: "bottom",
+      alt: "A courthouse front of columns, a carved pediment, and broad steps"
+    },
+    justice: {
+      id: "photo-1603119380999-ef522dd64b3c",
+      slug: "U8WfiRpsQ7Y",
+      user: "ianhutchinson92",
+      by: "Ian Hutchinson",
+      place: "bottom",
+      alt: "A courthouse pediment carved with the words equal justice, above columns"
+    },
+    columns: {
+      id: "photo-1483600516620-7254872369ae",
+      slug: "ICXMkhRdquA",
+      user: "jtc",
+      by: "Jesse Collins",
+      place: "bottom",
+      alt: "Courthouse columns seen from below, rising to a coffered ceiling"
+    },
+    flagcourt: {
+      id: "photo-1688417486375-3508bc17b941",
+      slug: "3Xl3lI5gjqg",
+      user: "timmossholder",
+      by: "Tim Mossholder",
+      place: "bottom",
+      alt: "A flag flying in front of a columned courthouse"
+    },
+    bwcourt: {
+      id: "photo-1678440515574-0dc75039b8fe",
+      slug: "V12FTtOFhRk",
+      user: "timmossholder",
+      by: "Tim Mossholder",
+      place: "bottom",
+      alt: "A black-and-white view of a courthouse, columns under a carved pediment"
+    },
+    pillars: {
+      id: "photo-1453945619913-79ec89a82c51",
+      slug: "Vq__yk6faOI",
+      user: "claireandy",
+      by: "Claire Anderson",
+      place: "bottom",
+      alt: "A row of courthouse columns under a carved pediment"
+    },
+    plaza: {
+      id: "photo-1719947688696-31ffb21b5d5e",
+      slug: "OqQXH3W42JQ",
+      user: "tzielonka",
+      by: "Tomasz Zielonka",
+      place: "bottom",
+      alt: "Broad steps leading up to a courthouse across an open plaza"
+    },
+    brazilBw: {
+      id: "photo-1601782007806-42de5253b04d",
+      slug: "b1E206D6FvQ",
+      user: "g_leighton",
+      by: "Gustavo Leighton",
+      place: "bottom",
+      alt: "A national congress in black and white, two towers between two bowls, reflected in water"
+    },
+    table: {
+      id: "photo-1770553129485-99739edb534f",
+      slug: "SdUnbpEHFv0",
+      user: "joerghamel",
+      by: "Jörg Hamel",
+      place: "bottom",
+      alt: "A flat-topped mountain over a coastal city"
+    },
+    hornDusk: {
+      id: "photo-1769029299006-82d59e37c746",
+      slug: "VXZy1mljRfk",
+      user: "cryptrz",
+      by: "Franck Ridel",
+      place: "bottom",
+      alt: "A sharp peak above a snowy village with its lights on"
+    },
+    number: {
+      id: "photo-1737714209633-8c54fc6e2cfe",
+      slug: "3ZEQ9mTwwVo",
+      user: "haberdoedas",
+      by: "Haberdoedas",
+      place: "bottom",
+      alt: "The house number 17 on a brick wall"
+    },
+    passport: {
+      id: "photo-1487274910620-1add53247020",
+      slug: "-NY2yXT2EOE",
+      user: "kellysikkema",
+      by: "Kelly Sikkema",
+      place: "bottom",
+      alt: "A United States passport on a clipboard"
+    },
+    chicago: {
+      id: "photo-1477959858617-67f85cf4f1df",
+      slug: "Nyvq2juw4_o",
+      user: "peterlaster",
+      by: "Pedro Lastra",
+      place: "bottom",
+      alt: "The Chicago skyline, with the lake behind the towers"
+    },
+    hourglass: {
+      id: "photo-1501139083538-0139583c060f",
+      slug: "BXOXnQ26B7o",
+      user: "aronvisuals",
+      by: "Aron Visuals",
+      place: "bottom",
+      alt: "A wooden hourglass with blue sand, standing on stones"
+    },
+    sand: {
+      id: "photo-1518281361980-b26bfd556770",
+      slug: "5Hl5reICevY",
+      user: "nate_dumlao",
+      by: "Nathan Dumlao",
+      place: "bottom",
+      alt: "A glass hourglass with sand still falling"
+    },
+    signing: {
+      id: "photo-1450101499163-c8848c66ca85",
+      slug: "OQMZwNd3ThU",
+      user: "amstram",
+      by: "Scott Graham",
+      place: "bottom",
+      alt: "A hand writing with a pen on a sheet of paper"
+    },
+    vote1964: {
+      id: "photo-1597700331582-aab3614b3c0c",
+      slug: "_4us-wUwO30",
+      user: "libraryofcongress",
+      by: "Library of Congress",
+      place: "bottom",
+      alt: "A voter putting a ballot into a box at a school polling place in 1964"
+    },
+    pen: {
+      id: "photo-1595126731003-755959b6baf8",
+      slug: "nxcs8wwj9J0",
+      user: "tiffanytertipes",
+      by: "Tiffany Tertipes",
+      place: "bottom",
+      alt: "A pen lying on a form that says not to forget to sign"
+    },
+    drop: {
+      id: "photo-1638501479049-de7a4100b4a4",
+      slug: "TdrLky1wwA4",
+      user: "oksdesign",
+      by: "Oxana Melis",
+      place: "bottom",
+      alt: "A ballot drop box outside a community center"
+    },
+    clock: {
+      id: "photo-1563861826100-9cb868fdbe1c",
+      slug: "L0xOtAnv94Y",
+      user: "oceanng",
+      by: "Ocean Ng",
+      place: "bottom",
+      alt: "A round wall clock"
+    },
+    clocks: {
+      id: "photo-1533749047139-189de3cf06d3",
+      slug: "FlHdnPO6dlw",
+      user: "jontyson",
+      by: "Jon Tyson",
+      place: "bottom",
+      alt: "A pile of clocks, each showing a different time"
+    },
+    alarm: {
+      id: "photo-1541480601022-2308c0f02487",
+      slug: "w2JtIQQXoRU",
+      user: "insungpandora",
+      by: "insung yoon",
+      place: "bottom",
+      alt: "A twin-bell alarm clock"
+    },
+    handclock: {
+      id: "photo-1495364141860-b0d03eccd065",
+      slug: "UAvYasdkzq8",
+      user: "goumbik",
+      by: "Lukas Blazek",
+      place: "bottom",
+      alt: "A hand holding a small white alarm clock"
+    },
+    pocket: {
+      id: "photo-1509048191080-d2984bad6ae5",
+      slug: "0rTCXZM7Xfo",
+      user: "andriklangfield",
+      by: "Andrik Langfield",
+      place: "bottom",
+      alt: "An open pocket watch hanging from a chain"
+    },
+    gold: {
+      id: "photo-1504197832061-98356e3dcdcf",
+      slug: "JsTmUnHdVYQ",
+      user: "thomasbormans",
+      by: "Thomas Bormans",
+      place: "bottom",
+      alt: "A gold clock face lit against a dark background"
+    },
+    silver: {
+      id: "photo-1415604934674-561df9abf539",
+      slug: "ZMZHcvIVgbg",
+      user: "aleskrivec",
+      by: "Ales Krivec",
+      place: "bottom",
+      alt: "A small alarm clock with Roman numerals"
+    },
+    face: {
+      id: "photo-1602503497793-4094d8c53e88",
+      slug: "wOG9fKsjG84",
+      user: "tinkerman",
+      by: "Immo Wegmann",
+      place: "bottom",
+      alt: "A round clock face with the hands near 12"
+    },
+    flip: {
+      id: "photo-1456574808786-d2ba7a6aa654",
+      slug: "ft0-Xu4nTvA",
+      user: "loic",
+      by: "Djim Loic",
+      place: "bottom",
+      alt: "A flip clock reading 12:20"
+    },
+    slot: {
+      id: "photo-1494172961521-33799ddd43a5",
+      slug: "IBWJsMObnnU",
+      user: "ajaegers",
+      by: "Arnaud Jaegers",
+      place: "bottom",
+      alt: "A ballot envelope going into a slot"
+    },
+    tiles: {
+      id: "photo-1603032813605-2c91e257e2ae",
+      slug: "ApHrNurIYpk",
+      user: "glencarrie",
+      by: "Glen Carrie",
+      place: "bottom",
+      alt: "Letter tiles spelling vote"
+    },
+    votehere: {
+      id: "photo-1667964277001-a885796a5926",
+      slug: "GdNyt7Cinj0",
+      user: "erniejourneys",
+      by: "Ernie Journeys",
+      place: "bottom",
+      alt: "Vote here signs outside a mall entrance"
+    },
+    mail: {
+      id: "photo-1696831519501-e4a0515a9a2c",
+      slug: "GQXtl7L4Ldc",
+      user: "markusspiske",
+      by: "Markus Spiske",
+      place: "bottom",
+      alt: "A pen beside a mail envelope"
+    },
+    write: {
+      id: "photo-1521791055366-0d553872125f",
+      slug: "GJao3ZTX9gU",
+      user: "cytonn_photography",
+      by: "Cytonn Photography",
+      place: "bottom",
+      alt: "A hand writing with a pen on a lined form"
+    },
+    suit: {
+      id: "photo-1564846824194-346b7871b855",
+      slug: "9i5eqBarv-k",
+      user: "yapics",
+      by: "Leon Seibert",
+      place: "bottom",
+      alt: "A hand filling in a form, with a blank sheet underneath"
+    },
+    books: {
+      id: "photo-1709385283491-524c64073e8d",
+      slug: "nekgbQSkLvo",
+      user: "araixrand",
+      by: "Araix Rand",
+      place: "bottom",
+      alt: "Bookshelves filled with books"
+    },
+    stack: {
+      id: "photo-1595126907069-4d65de64ef38",
+      slug: "-7pxs081f3U",
+      user: "tiffanytertipes",
+      by: "Tiffany Tertipes",
+      place: "bottom",
+      alt: "Two return envelopes on an otherwise empty table"
+    },
+    reply: {
+      id: "photo-1595265616410-a6119ff0c87e",
+      slug: "sY5-f-eviXs",
+      user: "tiffanytertipes",
+      by: "Tiffany Tertipes",
+      place: "bottom",
+      alt: "A return envelope on a mostly empty table"
+    },
+    night: {
+      id: "photo-1581373449483-37449f962b6c",
+      slug: "8FdEwlxP3oU",
+      user: "maxwbender",
+      by: "Max Bender",
+      place: "bottom",
+      alt: "The Chicago skyline at night, lights reflected on the water"
     }
   };
 
   var BANK = [
     {
       shot: "illinois",
-      prompt: "The dome in this photograph is the Illinois State Capitol. How do you vote for governor and lieutenant governor there?",
+      prompt: "How many statewide races does the page list at the capitol in this photograph, before your own district?",
+      choices: ["Four", "Five", "Six", "Nine"],
+      answer: 2,
+      fact: "Same six races, then your district. That is one Senate candidate, one governor ticket, and one person in each of the other four offices.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "tiles",
+      prompt: "The word in this photograph is vote. Governor and lieutenant governor are one ticket. How many ovals do you mark for them?",
       choices: ["One oval for each name", "One oval for the ticket", "A vote for governor only", "The legislature fills the second office"],
       answer: 1,
-      fact: "Governor and lieutenant governor share one oval. The two names are a single ticket.",
+      fact: "Governor and lieutenant governor share one oval. The two names are a single ticket. On this site the names run Republican, then Democratic, then any other party.",
       href: "illinois.html",
       where: "Illinois"
     },
     {
-      shot: "illinois",
-      prompt: "The dome in this photograph is the Illinois State Capitol. How long is a term for the other statewide offices chosen there?",
-      choices: ["Two years", "Four years", "Six years", "Eight years"],
-      answer: 1,
-      fact: "Terms are four years, except the Senate, which is six.",
-      href: "illinois.html#read",
-      where: "Illinois"
-    },
-    {
-      shot: "senate",
-      prompt: "This is the United States Capitol, where the Senate meets. How long is that term on the Illinois ballot?",
-      choices: ["Two years", "Four years", "Six years", "It follows the governor"],
-      answer: 2,
-      fact: "Terms are four years, except the Senate, which is six.",
-      href: "illinois.html#read",
-      where: "Illinois"
-    },
-    {
-      shot: "box",
-      prompt: "The hand in this photograph is casting a ballot. Which Illinois offices include a write-in line on that kind of sheet?",
-      choices: ["Senate, attorney general, and secretary of state", "Governor, comptroller, and treasurer", "Every statewide office", "Only judges up for retention"],
-      answer: 1,
-      fact: "Governor, comptroller, and treasurer include a write-in line.",
-      href: "illinois.html#read",
-      where: "Illinois"
-    },
-    {
-      shot: "court",
-      prompt: "The columns in this photograph are a courthouse. On Illinois’s green ballot, what does a judge need in order to stay?",
-      choices: ["More yes votes than no votes", "Three-fifths of the vote on that question", "Two-thirds of the vote", "A unanimous yes"],
-      answer: 1,
-      fact: "A judge needs three-fifths of the vote on that question to stay. No judge on that sheet is running against another judge.",
-      href: "illinois.html",
-      where: "Illinois"
-    },
-    {
-      shot: "box",
-      prompt: "One ballot is going into this box. What happens when two ovals are marked for one office?",
-      choices: ["Both choices are counted", "The whole ballot is rejected", "That office is not counted", "The first oval is the one that counts"],
-      answer: 2,
-      fact: "Marking two ovals for one office means that office is not counted.",
-      href: "illinois.html",
-      where: "Illinois"
-    },
-    {
-      shot: "illinois",
-      prompt: "This is the Illinois State Capitol, where the governor serves. What does the Illinois page say about limiting that office?",
-      choices: ["The governor is limited to two terms", "Illinois does not limit the governor to two terms", "The governor may serve one term", "The limit is three terms"],
-      answer: 1,
-      fact: "Illinois does not limit the governor to two terms.",
-      href: "illinois.html#read",
-      where: "Illinois"
-    },
-    {
-      shot: "illinois",
-      prompt: "The governor chosen under this dome runs on one ticket. Who is on the ticket with JB Pritzker?",
+      shot: "signing",
+      prompt: "A hand is marking the governor ticket. Who is on the Democratic ticket with JB Pritzker?",
       choices: ["Aaron B. Del Mar", "Christian Mitchell", "Carolyn Schofield", "Juliana Stratton"],
       answer: 1,
       names: true,
@@ -858,8 +1152,8 @@
       where: "Illinois"
     },
     {
-      shot: "illinois",
-      prompt: "On the ballot for the capitol in this photograph, who is on the ticket with Darren Bailey?",
+      shot: "vote1964",
+      prompt: "This voter is casting a ballot for governor. Who is on the Republican ticket with Darren Bailey?",
       choices: ["Christian Mitchell", "Carolyn Schofield", "Aaron B. Del Mar", "Don Tracy"],
       answer: 2,
       names: true,
@@ -868,28 +1162,183 @@
       where: "Illinois"
     },
     {
-      shot: "illinois",
-      prompt: "On the ballot for the capitol in this photograph, who is on the ticket with Collin Corbett?",
-      choices: ["Carolyn Schofield", "Christian Mitchell", "Aaron B. Del Mar", "Diane M. Harris"],
+      shot: "write",
+      prompt: "You are already registered. What does the page say you do?",
+      choices: ["Sign the application", "Bring identification every time", "File a write-in declaration", "The county clerk signs for you"],
+      answer: 0,
+      fact: "Most people who are already registered sign the application. Identification is for someone who registered by mail and is voting in the jurisdiction for the first time.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "pen",
+      prompt: "This form says not to forget to sign. How does the Illinois page say you cast a write-in?",
+      choices: ["Tell the election judge the name", "Darken the oval by the blank line and write the name", "The scanner fills the line", "Write the name on the back of the sheet"],
+      answer: 1,
+      fact: "To cast a write-in, darken the oval to the left of the blank line and write the name. Governor, comptroller, and treasurer include that line.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "reply",
+      prompt: "This envelope is election mail, a paper you file. Where does a write-in count?",
+      choices: ["In every Illinois precinct", "Only where that person filed a declaration with the local election authority", "Only in Chicago", "Only on the green ballot"],
+      answer: 1,
+      fact: "A write-in counts only where that person filed a declaration with the local election authority. This page has the Kane County and Will County lists, not every county’s list.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "mail",
+      prompt: "This envelope is mail. You registered by mail, and this is your first vote in the jurisdiction. What do you bring?",
+      choices: ["Nothing else", "Identification", "A second ballot", "A letter from the county clerk"],
+      answer: 1,
+      fact: "If you registered by mail and this is your first vote in the jurisdiction, bring identification. Most people who are already registered just sign the application.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "passport",
+      prompt: "This passport is identification. Who does the Illinois page tell to bring identification?",
+      choices: ["Every voter", "Anyone using a ZIP code", "Someone who registered by mail and is voting in this jurisdiction for the first time", "Only people voting for a write-in"],
+      answer: 2,
+      fact: "If you registered by mail and this is your first vote in the jurisdiction, bring identification.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "suit",
+      prompt: "A blank sheet is waiting under the form in this photograph. You spoiled your ballot. What do you do?",
+      choices: ["Erase it and keep going", "Ask an election judge for another sheet", "That ballot is your only one", "The scanner ignores the extra marks"],
+      answer: 1,
+      fact: "If you spoil the sheet, ask an election judge for another.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "stack",
+      prompt: "These envelopes are paperwork. The comptroller pays approved bills and publishes the checkbook. What does that office not do?",
+      choices: ["Pay bills already approved", "Publish the state’s checkbook", "Write the budget", "Hold some payments under wage rules"],
+      answer: 2,
+      fact: "The comptroller pays bills the legislature and governor have already approved and publishes the checkbook. That office does not write the budget.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "drop",
+      prompt: "A ballot is going into this box. What happens when two ovals are marked for one office?",
+      choices: ["Both choices are counted", "The whole ballot is rejected", "That office is not counted", "The first oval is the one that counts"],
+      answer: 2,
+      fact: "Marking two ovals for one office means that office is not counted.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "number",
+      prompt: "This is a street address. The polling place is assigned from what?",
+      choices: ["The ZIP code alone", "The home address", "The county you ask for", "Whichever precinct is closest"],
+      answer: 1,
+      fact: "The State Board of Elections assigns the precinct polling place from the home address, not from a ZIP code alone.",
+      href: "illinois.html#where",
+      where: "Illinois"
+    },
+    {
+      shot: "votehere",
+      prompt: "These signs mark a local polling place. Sheriff and the county board are local offices. Where do their names come from?",
+      choices: ["This statewide list", "The county clerk", "The secretary of state", "The green retention ballot"],
+      answer: 1,
+      fact: "Sheriff, clerk, county board, and local questions come from the county clerk and are not in the statewide list.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "books",
+      prompt: "These shelves are a library. Which office keeps the state library, and is the one most people actually visit?",
+      choices: ["Treasurer", "Secretary of state", "Comptroller", "Attorney general"],
+      answer: 1,
+      fact: "The secretary of state is the office most people actually visit: driver’s licenses and Real ID, titles and plates, business filings, and the state library.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "chicago",
+      prompt: "Who is leaving an office after a decade to run for mayor of the city in this photograph?",
+      choices: ["Susana Mendoza, the comptroller", "Alexi Giannoulias, the secretary of state", "Michael Frerichs, the treasurer", "Kwame Raoul, the attorney general"],
       answer: 0,
       names: true,
-      fact: "The independent ticket is Collin Corbett and Carolyn Schofield.",
+      fact: "Susana Mendoza is leaving the comptroller’s office after a decade to run for mayor of Chicago. That race is marked an open seat.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "night",
+      prompt: "Susana Mendoza is running for mayor of the city in this photograph. What does the page call the comptroller race she is leaving?",
+      choices: ["A retention vote", "An open seat", "A runoff", "A write-in line"],
+      answer: 1,
+      names: true,
+      fact: "Susana Mendoza is leaving the comptroller’s office after a decade to run for mayor of Chicago. That race is marked an open seat.",
       href: "illinois.html",
       where: "Illinois"
     },
     {
       shot: "senate",
-      prompt: "This is the Senate’s building. Whose Illinois Senate card says he won the primary with 40%?",
-      choices: ["Juliana Stratton", "Whitfield Harrington Jr.", "Don Tracy", "Kwame Raoul"],
+      prompt: "How long is the term of the Senate that meets in this building, on the Illinois ballot?",
+      choices: ["Two years", "Four years", "Six years", "It follows the governor"],
       answer: 2,
+      fact: "Terms are four years, except the Senate, which is six.",
+      href: "illinois.html#read",
+      where: "Illinois"
+    },
+    {
+      shot: "capFront",
+      prompt: "What date is the countrywide election for the country whose capitol this is?",
+      choices: ["13 September 2026", "25 October 2026", "3 November 2026", "4 November 2026"],
+      answer: 2,
+      fact: "The United States page is the countrywide election on 3 November 2026.",
+      href: "countries.html",
+      where: "Countries"
+    },
+    {
+      shot: "capStreet",
+      prompt: "Don Tracy is running for the Senate that meets in this building. His card says he won the primary with what share?",
+      choices: ["40%", "50%", "53.3%", "60%"],
+      answer: 0,
       names: true,
       fact: "Don Tracy’s card says he won the primary with 40%.",
       href: "illinois.html",
       where: "Illinois"
     },
     {
+      shot: "capWet",
+      prompt: "Whitfield Harrington Jr. is running for the Senate that meets in this building. His card says a finish of 5% would make his party what in Illinois?",
+      choices: ["The majority party", "An established party", "A write-in line", "The party of the governor"],
+      answer: 1,
+      names: true,
+      fact: "Whitfield Harrington Jr.’s card says a finish of 5% would make the American Center an established party in Illinois.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
       shot: "court",
-      prompt: "This photograph is a courthouse. Whose attorney general card mentions roughly 90 legal fights?",
+      prompt: "A judge stays or goes at a courthouse like this one. What share of the vote does the judge need in order to stay?",
+      choices: ["More yes votes than no votes", "Three-fifths of the vote on that question", "Two-thirds of the vote", "A unanimous yes"],
+      answer: 1,
+      fact: "A judge needs three-fifths of the vote on that question to stay. No judge on that sheet is running against another judge.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "justice",
+      prompt: "The pediment in this photograph says equal justice. On the green ballot, how does each judge run?",
+      choices: ["Each judge against one opponent", "All the judges in one race", "Each name is its own yes-or-no question", "The governor appoints whoever leads"],
+      answer: 2,
+      fact: "No judge listed is running against any other judge. Each name is a separate yes or no.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "courtroom",
+      prompt: "This is a courtroom, where the state’s lawyer argues. Whose attorney general card mentions roughly 90 legal fights?",
       choices: ["Robert W. Fioretti", "Kwame Raoul", "Alexi Giannoulias", "Margaret Croke"],
       answer: 1,
       names: true,
@@ -898,36 +1347,109 @@
       where: "Illinois"
     },
     {
-      shot: "illinois",
-      prompt: "On the page for the capitol in this photograph, in what order does Leaders.vote list candidates?",
-      choices: ["Democratic, then Republican, then any other party", "Republican, then Democratic, then any other party", "Alphabetical by last name", "The order of that precinct’s ballot"],
+      shot: "plaza",
+      prompt: "These steps lead to a courthouse. The attorney general is the state’s lawyer. Who does the page say is seeking a third term in that office?",
+      choices: ["Robert W. Fioretti", "Kwame Raoul", "Alexi Giannoulias", "Don Tracy"],
       answer: 1,
-      fact: "On this site the order is Republican, then Democratic, then any other party. A precinct ballot may list them differently.",
+      names: true,
+      fact: "Kwame Raoul’s card says he is the incumbent seeking a third term.",
+      href: "illinois.html",
+      where: "Illinois"
+    },
+    {
+      shot: "pocket",
+      prompt: "A term is a length of time. How long is a term for the statewide offices other than the Senate?",
+      choices: ["Two years", "Four years", "Six years", "Eight years"],
+      answer: 1,
+      fact: "Terms are four years, except the Senate, which is six.",
       href: "illinois.html#read",
       where: "Illinois"
     },
     {
-      shot: "illinois",
-      prompt: "Before your own district, how many statewide races does the page for this capitol list?",
-      choices: ["Four", "Five", "Six", "Nine"],
-      answer: 2,
-      fact: "Same six races. Then your own district.",
+      shot: "gold",
+      prompt: "The governor’s term is four years. What does the page say about limiting that office to two terms?",
+      choices: ["The governor is limited to two terms", "Illinois does not limit the governor to two terms", "The governor may serve one term", "The limit is three terms"],
+      answer: 1,
+      fact: "Illinois does not limit the governor to two terms.",
       href: "illinois.html#read",
       where: "Illinois"
+    },
+    {
+      shot: "clock",
+      prompt: "Polls open at 6 a.m. and close at 7 p.m. How many hours is that?",
+      choices: ["11 hours", "12 hours", "13 hours", "Until the line is gone"],
+      answer: 2,
+      fact: "Polls are open 6 a.m. to 7 p.m. That is 13 hours. If you are in line by 7, you can still vote.",
+      href: "illinois.html#where",
+      where: "Illinois"
+    },
+    {
+      shot: "alarm",
+      prompt: "The polls close at 7 p.m. You are still in line. What does the page say?",
+      choices: ["The line closes at 6", "You can vote if you were in line by 7", "Only early voters may stay", "The scanner has already closed"],
+      answer: 1,
+      fact: "If you are in line by 7, you can still vote.",
+      href: "illinois.html#where",
+      where: "Illinois"
+    },
+    {
+      shot: "face",
+      prompt: "Polls open at 6 a.m. and stay open 13 hours. What time do they close?",
+      choices: ["6 p.m.", "7 p.m.", "8 p.m.", "When the line is gone"],
+      answer: 1,
+      fact: "Polls are open 6 a.m. to 7 p.m. That is 13 hours.",
+      href: "illinois.html#where",
+      where: "Illinois"
+    },
+    {
+      shot: "silver",
+      prompt: "What time in the morning do the polls open?",
+      choices: ["5 a.m.", "6 a.m.", "7 a.m.", "8 a.m."],
+      answer: 1,
+      fact: "Polls are open 6 a.m. to 7 p.m.",
+      href: "illinois.html#where",
+      where: "Illinois"
+    },
+    {
+      shot: "cape",
+      prompt: "Table Mountain is on the horizon of this photograph. What election is that country’s page?",
+      choices: ["Parliament", "A presidential runoff", "Regional chairs", "Local councils"],
+      answer: 3,
+      fact: "South Africa is local councils on 4 November 2026. A municipality stays blank until the Commission reports votes there.",
+      href: "countries.html",
+      where: "Countries"
+    },
+    {
+      shot: "table",
+      prompt: "The flat mountain in this photograph marks the city. What date is that country’s election?",
+      choices: ["3 November 2026", "4 November 2026", "27 September 2026", "24 October 2026"],
+      answer: 1,
+      fact: "South Africa is local councils on 4 November 2026.",
+      href: "countries.html",
+      where: "Countries"
     },
     {
       shot: "alps",
-      prompt: "The peak in this photograph is in one of these countries. Which election on this site is two yes-or-no questions?",
+      prompt: "The peak in this photograph is the clue. Which country’s election is two yes-or-no questions?",
       choices: ["Brazil", "Switzerland", "Sweden", "Germany"],
       answer: 1,
       names: true,
-      fact: "Switzerland held two yes-or-no questions on 27 September 2026. The map is the neutrality question, by canton.",
+      fact: "Switzerland held two yes-or-no questions on 27 September 2026. The official file still marks the count provisional.",
+      href: "countries.html",
+      where: "Countries"
+    },
+    {
+      shot: "hornDusk",
+      prompt: "The peak above this village is the clue. The map on that country’s page is which question?",
+      choices: ["The presidential runoff", "The neutrality question, by canton", "The local councils", "The first-preference vote"],
+      answer: 1,
+      fact: "The Switzerland map is the neutrality question, by canton. The official file still marks the count provisional.",
       href: "countries.html",
       where: "Countries"
     },
     {
       shot: "brazil",
-      prompt: "The building in this photograph is a national congress, two towers between two bowls. Which country page is a presidential runoff?",
+      prompt: "This building is a national congress, two towers between two bowls. Which country’s page is a presidential runoff?",
       choices: ["South Africa", "Japan", "Brazil", "Australia"],
       answer: 2,
       names: true,
@@ -936,11 +1458,11 @@
       where: "Countries"
     },
     {
-      shot: "cape",
-      prompt: "This is Cape Town, with Table Mountain on the horizon. What election is the South Africa page?",
-      choices: ["Parliament", "A presidential runoff", "Regional chairs", "Local councils"],
-      answer: 3,
-      fact: "South Africa is local councils on 4 November 2026. A municipality stays blank until the Commission reports votes there.",
+      shot: "brazilBw",
+      prompt: "This is the same kind of congress, two towers between two bowls. What does that country’s page say about the count?",
+      choices: ["It is still provisional", "The court’s file marks the count finished", "The count has not started", "Only the capital has reported"],
+      answer: 1,
+      fact: "Brazil’s presidential runoff was on 25 October 2026. The court’s file marks the count finished.",
       href: "countries.html",
       where: "Countries"
     }
@@ -949,7 +1471,8 @@
   var COUNTS = [
     {
       kind: "retain",
-      shot: "court",
+      shot: "columns",
+      scene: "This courthouse is where a retention vote is decided. Three-fifths of the ballots below are required for the judge to stay.",
       yes: 299,
       no: 201,
       stays: false,
@@ -957,7 +1480,8 @@
     },
     {
       kind: "retain",
-      shot: "court",
+      shot: "scotus",
+      scene: "The columns and pediment are a courthouse. A judge stays only with three-fifths of the vote on this question.",
       yes: 301,
       no: 199,
       stays: true,
@@ -965,7 +1489,8 @@
     },
     {
       kind: "retain",
-      shot: "court",
+      shot: "flagcourt",
+      scene: "The flag flies in front of a courthouse. This is a retention vote, and three-fifths of the ballots are required.",
       yes: 90,
       no: 60,
       stays: true,
@@ -974,6 +1499,7 @@
     {
       kind: "over",
       shot: "box",
+      scene: "The hand is casting a ballot. Two ovals for one office means those ballots do not count.",
       ballots: 180,
       spoiled: 15,
       answer: 165,
@@ -982,10 +1508,50 @@
     },
     {
       kind: "year",
-      shot: "illinois",
+      shot: "hourglass",
+      heading: "THE SAND MEASURES THE YEARS.",
+      scene: "Offices other than the Senate serve four years. The Senate serves six. Both were just elected in 2026.",
       answer: 2038,
       choices: [2030, 2032, 2034, 2038],
       fact: "The four-year offices come back in 2030, 2034, and 2038. The Senate comes back in 2032 and 2038. Both are on the ballot again in 2038."
+    },
+    {
+      kind: "retain",
+      shot: "bwcourt",
+      scene: "This courthouse is the setting for a retention vote. The judge stays with three-fifths of the ballots.",
+      yes: 740,
+      no: 500,
+      stays: false,
+      fact: "Three-fifths of 1,240 is 744. Yes has 740. That is more than half of 1,240, which is 620, and it is short of 744, so the judge does not stay."
+    },
+    {
+      kind: "retain",
+      shot: "pillars",
+      scene: "The row of columns is a courthouse. Three-fifths of this vote is what the judge needs in order to stay.",
+      yes: 1210,
+      no: 805,
+      stays: true,
+      fact: "Three-fifths of 2,015 is 1,209. Yes has 1,210, so the judge stays."
+    },
+    {
+      kind: "over",
+      shot: "slot",
+      scene: "A ballot is going into the slot. Two ovals for one office means those ballots do not count.",
+      ballots: 960,
+      spoiled: 120,
+      fraction: "One eighth",
+      answer: 840,
+      choices: [120, 840, 880, 960],
+      fact: "One eighth of 960 is 120. Those 120 ballots marked two ovals, so they are not counted for treasurer. 960 minus 120 is 840."
+    },
+    {
+      kind: "span",
+      shot: "sand",
+      heading: "THE SAND IS ONE STRETCH OF TIME.",
+      scene: "Offices other than the Senate serve four years. The Senate serves six.",
+      answer: 12,
+      choices: [6, 8, 12, 24],
+      fact: "Four and six share a year every 12 years. Twelve is the smallest number both terms divide."
     }
   ];
 
@@ -1016,6 +1582,19 @@
       copy[j] = hold;
     }
     return copy;
+  }
+
+  function deal(list, n) {
+    var pool = shuffle(list);
+    var round = [];
+    var seen = {};
+    var i;
+    for (i = 0; i < pool.length && round.length < n; i++) {
+      if (seen[pool[i].shot]) continue;
+      seen[pool[i].shot] = true;
+      round.push(pool[i]);
+    }
+    return round;
   }
 
   function show(name) {
@@ -1175,7 +1754,7 @@
   }
 
   function renderBallot() {
-    var round = shuffle(BANK).slice(0, 6);
+    var round = deal(BANK, 6);
     var index = 0;
     var correct = 0;
     var missed = [];
@@ -1253,7 +1832,7 @@
       sheet.appendChild(block);
       next.textContent = "Six more";
       next.disabled = false;
-      next.onclick = function () { renderBallot(); };
+      next.onclick = function () { show("ballot"); };
       status.textContent = "";
     }
 
@@ -1267,6 +1846,7 @@
   }
 
   function renderCount() {
+    var round = deal(COUNTS, 6);
     var index = 0;
     var correct = 0;
     var locked = false;
@@ -1300,15 +1880,15 @@
 
     function ask() {
       locked = false;
-      var item = COUNTS[index];
+      var item = round[index];
       stage.show(item.shot);
       stage.card.classList.toggle("is-retain", item.kind === "retain");
       sheet.replaceChildren();
       var block = el("div", "contest");
       if (item.kind === "retain") {
-        sheet.appendChild(sheetHead("GREEN RETENTION BALLOT", "Question " + (index + 1) + " of " + COUNTS.length));
+        sheet.appendChild(sheetHead("GREEN RETENTION BALLOT", "Question " + (index + 1) + " of " + round.length));
         block.appendChild(el("h3", "", "SHALL THIS JUDGE BE RETAINED IN OFFICE?"));
-        block.appendChild(el("p", "sheet-instruct", "The columns in the photograph are a courthouse. This count is one retention question."));
+        block.appendChild(el("p", "sheet-instruct", item.scene));
         block.appendChild(el("p", "vote-for", "Does this judge stay?"));
         block.appendChild(tally(item.yes, item.no));
         [["Stays", true], ["Does not stay", false]].forEach(function (pair) {
@@ -1318,9 +1898,9 @@
           block.appendChild(button);
         });
       } else if (item.kind === "over") {
-        sheet.appendChild(sheetHead("CANDIDATE BALLOT", "Question " + (index + 1) + " of " + COUNTS.length));
+        sheet.appendChild(sheetHead("CANDIDATE BALLOT", "Question " + (index + 1) + " of " + round.length));
         block.appendChild(el("h3", "", "FOR TREASURER"));
-        block.appendChild(el("p", "sheet-instruct", "A ballot is going into the box in the photograph. " + item.ballots + " ballots were cast for this office. " + item.spoiled + " of them had two ovals marked."));
+        block.appendChild(el("p", "sheet-instruct", item.scene + " " + item.ballots + " ballots were cast for this office. " + (item.fraction ? item.fraction + " of them" : item.spoiled + " of them") + " had two ovals marked."));
         block.appendChild(el("p", "vote-for", "How many ballots count for treasurer?"));
         item.choices.forEach(function (n) {
           var button = choiceButton(String(n), false);
@@ -1328,10 +1908,21 @@
           button.addEventListener("click", function () { pick(n === item.answer, button, item.fact); });
           block.appendChild(button);
         });
+      } else if (item.kind === "span") {
+        sheet.appendChild(sheetHead("ONE VOTE EACH", "Question " + (index + 1) + " of " + round.length));
+        block.appendChild(el("h3", "", item.heading));
+        block.appendChild(el("p", "sheet-instruct", item.scene));
+        block.appendChild(el("p", "vote-for", "How many years pass before both are on the ballot again?"));
+        item.choices.forEach(function (year) {
+          var button = choiceButton(String(year), false);
+          button.dataset.right = year === item.answer ? "1" : "0";
+          button.addEventListener("click", function () { pick(year === item.answer, button, item.fact); });
+          block.appendChild(button);
+        });
       } else {
-        sheet.appendChild(sheetHead("ONE VOTE EACH", "Question " + (index + 1) + " of " + COUNTS.length));
-        block.appendChild(el("h3", "", "BOTH OFFICES WERE JUST ELECTED IN 2026."));
-        block.appendChild(el("p", "sheet-instruct", "The dome in the photograph is the Illinois State Capitol. The other statewide offices serve four years. The Senate serves six."));
+        sheet.appendChild(sheetHead("ONE VOTE EACH", "Question " + (index + 1) + " of " + round.length));
+        block.appendChild(el("h3", "", item.heading));
+        block.appendChild(el("p", "sheet-instruct", item.scene));
         block.appendChild(el("p", "vote-for", "In which year are both on the ballot again?"));
         item.choices.forEach(function (year) {
           var button = choiceButton(String(year), false);
@@ -1343,7 +1934,7 @@
       sheet.appendChild(block);
       status.textContent = "";
       next.disabled = true;
-      next.textContent = index === COUNTS.length - 1 ? "Complete" : "Continue";
+      next.textContent = index === round.length - 1 ? "Complete" : "Continue";
     }
 
     function pick(hit, button, fact) {
@@ -1358,21 +1949,21 @@
     function finish() {
       stage.hide();
       sheet.replaceChildren();
-      sheet.appendChild(sheetHead("THE COUNT", correct + " of " + COUNTS.length));
+      sheet.appendChild(sheetHead("THE COUNT", correct + " of " + round.length));
       var block = el("div", "contest");
       block.appendChild(el("h3", "", "The work was the arithmetic on the ballot."));
       block.appendChild(el("p", "sheet-instruct", "Three-fifths of the retention vote, twelve years until a four-year office and a six-year office meet again, and a ballot with two ovals that does not count."));
       sheet.appendChild(block);
-      next.textContent = "Same five";
+      next.textContent = "Six more";
       next.disabled = false;
-      next.onclick = function () { renderCount(); };
+      next.onclick = function () { show("count"); };
       status.textContent = "";
     }
 
     next.onclick = function () {
       if (next.disabled) return;
       index += 1;
-      if (index >= COUNTS.length) finish();
+      if (index >= round.length) finish();
       else ask();
     };
     ask();

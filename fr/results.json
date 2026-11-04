@@ -72,92 +72,110 @@
         {
           "name": "UG",
           "votes": 1924651,
-          "percent": 38.59072399501057
+          "percent": 38.59072399501057,
+          "color": "#c4121a"
         },
         {
           "name": "ENS",
           "votes": 1169571,
-          "percent": 23.4507927170009
+          "percent": 23.4507927170009,
+          "color": "#e87722"
         },
         {
           "name": "RN",
           "votes": 818552,
-          "percent": 16.412593403980196
+          "percent": 16.412593403980196,
+          "color": "#0b3a82"
         },
         {
           "name": "LR",
           "votes": 361554,
-          "percent": 7.2494341172981756
+          "percent": 7.2494341172981756,
+          "color": "#0047ab"
         },
         {
           "name": "UXD",
           "votes": 182516,
-          "percent": 3.659585338159151
+          "percent": 3.659585338159151,
+          "color": "#3f4f3a"
         },
         {
           "name": "DVD",
           "votes": 142489,
-          "percent": 2.85701338649192
+          "percent": 2.85701338649192,
+          "color": "#1d4e89"
         },
         {
           "name": "DVG",
           "votes": 74176,
-          "percent": 1.4872855094528328
+          "percent": 1.4872855094528328,
+          "color": "#8a3d00"
         },
         {
           "name": "REC",
           "votes": 57981,
-          "percent": 1.16256337796032
+          "percent": 1.16256337796032,
+          "color": "#6b4423"
         },
         {
           "name": "DVC",
           "votes": 51984,
-          "percent": 1.042318943100141
+          "percent": 1.042318943100141,
+          "color": "#c9a400"
         },
         {
           "name": "EXG",
           "votes": 51285,
-          "percent": 1.0283034586967283
+          "percent": 1.0283034586967283,
+          "color": "#6b4c9a"
         },
         {
           "name": "UDI",
           "votes": 46337,
-          "percent": 0.9290922758239311
+          "percent": 0.9290922758239311,
+          "color": "#7ba3d0"
         },
         {
           "name": "ECO",
           "votes": 42392,
-          "percent": 0.8499920097703365
+          "percent": 0.8499920097703365,
+          "color": "#46962b"
         },
         {
           "name": "DIV",
           "votes": 28567,
-          "percent": 0.5727901902035574
+          "percent": 0.5727901902035574,
+          "color": "#5c564c"
         },
         {
           "name": "DSV",
           "votes": 20011,
-          "percent": 0.40123584892230146
+          "percent": 0.40123584892230146,
+          "color": "#3f4f3a"
         },
         {
           "name": "FI",
           "votes": 8462,
-          "percent": 0.16966956941584704
+          "percent": 0.16966956941584704,
+          "color": "#c4121a"
         },
         {
           "name": "REG",
           "votes": 4150,
-          "percent": 0.08321067278134782
+          "percent": 0.08321067278134782,
+          "color": "#2f6b34"
         },
         {
           "name": "RDG",
           "votes": 2260,
-          "percent": 0.045314727827914715
+          "percent": 0.045314727827914715,
+          "color": "#3f4f3a"
         },
         {
           "name": "EXD",
           "votes": 403,
-          "percent": 0.00808045810382727
+          "percent": 0.00808045810382727,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -173,82 +191,98 @@
         {
           "name": "RN",
           "votes": 391934,
-          "percent": 32.352470180362374
+          "percent": 32.352470180362374,
+          "color": "#0b3a82"
         },
         {
           "name": "UG",
           "votes": 274298,
-          "percent": 22.642123075653142
+          "percent": 22.642123075653142,
+          "color": "#c4121a"
         },
         {
           "name": "ENS",
           "votes": 270987,
-          "percent": 22.36881423088035
+          "percent": 22.36881423088035,
+          "color": "#e87722"
         },
         {
           "name": "LR",
           "votes": 78635,
-          "percent": 6.490981881216724
+          "percent": 6.490981881216724,
+          "color": "#0047ab"
         },
         {
           "name": "UXD",
           "votes": 65090,
-          "percent": 5.372900243509844
+          "percent": 5.372900243509844,
+          "color": "#3f4f3a"
         },
         {
           "name": "DVD",
           "votes": 32949,
-          "percent": 2.719798588468364
+          "percent": 2.719798588468364,
+          "color": "#1d4e89"
         },
         {
           "name": "DVC",
           "votes": 22926,
-          "percent": 1.892442940278179
+          "percent": 1.892442940278179,
+          "color": "#c9a400"
         },
         {
           "name": "EXG",
           "votes": 19386,
-          "percent": 1.6002311279871229
+          "percent": 1.6002311279871229,
+          "color": "#6b4c9a"
         },
         {
           "name": "HOR",
           "votes": 17256,
-          "percent": 1.4244087663543687
+          "percent": 1.4244087663543687,
+          "color": "#e87722"
         },
         {
           "name": "REC",
           "votes": 14046,
-          "percent": 1.1594370382599364
+          "percent": 1.1594370382599364,
+          "color": "#6b4423"
         },
         {
           "name": "DVG",
           "votes": 12130,
-          "percent": 1.0012794585001445
+          "percent": 1.0012794585001445,
+          "color": "#8a3d00"
         },
         {
           "name": "DIV",
           "votes": 6502,
-          "percent": 0.5367122043831772
+          "percent": 0.5367122043831772,
+          "color": "#5c564c"
         },
         {
           "name": "UDI",
           "votes": 2803,
-          "percent": 0.2313756242519295
+          "percent": 0.2313756242519295,
+          "color": "#7ba3d0"
         },
         {
           "name": "ECO",
           "votes": 1474,
-          "percent": 0.12167237607825333
+          "percent": 0.12167237607825333,
+          "color": "#46962b"
         },
         {
           "name": "DSV",
           "votes": 885,
-          "percent": 0.07305295307276405
+          "percent": 0.07305295307276405,
+          "color": "#3f4f3a"
         },
         {
           "name": "REG",
           "votes": 149,
-          "percent": 0.012299310743324115
+          "percent": 0.012299310743324115,
+          "color": "#2f6b34"
         }
       ]
     },
@@ -264,72 +298,86 @@
         {
           "name": "RN",
           "votes": 454487,
-          "percent": 33.869851095081984
+          "percent": 33.869851095081984,
+          "color": "#0b3a82"
         },
         {
           "name": "UG",
           "votes": 324970,
-          "percent": 24.21782253478932
+          "percent": 24.21782253478932,
+          "color": "#c4121a"
         },
         {
           "name": "ENS",
           "votes": 270895,
-          "percent": 20.187977461186424
+          "percent": 20.187977461186424,
+          "color": "#e87722"
         },
         {
           "name": "LR",
           "votes": 150399,
-          "percent": 11.208223194171088
+          "percent": 11.208223194171088,
+          "color": "#0047ab"
         },
         {
           "name": "UXD",
           "votes": 81472,
-          "percent": 6.07155872097226
+          "percent": 6.07155872097226,
+          "color": "#3f4f3a"
         },
         {
           "name": "DVD",
           "votes": 20057,
-          "percent": 1.4947129475959915
+          "percent": 1.4947129475959915,
+          "color": "#1d4e89"
         },
         {
           "name": "EXG",
           "votes": 19518,
-          "percent": 1.4545449125581376
+          "percent": 1.4545449125581376,
+          "color": "#6b4c9a"
         },
         {
           "name": "DSV",
           "votes": 6835,
-          "percent": 0.5093664554429178
+          "percent": 0.5093664554429178,
+          "color": "#3f4f3a"
         },
         {
           "name": "ECO",
           "votes": 4070,
-          "percent": 0.3033096523266533
+          "percent": 0.3033096523266533,
+          "color": "#46962b"
         },
         {
           "name": "REC",
           "votes": 3912,
-          "percent": 0.29153497786286675
+          "percent": 0.29153497786286675,
+          "color": "#6b4423"
         },
         {
           "name": "DVG",
           "votes": 3417,
-          "percent": 0.25464596609340895
+          "percent": 0.25464596609340895,
+          "color": "#8a3d00"
         },
         {
           "name": "DIV",
           "votes": 1596,
-          "percent": 0.11893911673546405
+          "percent": 0.11893911673546405,
+          "color": "#5c564c"
         },
         {
           "name": "DVC",
           "votes": 233,
-          "percent": 0.017363918671280152
+          "percent": 0.017363918671280152,
+          "color": "#c9a400"
         },
         {
           "name": "REG",
           "votes": 2,
-          "percent": 0.00014904651219982965
+          "percent": 0.00014904651219982965,
+          "color": "#2f6b34"
         }
       ]
     },
@@ -345,72 +393,86 @@
         {
           "name": "RN",
           "votes": 545939,
-          "percent": 33.76045701677575
+          "percent": 33.76045701677575,
+          "color": "#0b3a82"
         },
         {
           "name": "UG",
           "votes": 425318,
-          "percent": 26.301345127314644
+          "percent": 26.301345127314644,
+          "color": "#c4121a"
         },
         {
           "name": "ENS",
           "votes": 258187,
-          "percent": 15.966089830164691
+          "percent": 15.966089830164691,
+          "color": "#e87722"
         },
         {
           "name": "DVD",
           "votes": 140917,
-          "percent": 8.714201259541795
+          "percent": 8.714201259541795,
+          "color": "#1d4e89"
         },
         {
           "name": "HOR",
           "votes": 101052,
-          "percent": 6.248979652413957
+          "percent": 6.248979652413957,
+          "color": "#e87722"
         },
         {
           "name": "UXD",
           "votes": 43206,
-          "percent": 2.671826533489663
+          "percent": 2.671826533489663,
+          "color": "#3f4f3a"
         },
         {
           "name": "LR",
           "votes": 26312,
-          "percent": 1.6271142838767767
+          "percent": 1.6271142838767767,
+          "color": "#0047ab"
         },
         {
           "name": "EXG",
           "votes": 20820,
-          "percent": 1.287493135843512
+          "percent": 1.287493135843512,
+          "color": "#6b4c9a"
         },
         {
           "name": "DVC",
           "votes": 20368,
-          "percent": 1.2595417959106943
+          "percent": 1.2595417959106943,
+          "color": "#c9a400"
         },
         {
           "name": "REC",
           "votes": 16071,
-          "percent": 0.9938185488060078
+          "percent": 0.9938185488060078,
+          "color": "#6b4423"
         },
         {
           "name": "DSV",
           "votes": 9331,
-          "percent": 0.5770220197192993
+          "percent": 0.5770220197192993,
+          "color": "#3f4f3a"
         },
         {
           "name": "DIV",
           "votes": 7532,
-          "percent": 0.4657732132167787
+          "percent": 0.4657732132167787,
+          "color": "#5c564c"
         },
         {
           "name": "DVG",
           "votes": 1404,
-          "percent": 0.08682230368512445
+          "percent": 0.08682230368512445,
+          "color": "#8a3d00"
         },
         {
           "name": "ECO",
           "votes": 639,
-          "percent": 0.03951527924130664
+          "percent": 0.03951527924130664,
+          "color": "#46962b"
         }
       ]
     },
@@ -426,87 +488,104 @@
         {
           "name": "RN",
           "votes": 1128247,
-          "percent": 41.83708394100631
+          "percent": 41.83708394100631,
+          "color": "#0b3a82"
         },
         {
           "name": "UG",
           "votes": 609323,
-          "percent": 22.59460694172977
+          "percent": 22.59460694172977,
+          "color": "#c4121a"
         },
         {
           "name": "ENS",
           "votes": 373007,
-          "percent": 13.831656693598955
+          "percent": 13.831656693598955,
+          "color": "#e87722"
         },
         {
           "name": "LR",
           "votes": 173615,
-          "percent": 6.43790351617847
+          "percent": 6.43790351617847,
+          "color": "#0047ab"
         },
         {
           "name": "DVD",
           "votes": 111120,
-          "percent": 4.120495571913438
+          "percent": 4.120495571913438,
+          "color": "#1d4e89"
         },
         {
           "name": "UXD",
           "votes": 53975,
-          "percent": 2.001473618556766
+          "percent": 2.001473618556766,
+          "color": "#3f4f3a"
         },
         {
           "name": "DVG",
           "votes": 50788,
-          "percent": 1.8832948983651883
+          "percent": 1.8832948983651883,
+          "color": "#8a3d00"
         },
         {
           "name": "UDI",
           "votes": 39076,
-          "percent": 1.448996444997206
+          "percent": 1.448996444997206,
+          "color": "#7ba3d0"
         },
         {
           "name": "EXG",
           "votes": 38703,
-          "percent": 1.4351650478740623
+          "percent": 1.4351650478740623,
+          "color": "#6b4c9a"
         },
         {
           "name": "DVC",
           "votes": 33557,
-          "percent": 1.24434368166576
+          "percent": 1.24434368166576,
+          "color": "#c9a400"
         },
         {
           "name": "EXD",
           "votes": 24130,
-          "percent": 0.8947764412371425
+          "percent": 0.8947764412371425,
+          "color": "#1d4e89"
         },
         {
           "name": "DIV",
           "votes": 20439,
-          "percent": 0.7579086482571883
+          "percent": 0.7579086482571883,
+          "color": "#5c564c"
         },
         {
           "name": "HOR",
           "votes": 17168,
-          "percent": 0.6366150826008812
+          "percent": 0.6366150826008812,
+          "color": "#e87722"
         },
         {
           "name": "REC",
           "votes": 14759,
-          "percent": 0.5472857644516778
+          "percent": 0.5472857644516778,
+          "color": "#6b4423"
         },
         {
           "name": "DSV",
           "votes": 4537,
-          "percent": 0.1682387365890143
+          "percent": 0.1682387365890143,
+          "color": "#3f4f3a"
         },
         {
           "name": "ECO",
           "votes": 4261,
-          "percent": 0.15800424434776064
+          "percent": 0.15800424434776064,
+          "color": "#46962b"
         },
         {
           "name": "REG",
           "votes": 58,
-          "percent": 0.002150726630408382
+          "percent": 0.002150726630408382,
+          "color": "#2f6b34"
         }
       ]
     },
@@ -522,82 +601,98 @@
         {
           "name": "RN",
           "votes": 934328,
-          "percent": 37.6900024647224
+          "percent": 37.6900024647224,
+          "color": "#0b3a82"
         },
         {
           "name": "UG",
           "votes": 527019,
-          "percent": 21.259501383834728
+          "percent": 21.259501383834728,
+          "color": "#c4121a"
         },
         {
           "name": "ENS",
           "votes": 463191,
-          "percent": 18.68473376762468
+          "percent": 18.68473376762468,
+          "color": "#e87722"
         },
         {
           "name": "LR",
           "votes": 199171,
-          "percent": 8.034389936832916
+          "percent": 8.034389936832916,
+          "color": "#0047ab"
         },
         {
           "name": "DVD",
           "votes": 168636,
-          "percent": 6.802633824139838
+          "percent": 6.802633824139838,
+          "color": "#1d4e89"
         },
         {
           "name": "EXG",
           "votes": 27698,
-          "percent": 1.1173139285859794
+          "percent": 1.1173139285859794,
+          "color": "#6b4c9a"
         },
         {
           "name": "EXD",
           "votes": 25151,
-          "percent": 1.0145700995691376
+          "percent": 1.0145700995691376,
+          "color": "#1d4e89"
         },
         {
           "name": "REG",
           "votes": 24919,
-          "percent": 1.005211415496932
+          "percent": 1.005211415496932,
+          "color": "#2f6b34"
         },
         {
           "name": "DVC",
           "votes": 23195,
-          "percent": 0.9356667114431293
+          "percent": 0.9356667114431293,
+          "color": "#c9a400"
         },
         {
           "name": "UXD",
           "votes": 21890,
-          "percent": 0.8830241135369734
+          "percent": 0.8830241135369734,
+          "color": "#3f4f3a"
         },
         {
           "name": "UDI",
           "votes": 16631,
-          "percent": 0.6708804948484881
+          "percent": 0.6708804948484881,
+          "color": "#7ba3d0"
         },
         {
           "name": "ECO",
           "votes": 14810,
-          "percent": 0.5974228927127719
+          "percent": 0.5974228927127719,
+          "color": "#46962b"
         },
         {
           "name": "REC",
           "votes": 12411,
-          "percent": 0.5006492587075092
+          "percent": 0.5006492587075092,
+          "color": "#6b4423"
         },
         {
           "name": "DSV",
           "votes": 9326,
-          "percent": 0.3762029640404666
+          "percent": 0.3762029640404666,
+          "color": "#3f4f3a"
         },
         {
           "name": "DIV",
           "votes": 7945,
-          "percent": 0.32049459031755384
+          "percent": 0.32049459031755384,
+          "color": "#5c564c"
         },
         {
           "name": "DVG",
           "votes": 2660,
-          "percent": 0.10730215358649381
+          "percent": 0.10730215358649381,
+          "color": "#8a3d00"
         }
       ]
     },
@@ -613,87 +708,104 @@
         {
           "name": "UG",
           "votes": 564090,
-          "percent": 28.948906660316712
+          "percent": 28.948906660316712,
+          "color": "#c4121a"
         },
         {
           "name": "ENS",
           "votes": 496136,
-          "percent": 25.46153052672959
+          "percent": 25.46153052672959,
+          "color": "#e87722"
         },
         {
           "name": "RN",
           "votes": 438260,
-          "percent": 22.49135392038576
+          "percent": 22.49135392038576,
+          "color": "#0b3a82"
         },
         {
           "name": "UXD",
           "votes": 139930,
-          "percent": 7.181159937205265
+          "percent": 7.181159937205265,
+          "color": "#3f4f3a"
         },
         {
           "name": "DVD",
           "votes": 103592,
-          "percent": 5.316306154612791
+          "percent": 5.316306154612791,
+          "color": "#1d4e89"
         },
         {
           "name": "LR",
           "votes": 81738,
-          "percent": 4.194766318496991
+          "percent": 4.194766318496991,
+          "color": "#0047ab"
         },
         {
           "name": "EXG",
           "votes": 24848,
-          "percent": 1.275190896302983
+          "percent": 1.275190896302983,
+          "color": "#6b4c9a"
         },
         {
           "name": "HOR",
           "votes": 23294,
-          "percent": 1.1954401456246655
+          "percent": 1.1954401456246655,
+          "color": "#e87722"
         },
         {
           "name": "UDI",
           "votes": 21919,
-          "percent": 1.124875613975575
+          "percent": 1.124875613975575,
+          "color": "#7ba3d0"
         },
         {
           "name": "DSV",
           "votes": 15146,
-          "percent": 0.7772875609870002
+          "percent": 0.7772875609870002,
+          "color": "#3f4f3a"
         },
         {
           "name": "DVC",
           "votes": 13326,
-          "percent": 0.6838857809132949
+          "percent": 0.6838857809132949,
+          "color": "#c9a400"
         },
         {
           "name": "DVG",
           "votes": 12060,
-          "percent": 0.6189150921367504
+          "percent": 0.6189150921367504,
+          "color": "#8a3d00"
         },
         {
           "name": "REC",
           "votes": 5496,
-          "percent": 0.2820528479588375
+          "percent": 0.2820528479588375,
+          "color": "#6b4423"
         },
         {
           "name": "ECO",
           "votes": 3306,
-          "percent": 0.16966279391410424
+          "percent": 0.16966279391410424,
+          "color": "#46962b"
         },
         {
           "name": "REG",
           "votes": 3235,
-          "percent": 0.1660190980980421
+          "percent": 0.1660190980980421,
+          "color": "#2f6b34"
         },
         {
           "name": "EXD",
           "votes": 1895,
-          "percent": 0.09725075452729205
+          "percent": 0.09725075452729205,
+          "color": "#1d4e89"
         },
         {
           "name": "DIV",
           "votes": 300,
-          "percent": 0.015395897814347026
+          "percent": 0.015395897814347026,
+          "color": "#5c564c"
         }
       ]
     },
@@ -709,72 +821,86 @@
         {
           "name": "ENS",
           "votes": 551437,
-          "percent": 29.723793178539935
+          "percent": 29.723793178539935,
+          "color": "#e87722"
         },
         {
           "name": "UG",
           "votes": 549783,
-          "percent": 29.634638562659415
+          "percent": 29.634638562659415,
+          "color": "#c4121a"
         },
         {
           "name": "RN",
           "votes": 513139,
-          "percent": 27.6594379917249
+          "percent": 27.6594379917249,
+          "color": "#0b3a82"
         },
         {
           "name": "DVD",
           "votes": 66205,
-          "percent": 3.5686102444798524
+          "percent": 3.5686102444798524,
+          "color": "#1d4e89"
         },
         {
           "name": "LR",
           "votes": 61747,
-          "percent": 3.328313220540706
+          "percent": 3.328313220540706,
+          "color": "#0047ab"
         },
         {
           "name": "REG",
           "votes": 41710,
-          "percent": 2.2482702710860907
+          "percent": 2.2482702710860907,
+          "color": "#2f6b34"
         },
         {
           "name": "EXG",
           "votes": 24261,
-          "percent": 1.3077268052462154
+          "percent": 1.3077268052462154,
+          "color": "#6b4c9a"
         },
         {
           "name": "DVG",
           "votes": 17591,
-          "percent": 0.9481976106131724
+          "percent": 0.9481976106131724,
+          "color": "#8a3d00"
         },
         {
           "name": "DVC",
           "votes": 15756,
-          "percent": 0.8492866552680999
+          "percent": 0.8492866552680999,
+          "color": "#c9a400"
         },
         {
           "name": "DSV",
           "votes": 5150,
-          "percent": 0.27759750410197476
+          "percent": 0.27759750410197476,
+          "color": "#3f4f3a"
         },
         {
           "name": "ECO",
           "votes": 4558,
-          "percent": 0.24568726673724292
+          "percent": 0.24568726673724292,
+          "color": "#46962b"
         },
         {
           "name": "REC",
           "votes": 2911,
-          "percent": 0.15690996785259195
+          "percent": 0.15690996785259195,
+          "color": "#6b4423"
         },
         {
           "name": "DIV",
           "votes": 901,
-          "percent": 0.04856608761085034
+          "percent": 0.04856608761085034,
+          "color": "#5c564c"
         },
         {
           "name": "EXD",
           "votes": 55,
-          "percent": 0.0029646335389531286
+          "percent": 0.0029646335389531286,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -790,87 +916,104 @@
         {
           "name": "RN",
           "votes": 982357,
-          "percent": 31.764237219136593
+          "percent": 31.764237219136593,
+          "color": "#0b3a82"
         },
         {
           "name": "UG",
           "votes": 888809,
-          "percent": 28.739388957887584
+          "percent": 28.739388957887584,
+          "color": "#c4121a"
         },
         {
           "name": "ENS",
           "votes": 626003,
-          "percent": 20.241630885605908
+          "percent": 20.241630885605908,
+          "color": "#e87722"
         },
         {
           "name": "LR",
           "votes": 158604,
-          "percent": 5.128415718424097
+          "percent": 5.128415718424097,
+          "color": "#0047ab"
         },
         {
           "name": "DVG",
           "votes": 85193,
-          "percent": 2.7546916868408364
+          "percent": 2.7546916868408364,
+          "color": "#8a3d00"
         },
         {
           "name": "UXD",
           "votes": 80038,
-          "percent": 2.588006212146149
+          "percent": 2.588006212146149,
+          "color": "#3f4f3a"
         },
         {
           "name": "DVC",
           "votes": 61703,
-          "percent": 1.9951491455065573
+          "percent": 1.9951491455065573,
+          "color": "#c9a400"
         },
         {
           "name": "HOR",
           "votes": 59783,
-          "percent": 1.933066485678468
+          "percent": 1.933066485678468,
+          "color": "#e87722"
         },
         {
           "name": "DVD",
           "votes": 42902,
-          "percent": 1.3872240999711898
+          "percent": 1.3872240999711898,
+          "color": "#1d4e89"
         },
         {
           "name": "EXG",
           "votes": 37814,
-          "percent": 1.2227050514267532
+          "percent": 1.2227050514267532,
+          "color": "#6b4c9a"
         },
         {
           "name": "ECO",
           "votes": 34726,
-          "percent": 1.1228554402032431
+          "percent": 1.1228554402032431,
+          "color": "#46962b"
         },
         {
           "name": "REC",
           "votes": 15866,
-          "percent": 0.5130226462669082
+          "percent": 0.5130226462669082,
+          "color": "#6b4423"
         },
         {
           "name": "REG",
           "votes": 10792,
-          "percent": 0.34895628378371824
+          "percent": 0.34895628378371824,
+          "color": "#2f6b34"
         },
         {
           "name": "DSV",
           "votes": 2862,
-          "percent": 0.09254196480624552
+          "percent": 0.09254196480624552,
+          "color": "#3f4f3a"
         },
         {
           "name": "DIV",
           "votes": 2377,
-          "percent": 0.0768596262559209
+          "percent": 0.0768596262559209,
+          "color": "#5c564c"
         },
         {
           "name": "UDI",
           "votes": 2293,
-          "percent": 0.07414350988844198
+          "percent": 0.07414350988844198,
+          "color": "#7ba3d0"
         },
         {
           "name": "EXD",
           "votes": 529,
-          "percent": 0.017105066171385002
+          "percent": 0.017105066171385002,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -886,87 +1029,104 @@
         {
           "name": "RN",
           "votes": 982220,
-          "percent": 32.70524688429098
+          "percent": 32.70524688429098,
+          "color": "#0b3a82"
         },
         {
           "name": "UG",
           "votes": 927913,
-          "percent": 30.896971912751823
+          "percent": 30.896971912751823,
+          "color": "#c4121a"
         },
         {
           "name": "ENS",
           "votes": 586866,
-          "percent": 19.541037056867413
+          "percent": 19.541037056867413,
+          "color": "#e87722"
         },
         {
           "name": "UXD",
           "votes": 177833,
-          "percent": 5.921353840457451
+          "percent": 5.921353840457451,
+          "color": "#3f4f3a"
         },
         {
           "name": "LR",
           "votes": 80789,
-          "percent": 2.690053338900637
+          "percent": 2.690053338900637,
+          "color": "#0047ab"
         },
         {
           "name": "DVD",
           "votes": 42047,
-          "percent": 1.4000504120703945
+          "percent": 1.4000504120703945,
+          "color": "#1d4e89"
         },
         {
           "name": "DVC",
           "votes": 40305,
-          "percent": 1.3420465635716519
+          "percent": 1.3420465635716519,
+          "color": "#c9a400"
         },
         {
           "name": "DVG",
           "votes": 33994,
-          "percent": 1.1319074775351627
+          "percent": 1.1319074775351627,
+          "color": "#8a3d00"
         },
         {
           "name": "EXG",
           "votes": 32587,
-          "percent": 1.0850582152861783
+          "percent": 1.0850582152861783,
+          "color": "#6b4c9a"
         },
         {
           "name": "REC",
           "votes": 28392,
-          "percent": 0.9453761576212961
+          "percent": 0.9453761576212961,
+          "color": "#6b4423"
         },
         {
           "name": "DIV",
           "votes": 27734,
-          "percent": 0.9234665523904279
+          "percent": 0.9234665523904279,
+          "color": "#5c564c"
         },
         {
           "name": "REG",
           "votes": 13403,
-          "percent": 0.44628334180748913
+          "percent": 0.44628334180748913,
+          "color": "#2f6b34"
         },
         {
           "name": "ECO",
           "votes": 12365,
-          "percent": 0.41172077306943244
+          "percent": 0.41172077306943244,
+          "color": "#46962b"
         },
         {
           "name": "RDG",
           "votes": 9952,
-          "percent": 0.33137445479878624
+          "percent": 0.33137445479878624,
+          "color": "#3f4f3a"
         },
         {
           "name": "UDI",
           "votes": 4866,
-          "percent": 0.16202452743678597
+          "percent": 0.16202452743678597,
+          "color": "#7ba3d0"
         },
         {
           "name": "DSV",
           "votes": 1982,
-          "percent": 0.0659951938717036
+          "percent": 0.0659951938717036,
+          "color": "#3f4f3a"
         },
         {
           "name": "EXD",
           "votes": 1,
-          "percent": 3.329727238733785e-05
+          "percent": 3.329727238733785e-05,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -982,87 +1142,104 @@
         {
           "name": "UG",
           "votes": 1125018,
-          "percent": 29.000429199484962
+          "percent": 29.000429199484962,
+          "color": "#c4121a"
         },
         {
           "name": "RN",
           "votes": 1017781,
-          "percent": 26.23610096112329
+          "percent": 26.23610096112329,
+          "color": "#0b3a82"
         },
         {
           "name": "ENS",
           "votes": 710936,
-          "percent": 18.326328230628345
+          "percent": 18.326328230628345,
+          "color": "#e87722"
         },
         {
           "name": "LR",
           "votes": 511675,
-          "percent": 13.189828616650104
+          "percent": 13.189828616650104,
+          "color": "#0047ab"
         },
         {
           "name": "UXD",
           "votes": 265233,
-          "percent": 6.837109128802378
+          "percent": 6.837109128802378,
+          "color": "#3f4f3a"
         },
         {
           "name": "DVD",
           "votes": 100424,
-          "percent": 2.5887044491102165
+          "percent": 2.5887044491102165,
+          "color": "#1d4e89"
         },
         {
           "name": "EXG",
           "votes": 41559,
-          "percent": 1.0712973811098094
+          "percent": 1.0712973811098094,
+          "color": "#6b4c9a"
         },
         {
           "name": "REC",
           "votes": 23177,
-          "percent": 0.5974508386145492
+          "percent": 0.5974508386145492,
+          "color": "#6b4423"
         },
         {
           "name": "DVC",
           "votes": 20276,
-          "percent": 0.5226695950187082
+          "percent": 0.5226695950187082,
+          "color": "#c9a400"
         },
         {
           "name": "DVG",
           "votes": 16593,
-          "percent": 0.4277301533904826
+          "percent": 0.4277301533904826,
+          "color": "#8a3d00"
         },
         {
           "name": "ECO",
           "votes": 10919,
-          "percent": 0.2814672177948942
+          "percent": 0.2814672177948942,
+          "color": "#46962b"
         },
         {
           "name": "UDI",
           "votes": 9486,
-          "percent": 0.24452770656675213
+          "percent": 0.24452770656675213,
+          "color": "#7ba3d0"
         },
         {
           "name": "REG",
           "votes": 8747,
-          "percent": 0.22547795164868023
+          "percent": 0.22547795164868023,
+          "color": "#2f6b34"
         },
         {
           "name": "DIV",
           "votes": 6165,
-          "percent": 0.15891980929622884
+          "percent": 0.15891980929622884,
+          "color": "#5c564c"
         },
         {
           "name": "DSV",
           "votes": 5847,
-          "percent": 0.1507224857996837
+          "percent": 0.1507224857996837,
+          "color": "#3f4f3a"
         },
         {
           "name": "HOR",
           "votes": 3377,
-          "percent": 0.08705145109381424
+          "percent": 0.08705145109381424,
+          "color": "#e87722"
         },
         {
           "name": "EXD",
           "votes": 2102,
-          "percent": 0.054184823867100246
+          "percent": 0.054184823867100246,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -1078,82 +1255,98 @@
         {
           "name": "RN",
           "votes": 946238,
-          "percent": 39.03865298539637
+          "percent": 39.03865298539637,
+          "color": "#0b3a82"
         },
         {
           "name": "UG",
           "votes": 581712,
-          "percent": 23.999514821261556
+          "percent": 23.999514821261556,
+          "color": "#c4121a"
         },
         {
           "name": "ENS",
           "votes": 445134,
-          "percent": 18.364757870642933
+          "percent": 18.364757870642933,
+          "color": "#e87722"
         },
         {
           "name": "LR",
           "votes": 170537,
-          "percent": 7.035793071268054
+          "percent": 7.035793071268054,
+          "color": "#0047ab"
         },
         {
           "name": "UXD",
           "votes": 133795,
-          "percent": 5.519939567192511
+          "percent": 5.519939567192511,
+          "color": "#3f4f3a"
         },
         {
           "name": "ECO",
           "votes": 37606,
-          "percent": 1.551499288940854
+          "percent": 1.551499288940854,
+          "color": "#46962b"
         },
         {
           "name": "REC",
           "votes": 28320,
-          "percent": 1.168389615029649
+          "percent": 1.168389615029649,
+          "color": "#6b4423"
         },
         {
           "name": "DVG",
           "votes": 22007,
-          "percent": 0.9079360966792899
+          "percent": 0.9079360966792899,
+          "color": "#8a3d00"
         },
         {
           "name": "EXG",
           "votes": 18257,
-          "percent": 0.7532234887569317
+          "percent": 0.7532234887569317,
+          "color": "#6b4c9a"
         },
         {
           "name": "UDI",
           "votes": 17345,
-          "percent": 0.7155973825102141
+          "percent": 0.7155973825102141,
+          "color": "#7ba3d0"
         },
         {
           "name": "DIV",
           "votes": 10341,
-          "percent": 0.42663548760669495
+          "percent": 0.42663548760669495,
+          "color": "#5c564c"
         },
         {
           "name": "DSV",
           "votes": 4202,
-          "percent": 0.1733606342639331
+          "percent": 0.1733606342639331,
+          "color": "#3f4f3a"
         },
         {
           "name": "REG",
           "votes": 3757,
-          "percent": 0.15500140479047994
+          "percent": 0.15500140479047994,
+          "color": "#2f6b34"
         },
         {
           "name": "DVC",
           "votes": 1873,
-          "percent": 0.07727379057028717
+          "percent": 0.07727379057028717,
+          "color": "#c9a400"
         },
         {
           "name": "EXD",
           "votes": 1835,
-          "percent": 0.07570603614334061
+          "percent": 0.07570603614334061,
+          "color": "#1d4e89"
         },
         {
           "name": "DVD",
           "votes": 890,
-          "percent": 0.03671845894690635
+          "percent": 0.03671845894690635,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -1169,67 +1362,80 @@
         {
           "name": "REG",
           "votes": 53294,
-          "percent": 34.582914246779794
+          "percent": 34.582914246779794,
+          "color": "#2f6b34"
         },
         {
           "name": "RN",
           "votes": 46127,
-          "percent": 29.93218909185296
+          "percent": 29.93218909185296,
+          "color": "#0b3a82"
         },
         {
           "name": "DVD",
           "votes": 21638,
-          "percent": 14.041075889815385
+          "percent": 14.041075889815385,
+          "color": "#1d4e89"
         },
         {
           "name": "ENS",
           "votes": 10210,
-          "percent": 6.625352843840239
+          "percent": 6.625352843840239,
+          "color": "#e87722"
         },
         {
           "name": "DVC",
           "votes": 7481,
-          "percent": 4.85448233347393
+          "percent": 4.85448233347393,
+          "color": "#c9a400"
         },
         {
           "name": "SOC",
           "votes": 4780,
-          "percent": 3.1017812530417572
+          "percent": 3.1017812530417572,
+          "color": "#e3000f"
         },
         {
           "name": "FI",
           "votes": 3353,
-          "percent": 2.175789234612764
+          "percent": 2.175789234612764,
+          "color": "#c4121a"
         },
         {
           "name": "COM",
           "votes": 3125,
-          "percent": 2.027838162291944
+          "percent": 2.027838162291944,
+          "color": "#a32020"
         },
         {
           "name": "VEC",
           "votes": 2668,
-          "percent": 1.73128710943837
+          "percent": 1.73128710943837,
+          "color": "#46962b"
         },
         {
           "name": "EXG",
           "votes": 616,
-          "percent": 0.39972745855098796
+          "percent": 0.39972745855098796,
+          "color": "#6b4c9a"
         },
         {
           "name": "DSV",
           "votes": 393,
-          "percent": 0.25502092728983483
+          "percent": 0.25502092728983483,
+          "color": "#3f4f3a"
         },
         {
           "name": "REC",
           "votes": 370,
-          "percent": 0.24009603841536614
+          "percent": 0.24009603841536614,
+          "color": "#6b4423"
         },
         {
           "name": "DIV",
           "votes": 50,
-          "percent": 0.0324454105966711
+          "percent": 0.0324454105966711,
+          "color": "#5c564c"
         }
       ]
     }

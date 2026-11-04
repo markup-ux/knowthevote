@@ -138,6 +138,12 @@ h3 { font-size: 26px; margin: 0; }
 .swatch.d { background: #1e4d7b; }
 .swatch.r { background: #8d3232; }
 .swatch.o { background: #5c4a2a; }
+.swatch.mix { width: 42px; background: linear-gradient(90deg, #1e4d7b 0%, #6a3d78 50%, #8d3232 100%); }
+.result-legend .blend-key { display: none; }
+.result-legend.is-blend span { display: none; }
+.result-legend.is-blend span.stay,
+.result-legend.is-blend span.blend-key { display: inline-flex; }
+.blend-switch { margin-top: 8px; }
 .state-list { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0 0; }
 .state-list a { color: var(--ink); text-decoration: none; border-bottom: 2px solid transparent; }
 .state-list a.is-on { border-bottom-color: #0a3161; background: #8eafd4; }

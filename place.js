@@ -15,6 +15,70 @@
     return strings[key] || fallback;
   }
 
+  var BLEND_LINE = "The color mixes the votes reported in that place. Where those votes are blue and red, the mix is purple. A row with no color is left out of the mix. A place with no votes stays beige. This does not call a race.";
+
+  function blendOn() {
+    try { return localStorage.getItem("leaders-blend") !== "0"; }
+    catch (error) { return true; }
+  }
+
+  function rememberBlend(on) {
+    try { localStorage.setItem("leaders-blend", on ? "1" : "0"); }
+    catch (error) {}
+  }
+
+  function hexChannels(hex) {
+    if (!hex || hex.charAt(0) !== "#") return null;
+    if (hex.length === 4) {
+      return [parseInt(hex.charAt(1) + hex.charAt(1), 16), parseInt(hex.charAt(2) + hex.charAt(2), 16), parseInt(hex.charAt(3) + hex.charAt(3), 16)];
+    }
+    if (hex.length === 7) {
+      return [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
+    }
+    return null;
+  }
+
+  function mixColor(parts) {
+    var total = 0;
+    var acc = [0, 0, 0];
+    var i;
+    for (i = 0; i < parts.length; i++) {
+      var votes = parts[i].votes || 0;
+      if (!(votes > 0)) continue;
+      var rgb = hexChannels(parts[i].color);
+      if (!rgb) return "";
+      total += votes;
+      acc[0] += rgb[0] * votes;
+      acc[1] += rgb[1] * votes;
+      acc[2] += rgb[2] * votes;
+    }
+    if (!(total > 0)) return "";
+    return "rgb(" + acc.map(function (channel) { return Math.round(channel / total); }).join(",") + ")";
+  }
+
+  function mixRows(rows) {
+    var parts = [];
+    var i;
+    for (i = 0; i < (rows || []).length; i++) {
+      var votes = rows[i].votes || 0;
+      if (!(votes > 0) || !rows[i].color) continue;
+      parts.push({ color: rows[i].color, votes: votes });
+    }
+    return mixColor(parts);
+  }
+
+  function blendTitle(name, rows) {
+    var ranked = (rows || []).filter(function (row) { return row.votes > 0; }).sort(function (a, b) { return b.votes - a.votes; });
+    var total = ranked.reduce(function (sum, row) { return sum + row.votes; }, 0);
+    if (!total) return name;
+    var bits = ranked.slice(0, 2).map(function (row) {
+      var label = row.name || "";
+      if (label.length > 28) label = label.slice(0, 27) + "…";
+      return label + " " + Math.round(row.votes / total * 100) + "%";
+    });
+    return name + ": " + bits.join(", ") + ", blended";
+  }
+
   function tint(hex, amount) {
     var chip = [235, 228, 214];
     var rgb = hex.length === 4
@@ -60,7 +124,11 @@
         var slug = path.getAttribute("data-slug");
         var place = bySlug[slug];
         var name = path.getAttribute("data-name") || "";
-        if (place && place.votes > 0 && place.leader && place.color) {
+        var mixed = place && place.votes > 0 && blendOn() ? mixRows(place.rows || []) : "";
+        if (mixed) {
+          path.style.setProperty("--lead", mixed);
+          path.setAttribute("title", blendTitle(name, place.rows || []));
+        } else if (place && place.votes > 0 && place.leader && place.color) {
           path.style.setProperty("--lead", tint(place.color, place.amount || 0.7));
           path.setAttribute("title", name + ": " + place.leader);
           if (!seen[place.leader]) {
@@ -91,18 +159,65 @@
     var legend = document.getElementById("place-legend");
     if (!legend) return;
     legend.textContent = "";
-    var blank = el("span");
+    var blank = el("span", "stay");
     blank.appendChild(el("i", "swatch blank"));
     blank.appendChild(document.createTextNode(" " + text(data, "blank", "No votes reported")));
     legend.appendChild(blank);
-    painted.forEach(function (place) {
-      var span = el("span");
-      var swatch = el("i", "swatch");
-      swatch.style.background = place.color;
-      span.appendChild(swatch);
-      span.appendChild(document.createTextNode(" " + place.leader));
-      legend.appendChild(span);
+    if (!blendOn()) {
+      painted.forEach(function (place) {
+        var span = el("span");
+        var swatch = el("i", "swatch");
+        swatch.style.background = place.color;
+        span.appendChild(swatch);
+        span.appendChild(document.createTextNode(" " + place.leader));
+        legend.appendChild(span);
+      });
+    }
+    var key = el("span", "blend-key");
+    key.appendChild(el("i", "swatch mix"));
+    key.appendChild(document.createTextNode(" Blue and red, mixed by the votes"));
+    legend.appendChild(key);
+    legend.classList.toggle("is-blend", blendOn());
+  }
+
+  function mountBlend(redraw) {
+    var legend = document.getElementById("place-legend");
+    if (!legend || document.getElementById("blend-switch")) return;
+    var bar = el("div", "sheet-switch blend-switch");
+    bar.id = "blend-switch";
+    bar.setAttribute("role", "group");
+    bar.setAttribute("aria-label", "How the map is colored");
+    var sub = legend.previousElementSibling;
+    var leadCopy = sub && sub.classList.contains("sub") ? sub.textContent : "";
+    var caption = el("p", "sub blend-caption", "");
+    caption.id = "blend-caption";
+    function paintCaption() {
+      var on = blendOn();
+      if (leadCopy && sub) sub.textContent = on ? BLEND_LINE : leadCopy;
+      caption.hidden = !on || !!leadCopy;
+      caption.textContent = on && !leadCopy ? BLEND_LINE : "";
+      bar.querySelectorAll("button").forEach(function (button) {
+        var chosen = button.getAttribute("data-blend") === (on ? "blend" : "ahead");
+        button.setAttribute("aria-pressed", chosen ? "true" : "false");
+      });
+    }
+    [["ahead", "Who is ahead"], ["blend", "Blend the votes"]].forEach(function (pair) {
+      var button = el("button", "", pair[1]);
+      button.type = "button";
+      button.setAttribute("data-blend", pair[0]);
+      button.addEventListener("click", function () {
+        rememberBlend(pair[0] === "blend");
+        paintCaption();
+        redraw();
+      });
+      bar.appendChild(button);
     });
+    if (leadCopy) legend.parentNode.insertBefore(bar, sub);
+    else {
+      legend.parentNode.insertBefore(bar, legend);
+      legend.parentNode.insertBefore(caption, legend);
+    }
+    paintCaption();
   }
 
   function paintStatus(data) {
@@ -210,13 +325,15 @@
     bindList();
   }
 
+  var latest = null;
+
   function load() {
     fetch(resultsUrl + "?t=" + Math.floor(Date.now() / EVERY), {cache: "no-store"})
       .then(function (response) {
         if (!response.ok) throw new Error("results");
         return response.json();
       })
-      .then(draw)
+      .then(function (data) { latest = data; draw(data); })
       .catch(function () {
         var status = document.getElementById("place-status");
         if (status && !document.body.getAttribute("data-place")) {
@@ -225,6 +342,7 @@
       });
   }
 
+  mountBlend(function () { if (latest) draw(latest); });
   load();
   setInterval(load, EVERY);
 })();

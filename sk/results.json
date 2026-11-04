@@ -137,37 +137,44 @@
         {
           "name": "Juraj Droba · SaS, Progresívne Slovensko, Demokrati, Team Bratislava",
           "votes": 188732,
-          "percent": 70.96762063766023
+          "percent": 70.96762063766023,
+          "color": "#3f4f3a"
         },
         {
           "name": "Rastislav Gajarský · SMER - SD, HLAS - sociálna demokracia, SNS",
           "votes": 30695,
-          "percent": 11.54203375936768
+          "percent": 11.54203375936768,
+          "color": "#3f4f3a"
         },
         {
           "name": "Zuzana Krajčovičová · PRAVDA, STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI",
           "votes": 25556,
-          "percent": 9.609650260772126
+          "percent": 9.609650260772126,
+          "color": "#3f4f3a"
         },
         {
           "name": "Dávid Staruch · NEKA",
           "votes": 12291,
-          "percent": 4.6217018060396855
+          "percent": 4.6217018060396855,
+          "color": "#3f4f3a"
         },
         {
           "name": "Ján Chalabala · KSS",
           "votes": 3377,
-          "percent": 1.2698305263197476
+          "percent": 1.2698305263197476,
+          "color": "#3f4f3a"
         },
         {
           "name": "Peter Poláček · SLOVEXIT",
           "votes": 2932,
-          "percent": 1.1025001786110453
+          "percent": 1.1025001786110453,
+          "color": "#3f4f3a"
         },
         {
           "name": "Ľudovít Líška · Jednota Slovanov",
           "votes": 2358,
-          "percent": 0.8866628312294832
+          "percent": 0.8866628312294832,
+          "color": "#3f4f3a"
         }
       ],
       "tables": [
@@ -327,37 +334,44 @@
         {
           "name": "Jozef Viskupič · Progresívne Slovensko, SaS, KDH, Demokrati, SLOVENSKO, Maďarské fórum, OKS",
           "votes": 103083,
-          "percent": 54.04910838345017
+          "percent": 54.04910838345017,
+          "color": "#3f4f3a"
         },
         {
           "name": "József Berényi · Magyar Szövetség - Maďarská aliancia",
           "votes": 39790,
-          "percent": 20.86293591161959
+          "percent": 20.86293591161959,
+          "color": "#3f4f3a"
         },
         {
           "name": "Peter Hambálek · SMER - SD, HLAS - sociálna demokracia, SNS, REPUBLIKA",
           "votes": 22263,
-          "percent": 11.673072183975545
+          "percent": 11.673072183975545,
+          "color": "#3f4f3a"
         },
         {
           "name": "Matej Lančarič · NEKA",
           "votes": 13644,
-          "percent": 7.1539054430293465
+          "percent": 7.1539054430293465,
+          "color": "#3f4f3a"
         },
         {
           "name": "Róbert Dohál · ApS",
           "votes": 5198,
-          "percent": 2.725447119090189
+          "percent": 2.725447119090189,
+          "color": "#3f4f3a"
         },
         {
           "name": "Jaroslav Cehlárik · PRAVDA",
           "votes": 4224,
-          "percent": 2.2147534880794457
+          "percent": 2.2147534880794457,
+          "color": "#3f4f3a"
         },
         {
           "name": "Štefan Pollák · SPOLOČNE OBČANIA SLOVENSKA",
           "votes": 2519,
-          "percent": 1.3207774707557112
+          "percent": 1.3207774707557112,
+          "color": "#3f4f3a"
         }
       ],
       "tables": [
@@ -487,22 +501,26 @@
         {
           "name": "Jaroslav Baška · SMER - SD, HLAS - sociálna demokracia, REPUBLIKA, SNS",
           "votes": 119827,
-          "percent": 57.44095412949585
+          "percent": 57.44095412949585,
+          "color": "#3f4f3a"
         },
         {
           "name": "Natália Svítková · Demokrati, SLOVENSKO, KDH, OKS, Progresívne Slovensko, SaS",
           "votes": 81400,
-          "percent": 39.02036824873328
+          "percent": 39.02036824873328,
+          "color": "#3f4f3a"
         },
         {
           "name": "Daniel Galas · SLOVEXIT",
           "votes": 4787,
-          "percent": 2.2947236217037617
+          "percent": 2.2947236217037617,
+          "color": "#3f4f3a"
         },
         {
           "name": "Lubomír Choleva · VLASTENCI SK",
           "votes": 2595,
-          "percent": 1.2439540000671112
+          "percent": 1.2439540000671112,
+          "color": "#3f4f3a"
         }
       ],
       "tables": [
@@ -617,37 +635,44 @@
         {
           "name": "Branislav Becík · HLAS - sociálna demokracia, SMER - SD, SNS, REPUBLIKA, PRAVDA, Bratia Slovenska",
           "votes": 115058,
-          "percent": 50.47266857050109
+          "percent": 50.47266857050109,
+          "color": "#3f4f3a"
         },
         {
           "name": "Henrich Varga · Tím Kraj Nitra, SaS, Progresívne Slovensko, KDH, SLOVENSKO, Demokrati, Maďarské fórum, OKS",
           "votes": 65807,
-          "percent": 28.867657186974967
+          "percent": 28.867657186974967,
+          "color": "#3f4f3a"
         },
         {
           "name": "Tibor Csenger · Magyar Szövetség - Maďarská aliancia",
           "votes": 23726,
-          "percent": 10.40792065309417
+          "percent": 10.40792065309417,
+          "color": "#3f4f3a"
         },
         {
           "name": "Erik Blaško · Jednota Slovanov",
           "votes": 7988,
-          "percent": 3.5041081588517335
+          "percent": 3.5041081588517335,
+          "color": "#3f4f3a"
         },
         {
           "name": "Jolana Čuláková · NEKA",
           "votes": 7848,
-          "percent": 3.442694145051127
+          "percent": 3.442694145051127,
+          "color": "#3f4f3a"
         },
         {
           "name": "Róbert Švec · Slovenské Hnutie Obrody",
           "votes": 5573,
-          "percent": 2.4447164207912757
+          "percent": 2.4447164207912757,
+          "color": "#3f4f3a"
         },
         {
           "name": "Karol Suchan · SLOVEXIT",
           "votes": 1961,
-          "percent": 0.8602348647356346
+          "percent": 0.8602348647356346,
+          "color": "#3f4f3a"
         }
       ],
       "tables": [
@@ -757,37 +782,44 @@
         {
           "name": "Erika Jurinová · SLOVENSKO, ZA ĽUDÍ, NOVA, Progresívne Slovensko, SaS, KDH, Demokrati, Konzervatívci, OKS, DS-ODS",
           "votes": 134617,
-          "percent": 52.06714498443211
+          "percent": 52.06714498443211,
+          "color": "#3f4f3a"
         },
         {
           "name": "Igor Choma · SMER - SD, HLAS - sociálna demokracia, DOMOV-NS",
           "votes": 66725,
-          "percent": 25.807886441431858
+          "percent": 25.807886441431858,
+          "color": "#3f4f3a"
         },
         {
           "name": "Martin Kapitulík · NEKA",
           "votes": 32721,
-          "percent": 12.655823937805797
+          "percent": 12.655823937805797,
+          "color": "#3f4f3a"
         },
         {
           "name": "Anna Belousovová · REPUBLIKA",
           "votes": 13761,
-          "percent": 5.322477711810323
+          "percent": 5.322477711810323,
+          "color": "#3f4f3a"
         },
         {
           "name": "Adam Lučanský · SNS",
           "votes": 6000,
-          "percent": 2.320679185441606
+          "percent": 2.320679185441606,
+          "color": "#3f4f3a"
         },
         {
           "name": "Jana Chlustinová · SLOVEXIT",
           "votes": 2825,
-          "percent": 1.092653116478756
+          "percent": 1.092653116478756,
+          "color": "#3f4f3a"
         },
         {
           "name": "Milan Pova · KSS",
           "votes": 1896,
-          "percent": 0.7333346225995475
+          "percent": 0.7333346225995475,
+          "color": "#3f4f3a"
         }
       ],
       "tables": [
@@ -912,37 +944,44 @@
         {
           "name": "Ondrej Lunter · NEKA",
           "votes": 135971,
-          "percent": 64.81970557949735
+          "percent": 64.81970557949735,
+          "color": "#3f4f3a"
         },
         {
           "name": "Miroslav Suja · REPUBLIKA",
           "votes": 31465,
-          "percent": 14.999904656572976
+          "percent": 14.999904656572976,
+          "color": "#3f4f3a"
         },
         {
           "name": "Marian Kotleba · ĽS Naše Slovensko",
           "votes": 19128,
-          "percent": 9.118645360588841
+          "percent": 9.118645360588841,
+          "color": "#3f4f3a"
         },
         {
           "name": "Roman Malatinec · SV",
           "votes": 11158,
-          "percent": 5.319209793676824
+          "percent": 5.319209793676824,
+          "color": "#3f4f3a"
         },
         {
           "name": "Michal Albert · Bratia Slovenska",
           "votes": 7223,
-          "percent": 3.443327866976851
+          "percent": 3.443327866976851,
+          "color": "#3f4f3a"
         },
         {
           "name": "Jaroslav Rusina · NEKA",
           "votes": 2589,
-          "percent": 1.2342206628275048
+          "percent": 1.2342206628275048,
+          "color": "#3f4f3a"
         },
         {
           "name": "Peter Plančík · KSS",
           "votes": 2234,
-          "percent": 1.0649860798596544
+          "percent": 1.0649860798596544,
+          "color": "#3f4f3a"
         }
       ],
       "tables": [
@@ -1062,57 +1101,68 @@
         {
           "name": "Milan Majerský · KDH, SLOVENSKO, SaS, ZA ĽUDÍ, Konzervatívci, Progresívne Slovensko",
           "votes": 138819,
-          "percent": 48.777908177965806
+          "percent": 48.777908177965806,
+          "color": "#3f4f3a"
         },
         {
           "name": "Milan Mazurek · REPUBLIKA",
           "votes": 100131,
-          "percent": 35.18380570215816
+          "percent": 35.18380570215816,
+          "color": "#3f4f3a"
         },
         {
           "name": "Samuel Migaľ · NEKA",
           "votes": 17240,
-          "percent": 6.057752447346044
+          "percent": 6.057752447346044,
+          "color": "#3f4f3a"
         },
         {
           "name": "Drahomír Čureja · NEKA",
           "votes": 9564,
-          "percent": 3.360576821717956
+          "percent": 3.360576821717956,
+          "color": "#3f4f3a"
         },
         {
           "name": "Monika Lešková · SNS",
           "votes": 4073,
-          "percent": 1.4311615845731112
+          "percent": 1.4311615845731112,
+          "color": "#3f4f3a"
         },
         {
           "name": "Judita Laššáková · SMER - SD, Bratia Slovenska",
           "votes": 3984,
-          "percent": 1.3998889646303154
+          "percent": 1.3998889646303154,
+          "color": "#3f4f3a"
         },
         {
           "name": "Marián Geci · NEKA",
           "votes": 3702,
-          "percent": 1.3008004385194347
+          "percent": 1.3008004385194347,
+          "color": "#3f4f3a"
         },
         {
           "name": "Ľubomír Goliaš · Jednota Slovanov",
           "votes": 2156,
-          "percent": 0.7575704336704218
+          "percent": 0.7575704336704218,
+          "color": "#3f4f3a"
         },
         {
           "name": "Ján Stanko · SLOVEXIT",
           "votes": 1865,
-          "percent": 0.6553195077900448
+          "percent": 0.6553195077900448,
+          "color": "#3f4f3a"
         },
         {
           "name": "Jozef Ištok · NEKA",
           "votes": 1832,
-          "percent": 0.6437240419685587
+          "percent": 0.6437240419685587,
+          "color": "#3f4f3a"
         },
         {
           "name": "Zoltán Kašo · TÍM KOŠICE",
           "votes": 1228,
-          "percent": 0.43149187966014746
+          "percent": 0.43149187966014746,
+          "color": "#3f4f3a"
         }
       ],
       "tables": [
@@ -1272,32 +1322,38 @@
         {
           "name": "Rastislav Trnka · NEKA",
           "votes": 76421,
-          "percent": 32.00571253868737
+          "percent": 32.00571253868737,
+          "color": "#3f4f3a"
         },
         {
           "name": "Marián Porvažník · Progresívne Slovensko, SLOVENSKO, SaS, KDH, Demokrati, ZA ĽUDÍ, OKS, DS-ODS",
           "votes": 73304,
-          "percent": 30.70028855858912
+          "percent": 30.70028855858912,
+          "color": "#3f4f3a"
         },
         {
           "name": "Igor Šimko · HLAS - sociálna demokracia, SMER - SD, REPUBLIKA, PRAVDA, SNS, SV, STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI, Bratia Slovenska",
           "votes": 57682,
-          "percent": 24.157672768696628
+          "percent": 24.157672768696628,
+          "color": "#3f4f3a"
         },
         {
           "name": "Monika Sofiya Soročinová · NEKA",
           "votes": 23409,
-          "percent": 9.803872297119021
+          "percent": 9.803872297119021,
+          "color": "#3f4f3a"
         },
         {
           "name": "Džemal Kodrazi · NEKA",
           "votes": 4638,
-          "percent": 1.9424306768353206
+          "percent": 1.9424306768353206,
+          "color": "#3f4f3a"
         },
         {
           "name": "Tibor Géci · Jednota Slovanov",
           "votes": 3319,
-          "percent": 1.3900231600725375
+          "percent": 1.3900231600725375,
+          "color": "#3f4f3a"
         }
       ],
       "tables": [

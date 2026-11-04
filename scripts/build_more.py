@@ -306,7 +306,7 @@ def shell(spec, here, nav, body, place=""):
 <title>$title</title>
 <meta name="description" content="$description">
 <link rel="icon" href="$icon">
-<link rel="stylesheet" href="${root}guide.css?v=za2">
+<link rel="stylesheet" href="${root}guide.css?v=blend1">
 </head>
 <body class="theme-$code" data-results="${local}results.json"$place>
 <header>
@@ -336,7 +336,7 @@ $body
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="${root}lang.js"></script>
-<script src="${root}place.js?v=1"></script>
+<script src="${root}place.js?v=blend1"></script>
 </body>
 </html>
 """).substitute(
@@ -450,7 +450,10 @@ def match_shapes(shapes, rows_by_key):
             "amount": 0.7,
             "summary": row.get("tie") or "Votes are reported, and no one is strictly ahead. The map stays beige.",
             "rows": [
-                {"name": item["name"], "votes": item["votes"], "percent": item["percent"]}
+                dict(
+                    {"name": item["name"], "votes": item["votes"], "percent": item["percent"]},
+                    **({"color": item["color"]} if item.get("color") else {}),
+                )
                 for item in ranked
             ],
         }
@@ -1614,7 +1617,7 @@ def write_countries():
 <title>Leaders.vote · Countries</title>
 <meta name="description" content="Leaders.vote election guides. A place is colored only from reported vote totals. Not an endorsement.">
 <link rel="icon" href="%s">
-<link rel="stylesheet" href="guide.css?v=za2">
+<link rel="stylesheet" href="guide.css?v=blend1">
 </head>
 <body>
 <header>

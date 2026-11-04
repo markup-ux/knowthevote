@@ -2,6 +2,7 @@
 
 The color is whoever is ahead in that state's top statewide race, the same
 rule as a county on a state map. A tie or zero votes leaves the state blank.
+Each party's votes are kept beside that lead so the map can mix them.
 """
 import json
 import os
@@ -41,12 +42,19 @@ def in_window():
 
 def lead_of(office, candidates):
     rows = []
+    shares = {}
     for person in candidates or []:
         votes = person.get("votes") or 0
         party = (person.get("party") or "").lower()
         if votes > 0 and party not in ("yes", "no"):
-            rows.append((votes, party or "other"))
-    body = {"office": office, "party": "", "gap": 0, "votes": 0}
+            party = party or "other"
+            rows.append((votes, party))
+            shares[party] = shares.get(party, 0) + votes
+    listed = [
+        {"party": party, "votes": votes}
+        for party, votes in sorted(shares.items(), key=lambda item: (-item[1], item[0]))
+    ]
+    body = {"office": office, "party": "", "gap": 0, "votes": 0, "shares": listed}
     if not rows:
         return body
     rows.sort(key=lambda row: -row[0])

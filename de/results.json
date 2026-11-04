@@ -72,82 +72,98 @@
         {
           "name": "CDU",
           "votes": 2006866,
-          "percent": 31.604198930456356
+          "percent": 31.604198930456356,
+          "color": "#323232"
         },
         {
           "name": "AfD",
           "votes": 1256430,
-          "percent": 19.78630544450565
+          "percent": 19.78630544450565,
+          "color": "#009ee0"
         },
         {
           "name": "SPD",
           "votes": 898778,
-          "percent": 14.153988709917703
+          "percent": 14.153988709917703,
+          "color": "#e3000f"
         },
         {
           "name": "GRÜNE",
           "votes": 865738,
-          "percent": 13.633673585409003
+          "percent": 13.633673585409003,
+          "color": "#46962b"
         },
         {
           "name": "Die Linke",
           "votes": 429484,
-          "percent": 6.7635296893006895
+          "percent": 6.7635296893006895,
+          "color": "#be3075"
         },
         {
           "name": "FDP",
           "votes": 357539,
-          "percent": 5.630537206468412
+          "percent": 5.630537206468412,
+          "color": "#c9a400"
         },
         {
           "name": "BSW",
           "votes": 260219,
-          "percent": 4.0979382985632435
+          "percent": 4.0979382985632435,
+          "color": "#7d1d4a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 86311,
-          "percent": 1.359228774560244
+          "percent": 1.359228774560244,
+          "color": "#e87700"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 55906,
-          "percent": 0.8804097261132996
+          "percent": 0.8804097261132996,
+          "color": "#3f4f3a"
         },
         {
           "name": "Volt",
           "votes": 49025,
-          "percent": 0.7720474872590511
+          "percent": 0.7720474872590511,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 28041,
-          "percent": 0.4415906902647843
+          "percent": 0.4415906902647843,
+          "color": "#3f4f3a"
         },
         {
           "name": "dieBasis",
           "votes": 21845,
-          "percent": 0.3440158563829469
+          "percent": 0.3440158563829469,
+          "color": "#3f4f3a"
         },
         {
           "name": "ÖDP",
           "votes": 12258,
-          "percent": 0.1930394308785609
+          "percent": 0.1930394308785609,
+          "color": "#3f4f3a"
         },
         {
           "name": "Bündnis C",
           "votes": 11768,
-          "percent": 0.18532289301508442
+          "percent": 0.18532289301508442,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 7411,
-          "percent": 0.11670869817596793
+          "percent": 0.11670869817596793,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 2379,
-          "percent": 0.03746457872900118
+          "percent": 0.03746457872900118,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -163,87 +179,104 @@
         {
           "name": "CSU",
           "votes": 2964028,
-          "percent": 37.18022983788118
+          "percent": 37.18022983788118,
+          "color": "#0080c8"
         },
         {
           "name": "AfD",
           "votes": 1515731,
-          "percent": 19.013054853868276
+          "percent": 19.013054853868276,
+          "color": "#009ee0"
         },
         {
           "name": "GRÜNE",
           "votes": 957435,
-          "percent": 12.00989105191711
+          "percent": 12.00989105191711,
+          "color": "#46962b"
         },
         {
           "name": "SPD",
           "votes": 920675,
-          "percent": 11.548780276701589
+          "percent": 11.548780276701589,
+          "color": "#e3000f"
         },
         {
           "name": "Die Linke",
           "votes": 456935,
-          "percent": 5.73170979524223
+          "percent": 5.73170979524223,
+          "color": "#be3075"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 345840,
-          "percent": 4.3381542573595215
+          "percent": 4.3381542573595215,
+          "color": "#e87700"
         },
         {
           "name": "FDP",
           "votes": 333257,
-          "percent": 4.180315386724676
+          "percent": 4.180315386724676,
+          "color": "#c9a400"
         },
         {
           "name": "BSW",
           "votes": 246518,
-          "percent": 3.092277096968987
+          "percent": 3.092277096968987,
+          "color": "#7d1d4a"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 61869,
-          "percent": 0.7760735188196166
+          "percent": 0.7760735188196166,
+          "color": "#3f4f3a"
         },
         {
           "name": "Volt",
           "votes": 50671,
-          "percent": 0.6356078370768687
+          "percent": 0.6356078370768687,
+          "color": "#3f4f3a"
         },
         {
           "name": "ÖDP",
           "votes": 33367,
-          "percent": 0.41854959838455685
+          "percent": 0.41854959838455685,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 30552,
-          "percent": 0.38323874875910274
+          "percent": 0.38323874875910274,
+          "color": "#3f4f3a"
         },
         {
           "name": "dieBasis",
           "votes": 28843,
-          "percent": 0.36180136260993717
+          "percent": 0.36180136260993717,
+          "color": "#3f4f3a"
         },
         {
           "name": "BP",
           "votes": 12278,
-          "percent": 0.15401300593297537
+          "percent": 0.15401300593297537,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 6937,
-          "percent": 0.08701647028482246
+          "percent": 0.08701647028482246,
+          "color": "#3f4f3a"
         },
         {
           "name": "PdH",
           "votes": 5466,
-          "percent": 0.0685645129849848
+          "percent": 0.0685645129849848,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 1652,
-          "percent": 0.02072238848357023
+          "percent": 0.02072238848357023,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -259,92 +292,110 @@
         {
           "name": "Die Linke",
           "votes": 387222,
-          "percent": 19.862295226600423
+          "percent": 19.862295226600423,
+          "color": "#be3075"
         },
         {
           "name": "CDU",
           "votes": 356099,
-          "percent": 18.265861619167257
+          "percent": 18.265861619167257,
+          "color": "#323232"
         },
         {
           "name": "GRÜNE",
           "votes": 328035,
-          "percent": 16.826337384388978
+          "percent": 16.826337384388978,
+          "color": "#46962b"
         },
         {
           "name": "AfD",
           "votes": 296990,
-          "percent": 15.233904735134004
+          "percent": 15.233904735134004,
+          "color": "#009ee0"
         },
         {
           "name": "SPD",
           "votes": 295182,
-          "percent": 15.141164576337
+          "percent": 15.141164576337,
+          "color": "#e3000f"
         },
         {
           "name": "BSW",
           "votes": 129651,
-          "percent": 6.650361907184951
+          "percent": 6.650361907184951,
+          "color": "#7d1d4a"
         },
         {
           "name": "FDP",
           "votes": 74076,
-          "percent": 3.799679205225046
+          "percent": 3.799679205225046,
+          "color": "#c9a400"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 29384,
-          "percent": 1.5072327577937896
+          "percent": 1.5072327577937896,
+          "color": "#3f4f3a"
         },
         {
           "name": "Volt",
           "votes": 18231,
-          "percent": 0.9351470326483317
+          "percent": 0.9351470326483317,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 12881,
-          "percent": 0.6607223370930372
+          "percent": 0.6607223370930372,
+          "color": "#3f4f3a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 6402,
-          "percent": 0.3283863366252328
+          "percent": 0.3283863366252328,
+          "color": "#e87700"
         },
         {
           "name": "Team Todenhöfer",
           "votes": 4532,
-          "percent": 0.23246592901992427
+          "percent": 0.23246592901992427,
+          "color": "#3f4f3a"
         },
         {
           "name": "PdF",
           "votes": 3423,
-          "percent": 0.1755805108197707
+          "percent": 0.1755805108197707,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 2960,
-          "percent": 0.1518312334287237
+          "percent": 0.1518312334287237,
+          "color": "#3f4f3a"
         },
         {
           "name": "MERA25",
           "votes": 2439,
-          "percent": 0.12510688457184363
+          "percent": 0.12510688457184363,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 925,
-          "percent": 0.04744726044647615
+          "percent": 0.04744726044647615,
+          "color": "#3f4f3a"
         },
         {
           "name": "BüSo",
           "votes": 676,
-          "percent": 0.03467497087764095
+          "percent": 0.03467497087764095,
+          "color": "#3f4f3a"
         },
         {
           "name": "SGP",
           "votes": 425,
-          "percent": 0.021800092637570125
+          "percent": 0.021800092637570125,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -360,62 +411,74 @@
         {
           "name": "AfD",
           "votes": 535275,
-          "percent": 32.4933316659969
+          "percent": 32.4933316659969,
+          "color": "#009ee0"
         },
         {
           "name": "CDU",
           "votes": 298048,
-          "percent": 18.092704715122217
+          "percent": 18.092704715122217,
+          "color": "#323232"
         },
         {
           "name": "SPD",
           "votes": 244010,
-          "percent": 14.812382158367013
+          "percent": 14.812382158367013,
+          "color": "#e3000f"
         },
         {
           "name": "BSW",
           "votes": 176405,
-          "percent": 10.708488482630765
+          "percent": 10.708488482630765,
+          "color": "#7d1d4a"
         },
         {
           "name": "Die Linke",
           "votes": 176224,
-          "percent": 10.697501059284736
+          "percent": 10.697501059284736,
+          "color": "#be3075"
         },
         {
           "name": "GRÜNE",
           "votes": 108598,
-          "percent": 6.592332599624363
+          "percent": 6.592332599624363,
+          "color": "#46962b"
         },
         {
           "name": "FDP",
           "votes": 53467,
-          "percent": 3.2456605748182827
+          "percent": 3.2456605748182827,
+          "color": "#c9a400"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 23969,
-          "percent": 1.4550140893975614
+          "percent": 1.4550140893975614,
+          "color": "#e87700"
         },
         {
           "name": "Die PARTEI",
           "votes": 14706,
-          "percent": 0.892712970865724
+          "percent": 0.892712970865724,
+          "color": "#3f4f3a"
         },
         {
           "name": "Volt",
           "votes": 11370,
-          "percent": 0.6902044389190318
+          "percent": 0.6902044389190318,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 4147,
-          "percent": 0.25173947301646654
+          "percent": 0.25173947301646654,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 1119,
-          "percent": 0.06792777195693901
+          "percent": 0.06792777195693901,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -431,77 +494,92 @@
         {
           "name": "SPD",
           "votes": 80604,
-          "percent": 23.145042727189193
+          "percent": 23.145042727189193,
+          "color": "#e3000f"
         },
         {
           "name": "CDU",
           "votes": 71573,
-          "percent": 20.551835431406783
+          "percent": 20.551835431406783,
+          "color": "#323232"
         },
         {
           "name": "GRÜNE",
           "votes": 54280,
-          "percent": 15.586235413029495
+          "percent": 15.586235413029495,
+          "color": "#46962b"
         },
         {
           "name": "AfD",
           "votes": 52496,
-          "percent": 15.073968574841496
+          "percent": 15.073968574841496,
+          "color": "#009ee0"
         },
         {
           "name": "Die Linke",
           "votes": 51461,
-          "percent": 14.776773408067628
+          "percent": 14.776773408067628,
+          "color": "#be3075"
         },
         {
           "name": "BSW",
           "votes": 15114,
-          "percent": 4.339910870164477
+          "percent": 4.339910870164477,
+          "color": "#7d1d4a"
         },
         {
           "name": "FDP",
           "votes": 12295,
-          "percent": 3.5304488652026094
+          "percent": 3.5304488652026094,
+          "color": "#c9a400"
         },
         {
           "name": "Volt",
           "votes": 3836,
-          "percent": 1.1014885601396673
+          "percent": 1.1014885601396673,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 2582,
-          "percent": 0.7414086189469815
+          "percent": 0.7414086189469815,
+          "color": "#3f4f3a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 1618,
-          "percent": 0.46460075346871266
+          "percent": 0.46460075346871266,
+          "color": "#e87700"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 933,
-          "percent": 0.26790636772948634
+          "percent": 0.26790636772948634,
+          "color": "#3f4f3a"
         },
         {
           "name": "MENSCHLICHE WELT",
           "votes": 694,
-          "percent": 0.19927869153725994
+          "percent": 0.19927869153725994,
+          "color": "#3f4f3a"
         },
         {
           "name": "Verjüngungsforschung",
           "votes": 303,
-          "percent": 0.08700496186713222
+          "percent": 0.08700496186713222,
+          "color": "#3f4f3a"
         },
         {
           "name": "MERA25",
           "votes": 260,
-          "percent": 0.07465772305430488
+          "percent": 0.07465772305430488,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 207,
-          "percent": 0.0594390333547735
+          "percent": 0.0594390333547735,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -517,67 +595,80 @@
         {
           "name": "SPD",
           "votes": 237740,
-          "percent": 22.736749488341847
+          "percent": 22.736749488341847,
+          "color": "#e3000f"
         },
         {
           "name": "CDU",
           "votes": 216935,
-          "percent": 20.747020906256576
+          "percent": 20.747020906256576,
+          "color": "#323232"
         },
         {
           "name": "GRÜNE",
           "votes": 201713,
-          "percent": 19.291233909068303
+          "percent": 19.291233909068303,
+          "color": "#46962b"
         },
         {
           "name": "Die Linke",
           "votes": 151115,
-          "percent": 14.452191044547732
+          "percent": 14.452191044547732,
+          "color": "#be3075"
         },
         {
           "name": "AfD",
           "votes": 113608,
-          "percent": 10.86513264857214
+          "percent": 10.86513264857214,
+          "color": "#009ee0"
         },
         {
           "name": "FDP",
           "votes": 47115,
-          "percent": 4.5059390600791875
+          "percent": 4.5059390600791875,
+          "color": "#c9a400"
         },
         {
           "name": "BSW",
           "votes": 41919,
-          "percent": 4.009009009009009
+          "percent": 4.009009009009009,
+          "color": "#7d1d4a"
         },
         {
           "name": "Volt",
           "votes": 15549,
-          "percent": 1.4870603087163596
+          "percent": 1.4870603087163596,
+          "color": "#3f4f3a"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 9735,
-          "percent": 0.9310265679692431
+          "percent": 0.9310265679692431,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 4518,
-          "percent": 0.4320881390945085
+          "percent": 0.4320881390945085,
+          "color": "#3f4f3a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 3866,
-          "percent": 0.36973279011495574
+          "percent": 0.36973279011495574,
+          "color": "#e87700"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 1279,
-          "percent": 0.12231977200130066
+          "percent": 0.12231977200130066,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 528,
-          "percent": 0.05049635622884031
+          "percent": 0.05049635622884031,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -593,72 +684,86 @@
         {
           "name": "CDU",
           "votes": 1033842,
-          "percent": 28.87154221614294
+          "percent": 28.87154221614294,
+          "color": "#323232"
         },
         {
           "name": "SPD",
           "votes": 657510,
-          "percent": 18.361923507205304
+          "percent": 18.361923507205304,
+          "color": "#e3000f"
         },
         {
           "name": "AfD",
           "votes": 636778,
-          "percent": 17.78295223961792
+          "percent": 17.78295223961792,
+          "color": "#009ee0"
         },
         {
           "name": "GRÜNE",
           "votes": 451510,
-          "percent": 12.609073752092389
+          "percent": 12.609073752092389,
+          "color": "#46962b"
         },
         {
           "name": "Die Linke",
           "votes": 311058,
-          "percent": 8.686747277310259
+          "percent": 8.686747277310259,
+          "color": "#be3075"
         },
         {
           "name": "FDP",
           "votes": 180823,
-          "percent": 5.049745394508654
+          "percent": 5.049745394508654,
+          "color": "#c9a400"
         },
         {
           "name": "BSW",
           "votes": 158653,
-          "percent": 4.4306158844559675
+          "percent": 4.4306158844559675,
+          "color": "#7d1d4a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 46567,
-          "percent": 1.3004512356618598
+          "percent": 1.3004512356618598,
+          "color": "#e87700"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 44516,
-          "percent": 1.2431740762068277
+          "percent": 1.2431740762068277,
+          "color": "#3f4f3a"
         },
         {
           "name": "Volt",
           "votes": 31542,
-          "percent": 0.8808562474552017
+          "percent": 0.8808562474552017,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 18111,
-          "percent": 0.5057760287128641
+          "percent": 0.5057760287128641,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 5740,
-          "percent": 0.16029785239974823
+          "percent": 0.16029785239974823,
+          "color": "#3f4f3a"
         },
         {
           "name": "PdH",
           "votes": 3014,
-          "percent": 0.08417033573742877
+          "percent": 0.08417033573742877,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 1170,
-          "percent": 0.03267395249263161
+          "percent": 0.03267395249263161,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -674,62 +779,74 @@
         {
           "name": "AfD",
           "votes": 357361,
-          "percent": 34.99278329720086
+          "percent": 34.99278329720086,
+          "color": "#009ee0"
         },
         {
           "name": "CDU",
           "votes": 181956,
-          "percent": 17.817128555229807
+          "percent": 17.817128555229807,
+          "color": "#323232"
         },
         {
           "name": "SPD",
           "votes": 126687,
-          "percent": 12.405188975776554
+          "percent": 12.405188975776554,
+          "color": "#e3000f"
         },
         {
           "name": "Die Linke",
           "votes": 123059,
-          "percent": 12.049935274890771
+          "percent": 12.049935274890771,
+          "color": "#be3075"
         },
         {
           "name": "BSW",
           "votes": 107872,
-          "percent": 10.562824482346006
+          "percent": 10.562824482346006,
+          "color": "#7d1d4a"
         },
         {
           "name": "GRÜNE",
           "votes": 54719,
-          "percent": 5.358083588414891
+          "percent": 5.358083588414891,
+          "color": "#46962b"
         },
         {
           "name": "FDP",
           "votes": 32678,
-          "percent": 3.1998292275484164
+          "percent": 3.1998292275484164,
+          "color": "#c9a400"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 15656,
-          "percent": 1.533035264902932
+          "percent": 1.533035264902932,
+          "color": "#3f4f3a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 10814,
-          "percent": 1.0589067037979245
+          "percent": 1.0589067037979245,
+          "color": "#e87700"
         },
         {
           "name": "Volt",
           "votes": 6350,
-          "percent": 0.6217918965338284
+          "percent": 0.6217918965338284,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 3248,
-          "percent": 0.31804410707746056
+          "percent": 0.31804410707746056,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 842,
-          "percent": 0.08244862628054858
+          "percent": 0.08244862628054858,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -745,82 +862,98 @@
         {
           "name": "CDU",
           "votes": 1410418,
-          "percent": 28.122103882970155
+          "percent": 28.122103882970155,
+          "color": "#323232"
         },
         {
           "name": "SPD",
           "votes": 1153523,
-          "percent": 22.999914661749482
+          "percent": 22.999914661749482,
+          "color": "#e3000f"
         },
         {
           "name": "AfD",
           "votes": 894540,
-          "percent": 17.83609313513591
+          "percent": 17.83609313513591,
+          "color": "#009ee0"
         },
         {
           "name": "GRÜNE",
           "votes": 576845,
-          "percent": 11.501622224313586
+          "percent": 11.501622224313586,
+          "color": "#46962b"
         },
         {
           "name": "Die Linke",
           "votes": 405519,
-          "percent": 8.085579909302188
+          "percent": 8.085579909302188,
+          "color": "#be3075"
         },
         {
           "name": "FDP",
           "votes": 205163,
-          "percent": 4.09071296519316
+          "percent": 4.09071296519316,
+          "color": "#c9a400"
         },
         {
           "name": "BSW",
           "votes": 189376,
-          "percent": 3.775938441611888
+          "percent": 3.775938441611888,
+          "color": "#7d1d4a"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 58107,
-          "percent": 1.1585863838434753
+          "percent": 1.1585863838434753,
+          "color": "#3f4f3a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 37628,
-          "percent": 0.7502588061896551
+          "percent": 0.7502588061896551,
+          "color": "#e87700"
         },
         {
           "name": "Volt",
           "votes": 30488,
-          "percent": 0.6078954630357767
+          "percent": 0.6078954630357767,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 22360,
-          "percent": 0.4458325424258714
+          "percent": 0.4458325424258714,
+          "color": "#3f4f3a"
         },
         {
           "name": "dieBasis",
           "votes": 12466,
-          "percent": 0.24855762405549697
+          "percent": 0.24855762405549697,
+          "color": "#3f4f3a"
         },
         {
           "name": "PIRATEN",
           "votes": 8029,
-          "percent": 0.1600889750955868
+          "percent": 0.1600889750955868,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 6290,
-          "percent": 0.12541532611175005
+          "percent": 0.12541532611175005,
+          "color": "#3f4f3a"
         },
         {
           "name": "PdH",
           "votes": 3342,
-          "percent": 0.066635615240933
+          "percent": 0.066635615240933,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 1242,
-          "percent": 0.024764043725086414
+          "percent": 0.024764043725086414,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -836,92 +969,110 @@
         {
           "name": "CDU",
           "votes": 3170627,
-          "percent": 30.121476697902573
+          "percent": 30.121476697902573,
+          "color": "#323232"
         },
         {
           "name": "SPD",
           "votes": 2108434,
-          "percent": 20.030468926198356
+          "percent": 20.030468926198356,
+          "color": "#e3000f"
         },
         {
           "name": "AfD",
           "votes": 1770379,
-          "percent": 16.81889096224692
+          "percent": 16.81889096224692,
+          "color": "#009ee0"
         },
         {
           "name": "GRÜNE",
           "votes": 1300901,
-          "percent": 12.358772936008604
+          "percent": 12.358772936008604,
+          "color": "#46962b"
         },
         {
           "name": "Die Linke",
           "votes": 877123,
-          "percent": 8.33281240767028
+          "percent": 8.33281240767028,
+          "color": "#be3075"
         },
         {
           "name": "FDP",
           "votes": 462446,
-          "percent": 4.393312872513309
+          "percent": 4.393312872513309,
+          "color": "#c9a400"
         },
         {
           "name": "BSW",
           "votes": 432911,
-          "percent": 4.1127255267698475
+          "percent": 4.1127255267698475,
+          "color": "#7d1d4a"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 133480,
-          "percent": 1.268081899774409
+          "percent": 1.268081899774409,
+          "color": "#3f4f3a"
         },
         {
           "name": "Volt",
           "votes": 68915,
-          "percent": 0.6547038067347423
+          "percent": 0.6547038067347423,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 59077,
-          "percent": 0.5612411926353968
+          "percent": 0.5612411926353968,
+          "color": "#3f4f3a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 52891,
-          "percent": 0.5024731777117791
+          "percent": 0.5024731777117791,
+          "color": "#e87700"
         },
         {
           "name": "dieBasis",
           "votes": 22219,
-          "percent": 0.21108414542319145
+          "percent": 0.21108414542319145,
+          "color": "#3f4f3a"
         },
         {
           "name": "Team Todenhöfer",
           "votes": 20021,
-          "percent": 0.19020278480209354
+          "percent": 0.19020278480209354,
+          "color": "#3f4f3a"
         },
         {
           "name": "PdF",
           "votes": 17965,
-          "percent": 0.17067044747862795
+          "percent": 0.17067044747862795,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 13669,
-          "percent": 0.12985774264321545
+          "percent": 0.12985774264321545,
+          "color": "#3f4f3a"
         },
         {
           "name": "WerteUnion",
           "votes": 6736,
-          "percent": 0.06399310516092613
+          "percent": 0.06399310516092613,
+          "color": "#3f4f3a"
         },
         {
           "name": "MERA25",
           "votes": 4295,
-          "percent": 0.04080320467134468
+          "percent": 0.04080320467134468,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 4045,
-          "percent": 0.03842816365438631
+          "percent": 0.03842816365438631,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -937,72 +1088,86 @@
         {
           "name": "CDU",
           "votes": 760623,
-          "percent": 30.641148456427317
+          "percent": 30.641148456427317,
+          "color": "#323232"
         },
         {
           "name": "AfD",
           "votes": 498695,
-          "percent": 20.089568063913426
+          "percent": 20.089568063913426,
+          "color": "#009ee0"
         },
         {
           "name": "SPD",
           "votes": 462705,
-          "percent": 18.639736895322915
+          "percent": 18.639736895322915,
+          "color": "#e3000f"
         },
         {
           "name": "GRÜNE",
           "votes": 256869,
-          "percent": 10.34778222963811
+          "percent": 10.34778222963811,
+          "color": "#46962b"
         },
         {
           "name": "Die Linke",
           "votes": 161867,
-          "percent": 6.5206952421850515
+          "percent": 6.5206952421850515,
+          "color": "#be3075"
         },
         {
           "name": "FDP",
           "votes": 114047,
-          "percent": 4.594301063746648
+          "percent": 4.594301063746648,
+          "color": "#c9a400"
         },
         {
           "name": "BSW",
           "votes": 105103,
-          "percent": 4.23399848047703
+          "percent": 4.23399848047703,
+          "color": "#7d1d4a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 52013,
-          "percent": 2.095306156485084
+          "percent": 2.095306156485084,
+          "color": "#e87700"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 31542,
-          "percent": 1.2706466996299486
+          "percent": 1.2706466996299486,
+          "color": "#3f4f3a"
         },
         {
           "name": "Volt",
           "votes": 18846,
-          "percent": 0.759197504952952
+          "percent": 0.759197504952952,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 11454,
-          "percent": 0.46141612128468174
+          "percent": 0.46141612128468174,
+          "color": "#3f4f3a"
         },
         {
           "name": "ÖDP",
           "votes": 4139,
-          "percent": 0.16673662702962264
+          "percent": 0.16673662702962264,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 3884,
-          "percent": 0.15646413611574156
+          "percent": 0.15646413611574156,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 571,
-          "percent": 0.02300232279147488
+          "percent": 0.02300232279147488,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -1018,67 +1183,80 @@
         {
           "name": "CDU",
           "votes": 161113,
-          "percent": 26.864569142754238
+          "percent": 26.864569142754238,
+          "color": "#323232"
         },
         {
           "name": "SPD",
           "votes": 131136,
-          "percent": 21.866094847121087
+          "percent": 21.866094847121087,
+          "color": "#e3000f"
         },
         {
           "name": "AfD",
           "votes": 129294,
-          "percent": 21.558953049991413
+          "percent": 21.558953049991413,
+          "color": "#009ee0"
         },
         {
           "name": "Die Linke",
           "votes": 44080,
-          "percent": 7.350059944340971
+          "percent": 7.350059944340971,
+          "color": "#be3075"
         },
         {
           "name": "GRÜNE",
           "votes": 43371,
-          "percent": 7.231838698865976
+          "percent": 7.231838698865976,
+          "color": "#46962b"
         },
         {
           "name": "BSW",
           "votes": 37001,
-          "percent": 6.16968166970418
+          "percent": 6.16968166970418,
+          "color": "#7d1d4a"
         },
         {
           "name": "FDP",
           "votes": 25725,
-          "percent": 4.289480310076486
+          "percent": 4.289480310076486,
+          "color": "#c9a400"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 12263,
-          "percent": 2.044777338871446
+          "percent": 2.044777338871446,
+          "color": "#3f4f3a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 8476,
-          "percent": 1.4133191490071249
+          "percent": 1.4133191490071249,
+          "color": "#e87700"
         },
         {
           "name": "Volt",
           "votes": 3720,
-          "percent": 0.620286365538757
+          "percent": 0.620286365538757,
+          "color": "#3f4f3a"
         },
         {
           "name": "PIRATEN",
           "votes": 1753,
-          "percent": 0.29230161257780674
+          "percent": 0.29230161257780674,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 1487,
-          "percent": 0.24794780256885263
+          "percent": 0.24794780256885263,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 304,
-          "percent": 0.05069006858166187
+          "percent": 0.05069006858166187,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -1094,77 +1272,92 @@
         {
           "name": "AfD",
           "votes": 958401,
-          "percent": 37.298079213191926
+          "percent": 37.298079213191926,
+          "color": "#009ee0"
         },
         {
           "name": "CDU",
           "votes": 507247,
-          "percent": 19.740524881186438
+          "percent": 19.740524881186438,
+          "color": "#323232"
         },
         {
           "name": "Die Linke",
           "votes": 290462,
-          "percent": 11.303905864478597
+          "percent": 11.303905864478597,
+          "color": "#be3075"
         },
         {
           "name": "BSW",
           "votes": 232257,
-          "percent": 9.038742638851918
+          "percent": 9.038742638851918,
+          "color": "#7d1d4a"
         },
         {
           "name": "SPD",
           "votes": 217144,
-          "percent": 8.450590215024135
+          "percent": 8.450590215024135,
+          "color": "#e3000f"
         },
         {
           "name": "GRÜNE",
           "votes": 167269,
-          "percent": 6.5096054907198555
+          "percent": 6.5096054907198555,
+          "color": "#46962b"
         },
         {
           "name": "FDP",
           "votes": 83436,
-          "percent": 3.247077723449664
+          "percent": 3.247077723449664,
+          "color": "#c9a400"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 40139,
-          "percent": 1.562088939325304
+          "percent": 1.562088939325304,
+          "color": "#e87700"
         },
         {
           "name": "Tierschutzpartei",
           "votes": 29743,
-          "percent": 1.1575079429570372
+          "percent": 1.1575079429570372,
+          "color": "#3f4f3a"
         },
         {
           "name": "Volt",
           "votes": 14741,
-          "percent": 0.5736753046810908
+          "percent": 0.5736753046810908,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 13692,
-          "percent": 0.5328513853669016
+          "percent": 0.5328513853669016,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 7435,
-          "percent": 0.2893477979990442
+          "percent": 0.2893477979990442,
+          "color": "#3f4f3a"
         },
         {
           "name": "PIRATEN",
           "votes": 4018,
-          "percent": 0.1563684535790396
+          "percent": 0.1563684535790396,
+          "color": "#3f4f3a"
         },
         {
           "name": "PdH",
           "votes": 2472,
-          "percent": 0.0962027917489761
+          "percent": 0.0962027917489761,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 1116,
-          "percent": 0.04343135744007173
+          "percent": 0.04343135744007173,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -1180,62 +1373,74 @@
         {
           "name": "AfD",
           "votes": 496110,
-          "percent": 37.09652454221
+          "percent": 37.09652454221,
+          "color": "#009ee0"
         },
         {
           "name": "CDU",
           "votes": 256538,
-          "percent": 19.182576874099432
+          "percent": 19.182576874099432,
+          "color": "#323232"
         },
         {
           "name": "BSW",
           "votes": 150411,
-          "percent": 11.24695199233708
+          "percent": 11.24695199233708,
+          "color": "#7d1d4a"
         },
         {
           "name": "SPD",
           "votes": 146535,
-          "percent": 10.957124879145235
+          "percent": 10.957124879145235,
+          "color": "#e3000f"
         },
         {
           "name": "Die Linke",
           "votes": 143807,
-          "percent": 10.753139232915267
+          "percent": 10.753139232915267,
+          "color": "#be3075"
         },
         {
           "name": "GRÜNE",
           "votes": 59077,
-          "percent": 4.417470682671464
+          "percent": 4.417470682671464,
+          "color": "#46962b"
         },
         {
           "name": "FDP",
           "votes": 41251,
-          "percent": 3.084535151258198
+          "percent": 3.084535151258198,
+          "color": "#c9a400"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 18449,
-          "percent": 1.3795202299474558
+          "percent": 1.3795202299474558,
+          "color": "#e87700"
         },
         {
           "name": "Die PARTEI",
           "votes": 11038,
-          "percent": 0.8253642093425126
+          "percent": 0.8253642093425126,
+          "color": "#3f4f3a"
         },
         {
           "name": "Volt",
           "votes": 8484,
-          "percent": 0.6343893777914367
+          "percent": 0.6343893777914367,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 4517,
-          "percent": 0.33775775807212627
+          "percent": 0.33775775807212627,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 1132,
-          "percent": 0.08464507020979564
+          "percent": 0.08464507020979564,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -1251,67 +1456,80 @@
         {
           "name": "CDU",
           "votes": 518424,
-          "percent": 27.575671341299625
+          "percent": 27.575671341299625,
+          "color": "#323232"
         },
         {
           "name": "SPD",
           "votes": 352546,
-          "percent": 18.752396935114533
+          "percent": 18.752396935114533,
+          "color": "#e3000f"
         },
         {
           "name": "AfD",
           "votes": 306165,
-          "percent": 16.285329028380243
+          "percent": 16.285329028380243,
+          "color": "#009ee0"
         },
         {
           "name": "GRÜNE",
           "votes": 279923,
-          "percent": 14.889481676910433
+          "percent": 14.889481676910433,
+          "color": "#46962b"
         },
         {
           "name": "Die Linke",
           "votes": 146428,
-          "percent": 7.788702689620506
+          "percent": 7.788702689620506,
+          "color": "#be3075"
         },
         {
           "name": "FDP",
           "votes": 88147,
-          "percent": 4.688657742931535
+          "percent": 4.688657742931535,
+          "color": "#c9a400"
         },
         {
           "name": "SSW",
           "votes": 76138,
-          "percent": 4.049882846056261
+          "percent": 4.049882846056261,
+          "color": "#3f4f3a"
         },
         {
           "name": "BSW",
           "votes": 64777,
-          "percent": 3.445575942617174
+          "percent": 3.445575942617174,
+          "color": "#7d1d4a"
         },
         {
           "name": "Volt",
           "votes": 16496,
-          "percent": 0.8774444748817157
+          "percent": 0.8774444748817157,
+          "color": "#3f4f3a"
         },
         {
           "name": "Die PARTEI",
           "votes": 13729,
-          "percent": 0.7302640152552786
+          "percent": 0.7302640152552786,
+          "color": "#3f4f3a"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 13675,
-          "percent": 0.7273916824689296
+          "percent": 0.7273916824689296,
+          "color": "#e87700"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 2981,
-          "percent": 0.15856340807604236
+          "percent": 0.15856340807604236,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 576,
-          "percent": 0.030638216387722374
+          "percent": 0.030638216387722374,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -1327,57 +1545,68 @@
         {
           "name": "AfD",
           "votes": 510527,
-          "percent": 38.554781899468345
+          "percent": 38.554781899468345,
+          "color": "#009ee0"
         },
         {
           "name": "CDU",
           "votes": 246065,
-          "percent": 18.582724142097632
+          "percent": 18.582724142097632,
+          "color": "#323232"
         },
         {
           "name": "Die Linke",
           "votes": 200688,
-          "percent": 15.155872402126631
+          "percent": 15.155872402126631,
+          "color": "#be3075"
         },
         {
           "name": "BSW",
           "votes": 124760,
-          "percent": 9.42182213629773
+          "percent": 9.42182213629773,
+          "color": "#7d1d4a"
         },
         {
           "name": "SPD",
           "votes": 115915,
-          "percent": 8.75385149830836
+          "percent": 8.75385149830836,
+          "color": "#e3000f"
         },
         {
           "name": "GRÜNE",
           "votes": 56097,
-          "percent": 4.2364215804736585
+          "percent": 4.2364215804736585,
+          "color": "#46962b"
         },
         {
           "name": "FDP",
           "votes": 37292,
-          "percent": 2.816275978733688
+          "percent": 2.816275978733688,
+          "color": "#c9a400"
         },
         {
           "name": "FREIE WÄHLER",
           "votes": 20621,
-          "percent": 1.557289149347511
+          "percent": 1.557289149347511,
+          "color": "#e87700"
         },
         {
           "name": "Volt",
           "votes": 6998,
-          "percent": 0.5284859835669405
+          "percent": 0.5284859835669405,
+          "color": "#3f4f3a"
         },
         {
           "name": "BÜNDNIS DEUTSCHLAND",
           "votes": 3454,
-          "percent": 0.26084461092315125
+          "percent": 0.26084461092315125,
+          "color": "#3f4f3a"
         },
         {
           "name": "MLPD",
           "votes": 1743,
-          "percent": 0.13163061865635572
+          "percent": 0.13163061865635572,
+          "color": "#3f4f3a"
         }
       ]
     }

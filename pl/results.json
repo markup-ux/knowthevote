@@ -62,42 +62,50 @@
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 589478,
-          "percent": 52.83140283140283
+          "percent": 52.83140283140283,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 189313,
-          "percent": 16.96699684164865
+          "percent": 16.96699684164865,
+          "color": "#e87722"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 144614,
-          "percent": 12.960891651699452
+          "percent": 12.960891651699452,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 101934,
-          "percent": 9.13573740871791
+          "percent": 9.13573740871791,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 52578,
-          "percent": 4.712253040943849
+          "percent": 4.712253040943849,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 19467,
-          "percent": 1.7447112851012572
+          "percent": 1.7447112851012572,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 16169,
-          "percent": 1.449131184507229
+          "percent": 1.449131184507229,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
           "votes": 2219,
-          "percent": 0.19887575597882004
+          "percent": 0.19887575597882004,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -113,42 +121,50 @@
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 258277,
-          "percent": 42.39303136346029
+          "percent": 42.39303136346029,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 126971,
-          "percent": 20.84074689287051
+          "percent": 20.84074689287051,
+          "color": "#e87722"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 114898,
-          "percent": 18.8591106354761
+          "percent": 18.8591106354761,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 59648,
-          "percent": 9.79049444885793
+          "percent": 9.79049444885793,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 29478,
-          "percent": 4.838455528491048
+          "percent": 4.838455528491048,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 9998,
-          "percent": 1.6410502196164427
+          "percent": 1.6410502196164427,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 7081,
-          "percent": 1.1622601125329097
+          "percent": 1.1622601125329097,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
           "votes": 2893,
-          "percent": 0.4748507986947758
+          "percent": 0.4748507986947758,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -164,42 +180,50 @@
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 528393,
-          "percent": 38.109872419669976
+          "percent": 38.109872419669976,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 411648,
-          "percent": 29.689743735841137
+          "percent": 29.689743735841137,
+          "color": "#e87722"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 186075,
-          "percent": 13.42049291056106
+          "percent": 13.42049291056106,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 122298,
-          "percent": 8.820633841062994
+          "percent": 8.820633841062994,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 92058,
-          "percent": 6.63960089405041
+          "percent": 6.63960089405041,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 22874,
-          "percent": 1.6497667867052195
+          "percent": 1.6497667867052195,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 18691,
-          "percent": 1.3480716538562234
+          "percent": 1.3480716538562234,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
           "votes": 4462,
-          "percent": 0.3218177582529811
+          "percent": 0.3218177582529811,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -215,37 +239,44 @@
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 576441,
-          "percent": 35.99867356446452
+          "percent": 35.99867356446452,
+          "color": "#e87722"
         },
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 489339,
-          "percent": 30.559163771073713
+          "percent": 30.559163771073713,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 199797,
-          "percent": 12.47729946717759
+          "percent": 12.47729946717759,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 161610,
-          "percent": 10.09252574808716
+          "percent": 10.09252574808716,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 105380,
-          "percent": 6.580968772560021
+          "percent": 6.580968772560021,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 44968,
-          "percent": 2.8082463822782215
+          "percent": 2.8082463822782215,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 23749,
-          "percent": 1.4831222943587772
+          "percent": 1.4831222943587772,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -261,42 +292,50 @@
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 161241,
-          "percent": 33.594114607640506
+          "percent": 33.594114607640506,
+          "color": "#e87722"
         },
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 150022,
-          "percent": 31.256667111140743
+          "percent": 31.256667111140743,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 61155,
-          "percent": 12.741474431628776
+          "percent": 12.741474431628776,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 34763,
-          "percent": 7.24277451830122
+          "percent": 7.24277451830122,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 31150,
-          "percent": 6.490016001066738
+          "percent": 6.490016001066738,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY WYBORCÓW MNIEJSZOŚĆ NIEMIECKA",
           "votes": 25778,
-          "percent": 5.370774718314554
+          "percent": 5.370774718314554,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 8338,
-          "percent": 1.737199146609774
+          "percent": 1.737199146609774,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 7521,
-          "percent": 1.5669794652976865
+          "percent": 1.5669794652976865,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -312,47 +351,56 @@
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 310266,
-          "percent": 47.07190668940364
+          "percent": 47.07190668940364,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 137941,
-          "percent": 20.927674578081476
+          "percent": 20.927674578081476,
+          "color": "#e87722"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 90975,
-          "percent": 13.802242949818853
+          "percent": 13.802242949818853,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 45048,
-          "percent": 6.8344428733546545
+          "percent": 6.8344428733546545,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 43197,
-          "percent": 6.553619001960153
+          "percent": 6.553619001960153,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 18961,
-          "percent": 2.8766620343117917
+          "percent": 2.8766620343117917,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 9090,
-          "percent": 1.379086434887094
+          "percent": 1.379086434887094,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
           "votes": 2310,
-          "percent": 0.35046090919573014
+          "percent": 0.35046090919573014,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY NORMALNY KRAJ",
           "votes": 1344,
-          "percent": 0.20390452898660663
+          "percent": 0.20390452898660663,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -368,52 +416,62 @@
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 1132523,
-          "percent": 34.859035386204106
+          "percent": 34.859035386204106,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 1023353,
-          "percent": 31.49878496028613
+          "percent": 31.49878496028613,
+          "color": "#e87722"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 481728,
-          "percent": 14.827578246556875
+          "percent": 14.827578246556875,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 275543,
-          "percent": 8.48120805265839
+          "percent": 8.48120805265839,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 226425,
-          "percent": 6.969356990826027
+          "percent": 6.969356990826027,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 59366,
-          "percent": 1.8272842977470594
+          "percent": 1.8272842977470594,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 46092,
-          "percent": 1.4187108420940853
+          "percent": 1.4187108420940853,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
           "votes": 1968,
-          "percent": 0.060575000807974476
+          "percent": 0.060575000807974476,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY NORMALNY KRAJ",
           "votes": 1044,
-          "percent": 0.03213429920910841
+          "percent": 0.03213429920910841,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY RUCH NAPRAWY POLSKI",
           "votes": 823,
-          "percent": 0.025331923610245423
+          "percent": 0.025331923610245423,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -429,42 +487,50 @@
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 662463,
-          "percent": 33.6142030857786
+          "percent": 33.6142030857786,
+          "color": "#e87722"
         },
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 593575,
-          "percent": 30.118739607556996
+          "percent": 30.118739607556996,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 328953,
-          "percent": 16.691487596554264
+          "percent": 16.691487596554264,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 191706,
-          "percent": 9.72740276326719
+          "percent": 9.72740276326719,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 130598,
-          "percent": 6.6267062380789765
+          "percent": 6.6267062380789765,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 40140,
-          "percent": 2.0367539196349878
+          "percent": 2.0367539196349878,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 21213,
-          "percent": 1.0763742126860238
+          "percent": 1.0763742126860238,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
           "votes": 2135,
-          "percent": 0.10833257644296708
+          "percent": 0.10833257644296708,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -480,37 +546,44 @@
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 814758,
-          "percent": 41.716656187470434
+          "percent": 41.716656187470434,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 458701,
-          "percent": 23.486080418785548
+          "percent": 23.486080418785548,
+          "color": "#e87722"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 306994,
-          "percent": 15.718487145405504
+          "percent": 15.718487145405504,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 156731,
-          "percent": 8.024828526898084
+          "percent": 8.024828526898084,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 135415,
-          "percent": 6.933421945689774
+          "percent": 6.933421945689774,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 46365,
-          "percent": 2.373947557596325
+          "percent": 2.373947557596325,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 34112,
-          "percent": 1.746578218154337
+          "percent": 1.746578218154337,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -526,42 +599,50 @@
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 195091,
-          "percent": 37.732210791794074
+          "percent": 37.732210791794074,
+          "color": "#e87722"
         },
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 143530,
-          "percent": 27.759887513756162
+          "percent": 27.759887513756162,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 77933,
-          "percent": 15.072885902665359
+          "percent": 15.072885902665359,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 47911,
-          "percent": 9.266383130157957
+          "percent": 9.266383130157957,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 33672,
-          "percent": 6.512442920387358
+          "percent": 6.512442920387358,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 11954,
-          "percent": 2.312002336371777
+          "percent": 2.312002336371777,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 5794,
-          "percent": 1.1206074566620443
+          "percent": 1.1206074566620443,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY ANTYPARTIA",
           "votes": 1156,
-          "percent": 0.22357994820526805
+          "percent": 0.22357994820526805,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -577,42 +658,50 @@
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 345734,
-          "percent": 32.26587377136692
+          "percent": 32.26587377136692,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 345633,
-          "percent": 32.256447873853496
+          "percent": 32.256447873853496,
+          "color": "#e87722"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 164734,
-          "percent": 15.373918821557494
+          "percent": 15.373918821557494,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 113432,
-          "percent": 10.586122839043
+          "percent": 10.586122839043,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 68498,
-          "percent": 6.3926250284643436
+          "percent": 6.3926250284643436,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 16663,
-          "percent": 1.5550864382799696
+          "percent": 1.5550864382799696,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 14556,
-          "percent": 1.3584491505493153
+          "percent": 1.3584491505493153,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
           "votes": 2266,
-          "percent": 0.21147607688545947
+          "percent": 0.21147607688545947,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -628,37 +717,44 @@
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 515918,
-          "percent": 39.7108651109233
+          "percent": 39.7108651109233,
+          "color": "#e87722"
         },
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 355027,
-          "percent": 27.326880061823328
+          "percent": 27.326880061823328,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 183392,
-          "percent": 14.115915657958137
+          "percent": 14.115915657958137,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 114854,
-          "percent": 8.840458564054723
+          "percent": 8.840458564054723,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 87609,
-          "percent": 6.743376237120782
+          "percent": 6.743376237120782,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 22431,
-          "percent": 1.726542619763452
+          "percent": 1.726542619763452,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 19955,
-          "percent": 1.5359617483562784
+          "percent": 1.5359617483562784,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -674,42 +770,50 @@
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 347052,
-          "percent": 39.597150801465446
+          "percent": 39.597150801465446,
+          "color": "#e87722"
         },
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 260598,
-          "percent": 29.73311868123593
+          "percent": 29.73311868123593,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 109733,
-          "percent": 12.52006658626721
+          "percent": 12.52006658626721,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 80133,
-          "percent": 9.14283301976024
+          "percent": 9.14283301976024,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 52321,
-          "percent": 5.969602615986865
+          "percent": 5.969602615986865,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 14249,
-          "percent": 1.6257500367958724
+          "percent": 1.6257500367958724,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 10199,
-          "percent": 1.1636623359731282
+          "percent": 1.1636623359731282,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
           "votes": 2172,
-          "percent": 0.2478159225153088
+          "percent": 0.2478159225153088,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -725,42 +829,50 @@
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 526729,
-          "percent": 47.65833739738459
+          "percent": 47.65833739738459,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 211213,
-          "percent": 19.11051112946846
+          "percent": 19.11051112946846,
+          "color": "#e87722"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 162471,
-          "percent": 14.700344456619005
+          "percent": 14.700344456619005,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 89919,
-          "percent": 8.135853618151696
+          "percent": 8.135853618151696,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 62774,
-          "percent": 5.679779301658766
+          "percent": 5.679779301658766,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 27822,
-          "percent": 2.517329144721544
+          "percent": 2.517329144721544,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 19866,
-          "percent": 1.7974718132786354
+          "percent": 1.7974718132786354,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY WYBORCÓW RUCHU DOBROBYTU I POKOJU",
           "votes": 4425,
-          "percent": 0.400373138717304
+          "percent": 0.400373138717304,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -776,42 +888,50 @@
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 231805,
-          "percent": 33.57361558894499
+          "percent": 33.57361558894499,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 224749,
-          "percent": 32.55165561571061
+          "percent": 32.55165561571061,
+          "color": "#e87722"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 109108,
-          "percent": 15.80272232988335
+          "percent": 15.80272232988335,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 55900,
-          "percent": 8.096309878656736
+          "percent": 8.096309878656736,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 46709,
-          "percent": 6.765125905584571
+          "percent": 6.765125905584571,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 12050,
-          "percent": 1.7452689452202805
+          "percent": 1.7452689452202805,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 9141,
-          "percent": 1.3239421932164799
+          "percent": 1.3239421932164799,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY NORMALNY KRAJ",
           "votes": 976,
-          "percent": 0.14135954278298704
+          "percent": 0.14135954278298704,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -827,42 +947,50 @@
         {
           "name": "KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ",
           "votes": 818166,
-          "percent": 33.49818356309871
+          "percent": 33.49818356309871,
+          "color": "#1d4e89"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY KOALICJA OBYWATELSKA PO .N IPL ZIELONI",
           "votes": 784220,
-          "percent": 32.10833194468271
+          "percent": 32.10833194468271,
+          "color": "#e87722"
         },
         {
           "name": "KOALICYJNY KOMITET WYBORCZY TRZECIA DROGA POLSKA 2050 SZYMONA HOŁOWNI - POLSKIE STRONNICTWO LUDOWE",
           "votes": 318728,
-          "percent": 13.049685578109242
+          "percent": 13.049685578109242,
+          "color": "#2f6b34"
         },
         {
           "name": "KOMITET WYBORCZY NOWA LEWICA",
           "votes": 253043,
-          "percent": 10.360343577412394
+          "percent": 10.360343577412394,
+          "color": "#c4121a"
         },
         {
           "name": "KOMITET WYBORCZY KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ",
           "votes": 170378,
-          "percent": 6.975789166396101
+          "percent": 6.975789166396101,
+          "color": "#6b4423"
         },
         {
           "name": "KOMITET WYBORCZY POLSKA JEST JEDNA",
           "votes": 51172,
-          "percent": 2.095136010651735
+          "percent": 2.095136010651735,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY BEZPARTYJNI SAMORZĄDOWCY",
           "votes": 45470,
-          "percent": 1.8616789338766198
+          "percent": 1.8616789338766198,
+          "color": "#3f4f3a"
         },
         {
           "name": "KOMITET WYBORCZY NORMALNY KRAJ",
           "votes": 1242,
-          "percent": 0.05085122577248212
+          "percent": 0.05085122577248212,
+          "color": "#3f4f3a"
         }
       ]
     }

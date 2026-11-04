@@ -330,7 +330,7 @@ def shell(title, description, root, local, here, nav, body, place=""):
 <title>%s</title>
 <meta name="description" content="%s">
 <link rel="icon" href="%s">
-<link rel="stylesheet" href="%sguide.css?v=za2">
+<link rel="stylesheet" href="%sguide.css?v=blend1">
 </head>
 <body class="theme-za" data-results="%sresults.json"%s>
 <header>
@@ -360,7 +360,7 @@ def shell(title, description, root, local, here, nav, body, place=""):
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="%slang.js"></script>
-<script src="%smap.js?v=za2"></script>
+<script src="%smap.js?v=blend1"></script>
 </body>
 </html>
 """ % (

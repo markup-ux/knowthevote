@@ -38,12 +38,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 219675,
-          "percent": 72.45695626360578
+          "percent": 72.45695626360578,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 83505,
-          "percent": 27.54304373639422
+          "percent": 27.54304373639422,
+          "color": "#b42318"
         }
       ]
     },
@@ -59,12 +61,14 @@
         {
           "name": "LULA · PT",
           "votes": 222968,
-          "percent": 52.880879988236465
+          "percent": 52.880879988236465,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 198674,
-          "percent": 47.119120011763535
+          "percent": 47.119120011763535,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -80,12 +84,14 @@
         {
           "name": "LULA · PT",
           "votes": 1145783,
-          "percent": 54.02017323675123
+          "percent": 54.02017323675123,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 975245,
-          "percent": 45.97982676324877
+          "percent": 45.97982676324877,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -101,12 +107,14 @@
         {
           "name": "LULA · PT",
           "votes": 2690449,
-          "percent": 55.01503050166357
+          "percent": 55.01503050166357,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 2199940,
-          "percent": 44.98496949833643
+          "percent": 44.98496949833643,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -122,12 +130,14 @@
         {
           "name": "LULA · PT",
           "votes": 2808231,
-          "percent": 69.54161777939787
+          "percent": 69.54161777939787,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 1229971,
-          "percent": 30.45838222060214
+          "percent": 30.45838222060214,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -143,12 +153,14 @@
         {
           "name": "LULA · PT",
           "votes": 4036124,
-          "percent": 68.9275671399798
+          "percent": 68.9275671399798,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 1819478,
-          "percent": 31.0724328600202
+          "percent": 31.0724328600202,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -164,12 +176,14 @@
         {
           "name": "LULA · PT",
           "votes": 1413596,
-          "percent": 65.7179318504606
+          "percent": 65.7179318504606,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 737409,
-          "percent": 34.2820681495394
+          "percent": 34.2820681495394,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -185,12 +199,14 @@
         {
           "name": "LULA · PT",
           "votes": 1794059,
-          "percent": 67.46436708734619
+          "percent": 67.46436708734619,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 865210,
-          "percent": 32.53563291265382
+          "percent": 32.53563291265382,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -206,12 +222,14 @@
         {
           "name": "LULA · PT",
           "votes": 1653989,
-          "percent": 75.87634550665918
+          "percent": 75.87634550665918,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 525859,
-          "percent": 24.12365449334082
+          "percent": 24.12365449334082,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -227,12 +245,14 @@
         {
           "name": "LULA · PT",
           "votes": 4117513,
-          "percent": 69.20111992016224
+          "percent": 69.20111992016224,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 1832554,
-          "percent": 30.798880079837758
+          "percent": 30.798880079837758,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -248,12 +268,14 @@
         {
           "name": "LULA · PT",
           "votes": 1152621,
-          "percent": 60.76785636144986
+          "percent": 60.76785636144986,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 744140,
-          "percent": 39.23214363855014
+          "percent": 39.23214363855014,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -269,12 +291,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 287715,
-          "percent": 66.56556261972848
+          "percent": 66.56556261972848,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 144513,
-          "percent": 33.434437380271525
+          "percent": 33.434437380271525,
+          "color": "#b42318"
         }
       ]
     },
@@ -290,12 +314,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 674382,
-          "percent": 69.60802123803194
+          "percent": 69.60802123803194,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 294446,
-          "percent": 30.39197876196807
+          "percent": 30.39197876196807,
+          "color": "#b42318"
         }
       ]
     },
@@ -311,12 +337,14 @@
         {
           "name": "LULA · PT",
           "votes": 989041,
-          "percent": 69.53349807894432
+          "percent": 69.53349807894432,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 433354,
-          "percent": 30.466501921055684
+          "percent": 30.466501921055684,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -332,12 +360,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 467916,
-          "percent": 51.36977729179978
+          "percent": 51.36977729179978,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 442962,
-          "percent": 48.63022270820022
+          "percent": 48.63022270820022,
+          "color": "#b42318"
         }
       ]
     },
@@ -353,12 +383,14 @@
         {
           "name": "LULA · PT",
           "votes": 6485258,
-          "percent": 71.31344238449469
+          "percent": 71.31344238449469,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 2608761,
-          "percent": 28.68655761550531
+          "percent": 28.68655761550531,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -374,12 +406,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 1351099,
-          "percent": 66.05981813612509
+          "percent": 66.05981813612509,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 694167,
-          "percent": 33.94018186387492
+          "percent": 33.94018186387492,
+          "color": "#b42318"
         }
       ]
     },
@@ -395,12 +429,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 2345334,
-          "percent": 59.6642133624226
+          "percent": 59.6642133624226,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 1585555,
-          "percent": 40.3357866375774
+          "percent": 40.3357866375774,
+          "color": "#b42318"
         }
       ]
     },
@@ -416,12 +452,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 979542,
-          "percent": 54.275291090368505
+          "percent": 54.275291090368505,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 825224,
-          "percent": 45.724708909631495
+          "percent": 45.724708909631495,
+          "color": "#b42318"
         }
       ]
     },
@@ -437,12 +475,14 @@
         {
           "name": "LULA · PT",
           "votes": 6351099,
-          "percent": 50.43402683340632
+          "percent": 50.43402683340632,
+          "color": "#b42318"
         },
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 6241786,
-          "percent": 49.56597316659368
+          "percent": 49.56597316659368,
+          "color": "#1d4e89"
         }
       ]
     },
@@ -458,12 +498,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 1294504,
-          "percent": 56.36932177181578
+          "percent": 56.36932177181578,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 1001965,
-          "percent": 43.63067822818422
+          "percent": 43.63067822818422,
+          "color": "#b42318"
         }
       ]
     },
@@ -479,12 +521,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 927892,
-          "percent": 59.600029546556705
+          "percent": 59.600029546556705,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 628973,
-          "percent": 40.399970453443295
+          "percent": 40.399970453443295,
+          "color": "#b42318"
         }
       ]
     },
@@ -500,12 +544,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 5169033,
-          "percent": 53.10054234322599
+          "percent": 53.10054234322599,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 4565393,
-          "percent": 46.89945765677401
+          "percent": 46.89945765677401,
+          "color": "#b42318"
         }
       ]
     },
@@ -521,12 +567,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 14139178,
-          "percent": 53.84619778804935
+          "percent": 53.84619778804935,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 12119274,
-          "percent": 46.15380221195065
+          "percent": 46.15380221195065,
+          "color": "#b42318"
         }
       ]
     },
@@ -542,12 +590,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 4291444,
-          "percent": 62.57621084324349
+          "percent": 62.57621084324349,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 2566504,
-          "percent": 37.42378915675651
+          "percent": 37.42378915675651,
+          "color": "#b42318"
         }
       ]
     },
@@ -563,12 +613,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 3220071,
-          "percent": 69.42224502709456
+          "percent": 69.42224502709456,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 1418314,
-          "percent": 30.57775497290544
+          "percent": 30.57775497290544,
+          "color": "#b42318"
         }
       ]
     },
@@ -584,12 +636,14 @@
         {
           "name": "FLAVIO BOLSONARO · PL",
           "votes": 3874378,
-          "percent": 57.83577377282641
+          "percent": 57.83577377282641,
+          "color": "#1d4e89"
         },
         {
           "name": "LULA · PT",
           "votes": 2824552,
-          "percent": 42.16422622717359
+          "percent": 42.16422622717359,
+          "color": "#b42318"
         }
       ]
     }

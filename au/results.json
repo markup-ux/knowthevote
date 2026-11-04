@@ -77,102 +77,122 @@
         {
           "name": "Australian Labor Party",
           "votes": 1686994,
-          "percent": 35.19519424290529
+          "percent": 35.19519424290529,
+          "color": "#e1392d"
         },
         {
           "name": "Liberal",
           "votes": 1160759,
-          "percent": 24.216528614921273
+          "percent": 24.216528614921273,
+          "color": "#0047ab"
         },
         {
           "name": "The Greens",
           "votes": 530302,
-          "percent": 11.063514095130841
+          "percent": 11.063514095130841,
+          "color": "#009c3d"
         },
         {
           "name": "Independent",
           "votes": 465188,
-          "percent": 9.705062388762867
+          "percent": 9.705062388762867,
+          "color": "#5c564c"
         },
         {
           "name": "The Nationals",
           "votes": 350477,
-          "percent": 7.311884981612688
+          "percent": 7.311884981612688,
+          "color": "#006644"
         },
         {
           "name": "Pauline Hanson's One Nation",
           "votes": 288676,
-          "percent": 6.0225512913886625
+          "percent": 6.0225512913886625,
+          "color": "#3f4f3a"
         },
         {
           "name": "Trumpet of Patriots",
           "votes": 87846,
-          "percent": 1.8327018551709477
+          "percent": 1.8327018551709477,
+          "color": "#3f4f3a"
         },
         {
           "name": "Family First Party Australia",
           "votes": 63818,
-          "percent": 1.331413689790082
+          "percent": 1.331413689790082,
+          "color": "#3f4f3a"
         },
         {
           "name": "Libertarian Party",
           "votes": 52124,
-          "percent": 1.087445660575672
+          "percent": 1.087445660575672,
+          "color": "#3f4f3a"
         },
         {
           "name": "Legalise Cannabis Australia",
           "votes": 44764,
-          "percent": 0.9338964306271463
+          "percent": 0.9338964306271463,
+          "color": "#3f4f3a"
         },
         {
           "name": "Shooters, Fishers and Farmers Party",
           "votes": 23511,
-          "percent": 0.4905021664836663
+          "percent": 0.4905021664836663,
+          "color": "#3f4f3a"
         },
         {
           "name": "Animal Justice Party",
           "votes": 10062,
-          "percent": 0.2099201564866935
+          "percent": 0.2099201564866935,
+          "color": "#3f4f3a"
         },
         {
           "name": "Australian Citizens Party",
           "votes": 6253,
-          "percent": 0.130454257454909
+          "percent": 0.130454257454909,
+          "color": "#3f4f3a"
         },
         {
           "name": "Gerard Rennick People First",
           "votes": 5442,
-          "percent": 0.11353463442661359
+          "percent": 0.11353463442661359,
+          "color": "#3f4f3a"
         },
         {
           "name": "FUSION | Planet Rescue | Whistleblower Protection | Innovation",
           "votes": 4394,
-          "percent": 0.09167055929263876
+          "percent": 0.09167055929263876,
+          "color": "#3f4f3a"
         },
         {
           "name": "Socialist Alliance",
           "votes": 4032,
-          "percent": 0.0841182737978879
+          "percent": 0.0841182737978879,
+          "color": "#3f4f3a"
         },
         {
           "name": "Health Environment Accountability Rights Transparency (HEART)",
           "votes": 3916,
-          "percent": 0.08169820441282963
+          "percent": 0.08169820441282963,
+          "color": "#3f4f3a"
         },
         {
           "name": "Indigenous - Aboriginal Party of Australia",
           "votes": 3117,
-          "percent": 0.06502893338988507
+          "percent": 0.06502893338988507,
+          "color": "#3f4f3a"
         },
         {
           "name": "Non Affiliated",
           "votes": 888,
-          "percent": 0.018526048395963408
+          "percent": 0.018526048395963408,
+          "color": "#3f4f3a"
         },
         {
           "name": "Australian Democrats",
           "votes": 688,
-          "percent": 0.014353514973449126
+          "percent": 0.014353514973449126,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -188,87 +208,104 @@
         {
           "name": "Australian Labor Party",
           "votes": 1375995,
-          "percent": 33.94950092078487
+          "percent": 33.94950092078487,
+          "color": "#e1392d"
         },
         {
           "name": "Liberal",
           "votes": 1117878,
-          "percent": 27.58105966251705
+          "percent": 27.58105966251705,
+          "color": "#0047ab"
         },
         {
           "name": "The Greens",
           "votes": 550659,
-          "percent": 13.586239940943445
+          "percent": 13.586239940943445,
+          "color": "#009c3d"
         },
         {
           "name": "Independent",
           "votes": 305184,
-          "percent": 7.529710855787128
+          "percent": 7.529710855787128,
+          "color": "#5c564c"
         },
         {
           "name": "Pauline Hanson's One Nation",
           "votes": 234482,
-          "percent": 5.7853021812633605
+          "percent": 5.7853021812633605,
+          "color": "#3f4f3a"
         },
         {
           "name": "The Nationals",
           "votes": 187058,
-          "percent": 4.6152244326761185
+          "percent": 4.6152244326761185,
+          "color": "#006644"
         },
         {
           "name": "Family First Party Australia",
           "votes": 89584,
-          "percent": 2.2102784461335916
+          "percent": 2.2102784461335916,
+          "color": "#3f4f3a"
         },
         {
           "name": "Legalise Cannabis Australia",
           "votes": 56114,
-          "percent": 1.3844834426498076
+          "percent": 1.3844834426498076,
+          "color": "#3f4f3a"
         },
         {
           "name": "Trumpet of Patriots",
           "votes": 50471,
-          "percent": 1.2452554413155084
+          "percent": 1.2452554413155084,
+          "color": "#3f4f3a"
         },
         {
           "name": "Libertarian Party",
           "votes": 24744,
-          "percent": 0.6105010925068047
+          "percent": 0.6105010925068047,
+          "color": "#3f4f3a"
         },
         {
           "name": "Victorian Socialists",
           "votes": 23652,
-          "percent": 0.5835585127695985
+          "percent": 0.5835585127695985,
+          "color": "#3f4f3a"
         },
         {
           "name": "Socialist Alliance",
           "votes": 12017,
-          "percent": 0.29649174056960365
+          "percent": 0.29649174056960365,
+          "color": "#3f4f3a"
         },
         {
           "name": "Australian Citizens Party",
           "votes": 7343,
-          "percent": 0.18117157784826493
+          "percent": 0.18117157784826493,
+          "color": "#3f4f3a"
         },
         {
           "name": "Animal Justice Party",
           "votes": 6548,
-          "percent": 0.16155678765496917
+          "percent": 0.16155678765496917,
+          "color": "#3f4f3a"
         },
         {
           "name": "Gerard Rennick People First",
           "votes": 5979,
-          "percent": 0.14751802586882418
+          "percent": 0.14751802586882418,
+          "color": "#3f4f3a"
         },
         {
           "name": "FUSION | Planet Rescue | Whistleblower Protection | Innovation",
           "votes": 4869,
-          "percent": 0.12013133767441125
+          "percent": 0.12013133767441125,
+          "color": "#3f4f3a"
         },
         {
           "name": "Non Affiliated",
           "votes": 487,
-          "percent": 0.01201560103664783
+          "percent": 0.01201560103664783,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -284,82 +321,98 @@
         {
           "name": "Liberal National Party of Queensland",
           "votes": 1099623,
-          "percent": 34.9126455999271
+          "percent": 34.9126455999271,
+          "color": "#0047ab"
         },
         {
           "name": "Australian Labor Party",
           "votes": 975848,
-          "percent": 30.982832646641317
+          "percent": 30.982832646641317,
+          "color": "#e1392d"
         },
         {
           "name": "The Greens",
           "votes": 370313,
-          "percent": 11.757308213856755
+          "percent": 11.757308213856755,
+          "color": "#009c3d"
         },
         {
           "name": "Pauline Hanson's One Nation",
           "votes": 247071,
-          "percent": 7.844417824126623
+          "percent": 7.844417824126623,
+          "color": "#3f4f3a"
         },
         {
           "name": "Independent",
           "votes": 118221,
-          "percent": 3.7534753960848235
+          "percent": 3.7534753960848235,
+          "color": "#5c564c"
         },
         {
           "name": "Trumpet of Patriots",
           "votes": 103287,
-          "percent": 3.2793261200244728
+          "percent": 3.2793261200244728,
+          "color": "#3f4f3a"
         },
         {
           "name": "Family First Party Australia",
           "votes": 83560,
-          "percent": 2.6530007705640104
+          "percent": 2.6530007705640104,
+          "color": "#3f4f3a"
         },
         {
           "name": "Gerard Rennick People First",
           "votes": 60471,
-          "percent": 1.9199330971371023
+          "percent": 1.9199330971371023,
+          "color": "#3f4f3a"
         },
         {
           "name": "Katter's Australian Party (KAP)",
           "votes": 51775,
-          "percent": 1.6438381390133034
+          "percent": 1.6438381390133034,
+          "color": "#3f4f3a"
         },
         {
           "name": "Legalise Cannabis Australia",
           "votes": 18910,
-          "percent": 0.6003858852485092
+          "percent": 0.6003858852485092,
+          "color": "#3f4f3a"
         },
         {
           "name": "Libertarian Party",
           "votes": 6606,
-          "percent": 0.20973818920950038
+          "percent": 0.20973818920950038,
+          "color": "#3f4f3a"
         },
         {
           "name": "Animal Justice Party",
           "votes": 6216,
-          "percent": 0.1973558256321911
+          "percent": 0.1973558256321911,
+          "color": "#3f4f3a"
         },
         {
           "name": "Australian Citizens Party",
           "votes": 2569,
-          "percent": 0.08156485135925015
+          "percent": 0.08156485135925015,
+          "color": "#3f4f3a"
         },
         {
           "name": "FUSION | Planet Rescue | Whistleblower Protection | Innovation",
           "votes": 2102,
-          "percent": 0.06673776471667724
+          "percent": 0.06673776471667724,
+          "color": "#3f4f3a"
         },
         {
           "name": "Socialist Alliance",
           "votes": 1634,
-          "percent": 0.05187892842390609
+          "percent": 0.05187892842390609,
+          "color": "#3f4f3a"
         },
         {
           "name": "Non Affiliated",
           "votes": 1435,
-          "percent": 0.04556074803445853
+          "percent": 0.04556074803445853,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -375,57 +428,68 @@
         {
           "name": "Australian Labor Party",
           "votes": 433738,
-          "percent": 38.30802357808164
+          "percent": 38.30802357808164,
+          "color": "#e1392d"
         },
         {
           "name": "Liberal",
           "votes": 316915,
-          "percent": 27.990139882250904
+          "percent": 27.990139882250904,
+          "color": "#0047ab"
         },
         {
           "name": "The Greens",
           "votes": 151915,
-          "percent": 13.417232066049717
+          "percent": 13.417232066049717,
+          "color": "#009c3d"
         },
         {
           "name": "Pauline Hanson's One Nation",
           "votes": 69650,
-          "percent": 6.151533511505532
+          "percent": 6.151533511505532,
+          "color": "#3f4f3a"
         },
         {
           "name": "Independent",
           "votes": 38063,
-          "percent": 3.361749031564035
+          "percent": 3.361749031564035,
+          "color": "#5c564c"
         },
         {
           "name": "Centre Alliance",
           "votes": 37453,
-          "percent": 3.3078734329708066
+          "percent": 3.3078734329708066,
+          "color": "#3f4f3a"
         },
         {
           "name": "Trumpet of Patriots",
           "votes": 35793,
-          "percent": 3.1612611482744795
+          "percent": 3.1612611482744795,
+          "color": "#3f4f3a"
         },
         {
           "name": "Family First Party Australia",
           "votes": 29293,
-          "percent": 2.587176900969584
+          "percent": 2.587176900969584,
+          "color": "#3f4f3a"
         },
         {
           "name": "Animal Justice Party",
           "votes": 11228,
-          "percent": 0.9916642967291329
+          "percent": 0.9916642967291329,
+          "color": "#3f4f3a"
         },
         {
           "name": "The Nationals",
           "votes": 5181,
-          "percent": 0.4575893054287173
+          "percent": 0.4575893054287173,
+          "color": "#006644"
         },
         {
           "name": "FUSION | Planet Rescue | Whistleblower Protection | Innovation",
           "votes": 3009,
-          "percent": 0.26575684617545076
+          "percent": 0.26575684617545076,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -441,72 +505,86 @@
         {
           "name": "Australian Labor Party",
           "votes": 568895,
-          "percent": 35.59028212224797
+          "percent": 35.59028212224797,
+          "color": "#e1392d"
         },
         {
           "name": "Liberal",
           "votes": 458187,
-          "percent": 28.66434859639552
+          "percent": 28.66434859639552,
+          "color": "#0047ab"
         },
         {
           "name": "The Greens",
           "votes": 191389,
-          "percent": 11.973366798960997
+          "percent": 11.973366798960997,
+          "color": "#009c3d"
         },
         {
           "name": "Pauline Hanson's One Nation",
           "votes": 121630,
-          "percent": 7.609217895268935
+          "percent": 7.609217895268935,
+          "color": "#3f4f3a"
         },
         {
           "name": "Independent",
           "votes": 87987,
-          "percent": 5.5044993418649
+          "percent": 5.5044993418649,
+          "color": "#5c564c"
         },
         {
           "name": "Legalise Cannabis Australia",
           "votes": 66547,
-          "percent": 4.163204992818069
+          "percent": 4.163204992818069,
+          "color": "#3f4f3a"
         },
         {
           "name": "The Nationals",
           "votes": 46062,
-          "percent": 2.88165579784492
+          "percent": 2.88165579784492,
+          "color": "#006644"
         },
         {
           "name": "Australian Christians",
           "votes": 31365,
-          "percent": 1.9622060288178091
+          "percent": 1.9622060288178091,
+          "color": "#3f4f3a"
         },
         {
           "name": "Non Affiliated",
           "votes": 10623,
-          "percent": 0.6645788185599103
+          "percent": 0.6645788185599103,
+          "color": "#3f4f3a"
         },
         {
           "name": "Trumpet of Patriots",
           "votes": 9404,
-          "percent": 0.588317726606175
+          "percent": 0.588317726606175,
+          "color": "#3f4f3a"
         },
         {
           "name": "Australian Citizens Party",
           "votes": 2016,
-          "percent": 0.12612170744768703
+          "percent": 0.12612170744768703,
+          "color": "#3f4f3a"
         },
         {
           "name": "Indigenous - Aboriginal Party of Australia",
           "votes": 1872,
-          "percent": 0.11711301405856651
+          "percent": 0.11711301405856651,
+          "color": "#3f4f3a"
         },
         {
           "name": "The Great Australian Party",
           "votes": 1509,
-          "percent": 0.09440359947349192
+          "percent": 0.09440359947349192,
+          "color": "#3f4f3a"
         },
         {
           "name": "Socialist Alliance",
           "votes": 970,
-          "percent": 0.06068355963504782
+          "percent": 0.06068355963504782,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -522,42 +600,50 @@
         {
           "name": "Australian Labor Party",
           "votes": 134435,
-          "percent": 36.604957264491816
+          "percent": 36.604957264491816,
+          "color": "#e1392d"
         },
         {
           "name": "Liberal",
           "votes": 89988,
-          "percent": 24.50259898327883
+          "percent": 24.50259898327883,
+          "color": "#0047ab"
         },
         {
           "name": "Independent",
           "votes": 65907,
-          "percent": 17.94564598825352
+          "percent": 17.94564598825352,
+          "color": "#5c564c"
         },
         {
           "name": "The Greens",
           "votes": 40833,
-          "percent": 11.118311600260308
+          "percent": 11.118311600260308,
+          "color": "#009c3d"
         },
         {
           "name": "Pauline Hanson's One Nation",
           "votes": 22140,
-          "percent": 6.028443142305567
+          "percent": 6.028443142305567,
+          "color": "#3f4f3a"
         },
         {
           "name": "Trumpet of Patriots",
           "votes": 9275,
-          "percent": 2.525465679534062
+          "percent": 2.525465679534062,
+          "color": "#3f4f3a"
         },
         {
           "name": "Shooters, Fishers and Farmers Party",
           "votes": 3457,
-          "percent": 0.9412975583988411
+          "percent": 0.9412975583988411,
+          "color": "#3f4f3a"
         },
         {
           "name": "Australian Citizens Party",
           "votes": 1224,
-          "percent": 0.3332797834770557
+          "percent": 0.3332797834770557,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -573,37 +659,44 @@
         {
           "name": "Australian Labor Party",
           "votes": 40123,
-          "percent": 37.93706624307407
+          "percent": 37.93706624307407,
+          "color": "#e1392d"
         },
         {
           "name": "Country Liberal Party (NT)",
           "votes": 35785,
-          "percent": 33.835404020347575
+          "percent": 33.835404020347575,
+          "color": "#f58220"
         },
         {
           "name": "The Greens",
           "votes": 10813,
-          "percent": 10.223898942909551
+          "percent": 10.223898942909551,
+          "color": "#009c3d"
         },
         {
           "name": "Independent",
           "votes": 8194,
-          "percent": 7.747584198483387
+          "percent": 7.747584198483387,
+          "color": "#5c564c"
         },
         {
           "name": "Pauline Hanson's One Nation",
           "votes": 8165,
-          "percent": 7.720164142130444
+          "percent": 7.720164142130444,
+          "color": "#3f4f3a"
         },
         {
           "name": "Australian Citizens Party",
           "votes": 1365,
-          "percent": 1.2906336869575084
+          "percent": 1.2906336869575084,
+          "color": "#3f4f3a"
         },
         {
           "name": "Indigenous - Aboriginal Party of Australia",
           "votes": 1317,
-          "percent": 1.245248766097464
+          "percent": 1.245248766097464,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -619,37 +712,44 @@
         {
           "name": "Australian Labor Party",
           "votes": 138110,
-          "percent": 47.531533391840036
+          "percent": 47.531533391840036,
+          "color": "#e1392d"
         },
         {
           "name": "Liberal",
           "votes": 61489,
-          "percent": 21.161874279421127
+          "percent": 21.161874279421127,
+          "color": "#0047ab"
         },
         {
           "name": "The Greens",
           "votes": 43753,
-          "percent": 15.057904427580748
+          "percent": 15.057904427580748,
+          "color": "#009c3d"
         },
         {
           "name": "Independent",
           "votes": 37307,
-          "percent": 12.839467933164697
+          "percent": 12.839467933164697,
+          "color": "#5c564c"
         },
         {
           "name": "Family First Party Australia",
           "votes": 7426,
-          "percent": 2.555710426238535
+          "percent": 2.555710426238535,
+          "color": "#3f4f3a"
         },
         {
           "name": "Animal Justice Party",
           "votes": 1258,
-          "percent": 0.43294959819661694
+          "percent": 0.43294959819661694,
+          "color": "#3f4f3a"
         },
         {
           "name": "Health Environment Accountability Rights Transparency (HEART)",
           "votes": 1222,
-          "percent": 0.42055994355824
+          "percent": 0.42055994355824,
+          "color": "#3f4f3a"
         }
       ]
     }

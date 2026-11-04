@@ -196,42 +196,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 54658,
-          "percent": 34.379343963266976
+          "percent": 34.379343963266976,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 30481,
-          "percent": 19.172248954303864
+          "percent": 19.172248954303864,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 25812,
-          "percent": 16.235493914520237
+          "percent": 16.235493914520237,
+          "color": "#66bee6"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 11156,
-          "percent": 7.017014183728024
+          "percent": 7.017014183728024,
+          "color": "#1b5cb1"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 10988,
-          "percent": 6.9113438374689435
+          "percent": 6.9113438374689435,
+          "color": "#63a91d"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 10072,
-          "percent": 6.33518885429443
+          "percent": 6.33518885429443,
+          "color": "#c40000"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 7315,
-          "percent": 4.601062993364154
+          "percent": 4.601062993364154,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 5868,
-          "percent": 3.690914237192188
+          "percent": 3.690914237192188,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -252,42 +260,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 66875,
-          "percent": 36.93629007760073
+          "percent": 36.93629007760073,
+          "color": "#ff0000"
         },
         {
           "name": "M · Moderaterna",
           "votes": 27859,
-          "percent": 15.387037088177626
+          "percent": 15.387037088177626,
+          "color": "#66bee6"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 23081,
-          "percent": 12.748059981773494
+          "percent": 12.748059981773494,
+          "color": "#4e83a3"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 16915,
-          "percent": 9.34246499682417
+          "percent": 9.34246499682417,
+          "color": "#c40000"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 13552,
-          "percent": 7.485018364585347
+          "percent": 7.485018364585347,
+          "color": "#008000"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 13025,
-          "percent": 7.193946590814946
+          "percent": 7.193946590814946,
+          "color": "#63a91d"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 10697,
-          "percent": 5.908149457347215
+          "percent": 5.908149457347215,
+          "color": "#1b5cb1"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 6337,
-          "percent": 3.5000414238767226
+          "percent": 3.5000414238767226,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -308,42 +324,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 27343,
-          "percent": 31.496072062109796
+          "percent": 31.496072062109796,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 15272,
-          "percent": 17.591632685972307
+          "percent": 17.591632685972307,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 15148,
-          "percent": 17.44879858087405
+          "percent": 17.44879858087405,
+          "color": "#66bee6"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 8745,
-          "percent": 10.073260073260073
+          "percent": 10.073260073260073,
+          "color": "#63a91d"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 5762,
-          "percent": 6.6371783352915426
+          "percent": 6.6371783352915426,
+          "color": "#008000"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 5227,
-          "percent": 6.020918285069229
+          "percent": 6.020918285069229,
+          "color": "#c40000"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 4736,
-          "percent": 5.455341304397908
+          "percent": 5.455341304397908,
+          "color": "#1b5cb1"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 3072,
-          "percent": 3.5385997650148595
+          "percent": 3.5385997650148595,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -364,42 +388,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 58720,
-          "percent": 31.82017698347757
+          "percent": 31.82017698347757,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 39727,
-          "percent": 21.527932067823798
+          "percent": 21.527932067823798,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 32717,
-          "percent": 17.729235871397066
+          "percent": 17.729235871397066,
+          "color": "#66bee6"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 12469,
-          "percent": 6.756910538266038
+          "percent": 6.756910538266038,
+          "color": "#c40000"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 11411,
-          "percent": 6.183583779946569
+          "percent": 6.183583779946569,
+          "color": "#1b5cb1"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 11180,
-          "percent": 6.058405631390995
+          "percent": 6.058405631390995,
+          "color": "#63a91d"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 7780,
-          "percent": 4.21595669161198
+          "percent": 4.21595669161198,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 7434,
-          "percent": 4.0284604171521154
+          "percent": 4.0284604171521154,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -420,42 +452,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 55451,
-          "percent": 29.518764972052168
+          "percent": 29.518764972052168,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 41863,
-          "percent": 22.28533404311951
+          "percent": 22.28533404311951,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 34477,
-          "percent": 18.353473516103275
+          "percent": 18.353473516103275,
+          "color": "#66bee6"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 13294,
-          "percent": 7.076923076923077
+          "percent": 7.076923076923077,
+          "color": "#1b5cb1"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 12200,
-          "percent": 6.4945435187649725
+          "percent": 6.4945435187649725,
+          "color": "#63a91d"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 10814,
-          "percent": 5.7567207878626565
+          "percent": 5.7567207878626565,
+          "color": "#c40000"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 8913,
-          "percent": 4.744743146127229
+          "percent": 4.744743146127229,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 7579,
-          "percent": 4.034602076124568
+          "percent": 4.034602076124568,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -476,42 +516,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 72015,
-          "percent": 27.074122530000903
+          "percent": 27.074122530000903,
+          "color": "#ff0000"
         },
         {
           "name": "M · Moderaterna",
           "votes": 48826,
-          "percent": 18.35619116364402
+          "percent": 18.35619116364402,
+          "color": "#66bee6"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 41523,
-          "percent": 15.610619868266715
+          "percent": 15.610619868266715,
+          "color": "#4e83a3"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 25773,
-          "percent": 9.68938915456104
+          "percent": 9.68938915456104,
+          "color": "#c40000"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 22199,
-          "percent": 8.345739721495383
+          "percent": 8.345739721495383,
+          "color": "#008000"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 20548,
-          "percent": 7.725044362236458
+          "percent": 7.725044362236458,
+          "color": "#63a91d"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 17672,
-          "percent": 6.643808836355981
+          "percent": 6.643808836355981,
+          "color": "#1b5cb1"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 13246,
-          "percent": 4.979849018015579
+          "percent": 4.979849018015579,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -532,42 +580,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 53813,
-          "percent": 30.466856896981227
+          "percent": 30.466856896981227,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 35997,
-          "percent": 20.38012093212854
+          "percent": 20.38012093212854,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 34854,
-          "percent": 19.732998165636253
+          "percent": 19.732998165636253,
+          "color": "#66bee6"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 14087,
-          "percent": 7.975519170233485
+          "percent": 7.975519170233485,
+          "color": "#c40000"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 9894,
-          "percent": 5.601603369794144
+          "percent": 5.601603369794144,
+          "color": "#1b5cb1"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 9360,
-          "percent": 5.29927304844079
+          "percent": 5.29927304844079,
+          "color": "#63a91d"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 8893,
-          "percent": 5.034875557669226
+          "percent": 5.034875557669226,
+          "color": "#3399ff"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 6600,
-          "percent": 3.7366668931313267
+          "percent": 3.7366668931313267,
+          "color": "#008000"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -588,32 +644,38 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 61609,
-          "percent": 30.34731765946023
+          "percent": 30.34731765946023,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 36056,
-          "percent": 17.76043898666588
+          "percent": 17.76043898666588,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 35795,
-          "percent": 17.631875791205488
+          "percent": 17.631875791205488,
+          "color": "#66bee6"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 15874,
-          "percent": 7.819203696315014
+          "percent": 7.819203696315014,
+          "color": "#c40000"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 12589,
-          "percent": 6.201080718968736
+          "percent": 6.201080718968736,
+          "color": "#1b5cb1"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 11605,
-          "percent": 5.71638269470428
+          "percent": 5.71638269470428,
+          "color": "#63a91d"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -623,12 +685,14 @@
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 9901,
-          "percent": 4.877027579514612
+          "percent": 4.877027579514612,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 9000,
-          "percent": 4.433213636565146
+          "percent": 4.433213636565146,
+          "color": "#3399ff"
         }
       ]
     },
@@ -644,42 +708,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 57395,
-          "percent": 31.061093943641392
+          "percent": 31.061093943641392,
+          "color": "#ff0000"
         },
         {
           "name": "M · Moderaterna",
           "votes": 37149,
-          "percent": 20.104339731898843
+          "percent": 20.104339731898843,
+          "color": "#66bee6"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 36422,
-          "percent": 19.710901012549993
+          "percent": 19.710901012549993,
+          "color": "#4e83a3"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 12668,
-          "percent": 6.855683214183276
+          "percent": 6.855683214183276,
+          "color": "#1b5cb1"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 11185,
-          "percent": 6.053111521206184
+          "percent": 6.053111521206184,
+          "color": "#63a91d"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 10740,
-          "percent": 5.812285895194853
+          "percent": 5.812285895194853,
+          "color": "#c40000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 8208,
-          "percent": 4.442015142249474
+          "percent": 4.442015142249474,
+          "color": "#3399ff"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 8064,
-          "percent": 4.364085052034571
+          "percent": 4.364085052034571,
+          "color": "#008000"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -700,42 +772,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 309348,
-          "percent": 27.111460505178247
+          "percent": 27.111460505178247,
+          "color": "#ff0000"
         },
         {
           "name": "M · Moderaterna",
           "votes": 222755,
-          "percent": 19.52239350127035
+          "percent": 19.52239350127035,
+          "color": "#66bee6"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 198902,
-          "percent": 17.43190102215293
+          "percent": 17.43190102215293,
+          "color": "#4e83a3"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 107205,
-          "percent": 9.395516128947445
+          "percent": 9.395516128947445,
+          "color": "#c40000"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 75494,
-          "percent": 6.6163434041206886
+          "percent": 6.6163434041206886,
+          "color": "#63a91d"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 75266,
-          "percent": 6.596361335398147
+          "percent": 6.596361335398147,
+          "color": "#1b5cb1"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 72310,
-          "percent": 6.337295567223448
+          "percent": 6.337295567223448,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 62361,
-          "percent": 5.465358717571863
+          "percent": 5.465358717571863,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -756,42 +836,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 58887,
-          "percent": 25.57691054791843
+          "percent": 25.57691054791843,
+          "color": "#ff0000"
         },
         {
           "name": "M · Moderaterna",
           "votes": 53723,
-          "percent": 23.333984841574914
+          "percent": 23.333984841574914,
+          "color": "#66bee6"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 45064,
-          "percent": 19.573044932351728
+          "percent": 19.573044932351728,
+          "color": "#4e83a3"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 17369,
-          "percent": 7.5440310986600645
+          "percent": 7.5440310986600645,
+          "color": "#63a91d"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 16228,
-          "percent": 7.04845049623211
+          "percent": 7.04845049623211,
+          "color": "#1b5cb1"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 13695,
-          "percent": 5.948270245618607
+          "percent": 5.948270245618607,
+          "color": "#3399ff"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 12095,
-          "percent": 5.2533281212674
+          "percent": 5.2533281212674,
+          "color": "#c40000"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 10124,
-          "percent": 4.397246291832258
+          "percent": 4.397246291832258,
+          "color": "#008000"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -812,42 +900,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 223791,
-          "percent": 25.102438444393844
+          "percent": 25.102438444393844,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 186410,
-          "percent": 20.909444751663187
+          "percent": 20.909444751663187,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 181587,
-          "percent": 20.368453109383957
+          "percent": 20.368453109383957,
+          "color": "#66bee6"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 80904,
-          "percent": 9.074930090598995
+          "percent": 9.074930090598995,
+          "color": "#c40000"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 55728,
-          "percent": 6.250960448048313
+          "percent": 6.250960448048313,
+          "color": "#63a91d"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 55724,
-          "percent": 6.250511771587788
+          "percent": 6.250511771587788,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 50320,
-          "percent": 5.644349873417154
+          "percent": 5.644349873417154,
+          "color": "#3399ff"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 46088,
-          "percent": 5.169650178180639
+          "percent": 5.169650178180639,
+          "color": "#1b5cb1"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -868,42 +964,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 35565,
-          "percent": 27.666923382109267
+          "percent": 27.666923382109267,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 26144,
-          "percent": 20.338086458649364
+          "percent": 20.338086458649364,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 25662,
-          "percent": 19.963126327335527
+          "percent": 19.963126327335527,
+          "color": "#66bee6"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 10256,
-          "percent": 7.97840478579819
+          "percent": 7.97840478579819,
+          "color": "#1b5cb1"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 9798,
-          "percent": 7.62211486849168
+          "percent": 7.62211486849168,
+          "color": "#c40000"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 8008,
-          "percent": 6.229628073778462
+          "percent": 6.229628073778462,
+          "color": "#63a91d"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 5714,
-          "percent": 4.445066784911355
+          "percent": 4.445066784911355,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 5626,
-          "percent": 4.376609333551152
+          "percent": 4.376609333551152,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -924,42 +1028,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 29892,
-          "percent": 28.657162852678102
+          "percent": 28.657162852678102,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 25467,
-          "percent": 24.414959399476555
+          "percent": 24.414959399476555,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 19092,
-          "percent": 18.303310356728566
+          "percent": 18.303310356728566,
+          "color": "#66bee6"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 7601,
-          "percent": 7.287003039047446
+          "percent": 7.287003039047446,
+          "color": "#1b5cb1"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 6113,
-          "percent": 5.8604722507166205
+          "percent": 5.8604722507166205,
+          "color": "#c40000"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 5672,
-          "percent": 5.437689940465348
+          "percent": 5.437689940465348,
+          "color": "#63a91d"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 5066,
-          "percent": 4.856723772637069
+          "percent": 4.856723772637069,
+          "color": "#3399ff"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 3985,
-          "percent": 3.820379832996194
+          "percent": 3.820379832996194,
+          "color": "#008000"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -980,42 +1092,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 46974,
-          "percent": 29.032856189275385
+          "percent": 29.032856189275385,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 34565,
-          "percent": 21.36332171376301
+          "percent": 21.36332171376301,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 30324,
-          "percent": 18.74211970629682
+          "percent": 18.74211970629682,
+          "color": "#66bee6"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 13575,
-          "percent": 8.390195060446489
+          "percent": 8.390195060446489,
+          "color": "#1b5cb1"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 10365,
-          "percent": 6.406215233998369
+          "percent": 6.406215233998369,
+          "color": "#63a91d"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 9930,
-          "percent": 6.1373581547133425
+          "percent": 6.1373581547133425,
+          "color": "#c40000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 6888,
-          "percent": 4.257212786471854
+          "percent": 4.257212786471854,
+          "color": "#3399ff"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 6686,
-          "percent": 4.132364211723405
+          "percent": 4.132364211723405,
+          "color": "#008000"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -1036,42 +1156,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 62904,
-          "percent": 26.577882185923492
+          "percent": 26.577882185923492,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 48704,
-          "percent": 20.578169496108636
+          "percent": 20.578169496108636,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 46733,
-          "percent": 19.74539247416321
+          "percent": 19.74539247416321,
+          "color": "#66bee6"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 24225,
-          "percent": 10.23542534582851
+          "percent": 10.23542534582851,
+          "color": "#1b5cb1"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 16567,
-          "percent": 6.999805643110048
+          "percent": 6.999805643110048,
+          "color": "#63a91d"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 14106,
-          "percent": 5.959996281868192
+          "percent": 5.959996281868192,
+          "color": "#c40000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 10874,
-          "percent": 4.594427872468079
+          "percent": 4.594427872468079,
+          "color": "#3399ff"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 9032,
-          "percent": 3.816155282704772
+          "percent": 3.816155282704772,
+          "color": "#008000"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -1092,42 +1220,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 401071,
-          "percent": 26.04998243074107
+          "percent": 26.04998243074107,
+          "color": "#ff0000"
         },
         {
           "name": "M · Moderaterna",
           "votes": 335750,
-          "percent": 21.807314917112716
+          "percent": 21.807314917112716,
+          "color": "#66bee6"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 186898,
-          "percent": 12.13922127588543
+          "percent": 12.13922127588543,
+          "color": "#4e83a3"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 156902,
-          "percent": 10.190949590840862
+          "percent": 10.190949590840862,
+          "color": "#c40000"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 133169,
-          "percent": 8.649466329700621
+          "percent": 8.649466329700621,
+          "color": "#63a91d"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 123319,
-          "percent": 8.00969849073246
+          "percent": 8.00969849073246,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 105185,
-          "percent": 6.831876156534627
+          "percent": 6.831876156534627,
+          "color": "#3399ff"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 76101,
-          "percent": 4.942839828763053
+          "percent": 4.942839828763053,
+          "color": "#1b5cb1"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -1148,42 +1284,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 88267,
-          "percent": 28.36279389602419
+          "percent": 28.36279389602419,
+          "color": "#ff0000"
         },
         {
           "name": "M · Moderaterna",
           "votes": 63956,
-          "percent": 20.550951617412206
+          "percent": 20.550951617412206,
+          "color": "#66bee6"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 57496,
-          "percent": 18.475162833740885
+          "percent": 18.475162833740885,
+          "color": "#4e83a3"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 21957,
-          "percent": 7.05543255775095
+          "percent": 7.05543255775095,
+          "color": "#c40000"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 21213,
-          "percent": 6.816363385142365
+          "percent": 6.816363385142365,
+          "color": "#63a91d"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 20539,
-          "percent": 6.599787279849104
+          "percent": 6.599787279849104,
+          "color": "#1b5cb1"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 17510,
-          "percent": 5.6264801241617315
+          "percent": 5.6264801241617315,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 15308,
-          "percent": 4.918912492328257
+          "percent": 4.918912492328257,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -1204,42 +1348,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 58319,
-          "percent": 30.539583791539677
+          "percent": 30.539583791539677,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 38535,
-          "percent": 20.179407421371792
+          "percent": 20.179407421371792,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 37380,
-          "percent": 19.5745750463443
+          "percent": 19.5745750463443,
+          "color": "#66bee6"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 14005,
-          "percent": 7.333919837454572
+          "percent": 7.333919837454572,
+          "color": "#c40000"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 10977,
-          "percent": 5.748264052534012
+          "percent": 5.748264052534012,
+          "color": "#1b5cb1"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 10664,
-          "percent": 5.584357097223531
+          "percent": 5.584357097223531,
+          "color": "#63a91d"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 9254,
-          "percent": 4.845990301735424
+          "percent": 4.845990301735424,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 8654,
-          "percent": 4.531791665357506
+          "percent": 4.531791665357506,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -1260,42 +1412,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 60172,
-          "percent": 37.52330707973984
+          "percent": 37.52330707973984,
+          "color": "#ff0000"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 29040,
-          "percent": 18.10936710755243
+          "percent": 18.10936710755243,
+          "color": "#4e83a3"
         },
         {
           "name": "M · Moderaterna",
           "votes": 26250,
-          "percent": 16.369520887508653
+          "percent": 16.369520887508653,
+          "color": "#66bee6"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 10996,
-          "percent": 6.85711434967791
+          "percent": 6.85711434967791,
+          "color": "#c40000"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 10342,
-          "percent": 6.449279429280552
+          "percent": 6.449279429280552,
+          "color": "#1b5cb1"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 8238,
-          "percent": 5.137223355097001
+          "percent": 5.137223355097001,
+          "color": "#63a91d"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 7289,
-          "percent": 4.545426199963831
+          "percent": 4.545426199963831,
+          "color": "#008000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 5380,
-          "percent": 3.3549722809446303
+          "percent": 3.3549722809446303,
+          "color": "#3399ff"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",
@@ -1316,42 +1476,50 @@
         {
           "name": "S · Arbetarepartiet-Socialdemokraterna",
           "votes": 12920,
-          "percent": 31.1130376149882
+          "percent": 31.1130376149882,
+          "color": "#ff0000"
         },
         {
           "name": "M · Moderaterna",
           "votes": 7599,
-          "percent": 18.299378702499638
+          "percent": 18.299378702499638,
+          "color": "#66bee6"
         },
         {
           "name": "SD · Sverigedemokraterna",
           "votes": 5601,
-          "percent": 13.48793526946973
+          "percent": 13.48793526946973,
+          "color": "#4e83a3"
         },
         {
           "name": "C · Centerpartiet",
           "votes": 4457,
-          "percent": 10.733034725232384
+          "percent": 10.733034725232384,
+          "color": "#63a91d"
         },
         {
           "name": "MP · Miljöpartiet de gröna",
           "votes": 3274,
-          "percent": 7.884217116986948
+          "percent": 7.884217116986948,
+          "color": "#008000"
         },
         {
           "name": "V · Vänsterpartiet",
           "votes": 2799,
-          "percent": 6.740355439965323
+          "percent": 6.740355439965323,
+          "color": "#c40000"
         },
         {
           "name": "L · Liberalerna (tidigare Folkpartiet)",
           "votes": 2193,
-          "percent": 5.281028753070365
+          "percent": 5.281028753070365,
+          "color": "#3399ff"
         },
         {
           "name": "KD · Kristdemokraterna",
           "votes": 2175,
-          "percent": 5.237682415835862
+          "percent": 5.237682415835862,
+          "color": "#1b5cb1"
         },
         {
           "name": "ÖVR · Övriga anmälda partier",

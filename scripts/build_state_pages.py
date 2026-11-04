@@ -295,7 +295,7 @@ def footer(state_name, guide):
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
 <script src="live.js?v=16"></script>
-<script src="state.js?v=closedtop"></script>
+<script src="state.js?v=blend1"></script>
 </body>
 </html>
 """ % (esc(state_name), names)
@@ -553,7 +553,7 @@ def page(data):
 <title>Leaders.vote · %s, November 3, 2026</title>
 <meta name="description" content="Leaders.vote guide to the %s general election on November 3, 2026. Candidates, sample ballot, and unofficial results. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%%3E%%3Crect width='32' height='32' fill='%%231c1915'/%%3E%%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%%23f4f0e6'%%3EL%%3C/text%%3E%%3C/svg%%3E">
-<link rel="stylesheet" href="guide.css?v=wherecenter">
+<link rel="stylesheet" href="guide.css?v=blend1">
 </head>
 <body data-state="%s">
 %s
@@ -624,7 +624,7 @@ def index_page(states):
 <title>Leaders.vote · November 3, 2026</title>
 <meta name="description" content="Leaders.vote is an independent voter guide for every state in the November 3, 2026 general election. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%%3E%%3Crect width='32' height='32' fill='%%231c1915'/%%3E%%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%%23f4f0e6'%%3EL%%3C/text%%3E%%3C/svg%%3E">
-<link rel="stylesheet" href="guide.css?v=wherecenter">
+<link rel="stylesheet" href="guide.css?v=blend1">
 </head>
 <body>
 %s
@@ -746,6 +746,74 @@ fetch("preview/us.svg").then(function (response) { return response.text(); }).th
   });
   var PARTY = { dem: "#1e4d7b", gop: "#8d3232", ind: "#3e5c45", other: "#5c4a2a" };
   var PARTY_LABEL = { dem: "Democratic", gop: "Republican", ind: "Independent", lib: "Libertarian", other: "Other" };
+  var BLEND_LINE = "The color mixes blue and red. Where a state file has each party's votes, the mix uses those votes. Where it reports only the lead and the margin, the rest of the vote is blended as the other of blue and red. A state with no votes stays beige. This does not call a race.";
+  var lastLeads = null;
+  function blendOn() {
+    try { return localStorage.getItem("leaders-blend") === "1"; }
+    catch (error) { return false; }
+  }
+  function rememberBlend(on) {
+    try { localStorage.setItem("leaders-blend", on ? "1" : "0"); }
+    catch (error) {}
+  }
+  function hexChannels(hex) {
+    if (!hex || hex.charAt(0) !== "#") return null;
+    return [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
+  }
+  function mixColor(parts) {
+    var total = 0;
+    var acc = [0, 0, 0];
+    var i;
+    for (i = 0; i < parts.length; i++) {
+      var votes = parts[i].votes || 0;
+      if (!(votes > 0)) continue;
+      var rgb = hexChannels(parts[i].color);
+      if (!rgb) return "";
+      total += votes;
+      acc[0] += rgb[0] * votes;
+      acc[1] += rgb[1] * votes;
+      acc[2] += rgb[2] * votes;
+    }
+    if (!(total > 0)) return "";
+    return "rgb(" + acc.map(function (channel) { return Math.round(channel / total); }).join(",") + ")";
+  }
+  function inkDark(color) {
+    var nums = String(color).match(/\\d+/g);
+    if (!nums || nums.length < 3) return false;
+    var y = (0.2126 * +nums[0] + 0.7152 * +nums[1] + 0.0722 * +nums[2]) / 255;
+    return y < 0.62;
+  }
+  function shareParts(row) {
+    var totals = {};
+    (row.shares || []).forEach(function (share) {
+      var votes = share.votes || 0;
+      var party = share.party || "other";
+      if (!(votes > 0) || party === "yes" || party === "no") return;
+      totals[party] = (totals[party] || 0) + votes;
+    });
+    return Object.keys(totals).map(function (party) {
+      return { party: party, color: PARTY[party] || PARTY.other, votes: totals[party] };
+    });
+  }
+  function marginParts(row) {
+    var party = row.party || "";
+    var other = party === "dem" ? "gop" : party === "gop" ? "dem" : "";
+    if (!other || !(row.votes > 0)) return [];
+    var gap = Math.max(0, Math.min(100, row.gap || 0));
+    var lead = (100 + gap) / 200;
+    return [
+      { party: party, color: PARTY[party], votes: lead, assumed: true },
+      { party: other, color: PARTY[other], votes: 1 - lead, assumed: true }
+    ];
+  }
+  function blendTitle(name, office, parts) {
+    var total = parts.reduce(function (sum, part) { return sum + part.votes; }, 0);
+    var ranked = parts.slice().sort(function (a, b) { return b.votes - a.votes; });
+    var bits = ranked.slice(0, 3).map(function (part) {
+      return (PARTY_LABEL[part.party] || "Other") + " " + Math.round(part.votes / total * 100) + "%%";
+    });
+    return name + ": " + (office || "Statewide") + ", " + bits.join(", ") + ", blended";
+  }
   function tint(hex, amount) {
     var chip = [235, 228, 214];
     var rgb = [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
@@ -754,6 +822,7 @@ fetch("preview/us.svg").then(function (response) { return response.text(); }).th
     }).join(",") + ")";
   }
   function paintLeads(data) {
+    lastLeads = data;
     var rows = (data && data.states) || {};
     svg.querySelectorAll("path").forEach(function (path) {
       var code = path.getAttribute("data-code");
@@ -761,7 +830,20 @@ fetch("preview/us.svg").then(function (response) { return response.text(); }).th
       var label = svg.querySelector('text[data-code="' + code + '"]');
       var party = row.party || "";
       var votes = row.votes || 0;
-      if (party && votes) {
+      var parts = [];
+      if (blendOn()) {
+        parts = shareParts(row);
+        if (!parts.length) parts = marginParts(row);
+      }
+      var mixed = parts.length ? mixColor(parts) : "";
+      if (mixed) {
+        path.style.setProperty("--lead", mixed);
+        if (label) label.classList.toggle("on-dark", inkDark(mixed));
+        var title = parts[0].assumed
+          ? (path.getAttribute("data-name") || code) + ": " + (row.office || "Statewide") + ", " + (PARTY_LABEL[row.party] || "Other") + " lead of " + row.gap + " points, blended with " + (row.party === "gop" ? "blue" : "red")
+          : blendTitle(path.getAttribute("data-name") || code, row.office, parts);
+        path.setAttribute("title", title);
+      } else if (party && votes) {
         var amount = Math.max(0.4, Math.min(1, (row.gap || 0) / 32));
         path.style.setProperty("--lead", tint(PARTY[party] || PARTY.other, amount));
         if (label) label.classList.toggle("on-dark", amount >= 0.72);
@@ -782,9 +864,54 @@ fetch("preview/us.svg").then(function (response) { return response.text(); }).th
     if (clock) status.appendChild(document.createTextNode("Updated " + clock + " Central. "));
     status.appendChild(document.createTextNode("Unofficial totals from the Associated Press, published by NBC News. This map does not call a race."));
   }
+  function mountBlend() {
+    var legend = document.querySelector(".result-legend");
+    if (!legend || document.getElementById("blend-switch")) return;
+    var bar = document.createElement("div");
+    bar.className = "sheet-switch blend-switch";
+    bar.id = "blend-switch";
+    bar.setAttribute("role", "group");
+    bar.setAttribute("aria-label", "How the map is colored");
+    var sub = legend.previousElementSibling;
+    var leadCopy = sub && sub.classList.contains("sub") ? sub.textContent : "";
+    function paintCaption() {
+      var on = blendOn();
+      if (leadCopy && sub) sub.textContent = on ? BLEND_LINE : leadCopy;
+      legend.classList.toggle("is-blend", on);
+      bar.querySelectorAll("button").forEach(function (button) {
+        var chosen = button.getAttribute("data-blend") === (on ? "blend" : "ahead");
+        button.setAttribute("aria-pressed", chosen ? "true" : "false");
+      });
+    }
+    [["ahead", "Who is ahead"], ["blend", "Blend the votes"]].forEach(function (pair) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.textContent = pair[1];
+      button.setAttribute("data-blend", pair[0]);
+      button.addEventListener("click", function () {
+        rememberBlend(pair[0] === "blend");
+        paintCaption();
+        if (lastLeads) paintLeads(lastLeads);
+      });
+      bar.appendChild(button);
+    });
+    if (leadCopy && sub) legend.parentNode.insertBefore(bar, sub);
+    else legend.parentNode.insertBefore(bar, legend);
+    var blank = legend.querySelector(".swatch.blank");
+    if (blank && blank.parentNode) blank.parentNode.classList.add("stay");
+    var key = document.createElement("span");
+    key.className = "blend-key";
+    var swatch = document.createElement("i");
+    swatch.className = "swatch mix";
+    key.appendChild(swatch);
+    key.appendChild(document.createTextNode(" Blue and red, mixed by the votes"));
+    legend.appendChild(key);
+    paintCaption();
+  }
   function loadLeads() {
     leadersLive("preview/leads.json").then(paintLeads).catch(function () {});
   }
+  mountBlend();
   loadLeads();
   setInterval(loadLeads, LIVE_EVERY);
 });

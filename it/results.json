@@ -82,87 +82,104 @@
         {
           "name": "FDI",
           "votes": 2191471,
-          "percent": 27.732900602399727
+          "percent": 27.732900602399727,
+          "color": "#1d4e89"
         },
         {
           "name": "PD-IDP",
           "votes": 1549295,
-          "percent": 19.606211644504942
+          "percent": 19.606211644504942,
+          "color": "#e3000f"
         },
         {
           "name": "LEGA",
           "votes": 964450,
-          "percent": 12.205042177598708
+          "percent": 12.205042177598708,
+          "color": "#2f6b34"
         },
         {
           "name": "AZ-IV",
           "votes": 762850,
-          "percent": 9.65380934748424
+          "percent": 9.65380934748424,
+          "color": "#6b8cae"
         },
         {
           "name": "M5S",
           "votes": 690692,
-          "percent": 8.740655287189597
+          "percent": 8.740655287189597,
+          "color": "#e6a817"
         },
         {
           "name": "FI",
           "votes": 610109,
-          "percent": 7.720883485854705
+          "percent": 7.720883485854705,
+          "color": "#7ba3d0"
         },
         {
           "name": "ALL-VER-SIN",
           "votes": 310107,
-          "percent": 3.924380750239621
+          "percent": 3.924380750239621,
+          "color": "#46962b"
         },
         {
           "name": "+EUROPA",
           "votes": 288584,
-          "percent": 3.6520088047904458
+          "percent": 3.6520088047904458,
+          "color": "#c9a400"
         },
         {
           "name": "ITALEXIT",
           "votes": 165825,
-          "percent": 2.0985028970919237
+          "percent": 2.0985028970919237,
+          "color": "#3f4f3a"
         },
         {
           "name": "UPDM",
           "votes": 99986,
-          "percent": 1.265315306308657
+          "percent": 1.265315306308657,
+          "color": "#3f4f3a"
         },
         {
           "name": "ISP",
           "votes": 99591,
-          "percent": 1.2603166110313992
+          "percent": 1.2603166110313992,
+          "color": "#3f4f3a"
         },
         {
           "name": "NOI MODERATI",
           "votes": 75070,
-          "percent": 0.9500052011740733
+          "percent": 0.9500052011740733,
+          "color": "#5c7ea3"
         },
         {
           "name": "VITA",
           "votes": 54086,
-          "percent": 0.6844542601665237
+          "percent": 0.6844542601665237,
+          "color": "#3f4f3a"
         },
         {
           "name": "IMP CIV-CD",
           "votes": 31244,
-          "percent": 0.3953904689687325
+          "percent": 0.3953904689687325,
+          "color": "#e87722"
         },
         {
           "name": "NDCE",
           "votes": 5741,
-          "percent": 0.07265192300440063
+          "percent": 0.07265192300440063,
+          "color": "#3f4f3a"
         },
         {
           "name": "API-NGP",
           "votes": 2132,
-          "percent": 0.026980299572440712
+          "percent": 0.026980299572440712,
+          "color": "#3f4f3a"
         },
         {
           "name": "FREE",
           "votes": 829,
-          "percent": 0.01049093261986555
+          "percent": 0.01049093261986555,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -178,97 +195,116 @@
         {
           "name": "FDI",
           "votes": 1681454,
-          "percent": 28.419654938935366
+          "percent": 28.419654938935366,
+          "color": "#1d4e89"
         },
         {
           "name": "PD-IDP",
           "votes": 1254327,
-          "percent": 21.200425655765773
+          "percent": 21.200425655765773,
+          "color": "#e3000f"
         },
         {
           "name": "LEGA",
           "votes": 646523,
-          "percent": 10.927423866537717
+          "percent": 10.927423866537717,
+          "color": "#2f6b34"
         },
         {
           "name": "AZ-IV",
           "votes": 490348,
-          "percent": 8.287780076051488
+          "percent": 8.287780076051488,
+          "color": "#6b8cae"
         },
         {
           "name": "M5S",
           "votes": 443026,
-          "percent": 7.4879515282468505
+          "percent": 7.4879515282468505,
+          "color": "#e6a817"
         },
         {
           "name": "FI",
           "votes": 365810,
-          "percent": 6.182859580584391
+          "percent": 6.182859580584391,
+          "color": "#7ba3d0"
         },
         {
           "name": "ALL-VER-SIN",
           "votes": 234383,
-          "percent": 3.9615023566225944
+          "percent": 3.9615023566225944,
+          "color": "#46962b"
         },
         {
           "name": "+EUROPA",
           "votes": 183953,
-          "percent": 3.109142911421887
+          "percent": 3.109142911421887,
+          "color": "#c9a400"
         },
         {
           "name": "ITALEXIT",
           "votes": 134916,
-          "percent": 2.2803277197838323
+          "percent": 2.2803277197838323,
+          "color": "#3f4f3a"
         },
         {
           "name": "SVP-PATT",
           "votes": 117025,
-          "percent": 1.9779370230936506
+          "percent": 1.9779370230936506,
+          "color": "#3f4f3a"
         },
         {
           "name": "VITA",
           "votes": 101076,
-          "percent": 1.708369686359443
+          "percent": 1.708369686359443,
+          "color": "#3f4f3a"
         },
         {
           "name": "ISP",
           "votes": 78671,
-          "percent": 1.3296841148797316
+          "percent": 1.3296841148797316,
+          "color": "#3f4f3a"
         },
         {
           "name": "NOI MODERATI",
           "votes": 70707,
-          "percent": 1.1950779157605875
+          "percent": 1.1950779157605875,
+          "color": "#5c7ea3"
         },
         {
           "name": "UPDM",
           "votes": 68970,
-          "percent": 1.1657194315981123
+          "percent": 1.1657194315981123,
+          "color": "#3f4f3a"
         },
         {
           "name": "IMP CIV-CD",
           "votes": 20441,
-          "percent": 0.345490371194679
+          "percent": 0.345490371194679,
+          "color": "#e87722"
         },
         {
           "name": "PA-UCDL-10V",
           "votes": 14558,
-          "percent": 0.24605688683783267
+          "percent": 0.24605688683783267,
+          "color": "#3f4f3a"
         },
         {
           "name": "API-NGP",
           "votes": 6107,
-          "percent": 0.10321949497998655
+          "percent": 0.10321949497998655,
+          "color": "#3f4f3a"
         },
         {
           "name": "NDCE",
           "votes": 2622,
-          "percent": 0.04431660649050675
+          "percent": 0.04431660649050675,
+          "color": "#3f4f3a"
         },
         {
           "name": "SCN",
           "votes": 1601,
-          "percent": 0.027059834855568766
+          "percent": 0.027059834855568766,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -284,92 +320,110 @@
         {
           "name": "FDI",
           "votes": 1695387,
-          "percent": 29.29665710725002
+          "percent": 29.29665710725002,
+          "color": "#1d4e89"
         },
         {
           "name": "PD-IDP",
           "votes": 1265414,
-          "percent": 21.86662989436257
+          "percent": 21.86662989436257,
+          "color": "#e3000f"
         },
         {
           "name": "M5S",
           "votes": 774532,
-          "percent": 13.384081877820563
+          "percent": 13.384081877820563,
+          "color": "#e6a817"
         },
         {
           "name": "AZ-IV",
           "votes": 494853,
-          "percent": 8.551167762578098
+          "percent": 8.551167762578098,
+          "color": "#6b8cae"
         },
         {
           "name": "LEGA",
           "votes": 385135,
-          "percent": 6.655216794160116
+          "percent": 6.655216794160116,
+          "color": "#2f6b34"
         },
         {
           "name": "FI",
           "votes": 369878,
-          "percent": 6.391572506758293
+          "percent": 6.391572506758293,
+          "color": "#7ba3d0"
         },
         {
           "name": "ALL-VER-SIN",
           "votes": 238208,
-          "percent": 4.116286190824757
+          "percent": 4.116286190824757,
+          "color": "#46962b"
         },
         {
           "name": "+EUROPA",
           "votes": 162830,
-          "percent": 2.813737911623435
+          "percent": 2.813737911623435,
+          "color": "#c9a400"
         },
         {
           "name": "ITALEXIT",
           "votes": 105427,
-          "percent": 1.821801552593035
+          "percent": 1.821801552593035,
+          "color": "#3f4f3a"
         },
         {
           "name": "UPDM",
           "votes": 104511,
-          "percent": 1.8059728728224334
+          "percent": 1.8059728728224334,
+          "color": "#3f4f3a"
         },
         {
           "name": "ISP",
           "votes": 81040,
-          "percent": 1.4003888740279014
+          "percent": 1.4003888740279014,
+          "color": "#3f4f3a"
         },
         {
           "name": "VITA",
           "votes": 31978,
-          "percent": 0.5525868140876632
+          "percent": 0.5525868140876632,
+          "color": "#3f4f3a"
         },
         {
           "name": "NOI MODERATI",
           "votes": 29096,
-          "percent": 0.5027852255517746
+          "percent": 0.5027852255517746,
+          "color": "#5c7ea3"
         },
         {
           "name": "IMP CIV-CD",
           "votes": 27701,
-          "percent": 0.47867932131597846
+          "percent": 0.47867932131597846,
+          "color": "#e87722"
         },
         {
           "name": "PCI",
           "votes": 14253,
-          "percent": 0.24629494843928526
+          "percent": 0.24629494843928526,
+          "color": "#3f4f3a"
         },
         {
           "name": "API-NGP",
           "votes": 5022,
-          "percent": 0.08678125524886625
+          "percent": 0.08678125524886625,
+          "color": "#3f4f3a"
         },
         {
           "name": "PFC",
           "votes": 1421,
-          "percent": 0.024555189906140768
+          "percent": 0.024555189906140768,
+          "color": "#3f4f3a"
         },
         {
           "name": "NDCE",
           "votes": 278,
-          "percent": 0.00480390062906906
+          "percent": 0.00480390062906906,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -385,102 +439,122 @@
         {
           "name": "M5S",
           "votes": 1703565,
-          "percent": 29.534294795279756
+          "percent": 29.534294795279756,
+          "color": "#e6a817"
         },
         {
           "name": "FDI",
           "votes": 1202705,
-          "percent": 20.85100599141033
+          "percent": 20.85100599141033,
+          "color": "#1d4e89"
         },
         {
           "name": "PD-IDP",
           "votes": 928160,
-          "percent": 16.091285661061868
+          "percent": 16.091285661061868,
+          "color": "#e3000f"
         },
         {
           "name": "FI",
           "votes": 645527,
-          "percent": 11.191345628909113
+          "percent": 11.191345628909113,
+          "color": "#7ba3d0"
         },
         {
           "name": "LEGA",
           "votes": 315280,
-          "percent": 5.465933183092985
+          "percent": 5.465933183092985,
+          "color": "#2f6b34"
         },
         {
           "name": "AZ-IV",
           "votes": 303473,
-          "percent": 5.261238076861131
+          "percent": 5.261238076861131,
+          "color": "#6b8cae"
         },
         {
           "name": "ALL-VER-SIN",
           "votes": 155528,
-          "percent": 2.6963513578409217
+          "percent": 2.6963513578409217,
+          "color": "#46962b"
         },
         {
           "name": "+EUROPA",
           "votes": 106933,
-          "percent": 1.8538715842035085
+          "percent": 1.8538715842035085,
+          "color": "#c9a400"
         },
         {
           "name": "UPDM",
           "votes": 99763,
-          "percent": 1.7295670265951075
+          "percent": 1.7295670265951075,
+          "color": "#3f4f3a"
         },
         {
           "name": "ITALEXIT",
           "votes": 76227,
-          "percent": 1.3215290812852987
+          "percent": 1.3215290812852987,
+          "color": "#3f4f3a"
         },
         {
           "name": "IMP CIV-CD",
           "votes": 63393,
-          "percent": 1.0990291241937757
+          "percent": 1.0990291241937757,
+          "color": "#e87722"
         },
         {
           "name": "ISP",
           "votes": 56586,
-          "percent": 0.9810178098785196
+          "percent": 0.9810178098785196,
+          "color": "#3f4f3a"
         },
         {
           "name": "NOI MODERATI",
           "votes": 41600,
-          "percent": 0.721209148746093
+          "percent": 0.721209148746093,
+          "color": "#5c7ea3"
         },
         {
           "name": "NDCE",
           "votes": 37346,
-          "percent": 0.6474585785834516
+          "percent": 0.6474585785834516,
+          "color": "#3f4f3a"
         },
         {
           "name": "PCI",
           "votes": 10301,
-          "percent": 0.1785859481065746
+          "percent": 0.1785859481065746,
+          "color": "#3f4f3a"
         },
         {
           "name": "PA-UCDL-10V",
           "votes": 6860,
-          "percent": 0.11893016250957206
+          "percent": 0.11893016250957206,
+          "color": "#3f4f3a"
         },
         {
           "name": "VITA",
           "votes": 6696,
-          "percent": 0.11608693413470765
+          "percent": 0.11608693413470765,
+          "color": "#3f4f3a"
         },
         {
           "name": "API-NGP",
           "votes": 3737,
-          "percent": 0.06478746607846513
+          "percent": 0.06478746607846513,
+          "color": "#3f4f3a"
         },
         {
           "name": "SCN",
           "votes": 3595,
-          "percent": 0.062325646388033756
+          "percent": 0.062325646388033756,
+          "color": "#3f4f3a"
         },
         {
           "name": "FDP",
           "votes": 816,
-          "percent": 0.014146794840788747
+          "percent": 0.014146794840788747,
+          "color": "#3f4f3a"
         }
       ]
     },
@@ -496,77 +570,92 @@
         {
           "name": "M5S",
           "votes": 725711,
-          "percent": 26.596586438328703
+          "percent": 26.596586438328703,
+          "color": "#e6a817"
         },
         {
           "name": "FDI",
           "votes": 554001,
-          "percent": 20.30358570205018
+          "percent": 20.30358570205018,
+          "color": "#1d4e89"
         },
         {
           "name": "PD-IDP",
           "votes": 373661,
-          "percent": 13.6943040482125
+          "percent": 13.6943040482125,
+          "color": "#e3000f"
         },
         {
           "name": "FI",
           "votes": 287263,
-          "percent": 10.527903270080815
+          "percent": 10.527903270080815,
+          "color": "#7ba3d0"
         },
         {
           "name": "SCN",
           "votes": 207732,
-          "percent": 7.6131712127925555
+          "percent": 7.6131712127925555,
+          "color": "#3f4f3a"
         },
         {
           "name": "LEGA",
           "votes": 145521,
-          "percent": 5.333199930953274
+          "percent": 5.333199930953274,
+          "color": "#2f6b34"
         },
         {
           "name": "AZ-IV",
           "votes": 136228,
-          "percent": 4.992620722740378
+          "percent": 4.992620722740378,
+          "color": "#6b8cae"
         },
         {
           "name": "ALL-VER-SIN",
           "votes": 76201,
-          "percent": 2.792690868936926
+          "percent": 2.792690868936926,
+          "color": "#46962b"
         },
         {
           "name": "ITALEXIT",
           "votes": 52092,
-          "percent": 1.9091199950743736
+          "percent": 1.9091199950743736,
+          "color": "#3f4f3a"
         },
         {
           "name": "+EUROPA",
           "votes": 49605,
-          "percent": 1.817973918368738
+          "percent": 1.817973918368738,
+          "color": "#c9a400"
         },
         {
           "name": "ISP",
           "votes": 32318,
-          "percent": 1.1844225601016203
+          "percent": 1.1844225601016203,
+          "color": "#3f4f3a"
         },
         {
           "name": "UPDM",
           "votes": 29939,
-          "percent": 1.0972345759911633
+          "percent": 1.0972345759911633,
+          "color": "#3f4f3a"
         },
         {
           "name": "NOI MODERATI",
           "votes": 29513,
-          "percent": 1.081622099643515
+          "percent": 1.081622099643515,
+          "color": "#5c7ea3"
         },
         {
           "name": "IMP CIV-CD",
           "votes": 21021,
-          "percent": 0.7703987448448593
+          "percent": 0.7703987448448593,
+          "color": "#e87722"
         },
         {
           "name": "VITA",
           "votes": 7781,
-          "percent": 0.2851659118803982
+          "percent": 0.2851659118803982,
+          "color": "#3f4f3a"
         }
       ]
     }
