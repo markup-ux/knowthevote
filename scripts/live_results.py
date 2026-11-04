@@ -40,6 +40,10 @@ def person_key(name):
 
 
 def apply_candidates(race, incoming):
+    incoming_votes = sum((item.get("votes") or 0) for item in incoming or [])
+    existing_votes = sum((person.get("votes") or 0) for person in race.get("candidates") or [])
+    if incoming_votes == 0 and existing_votes > 0:
+        return False
     by_name = {person_key(item.get("name")): item for item in incoming or []}
     changed = False
     for person in race.get("candidates") or []:

@@ -5,6 +5,7 @@ Does not invent races. A state only lists offices NBC News is publishing.
 """
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -400,6 +401,82 @@ def in_window():
     return WINDOW_START <= now <= WINDOW_END
 
 
+def published_links():
+    """NBC's state summary sometimes lists no races. The election pages still link to them."""
+    url = "https://www.nbcnews.com/politics/2026-elections/nebraska-results"
+    request = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html"})
+    with urllib.request.urlopen(request, timeout=40) as response:
+        html = response.read().decode("utf-8", "replace")
+    return set(re.findall(r"/politics/2026-elections/([a-z0-9-]+-results)", html))
+
+
+def links_for_state(name, catalog):
+    slug = name.lower().replace(" ", "-")
+    prefix = slug + "-"
+    found = []
+    for link in catalog:
+        if link.startswith(prefix) and link != slug + "-results" and not link.endswith("-house-results"):
+            found.append(link)
+    return found
+
+
+def detail_item(payload):
+    race = ((payload or {}).get("races") or [None])[0]
+    if not isinstance(race, dict):
+        return None
+    summary = dict(race.get("summary") or {})
+    if not summary.get("candidates") and not summary.get("votes"):
+        return None
+    if isinstance(race.get("mapData"), dict):
+        summary["mapData"] = race["mapData"]
+    summary["raceName"] = summary.get("raceName") or summary.get("officeName") or "Race"
+    return summary
+
+
+def race_kind(item):
+    name = (item.get("raceName") or "").lower()
+    parties = {(candidate.get("party") or "").lower() for candidate in item.get("candidates") or []}
+    if parties and parties <= {"yes", "no"}:
+        return "measure"
+    if any(word in name for word in ("measure", "proposition", "amendment", "question", "issue")):
+        return "measure"
+    if isinstance(item.get("mapData"), dict):
+        return "map"
+    return "state"
+
+
+def state_from_details(code, name, slug, payload, detail_slugs, details):
+    races = []
+    districts = []
+    for detail_slug_name in detail_slugs:
+        item = detail_item(details.get(detail_slug_name))
+        if not item:
+            continue
+        if "us-house-district-" in detail_slug_name:
+            number = item.get("district") or 0
+            if not number:
+                match = re.search(r"district-(\d+)", detail_slug_name)
+                number = int(match.group(1)) if match else 0
+            item["district"] = number
+            item["name"] = "District " + str(number) if number else (item.get("raceName") or "District")
+            districts.append(item)
+            continue
+        races.append(race_record(item, race_kind(item)))
+    house = house_race(districts)
+    if house:
+        races.append(house)
+    races.sort(key=office_rank)
+    unique_offices(races)
+    state = slim_state(code, name, slug, None, None)
+    state["races"] = [
+        {key: value for key, value in race.items() if value is not None and value != ""}
+        for race in races
+    ]
+    stamp = (payload or {}).get("currentTime") or (payload or {}).get("lastModified") or ""
+    state["updated"] = stamp if isinstance(stamp, str) and stamp else datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return state
+
+
 def refresh_results():
     """Rewrite preview/states from NBC. Leave the maps alone."""
     forced = os.environ.get("RESULTS_FORCE") == "1"
@@ -418,12 +495,29 @@ def refresh_results():
             print("feed", item["code"], loaded[item["code"]][2] or "ok")
     details = {}
     slugs = []
-    for slug, payload, error in loaded.values():
-        for item in feed_items(payload):
-            detail = detail_slug(item)
+    rescue = {}
+    rescue_links = None
+    for item in catalog:
+        slug, payload, error = loaded[item["code"]]
+        block = (payload or {}).get("stateRaceResults") or {}
+        listed = feed_items(payload) or block.get("house") or []
+        if payload and not listed:
+            if rescue_links is None:
+                try:
+                    rescue_links = published_links()
+                except Exception as error:
+                    print("link list failed", error)
+                    rescue_links = set()
+            rescue[item["code"]] = links_for_state(item["name"], rescue_links)
+            for detail in rescue[item["code"]]:
+                if detail not in slugs:
+                    slugs.append(detail)
+            continue
+        for race in feed_items(payload):
+            detail = detail_slug(race)
             if detail and detail not in slugs:
                 slugs.append(detail)
-    print("details", len(slugs))
+    print("details", len(slugs), "rescue", len(rescue))
     with ThreadPoolExecutor(max_workers=8) as pool:
         futures = [pool.submit(fetch_detail, slug) for slug in slugs]
         for future in as_completed(futures):
@@ -435,14 +529,22 @@ def refresh_results():
         if not payload:
             print("keep", item["code"], error)
             continue
-        for race in feed_items(payload):
-            detail = detail_slug(race)
-            if detail and details.get(detail):
-                apply_detail(race, details[detail])
-        state = slim_state(item["code"], item["name"], slug, payload, error)
-        stamp = payload.get("currentTime") or payload.get("lastModified") or ""
-        state["updated"] = stamp if isinstance(stamp, str) and stamp else datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         path = os.path.join(folder, item["code"].lower() + ".json")
+        if item["code"] in rescue:
+            state = state_from_details(item["code"], item["name"], slug, payload, rescue[item["code"]], details)
+        else:
+            for race in feed_items(payload):
+                detail = detail_slug(race)
+                if detail and details.get(detail):
+                    apply_detail(race, details[detail])
+            state = slim_state(item["code"], item["name"], slug, payload, error)
+            stamp = payload.get("currentTime") or payload.get("lastModified") or ""
+            state["updated"] = stamp if isinstance(stamp, str) and stamp else datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        if not state.get("races") and os.path.exists(path):
+            previous = json.load(open(path, encoding="utf-8"))
+            if previous.get("races"):
+                print("keep", item["code"], "empty rewrite")
+                continue
         json.dump(state, open(path, "w", encoding="utf-8", newline="\n"), separators=(",", ":"))
         senate = next((race for race in state["races"] if race.get("office") == "Senate"), None)
         votes = senate.get("votes") if senate else 0
