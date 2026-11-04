@@ -491,6 +491,32 @@
       "siteLabel": "dangreenfl.com",
       "donate": "https://dangreenfl.com/donate/",
       "source": "https://dangreenfl.com/"
+    },
+    "district 11|joe strada": {
+      "role": "Businessman and Republican nominee for Florida's 11th District",
+      "bio": "His campaign says he started as a high-school handyman, entered the skilled trades, and grew a family-owned Central Florida company, Strada Services, that created thousands of jobs and paid training pathways. He and his wife raised their family in Central Florida. He says he is a father and grandfather running as an outsider, not for a career in politics.",
+      "issues": [
+        "He says he would investigate congressional insider trading, enact term limits, and pass a balanced-budget amendment.",
+        "He says he would finish the border wall, back law enforcement, and cut waste before asking taxpayers for more.",
+        "He says he would lower costs, restore energy independence, bring jobs back, and protect Social Security and Medicare."
+      ],
+      "site": "https://votestrada.com/",
+      "siteLabel": "votestrada.com",
+      "donate": "https://secure.anedot.com/joe-strada-campaign/donate",
+      "source": "https://votestrada.com/meet-joe"
+    },
+    "district 11|james pericola": {
+      "role": "Attorney and Democratic nominee for Florida's 11th District",
+      "bio": "His campaign says that over more than 30 years he has served as a presidential appointee in the Clinton administration, a congressional staff member, an attorney, and a government-affairs executive. Raised in Central Florida, he started as a staff assistant to Senator Bob Graham. He says caring for his aging mother showed him how expensive health care has become.",
+      "issues": [
+        "He says he would oppose cuts or privatization of Social Security and Medicare and let Medicare negotiate drug prices.",
+        "He says he would protect the Affordable Care Act and seek federal funding to ease the housing crisis and lower property insurance.",
+        "He says he would eliminate income taxes for people making less than $100,000 a year and cut taxes for middle-class families."
+      ],
+      "site": "https://jamespericola.com/",
+      "siteLabel": "jamespericola.com",
+      "donate": "https://secure.actblue.com/donate/james-pericola-1",
+      "source": "https://jamespericola.com/"
     }
   },
   "measures": {}
