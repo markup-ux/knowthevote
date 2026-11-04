@@ -595,6 +595,84 @@
       "siteLabel": "kellykirschner.com",
       "donate": "https://secure.actblue.com/donate/kirschnerwebsite",
       "source": "https://kellykirschner.com/"
+    },
+    "district 17|matthew montavon": {
+      "role": "Planner and Democratic nominee for Florida's 17th District",
+      "bio": "His campaign says he was born in South Bend, Indiana, into a family of eleven, and started working in high school as a farmhand, janitor, messenger, and store clerk. He earned a bachelor's degree in political science and Spanish from Catholic University and a master's in public administration from Indiana University, then spent two years in the Peace Corps and 27 years with the UN Food and Agriculture Organization. He says he has lived in the district since the 1990s.",
+      "issues": [
+        "He says he would ease housing costs with workforce housing for teachers, first responders, and families, and take on Florida's property-insurance crisis.",
+        "He says he would make health-care and prescription prices more transparent without taking away consumer choices.",
+        "He says he would modernize border security and create a background-checked path to legal status for people already working in Florida's farms and small businesses."
+      ],
+      "site": "https://www.montavonforcongress.com/",
+      "siteLabel": "montavonforcongress.com",
+      "donate": "https://secure.actblue.com/donate/matthew-montavon-1",
+      "source": "https://www.montavonforcongress.com/meet"
+    },
+    "district 18|scott franklin": {
+      "role": "U.S. representative for Florida's 18th District",
+      "bio": "His campaign says he is a conservative Republican, Navy veteran, and small-business owner in his third term. He served 26 years as a naval aviator, flying from 13 aircraft carriers, and was recalled to active duty after September 11. He then ran an insurance business in Lakeland for two decades. He and his wife, Amy, have been married more than 35 years and have three adult children.",
+      "issues": [
+        "He says he works for Florida agriculture, including help for farmers and ranchers after severe weather and a stable food supply.",
+        "He says he would secure the border, strengthen defense, and restore fiscal discipline in Washington.",
+        "He says he chairs the House Science Committee's environment subcommittee and pushes back on regulations he says threaten economic growth."
+      ],
+      "site": "https://www.votescottfranklin.com/",
+      "siteLabel": "votescottfranklin.com",
+      "donate": "https://secure.winred.com/scott-franklin-for-congress/donate",
+      "source": "https://www.votescottfranklin.com/about"
+    },
+    "district 18|curtis gibson": {
+      "role": "Former city commissioner and Democratic nominee for Florida's 18th District",
+      "bio": "His campaign says he is a former Lake Wales city commissioner, the manager of Eagle Ridge Mall, a restaurant owner, and a husband and father of five. He says that under his management the mall grew from 35 to 71 stores, and that he and his wife are raising their children in Lake Wales.",
+      "issues": [
+        "He says he would push a federal reinsurance backstop to bring down property-insurance premiums.",
+        "He says veterans should get timely local care, including covered local providers when the VA cannot see them nearby soon enough.",
+        "He says he would keep property taxes from pushing out homeowners, seniors, and working families, and support citrus growers against disease and unchecked development."
+      ],
+      "site": "https://votecurtisgibson.com/",
+      "siteLabel": "votecurtisgibson.com",
+      "donate": "https://secure.actblue.com/donate/curtis-gibson-1",
+      "source": "https://votecurtisgibson.com/about"
+    },
+    "district 19|jim schwartzel": {
+      "role": "Broadcaster and Republican nominee for Florida's 19th District",
+      "bio": "His campaign says he was born at Naples Community Hospital, married his high-school sweetheart, Carly, and raised their children in Southwest Florida. He earned a finance degree at Stetson, worked in Senator Connie Mack's Washington office in 1996, and runs Sun Broadcasting, including 92.5 FOX News Radio.",
+      "issues": [
+        "He says he would stand with President Trump to secure the border, enforce immigration laws, and deport people who are here illegally.",
+        "He says families are paying too much for groceries, housing, and insurance, and he would fight to bring those costs down.",
+        "He says he would vote to make President Trump's tax cuts permanent so families and small businesses keep more of what they earn."
+      ],
+      "site": "https://www.jimforcongress.com/",
+      "siteLabel": "jimforcongress.com",
+      "donate": "https://secure.anedot.com/jim-schwartzel-for-congress/f65b2787-7fe1-4ba0-bc85-125128e1601b",
+      "source": "https://www.jimforcongress.com/"
+    },
+    "district 19|victor arias": {
+      "role": "Attorney and Democratic nominee for Florida's 19th District",
+      "bio": "His campaign says he has owned and managed Arias Law Firm since 2002 and previously served as a staff attorney for the Lee County and St. Lucie County school districts.",
+      "issues": [
+        "He says he would cut Veterans Affairs red tape and protect Medicare and Social Security for seniors.",
+        "He says he would expand economic opportunity and invest in infrastructure and education.",
+        "He says he would protect clean water and improve access to affordable health care."
+      ],
+      "site": "https://ariasforcongress.us/",
+      "siteLabel": "ariasforcongress.us",
+      "donate": "https://secure.actblue.com/donate/victor-arias-1",
+      "source": "https://ariasforcongress.us/about/"
+    },
+    "district 20|brent andersen": {
+      "role": "Insurance agency owner and Republican nominee for Florida's 20th District",
+      "bio": "His campaign says he is a Pompano Beach small-business owner who spent 16 years in insurance and founded Pilgrim Bay Insurance Agency in 2010. He is the son of a public-school teacher and a union worker, holds a finance degree from Nichols College, and is raising a daughter in Pompano Beach with his wife, Yula, who was born in Venezuela.",
+      "issues": [
+        "He says housing and insurance costs are pricing Broward families out, and that 16 years in insurance is what he would take to Congress.",
+        "He says he would fight the higher grocery, energy, and health-care bills hitting working families.",
+        "He says he supports legal immigration and a functioning asylum system, and opposes what he calls open borders."
+      ],
+      "site": "https://brentandersenfl.com/",
+      "siteLabel": "brentandersenfl.com",
+      "donate": "https://secure.anedot.com/brentandersenfl/website",
+      "source": "https://brentandersenfl.com/meet-brent/"
     }
   },
   "measures": {}
