@@ -628,6 +628,7 @@ fetch("preview/us.svg").then(function (response) { return response.text(); }).th
     if (code === "MD") { x = 826; y = 231; size = 10; }
     if (code === "DC") { x = 832; y = 245; size = 8; }
     if (code === "RI") { x = 916; y = 174; size = 8; }
+    if (code === "FL") { x = 800; y = 500; }
     return { x: x, y: y, size: size };
   }
   svg.querySelectorAll("path").forEach(function (path) {
