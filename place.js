@@ -15,7 +15,7 @@
     return strings[key] || fallback;
   }
 
-  var BLEND_LINE = "The color mixes the votes reported in that place. Where those votes are blue and red, the mix is purple. A row with no color is left out of the mix. A place with no votes stays beige. This does not call a race.";
+  var BLEND_LINE = "The color mixes the votes reported in that place. The swatches are the colors in that mix. A row with no color is left out of the mix. A place with no votes stays beige. This does not call a race.";
 
   function blendOn() {
     try { return localStorage.getItem("leaders-blend") !== "0"; }
@@ -155,6 +155,21 @@
     });
   }
 
+  function blendSwatches(data) {
+    var totals = {};
+    (data.places || []).forEach(function (place) {
+      (place.rows || []).forEach(function (row) {
+        if (!(row.votes > 0) || !row.color || !row.name) return;
+        var key = row.color + "\n" + row.name;
+        if (!totals[key]) totals[key] = { color: row.color, name: row.name, votes: 0 };
+        totals[key].votes += row.votes;
+      });
+    });
+    return Object.keys(totals).map(function (key) { return totals[key]; }).sort(function (a, b) {
+      return b.votes - a.votes || (a.name < b.name ? -1 : a.name > b.name ? 1 : 0);
+    });
+  }
+
   function paintLegend(data, painted) {
     var legend = document.getElementById("place-legend");
     if (!legend) return;
@@ -163,7 +178,16 @@
     blank.appendChild(el("i", "swatch blank"));
     blank.appendChild(document.createTextNode(" " + text(data, "blank", "No votes reported")));
     legend.appendChild(blank);
-    if (!blendOn()) {
+    if (blendOn()) {
+      blendSwatches(data).forEach(function (item) {
+        var span = el("span", "blend-key");
+        var swatch = el("i", "swatch");
+        swatch.style.background = item.color;
+        span.appendChild(swatch);
+        span.appendChild(document.createTextNode(" " + item.name));
+        legend.appendChild(span);
+      });
+    } else {
       painted.forEach(function (place) {
         var span = el("span");
         var swatch = el("i", "swatch");
@@ -173,10 +197,6 @@
         legend.appendChild(span);
       });
     }
-    var key = el("span", "blend-key");
-    key.appendChild(el("i", "swatch mix"));
-    key.appendChild(document.createTextNode(" Blue and red, mixed by the votes"));
-    legend.appendChild(key);
     legend.classList.toggle("is-blend", blendOn());
   }
 

@@ -29,7 +29,7 @@
     return node;
   }
 
-  var BLEND_LINE = "The color mixes the votes reported in that place. Where those votes are blue and red, the mix is purple. A row with no color is left out of the mix. A place with no votes stays beige. This does not call a race.";
+  var BLEND_LINE = "The color mixes the votes reported in that place. The swatches are the colors in that mix. A place with no votes stays beige. This does not call a race.";
 
   function blendOn() {
     try { return localStorage.getItem("leaders-blend") !== "0"; }
@@ -213,6 +213,60 @@
     });
   }
 
+  function blendLegendParts(item) {
+    var pairs = [];
+    if (!item) return [];
+    if (item.kind === "house") {
+      Object.keys(item.counties || {}).forEach(function (fips) {
+        var row = item.counties[fips];
+        var slices = row.slices || [];
+        if (!slices.length && row.party && row.votes) pairs.push({ party: row.party, votes: row.votes });
+        slices.forEach(function (slice) {
+          (slice.candidates || []).forEach(function (person) {
+            pairs.push({ party: person.party, votes: person.votes || 0 });
+          });
+        });
+      });
+    } else if (item.counties && Object.keys(item.counties).length) {
+      Object.keys(item.counties).forEach(function (fips) {
+        ((item.counties[fips] || {}).candidates || []).forEach(function (cell, index) {
+          pairs.push({ party: ((item.candidates || [])[index] || {}).party, votes: cell[0] || 0 });
+        });
+      });
+    } else {
+      (item.candidates || []).forEach(function (person) {
+        pairs.push({ party: person.party, votes: person.votes || 0 });
+      });
+    }
+    var totals = {};
+    pairs.forEach(function (pair) {
+      var votes = pair.votes || 0;
+      var party = pair.party || "";
+      if (!(votes > 0) || party === "yes" || party === "no") return;
+      party = party || "other";
+      if (!totals[party]) totals[party] = { party: party, votes: 0, color: PARTY[party] || PARTY.other };
+      totals[party].votes += votes;
+    });
+    return Object.keys(totals).map(function (party) { return totals[party]; }).sort(function (a, b) {
+      return b.votes - a.votes;
+    });
+  }
+
+  function paintBlendLegend(item) {
+    var legend = document.querySelector(".result-legend");
+    if (!legend) return;
+    legend.querySelectorAll(".blend-key").forEach(function (node) { node.remove(); });
+    if (!blendOn()) return;
+    blendLegendParts(item).forEach(function (part) {
+      var span = el("span", "blend-key");
+      var swatch = el("i", "swatch");
+      swatch.style.background = part.color;
+      span.appendChild(swatch);
+      span.appendChild(document.createTextNode(" " + (PARTY_LABEL[part.party] || "Other")));
+      legend.appendChild(span);
+    });
+  }
+
   function mountBlend() {
     var legend = document.querySelector(".result-legend");
     if (!legend || document.getElementById("blend-switch")) return;
@@ -252,10 +306,6 @@
     }
     var blank = legend.querySelector(".swatch.blank");
     if (blank && blank.parentNode) blank.parentNode.classList.add("stay");
-    var key = el("span", "blend-key");
-    key.appendChild(el("i", "swatch mix"));
-    key.appendChild(document.createTextNode(" Blue and red, mixed by the votes"));
-    legend.appendChild(key);
     paintCaption();
   }
 
@@ -287,6 +337,7 @@
       people(summaryEl, item.candidates || [], item.office || "");
     }
     paintMap(item);
+    paintBlendLegend(item);
     detailEl.textContent = "";
     if (selected && item.kind === "house" && item.counties && item.counties[selected]) {
       var housePath = svg && svg.querySelector('[data-fips="' + selected + '"]');

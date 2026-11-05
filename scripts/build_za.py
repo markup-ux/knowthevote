@@ -360,7 +360,7 @@ def shell(title, description, root, local, here, nav, body, place=""):
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="%slang.js"></script>
-<script src="%smap.js?v=blend1"></script>
+<script src="%smap.js?v=blend2"></script>
 </body>
 </html>
 """ % (

@@ -336,7 +336,7 @@ $body
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="${root}lang.js"></script>
-<script src="${root}place.js?v=blend1"></script>
+<script src="${root}place.js?v=blend2"></script>
 </body>
 </html>
 """).substitute(

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leaders.vote · November 3, 2026</title>
-<meta name="description" content="Leaders.vote is an independent voter guide for every state in the November 3, 2026 general election. Not an endorsement.">
+<title>Know who you're voting for.</title>
+<meta name="description" content="Leaders.vote is an independent, nonpartisan voter guide for the November 3, 2026 election. No endorsements.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="guide.css?v=blend1">
 </head>
@@ -222,7 +222,7 @@ fetch("preview/us.svg").then(function (response) { return response.text(); }).th
   });
   var PARTY = { dem: "#1e4d7b", gop: "#8d3232", ind: "#3e5c45", other: "#5c4a2a" };
   var PARTY_LABEL = { dem: "Democratic", gop: "Republican", ind: "Independent", lib: "Libertarian", other: "Other" };
-  var BLEND_LINE = "The color mixes blue and red. Where a state file has each party's votes, the mix uses those votes. Where it reports only the lead and the margin, the rest of the vote is blended as the other of blue and red. A state with no votes stays beige. This does not call a race.";
+  var BLEND_LINE = "The color mixes the votes in that state. The swatches are the colors in that mix. Where a state file reports only the lead and the margin, the rest of the vote is blended as the other of Democratic blue and Republican red. A state with no votes stays beige. This does not call a race.";
   var lastLeads = null;
   function blendOn() {
     try { return localStorage.getItem("leaders-blend") !== "0"; }
@@ -339,6 +339,41 @@ fetch("preview/us.svg").then(function (response) { return response.text(); }).th
     });
     if (clock) status.appendChild(document.createTextNode("Updated " + clock + " Central. "));
     status.appendChild(document.createTextNode("Unofficial totals from the Associated Press, published by NBC News. This map does not call a race."));
+    paintBlendLegend(data);
+  }
+  function blendLegendParts(data) {
+    var totals = {};
+    var states = (data && data.states) || {};
+    Object.keys(states).forEach(function (code) {
+      var row = states[code] || {};
+      var parts = shareParts(row);
+      if (!parts.length) parts = marginParts(row);
+      parts.forEach(function (part) {
+        if (!(part.votes > 0)) return;
+        var party = part.party || "other";
+        if (!totals[party]) totals[party] = { party: party, color: part.color, votes: 0 };
+        totals[party].votes += part.votes;
+      });
+    });
+    return Object.keys(totals).map(function (party) { return totals[party]; }).sort(function (a, b) {
+      return b.votes - a.votes;
+    });
+  }
+  function paintBlendLegend(data) {
+    var legend = document.querySelector(".result-legend");
+    if (!legend) return;
+    legend.querySelectorAll(".blend-key").forEach(function (node) { node.remove(); });
+    if (!blendOn()) return;
+    blendLegendParts(data).forEach(function (part) {
+      var span = document.createElement("span");
+      span.className = "blend-key";
+      var swatch = document.createElement("i");
+      swatch.className = "swatch";
+      swatch.style.background = part.color;
+      span.appendChild(swatch);
+      span.appendChild(document.createTextNode(" " + (PARTY_LABEL[part.party] || "Other")));
+      legend.appendChild(span);
+    });
   }
   function mountBlend() {
     var legend = document.querySelector(".result-legend");
@@ -375,13 +410,6 @@ fetch("preview/us.svg").then(function (response) { return response.text(); }).th
     else legend.parentNode.insertBefore(bar, legend);
     var blank = legend.querySelector(".swatch.blank");
     if (blank && blank.parentNode) blank.parentNode.classList.add("stay");
-    var key = document.createElement("span");
-    key.className = "blend-key";
-    var swatch = document.createElement("i");
-    swatch.className = "swatch mix";
-    key.appendChild(swatch);
-    key.appendChild(document.createTextNode(" Blue and red, mixed by the votes"));
-    legend.appendChild(key);
     paintCaption();
   }
   function loadLeads() {
