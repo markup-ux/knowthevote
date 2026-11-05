@@ -1454,9 +1454,16 @@
       mark.setAttribute("aria-hidden", "true");
       mark.getContext("2d").drawImage(harmSprite(row.name), 0, 0);
       button.appendChild(mark);
+      var copy = document.createElement("span");
+      copy.className = "chem-copy";
       var label = document.createElement("span");
       label.textContent = row.name + " " + row.detected + "%";
-      button.appendChild(label);
+      var effect = document.createElement("span");
+      effect.className = "chem-effect";
+      effect.textContent = HARM_LINE[row.name] || "";
+      copy.appendChild(label);
+      copy.appendChild(effect);
+      button.appendChild(copy);
       button.setAttribute("aria-label", row.name + " " + row.detected + "%. " + (HARM_LINE[row.name] || ""));
       button.setAttribute("aria-pressed", chemId === row.name ? "true" : "false");
       if (chemId === row.name) button.className = "is-on";

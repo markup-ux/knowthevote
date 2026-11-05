@@ -80,9 +80,11 @@
 .hood-brand select { font: inherit; color: inherit; background: var(--paper); border: 1px solid var(--line); padding: 4px 8px; max-width: 280px; }
 .brand-mark { width: 32px; height: 32px; flex: none; display: block; }
 .factory-mark { width: 44px; height: 44px; flex: none; display: block; }
-.chem-picks { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 14px 0; align-items: center; }
-.chem-picks button { display: inline-flex; align-items: center; gap: 6px; font: inherit; color: inherit; background: transparent; border: 0; border-bottom: 2px solid transparent; padding: 4px 0; cursor: pointer; }
+.chem-picks { display: flex; flex-wrap: wrap; gap: 14px 22px; margin: 14px 0; align-items: flex-start; }
+.chem-picks button { display: inline-flex; align-items: flex-start; gap: 8px; font: inherit; color: inherit; background: transparent; border: 0; border-bottom: 2px solid transparent; padding: 4px 0; cursor: pointer; text-align: left; }
 .chem-picks button.is-on { border-bottom-color: var(--ink); }
+.chem-copy { display: block; max-width: 34ch; }
+.chem-effect { display: block; font-size: 15px; }
 .harm-mark { width: 48px; height: 48px; flex: none; display: block; }
 .harm-body { display: flex; gap: 14px; align-items: flex-start; }
 .harm-mark-lg { width: 72px; height: 72px; }
@@ -334,6 +336,6 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
 <script src="census.js?v=3"></script>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
-<script src="health.js?v=30"></script>
+<script src="health.js?v=31"></script>
 </body>
 </html>
