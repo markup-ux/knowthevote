@@ -209,25 +209,25 @@
 
   function drawFood(g, kind) {
     if (kind === "burger") {
-      band(g, 6, 4, 52, 16, 10, "#f0d09a");
-      dot(g, 20, 11, 2.4, "#f7f1e4");
-      dot(g, 32, 9, 2.4, "#f7f1e4");
-      dot(g, 44, 11, 2.4, "#f7f1e4");
-      band(g, 4, 20, 56, 7, 3, "#7d9a4e");
-      band(g, 8, 26, 48, 6, 2, "#a33b32");
-      band(g, 4, 31, 58, 6, 1, "#e6b23a");
-      band(g, 8, 36, 48, 10, 2, "#6b3e2a");
-      band(g, 6, 46, 52, 14, 8, "#e2b86a");
+      band(g, 6, 4, 52, 16, 10, "#ffd15c");
+      dot(g, 20, 11, 2.4, "#fff1b8");
+      dot(g, 32, 9, 2.4, "#fff1b8");
+      dot(g, 44, 11, 2.4, "#fff1b8");
+      band(g, 4, 20, 56, 7, 3, "#fff1b8");
+      band(g, 8, 26, 48, 6, 2, "#e36b3a");
+      band(g, 4, 31, 58, 6, 1, "#f5a03a");
+      band(g, 8, 36, 48, 10, 2, "#9a3d5c");
+      band(g, 6, 46, 52, 14, 8, "#ffd15c");
     } else if (kind === "pizza") {
-      g.fillStyle = "#d4a05a";
+      g.fillStyle = "#f5a03a";
       g.beginPath(); g.moveTo(32, 2); g.lineTo(62, 60); g.lineTo(2, 60); g.closePath(); g.fill();
-      g.fillStyle = "#f6e7b0";
+      g.fillStyle = "#ffd15c";
       g.beginPath(); g.moveTo(32, 16); g.lineTo(52, 56); g.lineTo(12, 56); g.closePath(); g.fill();
-      dot(g, 28, 34, 6, "#a33b32");
-      dot(g, 40, 46, 6, "#a33b32");
-      dot(g, 24, 48, 4, "#6f8f4e");
+      dot(g, 28, 34, 6, "#9a3d5c");
+      dot(g, 40, 46, 6, "#9a3d5c");
+      dot(g, 24, 48, 4, "#fff1b8");
     } else if (kind === "taco") {
-      g.fillStyle = "#e2b15a";
+      g.fillStyle = "#ffd15c";
       g.beginPath();
       g.moveTo(6, 16);
       g.quadraticCurveTo(32, 72, 58, 16);
@@ -235,22 +235,22 @@
       g.quadraticCurveTo(32, 52, 18, 16);
       g.closePath();
       g.fill();
-      band(g, 14, 14, 36, 12, 2, "#6b3e2a");
-      g.fillStyle = "#7d9a4e";
+      band(g, 14, 14, 36, 12, 2, "#9a3d5c");
+      g.fillStyle = "#fff1b8";
       g.beginPath(); g.ellipse(32, 14, 16, 7, 0, 0, Math.PI * 2); g.fill();
-      dot(g, 24, 12, 4, "#a33b32");
-      dot(g, 38, 14, 4, "#f7f1e4");
+      dot(g, 24, 12, 4, "#e36b3a");
+      dot(g, 38, 14, 4, "#f5a03a");
     } else if (kind === "burrito") {
       g.save();
       g.translate(32, 32);
       g.rotate(-0.6);
-      band(g, -26, -14, 52, 28, 14, "#e6d3a8");
-      g.strokeStyle = "#a8743a";
-      g.lineWidth = 3;
+      band(g, -26, -14, 52, 28, 14, "#ffd15c");
+      g.strokeStyle = "#9a3d5c";
+      g.lineWidth = 4;
       g.beginPath(); g.ellipse(0, 0, 16, 8, 0, 0.3, Math.PI * 1.4); g.stroke();
       g.restore();
     } else if (kind === "donut" || kind === "mochi" || kind === "bagel") {
-      dot(g, 32, 32, 28, kind === "bagel" ? "#c4894a" : (kind === "mochi" ? "#f3d7c4" : "#e2b07a"));
+      dot(g, 32, 32, 28, kind === "bagel" ? "#f5a03a" : (kind === "mochi" ? "#f3d7c4" : "#ffd15c"));
       if (kind === "donut") {
         g.fillStyle = "#e07a9a";
         g.beginPath();
@@ -296,7 +296,7 @@
       g.beginPath(); g.moveTo(14, 14); g.lineTo(50, 14); g.lineTo(44, 58); g.lineTo(20, 58); g.closePath(); g.fill();
       g.fillStyle = kind === "juice" ? "#e07a32" : "#c46a8a";
       g.beginPath(); g.moveTo(18, 26); g.lineTo(46, 26); g.lineTo(42, 54); g.lineTo(22, 54); g.closePath(); g.fill();
-      g.strokeStyle = "#6f8f4e";
+      g.strokeStyle = "#9a3d5c";
       g.lineWidth = 3;
       g.beginPath(); g.moveTo(42, 12); g.lineTo(54, 2); g.stroke();
     } else if (kind === "chicken" || kind === "roast") {
@@ -337,12 +337,12 @@
       g.save();
       g.translate(32, 32);
       g.rotate(-0.5);
-      band(g, -28, -14, 56, 28, 12, "#e2b86a");
-      g.fillStyle = "#7d9a4e";
+      band(g, -28, -14, 56, 28, 12, "#ffd15c");
+      g.fillStyle = "#fff1b8";
       g.fillRect(-24, -8, 48, 6);
-      g.fillStyle = kind === "chicken-sandwich" ? "#e2b07a" : "#6b3e2a";
+      g.fillStyle = kind === "chicken-sandwich" ? "#f5a03a" : "#9a3d5c";
       g.fillRect(-24, -2, 48, 7);
-      g.fillStyle = "#a33b32";
+      g.fillStyle = "#e36b3a";
       g.fillRect(-24, 5, 48, 5);
       g.restore();
     } else if (kind === "salad" || kind === "acai" || kind === "poke" || kind === "rice") {
@@ -351,9 +351,9 @@
       g.strokeStyle = "#d9c7a2";
       g.lineWidth = 4;
       g.beginPath(); g.ellipse(32, 28, 24, 10, 0, 0, Math.PI * 2); g.stroke();
-      g.fillStyle = kind === "salad" ? "#6f8f4e" : (kind === "acai" ? "#6a3a6a" : (kind === "poke" ? "#e07a4a" : "#f0d48a"));
+      g.fillStyle = kind === "salad" ? "#f5a03a" : (kind === "acai" ? "#9a3d5c" : (kind === "poke" ? "#e36b3a" : "#ffd15c"));
       g.beginPath(); g.ellipse(32, 28, 18, 8, 0, 0, Math.PI * 2); g.fill();
-      if (kind === "rice") { dot(g, 24, 26, 5, "#6b3e2a"); dot(g, 40, 28, 4, "#7d9a4e"); }
+      if (kind === "rice") { dot(g, 24, 26, 5, "#9a3d5c"); dot(g, 40, 28, 4, "#f5a03a"); }
       if (kind === "poke") { dot(g, 26, 26, 5, "#a33b32"); dot(g, 40, 28, 4, "#f7f1e4"); }
       if (kind === "salad") { dot(g, 24, 26, 5, "#a33b32"); dot(g, 40, 28, 4, "#e2b13c"); }
       if (kind === "acai") { dot(g, 24, 26, 4, "#e07a4a"); dot(g, 36, 24, 4, "#f7f1e4"); }
@@ -449,6 +449,8 @@
   }
 
   function drawDots() {
+    ctx.fillStyle = "rgba(244, 240, 230, 0.5)";
+    ctx.fillRect(0, 0, cssW, cssH);
     var size = markSize();
     var places = data.places;
     for (var i = 0; i < places.length; i++) {
@@ -467,6 +469,8 @@
   }
 
   function drawStudyFoods() {
+    ctx.fillStyle = "rgba(244, 240, 230, 0.5)";
+    ctx.fillRect(0, 0, cssW, cssH);
     var places = data.places;
     for (var i = 0; i < places.length; i++) {
       var place = places[i];
@@ -579,44 +583,23 @@
     canvasMark.width = 64;
     canvasMark.height = 64;
     var g = canvasMark.getContext("2d");
-    g.fillStyle = "#6b4a32";
-    g.fillRect(2, 40, 44, 22);
-    g.fillStyle = "#3d342c";
-    g.fillRect(2, 38, 44, 5);
-    g.fillRect(10, 20, 8, 20);
-    g.fillRect(24, 14, 8, 26);
-    g.fillRect(8, 18, 12, 4);
-    g.fillRect(22, 12, 12, 4);
-    g.fillStyle = "#d6e35a";
-    g.fillRect(8, 48, 6, 6);
-    g.fillRect(18, 48, 6, 6);
-    g.fillRect(28, 48, 6, 6);
-    g.fillStyle = "#6ea828";
-    g.beginPath();
-    g.ellipse(40, 18, 20, 14, -0.3, 0, Math.PI * 2);
-    g.fill();
-    g.fillStyle = "#d6ef55";
-    g.beginPath();
-    g.ellipse(28, 12, 12, 9, -0.2, 0, Math.PI * 2);
-    g.fill();
-    g.fillStyle = "#3f7a22";
-    g.beginPath();
-    g.ellipse(52, 26, 11, 8, 0.5, 0, Math.PI * 2);
-    g.fill();
-    g.fillStyle = "#f7f1e4";
-    g.beginPath();
-    g.ellipse(40, 18, 8, 7, 0, 0, Math.PI * 2);
-    g.fill();
-    g.fillStyle = "#2c261f";
-    g.beginPath();
-    g.arc(37, 17, 1.8, 0, Math.PI * 2);
-    g.arc(43, 17, 1.8, 0, Math.PI * 2);
-    g.fill();
-    g.beginPath();
-    g.moveTo(38, 21);
-    g.lineTo(42, 21);
-    g.lineTo(40, 23);
-    g.fill();
+    g.fillStyle = "#1c1915";
+    g.fillRect(6, 28, 52, 32);
+    g.fillStyle = "#9a3d5c";
+    g.fillRect(6, 24, 52, 6);
+    g.fillStyle = "#1c1915";
+    g.fillRect(14, 8, 8, 20);
+    g.fillRect(32, 4, 8, 24);
+    g.fillStyle = "#e36b3a";
+    g.fillRect(12, 6, 12, 4);
+    g.fillRect(30, 2, 12, 4);
+    g.fillStyle = "#fff1b8";
+    g.fillRect(12, 36, 8, 8);
+    g.fillRect(28, 36, 8, 8);
+    g.fillRect(44, 36, 8, 8);
+    g.fillRect(12, 50, 8, 6);
+    g.fillRect(28, 50, 8, 6);
+    g.fillRect(44, 50, 8, 6);
     factorySprite = canvasMark;
     return canvasMark;
   }
@@ -1191,7 +1174,7 @@
   }
 
   function harmArrow(g, x, y, dir) {
-    g.fillStyle = "#8a3d32";
+    g.fillStyle = dir < 0 ? "#2a1458" : "#1c1915";
     g.beginPath();
     if (dir < 0) {
       g.moveTo(x, y + 28);
@@ -1210,8 +1193,8 @@
 
   function harmSperm(g, x, y, limp, scale) {
     var s = scale || 1;
-    g.fillStyle = "#f7f1e4";
-    g.strokeStyle = "#2c261f";
+    g.fillStyle = "#c4b3ef";
+    g.strokeStyle = "#2a1458";
     g.lineWidth = 4;
     g.lineCap = "round";
     g.beginPath();
@@ -1226,8 +1209,8 @@
   }
 
   function harmBaby(g, x, y, s) {
-    g.fillStyle = "#e6d3b0";
-    g.strokeStyle = "#2c261f";
+    g.fillStyle = "#ffd15c";
+    g.strokeStyle = "#9a3d5c";
     g.lineWidth = 3;
     g.beginPath();
     g.arc(x, y, 10 * s, 0, Math.PI * 2);
@@ -1240,7 +1223,7 @@
   }
 
   function harmClock(g, x, y, r) {
-    g.fillStyle = "#f7f1e4";
+    g.fillStyle = "#ffffff";
     g.strokeStyle = "#2c261f";
     g.lineWidth = 3;
     g.beginPath();
@@ -1258,7 +1241,7 @@
   }
 
   function harmLiver(g, x, y, s) {
-    g.fillStyle = "#a35a4a";
+    g.fillStyle = "#9a3d5c";
     g.strokeStyle = "#2c261f";
     g.lineWidth = 3;
     g.beginPath();
@@ -1273,7 +1256,7 @@
   }
 
   function harmKidney(g, x, y) {
-    g.fillStyle = "#c47a68";
+    g.fillStyle = "#e36b3a";
     g.strokeStyle = "#2c261f";
     g.lineWidth = 3;
     g.beginPath();
@@ -1288,7 +1271,7 @@
   }
 
   function harmFigure(g) {
-    g.fillStyle = "#e6d3b0";
+    g.fillStyle = "#f7f1e4";
     g.strokeStyle = "#2c261f";
     g.lineWidth = 3;
     g.beginPath();
@@ -1313,12 +1296,12 @@
   function drawHarm(g, name) {
     if (name === "DEHT") {
       harmFigure(g);
-      g.fillStyle = "#2c261f";
+      g.fillStyle = "#5530a0";
       g.font = "700 28px Georgia, serif";
       g.fillText("?", 40, 42);
     } else if (name === "DMP") {
       harmFigure(g);
-      g.strokeStyle = "#8a7968";
+      g.strokeStyle = "#5530a0";
       g.lineWidth = 4;
       g.beginPath();
       g.arc(46, 32, 12, 0, Math.PI * 2);
@@ -1343,14 +1326,14 @@
       harmArrow(g, 50, 18, -1);
     } else if (name === "DEHA") {
       [12, 32, 52].forEach(function (x, index) {
-        g.strokeStyle = "#8a7968";
+        g.strokeStyle = "#2c261f";
         g.lineWidth = 3;
         g.beginPath();
         g.arc(x, 32, 12, 0, Math.PI * 2);
         g.stroke();
         if (index < 2) {
-          g.fillStyle = "#e6d3b0";
-          g.strokeStyle = "#2c261f";
+          g.fillStyle = "#ffd15c";
+          g.strokeStyle = "#9a3d5c";
           g.beginPath();
           g.arc(x, 34, 6, 0, Math.PI * 2);
           g.fill();
@@ -1370,9 +1353,9 @@
       g.quadraticCurveTo(34, 36, 28, 46);
       g.stroke();
     } else if (name === "Acrylamide") {
-      band(g, 16, 10, 14, 46, 6, "#e2b15a");
-      band(g, 34, 16, 14, 40, 6, "#c4894a");
-      g.strokeStyle = "#8a3d32";
+      band(g, 16, 10, 14, 46, 6, "#ffd15c");
+      band(g, 34, 16, 14, 40, 6, "#f5a03a");
+      g.strokeStyle = "#9a3d5c";
       g.lineWidth = 3;
       g.lineCap = "round";
       g.beginPath();
@@ -1396,11 +1379,11 @@
       g.lineTo(22, 8);
       g.lineTo(54, 20);
       g.stroke();
-      if (name === "PFOA") dot(g, 34, 38, 6, "#8a3d32");
+      if (name === "PFOA") dot(g, 34, 38, 6, "#9a3d5c");
       else {
-        dot(g, 26, 36, 3, "#2c261f");
-        dot(g, 36, 42, 3, "#2c261f");
-        dot(g, 44, 34, 3, "#2c261f");
+        dot(g, 26, 36, 3, "#5530a0");
+        dot(g, 36, 42, 3, "#5530a0");
+        dot(g, 44, 34, 3, "#5530a0");
       }
     }
   }
