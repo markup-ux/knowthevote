@@ -110,6 +110,7 @@ class Index:
             re.fullmatch(r"[A-Z]{2}(?:\.\d+)?", anchor)
             or re.fullmatch(r"chem-\d+-(?:mcl|tt|mrdl)", anchor)
             or re.fullmatch(r"food-[A-Za-z0-9]+", anchor)
+            or re.fullmatch(r"hood-\d+", anchor)
         ):
             return True
         return ('id="%s"' % anchor) in body
@@ -335,6 +336,27 @@ def add_census(index):
             index.add(row[1], "Census · " + name, "census.html#%s.%s" % (code, row[0]), 4)
 
 
+def add_neighborhoods(index):
+    """Each neighborhood the census page lists, with the sentence that page shows."""
+    path = os.path.join(ROOT, "census", "neighborhoods.json")
+    if not os.path.isfile(path):
+        return
+    for number, area in enumerate(load_json(path).get("areas") or []):
+        name = area.get("name") or ""
+        city = area.get("city") or ""
+        state = area.get("state") or ""
+        count = area.get("n") or 0
+        if not name or not count:
+            continue
+        place = name + ", " + city if city and city != name else name
+        if state:
+            place = place + ", " + state
+        where = ", ".join(part for part in (city if city != name else "", state) if part)
+        detail = "Neighborhood" + (" · " + where if where else "")
+        sentence = "%s has %s tagged restaurants within 2 kilometers of that name." % (place, f"{int(count):,}")
+        index.add(name, detail, "census.html#hood-%d" % number, 5, sentence)
+
+
 class PassageParser(HTMLParser):
     """Visible sentences in <main>, outside candidate articles and controls."""
 
@@ -546,6 +568,7 @@ def main():
     add_state_pages(index)
     add_countries(index)
     add_census(index)
+    add_neighborhoods(index)
     add_passages(index)
     add_water_text(index)
     add_health_text(index)

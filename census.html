@@ -64,6 +64,7 @@
 .health-layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 28px; align-items: start; }
 .health-tools { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 8px 0; }
 .health-tools button { display: inline-flex; align-items: center; gap: 6px; }
+.health-tools button[hidden] { display: none; }
 .zoom-mark { width: 22px; height: 22px; flex: none; }
 .health-tools button, .health-brands button, .health-centers button, .health-hoods button {
   font: inherit;
@@ -235,6 +236,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
             <button type="button" id="view-us" aria-pressed="true">Lower 48</button>
             <button type="button" id="view-ak">Alaska</button>
             <button type="button" id="view-hi">Hawaii</button>
+            <button type="button" id="hood-clear" hidden>All locations</button>
           </div>
           <label class="health-check"><input type="checkbox" id="show-centers" checked> Show distribution centers</label>
           <div id="health-map-wrap">
@@ -407,6 +409,6 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
 <script src="water.js?v=8"></script>
-<script src="health.js?v=32"></script>
+<script src="health.js?v=36"></script>
 </body>
 </html>

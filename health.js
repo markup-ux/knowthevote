@@ -17,6 +17,7 @@
   var hoods = null;
   var hoodOf = null;
   var hoodFilter = null;
+  var hoodJump = null;
   var hoodSort = "count";
   var hoodBrand = "";
   var cssW = 900;
@@ -121,7 +122,10 @@
       attributionControl: false,
       fadeDuration: 0
     });
-    baseMap.on("load", function () { syncBase(); });
+    baseMap.on("load", function () {
+      baseMap.resize();
+      syncBase();
+    });
   }
 
   function syncBase() {
@@ -1668,20 +1672,25 @@
   document.getElementById("zoom-out").addEventListener("click", function () {
     zoomAt(cssW / 2, cssH / 2, 1 / 1.6);
   });
-  document.getElementById("view-us").addEventListener("click", function () {
-    fit(-97, 38.5, 58);
-    setViewPressed("view-us");
+  function showRegion(lon, lat, span, id) {
+    hoodFilter = null;
+    fit(lon, lat, span);
+    setViewPressed(id);
+    renderHoods();
+    describe();
     draw();
+  }
+  document.getElementById("view-us").addEventListener("click", function () {
+    showRegion(-97, 38.5, 58, "view-us");
   });
   document.getElementById("view-ak").addEventListener("click", function () {
-    fit(-146.5, 61.2, 22);
-    setViewPressed("view-ak");
-    draw();
+    showRegion(-146.5, 61.2, 22, "view-ak");
   });
   document.getElementById("view-hi").addEventListener("click", function () {
-    fit(-157.4, 20.6, 6);
-    setViewPressed("view-hi");
-    draw();
+    showRegion(-157.4, 20.6, 6, "view-hi");
+  });
+  document.getElementById("hood-clear").addEventListener("click", function () {
+    showRegion(-97, 38.5, 58, "view-us");
   });
   document.getElementById("show-centers").addEventListener("change", function (event) {
     showCenters = event.target.checked;
@@ -1770,6 +1779,11 @@
       return b.count - a.count || hoodLabel(a.area).localeCompare(hoodLabel(b.area));
     });
     var shown = rows.slice(0, 200);
+    if (hoodFilter !== null) {
+      rows.forEach(function (row) {
+        if (row.index === hoodFilter && shown.indexOf(row) < 0) shown.unshift(row);
+      });
+    }
     box.textContent = "";
     var clear = document.createElement("button");
     clear.type = "button";
@@ -1783,14 +1797,23 @@
       draw();
     });
     box.appendChild(clear);
-    shown.forEach(function (row, rank) {
+    shown.forEach(function (row) {
       var button = document.createElement("button");
       button.type = "button";
+      button.id = "hood-" + row.index;
       var countText = hoodSort === "brands" && hoodBrand === ""
         ? commas(row.area.brands.length) + " brands · " + commas(row.area.n)
         : commas(row.count);
-      button.textContent = (rank + 1) + ". " + hoodLabel(row.area) + " · " + countText;
+      button.textContent = (rows.indexOf(row) + 1) + ". " + hoodLabel(row.area) + " · " + countText;
       if (hoodFilter === row.index) button.className = "is-on";
+      if (hoodJump === row.index) {
+        hoodJump = null;
+        setTimeout(function () {
+          var section = document.getElementById("neighborhoods");
+          if (section) section.scrollIntoView({ block: "start" });
+          button.scrollIntoView({ block: "nearest" });
+        }, 0);
+      }
       button.addEventListener("click", function () {
         hoodFilter = row.index;
         picked = "";
@@ -1805,6 +1828,11 @@
     var extra = rows.length - shown.length;
     note.textContent = (extra ? "Showing the first 200 of " + commas(rows.length) + " neighborhoods for this sort. " : "")
       + commas(hoods.unassigned) + " tagged restaurants are farther than 2 kilometers from a named neighborhood, so they are not in this rank.";
+    var clearMap = document.getElementById("hood-clear");
+    if (clearMap) {
+      clearMap.hidden = hoodFilter === null;
+      if (hoodFilter !== null) setViewPressed("");
+    }
   }
 
   document.getElementById("hood-count").addEventListener("click", function () { setHoodSort("count"); });
@@ -1901,7 +1929,21 @@
           hoods = payload;
           hoodOf = payload.placeArea;
           appendSource(sources, " " + payload.source);
-          renderHoods();
+          var hoodHash = /^hood-(\d+)$/.exec((location.hash || "").replace(/^#/, ""));
+          var hoodId = hoodHash ? Number(hoodHash[1]) : -1;
+          function showHood() {
+            if (!payload.areas[hoodId]) return;
+            hoodFilter = hoodId;
+            hoodJump = hoodId;
+            if (baseMap) baseMap.resize();
+            fitArea(hoodId);
+            renderHoods();
+            describe();
+            draw();
+          }
+          if (!payload.areas[hoodId]) renderHoods();
+          else if (baseMap && !(baseMap.isStyleLoaded && baseMap.isStyleLoaded())) baseMap.once("load", showHood);
+          else showHood();
         })
         .catch(function () {
           var note = document.getElementById("hood-note");
