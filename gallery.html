@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaders.vote · Gallery</title>
+<meta name="description" content="Political photography and art from Unsplash, drawn to fill the screen. An election map can sit on top. Not an endorsement.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="guide.css?v=blend1">
+<style>
+  body.wall { background: #1c1915; }
+  #wall-stage {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background: #1c1915;
+    --map-scale: 1;
+    --map-alpha: 0.62;
+    --dock: 280px;
+  }
+  #wall-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #wall-map {
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    z-index: 2;
+    width: min(84vw, 1000px);
+    height: min(68vh, 760px);
+    transform: translate(-50%, -50%) scale(var(--map-scale));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: var(--map-alpha);
+    pointer-events: none;
+    filter: drop-shadow(0 0 16px rgba(28, 25, 21, 0.45));
+  }
+  #wall-map[hidden] { display: none; }
+  #wall-map svg { width: 100%; height: 100%; display: block; }
+  #wall-map path {
+    fill: var(--lead, #ebe4d6);
+    stroke: #1c1915;
+    stroke-width: 0.75;
+  }
+  #wall-notes {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    pointer-events: none;
+  }
+  body.wall:not(.is-quiet) #wall-notes { bottom: calc(var(--dock) + 12px); }
+  #wall-map-label,
+  #wall-credit {
+    margin: 0;
+    max-width: min(68ch, 100%);
+    padding: 6px 10px;
+    background: rgba(28, 25, 21, 0.78);
+    color: #f4f0e6;
+  }
+  #wall-credit { font-size: 14px; pointer-events: auto; }
+  #wall-map-label {
+    font-size: 12px;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  #wall-credit a { color: inherit; }
+  body.wall header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 6;
+  }
+  #wall-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+    max-height: 52vh;
+    overflow: auto;
+    padding: 16px 20px 18px;
+    background: var(--paper);
+    color: var(--ink);
+    border-top: 5px solid var(--bar-stripe);
+    box-shadow: inset 0 3px 0 #0a3161;
+  }
+  body.wall header,
+  #wall-panel { transition: opacity 0.45s ease, transform 0.45s ease; }
+  body.wall.is-quiet header {
+    opacity: 0;
+    transform: translateY(-110%);
+    pointer-events: none;
+  }
+  body.wall.is-quiet #wall-panel {
+    opacity: 0;
+    transform: translateY(110%);
+    pointer-events: none;
+  }
+  #wall-panel h1 { font-size: 32px; margin: 0 0 6px; }
+  #wall-panel .deck { margin: 0 0 12px; font-size: 16px; }
+  #wall-panel .wall-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    align-items: center;
+    margin: 0 0 12px;
+  }
+  #wall-panel button {
+    font: inherit;
+    font-size: 16px;
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  #wall-panel button:hover { outline: 2px solid #0a3161; outline-offset: 1px; }
+  #wall-panel button[aria-pressed="true"] { background: var(--chip); }
+  #wall-panel button:focus-visible,
+  #wall-panel select:focus-visible,
+  #wall-panel input:focus-visible { outline: 2px solid #0a3161; outline-offset: 2px; }
+  #wall-panel .wall-pick {
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 650;
+    color: var(--muted);
+  }
+  #wall-panel .wall-pick select {
+    margin: 0 0 0 8px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 500;
+    color: var(--ink);
+    vertical-align: middle;
+  }
+  #wall-panel .wall-sliders {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 28px;
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+  #wall-panel .wall-sliders label { margin: 0; color: var(--muted); }
+  #wall-panel .wall-sliders label span {
+    float: right;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink);
+  }
+  #wall-panel input[type="range"] { width: 100%; margin-top: 8px; accent-color: #0a3161; }
+  #wall-panel .note { margin: 12px 0 0; }
+  #wall-subjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin: 0 0 14px;
+  }
+  #wall-subjects button {
+    background: transparent;
+    color: var(--muted);
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: 6px 0;
+  }
+  #wall-subjects button:hover { outline: none; color: var(--ink); }
+  #wall-subjects button[aria-pressed="true"] {
+    background: transparent;
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+  }
+  #wall-sheet {
+    position: absolute;
+    z-index: 7;
+    left: 12px;
+    right: 12px;
+    top: 88px;
+    bottom: calc(var(--dock) + 12px);
+    overflow: auto;
+    padding: 10px;
+    background: rgba(28, 25, 21, 0.94);
+  }
+  #wall-sheet[hidden] { display: none; }
+  #wall-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+    gap: 8px;
+  }
+  #wall-grid button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 2px solid transparent;
+    background: #2a261f;
+    cursor: pointer;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+  }
+  #wall-grid button[aria-current="true"] { border-color: #f4f0e6; }
+  #wall-grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 720px) {
+    #wall-panel h1 { font-size: 26px; }
+    #wall-panel .wall-sliders { grid-template-columns: 1fr; }
+    #wall-map { width: min(92vw, 1000px); height: min(58vh, 760px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body.wall header,
+    #wall-panel { transition: none; }
+  }
+</style>
+</head>
+<body class="wall">
+<div id="wall-stage">
+  <canvas id="wall-canvas"></canvas>
+  <div id="wall-map" hidden></div>
+  <div id="wall-sheet" hidden>
+    <div id="wall-grid"></div>
+  </div>
+  <div id="wall-notes">
+    <p id="wall-map-label" hidden></p>
+    <p id="wall-credit">Loading a photograph.</p>
+  </div>
+  <header>
+    <div class="wrap bar">
+      <div class="bar-top">
+        <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      </div>
+      <nav>
+        <a href="index.html">All states</a>
+        <a href="countries.html">Countries</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a href="play.html">Play</a>
+      </nav>
+    </div>
+  </header>
+  <div id="wall-panel">
+    <p class="kicker">Gallery</p>
+    <h1>Gallery.</h1>
+    <p class="deck">Two hundred photographs from Unsplash, drawn to fill this screen. Filter by subject, or open the grid and pick one. An election map can sit on top.</p>
+    <div id="wall-subjects" role="group" aria-label="Subject"></div>
+    <div class="wall-actions">
+      <button type="button" id="wall-map-toggle" aria-pressed="false">Show the map</button>
+      <label class="wall-pick">Election map
+        <select id="wall-map-pick"></select>
+      </label>
+      <button type="button" id="wall-hold" aria-pressed="false">Hold</button>
+      <button type="button" id="wall-prev">Previous</button>
+      <button type="button" id="wall-next">Next</button>
+      <label class="wall-pick">Sort
+        <select id="wall-sort">
+          <option value="subject">Subject</option>
+          <option value="photographer">Photographer</option>
+          <option value="mixed">Mixed</option>
+        </select>
+      </label>
+      <button type="button" id="wall-browse" aria-pressed="false" aria-expanded="false">Browse</button>
+      <button type="button" id="wall-full">Fill the screen</button>
+    </div>
+    <div class="wall-sliders">
+      <label>Picture transparency <span id="wall-photo-alpha-val">100%</span>
+        <input id="wall-photo-alpha" type="range" min="0" max="100" value="100" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-valuetext="100 percent">
+      </label>
+      <label>Picture size <span id="wall-photo-size-val">100%</span>
+        <input id="wall-photo-size" type="range" min="0" max="160" value="100" aria-valuemin="0" aria-valuemax="160" aria-valuenow="100" aria-valuetext="100 percent">
+      </label>
+      <label>Map transparency <span id="wall-map-alpha-val">62%</span>
+        <input id="wall-map-alpha" type="range" min="0" max="100" value="62" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62" aria-valuetext="62 percent">
+      </label>
+      <label>Map size <span id="wall-map-size-val">100%</span>
+        <input id="wall-map-size" type="range" min="0" max="150" value="100" aria-valuemin="0" aria-valuemax="150" aria-valuenow="100" aria-valuetext="100 percent">
+      </label>
+      <label>Transition <span id="wall-fade-val">0.7s</span>
+        <input id="wall-fade" type="range" min="0" max="30" step="1" value="7" aria-valuemin="0" aria-valuemax="30" aria-valuenow="7" aria-valuetext="0.7 seconds">
+      </label>
+      <label>Wait <span id="wall-wait-val">20s</span>
+        <input id="wall-wait" type="range" min="0" max="120" step="5" value="20" aria-valuemin="0" aria-valuemax="120" aria-valuenow="20" aria-valuetext="20 seconds">
+      </label>
+    </div>
+    <p id="wall-note" class="note">Leaders.vote is not a campaign and not an endorsement. A color on a map is a lead in reported votes, not a call. Photographs are used under the Unsplash License. Arrow keys change the picture. Browse opens the pictures in the subject you picked. M shows the map.</p>
+  </div>
+</div>
+<script src="live.js?v=16"></script>
+<script src="gallery-photos.js?v=1"></script>
+<script src="gallery.js?v=8"></script>
+</body>
+</html>
