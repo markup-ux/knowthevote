@@ -6,327 +6,209 @@
 <title>Leaders.vote · Play</title>
 <meta name="description" content="Questions, a count, and a sheet, using facts already printed on Leaders.vote. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="guide.css?v=play">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="guide.css?v=play2">
 <style>
-  .play-switch { margin-top: 8px; }
-  .play-switch button { font-size: 18px; }
-  .scene { position: relative; }
-  .scene-frame { position: relative; height: 300px; overflow: hidden; border: 1px solid var(--ink); }
-  .scene-frame img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 28%;
-  }
-  .scene-credit {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    max-width: min(46%, 360px);
-    margin: 0;
-    padding: 36px 14px 12px;
-    background: linear-gradient(transparent, rgba(12, 10, 8, 0.9));
-    color: #f4f0e6;
-    font-size: 13px;
-    z-index: 1;
-  }
-  .scene-credit a { color: inherit; }
-  .scene.scene-sheet .scene-credit { max-width: none; right: 0; }
-  .scene.scene-sheet .play-layout {
-    margin: 16px 0 0;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-  .play-layout {
-    display: grid;
-    grid-template-columns: minmax(280px, 440px) 1fr;
-    gap: 32px;
-    align-items: start;
-  }
-  .sheet {
+  #play-root { padding-top: 8px; }
+  #play-root .play-lead { margin: 0 0 18px; max-width: 62ch; color: var(--muted); }
+
+  #play-root .play-card {
     position: relative;
-    width: min(100%, 560px);
-    min-height: 760px;
-    overflow: hidden;
-    border: 1px solid #1c1915;
-    background: #14110e;
-    color: #f4f0e6;
-    font-family: "Times New Roman", Times, serif;
-  }
-  .sheet-photo {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .sheet-copy {
-    position: relative;
-    z-index: 1;
-    box-sizing: border-box;
-    min-height: 760px;
-    padding: 28px 26px 64px;
-    display: flex;
-    flex-direction: column;
-  }
-  .sheet .scene-credit {
-    max-width: none;
-    right: 0;
-    z-index: 2;
-    font-size: 12px;
-  }
-  .sheet[data-place="top"] .sheet-copy { justify-content: flex-start; }
-  .sheet[data-place="bottom"] .sheet-copy { justify-content: flex-end; padding-top: 72px; }
-  .sheet[data-place="top"] .scene-credit { top: auto; }
-  .sheet[data-place="bottom"] .scene-credit {
-    top: 0;
-    bottom: auto;
-    padding: 12px 14px 28px;
-    background: linear-gradient(rgba(12, 10, 8, 0.72), transparent);
-  }
-  .sheet[data-shot="illinois"] { border-color: #6e3a34; }
-  .sheet[data-shot="illinois"] .sheet-photo { object-position: 78% 10%; }
-  .sheet[data-shot="illinois"] .sheet-copy {
-    width: min(68%, 390px);
-    justify-content: flex-start;
-    color: #1c1915;
-    background: linear-gradient(90deg, rgba(176, 188, 202, 0.22) 0%, rgba(176, 188, 202, 0.08) 70%, rgba(176, 188, 202, 0) 100%);
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85), 0 0 14px rgba(236, 240, 246, 0.9);
-  }
-  .sheet[data-shot="illinois"] .scene-credit {
-    color: #f4efe8;
-    text-shadow: 0 1px 2px rgba(40, 16, 12, 0.85);
-  }
-  .sheet[data-shot="senate"] { border-color: #0a3161; }
-  .sheet[data-shot="senate"] .sheet-photo { object-position: center 36%; }
-  .sheet[data-shot="senate"] .sheet-copy {
-    color: #f4f7ef;
-    background: linear-gradient(180deg, transparent 46%, rgba(16, 38, 14, 0.22) 68%, rgba(10, 28, 8, 0.62) 100%);
-    text-shadow: 0 1px 2px rgba(8, 20, 6, 0.45);
-  }
-  .sheet[data-shot="court"] { border-color: #c4b48a; }
-  .sheet[data-shot="court"] .sheet-photo { object-position: center 28%; }
-  .sheet[data-shot="court"] .sheet-copy {
-    width: min(66%, 380px);
-    color: #1c1915;
-    background: linear-gradient(90deg, rgba(236, 226, 200, 0.5) 0%, rgba(236, 226, 200, 0.22) 72%, rgba(236, 226, 200, 0) 100%);
-    text-shadow: 0 1px 0 rgba(255, 248, 236, 0.9), 0 0 12px rgba(255, 248, 236, 0.85);
-  }
-  .sheet.is-retain .sheet-head strong { color: #1b4d2e; }
-  .sheet[data-shot="box"] { border-color: #111; }
-  .sheet[data-shot="box"] .sheet-photo { object-position: center 40%; }
-  .sheet[data-shot="box"] .sheet-copy {
-    color: #f7f4ee;
-    background: linear-gradient(180deg, transparent 26%, rgba(0, 0, 0, 0.78) 44%, #000 100%);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-  }
-  .sheet[data-shot="alps"] { border-color: #1c2430; }
-  .sheet[data-shot="alps"] .sheet-photo { object-position: center 32%; }
-  .sheet[data-shot="alps"] .sheet-copy {
-    color: #f3f0ea;
-    background: linear-gradient(180deg, transparent 48%, rgba(8, 10, 16, 0.2) 70%, rgba(6, 8, 12, 0.55) 100%);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
-  }
-  .sheet[data-shot="brazil"] { border-color: #0d4ea3; }
-  .sheet[data-shot="brazil"] .sheet-photo { object-position: center 72%; }
-  .sheet[data-shot="brazil"] .sheet-copy {
-    color: #f7f4ea;
-    background: linear-gradient(180deg, rgba(6, 48, 130, 0.22) 0%, rgba(6, 48, 130, 0.06) 40%, transparent 62%);
-    text-shadow: 0 1px 2px rgba(4, 24, 80, 0.9), 0 0 14px rgba(4, 24, 80, 0.65);
-  }
-  .sheet[data-shot="cape"] { border-color: #163a66; }
-  .sheet[data-shot="cape"] .sheet-photo { object-position: center bottom; }
-  .sheet[data-shot="cape"] .sheet-copy {
-    color: #f4f7fb;
-    background: linear-gradient(180deg, rgba(8, 36, 78, 0.22) 0%, rgba(8, 36, 78, 0.06) 40%, transparent 60%);
-    text-shadow: 0 1px 2px rgba(6, 20, 48, 0.9), 0 0 14px rgba(6, 20, 48, 0.65);
-  }
-  .sheet:not(.is-paper) .contest { border-top-color: color-mix(in srgb, currentColor 55%, transparent); }
-  .sheet:not(.is-paper) .contest h3 { font-size: 22px; line-height: 1.28; }
-  .sheet:not(.is-paper) .who-name { font-size: 18px; }
-  .sheet:not(.is-paper) .oval { border-color: currentColor; }
-  .sheet:not(.is-paper) .choice[aria-pressed="true"] .oval,
-  .sheet:not(.is-paper) .choice.is-right .oval { background: currentColor; }
-  .sheet:not(.is-paper) .choice.is-wrong .oval { background: transparent; }
-  .sheet:not(.is-paper) .choice:hover { background: color-mix(in srgb, currentColor 14%, transparent); }
-  .sheet.is-paper {
-    min-height: 0;
-    padding: 16px 16px 20px;
+    width: min(100%, 680px);
     background: #fff;
-    color: #161616;
+    border: 1px solid var(--ink);
+    color: var(--ink);
   }
-  .sheet.is-paper .sheet-photo { display: none; }
-  .sheet.is-paper .sheet-copy {
-    min-height: 0;
-    padding: 0;
-    display: block;
-    background: none;
-    color: inherit;
-    text-shadow: none;
+  #play-root .play-card.is-yes { animation: play-yes 0.85s ease; }
+  #play-root .play-card.is-no { animation: play-no 0.85s ease; }
+  @keyframes play-yes {
+    0% { box-shadow: inset 0 0 0 0 var(--ink); }
+    38% { box-shadow: inset 0 0 0 6px var(--ink); }
+    100% { box-shadow: inset 0 0 0 0 transparent; }
   }
-  .sheet-head { margin: 0 0 8px; text-align: center; }
-  .sheet-head strong {
-    display: block;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
-    letter-spacing: 0.08em;
+  @keyframes play-no {
+    0% { box-shadow: inset 0 0 0 0 #8d3232; }
+    38% { box-shadow: inset 0 0 0 6px #8d3232; }
+    100% { box-shadow: inset 0 0 0 0 transparent; }
   }
-  .sheet-head span { display: block; font-size: 14px; }
-  .sheet-instruct { margin: 0 0 12px; font-size: 15px; line-height: 1.35; }
-  .contest { padding: 8px 6px 10px; border-top: 1px solid #161616; }
-  .contest h3 {
-    margin: 0;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.03em;
+  #play-root .play-rim {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    overflow: hidden;
+    pointer-events: none;
   }
-  .contest .detail, .contest .vote-for { margin: 2px 0 0; font-size: 14px; font-weight: 700; }
-  .choice {
-    display: grid;
-    grid-template-columns: 26px 1fr;
-    gap: 8px;
+  #play-root .play-star {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background: var(--ink);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    filter: drop-shadow(0 0 1px #f4f0e6) drop-shadow(0 1px 1px rgba(28, 25, 21, 0.65));
+    animation: play-spark 0.9s ease-out forwards;
+  }
+  #play-root .play-card.is-no .play-star { background: #8d3232; }
+  @keyframes play-spark {
+    0% { opacity: 0; transform: scale(0.3); }
+    28% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #play-root .play-card.is-yes,
+    #play-root .play-card.is-no { animation: none; }
+    #play-root .play-rim { display: none; }
+  }
+
+  #play-root .play-art {
+    position: relative;
     width: 100%;
-    margin: 7px 0 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
+    overflow: hidden;
+  }
+  #play-root .play-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  #play-root .play-card.is-plain .play-art,
+  #play-root .play-card.is-plain .play-credit { display: none; }
+  #play-root .play-credit {
+    margin: 0;
+    padding: 8px 24px 0;
+    background: none;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  #play-root .play-credit a { color: inherit; }
+
+  #play-root .play-body { padding: 20px 24px 8px; }
+  #play-root .play-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+  #play-root .play-kicker {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 650;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  #play-root .play-step { margin: 0; font-size: 14px; color: var(--muted); }
+  #play-root .play-progress:not(:has(.play-bar)) { margin-bottom: 16px; }
+  #play-root .play-bar { height: 3px; margin: 12px 0 18px; background: var(--line); }
+  #play-root .play-bar i {
+    display: block;
+    height: 100%;
+    width: calc(var(--n) / var(--of) * 100%);
+    background: var(--ink);
+  }
+  #play-root .play-qblock { padding: 0; }
+  #play-root h3.play-q {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 500;
+  }
+  #play-root .play-ask,
+  #play-root .play-note { margin: 10px 0 0; color: var(--muted); font-size: 16px; line-height: 1.45; }
+  #play-root .play-choice {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    margin: 8px 0 0;
+    padding: 12px;
+    border: 1px solid var(--line);
+    background: #fff;
     color: inherit;
     font: inherit;
     text-align: left;
     cursor: pointer;
   }
-  .choice:disabled { cursor: default; }
-  .oval {
+  #play-root .play-choice:hover:not(:disabled) { background: var(--chip); }
+  #play-root .play-choice:disabled { cursor: default; }
+  #play-root .play-oval {
     width: 18px;
     height: 13px;
-    margin-top: 4px;
-    border: 2px solid #161616;
+    border: 2px solid var(--ink);
     border-radius: 50%;
+    background: #fff;
   }
-  .choice[aria-pressed="true"] .oval,
-  .choice.is-right .oval { background: #161616; }
-  .choice.is-wrong .oval { background: transparent; }
-  .mark { display: block; margin-top: 2px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
-  .salute {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-    pointer-events: none;
+  #play-root .play-choice.is-right { border-color: var(--ink); background: var(--chip); }
+  #play-root .play-choice.is-right .play-oval { background: var(--ink); }
+  #play-root .play-choice.is-wrong { border-color: #8d3232; background: #f3e4e1; }
+  #play-root .play-choice.is-wrong .play-oval { border-color: #8d3232; background: #fff; }
+  #play-root .play-name { display: block; font-size: 17px; font-weight: 650; }
+  #play-root .play-mark {
+    display: block;
+    margin-top: 2px;
+    font-size: 13px;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
   }
-  .salute-flag {
-    position: absolute;
-    right: 3%;
-    top: 12%;
-    width: 27%;
-    min-width: 128px;
-    max-width: 196px;
-    height: 118px;
+  #play-root .play-choice.is-wrong .play-mark { color: #8d3232; }
+  #play-root .play-foot {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
-    transform-origin: left center;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 24px 22px;
   }
-  .sheet[data-place="top"] .salute.is-hit .salute-flag { top: auto; bottom: 16%; }
-  .sheet[data-place="top"] .salute.is-miss .salute-flag { top: 46%; }
-  .salute-bar { flex: 1; }
-  .salute-bar:nth-child(odd) { background: #bf0a30; }
-  .salute-bar:nth-child(even) { background: #fff; }
-  .salute-canton {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 44%;
-    height: 54%;
-    background:
-      radial-gradient(circle, #fff 1.15px, transparent 1.35px) 5px 5px / 13px 12px,
-      #0a3161;
-  }
-  .salute-star {
-    position: absolute;
-    width: var(--size);
-    height: var(--size);
-    opacity: 0;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  }
-  .salute-star { filter: drop-shadow(0 1px 1px rgba(12, 16, 24, 0.7)); }
-  .salute-star.is-red { background: #bf0a30; }
-  .salute-star.is-white { background: #fff; }
-  .salute-star.is-blue { background: #0a3161; }
-  .salute.is-hit .salute-flag { animation: flag-raise 1.9s ease-out forwards; }
-  .salute.is-hit .salute-star { animation: star-up 1.7s cubic-bezier(.12, .7, .2, 1) forwards; }
-  .salute.is-miss .salute-flag {
-    top: 4%;
-    transform-origin: right top;
-    animation: flag-lower 1.45s cubic-bezier(.2, .6, .4, 1) forwards;
-  }
-  .salute.is-miss .salute-star { animation: star-down 1.45s linear forwards; }
-  @keyframes flag-raise {
-    0% { transform: scaleX(0.06) rotate(-14deg); opacity: 0; }
-    14% { opacity: 1; }
-    40% { transform: scaleX(1) rotate(4deg); }
-    56% { transform: scaleX(1) rotate(-3deg); }
-    72% { transform: scaleX(1) rotate(2deg); }
-    100% { transform: scaleX(1) translateY(-16px); opacity: 0; }
-  }
-  @keyframes flag-lower {
-    0% { transform: translateY(0) rotate(0deg) scaleY(1); opacity: 0; }
-    8% { opacity: 1; }
-    40% { transform: translateY(78px) rotate(18deg) scaleY(0.78); filter: grayscale(0.2); opacity: 1; }
-    100% { transform: translateY(270px) rotate(36deg) scaleY(0.4); filter: grayscale(0.7); opacity: 0; }
-  }
-  @keyframes star-up {
-    0% { transform: translate(0, 24px) scale(0.3) rotate(0deg); opacity: 0; }
-    14% { opacity: 1; }
-    68% { opacity: 1; }
-    100% { transform: translate(var(--drift), var(--travel)) scale(1) rotate(var(--spin)); opacity: 0; }
-  }
-  @keyframes star-down {
-    0% { transform: translate(0, -10px) scale(1) rotate(0deg); opacity: 0; }
-    14% { opacity: 1; }
-    60% { opacity: 1; }
-    100% { transform: translate(var(--drift), var(--travel)) scale(0.4) rotate(var(--spin)); opacity: 0; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .salute { display: none; }
-  }
-  .who-name { display: block; font-size: 17px; font-weight: 700; }
-  .sheet-move { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 10px; }
-  .sheet-move button {
+  #play-root .play-foot button {
     font: inherit;
-    background: transparent;
-    color: var(--ink);
+    background: var(--ink);
+    color: var(--paper);
     border: 1px solid var(--ink);
-    padding: 8px 12px;
+    padding: 10px 16px;
     cursor: pointer;
   }
-  .sheet-move button:disabled { color: var(--muted); border-color: var(--line); cursor: default; }
-  #play-status { flex: 1 0 100%; width: 100%; max-width: none; margin: 0; color: var(--ink); font-size: 17px; line-height: 1.4; }
-  #play-status:empty { display: none; }
-  .tally {
-    display: flex;
-    gap: 18px;
-    margin: 8px 0 0;
-    font-variant-numeric: tabular-nums;
-    font-size: 16px;
+  #play-root .play-foot button:disabled {
+    background: transparent;
+    color: var(--muted);
+    border-color: var(--line);
+    cursor: default;
   }
-  .tally span { display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
-  .tally strong { display: block; font-family: Georgia, "Palatino Linotype", serif; font-size: 28px; font-weight: 500; }
-  .misses { margin: 8px 0 0; padding-left: 1.2em; }
-  .misses li { margin: 6px 0; }
-  .misses a { text-underline-offset: 3px; }
-  .board {
+  #play-root #play-status { margin: 0; max-width: 62ch; font-size: 17px; line-height: 1.45; }
+  #play-root .play-work #play-status { margin-top: 12px; color: var(--ink); }
+  #play-root #play-status:empty { display: none; }
+  #play-root .play-tally { display: flex; gap: 28px; margin: 14px 0 4px; }
+  #play-root .play-tally span {
+    display: block;
+    font-size: 13px;
+    font-weight: 650;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  #play-root .play-tally strong {
+    display: block;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-size: 36px;
+    font-weight: 500;
+  }
+  #play-root .play-misses { margin: 12px 0 0; padding-left: 1.2em; }
+  #play-root .play-misses li { margin: 8px 0; }
+  #play-root .play-misses a { color: inherit; }
+
+  #play-root .play-sheet { width: min(100%, 920px); }
+  #play-root .play-sheet .play-body {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 8px 40px;
+    align-items: start;
+    padding-bottom: 22px;
+  }
+  #play-root .play-grid {
     display: grid;
     grid-template-columns: repeat(4, 76px);
     width: max-content;
     background: #fff;
   }
-  .cell {
+  #play-root .play-cell {
     position: relative;
     width: 76px;
     height: 76px;
@@ -339,350 +221,49 @@
     text-align: center;
     cursor: pointer;
   }
-  .cell .term {
+  #play-root .play-cell .term {
     position: absolute;
     top: 5px;
     left: 6px;
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
     font-size: 12px;
     font-weight: 650;
-    letter-spacing: 0.04em;
     color: var(--muted);
   }
-  .cell.is-on { background: var(--chip); }
-  .cell.is-bad { background: #f3e4e1; }
-  .keys { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-  .keys button {
+  #play-root .play-cell.is-on { background: var(--chip); }
+  #play-root .play-cell.is-bad { background: #f3e4e1; }
+  #play-root .play-keys { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  #play-root .play-keys button {
     font: inherit;
     min-width: 44px;
     height: 44px;
     padding: 0 12px;
-    background: transparent;
+    background: #fff;
     border: 1px solid var(--ink);
     cursor: pointer;
   }
-  .keys button:hover, .cell:hover { background: var(--chip); }
-  .cell.is-bad:hover { background: #f3e4e1; }
-  button:focus-visible, .cell:focus-visible { outline: 2px solid #0a3161; outline-offset: 2px; }
-  .rule { margin: 0 0 12px; max-width: 46ch; }
-  @media (max-width: 800px) {
-    .play-layout { grid-template-columns: 1fr; }
-    .scene.scene-sheet .scene-frame { height: 220px; }
-    .sheet { width: 100%; }
-  }
+  #play-root .play-keys button:hover,
+  #play-root .play-cell:hover { background: var(--chip); }
+  #play-root .play-cell.is-bad:hover { background: #f3e4e1; }
+  #play-root .play-aside .play-kicker { margin-bottom: 10px; }
+  #play-root .play-rule,
+  #play-root .play-note { margin: 0 0 12px; max-width: 46ch; line-height: 1.45; }
+  #play-root .play-note { color: var(--muted); }
+  #play-root .play-note a { color: inherit; }
+  #play-root button:focus-visible,
+  #play-root .play-cell:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
-  main {
-    background:
-      radial-gradient(ellipse at 50% 0%, rgba(191, 10, 48, 0.35) 0%, transparent 42%),
-      #041428;
-    color: #f4f7fb;
-  }
-  main .kicker {
-    color: #bf0a30;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-  }
-  main h1 {
-    color: #f4f7fb;
-    font-family: Cinzel, Palatino, "Palatino Linotype", serif;
-    font-weight: 700;
-  }
-  main .deck { color: #c5d4e8; }
-  main .hero { padding-bottom: 0; }
-  #play-root.block { padding-top: 12px; }
-  #play-root > .deck { margin-top: 0; font-size: 16px; }
-
-  .play-switch.sheet-switch { gap: 8px; }
-  .play-switch.sheet-switch button {
-    font-family: Cinzel, Palatino, serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #f4f7fb;
-    background: #0a3161;
-    border: 1px solid #f4f7fb;
-    border-bottom: 1px solid #f4f7fb;
-    padding: 10px 14px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  }
-  .play-switch.sheet-switch button[aria-pressed="true"] {
-    color: #fff;
-    background: linear-gradient(180deg, #d4213f 0%, #bf0a30 100%);
-    border-color: #fff;
-  }
-
-  header { z-index: 6; }
-  .scene .sheet:not(.is-paper) {
-    position: relative;
-    z-index: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "art"
-      "copy"
-      "move";
-    width: min(100%, 880px);
-    min-height: 0;
-    max-height: none;
-    overflow: visible;
-    border: 2px solid #f4f7fb;
-    background: #061833;
-    color: #f4f7fb;
-    font-family: "Source Sans 3", "Segoe UI", sans-serif;
-    box-shadow:
-      0 0 0 4px #bf0a30,
-      0 0 0 8px #0a3161,
-      0 22px 48px rgba(0, 0, 0, 0.45);
-  }
-  .scene .sheet:not(.is-paper)::before,
-  .scene .sheet:not(.is-paper)::after {
-    content: "";
-    position: absolute;
-    z-index: 4;
-    width: 16px;
-    height: 16px;
-    pointer-events: none;
-    border: 2px solid #f4f7fb;
-  }
-  .scene .sheet:not(.is-paper)::before {
-    top: 7px;
-    left: 7px;
-    border-right: 0;
-    border-bottom: 0;
-  }
-  .scene .sheet:not(.is-paper)::after {
-    right: 7px;
-    bottom: 7px;
-    border-left: 0;
-    border-top: 0;
-  }
-  .scene .sheet[data-shot] .sheet-photo,
-  .scene .sheet-photo {
-    position: relative;
-    grid-area: art;
-    inset: auto;
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    max-height: none;
-    align-self: start;
-    object-fit: contain;
-    object-position: center center;
-    background: #041428;
-    border-left: 0;
-    border-bottom: 1px solid rgba(244, 247, 251, 0.35);
-  }
-  .scene .sheet[data-shot] .sheet-copy,
-  .scene .sheet .sheet-copy {
-    grid-area: copy;
-    width: auto;
-    max-width: none;
-    min-height: 0;
-    padding: 26px 26px 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    color: #f4f7fb;
-    background: linear-gradient(180deg, #0c2d5c 0%, #061833 100%);
-    text-shadow: none;
-  }
-  .scene .sheet .scene-credit {
-    position: relative;
-    grid-area: art;
-    align-self: end;
-    justify-self: stretch;
-    z-index: 2;
-    left: auto;
-    right: auto;
-    top: auto;
-    bottom: auto;
-    max-width: none;
-    margin: 0;
-    padding: 28px 14px 10px;
-    background: linear-gradient(transparent, rgba(4, 20, 40, 0.88));
-    color: #f4f7fb;
-    font-size: 12px;
-    pointer-events: none;
-  }
-  .scene .sheet .scene-credit a { pointer-events: auto; }
-  .scene .sheet-head { text-align: left; margin-bottom: 14px; }
-  .scene .sheet-head strong {
-    font-family: Cinzel, Palatino, serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    color: #fff;
-  }
-  .scene .sheet.is-retain .sheet-head strong { color: #fff; }
-  .scene .sheet-head span {
-    margin-top: 4px;
-    color: #c5d4e8;
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-  .quest-meter { display: flex; gap: 5px; margin-top: 12px; }
-  .quest-meter i {
-    display: block;
-    width: 34px;
-    height: 7px;
-    background: #14325f;
-    border: 1px solid rgba(244, 247, 251, 0.35);
-  }
-  .quest-meter i.is-done { background: #f4f7fb; }
-  .quest-meter i.is-now {
-    background: #bf0a30;
-    border-color: #fff;
-  }
-  .scene .contest {
-    border-top: 1px solid rgba(244, 247, 251, 0.35);
-    padding: 14px 0 8px;
-  }
-  .scene .contest h3 {
-    font-family: "Source Sans 3", "Segoe UI", sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 0;
-    line-height: 1.35;
-    color: #f4f7fb;
-  }
-  .scene .contest .vote-for,
-  .scene .sheet-instruct { color: #c5d4e8; font-weight: 600; }
-  .scene .choice {
-    align-items: center;
-    margin-top: 8px;
-    padding: 10px 12px;
-    border: 1px solid rgba(244, 247, 251, 0.4);
-    background: rgba(0, 0, 0, 0.22);
-    color: #f4f7fb;
-  }
-  .scene .choice:hover:not(:disabled) {
-    border-color: #fff;
-    background: rgba(255, 255, 255, 0.08);
-  }
-  .scene .choice .oval {
-    width: 9px;
-    height: 9px;
-    margin-top: 0;
-    border-radius: 1px;
-    border: 1px solid #f4f7fb;
-    transform: rotate(45deg);
-    background: transparent;
-  }
-  .scene .choice[aria-pressed="true"],
-  .scene .choice.is-right {
-    border-color: #fff;
-    background: rgba(191, 10, 48, 0.28);
-  }
-  .scene .choice.is-wrong { border-color: #bf0a30; background: rgba(90, 8, 22, 0.45); }
-  .scene .choice[aria-pressed="true"] .oval,
-  .scene .choice.is-right .oval { background: #bf0a30; border-color: #fff; }
-  .scene .choice.is-wrong .oval { background: transparent; border-color: #bf0a30; }
-  .scene .who-name { font-size: 17px; font-weight: 600; }
-  .scene .mark { color: #fff; }
-  .scene .choice.is-wrong .mark { color: #ffb3c0; }
-  .scene .tally strong { color: #fff; font-family: Cinzel, Palatino, serif; }
-  .scene .tally span { color: #c5d4e8; }
-  .scene .sheet-move {
-    grid-area: move;
-    align-self: end;
-    margin: 0;
-    padding: 8px 26px 22px;
-  }
-  .scene .sheet-move button {
-    font-family: Cinzel, Palatino, serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #fff;
-    background: linear-gradient(180deg, #d4213f 0%, #bf0a30 100%);
-    border: 1px solid #fff;
-    padding: 11px 22px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
-  }
-  .scene .sheet-move button:disabled {
-    color: #c5d4e8;
-    background: transparent;
-    border-color: rgba(244, 247, 251, 0.45);
-    box-shadow: none;
-  }
-  .scene #play-status { color: #f4f7fb; font-size: 16px; }
-  .scene .misses a { color: #fff; }
-
-  .sheet.is-paper {
-    width: min(100%, 680px);
-    padding: 22px 22px 8px;
-    border: 2px solid #f4f7fb;
-    background: #061833;
-    color: #f4f7fb;
-    font-family: "Source Sans 3", "Segoe UI", sans-serif;
-    box-shadow: 0 0 0 4px #bf0a30, 0 0 0 8px #0a3161;
-  }
-  .sheet.is-paper .sheet-copy {
-    color: #f4f7fb;
-    background: none;
-    text-shadow: none;
-  }
-  .sheet.is-paper .sheet-move { padding: 8px 0 16px; }
-
-  .scene.scene-sheet {
-    width: min(100%, 880px);
-    padding: 0 0 8px;
-    border: 2px solid #f4f7fb;
-    background: #061833;
-    box-shadow: 0 0 0 4px #bf0a30, 0 0 0 8px #0a3161, 0 22px 48px rgba(0, 0, 0, 0.45);
-  }
-  .scene.scene-sheet .scene-frame { border: 0; height: auto; overflow: visible; }
-  .scene.scene-sheet .scene-frame img {
-    position: relative;
-    inset: auto;
-    height: auto;
-    object-fit: contain;
-    object-position: center center;
-    background: #041428;
-  }
-  .scene.scene-sheet .play-layout { margin: 0; padding: 18px 18px 8px; color: #f4f7fb; }
-  .scene.scene-sheet .cell {
-    background: #0a3161;
-    color: #f4f7fb;
-    border-color: rgba(244, 247, 251, 0.45);
-  }
-  .scene.scene-sheet .cell .term { color: #bf0a30; }
-  .scene.scene-sheet .cell.is-on { background: #14325f; }
-  .scene.scene-sheet .cell.is-bad { background: #6e1024; color: #ffd5dc; }
-  .scene.scene-sheet .keys button {
-    color: #f4f7fb;
-    background: #0a3161;
-    border: 1px solid #f4f7fb;
-    font-family: Cinzel, Palatino, serif;
-  }
-  .scene.scene-sheet .keys button:hover,
-  .scene.scene-sheet .cell:hover { background: #14325f; }
-  .scene.scene-sheet .rule,
-  .scene.scene-sheet .note { color: #c5d4e8; }
-  .scene.scene-sheet .note a { color: #fff; }
-
-  @media (max-width: 800px) {
-    .scene .sheet:not(.is-paper) {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "art"
-        "copy"
-        "move";
-      min-height: 0;
-    }
-    .scene .sheet[data-shot] .sheet-photo,
-    .scene .sheet-photo {
-      height: auto;
-      min-height: 0;
-      object-fit: contain;
-      border-left: 0;
-      border-bottom: 1px solid rgba(244, 247, 251, 0.35);
-    }
+  @media (max-width: 720px) {
+    #play-root h3.play-q { font-size: 24px; }
+    #play-root .play-body,
+    #play-root .play-foot,
+    #play-root .play-credit { padding-left: 16px; padding-right: 16px; }
+    #play-root .play-sheet .play-body { grid-template-columns: 1fr; }
+    #play-root .play-grid { grid-template-columns: repeat(4, minmax(0, 72px)); }
+    #play-root .play-cell { width: 100%; height: 68px; font-size: 28px; }
   }
 </style>
+
 </head>
 <body>
 <header>
@@ -690,7 +271,6 @@
     <div class="bar-top">
       <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
     </div>
-    <p class="here notranslate" translate="no"><span>Play</span></p>
     <nav>
       <a href="index.html">All states</a>
       <a href="countries.html">Countries</a>
@@ -700,9 +280,9 @@
 </header>
 <main>
   <div class="wrap hero">
-    <p class="kicker">From the guide</p>
+    <p class="kicker">Play</p>
     <h1>Questions from the pages.</h1>
-    <p class="deck">Three short games. Every answer is a fact already printed on Leaders.vote. Nothing here endorses a candidate, calls a race, or keeps score against anyone else.</p>
+    <p class="deck">Three short games, drawn from facts already printed here. Nothing endorses a candidate, calls a race, or ranks anyone.</p>
     <div class="sheet-switch play-switch" role="tablist" aria-label="Games">
       <button type="button" id="tab-ballot" role="tab" aria-controls="play-root" aria-pressed="true">Know the ballot</button>
       <button type="button" id="tab-count" role="tab" aria-controls="play-root" aria-pressed="false">The count</button>
@@ -1125,7 +705,7 @@
   var BANK = [
     {
       shot: "illinois",
-      prompt: "How many statewide races does the page list at the capitol in this photograph, before your own district?",
+      prompt: "How many statewide races does the page list before your own district?",
       choices: ["Four", "Five", "Six", "Nine"],
       answer: 2,
       fact: "Same six races, then your district. That is one Senate candidate, one governor ticket, and one person in each of the other four offices.",
@@ -1134,7 +714,7 @@
     },
     {
       shot: "tiles",
-      prompt: "The word in this photograph is vote. Governor and lieutenant governor are one ticket. How many ovals do you mark for them?",
+      prompt: "Governor and lieutenant governor are one ticket. How many ovals do you mark for them?",
       choices: ["One oval for each name", "One oval for the ticket", "A vote for governor only", "The legislature fills the second office"],
       answer: 1,
       fact: "Governor and lieutenant governor share one oval. The two names are a single ticket. On this site the names run Republican, then Democratic, then any other party.",
@@ -1143,7 +723,7 @@
     },
     {
       shot: "signing",
-      prompt: "A hand is marking the governor ticket. Who is on the Democratic ticket with JB Pritzker?",
+      prompt: "Who is on the Democratic ticket with JB Pritzker?",
       choices: ["Aaron B. Del Mar", "Christian Mitchell", "Carolyn Schofield", "Juliana Stratton"],
       answer: 1,
       names: true,
@@ -1153,7 +733,7 @@
     },
     {
       shot: "vote1964",
-      prompt: "This voter is casting a ballot for governor. Who is on the Republican ticket with Darren Bailey?",
+      prompt: "Who is on the Republican ticket with Darren Bailey?",
       choices: ["Christian Mitchell", "Carolyn Schofield", "Aaron B. Del Mar", "Don Tracy"],
       answer: 2,
       names: true,
@@ -1172,7 +752,7 @@
     },
     {
       shot: "pen",
-      prompt: "This form says not to forget to sign. How does the Illinois page say you cast a write-in?",
+      prompt: "How does the Illinois page say you cast a write-in?",
       choices: ["Tell the election judge the name", "Darken the oval by the blank line and write the name", "The scanner fills the line", "Write the name on the back of the sheet"],
       answer: 1,
       fact: "To cast a write-in, darken the oval to the left of the blank line and write the name. Governor, comptroller, and treasurer include that line.",
@@ -1181,7 +761,7 @@
     },
     {
       shot: "reply",
-      prompt: "This envelope is election mail, a paper you file. Where does a write-in count?",
+      prompt: "Where does a write-in count?",
       choices: ["In every Illinois precinct", "Only where that person filed a declaration with the local election authority", "Only in Chicago", "Only on the green ballot"],
       answer: 1,
       fact: "A write-in counts only where that person filed a declaration with the local election authority. This page has the Kane County and Will County lists, not every county’s list.",
@@ -1190,7 +770,7 @@
     },
     {
       shot: "mail",
-      prompt: "This envelope is mail. You registered by mail, and this is your first vote in the jurisdiction. What do you bring?",
+      prompt: "You registered by mail, and this is your first vote in the jurisdiction. What do you bring?",
       choices: ["Nothing else", "Identification", "A second ballot", "A letter from the county clerk"],
       answer: 1,
       fact: "If you registered by mail and this is your first vote in the jurisdiction, bring identification. Most people who are already registered just sign the application.",
@@ -1199,7 +779,7 @@
     },
     {
       shot: "passport",
-      prompt: "This passport is identification. Who does the Illinois page tell to bring identification?",
+      prompt: "Who does the Illinois page tell to bring identification?",
       choices: ["Every voter", "Anyone using a ZIP code", "Someone who registered by mail and is voting in this jurisdiction for the first time", "Only people voting for a write-in"],
       answer: 2,
       fact: "If you registered by mail and this is your first vote in the jurisdiction, bring identification.",
@@ -1208,7 +788,7 @@
     },
     {
       shot: "suit",
-      prompt: "A blank sheet is waiting under the form in this photograph. You spoiled your ballot. What do you do?",
+      prompt: "You spoiled your ballot. What do you do?",
       choices: ["Erase it and keep going", "Ask an election judge for another sheet", "That ballot is your only one", "The scanner ignores the extra marks"],
       answer: 1,
       fact: "If you spoil the sheet, ask an election judge for another.",
@@ -1217,7 +797,7 @@
     },
     {
       shot: "stack",
-      prompt: "These envelopes are paperwork. The comptroller pays approved bills and publishes the checkbook. What does that office not do?",
+      prompt: "The comptroller pays approved bills and publishes the checkbook. What does that office not do?",
       choices: ["Pay bills already approved", "Publish the state’s checkbook", "Write the budget", "Hold some payments under wage rules"],
       answer: 2,
       fact: "The comptroller pays bills the legislature and governor have already approved and publishes the checkbook. That office does not write the budget.",
@@ -1226,7 +806,7 @@
     },
     {
       shot: "drop",
-      prompt: "A ballot is going into this box. What happens when two ovals are marked for one office?",
+      prompt: "What happens when two ovals are marked for one office?",
       choices: ["Both choices are counted", "The whole ballot is rejected", "That office is not counted", "The first oval is the one that counts"],
       answer: 2,
       fact: "Marking two ovals for one office means that office is not counted.",
@@ -1235,7 +815,7 @@
     },
     {
       shot: "number",
-      prompt: "This is a street address. The polling place is assigned from what?",
+      prompt: "The polling place is assigned from what?",
       choices: ["The ZIP code alone", "The home address", "The county you ask for", "Whichever precinct is closest"],
       answer: 1,
       fact: "The State Board of Elections assigns the precinct polling place from the home address, not from a ZIP code alone.",
@@ -1244,7 +824,7 @@
     },
     {
       shot: "votehere",
-      prompt: "These signs mark a local polling place. Sheriff and the county board are local offices. Where do their names come from?",
+      prompt: "Sheriff and the county board are local offices. Where do their names come from?",
       choices: ["This statewide list", "The county clerk", "The secretary of state", "The green retention ballot"],
       answer: 1,
       fact: "Sheriff, clerk, county board, and local questions come from the county clerk and are not in the statewide list.",
@@ -1253,7 +833,7 @@
     },
     {
       shot: "books",
-      prompt: "These shelves are a library. Which office keeps the state library, and is the one most people actually visit?",
+      prompt: "Which office keeps the state library, and is the one most people actually visit?",
       choices: ["Treasurer", "Secretary of state", "Comptroller", "Attorney general"],
       answer: 1,
       fact: "The secretary of state is the office most people actually visit: driver’s licenses and Real ID, titles and plates, business filings, and the state library.",
@@ -1262,7 +842,7 @@
     },
     {
       shot: "chicago",
-      prompt: "Who is leaving an office after a decade to run for mayor of the city in this photograph?",
+      prompt: "Who is leaving an office after a decade to run for mayor of Chicago?",
       choices: ["Susana Mendoza, the comptroller", "Alexi Giannoulias, the secretary of state", "Michael Frerichs, the treasurer", "Kwame Raoul, the attorney general"],
       answer: 0,
       names: true,
@@ -1272,7 +852,7 @@
     },
     {
       shot: "night",
-      prompt: "Susana Mendoza is running for mayor of the city in this photograph. What does the page call the comptroller race she is leaving?",
+      prompt: "Susana Mendoza is running for mayor of Chicago. What does the page call the comptroller race she is leaving?",
       choices: ["A retention vote", "An open seat", "A runoff", "A write-in line"],
       answer: 1,
       names: true,
@@ -1282,7 +862,7 @@
     },
     {
       shot: "senate",
-      prompt: "How long is the term of the Senate that meets in this building, on the Illinois ballot?",
+      prompt: "How long is the term of the Senate on the Illinois ballot?",
       choices: ["Two years", "Four years", "Six years", "It follows the governor"],
       answer: 2,
       fact: "Terms are four years, except the Senate, which is six.",
@@ -1291,7 +871,7 @@
     },
     {
       shot: "capFront",
-      prompt: "What date is the countrywide election for the country whose capitol this is?",
+      prompt: "What date is the countrywide election on the United States page?",
       choices: ["13 September 2026", "25 October 2026", "3 November 2026", "4 November 2026"],
       answer: 2,
       fact: "The United States page is the countrywide election on 3 November 2026.",
@@ -1300,7 +880,7 @@
     },
     {
       shot: "capStreet",
-      prompt: "Don Tracy is running for the Senate that meets in this building. His card says he won the primary with what share?",
+      prompt: "Don Tracy’s card says he won the primary with what share?",
       choices: ["40%", "50%", "53.3%", "60%"],
       answer: 0,
       names: true,
@@ -1310,7 +890,7 @@
     },
     {
       shot: "capWet",
-      prompt: "Whitfield Harrington Jr. is running for the Senate that meets in this building. His card says a finish of 5% would make his party what in Illinois?",
+      prompt: "Whitfield Harrington Jr.’s card says a finish of 5% would make his party what in Illinois?",
       choices: ["The majority party", "An established party", "A write-in line", "The party of the governor"],
       answer: 1,
       names: true,
@@ -1320,7 +900,7 @@
     },
     {
       shot: "court",
-      prompt: "A judge stays or goes at a courthouse like this one. What share of the vote does the judge need in order to stay?",
+      prompt: "What share of the vote does a judge need in order to stay?",
       choices: ["More yes votes than no votes", "Three-fifths of the vote on that question", "Two-thirds of the vote", "A unanimous yes"],
       answer: 1,
       fact: "A judge needs three-fifths of the vote on that question to stay. No judge on that sheet is running against another judge.",
@@ -1329,7 +909,7 @@
     },
     {
       shot: "justice",
-      prompt: "The pediment in this photograph says equal justice. On the green ballot, how does each judge run?",
+      prompt: "On the green ballot, how does each judge run?",
       choices: ["Each judge against one opponent", "All the judges in one race", "Each name is its own yes-or-no question", "The governor appoints whoever leads"],
       answer: 2,
       fact: "No judge listed is running against any other judge. Each name is a separate yes or no.",
@@ -1338,7 +918,7 @@
     },
     {
       shot: "courtroom",
-      prompt: "This is a courtroom, where the state’s lawyer argues. Whose attorney general card mentions roughly 90 legal fights?",
+      prompt: "Whose attorney general card mentions roughly 90 legal fights?",
       choices: ["Robert W. Fioretti", "Kwame Raoul", "Alexi Giannoulias", "Margaret Croke"],
       answer: 1,
       names: true,
@@ -1348,7 +928,7 @@
     },
     {
       shot: "plaza",
-      prompt: "These steps lead to a courthouse. The attorney general is the state’s lawyer. Who does the page say is seeking a third term in that office?",
+      prompt: "Who does the page say is seeking a third term as attorney general?",
       choices: ["Robert W. Fioretti", "Kwame Raoul", "Alexi Giannoulias", "Don Tracy"],
       answer: 1,
       names: true,
@@ -1412,7 +992,7 @@
     },
     {
       shot: "cape",
-      prompt: "Table Mountain is on the horizon of this photograph. What election is that country’s page?",
+      prompt: "What election is on the South Africa page?",
       choices: ["Parliament", "A presidential runoff", "Regional chairs", "Local councils"],
       answer: 3,
       fact: "South Africa is local councils on 4 November 2026. A municipality stays blank until the Commission reports votes there.",
@@ -1421,7 +1001,7 @@
     },
     {
       shot: "table",
-      prompt: "The flat mountain in this photograph marks the city. What date is that country’s election?",
+      prompt: "What date is the South Africa election?",
       choices: ["3 November 2026", "4 November 2026", "27 September 2026", "24 October 2026"],
       answer: 1,
       fact: "South Africa is local councils on 4 November 2026.",
@@ -1430,7 +1010,7 @@
     },
     {
       shot: "alps",
-      prompt: "The peak in this photograph is the clue. Which country’s election is two yes-or-no questions?",
+      prompt: "Which country’s election is two yes-or-no questions?",
       choices: ["Brazil", "Switzerland", "Sweden", "Germany"],
       answer: 1,
       names: true,
@@ -1440,7 +1020,7 @@
     },
     {
       shot: "hornDusk",
-      prompt: "The peak above this village is the clue. The map on that country’s page is which question?",
+      prompt: "The map on the Switzerland page is which question?",
       choices: ["The presidential runoff", "The neutrality question, by canton", "The local councils", "The first-preference vote"],
       answer: 1,
       fact: "The Switzerland map is the neutrality question, by canton. The official file still marks the count provisional.",
@@ -1449,7 +1029,7 @@
     },
     {
       shot: "brazil",
-      prompt: "This building is a national congress, two towers between two bowls. Which country’s page is a presidential runoff?",
+      prompt: "Which country’s page is a presidential runoff?",
       choices: ["South Africa", "Japan", "Brazil", "Australia"],
       answer: 2,
       names: true,
@@ -1459,7 +1039,7 @@
     },
     {
       shot: "brazilBw",
-      prompt: "This is the same kind of congress, two towers between two bowls. What does that country’s page say about the count?",
+      prompt: "What does the Brazil page say about the count?",
       choices: ["It is still provisional", "The court’s file marks the count finished", "The count has not started", "Only the capital has reported"],
       answer: 1,
       fact: "Brazil’s presidential runoff was on 25 October 2026. The court’s file marks the count finished.",
@@ -1472,7 +1052,7 @@
     {
       kind: "retain",
       shot: "columns",
-      scene: "This courthouse is where a retention vote is decided. Three-fifths of the ballots below are required for the judge to stay.",
+      scene: "Three-fifths of the ballots below are required for the judge to stay.",
       yes: 299,
       no: 201,
       stays: false,
@@ -1481,7 +1061,7 @@
     {
       kind: "retain",
       shot: "scotus",
-      scene: "The columns and pediment are a courthouse. A judge stays only with three-fifths of the vote on this question.",
+      scene: "A judge stays only with three-fifths of the vote on this question.",
       yes: 301,
       no: 199,
       stays: true,
@@ -1490,7 +1070,7 @@
     {
       kind: "retain",
       shot: "flagcourt",
-      scene: "The flag flies in front of a courthouse. This is a retention vote, and three-fifths of the ballots are required.",
+      scene: "This is a retention vote, and three-fifths of the ballots are required.",
       yes: 90,
       no: 60,
       stays: true,
@@ -1499,7 +1079,7 @@
     {
       kind: "over",
       shot: "box",
-      scene: "The hand is casting a ballot. Two ovals for one office means those ballots do not count.",
+      scene: "Two ovals for one office means those ballots do not count.",
       ballots: 180,
       spoiled: 15,
       answer: 165,
@@ -1518,7 +1098,7 @@
     {
       kind: "retain",
       shot: "bwcourt",
-      scene: "This courthouse is the setting for a retention vote. The judge stays with three-fifths of the ballots.",
+      scene: "The judge stays with three-fifths of the ballots.",
       yes: 740,
       no: 500,
       stays: false,
@@ -1527,7 +1107,7 @@
     {
       kind: "retain",
       shot: "pillars",
-      scene: "The row of columns is a courthouse. Three-fifths of this vote is what the judge needs in order to stay.",
+      scene: "Three-fifths of this vote is what the judge needs in order to stay.",
       yes: 1210,
       no: 805,
       stays: true,
@@ -1536,7 +1116,7 @@
     {
       kind: "over",
       shot: "slot",
-      scene: "A ballot is going into the slot. Two ovals for one office means those ballots do not count.",
+      scene: "Two ovals for one office means those ballots do not count.",
       ballots: 960,
       spoiled: 120,
       fraction: "One eighth",
@@ -1612,34 +1192,30 @@
   }
 
   function sheetHead(title, line) {
-    var head = el("div", "sheet-head");
-    head.appendChild(el("strong", "", title));
-    head.appendChild(el("span", "", line));
+    var wrap = el("div", "play-progress");
+    var head = el("div", "play-meta");
+    head.appendChild(el("p", "play-kicker", title));
     var match = /Question (\d+) of (\d+)/.exec(line);
+    head.appendChild(el("p", "play-step", match ? match[1] + " of " + match[2] : line));
+    wrap.appendChild(head);
     if (match) {
-      var meter = el("div", "quest-meter");
-      meter.setAttribute("aria-hidden", "true");
-      var current = Number(match[1]);
-      var total = Number(match[2]);
-      for (var step = 1; step <= total; step++) {
-        var pip = document.createElement("i");
-        if (step < current) pip.className = "is-done";
-        else if (step === current) pip.className = "is-now";
-        meter.appendChild(pip);
-      }
-      head.appendChild(meter);
+      var bar = el("div", "play-bar");
+      bar.style.setProperty("--n", match[1]);
+      bar.style.setProperty("--of", match[2]);
+      bar.appendChild(document.createElement("i"));
+      wrap.appendChild(bar);
     }
-    return head;
+    return wrap;
   }
 
   function choiceButton(label, names) {
-    var button = el("button", "choice");
+    var button = el("button", "play-choice");
     button.type = "button";
     button.setAttribute("aria-pressed", "false");
-    var mark = el("span", "oval");
+    var mark = el("span", "play-oval");
     mark.setAttribute("aria-hidden", "true");
     button.appendChild(mark);
-    var text = el("span", "who-name" + (names ? " notranslate" : ""), label);
+    var text = el("span", "play-name" + (names ? " notranslate" : ""), label);
     if (names) text.setAttribute("translate", "no");
     button.appendChild(text);
     return button;
@@ -1648,49 +1224,48 @@
   function grade(sheet, button, hit, fact, status) {
     button.setAttribute("aria-pressed", "true");
     button.classList.add(hit ? "is-right" : "is-wrong");
-    sheet.querySelectorAll(".choice").forEach(function (node) {
+    sheet.querySelectorAll(".play-choice").forEach(function (node) {
       node.disabled = true;
       if (node.dataset.right === "1") node.classList.add("is-right");
-      var name = node.querySelector(".who-name");
-      if (node.classList.contains("is-wrong")) name.appendChild(el("span", "mark", "Not this one"));
-      else if (node.classList.contains("is-right") && node === button) name.appendChild(el("span", "mark", "Correct"));
-      else if (node.classList.contains("is-right")) name.appendChild(el("span", "mark", "This one"));
+      var name = node.querySelector(".play-name");
+      if (node.classList.contains("is-wrong")) name.appendChild(el("span", "play-mark", "Not this one"));
+      else if (node.classList.contains("is-right") && node === button) name.appendChild(el("span", "play-mark", "Correct"));
+      else if (node.classList.contains("is-right")) name.appendChild(el("span", "play-mark", "This one"));
     });
     status.textContent = (hit ? "Correct. " : "Not this one. ") + fact;
-    salute(sheet.closest(".sheet"), hit);
+    salute(sheet.closest(".play-card"), hit);
   }
 
   function clearSalute(card) {
     if (!card) return;
-    card.querySelectorAll(".salute").forEach(function (node) { node.remove(); });
+    card.classList.remove("is-yes", "is-no");
+    card.querySelectorAll(".play-rim").forEach(function (node) { node.remove(); });
   }
 
   function salute(card, hit) {
     clearSalute(card);
     if (!card || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    var layer = el("div", "salute " + (hit ? "is-hit" : "is-miss"));
+    card.classList.add(hit ? "is-yes" : "is-no");
+    var layer = el("div", "play-rim");
     layer.setAttribute("aria-hidden", "true");
-    var flag = el("div", "salute-flag");
-    var stripe;
-    for (stripe = 0; stripe < 7; stripe += 1) flag.appendChild(el("span", "salute-bar"));
-    flag.appendChild(el("span", "salute-canton"));
-    layer.appendChild(flag);
     var i;
-    for (i = 0; i < 18; i += 1) {
-      var star = el("span", "salute-star " + (i % 3 === 0 ? "is-red" : i % 3 === 1 ? "is-white" : "is-blue"));
-      star.style.left = (58 + Math.random() * 36) + "%";
-      star.style.top = hit ? (42 + Math.random() * 42) + "%" : (Math.random() * 8) + "%";
-      star.style.animationDelay = (Math.random() * 0.18).toFixed(2) + "s";
-      star.style.setProperty("--drift", Math.round((Math.random() - 0.5) * 70) + "px");
-      star.style.setProperty("--travel", Math.round(hit ? -(90 + Math.random() * 160) : (280 + Math.random() * 260)) + "px");
-      star.style.setProperty("--spin", Math.round((Math.random() - 0.5) * 240) + "deg");
-      star.style.setProperty("--size", (16 + Math.random() * 16).toFixed(0) + "px");
+    for (i = 0; i < 16; i += 1) {
+      var star = el("span", "play-star");
+      var along = (4 + Math.random() * 92).toFixed(1) + "%";
+      var side = i % 4;
+      if (side === 0) { star.style.left = along; star.style.top = "8px"; }
+      else if (side === 1) { star.style.left = along; star.style.bottom = "8px"; }
+      else if (side === 2) { star.style.top = along; star.style.left = "8px"; }
+      else { star.style.top = along; star.style.right = "8px"; }
+      star.style.animationDelay = (Math.random() * 0.12).toFixed(2) + "s";
+      star.style.setProperty("--size", (8 + Math.random() * 8).toFixed(0) + "px");
       layer.appendChild(star);
     }
-    card.appendChild(layer);
+    var stage = card.querySelector(".play-art") || card;
+    stage.appendChild(layer);
     window.setTimeout(function () {
       if (layer.parentNode) layer.remove();
-    }, 2200);
+    }, 1000);
   }
 
   function photoSrc(photo, shape) {
@@ -1715,37 +1290,32 @@
   }
 
   function mountScene() {
-    var scene = el("div", "scene");
-    var card = el("div", "sheet");
+    var card = el("div", "play-card");
+    var art = el("div", "play-art");
     var img = document.createElement("img");
-    img.className = "sheet-photo";
+    img.className = "play-photo";
     img.alt = "";
-    var copy = el("div", "sheet-copy");
-    var credit = el("p", "scene-credit");
-    card.appendChild(img);
-    card.appendChild(copy);
+    var credit = el("p", "play-credit");
+    var copy = el("div", "play-body");
+    art.appendChild(img);
+    card.appendChild(art);
     card.appendChild(credit);
-    scene.appendChild(card);
-    root.appendChild(scene);
+    card.appendChild(copy);
+    root.appendChild(card);
     return {
-      scene: scene,
       card: card,
       sheet: copy,
       show: function (key) {
         var photo = PHOTOS[key];
         clearSalute(card);
-        card.className = "sheet";
-        card.dataset.shot = key;
-        card.dataset.place = photo.place;
+        card.className = "play-card";
         img.src = photoSrc(photo, "card");
         img.alt = photo.alt;
         fillCredit(credit, photo);
       },
       hide: function () {
         clearSalute(card);
-        card.className = "sheet is-paper";
-        delete card.dataset.shot;
-        delete card.dataset.place;
+        card.className = "play-card is-plain";
         img.removeAttribute("src");
         img.alt = "";
         credit.replaceChildren();
@@ -1760,20 +1330,20 @@
     var missed = [];
     var locked = false;
 
-    var intro = el("p", "deck");
-    intro.textContent = "Six questions. The photograph is part of the question. The line under the sheet tells you where the fact is printed.";
+    var intro = el("p", "play-lead");
+    intro.textContent = "Six questions. The line under your answer names the page where the fact is printed.";
     root.appendChild(intro);
 
     var stage = mountScene();
     var sheet = stage.sheet;
-    var move = el("div", "sheet-move");
+    var move = el("div", "play-foot");
     var status = el("p", "");
     status.id = "play-status";
     var next = el("button", "", "Continue");
     next.type = "button";
     next.disabled = true;
-    move.appendChild(next);
     move.appendChild(status);
+    move.appendChild(next);
     stage.card.appendChild(move);
 
     function ask() {
@@ -1781,10 +1351,10 @@
       var item = round[index];
       stage.show(item.shot);
       sheet.replaceChildren();
-      sheet.appendChild(sheetHead("KNOW THE BALLOT", "Question " + (index + 1) + " of " + round.length));
-      var block = el("div", "contest");
-      block.appendChild(el("h3", "", item.prompt));
-      block.appendChild(el("p", "vote-for", "Choose one"));
+      sheet.appendChild(sheetHead("Know the ballot", "Question " + (index + 1) + " of " + round.length));
+      var block = el("div", "play-qblock");
+      block.appendChild(el("h3", "play-q", item.prompt));
+      block.appendChild(el("p", "play-ask", "Choose one"));
       item.choices.forEach(function (label, choice) {
         var button = choiceButton(label, item.names);
         button.dataset.right = choice === item.answer ? "1" : "0";
@@ -1812,11 +1382,11 @@
     function finish() {
       stage.hide();
       sheet.replaceChildren();
-      sheet.appendChild(sheetHead("KNOW THE BALLOT", correct + " of " + round.length));
-      var block = el("div", "contest");
-      block.appendChild(el("h3", "", correct === round.length ? "Each of those is printed on the guide." : "The ones to reread."));
+      sheet.appendChild(sheetHead("Know the ballot", correct + " of " + round.length));
+      var block = el("div", "play-qblock");
+      block.appendChild(el("h3", "play-q", correct === round.length ? "Each of those is printed on the guide." : "The ones to reread."));
       if (missed.length) {
-        var list = el("ul", "misses");
+        var list = el("ul", "play-misses");
         missed.forEach(function (item) {
           var li = el("li", "");
           var link = el("a", "", item.where);
@@ -1827,7 +1397,7 @@
         });
         block.appendChild(list);
       } else {
-        block.appendChild(el("p", "sheet-instruct", "Six facts, from the Illinois page and the country list."));
+        block.appendChild(el("p", "play-note", "Six facts, from the Illinois page and the country list."));
       }
       sheet.appendChild(block);
       next.textContent = "Six more";
@@ -1851,24 +1421,24 @@
     var correct = 0;
     var locked = false;
 
-    var intro = el("p", "deck");
-    intro.textContent = "A judge stays with at least three-fifths of the vote on that question. A majority is not enough. Terms are four years, except the Senate, which is six. Two ovals for one office mean that office is not counted.";
+    var intro = el("p", "play-lead");
+    intro.textContent = "A judge stays with three-fifths of the vote on that question. A majority is not enough. Two ovals for one office do not count.";
     root.appendChild(intro);
 
     var stage = mountScene();
     var sheet = stage.sheet;
-    var move = el("div", "sheet-move");
+    var move = el("div", "play-foot");
     var status = el("p", "");
     status.id = "play-status";
     var next = el("button", "", "Continue");
     next.type = "button";
     next.disabled = true;
-    move.appendChild(next);
     move.appendChild(status);
+    move.appendChild(next);
     stage.card.appendChild(move);
 
     function tally(yes, no) {
-      var row = el("div", "tally");
+      var row = el("div", "play-tally");
       [["Yes", yes], ["No", no], ["Ballots", yes + no]].forEach(function (pair) {
         var cell = el("div", "");
         cell.appendChild(el("span", "", pair[0]));
@@ -1882,14 +1452,13 @@
       locked = false;
       var item = round[index];
       stage.show(item.shot);
-      stage.card.classList.toggle("is-retain", item.kind === "retain");
       sheet.replaceChildren();
-      var block = el("div", "contest");
+      var block = el("div", "play-qblock");
       if (item.kind === "retain") {
-        sheet.appendChild(sheetHead("GREEN RETENTION BALLOT", "Question " + (index + 1) + " of " + round.length));
-        block.appendChild(el("h3", "", "SHALL THIS JUDGE BE RETAINED IN OFFICE?"));
-        block.appendChild(el("p", "sheet-instruct", item.scene));
-        block.appendChild(el("p", "vote-for", "Does this judge stay?"));
+        sheet.appendChild(sheetHead("Retention", "Question " + (index + 1) + " of " + round.length));
+        block.appendChild(el("h3", "play-q", "SHALL THIS JUDGE BE RETAINED IN OFFICE?"));
+        block.appendChild(el("p", "play-note", item.scene));
+        block.appendChild(el("p", "play-ask", "Does this judge stay?"));
         block.appendChild(tally(item.yes, item.no));
         [["Stays", true], ["Does not stay", false]].forEach(function (pair) {
           var button = choiceButton(pair[0], false);
@@ -1898,10 +1467,10 @@
           block.appendChild(button);
         });
       } else if (item.kind === "over") {
-        sheet.appendChild(sheetHead("CANDIDATE BALLOT", "Question " + (index + 1) + " of " + round.length));
-        block.appendChild(el("h3", "", "FOR TREASURER"));
-        block.appendChild(el("p", "sheet-instruct", item.scene + " " + item.ballots + " ballots were cast for this office. " + (item.fraction ? item.fraction + " of them" : item.spoiled + " of them") + " had two ovals marked."));
-        block.appendChild(el("p", "vote-for", "How many ballots count for treasurer?"));
+        sheet.appendChild(sheetHead("The count", "Question " + (index + 1) + " of " + round.length));
+        block.appendChild(el("h3", "play-q", "FOR TREASURER"));
+        block.appendChild(el("p", "play-note", item.scene + " " + item.ballots + " ballots were cast for this office. " + (item.fraction ? item.fraction + " of them" : item.spoiled + " of them") + " had two ovals marked."));
+        block.appendChild(el("p", "play-ask", "How many ballots count for treasurer?"));
         item.choices.forEach(function (n) {
           var button = choiceButton(String(n), false);
           button.dataset.right = n === item.answer ? "1" : "0";
@@ -1909,10 +1478,10 @@
           block.appendChild(button);
         });
       } else if (item.kind === "span") {
-        sheet.appendChild(sheetHead("ONE VOTE EACH", "Question " + (index + 1) + " of " + round.length));
-        block.appendChild(el("h3", "", item.heading));
-        block.appendChild(el("p", "sheet-instruct", item.scene));
-        block.appendChild(el("p", "vote-for", "How many years pass before both are on the ballot again?"));
+        sheet.appendChild(sheetHead("The count", "Question " + (index + 1) + " of " + round.length));
+        block.appendChild(el("h3", "play-q", item.heading));
+        block.appendChild(el("p", "play-note", item.scene));
+        block.appendChild(el("p", "play-ask", "How many years pass before both are on the ballot again?"));
         item.choices.forEach(function (year) {
           var button = choiceButton(String(year), false);
           button.dataset.right = year === item.answer ? "1" : "0";
@@ -1920,10 +1489,10 @@
           block.appendChild(button);
         });
       } else {
-        sheet.appendChild(sheetHead("ONE VOTE EACH", "Question " + (index + 1) + " of " + round.length));
-        block.appendChild(el("h3", "", item.heading));
-        block.appendChild(el("p", "sheet-instruct", item.scene));
-        block.appendChild(el("p", "vote-for", "In which year are both on the ballot again?"));
+        sheet.appendChild(sheetHead("The count", "Question " + (index + 1) + " of " + round.length));
+        block.appendChild(el("h3", "play-q", item.heading));
+        block.appendChild(el("p", "play-note", item.scene));
+        block.appendChild(el("p", "play-ask", "In which year are both on the ballot again?"));
         item.choices.forEach(function (year) {
           var button = choiceButton(String(year), false);
           button.dataset.right = year === item.answer ? "1" : "0";
@@ -1949,10 +1518,10 @@
     function finish() {
       stage.hide();
       sheet.replaceChildren();
-      sheet.appendChild(sheetHead("THE COUNT", correct + " of " + round.length));
-      var block = el("div", "contest");
-      block.appendChild(el("h3", "", "The work was the arithmetic on the ballot."));
-      block.appendChild(el("p", "sheet-instruct", "Three-fifths of the retention vote, twelve years until a four-year office and a six-year office meet again, and a ballot with two ovals that does not count."));
+      sheet.appendChild(sheetHead("The count", correct + " of " + round.length));
+      var block = el("div", "play-qblock");
+      block.appendChild(el("h3", "play-q", "The work was the arithmetic on the ballot."));
+      block.appendChild(el("p", "play-note", "Three-fifths of the retention vote, twelve years until a four-year office and a six-year office meet again, and a ballot with two ovals that does not count."));
       sheet.appendChild(block);
       next.textContent = "Six more";
       next.disabled = false;
@@ -1974,14 +1543,24 @@
     var selected = 0;
     var started = false;
 
-    var layout = el("div", "play-layout");
-    var left = el("div", "");
-    var board = el("div", "board");
+    var card = el("div", "play-card play-sheet");
+    var art = el("div", "play-art");
+    var img = document.createElement("img");
+    img.className = "play-photo";
+    img.src = photoSrc(PHOTOS.illinois, "wide");
+    img.alt = PHOTOS.illinois.alt;
+    var credit = el("p", "play-credit");
+    fillCredit(credit, PHOTOS.illinois);
+    art.appendChild(img);
+
+    var body = el("div", "play-body");
+    var work = el("div", "play-work");
+    var board = el("div", "play-grid");
     board.setAttribute("role", "grid");
     board.setAttribute("aria-label", "Four by four sheet");
     var cells = [];
     for (var i = 0; i < 16; i++) {
-      var button = el("button", "cell");
+      var button = el("button", "play-cell");
       button.type = "button";
       button.dataset.index = String(i);
       var cage = CAGES.filter(function (item) { return item.cells[0] === i; })[0];
@@ -1995,9 +1574,9 @@
       cells.push(button);
       board.appendChild(button);
     }
-    left.appendChild(board);
+    work.appendChild(board);
 
-    var keys = el("div", "keys");
+    var keys = el("div", "play-keys");
     [1, 2, 3, 4].forEach(function (n) {
       var key = el("button", "", String(n));
       key.type = "button";
@@ -2008,37 +1587,30 @@
     clear.type = "button";
     clear.addEventListener("click", function () { write(""); });
     keys.appendChild(clear);
-    left.appendChild(keys);
+    work.appendChild(keys);
 
-    var status = el("p", "note");
+    var status = el("p", "play-note");
     status.id = "play-status";
-    left.appendChild(status);
-    layout.appendChild(left);
+    work.appendChild(status);
 
-    var aside = el("div", "");
-    aside.appendChild(el("p", "rule", "The dome in the photograph is the Illinois State Capitol in Springfield. Each row and each column uses 1, 2, 3, and 4 once. A heavy box is a pair. The pair adds to the small number in the corner."));
-    aside.appendChild(el("p", "rule", "4 is a term in years for governor, attorney general, secretary of state, comptroller, and treasurer. 6 is the Senate term. Six is also how many statewide races the Illinois page lists before your own district."));
-    aside.appendChild(el("p", "rule", "The digits are only the pieces that make those totals. A finished sheet is any filling that follows the rules. It does not rank a candidate."));
-    var link = el("p", "note");
+    var aside = el("div", "play-aside");
+    aside.appendChild(el("p", "play-kicker", "The sheet"));
+    aside.appendChild(el("p", "play-rule", "Each row and each column uses 1, 2, 3, and 4 once. A heavy box is a pair. The pair adds to the small number in the corner. The capitol is in Springfield."));
+    aside.appendChild(el("p", "play-rule", "4 is a term in years for governor, attorney general, secretary of state, comptroller, and treasurer. 6 is the Senate term. Six is also how many statewide races the Illinois page lists before your own district."));
+    aside.appendChild(el("p", "play-rule", "The digits are only the pieces that make those totals. A finished sheet is any filling that follows the rules. It does not rank a candidate."));
+    var link = el("p", "play-note");
     link.appendChild(document.createTextNode("The numbers are from the "));
     var a = el("a", "", "Illinois page");
     a.href = "illinois.html#read";
     link.appendChild(a);
     link.appendChild(document.createTextNode("."));
     aside.appendChild(link);
-    layout.appendChild(aside);
-    var scene = el("div", "scene scene-sheet");
-    var frame = el("div", "scene-frame");
-    var img = document.createElement("img");
-    img.src = photoSrc(PHOTOS.illinois, "wide");
-    img.alt = PHOTOS.illinois.alt;
-    frame.appendChild(img);
-    var credit = el("p", "scene-credit");
-    fillCredit(credit, PHOTOS.illinois);
-    frame.appendChild(credit);
-    scene.appendChild(frame);
-    scene.appendChild(layout);
-    root.appendChild(scene);
+    body.appendChild(work);
+    body.appendChild(aside);
+    card.appendChild(art);
+    card.appendChild(credit);
+    card.appendChild(body);
+    root.appendChild(card);
 
     function cageAt(index) {
       return CAGES.filter(function (cage) { return cage.cells.indexOf(index) >= 0; })[0];
