@@ -18,6 +18,13 @@ IMAGE = ORIGIN + "/social/leaders-vote-social.jpg"
 IMAGE_WIDTH = "3072"
 IMAGE_HEIGHT = "3840"
 IMAGE_ALT = "Leaders.vote. Know who you're voting for."
+CENSUS_IMAGE = (
+    ORIGIN + "/social/census-map.png",
+    "image/png",
+    "2400",
+    "1260",
+    "Leaders.vote Census. National figures. A map of Census Bureau population estimates for July 1, 2025. A darker state has more people.",
+)
 ICON = ORIGIN + "/favicon.svg"
 HOME_TITLE = "Leaders.vote — Know who you're voting for."
 HOME_DESCRIPTION = (
@@ -90,17 +97,30 @@ def breadcrumb(rel, title, url):
     return {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": items}
 
 
+def page_image(rel):
+    if rel == "census.html":
+        return CENSUS_IMAGE
+    return (IMAGE, "image/jpeg", IMAGE_WIDTH, IMAGE_HEIGHT, IMAGE_ALT)
+
+
 def structured_data(rel, title, description, url):
+    website = {
+        "@type": "WebSite",
+        "@id": ORIGIN + "/#website",
+        "name": "Leaders.vote",
+        "url": ORIGIN + "/",
+        "description": HOME_DESCRIPTION,
+        "inLanguage": "en",
+        "publisher": {"@id": ORIGIN + "/#publisher"},
+    }
+    if rel == "index.html":
+        website["potentialAction"] = {
+            "@type": "SearchAction",
+            "target": ORIGIN + "/search.html?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+        }
     graph = [
-        {
-            "@type": "WebSite",
-            "@id": ORIGIN + "/#website",
-            "name": "Leaders.vote",
-            "url": ORIGIN + "/",
-            "description": HOME_DESCRIPTION,
-            "inLanguage": "en",
-            "publisher": {"@id": ORIGIN + "/#publisher"},
-        },
+        website,
         {
             "@type": "Organization",
             "@id": ORIGIN + "/#publisher",
@@ -119,7 +139,7 @@ def structured_data(rel, title, description, url):
             "breadcrumb": {"@id": url + "#breadcrumb"},
             "inLanguage": "en",
             "isAccessibleForFree": True,
-            "primaryImageOfPage": {"@type": "ImageObject", "url": IMAGE},
+            "primaryImageOfPage": {"@type": "ImageObject", "url": page_image(rel)[0]},
         },
         breadcrumb(rel, title, url),
     ]
@@ -129,6 +149,7 @@ def structured_data(rel, title, description, url):
 
 def block(rel, title, description, robots):
     url = canonical(rel)
+    image, image_type, image_width, image_height, image_alt = page_image(rel)
     lines = [
         "<!-- seo -->",
         '<link rel="canonical" href="%s">' % attr(url),
@@ -140,15 +161,15 @@ def block(rel, title, description, robots):
         '<meta property="og:url" content="%s">' % attr(url),
         '<meta property="og:title" content="%s">' % attr(title),
         '<meta property="og:description" content="%s">' % attr(description),
-        '<meta property="og:image" content="%s">' % IMAGE,
-        '<meta property="og:image:type" content="image/jpeg">',
-        '<meta property="og:image:width" content="%s">' % IMAGE_WIDTH,
-        '<meta property="og:image:height" content="%s">' % IMAGE_HEIGHT,
-        '<meta property="og:image:alt" content="%s">' % attr(IMAGE_ALT),
+        '<meta property="og:image" content="%s">' % image,
+        '<meta property="og:image:type" content="%s">' % image_type,
+        '<meta property="og:image:width" content="%s">' % image_width,
+        '<meta property="og:image:height" content="%s">' % image_height,
+        '<meta property="og:image:alt" content="%s">' % attr(image_alt),
         '<meta name="twitter:card" content="summary_large_image">',
         '<meta name="twitter:title" content="%s">' % attr(title),
         '<meta name="twitter:description" content="%s">' % attr(description),
-        '<meta name="twitter:image" content="%s">' % IMAGE,
+        '<meta name="twitter:image" content="%s">' % image,
         '<link rel="icon" href="%s" type="image/svg+xml">' % ICON,
         '<script type="application/ld+json">%s</script>' % structured_data(rel, title, description, url),
         "<!-- /seo -->",
@@ -261,6 +282,8 @@ def write_sitemap(rels):
 
 
 def publish():
+    import build_search
+    build_search.main()
     changed = 0
     listed = []
     for path in iter_pages():

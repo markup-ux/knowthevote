@@ -503,10 +503,11 @@
     detail.querySelectorAll("#census-table tbody tr").forEach(function (row) {
       row.classList.toggle("is-on", row.getAttribute("data-key") === fips);
     });
+    if (selected && fips) history.replaceState(null, "", "#" + selected.code + "." + fips);
   }
 
-  function chooseState(code, scroll) {
-    selectedCounty = null;
+  function chooseState(code, scroll, county) {
+    selectedCounty = county || null;
     countySvg = null;
     countyToken++;
     selected = code ? data.states.filter(function (state) { return state.code === code; })[0] : null;
@@ -517,10 +518,14 @@
       countySortKey = "pop";
       countySortDir = -1;
     }
-    if (selected) history.replaceState(null, "", "#" + selected.code);
+    if (selected) history.replaceState(null, "", "#" + selected.code + (selectedCounty ? "." + selectedCounty : ""));
     else history.replaceState(null, "", "census.html");
     renderDetail();
-    if (scroll) detail.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (selectedCounty) {
+      writeCountyLine();
+      var countyRow = detail.querySelector("#census-table tbody tr.is-on");
+      if (countyRow) countyRow.scrollIntoView({ block: "center" });
+    } else if (scroll) detail.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function setMeasure(id) {
@@ -597,9 +602,12 @@
     bindCountry();
     buildList();
     status.textContent = "";
-    var hash = (location.hash || "").replace("#", "").toUpperCase();
+    var rawHash = (location.hash || "").replace(/^#/, "");
+    var hashParts = rawHash.split(".");
+    var hash = (hashParts[0] || "").toUpperCase();
+    var hashCounty = hashParts[1] || "";
     var fromHash = data.states.filter(function (state) { return state.code === hash; })[0];
-    if (fromHash) chooseState(fromHash.code, false);
+    if (fromHash) chooseState(fromHash.code, false, hashCounty);
     else renderDetail();
   }).catch(function () {
     status.textContent = "The census file did not load.";

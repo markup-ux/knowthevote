@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Leaders.vote · Census</title>
+<style>
+  :root {
+    --paper: #f4f0e6;
+    --ink: #1c1915;
+    --muted: #5c564c;
+    --line: #d8d0c2;
+    --bar: #0a3161;
+    --stripe: #bf0a30;
+    --bar-ink: #f4f7fb;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #111; }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  .card {
+    width: 1080px;
+    height: 1350px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  header {
+    background: var(--bar);
+    color: var(--bar-ink);
+    border-bottom: 8px solid var(--stripe);
+    flex: none;
+  }
+  header .bar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 22px 56px 16px;
+  }
+  .brand {
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .section {
+    font-size: 20px;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .stage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 56px 0;
+    min-height: 0;
+  }
+  .kicker {
+    margin: 0;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 650;
+    color: var(--muted);
+  }
+  h1 {
+    margin: 8px 0 0;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+  .count {
+    margin: 12px 0 0;
+    font-variant-numeric: tabular-nums;
+    font-size: 22px;
+    font-weight: 650;
+  }
+  .count span { font-weight: 400; color: var(--muted); }
+  #map {
+    height: 248px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #map svg { width: 100%; height: 100%; display: block; }
+  #map path {
+    stroke: var(--ink);
+    stroke-width: 0.7;
+    stroke-linejoin: round;
+  }
+  .legend {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 4px 0 0;
+    font-size: 18px;
+    color: var(--muted);
+  }
+  .swatches { display: flex; gap: 5px; }
+  .swatches i {
+    width: 26px;
+    height: 16px;
+    border: 1px solid var(--ink);
+    display: block;
+  }
+  .health {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .health h2 {
+    margin: 8px 0 0;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: -0.02em;
+  }
+  #health-map {
+    width: 100%;
+    height: 430px;
+    margin-top: 8px;
+    display: block;
+    background: transparent;
+  }
+  .health-legend { margin-bottom: 16px; }
+  .factory-key { display: inline-flex; align-items: center; gap: 8px; }
+  .factory-key canvas { width: 28px; height: 28px; display: block; }
+  .panel {
+    flex: none;
+    border-top: 1px solid var(--ink);
+    padding: 22px 56px 26px;
+  }
+  .measures { margin: 0; font-size: 22px; line-height: 1.4; }
+  .url {
+    margin: 12px 0 0;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+  }
+  .note { margin: 6px 0 0; font-size: 16px; color: var(--muted); }
+</style>
+
+<!-- seo -->
+<link rel="canonical" href="https://leaders.vote/social/census-ad.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="application-name" content="Leaders.vote">
+<meta property="og:site_name" content="Leaders.vote">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://leaders.vote/social/census-ad.html">
+<meta property="og:title" content="Leaders.vote · Census">
+<meta property="og:description" content="Leaders.vote · Census">
+<meta property="og:image" content="https://leaders.vote/social/leaders-vote-social.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="3072">
+<meta property="og:image:height" content="3840">
+<meta property="og:image:alt" content="Leaders.vote. Know who you&#x27;re voting for.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leaders.vote · Census">
+<meta name="twitter:description" content="Leaders.vote · Census">
+<meta name="twitter:image" content="https://leaders.vote/social/leaders-vote-social.jpg">
+<link rel="icon" href="https://leaders.vote/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://leaders.vote/#website","name":"Leaders.vote","url":"https://leaders.vote/","description":"Leaders.vote is an independent, nonpartisan voter guide for every U.S. state on November 3, 2026. Candidates, offices, sample ballots, and unofficial results. No endorsements.","inLanguage":"en","publisher":{"@id":"https://leaders.vote/#publisher"}},{"@type":"Organization","@id":"https://leaders.vote/#publisher","name":"Leaders.vote","url":"https://leaders.vote/","description":"Independent, nonpartisan voter guide. Not a campaign and not a government site.","logo":{"@type":"ImageObject","url":"https://leaders.vote/favicon.svg"}},{"@type":"WebPage","@id":"https://leaders.vote/social/census-ad.html#webpage","url":"https://leaders.vote/social/census-ad.html","name":"Leaders.vote · Census","description":"Leaders.vote · Census","isPartOf":{"@id":"https://leaders.vote/#website"},"breadcrumb":{"@id":"https://leaders.vote/social/census-ad.html#breadcrumb"},"inLanguage":"en","isAccessibleForFree":true,"primaryImageOfPage":{"@type":"ImageObject","url":"https://leaders.vote/social/leaders-vote-social.jpg"}},{"@type":"BreadcrumbList","@id":"https://leaders.vote/social/census-ad.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Leaders.vote","item":"https://leaders.vote/"},{"@type":"ListItem","position":2,"name":"Countries","item":"https://leaders.vote/countries.html"},{"@type":"ListItem","position":3,"name":"SOCIAL","item":"https://leaders.vote/social/index.html"},{"@type":"ListItem","position":4,"name":"Census","item":"https://leaders.vote/social/census-ad.html"}]}]}</script>
+<!-- /seo -->
+</head>
+<body>
+<article class="card">
+  <header>
+    <div class="bar">
+      <div class="brand">leaders.vote</div>
+      <div class="section">Census</div>
+    </div>
+  </header>
+  <div class="stage">
+    <p class="kicker">United States · Census Bureau · July 1, 2025</p>
+    <h1>National figures.</h1>
+    <p class="count" id="count">341,784,857 <span>people in the states and the District of Columbia.</span></p>
+    <div id="map" role="img" aria-label="Map of the states, colored by the Census Bureau population estimate. A darker state has more people."></div>
+    <div class="legend">
+      <span class="swatches" id="swatches"></span>
+      <span>A darker place has a larger count.</span>
+    </div>
+    <section class="health">
+      <p class="kicker">Health</p>
+      <h2>Tagged fast food.</h2>
+      <canvas id="health-map" aria-label="Map of tagged fast-food locations. Lighter cells have fewer. Darker cells have more. A factory mark is a distribution center."></canvas>
+      <div class="legend health-legend">
+        <span class="swatches" id="health-swatches"></span>
+        <span>Lighter is fewer. Darker is more.</span>
+        <span class="factory-key"><canvas id="factory-key" width="64" height="64" aria-hidden="true"></canvas> Distribution center</span>
+      </div>
+    </section>
+  </div>
+  <div class="panel">
+    <p class="measures">Population, change since 2020, age 18 and older, and median age. House seats are from the 2020 census. Open a state for its counties.</p>
+    <p class="url">leaders.vote/census</p>
+    <p class="note">Independent voter guide. Not a government site.</p>
+  </div>
+</article>
+<script>
+(function () {
+  var POP = ["#e8e0f7", "#c4b3ef", "#8b6ad4", "#5530a0", "#2a1458"];
+  var HEAT = ["#fff1b8", "#ffd15c", "#f5a03a", "#e36b3a", "#9a3d5c"];
+
+  function paintSwatches(id, colors) {
+    var box = document.getElementById(id);
+    colors.forEach(function (color) {
+      var mark = document.createElement("i");
+      mark.style.background = color;
+      box.appendChild(mark);
+    });
+  }
+  paintSwatches("swatches", POP);
+  paintSwatches("health-swatches", HEAT);
+
+  function bandRank(value, list, count) {
+    var below = 0;
+    for (var i = 0; i < list.length; i++) if (list[i] < value) below++;
+    return Math.min(count - 1, Math.floor(below / list.length * count));
+  }
+
+  function people(n) {
+    return n.toLocaleString("en-US");
+  }
+
+  function mercX(lon) { return (lon + 180) / 360; }
+  function mercY(lat) {
+    var clamped = Math.max(-85, Math.min(85, lat));
+    var s = Math.sin(clamped * Math.PI / 180);
+    return 0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI);
+  }
+
+  function factoryMark() {
+    var canvasMark = document.createElement("canvas");
+    canvasMark.width = 64;
+    canvasMark.height = 64;
+    var g = canvasMark.getContext("2d");
+    g.lineJoin = "miter";
+    g.fillStyle = "#b06a58";
+    g.fillRect(16, 6, 8, 20);
+    g.fillRect(34, 2, 8, 24);
+    g.strokeStyle = "#4a5158";
+    g.lineWidth = 2;
+    g.strokeRect(16, 6, 8, 20);
+    g.strokeRect(34, 2, 8, 24);
+    g.fillStyle = "#7a463c";
+    g.fillRect(14, 4, 12, 5);
+    g.fillRect(32, 0, 12, 5);
+    g.fillStyle = "#e4e1db";
+    g.fillRect(6, 26, 52, 34);
+    g.fillStyle = "#4a5158";
+    g.fillRect(4, 22, 56, 8);
+    g.lineWidth = 3;
+    g.strokeRect(6, 26, 52, 34);
+    g.fillStyle = "#5f7f99";
+    g.fillRect(12, 36, 8, 8);
+    g.fillRect(28, 36, 8, 8);
+    g.fillRect(44, 36, 8, 8);
+    g.fillRect(12, 50, 8, 6);
+    g.fillRect(28, 50, 8, 6);
+    g.fillRect(44, 50, 8, 6);
+    return canvasMark;
+  }
+
+  var factory = factoryMark();
+  document.getElementById("factory-key").getContext("2d").drawImage(factory, 0, 0);
+
+  function drawHealth(data) {
+    var canvas = document.getElementById("health-map");
+    var cssW = canvas.clientWidth;
+    var cssH = canvas.clientHeight;
+    var dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.round(cssW * dpr);
+    canvas.height = Math.round(cssH * dpr);
+    var ctx = canvas.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    var west = mercX(-125.2);
+    var east = mercX(-66.4);
+    var north = mercY(49.6);
+    var south = mercY(24.2);
+    var scale = Math.min(cssW / (east - west), cssH / (south - north));
+    var ox = (cssW - (east - west) * scale) / 2;
+    var oy = (cssH - (south - north) * scale) / 2;
+    function toPx(lon, lat) {
+      return [(mercX(lon) - west) * scale + ox, (mercY(lat) - north) * scale + oy];
+    }
+
+    var cell = 11;
+    var cols = Math.ceil(cssW / cell);
+    var rows = Math.ceil(cssH / cell);
+    var bins = new Uint32Array(cols * rows);
+    var places = data.places;
+    for (var i = 0; i < places.length; i++) {
+      var place = places[i];
+      var p = toPx(place[0], place[1]);
+      var col = Math.floor(p[0] / cell);
+      var row = Math.floor(p[1] / cell);
+      if (col < 0 || row < 0 || col >= cols || row >= rows) continue;
+      bins[row * cols + col]++;
+    }
+    var counts = [];
+    for (var b = 0; b < bins.length; b++) if (bins[b]) counts.push(bins[b]);
+    counts.sort(function (a, c) { return a - c; });
+    var cuts = [0, 0, 0, 0];
+    if (counts.length) {
+      for (var k = 0; k < 4; k++) cuts[k] = counts[Math.min(counts.length - 1, Math.floor((k + 1) * 0.2 * counts.length))];
+    }
+    function heatBand(value) {
+      var index = 0;
+      while (index < 4 && value > cuts[index]) index++;
+      return index;
+    }
+    for (var y = 0; y < rows; y++) {
+      for (var x = 0; x < cols; x++) {
+        var value = bins[y * cols + x];
+        if (!value) continue;
+        ctx.fillStyle = HEAT[heatBand(value)];
+        ctx.fillRect(x * cell, y * cell, cell - 1, cell - 1);
+      }
+    }
+    data.centers.forEach(function (center) {
+      var p = toPx(center.lon, center.lat);
+      var size = 30;
+      ctx.save();
+      ctx.shadowColor = "#f4f0e6";
+      ctx.shadowBlur = 5;
+      ctx.drawImage(factory, p[0] - size / 2, p[1] - size / 2, size, size);
+      ctx.restore();
+      ctx.drawImage(factory, p[0] - size / 2, p[1] - size / 2, size, size);
+    });
+  }
+
+  Promise.all([
+    fetch("../census/us.json").then(function (r) { return r.json(); }),
+    fetch("../preview/us.svg").then(function (r) { return r.text(); }),
+    fetch("../census/health.json").then(function (r) { return r.json(); })
+  ]).then(function (pair) {
+    var data = pair[0];
+    var holder = document.getElementById("map");
+    holder.innerHTML = pair[1];
+    var svg = holder.querySelector("svg");
+    svg.removeAttribute("width");
+    svg.removeAttribute("height");
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    var pops = data.states.map(function (state) { return state.pop; });
+    data.states.forEach(function (state) {
+      var path = svg.querySelector("#s" + state.code);
+      if (!path) return;
+      path.setAttribute("fill", POP[bandRank(state.pop, pops, 5)]);
+    });
+    document.getElementById("count").innerHTML = people(data.nation.pop) + " <span>people in the states and the District of Columbia.</span>";
+    drawHealth(pair[2]);
+    document.documentElement.dataset.ready = "1";
+  });
+})();
+</script>
+</body>
+</html>

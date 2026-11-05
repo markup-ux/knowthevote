@@ -1878,7 +1878,13 @@
       sources.appendChild(qsr);
       appendSource(sources, " (year-end 2024 U.S. units; an estimate is labeled in the brand detail). The map draws OpenStreetMap locations, not every restaurant in those counts.");
       renderBrands();
+      var foodHash = /^food-([A-Za-z0-9]+)$/.exec((location.hash || "").replace(/^#/, ""));
+      if (foodHash && CHEM[foodHash[1]]) chemId = foodHash[1];
       renderChemicals();
+      if (chemId && foodHash && foodHash[1] === chemId) {
+        var foodSection = document.getElementById("chemicals");
+        if (foodSection) foodSection.scrollIntoView({ block: "start" });
+      }
       renderCenters();
       describe();
       resize();

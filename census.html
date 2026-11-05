@@ -49,9 +49,22 @@
 #county-slot { margin-top: 18px; }
 .census-topic { margin: 12px 0 16px; font-size: 18px; }
 .census-topic a { color: inherit; }
+#water { scroll-margin-top: 120px; }
+#water-legend[hidden], #water-sort-rows[hidden], #water-sort-chems[hidden], #water-scale-note[hidden], #water-chem-note[hidden], #water-body-legend[hidden] { display: none; }
+.water-row { display: grid; grid-template-columns: 28ch minmax(0, 1fr) 42ch; gap: 10px; align-items: center; margin: 6px 0; }
+.water-track { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; height: 16px; }
+.water-track i { display: block; height: 16px; background: #c5e4ec; }
+.water-row span:last-child { font-size: 15px; }
+.water-chem { display: grid; grid-template-columns: minmax(240px, 38ch) minmax(0, 1fr); gap: 8px 16px; margin: 14px 0; align-items: start; }
+.water-chem b { font-weight: 650; }
+.water-chem-title { display: flex; align-items: center; gap: 10px; }
+.water-chem-title canvas, #water-body-legend canvas { width: 56px; height: 56px; flex: none; }
+#water-body-legend canvas { width: 36px; height: 36px; }
 #health { scroll-margin-top: 120px; }
 .health-layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 28px; align-items: start; }
 .health-tools { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 8px 0; }
+.health-tools button { display: inline-flex; align-items: center; gap: 6px; }
+.zoom-mark { width: 22px; height: 22px; flex: none; }
 .health-tools button, .health-brands button, .health-centers button, .health-hoods button {
   font: inherit;
   color: var(--ink);
@@ -63,10 +76,10 @@
   text-align: left;
 }
 .health-tools button[aria-pressed="true"], .health-brands button.is-on, .health-centers button.is-on, .health-hoods button.is-on { border-bottom-color: var(--ink); }
-#health-map-wrap { position: relative; width: 100%; height: 560px; background: var(--paper); }
-#health-basemap { position: absolute; inset: 0; }
-#health-map { position: absolute; inset: 0; width: 100%; height: 100%; display: block; background: transparent; cursor: grab; touch-action: none; }
-#health-map.is-drag { cursor: grabbing; }
+#health-map-wrap, #water-map-wrap { position: relative; width: 100%; height: 560px; background: var(--paper); }
+#health-basemap, #water-basemap { position: absolute; inset: 0; }
+#health-map, #water-map { position: absolute; inset: 0; width: 100%; height: 100%; display: block; background: transparent; cursor: grab; touch-action: none; }
+#health-map.is-drag, #water-map.is-drag { cursor: grabbing; }
 .map-attrib { margin-top: 6px; }
 .health-legend { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-top: 8px; }
 .health-legend span { display: inline-flex; align-items: center; gap: 6px; }
@@ -116,8 +129,8 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
 #health-readout { min-height: 1.4em; }
 @media (max-width: 800px) {
   .health-layout { grid-template-columns: 1fr; }
-  #health-map-wrap { height: 420px; }
-  .chem-row { grid-template-columns: 1fr; }
+  #health-map-wrap, #water-map-wrap { height: 420px; }
+  .chem-row, .water-row, .water-chem { grid-template-columns: 1fr; }
 }
 </style>
 
@@ -196,7 +209,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
   <div class="wrap hero">
     <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
     <p class="kicker">United States · Census Bureau · July 1, 2025</p>
-    <p class="census-topic"><a href="#health">Health</a></p>
+    <p class="census-topic"><a href="#health">Health</a> · <a href="#water">Water</a></p>
     <h1>National figures.</h1>
     <p class="deck">Counts from the U.S. Census Bureau for the states, the District of Columbia, and each county. Open a state for the parishes, boroughs, cities, and other areas in the Bureau's county file. A darker place has a larger count.</p>
     <p class="deck">Change is the July 1, 2025 estimate minus the April 1, 2020 estimates base. That base begins with the 2020 census. Age and median age use the same July 1 estimates. House seats are the ones the 2020 census assigned.</p>
@@ -209,15 +222,16 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
     <div id="census-detail"></div>
     <section class="where" id="health">
       <h2>Health</h2>
-      <p class="deck">This section shows chemicals measured in fast food that brands advertise. One study measured fluorinated chemicals in the packaging, not in the food. The point is those chemicals, and the effects described for them in the body. Healthcare is one of the largest questions in this election. The measurements are here so that question includes what has been found. A later table covers studies of aggression, irritability, and hyperactivity.</p>
+      <p class="deck">Chemicals measured in fast food, and drinking water.</p>
+      <p class="deck">These are chemicals measured in fast food that brands advertise. One study measured fluorinated chemicals in the packaging, not in the food. The point is those chemicals, and the effects described for them in the body. Healthcare is one of the largest questions in this election. The measurements are here so that question includes what has been found. A later table covers studies of aggression, irritability, and hyperactivity.</p>
       <p class="deck">The number beside a brand is its published U.S. restaurant count. McDonald's is 13,706 restaurants at December 31, 2025, from its annual report. The other published counts are year-end 2024 U.S. units from QSR Magazine's 2025 QSR 50. Where that report estimated a figure, the detail says so. The map draws OpenStreetMap points, which is fewer than the published count. A number marked tagged has no separate published total here.</p>
       <p class="deck">Each restaurant mark is a drawing of a food the brand sells, placed on an OpenStreetMap point. Roads, cities, and neighborhoods are on the same map. Zoom in. Sort the brands by the published count, or by name, and choose one brand to draw only those places.</p>
       <p class="deck">A 2021 study measured plasticizers in hamburgers, fries, chicken burritos, cheese pizza, chicken nuggets, and plain patties. An FDA survey measured acrylamide in restaurant fries. A 2017 study measured fluorinated chemicals in packaging, not in the food. Choose a chemical under the map. The drawing beside the name is the effect described for that chemical. A later list shows the highest and lowest amounts in each published comparison. The list is not every chemical that can be in fast food. Distribution centers are addresses one McDonald's supplier publishes. Their mark is a factory drawing. The address is a distribution center, and no delivery route is published.</p>
       <div class="health-layout">
         <div>
           <div class="health-tools" role="group" aria-label="Map view">
-            <button type="button" id="zoom-in">Zoom in</button>
-            <button type="button" id="zoom-out">Zoom out</button>
+            <button type="button" id="zoom-in"><svg class="zoom-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.2" fill="#14627a"/><path d="M10 6.6v6.8M6.6 10h6.8" stroke="#f4f0e6" stroke-width="1.7" stroke-linecap="round"/><path d="M14.6 14.6L20.2 20.2" stroke="#1c1915" stroke-width="2" stroke-linecap="round"/></svg>Zoom in</button>
+            <button type="button" id="zoom-out"><svg class="zoom-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.2" fill="#c5e4ec" stroke="#1d8eab" stroke-width="1.4"/><path d="M6.6 10h6.8" stroke="#0c3d4e" stroke-width="1.7" stroke-linecap="round"/><path d="M14.6 14.6L20.2 20.2" stroke="#1c1915" stroke-width="2" stroke-linecap="round"/></svg>Zoom out</button>
             <button type="button" id="view-us" aria-pressed="true">Lower 48</button>
             <button type="button" id="view-ak">Alaska</button>
             <button type="button" id="view-hi">Hawaii</button>
@@ -321,6 +335,61 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
           <p id="health-center-miss" class="note"></p>
         </details>
       </section>
+      <section class="where" id="water">
+      <h2>Water</h2>
+      <p class="deck">These are active community water systems in EPA's Drinking Water System Search. A community system serves homes. The number is EPA's count of quarters with a Safe Drinking Water Act violation over the past three years. That count includes monitoring and reporting violations. It is not a measurement from one tap, and it is not a score this page calculated.</p>
+      <p class="deck">A health-based flag means EPA currently marks a violation of a maximum contaminant level, a maximum residual disinfectant level, or a treatment technique. Neighborhoods use the same OpenStreetMap names as the restaurant list. A neighborhood is matched to the community system that serves the most people among systems whose served city matches that neighborhood's city and state. EPA does not publish a separate result for the neighborhood.</p>
+      <div id="water-map-wrap">
+        <div id="water-basemap"></div>
+        <canvas id="water-map" aria-label="Neighborhoods colored by quarters with a drinking-water violation"></canvas>
+      </div>
+      <div class="health-tools" role="group" aria-label="Water map view">
+        <button type="button" id="water-zoom-in"><svg class="zoom-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.2" fill="#14627a"/><path d="M10 6.6v6.8M6.6 10h6.8" stroke="#f4f0e6" stroke-width="1.7" stroke-linecap="round"/><path d="M14.6 14.6L20.2 20.2" stroke="#1c1915" stroke-width="2" stroke-linecap="round"/></svg>Zoom in</button>
+        <button type="button" id="water-zoom-out"><svg class="zoom-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.2" fill="#c5e4ec" stroke="#1d8eab" stroke-width="1.4"/><path d="M6.6 10h6.8" stroke="#0c3d4e" stroke-width="1.7" stroke-linecap="round"/><path d="M14.6 14.6L20.2 20.2" stroke="#1c1915" stroke-width="2" stroke-linecap="round"/></svg>Zoom out</button>
+        <button type="button" id="water-view-us" aria-pressed="true">Lower 48</button>
+        <button type="button" id="water-view-ak">Alaska</button>
+        <button type="button" id="water-view-hi">Hawaii</button>
+      </div>
+      <div class="result-legend" id="water-map-legend">
+        <span><i class="swatch" style="background:#c5e4ec"></i>0</span>
+        <span><i class="swatch" style="background:#5eb8cc"></i>1–3</span>
+        <span><i class="swatch" style="background:#1d8eab"></i>4–6</span>
+        <span><i class="swatch" style="background:#14627a"></i>7–9</span>
+        <span><i class="swatch" style="background:#0c3d4e"></i>10–12</span>
+      </div>
+      <p class="note">A lighter dot is fewer quarters with a violation. A darker dot is more. Each dot is a neighborhood. The color is the community system that serves the most people in that city and state. A neighborhood with no matching served city is not drawn. The dot is not a sample from a tap.</p>
+      <p id="water-readout" class="note" aria-live="polite"></p>
+      <p class="note map-attrib">Roads and cities: <a href="https://openfreemap.org/">OpenFreeMap</a>, <a href="https://openmaptiles.org/">OpenMapTiles</a>, <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.</p>
+      <div class="sheet-switch" role="group" aria-label="Water list">
+        <button type="button" id="water-systems" aria-pressed="true">Water systems</button>
+        <button type="button" id="water-hoods" aria-pressed="false">Neighborhoods</button>
+        <button type="button" id="water-chems" aria-pressed="false">Chemicals</button>
+      </div>
+      <div class="sheet-switch" id="water-sort-rows" role="group" aria-label="Sort water">
+        <button type="button" id="water-qtrs" aria-pressed="true">Most quarters with a violation</button>
+        <button type="button" id="water-least" aria-pressed="false">Fewest quarters with a violation</button>
+        <button type="button" id="water-health" aria-pressed="false">Health-based flag</button>
+        <button type="button" id="water-name" aria-pressed="false">Name</button>
+      </div>
+      <div class="sheet-switch" id="water-sort-chems" role="group" aria-label="Sort chemicals" hidden>
+        <button type="button" id="chem-limit" aria-pressed="true">Above a limit</button>
+        <button type="button" id="chem-zero" aria-pressed="false">Health goal of zero</button>
+        <button type="button" id="chem-tt" aria-pressed="false">Treatment technique</button>
+        <button type="button" id="chem-name" aria-pressed="false">Name</button>
+      </div>
+      <div class="result-legend" id="water-legend">
+        <span><i class="swatch" style="background:#c5e4ec"></i>0</span>
+        <span><i class="swatch" style="background:#5eb8cc"></i>1–3</span>
+        <span><i class="swatch" style="background:#1d8eab"></i>4–6</span>
+        <span><i class="swatch" style="background:#14627a"></i>7–9</span>
+        <span><i class="swatch" style="background:#0c3d4e"></i>10–12</span>
+      </div>
+      <p class="note" id="water-scale-note">Each block is one quarter in this count, up to 12. The bar fills one block for each quarter with a violation. The color darkens as that count rises.</p>
+      <div class="result-legend" id="water-body-legend" hidden></div>
+      <p class="note" id="water-chem-note" hidden>A chemical appears here when EPA names it on a current health-based violation. Current means the violation is unaddressed or addressed in the 2026Q3 snapshot. Resolved and archived violations are not listed. Above a limit means a maximum contaminant level: EPA recorded that contaminant above the allowed amount. That is not a sample from one tap, and a missed test is not included. A treatment technique is a required process, not a chemical measured in the water. EPA does not publish a ranking of which contaminant is most harmful, and this page does not calculate one. Health goal of zero means EPA's public-health goal is no amount of that contaminant. The sentence is EPA's description of exposure above the limit, from the National Primary Drinking Water Regulations.</p>
+      <div id="water-list" class="census-scroll"></div>
+      <p id="water-note" class="note"></p>
+    </section>
       <p id="health-sources" class="note"></p>
     </section>
   </div>
@@ -329,13 +398,15 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
   <div class="wrap">
     <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. A color on the population map is a Census Bureau count. A mark in Health is a published location or a published measurement.</p>
     <p>Population, change, age, and median age are from the Census Bureau's <a href="https://www.census.gov/programs-surveys/popest.html">Population Estimates Program</a>, vintage 2025. House seats are from the <a href="https://www.census.gov/data/tables/2020/dec/2020-apportionment-data.html">2020 census apportionment</a>. Leaders.vote copies those published figures.</p>
+    <p>Water quarters and health-based flags are copied from EPA's <a href="https://echo.epa.gov/tools/data-downloads">Drinking Water System Search</a>. The file is dated October 23, 2026. Chemicals named on a current health-based violation are copied from the violations table in EPA's quarterly download listed October 13, 2026, snapshot quarter 2026Q3. The sentence for the body is from EPA's <a href="https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations">National Primary Drinking Water Regulations</a>.</p>
   </div>
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
-<script src="census.js?v=3"></script>
+<script src="census.js?v=4"></script>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
-<script src="health.js?v=31"></script>
+<script src="water.js?v=8"></script>
+<script src="health.js?v=32"></script>
 </body>
 </html>

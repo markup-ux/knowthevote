@@ -1,4 +1,13 @@
 (function () {
+  var searchScript = document.currentScript;
+  if (searchScript && !document.querySelector("script[data-site-search]")) {
+    var searchSrc = searchScript.getAttribute("src") || "";
+    var searchBase = searchSrc.replace(/[^/]*$/, "");
+    var searchTag = document.createElement("script");
+    searchTag.src = searchBase + "search.js?v=4";
+    searchTag.setAttribute("data-site-search", "1");
+    document.head.appendChild(searchTag);
+  }
   var select = document.getElementById("lang");
   var note = document.getElementById("lang-note");
   var langButton = document.querySelector(".lang-button");
