@@ -2,14 +2,14 @@
   "source": "https://results.elections.org.za/dashboards/lge/MapsJason/2026/EEID1887LiteMapsNational.js",
   "partySource": "https://results.elections.org.za/dashboards/lge/MapsJason/2016/PartyList.js",
   "eventId": 1887,
-  "reportDate": "2026-11-05T00:06:47.1118875+02:00",
-  "fetchedAt": "2026-11-04T22:15:31+00:00",
+  "reportDate": "2026-11-05T04:28:40.4369722+02:00",
+  "fetchedAt": "2026-11-05T02:31:04+00:00",
   "progress": {
-    "vdComplete": 54,
+    "vdComplete": 1998,
     "vdExpected": 23696,
-    "wardsComplete": 0,
+    "wardsComplete": 61,
     "wardsExpected": 4485,
-    "municipalitiesComplete": 0,
+    "municipalitiesComplete": 2,
     "municipalitiesExpected": 213
   },
   "parties": {
@@ -22,6 +22,11 @@
       "abbr": "IND",
       "name": "INDEPENDENTS",
       "color": "#9ebbd7"
+    },
+    "3": {
+      "abbr": "IFP",
+      "name": "INKATHA FREEDOM PARTY",
+      "color": "#ffca93"
     },
     "4": {
       "abbr": "VF PLUS",
@@ -37,11 +42,6 @@
       "abbr": "ANC",
       "name": "AFRICAN NATIONAL CONGRESS",
       "color": "#06fb06"
-    },
-    "18": {
-      "abbr": "ACDP",
-      "name": "AFRICAN CHRISTIAN DEMOCRATIC PARTY",
-      "color": "#9f7b6f"
     },
     "52": {
       "abbr": "DA",
@@ -68,169 +68,240 @@
       "name": "AFRICAN TRANSFORMATION MOVEMENT",
       "color": "#b0e5ff"
     },
+    "1335": {
+      "abbr": "PMC",
+      "name": "PEOPLE'S MOVEMENT FOR CHANGE",
+      "color": "#fdaa53"
+    },
+    "1511": {
+      "abbr": "ACTIONSA",
+      "name": "ACTIONSA",
+      "color": "#bc4542"
+    },
     "1748": {
       "abbr": "MKP",
       "name": "UMKHONTO WESIZWE PARTY",
       "color": "#e600a9"
     },
-    "1775": {
-      "abbr": "AMC.ROY.",
-      "name": "AFRICAN MOVEMENT CONGRESS",
-      "color": "#647282"
+    "1863": {
+      "abbr": "SDP",
+      "name": "SERVICE DELIVERY PARTY",
+      "color": "#bae5f2"
     },
-    "1950": {
-      "abbr": "MFCV",
-      "name": "MOUNT FLETCHER COMMUNITY VOICE",
+    "1960": {
+      "abbr": "RTC",
+      "name": "RISE TSANTSABANE COMMUNITIES",
+      "color": "#bae5f2"
+    },
+    "2074": {
+      "abbr": "BBA",
+      "name": "BELA BELA ALLIANSIE",
       "color": "#bae5f2"
     }
   },
   "national": [
     {
-      "id": 52,
-      "votes": 2731,
-      "percent": 50.02,
+      "id": 7,
+      "votes": 314929,
+      "percent": 35.2,
       "order": 1
     },
     {
-      "id": 7,
-      "votes": 1167,
-      "percent": 21.37,
+      "id": 52,
+      "votes": 254055,
+      "percent": 28.4,
       "order": 2
     },
     {
-      "id": 4,
-      "votes": 933,
-      "percent": 17.09,
+      "id": 957,
+      "votes": 48453,
+      "percent": 5.42,
       "order": 3
     },
     {
-      "id": 945,
-      "votes": 171,
-      "percent": 3.13,
+      "id": 1511,
+      "votes": 13312,
+      "percent": 1.49,
       "order": 4
     },
     {
-      "id": 957,
-      "votes": 141,
-      "percent": 2.58,
+      "id": 4,
+      "votes": 41546,
+      "percent": 4.64,
       "order": 5
     },
     {
-      "id": -2,
-      "votes": 91,
-      "percent": 1.69,
+      "id": 945,
+      "votes": 40783,
+      "percent": 4.56,
       "order": 6
     },
     {
-      "id": 445,
-      "votes": 66,
-      "percent": 1.21,
+      "id": 1748,
+      "votes": 40026,
+      "percent": 4.47,
       "order": 7
     },
     {
-      "id": 6,
-      "votes": 46,
-      "percent": 0.84,
+      "id": 1335,
+      "votes": 4099,
+      "percent": 0.46,
       "order": 8
     },
     {
-      "id": 1318,
-      "votes": 29,
-      "percent": 0.53,
+      "id": -2,
+      "votes": 70880,
+      "percent": 7.68,
       "order": 9
     },
     {
-      "id": 1775,
-      "votes": 28,
-      "percent": 0.51,
+      "id": 445,
+      "votes": 25401,
+      "percent": 2.84,
       "order": 10
     },
     {
-      "id": 1748,
-      "votes": 18,
-      "percent": 0.33,
+      "id": 6,
+      "votes": 13460,
+      "percent": 1.5,
       "order": 11
     },
     {
-      "id": 1950,
-      "votes": 15,
-      "percent": 0.27,
+      "id": 1318,
+      "votes": 13306,
+      "percent": 1.49,
       "order": 12
     },
     {
-      "id": 18,
-      "votes": 13,
-      "percent": 0.24,
+      "id": 3,
+      "votes": 11176,
+      "percent": 1.25,
       "order": 13
     },
     {
       "id": 0,
-      "votes": 11,
-      "percent": 0.2,
+      "votes": 3188,
+      "percent": 0.36,
       "order": 14
     }
   ],
   "places": [
     {
-      "code": "EC101",
-      "name": "Dr. Beyers Naude",
-      "votes": 79,
+      "code": "NMA",
+      "name": "Nelson Mandela Bay",
+      "votes": 9260,
       "rows": [
         {
           "id": 52,
-          "votes": 79,
-          "percent": 66.95
+          "votes": 9260,
+          "percent": 36.34
         }
       ],
       "leader": "DA",
       "leaderId": 52,
       "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "nelson-mandela-bay"
+    },
+    {
+      "code": "EC442",
+      "name": "Umzimvubu",
+      "votes": 13349,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 13349,
+          "percent": 59.23
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "umzimvubu"
+    },
+    {
+      "code": "EC101",
+      "name": "Dr. Beyers Naude",
+      "votes": 916,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 916,
+          "percent": 42.88
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "dr-beyers-naude"
     },
     {
       "code": "EC102",
       "name": "Blue Crane Route",
-      "votes": 56,
+      "votes": 7893,
       "rows": [
         {
           "id": 52,
-          "votes": 56,
-          "percent": 58.33
+          "votes": 3570,
+          "percent": 38.45
+        },
+        {
+          "id": 7,
+          "votes": 4323,
+          "percent": 46.56
         }
       ],
-      "leader": "DA",
-      "leaderId": 52,
-      "color": "#f4f400",
-      "amount": 0.7,
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.45,
       "slug": "blue-crane-route"
     },
     {
       "code": "EC104",
       "name": "Makana",
-      "votes": 15,
+      "votes": 3476,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 3476,
+          "percent": 42.89
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "makana"
+    },
+    {
+      "code": "EC105",
+      "name": "Ndlambe",
+      "votes": 2641,
       "rows": [
         {
           "id": 52,
-          "votes": 15,
-          "percent": 62.5
+          "votes": 2641,
+          "percent": 59.23
         }
       ],
       "leader": "DA",
       "leaderId": 52,
       "color": "#f4f400",
       "amount": 0.7,
-      "slug": "makana"
+      "slug": "ndlambe"
     },
     {
       "code": "EC106",
       "name": "Sundays River Valley",
-      "votes": 450,
+      "votes": 3848,
       "rows": [
         {
           "id": 52,
-          "votes": 450,
-          "percent": 48.03
+          "votes": 3848,
+          "percent": 40.67
         }
       ],
       "leader": "DA",
@@ -240,14 +311,31 @@
       "slug": "sundays-river-valley"
     },
     {
-      "code": "EC109",
-      "name": "Kou-Kamma",
-      "votes": 57,
+      "code": "EC108",
+      "name": "Kouga",
+      "votes": 3523,
       "rows": [
         {
           "id": 52,
-          "votes": 57,
-          "percent": 45.24
+          "votes": 3523,
+          "percent": 57.73
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "kouga"
+    },
+    {
+      "code": "EC109",
+      "name": "Kou-Kamma",
+      "votes": 1010,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 1010,
+          "percent": 37.28
         }
       ],
       "leader": "DA",
@@ -257,14 +345,48 @@
       "slug": "kou-kamma"
     },
     {
-      "code": "EC123",
-      "name": "Great Kei",
-      "votes": 81,
+      "code": "EC121",
+      "name": "Mbhashe",
+      "votes": 6147,
       "rows": [
         {
           "id": 7,
-          "votes": 81,
-          "percent": 51.92
+          "votes": 6147,
+          "percent": 60.04
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "mbhashe"
+    },
+    {
+      "code": "EC122",
+      "name": "Mnquma",
+      "votes": 4504,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 4504,
+          "percent": 52.21
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "mnquma"
+    },
+    {
+      "code": "EC123",
+      "name": "Great Kei",
+      "votes": 4340,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 4340,
+          "percent": 49.61
         }
       ],
       "leader": "ANC",
@@ -276,29 +398,80 @@
     {
       "code": "EC124",
       "name": "Amahlathi",
-      "votes": 69,
+      "votes": 2603,
       "rows": [
         {
-          "id": 52,
-          "votes": 69,
-          "percent": 46.0
+          "id": 7,
+          "votes": 2603,
+          "percent": 64.19
         }
       ],
-      "leader": "DA",
-      "leaderId": 52,
-      "color": "#f4f400",
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "amahlathi"
     },
     {
-      "code": "EC135",
-      "name": "Intsika Yethu",
-      "votes": 78,
+      "code": "BUF",
+      "name": "Buffalo City",
+      "votes": 11673,
       "rows": [
         {
           "id": 7,
-          "votes": 78,
-          "percent": 83.87
+          "votes": 11673,
+          "percent": 44.24
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "buffalo-city"
+    },
+    {
+      "code": "EC126",
+      "name": "Ngqushwa",
+      "votes": 1922,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1922,
+          "percent": 74.99
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "ngqushwa"
+    },
+    {
+      "code": "EC131",
+      "name": "Inxuba Yethemba",
+      "votes": 3135,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 3135,
+          "percent": 42.15
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "inxuba-yethemba"
+    },
+    {
+      "code": "EC135",
+      "name": "Intsika Yethu",
+      "votes": 5270,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 5270,
+          "percent": 64.77
         }
       ],
       "leader": "ANC",
@@ -308,14 +481,48 @@
       "slug": "intsika-yethu"
     },
     {
-      "code": "EC141",
-      "name": "Elundini",
-      "votes": 113,
+      "code": "EC136",
+      "name": "Emalahleni",
+      "votes": 2318,
       "rows": [
         {
           "id": 7,
-          "votes": 113,
-          "percent": 48.29
+          "votes": 2318,
+          "percent": 62.72
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "emalahleni-eastern-cape"
+    },
+    {
+      "code": "EC138",
+      "name": "Sakhisizwe",
+      "votes": 3251,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 3251,
+          "percent": 69.11
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "sakhisizwe"
+    },
+    {
+      "code": "EC141",
+      "name": "Elundini",
+      "votes": 9323,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 9323,
+          "percent": 56.83
         }
       ],
       "leader": "ANC",
@@ -325,65 +532,218 @@
       "slug": "elundini"
     },
     {
-      "code": "EC157",
-      "name": "King Sabata Dalindyebo",
-      "votes": 36,
+      "code": "EC142",
+      "name": "Senqu",
+      "votes": 429,
       "rows": [
         {
-          "id": 6,
-          "votes": 36,
-          "percent": 43.37
+          "id": 7,
+          "votes": 429,
+          "percent": 65.7
         }
       ],
-      "leader": "UDM",
-      "leaderId": 6,
-      "color": "#00a39a",
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "senqu"
+    },
+    {
+      "code": "EC443",
+      "name": "Winnie Madikizela-Mandela",
+      "votes": 5868,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 5868,
+          "percent": 58.14
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "mbizana"
+    },
+    {
+      "code": "EC444",
+      "name": "Ntabankulu",
+      "votes": 4641,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 4641,
+          "percent": 72.75
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "ntabankulu"
+    },
+    {
+      "code": "EC153",
+      "name": "Ngquza Hill",
+      "votes": 2691,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 2691,
+          "percent": 71.44
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "ngquza-hill"
+    },
+    {
+      "code": "EC154",
+      "name": "Port St Johns",
+      "votes": 2094,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 2094,
+          "percent": 64.13
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "port-st-johns"
+    },
+    {
+      "code": "EC155",
+      "name": "Nyandeni",
+      "votes": 7073,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 7073,
+          "percent": 68.36
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "nyandeni"
+    },
+    {
+      "code": "EC157",
+      "name": "King Sabata Dalindyebo",
+      "votes": 5217,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 5217,
+          "percent": 54.47
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "king-sabata-dalindyebo"
     },
     {
       "code": "EC129",
       "name": "Raymond Mhlaba",
-      "votes": 20,
+      "votes": 4950,
       "rows": [
         {
-          "id": 52,
-          "votes": 20,
-          "percent": 50.0
+          "id": 7,
+          "votes": 4950,
+          "percent": 66.15
         }
       ],
-      "leader": "DA",
-      "leaderId": 52,
-      "color": "#f4f400",
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "raymond-mhlaba"
     },
     {
       "code": "EC145",
       "name": "Walter Sisulu",
-      "votes": 30,
+      "votes": 4912,
       "rows": [
         {
-          "id": 52,
-          "votes": 30,
-          "percent": 62.5
+          "id": 7,
+          "votes": 4912,
+          "percent": 45.65
         }
       ],
-      "leader": "DA",
-      "leaderId": 52,
-      "color": "#f4f400",
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "walter-sisulu"
     },
     {
+      "code": "EC139",
+      "name": "Enoch Mgijima",
+      "votes": 4701,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 4701,
+          "percent": 50.27
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "enoch-mgijima"
+    },
+    {
+      "code": "EC441",
+      "name": "Matatiele",
+      "votes": 2952,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 2952,
+          "percent": 63.59
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "matatiele"
+    },
+    {
+      "code": "FS161",
+      "name": "Letsemeng",
+      "votes": 693,
+      "rows": [
+        {
+          "id": 4,
+          "votes": 693,
+          "percent": 40.96
+        }
+      ],
+      "leader": "VF PLUS",
+      "leaderId": 4,
+      "color": "#bf7fff",
+      "amount": 0.7,
+      "slug": "letsemeng"
+    },
+    {
       "code": "FS162",
       "name": "Kopanong",
-      "votes": 42,
+      "votes": 267,
       "rows": [
         {
           "id": 52,
-          "votes": 42,
-          "percent": 46.67
+          "votes": 267,
+          "percent": 43.56
         }
       ],
       "leader": "DA",
@@ -395,12 +755,12 @@
     {
       "code": "FS163",
       "name": "Mohokare",
-      "votes": 19,
+      "votes": 1470,
       "rows": [
         {
           "id": 52,
-          "votes": 19,
-          "percent": 63.33
+          "votes": 1470,
+          "percent": 53.89
         }
       ],
       "leader": "DA",
@@ -412,12 +772,12 @@
     {
       "code": "MAN",
       "name": "Mangaung",
-      "votes": 30,
+      "votes": 4794,
       "rows": [
         {
           "id": 52,
-          "votes": 30,
-          "percent": 37.5
+          "votes": 4794,
+          "percent": 36.63
         }
       ],
       "leader": "DA",
@@ -429,46 +789,131 @@
     {
       "code": "FS181",
       "name": "Masilonyana",
-      "votes": 22,
+      "votes": 407,
       "rows": [
         {
-          "id": 52,
-          "votes": 22,
-          "percent": 36.67
+          "id": 7,
+          "votes": 407,
+          "percent": 38.14
         }
       ],
-      "leader": "DA",
-      "leaderId": 52,
-      "color": "#f4f400",
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "masilonyana"
     },
     {
-      "code": "FS193",
-      "name": "Nketoana",
-      "votes": 66,
+      "code": "FS182",
+      "name": "Tokologo",
+      "votes": 1051,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1051,
+          "percent": 64.32
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "tokologo"
+    },
+    {
+      "code": "FS183",
+      "name": "Tswelopele",
+      "votes": 934,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 934,
+          "percent": 50.3
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "tswelopele"
+    },
+    {
+      "code": "FS185",
+      "name": "Nala",
+      "votes": 378,
       "rows": [
         {
           "id": 4,
-          "votes": 66,
-          "percent": 51.56
+          "votes": 378,
+          "percent": 30.73
         }
       ],
       "leader": "VF PLUS",
       "leaderId": 4,
       "color": "#bf7fff",
       "amount": 0.7,
+      "slug": "nala"
+    },
+    {
+      "code": "FS191",
+      "name": "Setsoto",
+      "votes": 58,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 58,
+          "percent": 44.27
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "setsoto"
+    },
+    {
+      "code": "FS192",
+      "name": "Dihlabeng",
+      "votes": 1159,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1159,
+          "percent": 42.39
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "dihlabeng"
+    },
+    {
+      "code": "FS193",
+      "name": "Nketoana",
+      "votes": 891,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 891,
+          "percent": 38.84
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
       "slug": "nketoana"
     },
     {
       "code": "FS194",
       "name": "Maluti a Phofung",
-      "votes": 39,
+      "votes": 2324,
       "rows": [
         {
           "id": 7,
-          "votes": 39,
-          "percent": 34.21
+          "votes": 2324,
+          "percent": 27.45
         }
       ],
       "leader": "ANC",
@@ -478,14 +923,31 @@
       "slug": "maluti-a-phofung"
     },
     {
+      "code": "FS195",
+      "name": "Phumelela",
+      "votes": 1892,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1892,
+          "percent": 41.87
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "phumelela"
+    },
+    {
       "code": "FS201",
       "name": "Moqhaka",
-      "votes": 25,
+      "votes": 1054,
       "rows": [
         {
           "id": 52,
-          "votes": 25,
-          "percent": 52.08
+          "votes": 1054,
+          "percent": 39.15
         }
       ],
       "leader": "DA",
@@ -495,31 +957,971 @@
       "slug": "moqhaka"
     },
     {
-      "code": "NC452",
-      "name": "GA-SEGONYANA",
-      "votes": 23,
+      "code": "FS203",
+      "name": "Ngwathe",
+      "votes": 568,
       "rows": [
         {
           "id": 52,
-          "votes": 23,
-          "percent": 54.76
+          "votes": 568,
+          "percent": 30.41
         }
       ],
       "leader": "DA",
       "leaderId": 52,
       "color": "#f4f400",
       "amount": 0.7,
+      "slug": "ngwathe"
+    },
+    {
+      "code": "FS204",
+      "name": "Metsimaholo",
+      "votes": 520,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 520,
+          "percent": 34.05
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "metsimaholo"
+    },
+    {
+      "code": "FS205",
+      "name": "Mafube",
+      "votes": 562,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 562,
+          "percent": 42.87
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "mafube"
+    },
+    {
+      "code": "EKU",
+      "name": "Ekurhuleni",
+      "votes": 4302,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 4302,
+          "percent": 42.29
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "ekurhuleni"
+    },
+    {
+      "code": "JHB",
+      "name": "City of Johannesburg",
+      "votes": 1582,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1582,
+          "percent": 26.03
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "city-of-johannesburg"
+    },
+    {
+      "code": "TSH",
+      "name": "City of Tshwane",
+      "votes": 1651,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 1651,
+          "percent": 27.01
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "city-of-tshwane"
+    },
+    {
+      "code": "GT484",
+      "name": "Merafong City",
+      "votes": 215,
+      "rows": [
+        {
+          "id": 4,
+          "votes": 215,
+          "percent": 30.94
+        }
+      ],
+      "leader": "VF PLUS",
+      "leaderId": 4,
+      "color": "#bf7fff",
+      "amount": 0.7,
+      "slug": "merafong-city"
+    },
+    {
+      "code": "GT481",
+      "name": "Mogale City",
+      "votes": 2347,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 2347,
+          "percent": 45.84
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "mogale-city"
+    },
+    {
+      "code": "GT422",
+      "name": "Midvaal",
+      "votes": 103,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 103,
+          "percent": 38.01
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "midvaal"
+    },
+    {
+      "code": "GT423",
+      "name": "Lesedi",
+      "votes": 513,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 513,
+          "percent": 40.75
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "lesedi"
+    },
+    {
+      "code": "GT485",
+      "name": "Rand West City",
+      "votes": 1208,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1208,
+          "percent": 61.2
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "rand-west-city"
+    },
+    {
+      "code": "KZN435",
+      "name": "uMzimkhulu",
+      "votes": 13048,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 5520,
+          "percent": 37.41
+        },
+        {
+          "id": 7,
+          "votes": 7528,
+          "percent": 51.02
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.481,
+      "slug": "umzimkhulu"
+    },
+    {
+      "code": "KZN433",
+      "name": "Greater Kokstad",
+      "votes": 1920,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1920,
+          "percent": 50.97
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "greater-kokstad"
+    },
+    {
+      "code": "KZN221",
+      "name": "uMshwathi",
+      "votes": 5011,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 5011,
+          "percent": 49.72
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "umshwathi"
+    },
+    {
+      "code": "KZN222",
+      "name": "uMngeni",
+      "votes": 1804,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 1804,
+          "percent": 66.74
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "umngeni"
+    },
+    {
+      "code": "KZN223",
+      "name": "Mpofana",
+      "votes": 1090,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 1090,
+          "percent": 39.36
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "mpofana"
+    },
+    {
+      "code": "KZN224",
+      "name": "iMpendle",
+      "votes": 2174,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 2174,
+          "percent": 38.46
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "impendle"
+    },
+    {
+      "code": "KZN225",
+      "name": "Msunduzi",
+      "votes": 595,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 595,
+          "percent": 57.94
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "the-msunduzi"
+    },
+    {
+      "code": "KZN226",
+      "name": "Mkhambathini",
+      "votes": 744,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 744,
+          "percent": 36.01
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "mkhambathini"
+    },
+    {
+      "code": "KZN227",
+      "name": "Richmond",
+      "votes": 2913,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 2913,
+          "percent": 56.3
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "richmond"
+    },
+    {
+      "code": "KZN235",
+      "name": "Okhahlamba",
+      "votes": 289,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 289,
+          "percent": 33.76
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "okhahlamba"
+    },
+    {
+      "code": "KZN241",
+      "name": "eNdumeni",
+      "votes": 623,
+      "rows": [
+        {
+          "id": 3,
+          "votes": 623,
+          "percent": 38.31
+        }
+      ],
+      "leader": "IFP",
+      "leaderId": 3,
+      "color": "#ffca93",
+      "amount": 0.7,
+      "slug": "endumeni"
+    },
+    {
+      "code": "KZN242",
+      "name": "Nqutu",
+      "votes": 299,
+      "rows": [
+        {
+          "id": 3,
+          "votes": 299,
+          "percent": 37.56
+        }
+      ],
+      "leader": "IFP",
+      "leaderId": 3,
+      "color": "#ffca93",
+      "amount": 0.7,
+      "slug": "nqutu"
+    },
+    {
+      "code": "KZN252",
+      "name": "Newcastle",
+      "votes": 660,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 660,
+          "percent": 27.51
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "newcastle"
+    },
+    {
+      "code": "KZN253",
+      "name": "eMadlangeni",
+      "votes": 698,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 698,
+          "percent": 41.92
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "emadlangeni"
+    },
+    {
+      "code": "KZN254",
+      "name": "Dannhauser",
+      "votes": 260,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 260,
+          "percent": 36.52
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "dannhauser"
+    },
+    {
+      "code": "KZN261",
+      "name": "eDumbe",
+      "votes": 81,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 81,
+          "percent": 38.57
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "edumbe"
+    },
+    {
+      "code": "KZN262",
+      "name": "uPhongolo",
+      "votes": 765,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 765,
+          "percent": 37.03
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "uphongolo"
+    },
+    {
+      "code": "KZN263",
+      "name": "AbaQulusi",
+      "votes": 318,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 318,
+          "percent": 40.77
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "abaqulusi"
+    },
+    {
+      "code": "KZN265",
+      "name": "Nongoma",
+      "votes": 584,
+      "rows": [
+        {
+          "id": 3,
+          "votes": 584,
+          "percent": 64.67
+        }
+      ],
+      "leader": "IFP",
+      "leaderId": 3,
+      "color": "#ffca93",
+      "amount": 0.7,
+      "slug": "nongoma"
+    },
+    {
+      "code": "KZN266",
+      "name": "Ulundi",
+      "votes": 1977,
+      "rows": [
+        {
+          "id": 3,
+          "votes": 1977,
+          "percent": 77.08
+        }
+      ],
+      "leader": "IFP",
+      "leaderId": 3,
+      "color": "#ffca93",
+      "amount": 0.7,
+      "slug": "ulundi"
+    },
+    {
+      "code": "KZN281",
+      "name": "uMfolozi",
+      "votes": 66,
+      "rows": [
+        {
+          "id": 3,
+          "votes": 66,
+          "percent": 39.05
+        }
+      ],
+      "leader": "IFP",
+      "leaderId": 3,
+      "color": "#ffca93",
+      "amount": 0.7,
+      "slug": "mfolozi"
+    },
+    {
+      "code": "KZN285",
+      "name": "Mthonjaneni",
+      "votes": 1023,
+      "rows": [
+        {
+          "id": 3,
+          "votes": 1023,
+          "percent": 59.58
+        }
+      ],
+      "leader": "IFP",
+      "leaderId": 3,
+      "color": "#ffca93",
+      "amount": 0.7,
+      "slug": "mthonjaneni"
+    },
+    {
+      "code": "KZN293",
+      "name": "Ndwedwe",
+      "votes": 496,
+      "rows": [
+        {
+          "id": 3,
+          "votes": 496,
+          "percent": 44.81
+        }
+      ],
+      "leader": "IFP",
+      "leaderId": 3,
+      "color": "#ffca93",
+      "amount": 0.7,
+      "slug": "ndwedwe"
+    },
+    {
+      "code": "KZN294",
+      "name": "Maphumulo",
+      "votes": 533,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 533,
+          "percent": 38.13
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "maphumulo"
+    },
+    {
+      "code": "KZN237",
+      "name": "iNkosi Langalibalele",
+      "votes": 210,
+      "rows": [
+        {
+          "id": 3,
+          "votes": 210,
+          "percent": 68.63
+        }
+      ],
+      "leader": "IFP",
+      "leaderId": 3,
+      "color": "#ffca93",
+      "amount": 0.7,
+      "slug": "inkosi-langalibalele"
+    },
+    {
+      "code": "KZN238",
+      "name": "Alfred Duma",
+      "votes": 84,
+      "rows": [
+        {
+          "id": 3,
+          "votes": 84,
+          "percent": 60.87
+        }
+      ],
+      "leader": "IFP",
+      "leaderId": 3,
+      "color": "#ffca93",
+      "amount": 0.7,
+      "slug": "alfred-duma"
+    },
+    {
+      "code": "KZN276",
+      "name": "Big Five Hlabisa",
+      "votes": 86,
+      "rows": [
+        {
+          "id": 3,
+          "votes": 86,
+          "percent": 34.82
+        }
+      ],
+      "leader": "IFP",
+      "leaderId": 3,
+      "color": "#ffca93",
+      "amount": 0.7,
+      "slug": "big-five-hlabisa"
+    },
+    {
+      "code": "KZN436",
+      "name": "Dr. Nkosazana Dlamini Zuma",
+      "votes": 710,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 710,
+          "percent": 39.8
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "dr-nkosazana-dlamini-zuma"
+    },
+    {
+      "code": "MP301",
+      "name": "Chief Albert Luthuli",
+      "votes": 7337,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 7337,
+          "percent": 47.07
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "chief-albert-luthuli"
+    },
+    {
+      "code": "MP302",
+      "name": "Msukaligwa",
+      "votes": 2068,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 2068,
+          "percent": 35.29
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "msukaligwa"
+    },
+    {
+      "code": "MP303",
+      "name": "Mkhondo",
+      "votes": 1455,
+      "rows": [
+        {
+          "id": 1748,
+          "votes": 1455,
+          "percent": 48.61
+        }
+      ],
+      "leader": "MKP",
+      "leaderId": 1748,
+      "color": "#e600a9",
+      "amount": 0.7,
+      "slug": "mkhondo"
+    },
+    {
+      "code": "MP304",
+      "name": "Dr Pixley Ka Isaka Seme",
+      "votes": 1580,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1580,
+          "percent": 56.41
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "dr-pixley-ka-isaka-seme"
+    },
+    {
+      "code": "MP305",
+      "name": "Lekwa",
+      "votes": 1764,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1764,
+          "percent": 24.76
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "lekwa"
+    },
+    {
+      "code": "MP306",
+      "name": "Dipaleseng",
+      "votes": 2721,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 2721,
+          "percent": 45.31
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "dipaleseng"
+    },
+    {
+      "code": "MP307",
+      "name": "Govan Mbeki",
+      "votes": 423,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 423,
+          "percent": 33.2
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "govan-mbeki"
+    },
+    {
+      "code": "MP311",
+      "name": "Victor Khanye",
+      "votes": 3888,
+      "rows": [
+        {
+          "id": 1863,
+          "votes": 3888,
+          "percent": 46.52
+        }
+      ],
+      "leader": "SDP",
+      "leaderId": 1863,
+      "color": "#bae5f2",
+      "amount": 0.7,
+      "slug": "victor-khanye"
+    },
+    {
+      "code": "MP314",
+      "name": "Emakhazeni",
+      "votes": 942,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 942,
+          "percent": 62.59
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "emakhazeni"
+    },
+    {
+      "code": "MP315",
+      "name": "Thembisile Hani",
+      "votes": 1997,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1997,
+          "percent": 48.44
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "thembisile"
+    },
+    {
+      "code": "MP316",
+      "name": "Dr JS Moroka",
+      "votes": 33,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 33,
+          "percent": 41.77
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "dr-js-moroka"
+    },
+    {
+      "code": "MP321",
+      "name": "Thaba Chweu",
+      "votes": 7258,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 7258,
+          "percent": 42.17
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "thaba-chweu"
+    },
+    {
+      "code": "MP324",
+      "name": "Nkomazi",
+      "votes": 312,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 312,
+          "percent": 38.24
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "nkomazi"
+    },
+    {
+      "code": "MP326",
+      "name": "City of Mbombela",
+      "votes": 6578,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 6578,
+          "percent": 39.26
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "mbombela"
+    },
+    {
+      "code": "MP325",
+      "name": "Bushbuckridge",
+      "votes": 4658,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 4658,
+          "percent": 74.02
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "bushbuckridge"
+    },
+    {
+      "code": "NC452",
+      "name": "GA-SEGONYANA",
+      "votes": 462,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 462,
+          "percent": 29.56
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
       "slug": "ga-segonyana"
+    },
+    {
+      "code": "NC453",
+      "name": "GAMAGARA",
+      "votes": 98,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 98,
+          "percent": 89.09
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "gamagara"
     },
     {
       "code": "NC094",
       "name": "Phokwane",
-      "votes": 61,
+      "votes": 1149,
       "rows": [
         {
           "id": 4,
-          "votes": 61,
-          "percent": 38.13
+          "votes": 1149,
+          "percent": 35.34
         }
       ],
       "leader": "VF PLUS",
@@ -531,12 +1933,12 @@
     {
       "code": "NC091",
       "name": "Sol Plaatje",
-      "votes": 54,
+      "votes": 1398,
       "rows": [
         {
           "id": 52,
-          "votes": 54,
-          "percent": 44.26
+          "votes": 1398,
+          "percent": 31.49
         }
       ],
       "leader": "DA",
@@ -548,148 +1950,340 @@
     {
       "code": "NC092",
       "name": "Dikgatlong",
-      "votes": 45,
+      "votes": 2219,
       "rows": [
         {
-          "id": 4,
-          "votes": 45,
-          "percent": 38.14
+          "id": 7,
+          "votes": 2219,
+          "percent": 42.61
         }
       ],
-      "leader": "VF PLUS",
-      "leaderId": 4,
-      "color": "#bf7fff",
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "dikgatlong"
     },
     {
-      "code": "NC062",
-      "name": "NAMA KHOI",
-      "votes": 38,
+      "code": "NC093",
+      "name": "Magareng",
+      "votes": 1002,
       "rows": [
         {
           "id": 52,
-          "votes": 38,
-          "percent": 100.0
+          "votes": 1002,
+          "percent": 35.52
         }
       ],
       "leader": "DA",
       "leaderId": 52,
       "color": "#f4f400",
       "amount": 0.7,
+      "slug": "magareng"
+    },
+    {
+      "code": "NC061",
+      "name": "RICHTERSVELD",
+      "votes": 1425,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1425,
+          "percent": 55.38
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "richtersveld"
+    },
+    {
+      "code": "NC062",
+      "name": "NAMA KHOI",
+      "votes": 2836,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 2836,
+          "percent": 41.83
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
       "slug": "nama-khoi"
+    },
+    {
+      "code": "NC064",
+      "name": "KAMIESBERG",
+      "votes": 7249,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 2948,
+          "percent": 31.51
+        },
+        {
+          "id": 7,
+          "votes": 4301,
+          "percent": 45.98
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.583,
+      "slug": "kamiesberg"
+    },
+    {
+      "code": "NC065",
+      "name": "HANTAM",
+      "votes": 2547,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 2547,
+          "percent": 41.44
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "hantam"
+    },
+    {
+      "code": "NC067",
+      "name": "KHâI-MA",
+      "votes": 3995,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 3995,
+          "percent": 46.75
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "khâi-ma"
     },
     {
       "code": "NC071",
       "name": "UBUNTU",
-      "votes": 32,
+      "votes": 4611,
       "rows": [
         {
-          "id": 52,
-          "votes": 32,
-          "percent": 80.0
+          "id": 7,
+          "votes": 4611,
+          "percent": 51.75
         }
       ],
-      "leader": "DA",
-      "leaderId": 52,
-      "color": "#f4f400",
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "ubuntu"
     },
     {
       "code": "NC072",
       "name": "UMSOBOMVU",
-      "votes": 41,
+      "votes": 2233,
       "rows": [
         {
-          "id": 52,
-          "votes": 41,
-          "percent": 46.59
+          "id": 7,
+          "votes": 2233,
+          "percent": 68.25
         }
       ],
-      "leader": "DA",
-      "leaderId": 52,
-      "color": "#f4f400",
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "umsobomvu"
     },
     {
       "code": "NC073",
       "name": "EMTHANJENI",
-      "votes": 70,
+      "votes": 1475,
       "rows": [
         {
-          "id": 52,
-          "votes": 70,
-          "percent": 76.09
+          "id": 7,
+          "votes": 1475,
+          "percent": 60.5
         }
       ],
-      "leader": "DA",
-      "leaderId": 52,
-      "color": "#f4f400",
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "emthanjeni"
     },
     {
-      "code": "NC076",
-      "name": "THEMBELIHLE",
-      "votes": 40,
+      "code": "NC074",
+      "name": "KAREEBERG",
+      "votes": 524,
       "rows": [
         {
-          "id": 52,
-          "votes": 40,
-          "percent": 44.44
+          "id": 945,
+          "votes": 524,
+          "percent": 29.67
         }
       ],
-      "leader": "DA",
-      "leaderId": 52,
-      "color": "#f4f400",
+      "leader": "EFF",
+      "leaderId": 945,
+      "color": "#ff0000",
+      "amount": 0.7,
+      "slug": "kareeberg"
+    },
+    {
+      "code": "NC075",
+      "name": "RENOSTERBERG",
+      "votes": 4220,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 4220,
+          "percent": 51.1
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "renosterberg"
+    },
+    {
+      "code": "NC076",
+      "name": "THEMBELIHLE",
+      "votes": 3602,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 3602,
+          "percent": 50.59
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
       "amount": 0.7,
       "slug": "thembelihle"
     },
     {
-      "code": "NC084",
-      "name": "!KHEIS",
-      "votes": 44,
+      "code": "NC077",
+      "name": "SIYATHEMBA",
+      "votes": 364,
       "rows": [
         {
           "id": 52,
-          "votes": 44,
-          "percent": 44.9
+          "votes": 364,
+          "percent": 57.78
         }
       ],
       "leader": "DA",
       "leaderId": 52,
       "color": "#f4f400",
       "amount": 0.7,
+      "slug": "siyathemba"
+    },
+    {
+      "code": "NC078",
+      "name": "SIYANCUMA",
+      "votes": 2084,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 2084,
+          "percent": 43.43
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "siyancuma"
+    },
+    {
+      "code": "NC082",
+      "name": "KAI !GARIB",
+      "votes": 2304,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 2304,
+          "percent": 41.99
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "kai-garib"
+    },
+    {
+      "code": "NC084",
+      "name": "!KHEIS",
+      "votes": 2057,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 2057,
+          "percent": 45.6
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
       "slug": "kheis"
+    },
+    {
+      "code": "NC085",
+      "name": "TSANTSABANE",
+      "votes": 404,
+      "rows": [
+        {
+          "id": 1960,
+          "votes": 404,
+          "percent": 41.65
+        }
+      ],
+      "leader": "RTC",
+      "leaderId": 1960,
+      "color": "#bae5f2",
+      "amount": 0.7,
+      "slug": "tsantsabane"
     },
     {
       "code": "NC086",
       "name": "KGATELOPELE",
-      "votes": 19,
+      "votes": 1449,
       "rows": [
         {
-          "id": 4,
-          "votes": 19,
-          "percent": 43.18
+          "id": 52,
+          "votes": 1449,
+          "percent": 28.86
         }
       ],
-      "leader": "VF PLUS",
-      "leaderId": 4,
-      "color": "#bf7fff",
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
       "amount": 0.7,
       "slug": "kgatelopele"
     },
     {
       "code": "NC087",
       "name": "Dawid Kruiper",
-      "votes": 44,
+      "votes": 3680,
       "rows": [
         {
           "id": 52,
-          "votes": 44,
-          "percent": 64.71
+          "votes": 3680,
+          "percent": 47.55
         }
       ],
       "leader": "DA",
@@ -699,14 +2293,167 @@
       "slug": "dawid-kruiper"
     },
     {
+      "code": "LIM471",
+      "name": "Ephraim Mogale",
+      "votes": 239,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 239,
+          "percent": 42.38
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "ephraim-mogale"
+    },
+    {
+      "code": "LIM472",
+      "name": "Elias Motsoaledi",
+      "votes": 178,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 178,
+          "percent": 50.0
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "elias-motsoaledi"
+    },
+    {
+      "code": "LIM335",
+      "name": "Maruleng",
+      "votes": 2622,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 2622,
+          "percent": 44.74
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "maruleng"
+    },
+    {
+      "code": "LIM341",
+      "name": "Musina",
+      "votes": 364,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 364,
+          "percent": 43.28
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "musina"
+    },
+    {
+      "code": "LIM353",
+      "name": "Molemole",
+      "votes": 155,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 155,
+          "percent": 41.33
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "molemole"
+    },
+    {
+      "code": "LIM355",
+      "name": "Lepele-Nkumpi",
+      "votes": 210,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 210,
+          "percent": 53.44
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "lepele-nkumpi"
+    },
+    {
+      "code": "LIM361",
+      "name": "Thabazimbi",
+      "votes": 578,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 578,
+          "percent": 42.22
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "thabazimbi"
+    },
+    {
+      "code": "LIM362",
+      "name": "Lephalale",
+      "votes": 277,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 277,
+          "percent": 41.59
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "lephalale"
+    },
+    {
+      "code": "LIM366",
+      "name": "Bela-Bela",
+      "votes": 571,
+      "rows": [
+        {
+          "id": 2074,
+          "votes": 571,
+          "percent": 28.81
+        }
+      ],
+      "leader": "BBA",
+      "leaderId": 2074,
+      "color": "#bae5f2",
+      "amount": 0.7,
+      "slug": "bela-bela"
+    },
+    {
       "code": "NW374",
       "name": "Kgetlengrivier",
-      "votes": 149,
+      "votes": 561,
       "rows": [
         {
           "id": 4,
-          "votes": 149,
-          "percent": 71.63
+          "votes": 561,
+          "percent": 53.43
         }
       ],
       "leader": "VF PLUS",
@@ -716,31 +2463,303 @@
       "slug": "kgetlengrivier"
     },
     {
-      "code": "NW405",
-      "name": "JB Marks",
-      "votes": 40,
+      "code": "NW381",
+      "name": "Ratlou",
+      "votes": 68,
       "rows": [
         {
-          "id": 4,
-          "votes": 40,
-          "percent": 41.67
+          "id": 52,
+          "votes": 68,
+          "percent": 49.28
         }
       ],
-      "leader": "VF PLUS",
-      "leaderId": 4,
-      "color": "#bf7fff",
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "ratlou"
+    },
+    {
+      "code": "NW382",
+      "name": "Tswaing",
+      "votes": 178,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 178,
+          "percent": 34.7
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "tswaing"
+    },
+    {
+      "code": "NW383",
+      "name": "Mafikeng",
+      "votes": 285,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 285,
+          "percent": 45.6
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "mafikeng"
+    },
+    {
+      "code": "NW384",
+      "name": "Ditsobotla",
+      "votes": 289,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 289,
+          "percent": 42.75
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "ditsobotla"
+    },
+    {
+      "code": "NW392",
+      "name": "Naledi",
+      "votes": 720,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 720,
+          "percent": 27.64
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "naledi"
+    },
+    {
+      "code": "NW393",
+      "name": "Mamusa",
+      "votes": 1513,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1513,
+          "percent": 51.01
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "mamusa"
+    },
+    {
+      "code": "NW394",
+      "name": "Greater Taung",
+      "votes": 1370,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1370,
+          "percent": 47.0
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "greater-taung"
+    },
+    {
+      "code": "NW396",
+      "name": "Lekwa-Teemane",
+      "votes": 201,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 201,
+          "percent": 36.22
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "lekwa-teemane"
+    },
+    {
+      "code": "NW403",
+      "name": "Matlosana",
+      "votes": 1425,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1425,
+          "percent": 37.02
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "city-of-matlosana"
+    },
+    {
+      "code": "NW404",
+      "name": "Maquassi Hills",
+      "votes": 865,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 865,
+          "percent": 61.52
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "maquassi-hills"
+    },
+    {
+      "code": "NW397",
+      "name": "Kagisano-Molopo",
+      "votes": 1030,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1030,
+          "percent": 70.84
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "slug": "kagisano-molopo"
+    },
+    {
+      "code": "NW405",
+      "name": "JB Marks",
+      "votes": 3926,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 3926,
+          "percent": 44.83
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
       "amount": 0.7,
       "slug": "ventersdorp-tlokwe"
     },
     {
-      "code": "WC015",
-      "name": "Swartland",
-      "votes": 1155,
+      "code": "CPT",
+      "name": "City of Cape Town",
+      "votes": 33883,
       "rows": [
         {
           "id": 52,
-          "votes": 1155,
-          "percent": 76.95
+          "votes": 33883,
+          "percent": 60.41
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "city-of-cape-town"
+    },
+    {
+      "code": "WC011",
+      "name": "Matzikama",
+      "votes": 2852,
+      "rows": [
+        {
+          "id": 957,
+          "votes": 2852,
+          "percent": 37.24
+        }
+      ],
+      "leader": "PA",
+      "leaderId": 957,
+      "color": "#006ba0",
+      "amount": 0.7,
+      "slug": "matzikama"
+    },
+    {
+      "code": "WC012",
+      "name": "Cederberg",
+      "votes": 2657,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 2657,
+          "percent": 38.58
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "cederberg"
+    },
+    {
+      "code": "WC013",
+      "name": "Bergrivier",
+      "votes": 659,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 659,
+          "percent": 60.02
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "bergrivier"
+    },
+    {
+      "code": "WC014",
+      "name": "Saldanha Bay",
+      "votes": 4234,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 4234,
+          "percent": 44.82
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "saldanha-bay"
+    },
+    {
+      "code": "WC015",
+      "name": "Swartland",
+      "votes": 13785,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 13785,
+          "percent": 54.04
         }
       ],
       "leader": "DA",
@@ -748,7 +2767,319 @@
       "color": "#f4f400",
       "amount": 0.7,
       "slug": "swartland"
+    },
+    {
+      "code": "WC022",
+      "name": "Witzenberg",
+      "votes": 4869,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 4869,
+          "percent": 47.33
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "witzenberg"
+    },
+    {
+      "code": "WC023",
+      "name": "Drakenstein",
+      "votes": 19087,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 19087,
+          "percent": 68.0
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "drakenstein"
+    },
+    {
+      "code": "WC024",
+      "name": "Stellenbosch",
+      "votes": 2723,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 2723,
+          "percent": 63.88
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "stellenbosch"
+    },
+    {
+      "code": "WC026",
+      "name": "Langeberg",
+      "votes": 2409,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 2409,
+          "percent": 50.43
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "langeberg"
+    },
+    {
+      "code": "WC031",
+      "name": "Theewaterskloof",
+      "votes": 932,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 932,
+          "percent": 69.76
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "theewaterskloof"
+    },
+    {
+      "code": "WC033",
+      "name": "Cape Agulhas",
+      "votes": 1938,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 1938,
+          "percent": 45.01
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "cape-agulhas"
+    },
+    {
+      "code": "WC034",
+      "name": "Swellendam",
+      "votes": 811,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 811,
+          "percent": 55.36
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "swellendam"
+    },
+    {
+      "code": "WC041",
+      "name": "Kannaland",
+      "votes": 2142,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 2142,
+          "percent": 37.17
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "kannaland"
+    },
+    {
+      "code": "WC042",
+      "name": "Hessequa",
+      "votes": 6617,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 2511,
+          "percent": 29.5
+        },
+        {
+          "id": 52,
+          "votes": 4106,
+          "percent": 48.24
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.753,
+      "slug": "hessequa"
+    },
+    {
+      "code": "WC043",
+      "name": "Mossel Bay",
+      "votes": 9807,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 9807,
+          "percent": 67.32
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "mossel-bay"
+    },
+    {
+      "code": "WC045",
+      "name": "Oudtshoorn",
+      "votes": 3592,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 3592,
+          "percent": 55.98
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "oudtshoorn"
+    },
+    {
+      "code": "WC047",
+      "name": "Bitou",
+      "votes": 829,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 829,
+          "percent": 62.61
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "bitou"
+    },
+    {
+      "code": "WC048",
+      "name": "Knysna",
+      "votes": 2010,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 2010,
+          "percent": 75.76
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "knysna"
+    },
+    {
+      "code": "WC051",
+      "name": "Laingsburg",
+      "votes": 1776,
+      "rows": [
+        {
+          "id": 1511,
+          "votes": 1776,
+          "percent": 26.59
+        }
+      ],
+      "leader": "ACTIONSA",
+      "leaderId": 1511,
+      "color": "#bc4542",
+      "amount": 0.7,
+      "slug": "laingsburg"
+    },
+    {
+      "code": "WC052",
+      "name": "Prince Albert",
+      "votes": 2921,
+      "rows": [
+        {
+          "id": 957,
+          "votes": 2921,
+          "percent": 48.7
+        }
+      ],
+      "leader": "PA",
+      "leaderId": 957,
+      "color": "#006ba0",
+      "amount": 0.7,
+      "slug": "prince-albert"
+    },
+    {
+      "code": "WC053",
+      "name": "Beaufort West",
+      "votes": 1800,
+      "rows": [
+        {
+          "id": 52,
+          "votes": 1800,
+          "percent": 31.8
+        }
+      ],
+      "leader": "DA",
+      "leaderId": 52,
+      "color": "#f4f400",
+      "amount": 0.7,
+      "slug": "beaufort-west"
     }
   ],
-  "unmatched": []
+  "unmatched": [
+    {
+      "code": "EC137",
+      "name": "Dr. A.B. Xuma",
+      "votes": 3693,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 3693,
+          "percent": 64.59
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "province": "Eastern Cape"
+    },
+    {
+      "code": "EC156",
+      "name": "Kumkani Mhlontlo",
+      "votes": 1699,
+      "rows": [
+        {
+          "id": 7,
+          "votes": 1699,
+          "percent": 47.67
+        }
+      ],
+      "leader": "ANC",
+      "leaderId": 7,
+      "color": "#06fb06",
+      "amount": 0.7,
+      "province": "Eastern Cape"
+    }
+  ]
 }
