@@ -104,6 +104,10 @@
   var loaded = {};
   var loadedEdge = {};
   var sharpening = {};
+  var gridFrom = 0;
+  var gridTo = 0;
+  var gridStep = 60;
+  var booted = false;
 
   credit.setAttribute("aria-live", "polite");
   canvas.setAttribute("aria-hidden", "true");
@@ -129,13 +133,31 @@
     subjectHost.appendChild(button);
   });
 
-  restore();
-  photos = arrange();
-  syncSubjects();
-  applyMapChrome();
-  measure();
-  if (mapOn()) mountMap(mapPick.value);
-  go(1);
+  function boot() {
+    if (booted) return;
+    booted = true;
+    restore();
+    photos = arrange();
+    syncSubjects();
+    applyMapChrome();
+    measure();
+    if (mapOn()) mountMap(mapPick.value);
+    go(1);
+  }
+
+  var catalog = new XMLHttpRequest();
+  catalog.open("GET", "gallery-photos.json", true);
+  catalog.onload = function () {
+    if (catalog.status >= 200 && catalog.status < 300) {
+      try {
+        var list = JSON.parse(catalog.responseText);
+        if (list && list.length) PHOTOS = list;
+      } catch (error) {}
+    }
+    boot();
+  };
+  catalog.onerror = function () { boot(); };
+  catalog.send();
 
   photoAlpha.addEventListener("input", function () {
     syncRange(photoAlpha, "wall-photo-alpha-val");
@@ -192,6 +214,11 @@
   });
   browseBtn.addEventListener("click", function () {
     setBrowsing(!browsing);
+  });
+  sheet.addEventListener("scroll", function () {
+    if (!browsing || gridTo >= photos.length) return;
+    if (sheet.scrollTop + sheet.clientHeight < sheet.scrollHeight - 280) return;
+    appendThumbs();
   });
   fullBtn.addEventListener("click", function () {
     if (document.fullscreenElement) document.exitFullscreen();
@@ -879,18 +906,18 @@
   function retarget() {
     var id = photos[index] && photos[index].id;
     photos = arrange();
-    paintGrid();
     var found = -1;
     var i;
     for (i = 0; i < photos.length; i++) if (photos[i].id === id) found = i;
     if (found >= 0) {
       index = found;
+      paintGrid();
       writeCredit();
-      markGrid();
       if (photos.length) preload((index + 1) % photos.length);
       return;
     }
     index = -1;
+    paintGrid();
     if (!photos.length) {
       credit.textContent = "No photographs in this subject.";
       return;
@@ -902,32 +929,75 @@
     return "https://images.unsplash.com/" + photo.id + "?auto=format&fit=crop&w=320&h=200&q=60";
   }
 
+  function addThumb(i) {
+    var photo = photos[i];
+    var button = document.createElement("button");
+    button.type = "button";
+    button.setAttribute("data-index", String(i));
+    button.setAttribute("aria-label", photo.alt + ". Photo by " + photo.by);
+    var img = document.createElement("img");
+    img.alt = "";
+    img.loading = "lazy";
+    img.src = thumbUrl(photo);
+    button.appendChild(img);
+    button.addEventListener("click", function () { jumpTo(i); });
+    grid.appendChild(button);
+  }
+
+  function moreButton(next) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "wall-more";
+    button.textContent = next ? "More photographs" : "Earlier photographs";
+    button.addEventListener("click", function () {
+      if (next) appendThumbs();
+      else revealEarlier();
+    });
+    return button;
+  }
+
   function paintGrid() {
     if (sheet.hidden) return;
+    var start = 0;
+    if (index > 0) start = Math.floor(index / gridStep) * gridStep;
+    gridFrom = start;
+    gridTo = Math.min(photos.length, start + gridStep);
     grid.replaceChildren();
-    photos.forEach(function (photo, i) {
-      var button = document.createElement("button");
-      button.type = "button";
-      button.setAttribute("aria-label", photo.alt + ". Photo by " + photo.by);
-      var img = document.createElement("img");
-      img.alt = "";
-      img.loading = "lazy";
-      img.src = thumbUrl(photo);
-      button.appendChild(img);
-      button.addEventListener("click", function () { jumpTo(i); });
-      grid.appendChild(button);
-    });
+    if (gridFrom > 0) grid.appendChild(moreButton(false));
+    var i;
+    for (i = gridFrom; i < gridTo; i++) addThumb(i);
+    if (gridTo < photos.length) grid.appendChild(moreButton(true));
+    markGrid(true);
+  }
+
+  function appendThumbs() {
+    if (gridTo >= photos.length) return;
+    var buttons = grid.querySelectorAll(".wall-more");
+    var last = buttons.length ? buttons[buttons.length - 1] : null;
+    if (last && last.textContent.indexOf("More") === 0) last.remove();
+    var start = gridTo;
+    gridTo = Math.min(photos.length, gridTo + gridStep);
+    var i;
+    for (i = start; i < gridTo; i++) addThumb(i);
+    if (gridTo < photos.length) grid.appendChild(moreButton(true));
     markGrid();
   }
 
-  function markGrid() {
+  function revealEarlier() {
+    gridFrom = Math.max(0, gridFrom - gridStep);
+    paintGrid();
+    sheet.scrollTop = 0;
+  }
+
+  function markGrid(scroll) {
     if (sheet.hidden) return;
-    var buttons = grid.querySelectorAll("button");
+    var buttons = grid.querySelectorAll("button[data-index]");
     var i;
     for (i = 0; i < buttons.length; i++) {
-      if (i === index) {
+      var at = +buttons[i].getAttribute("data-index");
+      if (at === index) {
         buttons[i].setAttribute("aria-current", "true");
-        if (buttons[i].scrollIntoView) buttons[i].scrollIntoView({ block: "nearest", inline: "nearest" });
+        if (scroll && buttons[i].scrollIntoView) buttons[i].scrollIntoView({ block: "nearest", inline: "nearest" });
       } else {
         buttons[i].removeAttribute("aria-current");
       }
