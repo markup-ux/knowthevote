@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaders.vote · Census</title>
+<meta name="description" content="National figures for the United States, including Census Bureau population estimates and a health map of fast-food locations.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="guide.css?v=blend1">
+<style>
+#census-map, #census-counties { width: 100%; height: auto; background: transparent; }
+#census-map path, #census-counties path { fill: var(--chip); stroke: var(--ink); stroke-width: 0.8; cursor: pointer; }
+#census-map path.is-on, #census-counties path.is-on { stroke: #0a3161; stroke-width: 2.4; }
+#census-map text.map-code {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 650;
+  fill: #1c1915;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+}
+#census-map text.map-code.on-dark { fill: #f4f7fb; }
+#census-states button {
+  font: inherit;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+}
+#census-states button.is-on { border-bottom-color: #0a3161; background: #8eafd4; }
+#census-detail { scroll-margin-top: 120px; }
+#census-detail h2 { margin-top: 8px; }
+.census-actions { margin: 18px 0 0; }
+.census-actions button, .linkish {
+  font: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+.census-actions button { text-decoration: underline; text-underline-offset: 3px; }
+.census-scroll { max-height: 520px; overflow: auto; margin-top: 8px; }
+.census-scroll th { position: sticky; top: 0; background: var(--paper); }
+.census-scroll tr.is-on td { background: #8eafd4; }
+#county-slot { margin-top: 18px; }
+.census-topic { margin: 12px 0 16px; font-size: 18px; }
+.census-topic a { color: inherit; }
+#health { scroll-margin-top: 120px; }
+.health-layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 28px; align-items: start; }
+.health-tools { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 8px 0; }
+.health-tools button, .health-brands button, .health-centers button, .health-hoods button {
+  font: inherit;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 6px 0;
+  cursor: pointer;
+  text-align: left;
+}
+.health-tools button[aria-pressed="true"], .health-brands button.is-on, .health-centers button.is-on, .health-hoods button.is-on { border-bottom-color: var(--ink); }
+#health-map-wrap { position: relative; width: 100%; height: 560px; background: var(--paper); }
+#health-basemap { position: absolute; inset: 0; }
+#health-map { position: absolute; inset: 0; width: 100%; height: 100%; display: block; background: transparent; cursor: grab; touch-action: none; }
+#health-map.is-drag { cursor: grabbing; }
+.map-attrib { margin-top: 6px; }
+.health-legend { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-top: 8px; }
+.health-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.health-legend .legend-label { flex-basis: 100%; font-weight: 650; }
+.health-swatch { width: 14px; height: 14px; border: 1px solid var(--ink); }
+.health-brands { max-height: 480px; }
+#center-list { margin-top: 12px; }
+#center-list summary { cursor: pointer; width: fit-content; font-size: 18px; }
+.health-brands button, .health-centers button, .health-hoods button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 6px 0; }
+.hood-brand { display: flex; align-items: center; gap: 10px; margin: 8px 0 4px; }
+.hood-brand select { font: inherit; color: inherit; background: var(--paper); border: 1px solid var(--line); padding: 4px 8px; max-width: 280px; }
+.brand-mark { width: 32px; height: 32px; flex: none; display: block; }
+.factory-mark { width: 44px; height: 44px; flex: none; display: block; }
+.chem-picks { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 14px 0; align-items: center; }
+.chem-picks button { display: inline-flex; align-items: center; gap: 6px; font: inherit; color: inherit; background: transparent; border: 0; border-bottom: 2px solid transparent; padding: 4px 0; cursor: pointer; }
+.chem-picks button.is-on { border-bottom-color: var(--ink); }
+.harm-mark { width: 48px; height: 48px; flex: none; display: block; }
+.harm-body { display: flex; gap: 14px; align-items: flex-start; }
+.harm-mark-lg { width: 72px; height: 72px; }
+.chem-set { flex-basis: 100%; margin: 12px 0 0; font-size: 15px; }
+.chem-row { display: grid; grid-template-columns: 28ch minmax(0, 1fr) 36ch; gap: 10px; align-items: center; margin: 6px 0; }
+.chem-track { display: block; height: 16px; background: #ebe4d6; }
+.chem-track i { display: block; height: 16px; background: #8a7968; }
+.chem-row.is-high .chem-track i { background: #2c261f; }
+.chem-row span:last-child { font-size: 15px; }
+#chem-visual h3, #chain-rank-visual h3 { margin: 18px 0 6px; font-size: 22px; }
+#behavior { scroll-margin-top: 120px; }
+.behavior { width: 100%; border-collapse: collapse; margin: 8px 0 18px; }
+.behavior th, .behavior td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.behavior th { font-weight: 650; }
+@media (max-width: 800px) {
+  .behavior, .behavior thead, .behavior tbody, .behavior tr, .behavior th, .behavior td { display: block; }
+  .behavior thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+  .behavior td { border-bottom: 0; padding: 4px 0; }
+  .behavior td:last-child { border-bottom: 1px solid var(--line); padding-bottom: 14px; }
+  .behavior td::before { display: block; font-weight: 650; }
+  .behavior td:nth-child(1)::before { content: "What was studied"; }
+  .behavior td:nth-child(2)::before { content: "What the study found"; }
+  .behavior td:nth-child(3)::before { content: "Limit"; }
+}
+button.chem-row { font: inherit; color: inherit; background: transparent; border: 0; border-bottom: 2px solid transparent; text-align: left; cursor: pointer; padding: 2px 0; width: 100%; }
+button.chem-row.is-on { border-bottom-color: var(--ink); }
+.health-check { display: flex; align-items: center; gap: 8px; margin: 8px 0 0; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 400; }
+.health-check input { margin: 0; }
+#health-readout { min-height: 1.4em; }
+@media (max-width: 800px) {
+  .health-layout { grid-template-columns: 1fr; }
+  #health-map-wrap { height: 420px; }
+  .chem-row { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- seo -->
+<link rel="canonical" href="https://leaders.vote/census.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="application-name" content="Leaders.vote">
+<meta property="og:site_name" content="Leaders.vote">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://leaders.vote/census.html">
+<meta property="og:title" content="Leaders.vote · Census">
+<meta property="og:description" content="National figures for the United States, including Census Bureau population estimates and a health map of fast-food locations.">
+<meta property="og:image" content="https://leaders.vote/social/leaders-vote-social.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="3072">
+<meta property="og:image:height" content="3840">
+<meta property="og:image:alt" content="Leaders.vote. Know who you&#x27;re voting for.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leaders.vote · Census">
+<meta name="twitter:description" content="National figures for the United States, including Census Bureau population estimates and a health map of fast-food locations.">
+<meta name="twitter:image" content="https://leaders.vote/social/leaders-vote-social.jpg">
+<link rel="icon" href="https://leaders.vote/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://leaders.vote/#website","name":"Leaders.vote","url":"https://leaders.vote/","description":"Leaders.vote is an independent, nonpartisan voter guide for every U.S. state on November 3, 2026. Candidates, offices, sample ballots, and unofficial results. No endorsements.","inLanguage":"en","publisher":{"@id":"https://leaders.vote/#publisher"}},{"@type":"Organization","@id":"https://leaders.vote/#publisher","name":"Leaders.vote","url":"https://leaders.vote/","description":"Independent, nonpartisan voter guide. Not a campaign and not a government site.","logo":{"@type":"ImageObject","url":"https://leaders.vote/favicon.svg"}},{"@type":"WebPage","@id":"https://leaders.vote/census.html#webpage","url":"https://leaders.vote/census.html","name":"Leaders.vote · Census","description":"National figures for the United States, including Census Bureau population estimates and a health map of fast-food locations.","isPartOf":{"@id":"https://leaders.vote/#website"},"breadcrumb":{"@id":"https://leaders.vote/census.html#breadcrumb"},"inLanguage":"en","isAccessibleForFree":true,"primaryImageOfPage":{"@type":"ImageObject","url":"https://leaders.vote/social/leaders-vote-social.jpg"}},{"@type":"BreadcrumbList","@id":"https://leaders.vote/census.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Leaders.vote","item":"https://leaders.vote/"},{"@type":"ListItem","position":2,"name":"Census","item":"https://leaders.vote/census.html"}]}]}</script>
+<!-- /seo -->
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="bar-top">
+      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      <div class="lang notranslate" translate="no">
+        <span class="visually-hidden">Language</span>
+        <select id="lang" class="visually-hidden" aria-hidden="true" tabindex="-1">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-CN">中文</option>
+          <option value="pl">Polski</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ko">한국어</option>
+          <option value="tl">Tagalog</option>
+          <option value="ar">العربية</option>
+          <option value="ur">اردو</option>
+          <option value="uk">Українська</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="fr">Français</option>
+        </select>
+        <button type="button" class="lang-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">English</button>
+        <ul id="lang-list" class="lang-menu" role="listbox" aria-label="Translate this page" hidden>
+          <li role="none"><button type="button" role="option" data-lang="en" aria-selected="true">English</button></li>
+          <li role="none"><button type="button" role="option" data-lang="es">Español</button></li>
+          <li role="none"><button type="button" role="option" data-lang="zh-CN">中文</button></li>
+          <li role="none"><button type="button" role="option" data-lang="pl">Polski</button></li>
+          <li role="none"><button type="button" role="option" data-lang="hi">हिन्दी</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ko">한국어</button></li>
+          <li role="none"><button type="button" role="option" data-lang="tl">Tagalog</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ar">العربية</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ur">اردو</button></li>
+          <li role="none"><button type="button" role="option" data-lang="uk">Українська</button></li>
+          <li role="none"><button type="button" role="option" data-lang="vi">Tiếng Việt</button></li>
+          <li role="none"><button type="button" role="option" data-lang="fr">Français</button></li>
+        </ul>
+      </div>
+    </div>
+    <p class="here notranslate" translate="no"><img src="flags/us.svg" alt=""><span>Census</span></p>
+    <nav>
+      <a href="index.html">All states</a>
+      <a href="countries.html">Countries</a>
+      <a href="census.html" aria-current="page">Census</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="play.html">Play</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero">
+    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
+    <p class="kicker">United States · Census Bureau · July 1, 2025</p>
+    <p class="census-topic"><a href="#health">Health</a></p>
+    <h1>National figures.</h1>
+    <p class="deck">Counts from the U.S. Census Bureau for the states, the District of Columbia, and each county. Open a state for the parishes, boroughs, cities, and other areas in the Bureau's county file. A darker place has a larger count.</p>
+    <p class="deck">Change is the July 1, 2025 estimate minus the April 1, 2020 estimates base. That base begins with the 2020 census. Age and median age use the same July 1 estimates. House seats are the ones the 2020 census assigned.</p>
+    <div class="sheet-switch" id="census-measures" role="group" aria-label="Census measure"></div>
+    <div id="census-slot"></div>
+    <p id="census-blurb" class="sub"></p>
+    <div id="census-legend" class="result-legend"></div>
+    <p id="census-status" class="note" aria-live="polite"></p>
+    <div id="census-states" class="state-list"></div>
+    <div id="census-detail"></div>
+    <section class="where" id="health">
+      <h2>Health</h2>
+      <p class="deck">This section shows chemicals measured in fast food that brands advertise. One study measured fluorinated chemicals in the packaging, not in the food. The point is those chemicals, and the effects described for them in the body. Healthcare is one of the largest questions in this election. The measurements are here so that question includes what has been found. A later table covers studies of aggression, irritability, and hyperactivity.</p>
+      <p class="deck">The number beside a brand is its published U.S. restaurant count. McDonald's is 13,706 restaurants at December 31, 2025, from its annual report. The other published counts are year-end 2024 U.S. units from QSR Magazine's 2025 QSR 50. Where that report estimated a figure, the detail says so. The map draws OpenStreetMap points, which is fewer than the published count. A number marked tagged has no separate published total here.</p>
+      <p class="deck">Each restaurant mark is a drawing of a food the brand sells, placed on an OpenStreetMap point. Roads, cities, and neighborhoods are on the same map. Zoom in. Sort the brands by the published count, or by name, and choose one brand to draw only those places.</p>
+      <p class="deck">A 2021 study measured plasticizers in hamburgers, fries, chicken burritos, cheese pizza, chicken nuggets, and plain patties. An FDA survey measured acrylamide in restaurant fries. A 2017 study measured fluorinated chemicals in packaging, not in the food. Choose a chemical under the map. The drawing beside the name is the effect described for that chemical. A later list shows the highest and lowest amounts in each published comparison. The list is not every chemical that can be in fast food. Distribution centers are addresses one McDonald's supplier publishes. Their mark is a factory drawing. The address is a distribution center, and no delivery route is published.</p>
+      <div class="health-layout">
+        <div>
+          <div class="health-tools" role="group" aria-label="Map view">
+            <button type="button" id="zoom-in">Zoom in</button>
+            <button type="button" id="zoom-out">Zoom out</button>
+            <button type="button" id="view-us" aria-pressed="true">Lower 48</button>
+            <button type="button" id="view-ak">Alaska</button>
+            <button type="button" id="view-hi">Hawaii</button>
+          </div>
+          <label class="health-check"><input type="checkbox" id="show-centers" checked> Show distribution centers</label>
+          <div id="health-map-wrap">
+            <div id="health-basemap"></div>
+            <canvas id="health-map" aria-label="Map of fast-food restaurants, roads, and cities"></canvas>
+          </div>
+          <p class="note map-attrib">Roads, cities, and neighborhoods: <a href="https://openfreemap.org/">OpenFreeMap</a>, <a href="https://openmaptiles.org/">OpenMapTiles</a>, <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.</p>
+          <p id="health-readout" class="sub" aria-live="polite"></p>
+          <div id="health-legend" class="health-legend"></div>
+        </div>
+        <div>
+          <h2>Brands</h2>
+          <div class="sheet-switch" role="group" aria-label="Sort brands">
+            <button type="button" id="sort-count" aria-pressed="true">Most locations</button>
+            <button type="button" id="sort-name">Name</button>
+          </div>
+          <div id="health-brands" class="census-scroll health-brands"></div>
+        </div>
+      </div>
+      <section class="where" id="neighborhoods">
+        <h2>Neighborhoods</h2>
+        <p class="deck">A restaurant is counted with the nearest named neighborhood, suburb, or quarter in OpenStreetMap, when one is within 2 kilometers. The city is the nearest named city or town in the same state. Choose a brand to rank these places by that brand. The rank uses the restaurants drawn on this map.</p>
+        <div class="sheet-switch" role="group" aria-label="Sort neighborhoods">
+          <button type="button" id="hood-count" aria-pressed="true">Most locations</button>
+          <button type="button" id="hood-variety">Most brands</button>
+          <button type="button" id="hood-name">Name</button>
+        </div>
+        <div class="hood-brand">
+          <span>Brand</span>
+          <select id="hood-brand" aria-label="Brand"></select>
+        </div>
+        <div id="health-hoods" class="census-scroll health-hoods"></div>
+        <p id="hood-note" class="note"></p>
+      </section>
+      <section class="where" id="chemicals">
+        <h2>Chemicals measured</h2>
+        <p class="deck">These are not the only chemicals that can be in fast food. Each group is one published study. A percent in one group is not comparable to a percent in another.</p>
+        <p class="deck">Edwards and coauthors bought 64 foods in San Antonio in 2017 and 2018 and measured 11 plasticizers. A hamburger with toppings had cheese, tomato, pickles, onion, lettuce, and condiments. A plain patty had none of those. Chicken burritos were ordered two ways: white rice, black beans, cheese, mild salsa, and lettuce; or refried pinto beans, cheese, onion, sour cream, tomato, lettuce, and a tomato sauce. The supplement marks six chains as the ones in the study: McDonald's, Burger King, Pizza Hut, Domino's, Taco Bell, and Chipotle. The result tables call them Chain A and Chain B and do not say which name had the higher amount.</p>
+        <div class="sheet-switch" role="group" aria-label="Sort chemicals">
+          <button type="button" id="chem-rate" aria-pressed="true">Detection rate</button>
+          <button type="button" id="chem-name">Name</button>
+        </div>
+        <div id="chem-picks" class="chem-picks" role="group" aria-label="Chemical"></div>
+        <div id="chem-visual"></div>
+      </section>
+      <section class="where" id="chain-rank">
+        <h2>Higher and lower amounts</h2>
+        <p class="deck">This is not a ranking of the most harmful chain. No study on this page publishes that score. The fry survey is the only comparison that names chains. The plasticizer paper prints a higher amount and a lower amount and does not name the chains. The packaging study does not name chains. These are measurements in food or in packaging, not a list of chemicals a chain adds as ingredients.</p>
+        <div id="chain-rank-visual"></div>
+      </section>
+      <section class="where" id="behavior">
+        <h2>Aggression and irritability</h2>
+        <p class="deck">These studies asked whether a food chemical is associated with aggression. Evidence that one chemical causes aggression in people is limited. A study of hyperactivity or irritability is not a study of aggression. None of these studies tested the restaurants drawn on the map.</p>
+        <table class="behavior">
+          <thead>
+            <tr>
+              <th>What was studied</th>
+              <th>What the study found</th>
+              <th>Limit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Trans fat</td>
+              <td>Golomb and coauthors, 2012, studied 945 adults who completed a diet survey, out of 1,018 people screened. Higher dietary trans fat was associated with more aggression and irritability. The analysis adjusted for sex, age, education, alcohol, and smoking. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0032175">PLOS One</a>.</td>
+              <td>The study observed the association. It did not assign people to eat trans fat, and the authors say confounding remains a concern. In 2015 the FDA determined that partially hydrogenated oils, the main source of artificial trans fat, are not generally recognized as safe. For most uses, manufacturers could not add them to food after June 18, 2018. Food already made could continue through distribution until January 1, 2020. <a href="https://www.fda.gov/food/food-additives-petitions/final-determination-regarding-partially-hydrogenated-oils-removing-trans-fat">FDA</a>.</td>
+            </tr>
+            <tr>
+              <td>Artificial food colors and sodium benzoate</td>
+              <td>McCann and coauthors, 2007, gave 153 children age 3 and 144 children age 8 or 9 a drink. The drink contained a mixture of artificial colors and sodium benzoate, or a placebo. Some mixtures were followed by higher hyperactivity scores. <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(07)61306-3/abstract">The Lancet</a>.</td>
+              <td>The outcome was hyperactivity, not aggression. Each drink mixed several additives, so the trial does not say which additive produced the change. The European Food Safety Authority later called the evidence limited. The effect was small, it was not consistent across ages and mixtures, and the authority did not change the safety evaluation of those additives. <a href="https://www.efsa.europa.eu/en/press/news/080314">EFSA</a>.</td>
+            </tr>
+            <tr>
+              <td>Calcium propionate, a bread preservative</td>
+              <td>Dengate and Ruben, 2002, gave 27 children bread with calcium propionate or a placebo. The children had already been selected because their behavior improved on a diet that removed additives. Average behavior scores were not significantly different. Relative to placebo, behavior worsened for 52% and improved for 19%. <a href="https://pubmed.ncbi.nlm.nih.gov/12173999/">PubMed</a>.</td>
+              <td>The group was small and already selected. The authors describe irritability, restlessness, inattention, and sleep disturbance in some children. The paper does not report a finding on aggression.</td>
+            </tr>
+            <tr>
+              <td>Soft drinks</td>
+              <td>Shi and coauthors, 2020, used school surveys from 64 countries. The surveys included 263,890 adolescents, ages 12 to 18. Students who reported more soft drinks also reported more physical fights. Frequent fighting meant three or more fights in the past 12 months. Each additional time per day was associated with an 11% higher likelihood of frequent fighting, with a 95% confidence interval of 10% to 13%, after adjustment. <a href="https://www.mdpi.com/2072-6643/12/3/694">Nutrients</a>.</td>
+              <td>The surveys do not say whether sugar, caffeine, or another part of the drink explains the association. Students reported their own drinks and fights. Fast-food intake also rose with soft-drink intake. The study did not assign anyone to drink soda.</td>
+            </tr>
+            <tr>
+              <td>Sugar</td>
+              <td>Wolraich, Wilson, and White, 1995, combined 16 reports covering 23 blinded studies. Each study compared a known amount of sugar with an artificial-sweetener placebo. For every behavior and cognition measure they pooled, the confidence interval included no effect. <a href="https://jamanetwork.com/journals/jama/article-abstract/391812">JAMA</a>.</td>
+              <td>The authors say a small effect, or an effect in a subset of children, cannot be ruled out. These were short trials of one dose. They are not a study of a child's usual diet over years.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Of these, the trans fat study is the one that measured aggression in adults. The color and preservative studies are about hyperactivity, irritability, or attention. The soft-drink study counts fights and does not name a chemical.</p>
+      </section>
+      <section class="where" id="centers">
+        <h2>Distribution centers</h2>
+        <p class="deck">Martin Brower publishes street addresses for distribution centers that supply McDonald's restaurants. Those addresses are geocoded and drawn with a factory mark. The list does not say where the food is manufactured, and it does not give the roads between a center and a restaurant. No line on this map is a delivery route.</p>
+        <details id="center-list">
+          <summary id="center-summary">Addresses</summary>
+          <div id="health-centers" class="health-centers"></div>
+          <p id="health-center-miss" class="note"></p>
+        </details>
+      </section>
+      <p id="health-sources" class="note"></p>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. A color on the population map is a Census Bureau count. A mark in Health is a published location or a published measurement.</p>
+    <p>Population, change, age, and median age are from the Census Bureau's <a href="https://www.census.gov/programs-surveys/popest.html">Population Estimates Program</a>, vintage 2025. House seats are from the <a href="https://www.census.gov/data/tables/2020/dec/2020-apportionment-data.html">2020 census apportionment</a>. Leaders.vote copies those published figures.</p>
+  </div>
+</footer>
+<div id="google_translate_element" aria-hidden="true"></div>
+<script src="lang.js"></script>
+<script src="census.js?v=3"></script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
+<script src="health.js?v=23"></script>
+</body>
+</html>

@@ -18,6 +18,8 @@ import unicodedata
 import urllib.request
 import zipfile
 import xlrd
+
+import seo
 from datetime import datetime, timezone
 from string import Template
 
@@ -1672,6 +1674,7 @@ def main():
     import build_next
     build_next.build_all()
     write_countries()
+    seo.publish()
 
 
 if __name__ == "__main__":

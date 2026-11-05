@@ -17,6 +17,8 @@ import urllib.request
 from collections import Counter
 from datetime import datetime, timezone
 
+import seo
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZA = os.path.join(ROOT, "za")
 MUNICIPALITIES = os.path.join(ZA, "m")
@@ -448,6 +450,7 @@ def write_html(catalog):
         )
         open(os.path.join(MUNICIPALITIES, item["slug"] + ".html"), "w", encoding="utf-8", newline="\n").write(page)
     write_countries()
+    seo.publish()
     print("wrote pages", len(catalog))
 
 

@@ -10,6 +10,8 @@ import os
 import re
 from datetime import datetime, timedelta, timezone
 
+import seo
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PREVIEW = os.path.join(ROOT, "preview")
 
@@ -971,6 +973,7 @@ def main():
         print("wrote", item["code"])
     open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8", newline="\n").write(index_page(national["states"]))
     print("wrote index", len(national["states"]))
+    seo.publish()
 
 
 if __name__ == "__main__":
