@@ -32,6 +32,12 @@
   };
   var data = null;
   var summaries = {};
+  var money = {};
+  var introduced = {};
+  var introducedList = [];
+  var billsVoted = {};
+  var introLimit = 80;
+  var selectedIntro = "";
   var wordCounts = {};
   var queryCacheRaw = null;
   var queryCache = "";
@@ -45,6 +51,9 @@
   var senateSide = "all";
   var selectedSenate = "";
   var appliedQuery = "";
+  var searchPerson = "";
+  var searchIntroLimit = 100;
+  var searchPeopleLimit = 80;
   var checking = false;
   var mapSlot = document.createElement("div");
   var mapReady = false;
@@ -110,6 +119,15 @@
     return "?";
   }
 
+  var BILL_LABEL = {
+    HJRES: "H.J.Res.", HCONRES: "H.Con.Res.", HRES: "H.Res.", HR: "H.R.",
+    SJRES: "S.J.Res.", SCONRES: "S.Con.Res.", SRES: "S.Res.", S: "S."
+  };
+  var BILL_SLUG = {
+    HJRES: "house-joint-resolution", HCONRES: "house-concurrent-resolution", HRES: "house-resolution", HR: "house-bill",
+    SJRES: "senate-joint-resolution", SCONRES: "senate-concurrent-resolution", SRES: "senate-resolution", S: "senate-bill"
+  };
+
   function billKey(raw) {
     var text = (raw || "").toUpperCase().replace(/[^A-Z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
     for (var i = 0; i < BILL_PATTERNS.length; i++) {
@@ -117,6 +135,22 @@
       if (match) return BILL_PATTERNS[i][0] + match[1];
     }
     return "";
+  }
+
+  function keyParts(key) {
+    var match = /^(HCONRES|HJRES|HRES|HR|SCONRES|SJRES|SRES|S)(\d+)$/.exec(key || "");
+    return match ? [match[1], match[2]] : null;
+  }
+
+  function billLabelFromKey(key) {
+    var parts = keyParts(key);
+    return parts ? BILL_LABEL[parts[0]] + " " + parts[1] : key;
+  }
+
+  function congressBillUrl(key) {
+    var parts = keyParts(key);
+    if (!parts) return "";
+    return "https://www.congress.gov/bill/119th-congress/" + BILL_SLUG[parts[0]] + "/" + parts[1];
   }
 
   function summaryFor(legis) {
@@ -133,8 +167,42 @@
     Object.keys(summaries).forEach(function (key) {
       var item = summaries[key];
       var names = (item.sponsors || []).map(function (sponsor) { return sponsor.name || ""; }).join(" ");
-      item.blob = [(item.paragraphs || []).join(" "), item.title || "", item.senate || "", item.status || "", item.legis || "", names].join(" ").toLowerCase();
+      item.blob = [(item.paragraphs || []).join(" "), item.title || "", item.senate || "", item.status || "", item.legis || "", names, money[key] || ""].join(" ").toLowerCase();
     });
+  }
+
+  function indexIntroduced() {
+    introducedList = Object.keys(introduced).map(function (key) {
+      var item = introduced[key];
+      item.key = key;
+      item.legis = billLabelFromKey(key);
+      var people = item.p || [];
+      var names = people.map(function (person) { return person[1] || ""; }).join(" ");
+      var places = people.map(function (person) { return (person[3] || "") + " " + (person[5] || ""); }).join(" ");
+      var states = people.map(function (person) { return stateName(person[3] || ""); }).join(" ");
+      var parties = people.map(function (person) { return partyWord(person[2] || ""); }).join(" ");
+      item.blob = [item.t || "", item.o || "", item.s || "", item.legis, item.key, item.d || "", names, places, states, parties, money[key] || ""].join(" ").toLowerCase();
+      return item;
+    }).sort(function (a, b) {
+      if (a.d !== b.d) return a.d < b.d ? 1 : -1;
+      var aNumber = keyParts(a.key);
+      var bNumber = keyParts(b.key);
+      var aRank = aNumber ? parseInt(aNumber[1], 10) : 0;
+      var bRank = bNumber ? parseInt(bNumber[1], 10) : 0;
+      return bRank - aRank;
+    });
+  }
+
+  function indexBills() {
+    billsVoted = {};
+    function add(vote) {
+      var key = billKey(vote.legis);
+      if (!key) return;
+      if (!billsVoted[key]) billsVoted[key] = [];
+      billsVoted[key].push(vote);
+    }
+    data.votes.forEach(add);
+    (data.senateVotes || []).forEach(add);
   }
 
   function sponsorMember(sponsor) {
@@ -180,6 +248,28 @@
     if (!sponsors || !sponsors.length) return "";
     var byRequest = sponsors.some(function (sponsor) { return sponsor.byRequest; });
     return (byRequest ? "Introduced by request by " : "Introduced by ") + sponsorNames(sponsors) + ".";
+  }
+
+  function voteIntroducers(vote) {
+    if (!vote || vote.chamber === "senate") return [];
+    var key = billKey(vote.legis);
+    var intro = key && introduced[key];
+    if (intro && intro.p && intro.p.length) return intro.p;
+    var summary = summaryFor(vote.legis);
+    var sponsors = summary && summary.sponsors;
+    if (!sponsors || !sponsors.length) return [];
+    return sponsors.map(function (sponsor) {
+      var known = sponsor.id ? memberById(sponsor.id) : null;
+      return [
+        sponsor.id || "",
+        (known && known[1]) || sponsor.name || "A member",
+        sponsor.party || (known && known[2]) || "",
+        sponsor.state || (known && known[3]) || "",
+        sponsor.district == null ? null : sponsor.district,
+        sponsor.chamber === "senate" ? "senator" : "representative",
+        sponsor.byRequest ? 1 : 0
+      ];
+    });
   }
 
   function sponsorBlock(item) {
@@ -228,9 +318,9 @@
   }
 
   function textLabel(legis) {
-    var key = billKey(legis);
-    if (key.indexOf("RES") >= 0) return "View the resolution";
-    return "View the act";
+    var key = billKey(legis) || legis || "";
+    if (key.indexOf("RES") >= 0) return "Read the full resolution";
+    return "Read the full bill";
   }
 
   function firstSentence(text, limit) {
@@ -243,7 +333,216 @@
     return slice + "…";
   }
 
+  function moneyLine(legis) {
+    var key = billKey(legis);
+    var line = key && money[key];
+    return typeof line === "string" ? line : "";
+  }
+
+  function dollarValue(raw, unit) {
+    var number = String(raw).indexOf(",") >= 0 ? parseFloat(String(raw).replace(/,/g, "")) : parseFloat(raw);
+    var word = (unit || "").toLowerCase();
+    if (word === "million") number *= 1000000;
+    if (word === "billion") number *= 1000000000;
+    if (word === "trillion") number *= 1000000000000;
+    return number;
+  }
+
+  function spendingAmounts(line) {
+    var found = [];
+    var pattern = /\$(\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?)(?:\s+(million|billion|trillion))?/gi;
+    var match;
+    while ((match = pattern.exec(line))) {
+      var value = dollarValue(match[1], match[2]);
+      if (!value || value < 100000) continue;
+      var before = line.slice(Math.max(0, match.index - 70), match.index).toLowerCase();
+      var after = line.slice(match.index + match[0].length, match.index + match[0].length + 48);
+      var around = before + " " + after.toLowerCase();
+      if (around.indexOf("debt limit") >= 0) continue;
+      if (/not to exceed|shall not exceed|not more than|or more|or less|at least|at most|in excess|exceeding|exceeds|valued over|reduced by|drops below|under \$|up to|fine of/.test(around)) continue;
+      var spends = /^\s*for\b/i.test(after) || /funding|provid|appropriat|taxpayer|paid out|\btransfer\b|\bbudget\b/.test(around);
+      if (!spends) continue;
+      found.push({ value: value, label: match[0].replace(/\s+/g, " "), at: match.index, length: match[0].length });
+    }
+    found.sort(function (a, b) { return b.value - a.value; });
+    return found;
+  }
+
+  function moneyFacts(legis, extra) {
+    var line = moneyLine(legis);
+    var found = line ? spendingAmounts(line) : [];
+    if (extra) found = found.concat(spendingAmounts(extra));
+    if (!found.length) return null;
+    found.sort(function (a, b) { return b.value - a.value; });
+    return { top: found[0], all: found, line: line };
+  }
+
+  var taxpayerItems = [];
+
+  function indexTaxpayer() {
+    var byKey = {};
+    function consider(key, title, extra, date) {
+      if (!key) return;
+      var legis = billLabelFromKey(key);
+      var facts = moneyFacts(legis, extra || "");
+      if (!facts) return;
+      var current = byKey[key];
+      if (!current) {
+        byKey[key] = {
+          key: key,
+          legis: legis,
+          title: title || legis,
+          value: facts.top.value,
+          label: facts.top.label,
+          line: facts.line || "",
+          date: date || ""
+        };
+        return;
+      }
+      if (title && (!current.title || current.title === current.legis)) current.title = title;
+      if (date && !current.date) current.date = date;
+      if (facts.line && !current.line) current.line = facts.line;
+      if (facts.top.value > current.value) {
+        current.value = facts.top.value;
+        current.label = facts.top.label;
+      }
+    }
+    Object.keys(money).forEach(function (key) {
+      var summary = summaries[key] || {};
+      consider(key, summary.title || "", money[key], summary.date || "");
+    });
+    introducedList.forEach(function (item) {
+      consider(item.key, item.t || "", introTitles(item), item.d || "");
+    });
+    Object.keys(summaries).forEach(function (key) {
+      var item = summaries[key];
+      consider(key, item.title || "", (item.paragraphs || []).join(" "), item.date || "");
+    });
+    taxpayerItems = Object.keys(byKey).map(function (key) { return byKey[key]; });
+    taxpayerItems.sort(function (a, b) { return b.value - a.value; });
+  }
+
+  function taxpayerPeople(key) {
+    var intro = introduced[key];
+    if (intro && intro.p && intro.p.length) {
+      return intro.p.map(function (person) { return [person[0], person[1], person[2], person[3]]; });
+    }
+    var summary = summaries[key];
+    if (summary && summary.sponsors && summary.sponsors.length) {
+      return summary.sponsors.map(function (sponsor) { return [sponsor.id, sponsor.name, sponsor.party, sponsor.state]; });
+    }
+    return [];
+  }
+
+  function taxpayerPasses(item) {
+    var intro = introduced[item.key];
+    var year = intro && intro.d ? String(intro.d).slice(0, 4) : String(item.date || "").slice(0, 4);
+    if (yearValue() !== "all" && year !== yearValue()) return false;
+    var people = taxpayerPeople(item.key);
+    if (!people.length) return party === "all" && stateCode === "all";
+    return people.some(function (person) {
+      return passesParty(person) && passesState(person);
+    });
+  }
+
+  function taxpayerBlurb(item) {
+    if (item.line) return "";
+    var title = String(item.title || "").replace(/\s+/g, " ").trim().toLowerCase();
+    var summary = summaries[item.key];
+    var paragraphs = summary && summary.paragraphs ? summary.paragraphs : [];
+    var text = "";
+    paragraphs.some(function (paragraph) {
+      if (!spendingAmounts(paragraph).length) return false;
+      text = paragraph;
+      return true;
+    });
+    if (!text && paragraphs.length) text = paragraphs[0];
+    if (!text) {
+      var intro = introduced[item.key];
+      if (intro && intro.o) text = intro.o;
+    }
+    if (!text) return "";
+    var short = firstSentence(text, 420);
+    var flat = String(short || "").replace(/\s+/g, " ").trim().toLowerCase();
+    if (!flat || flat === title || title.indexOf(flat) === 0) return "";
+    return short;
+  }
+
+  function renderTaxpayer() {
+    var list = document.getElementById("taxpayer-list");
+    var countEl = document.getElementById("taxpayer-count");
+    if (!list || !countEl) return;
+    var rows = taxpayerItems.filter(taxpayerPasses);
+    var hidden = taxpayerItems.length - rows.length;
+    var count = hidden
+      ? "Showing " + rows.length + " of " + taxpayerItems.length + " measures that name an amount of taxpayer money. The year, state, or party chosen above hides the other " + hidden + ". Largest first."
+      : taxpayerItems.length + " measures on this page name an amount of taxpayer money. Largest first.";
+    countEl.textContent = count;
+    list.innerHTML = "";
+    if (!rows.length) {
+      list.appendChild(el("p", "note", "No measure on this page names taxpayer money for these choices."));
+      return;
+    }
+    rows.forEach(function (item) {
+      var shell = el("div", "intro-row" + (item.key === selectedIntro ? " is-on" : ""));
+      var row = el("button", "vote-row");
+      row.type = "button";
+      row.setAttribute("data-money", item.key);
+      var title = el("strong", "with-money");
+      title.appendChild(document.createTextNode(item.title || item.legis || "Measure"));
+      addMoneyChip(title, item.legis, (item.title || "") + " " + (item.line || ""));
+      if (!title.querySelector(".money-chip")) title.appendChild(moneyChip({ value: item.value, label: item.label }));
+      row.appendChild(title);
+      var meta = item.legis || "";
+      if (item.date) meta += (meta ? " · " : "") + formatDate(item.date);
+      if (meta) row.appendChild(el("p", "vote-meta", meta));
+      var intro = introduced[item.key];
+      var whoRow = el("div", "intro-who");
+      var faces = intro ? introFaces(intro) : null;
+      if (!faces) {
+        var sponsors = summaries[item.key] && summaries[item.key].sponsors;
+        if (sponsors && sponsors.length) {
+          faces = el("div", "intro-faces");
+          sponsors.forEach(function (sponsor) {
+            faces.appendChild(portrait(sponsor.id, sponsor.name || "A member", false));
+          });
+        }
+      }
+      if (faces) whoRow.appendChild(faces);
+      if (intro) {
+        var who = el("p", "act-line");
+        appendIntroducers(who, intro);
+        whoRow.appendChild(who);
+      }
+      if (whoRow.childNodes.length) row.appendChild(whoRow);
+      if (item.line) {
+        var cash = el("p", "act-line");
+        cash.appendChild(paintMoney(item.line));
+        row.appendChild(cash);
+      } else {
+        var blurb = taxpayerBlurb(item);
+        if (blurb) {
+          var about = el("p", "act-line");
+          about.appendChild(paintMoney(blurb));
+          row.appendChild(about);
+        }
+      }
+      var votes = billsVoted[item.key] || [];
+      if (votes.length) row.appendChild(el("p", "vote-meta", votes.length === 1 ? "One roll call on this page." : votes.length + " roll calls on this page."));
+      shell.appendChild(row);
+      var page = textUrl(congressBillUrl(item.key));
+      if (page) {
+        var read = el("p", "intro-read");
+        read.appendChild(link(page, textLabel(item.legis || item.key)));
+        shell.appendChild(read);
+      }
+      list.appendChild(shell);
+    });
+  }
+
   function actSentence(legis) {
+    var cash = moneyLine(legis);
+    if (cash) return cash;
     var item = summaryFor(legis);
     if (!item || !item.paragraphs || !item.paragraphs.length) return "";
     return firstSentence(item.paragraphs[0], 240);
@@ -254,7 +553,9 @@
     var wrap = el("div", "act-note");
     var item = summaryFor(legis);
     var url = textUrl(bill);
-    if (!item || !item.paragraphs || !item.paragraphs.length) {
+    var cash = moneyLine(legis);
+    var paragraphs = item && item.paragraphs ? item.paragraphs.slice() : [];
+    if (!paragraphs.length && !cash) {
       wrap.appendChild(el("p", "", "The Congressional Research Service has not published a summary of this measure."));
       if (url) {
         var only = el("p", "");
@@ -265,7 +566,53 @@
       appendSponsors(wrap, item);
       return wrap;
     }
-    var paragraphs = item.paragraphs;
+    if (cash) {
+      var moneyNode = el("p", "act-money");
+      moneyNode.appendChild(paintMoney(cash));
+      wrap.appendChild(moneyNode);
+    }
+    if (cash && paragraphs[0] === cash) paragraphs = paragraphs.slice(1);
+    if (cash) {
+      if (!paragraphs.length) {
+        if (url) {
+          var moneyLink = el("p", "");
+          moneyLink.appendChild(link(url, textLabel(legis)));
+          wrap.appendChild(moneyLink);
+        }
+        appendStatus(wrap, item);
+        appendSponsors(wrap, item);
+        return wrap;
+      }
+      var moneyMore = el("div", "act-more");
+      moneyMore.hidden = true;
+      paragraphs.forEach(function (paragraph) { moneyMore.appendChild(el("p", "", paragraph)); });
+      wrap.appendChild(moneyMore);
+      var moneyActions = el("p", "");
+      var moneyButton = el("button", "linkish", "Read the full summary");
+      moneyButton.type = "button";
+      moneyButton.setAttribute("aria-expanded", "false");
+      moneyButton.addEventListener("click", function () {
+        var opening = moneyMore.hidden;
+        moneyMore.hidden = !opening;
+        moneyButton.setAttribute("aria-expanded", opening ? "true" : "false");
+        moneyButton.textContent = opening ? "Show the short summary" : "Read the full summary";
+      });
+      moneyActions.appendChild(moneyButton);
+      if (url) {
+        moneyActions.appendChild(document.createTextNode(" · "));
+        moneyActions.appendChild(link(url, textLabel(legis)));
+      }
+      wrap.appendChild(moneyActions);
+      var moneyCredit = item && item.source === "title"
+        ? "This is the bill's official title. The Congressional Research Service has not published a summary"
+        : "Congressional Research Service";
+      if (item && item.source !== "title" && item.asOf) moneyCredit += ". " + item.asOf;
+      if (item && item.source !== "title" && item.date) moneyCredit += ", " + formatDate(item.date);
+      wrap.appendChild(el("p", "sub", moneyCredit + "."));
+      appendStatus(wrap, item);
+      appendSponsors(wrap, item);
+      return wrap;
+    }
     var needsMore = paragraphs[0].length > 420 || paragraphs.length > 1;
     var shortNode = el("p", "act-short", needsMore ? firstSentence(paragraphs[0], 420) : paragraphs[0]);
     wrap.appendChild(shortNode);
@@ -312,6 +659,48 @@
       return Math.round(channel(from, index) + (channel(to, index) - channel(from, index)) * t).toString(16).padStart(2, "0");
     });
     return "#" + parts.join("");
+  }
+
+  function moneyInk(value) {
+    var t = 0;
+    if (value > 0) t = Math.max(0, Math.min(1, (Math.log10(value) - 6) / 6));
+    return { bg: mix("#f6e4b8", "#6b2b0f", t), fg: t >= 0.58 ? "#fff8ef" : "#2c1d0e" };
+  }
+
+  function moneyChip(amount) {
+    var ink = moneyInk(amount.value);
+    var chip = el("span", "money-chip");
+    chip.textContent = amount.label;
+    chip.style.background = ink.bg;
+    chip.style.color = ink.fg;
+    chip.title = "Taxpayer money. A paler brass mark is a smaller amount. A deeper bronze mark is a larger amount.";
+    return chip;
+  }
+
+  function addMoneyChip(node, legis, extra) {
+    var facts = moneyFacts(legis, extra);
+    if (!facts) return node;
+    node.appendChild(moneyChip(facts.top));
+    return node;
+  }
+
+  function paintMoney(text) {
+    var node = document.createDocumentFragment();
+    var amounts = spendingAmounts(text);
+    var marks = {};
+    amounts.forEach(function (amount) { marks[amount.at] = amount; });
+    var pattern = /\$(\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?)(?:\s+(million|billion|trillion))?/gi;
+    var last = 0;
+    var match;
+    while ((match = pattern.exec(text))) {
+      if (match.index > last) node.appendChild(document.createTextNode(text.slice(last, match.index)));
+      var amount = marks[match.index];
+      if (amount) node.appendChild(moneyChip(amount));
+      else node.appendChild(document.createTextNode(match[0]));
+      last = match.index + match[0].length;
+    }
+    if (last < text.length) node.appendChild(document.createTextNode(text.slice(last)));
+    return node;
   }
 
   function sideColor(side, share) {
@@ -406,7 +795,13 @@
       add(vote.legis);
       add(vote.result);
     });
-    data.members.forEach(function (member) { add(member[1]); });
+    data.members.forEach(function (member) { add(memberBlob(member)); });
+    (data.floor && data.floor.items || []).forEach(function (item) {
+      add(item.title);
+      add(item.legis);
+      add(item.category);
+    });
+    Object.keys(money).forEach(function (key) { add(money[key]); });
     Object.keys(summaries).forEach(function (key) {
       var item = summaries[key];
       add(item.title);
@@ -415,6 +810,13 @@
       add(item.legis);
       (item.paragraphs || []).forEach(add);
       (item.sponsors || []).forEach(function (sponsor) { add(sponsor.name); });
+    });
+    introducedList.forEach(function (item) {
+      add(item.t);
+      add(item.o);
+      add(item.s);
+      add(item.legis);
+      (item.p || []).forEach(function (person) { add(person[1]); });
     });
   }
 
@@ -462,7 +864,20 @@
   function textMatches(text, query) {
     if (!query) return true;
     var hay = String(text || "").toLowerCase();
-    return query.split(" ").every(function (token) { return hay.indexOf(token) >= 0; });
+    var flat = hay.replace(/[^a-z0-9]+/g, "");
+    return query.split(" ").every(function (token) {
+      return hay.indexOf(token) >= 0 || flat.indexOf(token) >= 0;
+    });
+  }
+
+  function memberBlob(member) {
+    var district = member[4] == null ? "" : ordinal(member[4]) + " district";
+    var chamber = member[5] === "senate" ? "senator senate" : "representative house";
+    return [member[1], partyWord(member[2]), member[2], stateName(member[3]), member[3], chamber, district, member[6], member[7], member[8], member[10], member[11], member[12], seat(member)].join(" ");
+  }
+
+  function floorBlob(item) {
+    return [item.title, item.legis, item.category, item.week, summaryBlob(item.legis), moneyLine(item.legis)].join(" ");
   }
 
   function yearValue() {
@@ -584,8 +999,10 @@
           row.type = "button";
           row.setAttribute("data-vote", vote.id);
         }
-        var title = item.title || item.legis || "Scheduled item";
-        row.appendChild(el("strong", "", title));
+        var titleNode = el("strong", "with-money");
+        titleNode.appendChild(document.createTextNode(item.title || item.legis || "Scheduled item"));
+        addMoneyChip(titleNode, item.legis);
+        row.appendChild(titleNode);
         var meta = el("p", "vote-meta");
         if (item.legis) meta.appendChild(document.createTextNode(item.legis + " · "));
         meta.appendChild(document.createTextNode(vote ? "Roll call " + vote.n + " · " + formatDate(vote.date) : "Scheduled"));
@@ -602,8 +1019,11 @@
         }
         row.appendChild(el("p", "vote-meta", vote ? countLine(vote) : "No roll call on or after " + formatDate(item.week)));
         if (vote) {
-          var sentence = actSentence(item.legis);
-          if (sentence) row.appendChild(el("p", "act-line", sentence));
+          var sentenceNode = el("p", "act-line");
+          var cash = moneyLine(item.legis);
+          if (cash) sentenceNode.appendChild(paintMoney(cash));
+          else sentenceNode.textContent = actSentence(item.legis);
+          if (sentenceNode.textContent || sentenceNode.childNodes.length) row.appendChild(sentenceNode);
           var introduced = sponsorLine(item.legis);
           if (introduced) row.appendChild(el("p", "act-line", introduced));
         } else {
@@ -624,7 +1044,7 @@
     var q = interpretedQuery();
     var keys = Object.keys(summaries).filter(function (key) {
       var item = summaries[key];
-      if (!item || !item.pending) return false;
+      if (!item || !item.pending || introduced[key]) return false;
       if (!q) return true;
       return textMatches(item.blob || "", q);
     }).sort();
@@ -632,11 +1052,226 @@
     keys.forEach(function (key) {
       var item = summaries[key];
       var block = el("div", "floor-row");
-      block.appendChild(el("strong", "", item.title || item.legis || "A bill with no roll call"));
+      var pendingTitle = el("strong", "with-money");
+      pendingTitle.appendChild(document.createTextNode(item.title || item.legis || "A bill with no roll call"));
+      addMoneyChip(pendingTitle, item.legis);
+      block.appendChild(pendingTitle);
       if (item.legis) block.appendChild(el("p", "vote-meta", item.legis));
       var note = actBlock(item.legis, item.bill);
       if (note) block.appendChild(note);
       list.appendChild(block);
+    });
+  }
+
+  function introPeople(item) {
+    return item && item.p ? item.p : [];
+  }
+
+  function introPasses(item) {
+    if (yearValue() !== "all" && String(item.d || "").slice(0, 4) !== yearValue()) return false;
+    var result = resultValue();
+    if (result !== "all") {
+      var votes = billsVoted[item.key] || [];
+      var matched = votes.some(function (vote) {
+        var word = vote.result || "";
+        if (result === "Passed") return /passed|confirmed/i.test(word);
+        if (result === "Failed") return /rejected|failed/i.test(word);
+        if (result === "Agreed to") return /agreed/i.test(word);
+        return !/passed|confirmed|rejected|failed|agreed/i.test(word);
+      });
+      if (!matched) return false;
+    }
+    var people = introPeople(item);
+    if (!people.length) return party === "all" && stateCode === "all";
+    return people.some(function (person) {
+      return passesParty([person[0], person[1], person[2], person[3]]) && passesState([person[0], person[1], person[2], person[3]]);
+    });
+  }
+
+  function appendIntroducers(node, item) {
+    var people = introPeople(item);
+    if (!people.length) {
+      node.appendChild(document.createTextNode("The bill status file did not name an introducer."));
+      return;
+    }
+    var byRequest = people.some(function (person) { return person[6]; });
+    node.appendChild(document.createTextNode(byRequest ? "Introduced by request by " : "Introduced by "));
+    people.forEach(function (person, index) {
+      if (index) node.appendChild(document.createTextNode(index === people.length - 1 ? " and " : ", "));
+      var role = person[5] || "member";
+      node.appendChild(document.createTextNode(role.charAt(0).toUpperCase() + role.slice(1) + " "));
+      node.appendChild(el("span", partyClass(person[2]), person[1] || "A member"));
+    });
+    node.appendChild(document.createTextNode("."));
+  }
+
+  function introFaces(item) {
+    var people = introPeople(item);
+    if (!people.length) return null;
+    var box = el("div", "intro-faces");
+    people.forEach(function (person) {
+      box.appendChild(portrait(person[0], person[1] || "A member", false));
+    });
+    return box;
+  }
+
+  function introSponsors(item) {
+    return introPeople(item).map(function (person) {
+      return {
+        id: person[0],
+        name: person[1],
+        party: person[2],
+        state: person[3],
+        district: person[4],
+        chamber: person[5] === "senator" ? "senate" : "house",
+        byRequest: !!person[6]
+      };
+    });
+  }
+
+  function introTitles(item) {
+    return [item.t || "", item.o || ""].join(" ");
+  }
+
+  function introButton(item) {
+    var shell = el("div", "intro-row" + (item.key === selectedIntro ? " is-on" : ""));
+    var row = el("button", "vote-row");
+    row.type = "button";
+    row.setAttribute("data-intro", item.key);
+    var when = "Introduced " + formatDate(item.d);
+    when += item.c === "senate" ? " · Senate" : " · House";
+    row.appendChild(el("p", "vote-meta", when));
+    var title = el("strong", "with-money");
+    title.appendChild(document.createTextNode(item.t || item.legis || "Introduced measure"));
+    addMoneyChip(title, item.legis, introTitles(item));
+    row.appendChild(title);
+    if (item.legis) row.appendChild(el("p", "vote-meta", item.legis));
+    var whoRow = el("div", "intro-who");
+    var faces = introFaces(item);
+    if (faces) whoRow.appendChild(faces);
+    var who = el("p", "act-line");
+    appendIntroducers(who, item);
+    whoRow.appendChild(who);
+    row.appendChild(whoRow);
+    if (item.o) {
+      var official = el("p", "act-line");
+      official.appendChild(paintMoney(item.o));
+      row.appendChild(official);
+    } else if (moneyLine(item.legis)) {
+      var cash = el("p", "act-line");
+      cash.appendChild(paintMoney(moneyLine(item.legis)));
+      row.appendChild(cash);
+    }
+    if (item.s) row.appendChild(el("p", "vote-meta", item.s));
+    shell.appendChild(row);
+    var page = textUrl(congressBillUrl(item.key));
+    if (page) {
+      var read = el("p", "intro-read");
+      read.appendChild(link(page, textLabel(item.legis || item.key)));
+      shell.appendChild(read);
+    }
+    return shell;
+  }
+
+  function renderIntroDetail() {
+    var slot = document.getElementById("open-intro");
+    if (!slot) return;
+    slot.innerHTML = "";
+    var item = selectedIntro ? introduced[selectedIntro] : null;
+    if (!item) return;
+    var wrap = el("div", "act-note");
+    var heading = el("h3", "with-money");
+    heading.appendChild(document.createTextNode(item.t || item.legis || "Introduced measure"));
+    addMoneyChip(heading, item.legis, introTitles(item));
+    wrap.appendChild(heading);
+    var page = congressBillUrl(item.key);
+    var text = textUrl(page);
+    if (text) {
+      var read = el("p", "intro-read");
+      read.appendChild(link(text, textLabel(item.legis || item.key)));
+      wrap.appendChild(read);
+    }
+    wrap.appendChild(el("p", "vote-meta", (item.legis || "") + " · Introduced " + formatDate(item.d)));
+    var who = el("p", "");
+    appendIntroducers(who, item);
+    wrap.appendChild(who);
+    if (item.o) {
+      var official = el("p", "");
+      official.appendChild(paintMoney(item.o));
+      wrap.appendChild(official);
+    }
+    if (item.s) {
+      var status = "Latest action";
+      if (item.sd) status += ", " + formatDate(item.sd);
+      wrap.appendChild(el("p", "", status + ": " + item.s));
+    }
+    var summary = summaryFor(item.legis);
+    if (summary && summary.paragraphs && summary.paragraphs.length) {
+      var note = actBlock(item.legis, page);
+      if (note) wrap.appendChild(note);
+    } else {
+      appendSponsors(wrap, { sponsors: introSponsors(item) });
+      wrap.appendChild(el("p", "sub", "This is the title in the bill status file. The full text is on Congress.gov."));
+    }
+    var votes = (billsVoted[item.key] || []).slice().sort(function (a, b) {
+      if (a.date !== b.date) return a.date < b.date ? 1 : -1;
+      return b.n - a.n;
+    });
+    if (!votes.length) {
+      wrap.appendChild(el("p", "", "The roll calls on this page do not include a vote on this measure."));
+    } else {
+      wrap.appendChild(el("p", "", votes.length === 1 ? "One roll call on this page is about this measure." : votes.length + " roll calls on this page are about this measure."));
+      votes.slice(0, 4).forEach(function (vote) {
+        var button = el("button", "linkish", (vote.chamber === "senate" ? "Senate roll call " : "House roll call ") + vote.n + " · " + formatDate(vote.date) + " · " + (vote.result || ""));
+        button.type = "button";
+        button.setAttribute("data-vote", vote.id);
+        if (vote.chamber === "senate") button.setAttribute("data-chamber", "senate");
+        var holder = el("p", "");
+        holder.appendChild(button);
+        wrap.appendChild(holder);
+      });
+    }
+    slot.appendChild(wrap);
+  }
+
+  function renderIntroduced() {
+    var list = document.getElementById("introduced-list");
+    var countEl = document.getElementById("introduced-count");
+    var more = document.getElementById("introduced-more");
+    if (!list || !countEl) return;
+    var rows = introducedList.filter(introPasses);
+    countEl.textContent = "Showing " + Math.min(rows.length, introLimit) + " of " + introducedList.length + " bills and resolutions introduced in this Congress.";
+    if (rows.length !== introducedList.length) countEl.textContent += " " + rows.length + " match the year, result, state, and party chosen above.";
+    list.innerHTML = "";
+    if (!rows.length) {
+      list.appendChild(el("p", "note", "No introduction matches these choices."));
+      if (more) more.hidden = true;
+      renderIntroDetail();
+      return;
+    }
+    rows.slice(0, introLimit).forEach(function (item) { list.appendChild(introButton(item)); });
+    if (more) more.hidden = rows.length <= introLimit;
+    renderIntroDetail();
+  }
+
+  function matchedIntroduced() {
+    var q = interpretedQuery();
+    if (!q) return [];
+    return introducedList.filter(function (item) { return textMatches(item.blob, q); });
+  }
+
+  function matchedFloor() {
+    var q = interpretedQuery();
+    var items = data.floor && data.floor.items || [];
+    if (!q) return [];
+    return items.filter(function (item) { return textMatches(floorBlob(item), q); });
+  }
+
+  function matchedPeople() {
+    var q = interpretedQuery();
+    if (!q) return [];
+    return data.members.filter(function (member) {
+      return passesParty(member) && passesState(member) && textMatches(memberBlob(member), q);
     });
   }
 
@@ -664,13 +1299,38 @@
     if (clock) when += " · " + clock;
     when += " · " + (vote.chamber === "senate" ? "Senate roll call " : "Roll call ") + vote.n;
     row.appendChild(el("p", "vote-meta", when));
-    row.appendChild(el("strong", "", vote.question || vote.legis || "House roll call " + vote.n));
-    if (vote.desc) row.appendChild(el("p", "", vote.desc));
+    var title = el("strong", "with-money");
+    title.appendChild(document.createTextNode(vote.question || vote.legis || "House roll call " + vote.n));
+    if (!vote.desc) addMoneyChip(title, vote.legis);
+    row.appendChild(title);
+    if (vote.desc) {
+      var desc = el("p", "with-money");
+      desc.appendChild(document.createTextNode(vote.desc));
+      addMoneyChip(desc, vote.legis);
+      row.appendChild(desc);
+    }
     if (vote.legis) row.appendChild(el("p", "vote-meta", vote.legis));
-    var sentence = actSentence(vote.legis);
-    if (sentence) row.appendChild(el("p", "act-line", sentence));
-    var introduced = sponsorLine(vote.legis);
-    if (introduced) row.appendChild(el("p", "act-line", introduced));
+    var sentenceNode = el("p", "act-line");
+    var cash = moneyLine(vote.legis);
+    if (cash) sentenceNode.appendChild(paintMoney(cash));
+    else if (actSentence(vote.legis)) sentenceNode.textContent = actSentence(vote.legis);
+    if (sentenceNode.textContent || sentenceNode.childNodes.length) row.appendChild(sentenceNode);
+    var people = voteIntroducers(vote);
+    if (people.length) {
+      var whoRow = el("div", "intro-who");
+      var faces = el("div", "intro-faces");
+      people.forEach(function (person) {
+        faces.appendChild(portrait(person[0], person[1] || "A member", false));
+      });
+      whoRow.appendChild(faces);
+      var who = el("p", "act-line");
+      appendIntroducers(who, { p: people });
+      whoRow.appendChild(who);
+      row.appendChild(whoRow);
+    } else {
+      var introduced = sponsorLine(vote.legis);
+      if (introduced) row.appendChild(el("p", "act-line", introduced));
+    }
     row.appendChild(makeBar(vote.yea, vote.nay, vote.present, vote.notVoting));
     row.appendChild(el("p", "vote-meta", countLine(vote)));
     return row;
@@ -688,21 +1348,77 @@
       return;
     }
     section.hidden = false;
+    var people = matchedPeople();
+    var floorItems = matchedFloor();
     var votes = rankedVotes();
     var pending = Object.keys(summaries).filter(function (key) {
       var item = summaries[key];
-      return item && item.pending && textMatches(item.blob || "", q);
+      return item && item.pending && !introduced[key] && textMatches(item.blob || "", q);
     }).sort();
     var count = votes.length + (votes.length === 1 ? " House roll call." : " House roll calls.");
     var senateVotes = matchedSenate();
     if (senateVotes.length) count += " " + senateVotes.length + (senateVotes.length === 1 ? " Senate roll call." : " Senate roll calls.");
+    if (floorItems.length) count += " " + floorItems.length + " on the floor list.";
     if (pending.length) count += " " + pending.length + (pending.length === 1 ? " bill has no roll call yet." : " bills have no roll call yet.");
+    var intros = matchedIntroduced();
+    var introShown = intros.slice(0, searchIntroLimit);
+    var peopleShown = people.slice(0, searchPeopleLimit);
+    if (people.length) count += " " + people.length + (people.length === 1 ? " member." : " members.");
+    if (intros.length) count += " " + intros.length + " introduced.";
+    if (intros.length > introShown.length) count += " The first " + introShown.length + " introductions are listed.";
     if (spellNote) count = spellNote + " " + count;
     countEl.textContent = count;
+    peopleShown.forEach(function (member) {
+      var row = el("button", "person-row" + (member[0] === searchPerson ? " is-on" : ""));
+      row.type = "button";
+      row.setAttribute("data-person", member[0]);
+      row.appendChild(portrait(member[0], member[1], false));
+      var copy = el("div", "");
+      copy.appendChild(el("strong", partyClass(member[2]), member[1]));
+      var meta = [member[5] === "senate" ? "Senator" : "Representative", partyWord(member[2]), stateName(member[3])];
+      if (member[11]) meta.push(member[11]);
+      if (member[7]) meta.push(member[7]);
+      copy.appendChild(el("p", "person-meta", meta.join(" · ")));
+      row.appendChild(copy);
+      list.appendChild(row);
+      if (member[0] === searchPerson) {
+        var card = contactBlock(member);
+        card.classList.add("pinned-card");
+        list.appendChild(card);
+      }
+    });
+    if (people.length > peopleShown.length) {
+      var morePeople = el("button", "linkish", "Show more members");
+      morePeople.type = "button";
+      morePeople.setAttribute("data-more", "people");
+      var peopleHolder = el("p", "");
+      peopleHolder.appendChild(morePeople);
+      list.appendChild(peopleHolder);
+    }
+    floorItems.forEach(function (item) {
+      var vote = floorVote(item);
+      var row = el(vote ? "button" : "div", "floor-row");
+      if (vote) {
+        row.type = "button";
+        row.setAttribute("data-vote", vote.id);
+      }
+      var titleNode = el("strong", "with-money");
+      titleNode.appendChild(document.createTextNode(item.title || item.legis || "Scheduled item"));
+      addMoneyChip(titleNode, item.legis);
+      row.appendChild(titleNode);
+      var meta = "On the floor list";
+      if (item.legis) meta += " · " + item.legis;
+      if (item.category) meta += " · " + item.category;
+      row.appendChild(el("p", "vote-meta", meta));
+      list.appendChild(row);
+    });
     pending.forEach(function (key) {
       var item = summaries[key];
       var row = el("div", "floor-row");
-      row.appendChild(el("strong", "", item.title || item.legis || "A bill with no roll call"));
+      var searchTitle = el("strong", "with-money");
+      searchTitle.appendChild(document.createTextNode(item.title || item.legis || "A bill with no roll call"));
+      addMoneyChip(searchTitle, item.legis);
+      row.appendChild(searchTitle);
       var meta = item.legis || "";
       if (meta) meta += " · ";
       meta += "No House roll call yet";
@@ -710,12 +1426,23 @@
       if (item.status) row.appendChild(el("p", "", item.status));
       list.appendChild(row);
     });
-    if (!votes.length && !pending.length && !senateVotes.length) {
-      list.appendChild(el("p", "note", "No roll call matches this search."));
+    if (!votes.length && !pending.length && !senateVotes.length && !intros.length && !floorItems.length && !people.length) {
+      var miss = "Nothing on this page matches this search.";
+      countEl.textContent = spellNote ? spellNote + " " + miss : miss;
+      list.appendChild(el("p", "note", miss));
       return;
     }
     votes.forEach(function (vote) { list.appendChild(voteButton(vote)); });
     senateVotes.forEach(function (vote) { list.appendChild(voteButton(vote)); });
+    introShown.forEach(function (item) { list.appendChild(introButton(item)); });
+    if (intros.length > introShown.length) {
+      var moreIntro = el("button", "linkish", "Show more introductions");
+      moreIntro.type = "button";
+      moreIntro.setAttribute("data-more", "intro");
+      var introHolder = el("p", "");
+      introHolder.appendChild(moreIntro);
+      list.appendChild(introHolder);
+    }
   }
 
   function renderVotes() {
@@ -840,14 +1567,22 @@
     var vote = null;
     data.votes.forEach(function (item) { if (item.id === selected) vote = item; });
     if (!vote) return;
-    box.appendChild(el("h2", "", vote.question || "House roll call " + vote.n));
+    var heading = el("h2", "with-money");
+    heading.appendChild(document.createTextNode(vote.question || "House roll call " + vote.n));
+    if (!vote.desc) addMoneyChip(heading, vote.legis);
+    box.appendChild(heading);
     var when = formatDate(vote.date);
     var clock = formatTime(vote.time);
     if (clock) when += " · " + clock;
     when += " · Roll call " + vote.n;
     if (TYPE_LABEL[vote.type] || vote.type) when += " · " + (TYPE_LABEL[vote.type] || vote.type);
     box.appendChild(el("p", "vote-meta", when));
-    if (vote.desc) box.appendChild(el("p", "deck", vote.desc));
+    if (vote.desc) {
+      var deck = el("p", "deck with-money");
+      deck.appendChild(document.createTextNode(vote.desc));
+      addMoneyChip(deck, vote.legis);
+      box.appendChild(deck);
+    }
     var note = actBlock(vote.legis, vote.bill);
     if (note) box.appendChild(note);
     var links = el("p", "");
@@ -1064,12 +1799,12 @@
   function renderSenators() {
     var list = document.getElementById("senator-list");
     list.innerHTML = "";
-    var q = queryText();
+    var q = interpretedQuery();
     var people = data.members.filter(function (member) {
       if (member[5] !== "senate") return false;
       if (!passesParty(member) || !passesState(member)) return false;
       if (!q) return true;
-      return (member[1] + " " + stateName(member[3]) + " " + member[7]).toLowerCase().indexOf(q) >= 0;
+      return textMatches(memberBlob(member), q);
     });
     if (!people.length) {
       list.appendChild(el("p", "note", "No senator matches this party, state, or search."));
@@ -1164,10 +1899,18 @@
     var vote = null;
     (data.senateVotes || []).forEach(function (item) { if (item.id === selectedSenate) vote = item; });
     if (!vote) return;
-    box.appendChild(el("h2", "", vote.question || "Senate roll call " + vote.n));
+    var heading = el("h2", "with-money");
+    heading.appendChild(document.createTextNode(vote.question || "Senate roll call " + vote.n));
+    if (!vote.desc) addMoneyChip(heading, vote.legis);
+    box.appendChild(heading);
     var when = formatDate(vote.date) + " · Senate roll call " + vote.n;
     box.appendChild(el("p", "vote-meta", when));
-    if (vote.desc) box.appendChild(el("p", "deck", vote.desc));
+    if (vote.desc) {
+      var deck = el("p", "deck with-money");
+      deck.appendChild(document.createTextNode(vote.desc));
+      addMoneyChip(deck, vote.legis);
+      box.appendChild(deck);
+    }
     var summary = summaryFor(vote.legis);
     if (summary && summary.paragraphs && summary.paragraphs.length) {
       var note = actBlock(vote.legis, vote.bill);
@@ -1233,6 +1976,8 @@
     queryCacheRaw = null;
     renderFloor();
     renderSearchPanel();
+    renderTaxpayer();
+    renderIntroduced();
     renderPending();
     renderVotes();
     renderDetail();
@@ -1245,6 +1990,8 @@
   function renderMatches() {
     queryCacheRaw = null;
     renderSearchPanel();
+    renderTaxpayer();
+    renderIntroduced();
     renderPending();
     renderVotes();
     renderDetail();
@@ -1436,18 +2183,25 @@
       if (!seenMember[member[0]]) data.members.push(member);
     });
     indexSummaries();
+    indexIntroduced();
+    indexTaxpayer();
     indexWords();
     indexMembers();
+    indexBills();
     restoreLive();
     fillStates();
     var votes = sortedVotes();
     var hash = location.hash.replace(/^#/, "");
     selected = votes.some(function (vote) { return vote.id === hash; }) ? hash : (votes[0] ? votes[0].id : "");
     selectedSenate = data.senateVotes.some(function (vote) { return vote.id === hash; }) ? hash : (data.senateVotes[0] ? data.senateVotes[0].id : "");
+    if (hash.indexOf("i-") === 0 && introduced[hash.slice(2)]) selectedIntro = hash.slice(2);
     renderStatus("");
     render();
     function clearSearch() {
       appliedQuery = "";
+      searchPerson = "";
+      searchIntroLimit = 100;
+      searchPeopleLimit = 80;
       queryCacheRaw = null;
       var input = document.getElementById("congress-q");
       if (input) input.value = "";
@@ -1456,6 +2210,9 @@
     document.getElementById("congress-find").addEventListener("submit", function (event) {
       event.preventDefault();
       appliedQuery = (document.getElementById("congress-q").value || "").trim().toLowerCase();
+      searchPerson = "";
+      searchIntroLimit = 100;
+      searchPeopleLimit = 80;
       queryCacheRaw = null;
       renderMatches();
       var section = document.getElementById("search-results");
@@ -1478,6 +2235,25 @@
       });
       render();
     });
+    document.getElementById("taxpayer").addEventListener("click", function (event) {
+      var button = event.target.closest("button[data-money]");
+      if (!button) return;
+      var key = button.getAttribute("data-money");
+      if (introduced[key]) {
+        selectedIntro = key;
+        if (history.replaceState) history.replaceState(null, "", "#i-" + key);
+        renderIntroduced();
+        showPersonCard(document.getElementById("open-intro"));
+        return;
+      }
+      var votes = (billsVoted[key] || []).slice().sort(function (a, b) {
+        if (a.date !== b.date) return a.date < b.date ? 1 : -1;
+        return b.n - a.n;
+      });
+      if (!votes.length) return;
+      if (votes[0].chamber === "senate") chooseSenate(votes[0].id, true);
+      else choose(votes[0].id, true);
+    });
     document.getElementById("floor-list").addEventListener("click", function (event) {
       var button = event.target.closest("button[data-vote]");
       if (button) choose(button.getAttribute("data-vote"), true);
@@ -1489,10 +2265,51 @@
       else choose(button.getAttribute("data-vote"), true);
     });
     document.getElementById("search-list").addEventListener("click", function (event) {
+      var more = event.target.closest("button[data-more]");
+      if (more) {
+        if (more.getAttribute("data-more") === "intro") searchIntroLimit += 100;
+        if (more.getAttribute("data-more") === "people") searchPeopleLimit += 80;
+        renderSearchPanel();
+        return;
+      }
+      var person = event.target.closest("button[data-person]");
+      if (person) {
+        searchPerson = person.getAttribute("data-person");
+        renderSearchPanel();
+        showPersonCard(document.querySelector("#search-list .pinned-card"));
+        return;
+      }
+      var intro = event.target.closest("button[data-intro]");
+      if (intro) {
+        selectedIntro = intro.getAttribute("data-intro");
+        if (history.replaceState) history.replaceState(null, "", "#i-" + selectedIntro);
+        renderIntroduced();
+        showPersonCard(document.getElementById("open-intro"));
+        return;
+      }
       var button = event.target.closest("button[data-vote]");
       if (!button) return;
       if (button.getAttribute("data-chamber") === "senate") chooseSenate(button.getAttribute("data-vote"), true);
       else choose(button.getAttribute("data-vote"), true);
+    });
+    document.getElementById("introduced").addEventListener("click", function (event) {
+      var vote = event.target.closest("button[data-vote]");
+      if (vote) {
+        if (vote.getAttribute("data-chamber") === "senate") chooseSenate(vote.getAttribute("data-vote"), true);
+        else choose(vote.getAttribute("data-vote"), true);
+        return;
+      }
+      if (event.target.closest("#introduced-more")) {
+        introLimit += 80;
+        renderIntroduced();
+        return;
+      }
+      var button = event.target.closest("button[data-intro]");
+      if (!button) return;
+      selectedIntro = button.getAttribute("data-intro");
+      if (history.replaceState) history.replaceState(null, "", "#i-" + selectedIntro);
+      renderIntroduced();
+      showPersonCard(document.getElementById("open-intro"));
     });
     document.getElementById("senate-list").addEventListener("click", function (event) {
       var button = event.target.closest("button[data-vote]");
@@ -1500,7 +2317,7 @@
     });
     document.body.addEventListener("click", function (event) {
       var button = event.target.closest("button[data-person]");
-      if (!button) return;
+      if (!button || event.target.closest("#search-list")) return;
       pinned = button.getAttribute("data-person");
       if (event.target.closest("#open-senate")) {
         renderSenateDetail();
@@ -1525,15 +2342,31 @@
       return response.json();
     }).then(function (extra) {
       summaries = extra || {};
-      return fetch("congress/senate.json?v=1").then(function (response) {
-        if (!response.ok) throw new Error(String(response.status));
+      return fetch("congress/money.json?v=1").then(function (response) {
+        if (!response.ok) return {};
         return response.json();
-      }).then(function (senate) {
-        payload.senate = senate;
-        return payload;
       }).catch(function () {
-        payload.senate = null;
-        return payload;
+        return {};
+      }).then(function (extraMoney) {
+        money = extraMoney || {};
+        return fetch("congress/introduced.json?v=1").then(function (response) {
+          if (!response.ok) return {};
+          return response.json();
+        }).catch(function () {
+          return {};
+        }).then(function (extraIntro) {
+          introduced = extraIntro || {};
+          return fetch("congress/senate.json?v=1").then(function (response) {
+            if (!response.ok) throw new Error(String(response.status));
+            return response.json();
+          }).then(function (senate) {
+            payload.senate = senate;
+            return payload;
+          }).catch(function () {
+            payload.senate = null;
+            return payload;
+          });
+        });
       });
     }).catch(function () {
       summaries = {};
@@ -1541,5 +2374,26 @@
     });
   }).then(boot).catch(function () {
     document.getElementById("congress-status").textContent = "The roll call file did not load.";
+  });
+
+  var jumpLinks = document.querySelectorAll(".jump a");
+  Array.prototype.forEach.call(jumpLinks, function (anchor) {
+    anchor.addEventListener("click", function (event) {
+      var id = (anchor.getAttribute("href") || "").slice(1);
+      var target = document.getElementById(id);
+      if (!target) return;
+      event.preventDefault();
+      if (id !== "congress-find" && document.activeElement && document.activeElement.blur) document.activeElement.blur();
+      var root = document.documentElement;
+      var previous = root.style.scrollBehavior;
+      root.style.scrollBehavior = "auto";
+      target.scrollIntoView();
+      root.style.scrollBehavior = previous;
+      if (id === "congress-find") {
+        var box = document.getElementById("congress-q");
+        if (box) box.focus({ preventScroll: true });
+      }
+      if (history.pushState) history.pushState(null, "", "#" + id);
+    });
   });
 })();

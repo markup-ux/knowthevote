@@ -57,7 +57,46 @@ div.floor-row { cursor: default; }
 .person-card { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; align-items: start; background: var(--chip); padding: 14px 16px; margin: 12px 0; }
 .person-card h3 { margin: 0 0 6px; }
 .person-card p { margin: 4px 0; }
-#floor, #roll-calls, #senators, #open-vote { scroll-margin-top: 140px; overflow-anchor: none; }
+#congress-find, #taxpayer, #floor, #introduced, #roll-calls, #senate-votes, #senators, #open-vote, #open-intro { scroll-margin-top: 140px; overflow-anchor: none; }
+#top { scroll-margin-top: 0; height: 0; }
+body { padding-bottom: 76px; }
+.jump {
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 6px;
+  padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+  background: #f4f0e6;
+  border-top: 1px solid #1c1915;
+  overflow-x: auto;
+}
+.jump a {
+  flex: none;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-weight: 650;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #1c1915;
+  background: #f4f0e6;
+  border: 1px solid #1c1915;
+  white-space: nowrap;
+}
+.jump a.jump-top { background: #1c1915; color: #f4f0e6; }
+.jump a.jump-search { background: #0f6e78; color: #f4f7fb; }
+.jump a.jump-money { background: #c4924a; color: #2c1d0e; }
+.jump a.jump-introduced { background: #efe6d4; color: #1c1915; }
+.jump a.jump-house, .jump a.jump-senate {
+  background-image: linear-gradient(#0e6a38, #0e6a38), linear-gradient(#8d2344, #8d2344);
+  background-size: 50% 4px, 50% 4px;
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat;
+}
+.jump a.jump-senate { background-color: #e4e2f0; }
+.jump a.jump-people { background: #8a6232; color: #fff8ef; }
 .census-topic { margin: 12px 0 16px; font-size: 18px; }
 .census-topic a { color: inherit; }
 .congress-actions { margin: 8px 0 0; }
@@ -92,13 +131,26 @@ button.search-clear {
 .act-note { margin: 10px 0 16px; max-width: 68rem; }
 .act-note p { margin: 6px 0; }
 .act-line { margin: 4px 0 0; }
+.act-money { font-weight: 600; }
+strong.with-money, h2.with-money, h3.with-money, p.with-money { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.money-chip { display: inline-block; padding: 2px 8px; font-weight: 750; line-height: 1.35; white-space: nowrap; }
+.intro-who { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.intro-who .act-line { margin: 0; }
+.intro-faces { display: flex; gap: 6px; flex: none; }
+.intro-faces .portrait, .intro-faces .portrait-letter { width: 40px; height: 50px; font-size: 16px; }
+.intro-row { border-bottom: 1px solid var(--line); }
+.intro-row.is-on { background: #e4d8c4; }
+.intro-row > .vote-row { border-bottom: 0; padding-bottom: 2px; }
+.intro-row.is-on > .vote-row { background: transparent; }
+.intro-read { margin: 0; padding: 0 4px 12px; }
+.intro-read a { text-underline-offset: 3px; }
 .sponsors h3 { font-size: 22px; margin: 16px 0 8px; }
 .sponsors .person-card { margin-top: 0; }
 @media (max-width: 800px) {
   .party-line { grid-template-columns: 1fr; gap: 4px; }
   .person-card { grid-template-columns: 72px minmax(0, 1fr); }
   .portrait-lg, .portrait-letter.portrait-lg { width: 72px; height: 90px; font-size: 28px; }
-  #floor, #roll-calls, #senators, #open-vote { scroll-margin-top: 240px; }
+  #congress-find, #taxpayer, #floor, #introduced, #roll-calls, #senate-votes, #senators, #open-vote, #open-intro { scroll-margin-top: 240px; }
 }
 </style>
 
@@ -126,6 +178,7 @@ button.search-clear {
 <!-- /seo -->
 </head>
 <body>
+<div id="top"></div>
 <header>
   <div class="wrap bar">
     <div class="bar-top">
@@ -178,11 +231,11 @@ button.search-clear {
   <div class="wrap hero">
     <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
     <p class="kicker">United States · 119th Congress</p>
-    <p class="census-topic"><a href="#floor">Floor list</a> · <a href="#roll-calls">Roll calls</a> · <a href="#senate-votes">Senate roll calls</a> · <a href="#senators">Senators</a></p>
+    <p class="census-topic"><a href="#floor">Floor list</a> · <a href="#taxpayer">Taxpayer money</a> · <a href="#introduced">Introduced</a> · <a href="#roll-calls">Roll calls</a> · <a href="#senate-votes">Senate roll calls</a> · <a href="#senators">Senators</a></p>
     <h1>The House.</h1>
-    <p class="deck">What the House voted on, who voted yes, who voted no, and how to reach the member. The floor list is the latest week the House has published. A roll call published later is added while this page is open.</p>
+    <p class="deck">What the House voted on, who voted yes, who voted no, and how to reach the member. Bills and resolutions introduced in this Congress are listed too, with a portrait of the person who introduced each one. The floor list is the latest week the House has published. A roll call published later is added while this page is open.</p>
     <p class="deck">The <a href="https://live.house.gov/">House floor</a> is live on FloorCast when the House is in session. Each roll call links to that day's floor recording. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's channel</a> posts a floor video when one is published.</p>
-    <p class="deck">Under a roll call, a short account says what the measure does. Read the full summary on this page, or open the text of the act. The member who introduced it is shown with a portrait and an office.</p>
+    <p class="deck">Under a roll call, a short account says what the measure does. Read the full summary on this page, or read the full bill or the full resolution. When a measure names taxpayer money, the amount is marked beside the title. A paler brass mark is a smaller amount. A deeper bronze mark is a larger amount. Those measures are listed together, largest amount first. The bar at the bottom of the screen returns to the top, opens the search, or jumps to a section.</p>
     <div class="result-legend" id="congress-legend">
       <span><i class="swatch yes-scale"></i> Yes. A darker green is a larger yes share.</span>
       <span><i class="swatch no-scale"></i> No. A darker rose is a larger no share.</span>
@@ -199,7 +252,7 @@ button.search-clear {
 
     <form id="congress-find" class="congress-tools" role="search">
       <label>Search
-        <input id="congress-q" type="search" placeholder="Bill, question, or member" autocomplete="off">
+        <input id="congress-q" type="search" placeholder="Bill, question, member, or amount" autocomplete="off">
       </label>
       <button type="submit" class="search-submit">Search</button>
       <button type="button" class="search-clear" id="congress-clear">Clear</button>
@@ -237,10 +290,26 @@ button.search-clear {
       <div id="search-list"></div>
     </section>
 
+    <section id="taxpayer">
+      <h2>Taxpayer money</h2>
+      <p class="deck">Each measure here names an amount of taxpayer money in its title or in the short account. The mark is the largest amount named. A paler brass mark is a smaller amount. A deeper bronze mark is a larger amount. A measure that spends money without naming an amount there is not in this list. The full text can name other amounts.</p>
+      <p id="taxpayer-count" class="sub"></p>
+      <div id="taxpayer-list" class="vote-scroll"></div>
+    </section>
+
     <section id="floor">
       <h2>Floor list</h2>
       <p id="floor-blurb" class="deck"></p>
       <div id="floor-list"></div>
+    </section>
+
+    <section id="introduced">
+      <h2>Introduced</h2>
+      <p class="deck">Bills and resolutions introduced in this Congress. A senator, a representative, a delegate, or the Resident Commissioner can introduce one. A measure with no roll call has no yes or no to show. Read the full bill, or the full resolution, from the link under its title.</p>
+      <p id="introduced-count" class="sub"></p>
+      <div id="introduced-list" class="vote-scroll"></div>
+      <p class="congress-actions"><button type="button" id="introduced-more" hidden>Show earlier introductions</button></p>
+      <div id="open-intro"></div>
     </section>
 
     <section id="roll-calls">
@@ -272,12 +341,22 @@ button.search-clear {
 </main>
 <footer>
   <div class="wrap">
-    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Green is a yes. A darker green is a larger yes share. Rose is a no. A darker rose is a larger no share. Indigo is present. Stone is a member who did not vote. Gold is on the House floor list and has no roll call that week. Plum on the map is a tie between yes and no. A blue name is Democratic, a red name is Republican, and an olive or brown name is another party.</p>
-    <p>House roll calls are copied from the <a href="https://clerk.house.gov/evs">Clerk of the House</a> for 2025 and 2026. The question, the description, and the counts are the Clerk's. While this page is open it asks <a href="https://api.congress.gov/">Congress.gov</a> for a House roll call newer than that copy. The floor list is the latest week in the House file at <a href="https://docs.house.gov/floor/">docs.house.gov</a>. Office phone, room, and website are copied from the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators</a> file for the current Congress. Portraits are public-domain photographs from the Congressional Pictorial Directory, through the <a href="https://unitedstates.github.io/images/congress/225x275/">congress images</a> collection, and from the <a href="https://bioguide.congress.gov/">Biographical Directory</a> when that collection has no photograph. A floor recording is the House <a href="https://live.house.gov/">FloorCast</a> for the day of the roll call. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's YouTube channel</a> posts a floor video when one is published. A short account of a measure is the <a href="https://www.govinfo.gov/bulkdata/BILLSUM/119">Congressional Research Service summary</a> published by GovInfo. The full text is that measure's text page on <a href="https://www.congress.gov/">Congress.gov</a>. The sponsor is the member named in the <a href="https://www.govinfo.gov/bulkdata/BILLSTATUS/119">GovInfo bill status file</a>. Senate roll calls are copied from <a href="https://voteview.com/data">Voteview</a>'s record of the Senate, because the <a href="https://www.senate.gov/legislative/votes_new.htm">Senate</a> site does not offer those files to this page. The question, the description, and each senator's yes or no are Voteview's. When the bill status file says the Senate passed a measure by unanimous consent, this page says so, because that action has no senator-by-senator vote.</p>
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Green is a yes. A darker green is a larger yes share. Rose is a no. A darker rose is a larger no share. Indigo is present. Stone is a member who did not vote. Gold is on the House floor list and has no roll call that week. A bar stays at the bottom of the screen. Black returns to the top. Teal opens the search. Brass opens the measures that name taxpayer money. Gold opens the floor list. Parchment opens bills that were introduced. A green and rose edge opens roll calls. Copper opens the senators. A brass mark beside a title is taxpayer money named in the measure. Paler brass is a smaller amount. Deeper bronze is a larger amount. Plum on the map is a tie between yes and no. A blue name is Democratic, a red name is Republican, and an olive or brown name is another party.</p>
+    <p>House roll calls are copied from the <a href="https://clerk.house.gov/evs">Clerk of the House</a> for 2025 and 2026. The question, the description, and the counts are the Clerk's. While this page is open it asks <a href="https://api.congress.gov/">Congress.gov</a> for a House roll call newer than that copy. The floor list is the latest week in the House file at <a href="https://docs.house.gov/floor/">docs.house.gov</a>. Office phone, room, and website are copied from the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators</a> file for the current Congress. Portraits are public-domain photographs from the Congressional Pictorial Directory, through the <a href="https://unitedstates.github.io/images/congress/225x275/">congress images</a> collection, and from the <a href="https://bioguide.congress.gov/">Biographical Directory</a> when that collection has no photograph. A floor recording is the House <a href="https://live.house.gov/">FloorCast</a> for the day of the roll call. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's YouTube channel</a> posts a floor video when one is published. A short account of a measure is the <a href="https://www.govinfo.gov/bulkdata/BILLSUM/119">Congressional Research Service summary</a> published by GovInfo. When that short account leads with dollar amounts, the amount and the office or program named with it are copied from that summary or from the measure's text on GovInfo. The line gives the largest amounts, not every amount in the measure. The full text is that measure's text page on <a href="https://www.congress.gov/">Congress.gov</a>. The sponsor is the member named in the <a href="https://www.govinfo.gov/bulkdata/BILLSTATUS/119">GovInfo bill status file</a>. Bills and resolutions that were introduced are copied from that same file. The introducer, the introduction date, the title, and the latest action are the file's. Senate roll calls are copied from <a href="https://voteview.com/data">Voteview</a>'s record of the Senate, because the <a href="https://www.senate.gov/legislative/votes_new.htm">Senate</a> site does not offer those files to this page. The question, the description, and each senator's yes or no are Voteview's. When the bill status file says the Senate passed a measure by unanimous consent, this page says so, because that action has no senator-by-senator vote.</p>
   </div>
 </footer>
+<nav class="jump" aria-label="On this page">
+  <a class="jump-top" href="#top">Top</a>
+  <a class="jump-search" href="#congress-find">Search</a>
+  <a class="jump-money" href="#taxpayer">Taxpayer money</a>
+  <a class="jump-floor" href="#floor">Floor list</a>
+  <a class="jump-introduced" href="#introduced">Introduced</a>
+  <a class="jump-house" href="#roll-calls">Roll calls</a>
+  <a class="jump-senate" href="#senate-votes">Senate roll calls</a>
+  <a class="jump-people" href="#senators">Senators</a>
+</nav>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
-<script src="congress.js?v=18"></script>
+<script src="congress.js?v=37"></script>
 </body>
 </html>
