@@ -59,7 +59,7 @@ div.floor-row { cursor: default; }
 .person-card p { margin: 4px 0; }
 #congress-find, #search-results, #taxpayer, #floor, #introduced, #roll-calls, #senate-votes, #senators, #open-vote, #open-intro { scroll-margin-top: 140px; overflow-anchor: none; }
 #top { scroll-margin-top: 0; height: 0; }
-body { padding-bottom: 76px; }
+body { padding-bottom: 84px; }
 .jump {
   position: fixed;
   z-index: 4;
@@ -67,10 +67,14 @@ body { padding-bottom: 76px; }
   right: 0;
   bottom: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
-  padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
-  background: #f4f0e6;
-  border-top: 1px solid #1c1915;
+  padding: 14px 10px calc(8px + env(safe-area-inset-bottom));
+  background:
+    linear-gradient(#bf0a30, #bf0a30) top left / 100% 4px no-repeat,
+    linear-gradient(#ffffff, #ffffff) top 4px left / 100% 4px no-repeat,
+    #002868;
+  border-top: 0;
   overflow-x: auto;
 }
 .jump a {
@@ -80,23 +84,27 @@ body { padding-bottom: 76px; }
   font-weight: 650;
   font-size: 15px;
   line-height: 1.2;
-  color: #1c1915;
-  background: #f4f0e6;
-  border: 1px solid #1c1915;
+  color: #002868;
+  background: #ffffff;
+  border: 1px solid #ffffff;
   white-space: nowrap;
 }
-.jump a.jump-top { background: #1c1915; color: #f4f0e6; }
-.jump a.jump-search { background: #0f6e78; color: #f4f7fb; }
-.jump a.jump-money { background: #c4924a; color: #2c1d0e; }
-.jump a.jump-introduced { background: #efe6d4; color: #1c1915; }
+.jump a:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }
+.jump a.jump-top { background: #1c1915; color: #f4f0e6; border-color: #f4f0e6; }
+.jump a.jump-search { background: #0f6e78; color: #f4f7fb; border-color: #0f6e78; }
+.jump a.jump-money { background: #c4924a; color: #2c1d0e; border-color: #c4924a; }
+.jump a.jump-floor { background: #e6b422; color: #2c1d0e; border-color: #e6b422; }
+.jump a.jump-introduced { background: #efe6d4; color: #1c1915; border-color: #efe6d4; }
 .jump a.jump-house, .jump a.jump-senate {
+  background-color: #f4f0e6;
+  color: #1c1915;
+  border-color: #f4f0e6;
   background-image: linear-gradient(#0e6a38, #0e6a38), linear-gradient(#8d2344, #8d2344);
-  background-size: 50% 4px, 50% 4px;
+  background-size: 50% 5px, 50% 5px;
   background-position: left bottom, right bottom;
   background-repeat: no-repeat;
 }
-.jump a.jump-senate { background-color: #e4e2f0; }
-.jump a.jump-people { background: #8a6232; color: #fff8ef; }
+.jump a.jump-people { background: #d9c8b4; color: #1c1915; border-color: #d9c8b4; }
 .census-topic { margin: 12px 0 16px; font-size: 18px; }
 .census-topic a { color: inherit; }
 .congress-actions { margin: 8px 0 0; }
@@ -147,6 +155,7 @@ strong.with-money, h2.with-money, h3.with-money, p.with-money { display: flex; f
 .sponsors h3 { font-size: 22px; margin: 16px 0 8px; }
 .sponsors .person-card { margin-top: 0; }
 @media (max-width: 800px) {
+  body { padding-bottom: 168px; }
   .party-line { grid-template-columns: 1fr; gap: 4px; }
   .person-card { grid-template-columns: 72px minmax(0, 1fr); }
   .portrait-lg, .portrait-letter.portrait-lg { width: 72px; height: 90px; font-size: 28px; }
@@ -235,7 +244,7 @@ strong.with-money, h2.with-money, h3.with-money, p.with-money { display: flex; f
     <h1>The House.</h1>
     <p class="deck">What the House voted on, who voted yes, who voted no, and how to reach the member. Bills and resolutions introduced in this Congress are listed too, with a portrait of the person who introduced each one. The floor list is the latest week the House has published. A roll call published later is added while this page is open.</p>
     <p class="deck">The <a href="https://live.house.gov/">House floor</a> is live on FloorCast when the House is in session. Each roll call links to that day's floor recording. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's channel</a> posts a floor video when one is published.</p>
-    <p class="deck">Under a roll call, a short account says what the measure does. Read the full summary on this page, or read the full bill or the full resolution. When a measure names taxpayer money, the amount is marked beside the title. A paler brass mark is a smaller amount. A deeper bronze mark is a larger amount. Those measures are listed together, largest amount first. The bar at the bottom of the screen returns to the top, opens the search, or jumps to a section.</p>
+    <p class="deck">Under a roll call, a short account says what the measure does. Read the full summary on this page, or read the full bill or the full resolution. When a measure names taxpayer money, the amount is marked beside the title. A paler brass mark is a smaller amount. A deeper bronze mark is a larger amount. Those measures are listed together, largest amount first. The bar at the bottom of the screen is navy, with a red stripe and a white stripe. Ink returns to the top. Teal opens the search. Brass opens taxpayer money, the same brass as the mark beside a title. Gold opens the floor list. Parchment opens bills that were introduced. A green and rose edge opens a roll call. The portrait tone opens the senators.</p>
     <div class="result-legend" id="congress-legend">
       <span><i class="swatch yes-scale"></i> Yes. A darker green is a larger yes share.</span>
       <span><i class="swatch no-scale"></i> No. A darker rose is a larger no share.</span>
@@ -341,7 +350,7 @@ strong.with-money, h2.with-money, h3.with-money, p.with-money { display: flex; f
 </main>
 <footer>
   <div class="wrap">
-    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Green is a yes. A darker green is a larger yes share. Rose is a no. A darker rose is a larger no share. Indigo is present. Stone is a member who did not vote. Gold is on the House floor list and has no roll call that week. A bar stays at the bottom of the screen. Black returns to the top. Teal opens the search. Brass opens the measures that name taxpayer money. Gold opens the floor list. Parchment opens bills that were introduced. A green and rose edge opens roll calls. Copper opens the senators. A brass mark beside a title is taxpayer money named in the measure. Paler brass is a smaller amount. Deeper bronze is a larger amount. Plum on the map is a tie between yes and no. A blue name is Democratic, a red name is Republican, and an olive or brown name is another party.</p>
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Green is a yes. A darker green is a larger yes share. Rose is a no. A darker rose is a larger no share. Indigo is present. Stone is a member who did not vote. Gold is on the House floor list and has no roll call that week. A bar stays at the bottom of the screen. The bar is navy, with a red stripe and a white stripe along the top. Ink returns to the top. Teal opens the search. Brass opens the measures that name taxpayer money. Gold opens the floor list. Parchment opens bills that were introduced. A green and rose edge opens House roll calls and Senate roll calls. The portrait tone opens the senators. A brass mark beside a title is taxpayer money named in the measure. Paler brass is a smaller amount. Deeper bronze is a larger amount. Plum on the map is a tie between yes and no. A blue name is Democratic, a red name is Republican, and an olive or brown name is another party.</p>
     <p>House roll calls are copied from the <a href="https://clerk.house.gov/evs">Clerk of the House</a> for 2025 and 2026. The question, the description, and the counts are the Clerk's. While this page is open it asks <a href="https://api.congress.gov/">Congress.gov</a> for a House roll call newer than that copy. The floor list is the latest week in the House file at <a href="https://docs.house.gov/floor/">docs.house.gov</a>. Office phone, room, and website are copied from the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators</a> file for the current Congress. Portraits are public-domain photographs from the Congressional Pictorial Directory, through the <a href="https://unitedstates.github.io/images/congress/225x275/">congress images</a> collection, and from the <a href="https://bioguide.congress.gov/">Biographical Directory</a> when that collection has no photograph. A floor recording is the House <a href="https://live.house.gov/">FloorCast</a> for the day of the roll call. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's YouTube channel</a> posts a floor video when one is published. A short account of a measure is the <a href="https://www.govinfo.gov/bulkdata/BILLSUM/119">Congressional Research Service summary</a> published by GovInfo. When that short account leads with dollar amounts, the amount and the office or program named with it are copied from that summary or from the measure's text on GovInfo. The line gives the largest amounts, not every amount in the measure. The full text is that measure's text page on <a href="https://www.congress.gov/">Congress.gov</a>. The sponsor is the member named in the <a href="https://www.govinfo.gov/bulkdata/BILLSTATUS/119">GovInfo bill status file</a>. Bills and resolutions that were introduced are copied from that same file. The introducer, the introduction date, the title, and the latest action are the file's. Senate roll calls are copied from <a href="https://voteview.com/data">Voteview</a>'s record of the Senate, because the <a href="https://www.senate.gov/legislative/votes_new.htm">Senate</a> site does not offer those files to this page. The question, the description, and each senator's yes or no are Voteview's. When the bill status file says the Senate passed a measure by unanimous consent, this page says so, because that action has no senator-by-senator vote.</p>
   </div>
 </footer>
