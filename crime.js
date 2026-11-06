@@ -931,6 +931,7 @@
   }
   function cityOf(index) { return cityData.cities[index]; }
   function cityCount(city, id) {
+    if (id === "all") return city.counts[0] + city.counts[5];
     return city.counts[cityData.fields.indexOf(id)];
   }
   function rateLabel(count, pop) {
@@ -938,25 +939,62 @@
     bits[0] = Number(bits[0]).toLocaleString("en-US");
     return bits.join(".");
   }
+  var hoodMeasureId = "all";
+  var HOOD_MEASURES = [
+    { id: "all", label: "All crime", noun: "violent-crime and property-crime offenses", one: "violent-crime or property-crime offense" },
+    { id: "fraud", label: "Fraud", arrest: true, noun: "fraud arrests", one: "fraud arrest" },
+    { id: "forgery", label: "Forgery and counterfeiting", arrest: true, noun: "forgery and counterfeiting arrests", one: "forgery and counterfeiting arrest" },
+    { id: "embezzlement", label: "Embezzlement", arrest: true, noun: "embezzlement arrests", one: "embezzlement arrest" }
+  ].concat(MEASURES.filter(function (item) { return !item.arrest; }));
+
   function hoodItem() {
-    return MEASURES.filter(function (item) { return item.id === hoodMeasureId; })[0];
+    return HOOD_MEASURES.filter(function (item) { return item.id === hoodMeasureId; })[0];
+  }
+  function hoodState(row) {
+    var match = data.states.filter(function (state) { return state.name === row[2]; })[0];
+    return match ? arrestRow(match.code) : null;
+  }
+  function hoodCount(row) {
+    if (hoodItem().arrest) {
+      var record = hoodState(row);
+      return record ? record[hoodMeasureId] : 0;
+    }
+    return cityCount(cityOf(row[5]), hoodMeasureId);
+  }
+  function hoodPop(row) {
+    if (hoodItem().arrest) {
+      var record = hoodState(row);
+      return record && record.pop ? record.pop : 0;
+    }
+    return cityOf(row[5]).pop;
   }
   function hoodRate(row) {
-    var city = cityOf(row[5]);
-    return rate(cityCount(city, hoodMeasureId), city.pop);
+    return rate(hoodCount(row), hoodPop(row));
   }
   function hoodSentence(row) {
-    var city = cityOf(row[5]);
-    var count = cityCount(city, hoodMeasureId);
     var item = hoodItem();
+    var count = hoodCount(row);
     var noun = count === 1 ? item.one : item.noun;
-    var line = row[0] + ", " + row[1] + ", " + row[2] + ". Table 8 reports " + people(count) + " " + noun + " in " + city.city + ", " + city.state + ", in 2025. That is " + rateLabel(count, city.pop) + " per 100,000 people in the population on that row, " + people(city.pop) + ". This is the city's offenses known to law enforcement. It is not a count inside the neighborhood.";
+    if (item.arrest) {
+      var record = hoodState(row);
+      var line = row[0] + " is in " + row[2] + ". Table 69 reports " + people(count) + " " + noun + " in " + row[2] + " in 2025. That is " + rateLabel(count, hoodPop(row)) + " per 100,000 people in the population printed for that state in Table 69, " + people(hoodPop(row)) + ". Table 8 does not publish " + item.label.toLowerCase() + " by city, so this is the state's arrest rate. It is not a count inside " + row[0] + " or in " + row[1] + ".";
+      if (record && record.note) line += " " + record.note;
+      return line;
+    }
+    var city = cityOf(row[5]);
+    var line = row[0] + ", " + row[1] + ", " + row[2] + ". ";
+    if (item.id === "all") {
+      line += "Table 8 reports " + people(city.counts[0]) + " violent-crime offenses and " + people(city.counts[5]) + " property-crime offenses in " + city.city + ", " + city.state + ", in 2025. All crime here is those counts added, " + people(count) + ". ";
+    } else {
+      line += "Table 8 reports " + people(count) + " " + noun + " in " + city.city + ", " + city.state + ", in 2025. ";
+    }
+    line += "That is " + rateLabel(count, city.pop) + " per 100,000 people in the population on that row, " + people(city.pop) + ". This is the city's offenses known to law enforcement. It is not a count inside the neighborhood.";
+    if (item.id === "all") line += " Arson is not included.";
     if (city.city !== row[1]) line += " Table 8 lists the city as " + city.city + ".";
     if (city.note) line += " " + city.note;
     return line;
   }
   var hoodListMeasure = null;
-  var hoodMeasureId = "violent";
   function drawHoods() {
     if (!hoodCtx || !cityData) return;
     if (hoodBase) {
@@ -964,9 +1002,10 @@
       hoodBase.jumpTo({ center: center, zoom: Math.log(hoodView.scale / 512) / Math.LN2 });
     }
     hoodCtx.clearRect(0, 0, hoodCssW, hoodCssH);
-    var values = cityData.cities.map(function (city) { return rate(cityCount(city, hoodMeasureId), city.pop); });
-    var sorted = values.slice().sort(function (a, b) { return a - b; });
-    var shades = values.map(function (value) {
+    var ink = hoodItem().arrest ? ARREST_INK : INK;
+    var values;
+    var shades;
+    function shadeFor(value, sorted) {
       var lo = 0;
       var hi = sorted.length;
       while (lo < hi) {
@@ -974,15 +1013,30 @@
         if (sorted[mid] < value) lo = mid + 1;
         else hi = mid;
       }
-      var step = Math.min(INK.length - 1, Math.floor(lo / sorted.length * INK.length));
-      return { fill: INK[step], light: step >= 3, band: "q" + step };
-    });
+      var step = Math.min(ink.length - 1, Math.floor(lo / sorted.length * ink.length));
+      return { fill: ink[step], light: step >= 3, band: "q" + step };
+    }
+    if (hoodItem().arrest) {
+      var stateRates = data.states.map(function (state) {
+        var record = arrestRow(state.code);
+        return record && record.pop ? rate(record[hoodMeasureId], record.pop) : 0;
+      });
+      var byName = {};
+      data.states.forEach(function (state, index) { byName[state.name] = stateRates[index]; });
+      var sortedStates = stateRates.slice().sort(function (a, b) { return a - b; });
+      values = cityData.hoods.map(function (row) { return byName[row[2]] || 0; });
+      shades = values.map(function (value) { return shadeFor(value, sortedStates); });
+    } else {
+      values = cityData.cities.map(function (city) { return rate(cityCount(city, hoodMeasureId), city.pop); });
+      var sorted = values.slice().sort(function (a, b) { return a - b; });
+      shades = values.map(function (value) { return shadeFor(value, sorted); });
+    }
     var radius = hoodView.scale / 360 >= 80 ? 7 : hoodView.scale / 360 >= 24 ? 5 : 3.5;
     var bands = {};
     var picked = null;
-    cityData.hoods.forEach(function (row) {
-      var shade = shades[row[5]];
-      var value = values[row[5]];
+    cityData.hoods.forEach(function (row, index) {
+      var shade = hoodItem().arrest ? shades[index] : shades[row[5]];
+      var value = hoodItem().arrest ? values[index] : values[row[5]];
       if (!bands[shade.band]) bands[shade.band] = { fill: shade.fill, lo: value, hi: value };
       else {
         if (value < bands[shade.band].lo) bands[shade.band].lo = value;
@@ -1041,7 +1095,7 @@
       var button = document.createElement("button");
       button.type = "button";
       if (hoodPick && hoodPick[0] === row[0] && hoodPick[1] === row[1] && hoodPick[3] === row[3]) button.className = "is-on";
-      button.textContent = row[0] + ", " + row[1] + ", " + row[2] + " · " + rateLabel(cityCount(cityOf(row[5]), hoodMeasureId), cityOf(row[5]).pop);
+      button.textContent = row[0] + ", " + row[1] + ", " + row[2] + " · " + rateLabel(hoodCount(row), hoodPop(row));
       button.addEventListener("click", function () {
         hoodPick = row;
         fitHood(row[3], row[4], 0.4);
@@ -1052,16 +1106,16 @@
       });
       host.appendChild(button);
     });
-    note.textContent = "Showing the first 150 of " + people(cityData.matched) + " neighborhoods with a city in Table 8. " + people(cityData.areas - cityData.matched) + " of " + people(cityData.areas) + " neighborhoods have no matching city, so they are not listed. Ordered by " + (hoodSortKey === "name" ? "name" : "the city " + hoodItem().label.toLowerCase() + " rate") + ".";
-    if (current().arrest) note.textContent += " These dots are the city " + hoodItem().label.toLowerCase() + " rate. Table 8 does not publish " + current().label.toLowerCase() + " by city.";
+    var order = hoodSortKey === "name" ? "name" : (hoodItem().arrest ? "the state " + hoodItem().label.toLowerCase() + " arrest rate" : "the city " + hoodItem().label.toLowerCase() + " rate");
+    note.textContent = "Showing the first 150 of " + people(cityData.matched) + " neighborhoods with a city in Table 8. " + people(cityData.areas - cityData.matched) + " of " + people(cityData.areas) + " neighborhoods have no matching city, so they are not listed. Ordered by " + order + ".";
+    if (hoodItem().id === "all") note.textContent += " All crime is the city's violent-crime count plus its property-crime count. Arson is not included.";
+    if (hoodItem().arrest) note.textContent += " These dots are the state " + hoodItem().label.toLowerCase() + " arrest rate from Table 69. Table 8 does not publish " + hoodItem().label.toLowerCase() + " by city.";
     syncSort("crime-hood-sort", hoodSortKey, hoodSortDir);
   }
   function paintHoods() {
-    if (!current().arrest) hoodMeasureId = measure;
     drawHoods();
-    var listKey = hoodMeasureId + (current().arrest ? ":" + measure : "");
-    if (!cityData || hoodListMeasure === listKey) return;
-    hoodListMeasure = listKey;
+    if (!cityData || hoodListMeasure === hoodMeasureId) return;
+    hoodListMeasure = hoodMeasureId;
     renderHoodList();
   }
   function nearestHood(x, y) {
@@ -1101,6 +1155,25 @@
       return;
     }
     hoodCtx = hoodCanvas.getContext("2d");
+    var measureBar = document.getElementById("crime-hood-measures");
+    HOOD_MEASURES.forEach(function (item) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.textContent = item.label;
+      button.setAttribute("aria-pressed", item.id === hoodMeasureId ? "true" : "false");
+      button.addEventListener("click", function () {
+        hoodMeasureId = item.id;
+        hoodListMeasure = item.id;
+        Array.prototype.forEach.call(measureBar.querySelectorAll("button"), function (other) {
+          other.setAttribute("aria-pressed", other === button ? "true" : "false");
+        });
+        var readout = document.getElementById("crime-hood-readout");
+        if (readout) readout.textContent = hoodPick ? hoodSentence(hoodPick) : "";
+        renderHoodList();
+        drawHoods();
+      });
+      measureBar.appendChild(button);
+    });
     var zoomBar = document.getElementById("crime-hood-zoom");
     [["Zoom in", 1.4], ["Zoom out", 1 / 1.4]].forEach(function (item) {
       var button = document.createElement("button");
