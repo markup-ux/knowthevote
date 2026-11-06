@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · Trivia</title>
-<meta name="description" content="Questions, a count, and a sheet, using facts already printed on Leaders.vote. Not an endorsement.">
+<meta name="description" content="Questions and a count, using facts already printed on Leaders.vote. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="guide.css?v=play2">
 <style>
@@ -173,7 +173,6 @@
     cursor: default;
   }
   #play-root #play-status { margin: 0; max-width: 62ch; font-size: 17px; line-height: 1.45; }
-  #play-root .play-work #play-status { margin-top: 12px; color: var(--ink); }
   #play-root #play-status:empty { display: none; }
   #play-root .play-tally { display: flex; gap: 28px; margin: 14px 0 4px; }
   #play-root .play-tally span {
@@ -194,73 +193,14 @@
   #play-root .play-misses li { margin: 8px 0; }
   #play-root .play-misses a { color: inherit; }
 
-  #play-root .play-sheet { width: min(100%, 920px); }
-  #play-root .play-sheet .play-body {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 8px 40px;
-    align-items: start;
-    padding-bottom: 22px;
-  }
-  #play-root .play-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 76px);
-    width: max-content;
-    background: #fff;
-  }
-  #play-root .play-cell {
-    position: relative;
-    width: 76px;
-    height: 76px;
-    padding: 18px 0 0;
-    border: 0;
-    background: #fff;
-    color: var(--ink);
-    font-family: Georgia, "Palatino Linotype", serif;
-    font-size: 32px;
-    text-align: center;
-    cursor: pointer;
-  }
-  #play-root .play-cell .term {
-    position: absolute;
-    top: 5px;
-    left: 6px;
-    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
-    font-size: 12px;
-    font-weight: 650;
-    color: var(--muted);
-  }
-  #play-root .play-cell.is-on { background: var(--chip); }
-  #play-root .play-cell.is-bad { background: #f3e4e1; }
-  #play-root .play-keys { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-  #play-root .play-keys button {
-    font: inherit;
-    min-width: 44px;
-    height: 44px;
-    padding: 0 12px;
-    background: #fff;
-    border: 1px solid var(--ink);
-    cursor: pointer;
-  }
-  #play-root .play-keys button:hover,
-  #play-root .play-cell:hover { background: var(--chip); }
-  #play-root .play-cell.is-bad:hover { background: #f3e4e1; }
-  #play-root .play-aside .play-kicker { margin-bottom: 10px; }
-  #play-root .play-rule,
-  #play-root .play-note { margin: 0 0 12px; max-width: 46ch; line-height: 1.45; }
-  #play-root .play-note { color: var(--muted); }
   #play-root .play-note a { color: inherit; }
-  #play-root button:focus-visible,
-  #play-root .play-cell:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  #play-root button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
   @media (max-width: 720px) {
     #play-root h3.play-q { font-size: 24px; }
     #play-root .play-body,
     #play-root .play-foot,
     #play-root .play-credit { padding-left: 16px; padding-right: 16px; }
-    #play-root .play-sheet .play-body { grid-template-columns: 1fr; }
-    #play-root .play-grid { grid-template-columns: repeat(4, minmax(0, 72px)); }
-    #play-root .play-cell { width: 100%; height: 68px; font-size: 28px; }
   }
 </style>
 
@@ -274,7 +214,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://leaders.vote/play.html">
 <meta property="og:title" content="Leaders.vote · Trivia">
-<meta property="og:description" content="Questions, a count, and a sheet, using facts already printed on Leaders.vote. Not an endorsement.">
+<meta property="og:description" content="Questions and a count, using facts already printed on Leaders.vote. Not an endorsement.">
 <meta property="og:image" content="https://leaders.vote/social/leaders-vote-social.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="3072">
@@ -282,10 +222,10 @@
 <meta property="og:image:alt" content="Leaders.vote. Know who you&#x27;re voting for.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Leaders.vote · Trivia">
-<meta name="twitter:description" content="Questions, a count, and a sheet, using facts already printed on Leaders.vote. Not an endorsement.">
+<meta name="twitter:description" content="Questions and a count, using facts already printed on Leaders.vote. Not an endorsement.">
 <meta name="twitter:image" content="https://leaders.vote/social/leaders-vote-social.jpg">
 <link rel="icon" href="https://leaders.vote/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://leaders.vote/#website","name":"Leaders.vote","url":"https://leaders.vote/","description":"Leaders.vote is an independent, nonpartisan voter guide for every U.S. state on November 3, 2026. Candidates, offices, sample ballots, and unofficial results. No endorsements.","inLanguage":"en","publisher":{"@id":"https://leaders.vote/#publisher"}},{"@type":"Organization","@id":"https://leaders.vote/#publisher","name":"Leaders.vote","url":"https://leaders.vote/","description":"Independent, nonpartisan voter guide. Not a campaign and not a government site.","logo":{"@type":"ImageObject","url":"https://leaders.vote/favicon.svg"}},{"@type":"WebPage","@id":"https://leaders.vote/play.html#webpage","url":"https://leaders.vote/play.html","name":"Leaders.vote · Trivia","description":"Questions, a count, and a sheet, using facts already printed on Leaders.vote. Not an endorsement.","isPartOf":{"@id":"https://leaders.vote/#website"},"breadcrumb":{"@id":"https://leaders.vote/play.html#breadcrumb"},"inLanguage":"en","isAccessibleForFree":true,"primaryImageOfPage":{"@type":"ImageObject","url":"https://leaders.vote/social/leaders-vote-social.jpg"}},{"@type":"BreadcrumbList","@id":"https://leaders.vote/play.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Leaders.vote","item":"https://leaders.vote/"},{"@type":"ListItem","position":2,"name":"Trivia","item":"https://leaders.vote/play.html"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://leaders.vote/#website","name":"Leaders.vote","url":"https://leaders.vote/","description":"Leaders.vote is an independent, nonpartisan voter guide for every U.S. state on November 3, 2026. Candidates, offices, sample ballots, and unofficial results. No endorsements.","inLanguage":"en","publisher":{"@id":"https://leaders.vote/#publisher"}},{"@type":"Organization","@id":"https://leaders.vote/#publisher","name":"Leaders.vote","url":"https://leaders.vote/","description":"Independent, nonpartisan voter guide. Not a campaign and not a government site.","logo":{"@type":"ImageObject","url":"https://leaders.vote/favicon.svg"}},{"@type":"WebPage","@id":"https://leaders.vote/play.html#webpage","url":"https://leaders.vote/play.html","name":"Leaders.vote · Trivia","description":"Questions and a count, using facts already printed on Leaders.vote. Not an endorsement.","isPartOf":{"@id":"https://leaders.vote/#website"},"breadcrumb":{"@id":"https://leaders.vote/play.html#breadcrumb"},"inLanguage":"en","isAccessibleForFree":true,"primaryImageOfPage":{"@type":"ImageObject","url":"https://leaders.vote/social/leaders-vote-social.jpg"}},{"@type":"BreadcrumbList","@id":"https://leaders.vote/play.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Leaders.vote","item":"https://leaders.vote/"},{"@type":"ListItem","position":2,"name":"Trivia","item":"https://leaders.vote/play.html"}]}]}</script>
 <!-- /seo -->
 </head>
 <body>
@@ -308,29 +248,26 @@
   <div class="wrap hero">
     <p class="kicker">Trivia</p>
     <h1>Questions from the pages.</h1>
-    <p class="deck">Three short rounds, drawn from facts already printed here. Nothing endorses a candidate, calls a race, or ranks anyone.</p>
+    <p class="deck">Two short rounds, drawn from facts already printed here. Nothing endorses a candidate, calls a race, or ranks anyone.</p>
     <div class="sheet-switch play-switch" role="tablist" aria-label="Trivia">
       <button type="button" id="tab-ballot" role="tab" aria-controls="play-root" aria-pressed="true">Know the ballot</button>
       <button type="button" id="tab-count" role="tab" aria-controls="play-root" aria-pressed="false">The count</button>
-      <button type="button" id="tab-sheet" role="tab" aria-controls="play-root" aria-pressed="false">The sheet</button>
     </div>
   </div>
   <div class="wrap block" id="play-root"></div>
 </main>
 <footer>
   <div class="wrap">
-    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any election authority. Trivia repeats facts from those pages. A finished sheet is a puzzle, not a result.</p>
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any election authority. Trivia repeats facts from those pages.</p>
     <p>Illinois facts are from the Illinois page: the sample ballot, the retention rule, and the note on terms. Country facts are from the country list. Names are printed as they are printed there. Photographs are used under the Unsplash License. The photographer is credited on the picture.</p>
   </div>
 </footer>
 <script>
 (function () {
   var root = document.getElementById("play-root");
-  var sheetKey = null;
   var tabs = {
     ballot: document.getElementById("tab-ballot"),
-    count: document.getElementById("tab-count"),
-    sheet: document.getElementById("tab-sheet")
+    count: document.getElementById("tab-count")
   };
 
   var PHOTOS = {
@@ -357,14 +294,6 @@
       by: "Fabian Lozano",
       place: "top",
       alt: "The National Congress in Brasília, two towers between two bowls"
-    },
-    illinois: {
-      id: "photo-1551301285-bdfcd0f17a02",
-      slug: "T2gyvHmkS98",
-      user: "tuckergood",
-      by: "Tucker Good",
-      place: "side",
-      alt: "The dome of the Illinois State Capitol in Springfield"
     },
     senate: {
       id: "photo-1597335586198-e31434d3a856",
@@ -1161,17 +1090,6 @@
     }
   ];
 
-  var CAGES = [
-    { cells: [0, 1], target: 4 },
-    { cells: [2, 3], target: 6 },
-    { cells: [4, 5], target: 6 },
-    { cells: [6, 7], target: 4 },
-    { cells: [8, 9], target: 6 },
-    { cells: [10, 11], target: 4 },
-    { cells: [12, 13], target: 4 },
-    { cells: [14, 15], target: 6 }
-  ];
-
   function el(tag, className, text) {
     var node = document.createElement(tag);
     if (className) node.className = className;
@@ -1204,17 +1122,12 @@
   }
 
   function show(name) {
-    if (sheetKey) {
-      document.removeEventListener("keydown", sheetKey);
-      sheetKey = null;
-    }
     Object.keys(tabs).forEach(function (key) {
       tabs[key].setAttribute("aria-pressed", key === name ? "true" : "false");
     });
     root.replaceChildren();
     if (name === "ballot") renderBallot();
-    else if (name === "count") renderCount();
-    else renderSheet();
+    else renderCount();
   }
 
   function sheetHead(title, line) {
@@ -1562,169 +1475,6 @@
       else ask();
     };
     ask();
-  }
-
-  function renderSheet() {
-    var values = Array(16).fill("");
-    var selected = 0;
-    var started = false;
-
-    var card = el("div", "play-card play-sheet");
-    var art = el("div", "play-art");
-    var img = document.createElement("img");
-    img.className = "play-photo";
-    img.src = photoSrc(PHOTOS.illinois, "wide");
-    img.alt = PHOTOS.illinois.alt;
-    var credit = el("p", "play-credit");
-    fillCredit(credit, PHOTOS.illinois);
-    art.appendChild(img);
-
-    var body = el("div", "play-body");
-    var work = el("div", "play-work");
-    var board = el("div", "play-grid");
-    board.setAttribute("role", "grid");
-    board.setAttribute("aria-label", "Four by four sheet");
-    var cells = [];
-    for (var i = 0; i < 16; i++) {
-      var button = el("button", "play-cell");
-      button.type = "button";
-      button.dataset.index = String(i);
-      var cage = CAGES.filter(function (item) { return item.cells[0] === i; })[0];
-      if (cage) button.appendChild(el("span", "term", String(cage.target)));
-      var digit = el("span", "digit", "");
-      button.appendChild(digit);
-      button.addEventListener("click", function (event) {
-        selected = Number(event.currentTarget.dataset.index);
-        paint();
-      });
-      cells.push(button);
-      board.appendChild(button);
-    }
-    work.appendChild(board);
-
-    var keys = el("div", "play-keys");
-    [1, 2, 3, 4].forEach(function (n) {
-      var key = el("button", "", String(n));
-      key.type = "button";
-      key.addEventListener("click", function () { write(String(n)); });
-      keys.appendChild(key);
-    });
-    var clear = el("button", "", "Clear");
-    clear.type = "button";
-    clear.addEventListener("click", function () { write(""); });
-    keys.appendChild(clear);
-    work.appendChild(keys);
-
-    var status = el("p", "play-note");
-    status.id = "play-status";
-    work.appendChild(status);
-
-    var aside = el("div", "play-aside");
-    aside.appendChild(el("p", "play-kicker", "The sheet"));
-    aside.appendChild(el("p", "play-rule", "Each row and each column uses 1, 2, 3, and 4 once. A heavy box is a pair. The pair adds to the small number in the corner. The capitol is in Springfield."));
-    aside.appendChild(el("p", "play-rule", "4 is a term in years for governor, attorney general, secretary of state, comptroller, and treasurer. 6 is the Senate term. Six is also how many statewide races the Illinois page lists before your own district."));
-    aside.appendChild(el("p", "play-rule", "The digits are only the pieces that make those totals. A finished sheet is any filling that follows the rules. It does not rank a candidate."));
-    var link = el("p", "play-note");
-    link.appendChild(document.createTextNode("The numbers are from the "));
-    var a = el("a", "", "Illinois page");
-    a.href = "illinois.html#read";
-    link.appendChild(a);
-    link.appendChild(document.createTextNode("."));
-    aside.appendChild(link);
-    body.appendChild(work);
-    body.appendChild(aside);
-    card.appendChild(art);
-    card.appendChild(credit);
-    card.appendChild(body);
-    root.appendChild(card);
-
-    function cageAt(index) {
-      return CAGES.filter(function (cage) { return cage.cells.indexOf(index) >= 0; })[0];
-    }
-
-    function edge(index, side) {
-      var row = Math.floor(index / 4);
-      var col = index % 4;
-      var other = side === "right" ? (col < 3 ? index + 1 : -1) : (row < 3 ? index + 4 : -1);
-      if (other < 0) return "2px solid #1c1915";
-      return cageAt(index) === cageAt(other) ? "1px solid #d8d0c2" : "2px solid #1c1915";
-    }
-
-    function write(digit) {
-      started = true;
-      values[selected] = digit;
-      if (digit && selected < 15) selected += 1;
-      paint();
-    }
-
-    function paint() {
-      var bad = {};
-      function markDup(indexes) {
-        var seen = {};
-        indexes.forEach(function (index) {
-          var digit = values[index];
-          if (!digit) return;
-          if (seen[digit] != null) {
-            bad[index] = true;
-            bad[seen[digit]] = true;
-          } else seen[digit] = index;
-        });
-      }
-      for (var row = 0; row < 4; row++) markDup([0, 1, 2, 3].map(function (col) { return row * 4 + col; }));
-      for (var col = 0; col < 4; col++) markDup([0, 1, 2, 3].map(function (row) { return row * 4 + col; }));
-      var brokenPair = false;
-      CAGES.forEach(function (cage) {
-        var digits = cage.cells.map(function (index) { return values[index]; });
-        if (digits.some(function (digit) { return !digit; })) return;
-        if (Number(digits[0]) + Number(digits[1]) !== cage.target) {
-          brokenPair = true;
-          cage.cells.forEach(function (index) { bad[index] = true; });
-        }
-      });
-      cells.forEach(function (button, index) {
-        var row = Math.floor(index / 4) + 1;
-        var col = (index % 4) + 1;
-        button.style.borderRight = edge(index, "right");
-        button.style.borderBottom = edge(index, "down");
-        button.style.borderTop = Math.floor(index / 4) === 0 ? "2px solid #1c1915" : "0";
-        button.style.borderLeft = index % 4 === 0 ? "2px solid #1c1915" : "0";
-        button.classList.toggle("is-on", index === selected);
-        button.classList.toggle("is-bad", !!bad[index]);
-        button.querySelector(".digit").textContent = values[index];
-        button.setAttribute("aria-label", "Row " + row + ", column " + col + (values[index] ? ", " + values[index] : ", empty"));
-      });
-      var filled = values.every(function (digit) { return digit; });
-      var legal = filled && !Object.keys(bad).length;
-      if (legal) status.textContent = "The sheet holds. Four and six are the term lengths on the Illinois page.";
-      else if (started && brokenPair) status.textContent = "That pair does not add to the term in the corner.";
-      else if (started && Object.keys(bad).length) status.textContent = "A digit is repeated in a row or a column.";
-      else status.textContent = "";
-    }
-
-    sheetKey = onKey;
-    document.addEventListener("keydown", onKey);
-    function onKey(event) {
-      if (event.key >= "1" && event.key <= "4") {
-        write(event.key);
-        event.preventDefault();
-      } else if (event.key === "Backspace" || event.key === "Delete" || event.key === "0") {
-        write("");
-        event.preventDefault();
-      } else if (event.key === "ArrowRight") {
-        selected = Math.min(15, selected + 1);
-        paint();
-      } else if (event.key === "ArrowLeft") {
-        selected = Math.max(0, selected - 1);
-        paint();
-      } else if (event.key === "ArrowDown") {
-        selected = Math.min(15, selected + 4);
-        paint();
-      } else if (event.key === "ArrowUp") {
-        selected = Math.max(0, selected - 4);
-        paint();
-      }
-    }
-    paint();
   }
 
   Object.keys(tabs).forEach(function (name) {
