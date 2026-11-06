@@ -1,5 +1,5 @@
 (function () {
-  var INK = ["#fff1b8", "#ffd15c", "#f5a03a", "#e36b3a", "#9a3d5c"];
+  var INK = ["#f7fbe8", "#d4ee8a", "#7cb342", "#33691e", "#1b3a0a"];
   var canvas = document.getElementById("health-map");
   var readout = document.getElementById("health-readout");
   var legend = document.getElementById("health-legend");
@@ -545,7 +545,7 @@
     paintLegend(key, function () {
       var title = document.createElement("span");
       title.className = "legend-label";
-      title.textContent = "Tagged restaurants. Lighter is fewer. Darker is more.";
+      title.textContent = "Tagged restaurants. Yellow-green is the count. A darker yellow-green is more.";
       legend.appendChild(title);
       if (brandFilter !== null) {
         addMarkSwatch(brandFilter, data.brands[brandFilter] + " in each shaded cell");

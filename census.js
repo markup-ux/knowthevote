@@ -4,11 +4,11 @@
   var LOSS = ["#f3e4da", "#e2c2b0", "#c48b74", "#8a4d3a"];
   var GAIN = ["#dce6da", "#b7d0b4", "#6fa376", "#2c5a3c"];
   var MEASURES = [
-    { id: "pop", label: "Population", blurb: "Darker is more people on July 1, 2025." },
+    { id: "pop", label: "Population", blurb: "Purple is the population. A darker purple is more people on July 1, 2025." },
     { id: "change", label: "Change since 2020", blurb: "Brown is a drop from the April 1, 2020 estimates base. Green is a rise. Darker is a larger change." },
-    { id: "age18", label: "Age 18 and older", blurb: "Darker is more people age 18 and older on July 1, 2025." },
-    { id: "medAge", label: "Median age", blurb: "Darker is an older median age on July 1, 2025." },
-    { id: "seats", label: "House seats", blurb: "Darker is more voting seats in the House. The 2020 census assigned them. The District of Columbia has a delegate." }
+    { id: "age18", label: "Age 18 and older", blurb: "Purple is the count of people age 18 and older. A darker purple is more people on July 1, 2025." },
+    { id: "medAge", label: "Median age", blurb: "Purple is the median age. A darker purple is an older median age on July 1, 2025." },
+    { id: "seats", label: "House seats", blurb: "Purple is the number of voting seats in the House. A darker purple is more seats. The 2020 census assigned them. The District of Columbia has a delegate." }
   ];
 
   var data = null;
