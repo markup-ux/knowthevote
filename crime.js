@@ -938,14 +938,17 @@
     bits[0] = Number(bits[0]).toLocaleString("en-US");
     return bits.join(".");
   }
+  function hoodItem() {
+    return MEASURES.filter(function (item) { return item.id === hoodMeasureId; })[0];
+  }
   function hoodRate(row) {
     var city = cityOf(row[5]);
-    return rate(cityCount(city, measure), city.pop);
+    return rate(cityCount(city, hoodMeasureId), city.pop);
   }
   function hoodSentence(row) {
     var city = cityOf(row[5]);
-    var count = cityCount(city, measure);
-    var item = current();
+    var count = cityCount(city, hoodMeasureId);
+    var item = hoodItem();
     var noun = count === 1 ? item.one : item.noun;
     var line = row[0] + ", " + row[1] + ", " + row[2] + ". Table 8 reports " + people(count) + " " + noun + " in " + city.city + ", " + city.state + ", in 2025. That is " + rateLabel(count, city.pop) + " per 100,000 people in the population on that row, " + people(city.pop) + ". This is the city's offenses known to law enforcement. It is not a count inside the neighborhood.";
     if (city.city !== row[1]) line += " Table 8 lists the city as " + city.city + ".";
@@ -953,18 +956,15 @@
     return line;
   }
   var hoodListMeasure = null;
+  var hoodMeasureId = "violent";
   function drawHoods() {
     if (!hoodCtx || !cityData) return;
-    if (current().arrest) {
-      clearCollarHoods();
-      return;
-    }
     if (hoodBase) {
       var center = hoodLonLat(hoodCssW / 2, hoodCssH / 2);
       hoodBase.jumpTo({ center: center, zoom: Math.log(hoodView.scale / 512) / Math.LN2 });
     }
     hoodCtx.clearRect(0, 0, hoodCssW, hoodCssH);
-    var values = cityData.cities.map(function (city) { return rate(cityCount(city, measure), city.pop); });
+    var values = cityData.cities.map(function (city) { return rate(cityCount(city, hoodMeasureId), city.pop); });
     var sorted = values.slice().sort(function (a, b) { return a - b; });
     var shades = values.map(function (value) {
       var lo = 0;
@@ -1029,10 +1029,6 @@
     var host = document.getElementById("crime-hood-list");
     var note = document.getElementById("crime-hood-note");
     if (!host || !cityData) return;
-    if (current().arrest) {
-      clearCollarHoods();
-      return;
-    }
     var rows = cityData.hoods.slice().sort(function (a, b) {
       if (hoodSortKey === "name") return (a[0] + a[1]).localeCompare(b[0] + b[1]) * hoodSortDir;
       var left = hoodRate(a);
@@ -1045,7 +1041,7 @@
       var button = document.createElement("button");
       button.type = "button";
       if (hoodPick && hoodPick[0] === row[0] && hoodPick[1] === row[1] && hoodPick[3] === row[3]) button.className = "is-on";
-      button.textContent = row[0] + ", " + row[1] + ", " + row[2] + " · " + rateLabel(cityCount(cityOf(row[5]), measure), cityOf(row[5]).pop);
+      button.textContent = row[0] + ", " + row[1] + ", " + row[2] + " · " + rateLabel(cityCount(cityOf(row[5]), hoodMeasureId), cityOf(row[5]).pop);
       button.addEventListener("click", function () {
         hoodPick = row;
         fitHood(row[3], row[4], 0.4);
@@ -1056,29 +1052,16 @@
       });
       host.appendChild(button);
     });
-    note.textContent = "Showing the first 150 of " + people(cityData.matched) + " neighborhoods with a city in Table 8. " + people(cityData.areas - cityData.matched) + " of " + people(cityData.areas) + " neighborhoods have no matching city, so they are not listed. Ordered by " + (hoodSortKey === "name" ? "name" : "the city rate") + ".";
+    note.textContent = "Showing the first 150 of " + people(cityData.matched) + " neighborhoods with a city in Table 8. " + people(cityData.areas - cityData.matched) + " of " + people(cityData.areas) + " neighborhoods have no matching city, so they are not listed. Ordered by " + (hoodSortKey === "name" ? "name" : "the city " + hoodItem().label.toLowerCase() + " rate") + ".";
+    if (current().arrest) note.textContent += " These dots are the city " + hoodItem().label.toLowerCase() + " rate. Table 8 does not publish " + current().label.toLowerCase() + " by city.";
     syncSort("crime-hood-sort", hoodSortKey, hoodSortDir);
   }
-  function clearCollarHoods() {
-    if (hoodCtx) hoodCtx.clearRect(0, 0, hoodCssW, hoodCssH);
-    var legendBox = document.getElementById("crime-hood-legend");
-    if (legendBox) legendBox.innerHTML = "";
-    var host = document.getElementById("crime-hood-list");
-    if (host) host.innerHTML = "";
-    var readout = document.getElementById("crime-hood-readout");
-    if (readout) readout.textContent = "";
-    var note = document.getElementById("crime-hood-note");
-    if (note) note.textContent = "Table 8 does not publish " + current().label.toLowerCase() + " by city, so this map has no dots for it. The state map above is Table 69 arrests.";
-  }
-
   function paintHoods() {
-    if (current().arrest) {
-      clearCollarHoods();
-      return;
-    }
+    if (!current().arrest) hoodMeasureId = measure;
     drawHoods();
-    if (!cityData || hoodListMeasure === measure) return;
-    hoodListMeasure = measure;
+    var listKey = hoodMeasureId + (current().arrest ? ":" + measure : "");
+    if (!cityData || hoodListMeasure === listKey) return;
+    hoodListMeasure = listKey;
     renderHoodList();
   }
   function nearestHood(x, y) {

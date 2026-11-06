@@ -267,7 +267,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
       <div id="crime-detail"></div>
       <section class="where" id="crime-neighborhoods">
         <h2>Crime by neighborhood</h2>
-        <p class="deck">Each dot is a neighborhood, suburb, or quarter from the same OpenStreetMap names as the restaurant list. The color is the 2025 offense rate for that neighborhood's city in FBI Table 8, Offenses Known to Law Enforcement. The rate is the city's count divided by the population printed on that row, times 100,000. It is not a count inside the neighborhood. A neighborhood whose city is not in Table 8 is not drawn. Zoom in to separate the dots. Indigo is the city rate. A darker indigo is a higher rate among the cities in this table. Fraud, forgery and counterfeiting, and embezzlement are not in Table 8, so those measures draw no dots. A city population of a few hundred people can produce a high rate from a small count.</p>
+        <p class="deck">Each dot is a neighborhood, suburb, or quarter from the same OpenStreetMap names as the restaurant list. The color is the 2025 offense rate for that neighborhood's city in FBI Table 8, Offenses Known to Law Enforcement. The rate is the city's count divided by the population printed on that row, times 100,000. It is not a count inside the neighborhood. A neighborhood whose city is not in Table 8 is not drawn. Zoom in to separate the dots. Indigo is the city rate. A darker indigo is a higher rate among the cities in this table. Fraud, forgery and counterfeiting, and embezzlement are not in Table 8. While one of those is selected, the dots stay on violent crime, or on the last offense measure that Table 8 does publish. A city population of a few hundred people can produce a high rate from a small count.</p>
         <p class="deck">Four Table 8 rows use a longer agency name. Charlotte-Mecklenburg is used for Charlotte, Athens-Clarke County for Athens, Louisville Metro for Louisville, and Metropolitan Nashville Police Department for Nashville. Florida and North Dakota cities carry the FBI's limited-data note.</p>
         <div id="crime-hood-wrap">
           <div id="crime-hood-base"></div>
@@ -551,7 +551,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
 <script src="census.js?v=5"></script>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
-<script src="crime.js?v=17"></script>
+<script src="crime.js?v=18"></script>
 <script src="water.js?v=8"></script>
 <script src="health.js?v=38"></script>
 </body>
