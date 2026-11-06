@@ -107,6 +107,30 @@ body { padding-bottom: 84px; }
 .jump a.jump-people { background: #d9c8b4; color: #1c1915; border-color: #d9c8b4; }
 .census-topic { margin: 12px 0 16px; font-size: 18px; }
 .census-topic a { color: inherit; }
+.census-topic a[href="#floor"] { color: #e6b422; }
+.census-topic a[href="#taxpayer"] { color: #c4924a; }
+.census-topic a[href="#introduced"] { color: #8a7d68; }
+.census-topic a[href="#roll-calls"],
+.census-topic a[href="#senate-votes"] {
+  color: #0e6a38;
+  background-image: linear-gradient(90deg, #0e6a38 0 50%, #8d2344 50% 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.census-topic a[href="#senators"] { color: #8a7360; }
+#taxpayer > h2 { color: #c4924a; }
+#floor > h2 { color: #e6b422; }
+#introduced > h2 { color: #8a7d68; }
+#roll-calls > h2,
+#senate-votes > h2 {
+  display: inline-block;
+  background-image: linear-gradient(90deg, #0e6a38 0 50%, #8d2344 50% 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+#senators > h2 { color: #8a7360; }
 .congress-actions { margin: 8px 0 0; }
 .congress-actions button, button.linkish {
   font: inherit;
