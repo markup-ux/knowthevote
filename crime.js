@@ -5,6 +5,9 @@
   var ARREST_INK = ["#feedde", "#fdbe85", "#fd8d3c", "#e6550d", "#a63603"];
   var PAIR_INK = ["#f7f4e4", "#e4dba0", "#c4b45a", "#7a6a1a", "#3e3510"];
   var MEASURES = [
+    { id: "fraud", label: "Fraud", arrest: true, noun: "fraud arrests", one: "fraud arrest", blurb: "Orange is fraud arrests from Table 69, agencies that sent 12 months of arrest data. A darker orange is a higher rate. The rate uses the population printed for that state in Table 69. This is an arrest, a citation, or a summons. It is not an estimated offense known to law enforcement. Table 29 estimates 90,184 fraud arrests in the United States. The states on this map are the Table 69 count." },
+    { id: "forgery", label: "Forgery and counterfeiting", arrest: true, noun: "forgery and counterfeiting arrests", one: "forgery and counterfeiting arrest", blurb: "Orange is forgery and counterfeiting arrests from Table 69, agencies that sent 12 months of arrest data. A darker orange is a higher rate. The rate uses the population printed for that state in Table 69. This is an arrest, a citation, or a summons. It is not an estimated offense known to law enforcement. Table 29 estimates 33,034 forgery and counterfeiting arrests in the United States. The states on this map are the Table 69 count." },
+    { id: "embezzlement", label: "Embezzlement", arrest: true, noun: "embezzlement arrests", one: "embezzlement arrest", blurb: "Orange is embezzlement arrests from Table 69, agencies that sent 12 months of arrest data. A darker orange is a higher rate. The rate uses the population printed for that state in Table 69. This is an arrest, a citation, or a summons. It is not an estimated offense known to law enforcement. Table 29 estimates 7,629 embezzlement arrests in the United States. The states on this map are the Table 69 count." },
     { id: "violent", label: "Violent crime", noun: "violent crime offenses", one: "violent crime offense", blurb: "Darker is a higher violent-crime rate. Violent crime is murder and nonnegligent manslaughter, rape, robbery, and aggravated assault." },
     { id: "homicide", label: "Murder", noun: "murder and nonnegligent manslaughter offenses", one: "murder and nonnegligent manslaughter offense", blurb: "Darker is a higher rate of murder and nonnegligent manslaughter." },
     { id: "rape", label: "Rape", noun: "rape offenses", one: "rape offense", blurb: "Darker is a higher rape rate. The count uses the definition the FBI adopted in 2013." },
@@ -121,13 +124,30 @@
     });
   }
 
+  function measureCount(state) {
+    if (current().arrest) {
+      var row = arrestRow(state.code);
+      return row ? row[measure] : 0;
+    }
+    return state[measure];
+  }
+
+  function measurePop(state) {
+    if (current().arrest) {
+      var row = arrestRow(state.code);
+      return row && row.pop ? row.pop : 0;
+    }
+    return state.pop;
+  }
+
   function paint() {
     if (!svg) return;
     var texts = {};
     svg.querySelectorAll("text.map-code").forEach(function (text) {
       texts[text.getAttribute("data-code")] = text;
     });
-    var rates = data.states.map(function (state) { return rate(state[measure], state.pop); });
+    var rates = data.states.map(function (state) { return rate(measureCount(state), measurePop(state)); });
+    var ink = current().arrest ? ARREST_INK : null;
     var bands = {};
     svg.querySelectorAll("path[data-code]").forEach(function (path) {
       var code = path.getAttribute("data-code");
@@ -137,11 +157,11 @@
         path.style.fill = CHIP;
         return;
       }
-      var shade = shadeOf(rate(state[measure], state.pop), rates);
+      var shade = shadeOf(rate(measureCount(state), measurePop(state)), rates, ink);
       path.style.fill = shade.fill;
       if (texts[code]) texts[code].classList.toggle("on-dark", shade.light);
       if (!bands[shade.band]) bands[shade.band] = { fill: shade.fill, values: [] };
-      bands[shade.band].values.push(rate(state[measure], state.pop));
+      bands[shade.band].values.push(rate(measureCount(state), measurePop(state)));
     });
     legend.innerHTML = "";
     Object.keys(bands).sort().forEach(function (key) {
@@ -161,18 +181,33 @@
 
   function readSort(state) {
     if (sortKey === "name") return state.name;
-    if (sortKey === "count") return state[measure];
-    if (sortKey === "prior") return rate(state.prior[measure], state.prior.pop);
-    return rate(state[measure], state.pop);
+    if (sortKey === "count") return measureCount(state);
+    if (sortKey === "prior") {
+      if (current().arrest) return rate(measureCount(state), measurePop(state));
+      return rate(state.prior[measure], state.prior.pop);
+    }
+    return rate(measureCount(state), measurePop(state));
   }
 
   function sentence(state) {
     var item = current();
-    var row = state || data.nation;
+    if (item.arrest) {
+      if (!state) {
+        var total = data.states.reduce(function (sum, itemState) { return sum + measureCount(itemState); }, 0);
+        return "Table 69 reports " + people(total) + " " + item.noun + " in the states and the District of Columbia in 2025, from agencies that sent 12 months of arrest data. Table 29 estimates " + people(arrests.estimatedArrests[measure]) + " " + item.noun + " in the United States. The map uses the Table 69 counts. An arrest in this table is an arrest, a citation, or a summons.";
+      }
+      var count = measureCount(state);
+      var noun = count === 1 ? item.one : item.noun;
+      var line = "Table 69 reports " + people(count) + " " + noun + " in " + place(state) + " in 2025. That is " + rateText(count, measurePop(state)) + " per 100,000 people in the population printed for this state in Table 69, " + people(measurePop(state)) + ". These are agencies that sent 12 months of arrest data. An arrest here is an arrest, a citation, or a summons.";
+      var row = arrestRow(state.code);
+      if (row && row.note) line += " " + row.note;
+      return line;
+    }
+    var rowState = state || data.nation;
     var earlier = state ? state.prior : data.nationPrior;
-    var count = countOf(row, measure);
+    var count = countOf(rowState, measure);
     var noun = count === 1 ? item.one : item.noun;
-    var line = "The FBI estimates " + people(count) + " " + noun + " in " + place(state) + " in 2025. That is " + rateText(count, row.pop) + " per 100,000 people in the FBI's population for this row, " + people(row.pop) + ". The 2024 estimate in this file is " + people(earlier[measure]) + ", a rate of " + rateText(earlier[measure], earlier.pop) + ".";
+    var line = "The FBI estimates " + people(count) + " " + noun + " in " + place(state) + " in 2025. That is " + rateText(count, rowState.pop) + " per 100,000 people in the FBI's population for this row, " + people(rowState.pop) + ". The 2024 estimate in this file is " + people(earlier[measure]) + ", a rate of " + rateText(earlier[measure], earlier.pop) + ".";
     if (state && state.note) line += " The FBI's note in this file: " + state.note;
     return line;
   }
@@ -183,12 +218,18 @@
     var table = document.createElement("table");
     table.className = "totals";
     table.id = "crime-table";
-    var columns = [
-      { id: "name", label: "State" },
-      { id: "count", label: "Offenses", num: true },
-      { id: "rate", label: "Rate", num: true },
-      { id: "prior", label: "2024 rate", num: true }
-    ];
+    var columns = current().arrest
+      ? [
+        { id: "name", label: "State" },
+        { id: "count", label: "Arrests", num: true },
+        { id: "rate", label: "Rate", num: true }
+      ]
+      : [
+        { id: "name", label: "State" },
+        { id: "count", label: "Offenses", num: true },
+        { id: "rate", label: "Rate", num: true },
+        { id: "prior", label: "2024 rate", num: true }
+      ];
     var head = document.createElement("thead");
     var headRow = document.createElement("tr");
     columns.forEach(function (column) {
@@ -230,11 +271,11 @@
           button.addEventListener("click", function () { choose(state.code, true); });
           cell.appendChild(button);
         } else if (column.id === "count") {
-          cell.textContent = people(state[measure]);
+          cell.textContent = people(measureCount(state));
         } else if (column.id === "prior") {
           cell.textContent = rateText(state.prior[measure], state.prior.pop);
         } else {
-          cell.textContent = rateText(state[measure], state.pop);
+          cell.textContent = rateText(measureCount(state), measurePop(state));
         }
         tr.appendChild(cell);
       });
@@ -295,7 +336,7 @@
       path.addEventListener("mouseenter", function () {
         var state = data.states.filter(function (item) { return item.code === code; })[0];
         if (!state) return;
-        status.textContent = state.name + " · " + rateText(state[measure], state.pop) + " per 100,000";
+        status.textContent = state.name + " · " + rateText(measureCount(state), measurePop(state)) + " per 100,000";
       });
       path.addEventListener("mouseleave", function () { status.textContent = ""; });
     });
@@ -914,6 +955,10 @@
   var hoodListMeasure = null;
   function drawHoods() {
     if (!hoodCtx || !cityData) return;
+    if (current().arrest) {
+      clearCollarHoods();
+      return;
+    }
     if (hoodBase) {
       var center = hoodLonLat(hoodCssW / 2, hoodCssH / 2);
       hoodBase.jumpTo({ center: center, zoom: Math.log(hoodView.scale / 512) / Math.LN2 });
@@ -984,6 +1029,10 @@
     var host = document.getElementById("crime-hood-list");
     var note = document.getElementById("crime-hood-note");
     if (!host || !cityData) return;
+    if (current().arrest) {
+      clearCollarHoods();
+      return;
+    }
     var rows = cityData.hoods.slice().sort(function (a, b) {
       if (hoodSortKey === "name") return (a[0] + a[1]).localeCompare(b[0] + b[1]) * hoodSortDir;
       var left = hoodRate(a);
@@ -1010,7 +1059,23 @@
     note.textContent = "Showing the first 150 of " + people(cityData.matched) + " neighborhoods with a city in Table 8. " + people(cityData.areas - cityData.matched) + " of " + people(cityData.areas) + " neighborhoods have no matching city, so they are not listed. Ordered by " + (hoodSortKey === "name" ? "name" : "the city rate") + ".";
     syncSort("crime-hood-sort", hoodSortKey, hoodSortDir);
   }
+  function clearCollarHoods() {
+    if (hoodCtx) hoodCtx.clearRect(0, 0, hoodCssW, hoodCssH);
+    var legendBox = document.getElementById("crime-hood-legend");
+    if (legendBox) legendBox.innerHTML = "";
+    var host = document.getElementById("crime-hood-list");
+    if (host) host.innerHTML = "";
+    var readout = document.getElementById("crime-hood-readout");
+    if (readout) readout.textContent = "";
+    var note = document.getElementById("crime-hood-note");
+    if (note) note.textContent = "Table 8 does not publish " + current().label.toLowerCase() + " by city, so this map has no dots for it. The state map above is Table 69 arrests.";
+  }
+
   function paintHoods() {
+    if (current().arrest) {
+      clearCollarHoods();
+      return;
+    }
     drawHoods();
     if (!cityData || hoodListMeasure === measure) return;
     hoodListMeasure = measure;
@@ -1648,7 +1713,7 @@
   Promise.all([
     fetch("census/crime.json").then(function (response) { if (!response.ok) throw new Error("json"); return response.json(); }),
     fetch("preview/us.svg").then(function (response) { if (!response.ok) throw new Error("map"); return response.text(); }),
-    fetch("census/arrests.json").then(function (response) { if (!response.ok) throw new Error("arrests"); return response.json(); }).catch(function () { return null; }),
+    fetch("census/arrests.json?v=2").then(function (response) { if (!response.ok) throw new Error("arrests"); return response.json(); }).catch(function () { return null; }),
     fetch("census/crime-cities.json").then(function (response) { if (!response.ok) throw new Error("cities"); return response.json(); }).catch(function () { return null; }),
     fetch("census/offenses.json").then(function (response) { if (!response.ok) throw new Error("offenses"); return response.json(); }).catch(function () { return null; }),
     fetch("census/homicide-pairs.json").then(function (response) { if (!response.ok) throw new Error("pairs"); return response.json(); }).catch(function () { return null; })

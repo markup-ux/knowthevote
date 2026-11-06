@@ -1,6 +1,8 @@
 """Build census/arrests.json from FBI arrest tables and Census race counts.
 
-Table 69 is rape arrests by state, from agencies that sent 12 months of arrest data.
+Table 69 is arrests by state, from agencies that sent 12 months of arrest data.
+The crime map uses the rape, fraud, forgery, and embezzlement columns.
+The population is the 2025 estimated population printed on each state's first row.
 Table 29 is the FBI's national arrest estimate.
 Table 43 is arrests by race for agencies that sent race. The sheet titles the
 column "Offense charged." In the UCR program that is the offense on an arrest,
@@ -196,13 +198,18 @@ def race_rows(ws):
 
 def estimated_arrests(ws):
     found = {}
-    for record in ws.iter_rows(min_row=4, max_row=14, values_only=True):
-        found[record[0]] = record[1]
+    for record in ws.iter_rows(min_row=4, max_row=40, values_only=True):
+        label = str(record[0] or "").strip()
+        if label:
+            found[label] = record[1]
     rape = found["Rape"]
     violent = found["Violent crime2"]
-    if rape != 18729 or violent != 413991:
-        raise SystemExit("estimated arrests changed %s %s" % (rape, violent))
-    return {"rape": rape, "violent": violent}
+    fraud = found.get("Fraud")
+    forgery = found.get("Forgery and counterfeiting")
+    embezzlement = found.get("Embezzlement")
+    if rape != 18729 or violent != 413991 or fraud != 90184 or forgery != 33034 or embezzlement != 7629:
+        raise SystemExit("estimated arrests changed %s %s %s %s %s" % (rape, violent, fraud, forgery, embezzlement))
+    return {"rape": rape, "violent": violent, "fraud": fraud, "forgery": forgery, "embezzlement": embezzlement}
 
 
 def state_arrests(ws):
@@ -213,15 +220,25 @@ def state_arrests(ws):
             limited = re.sub(r"^\d+", "", text).strip()
     states = []
     name = None
+    pop = None
     for record in ws.iter_rows(min_row=5, max_row=106, values_only=True):
         if record[0]:
             name = re.sub(r"[\d,]+$", "", str(record[0]).strip()).strip()
+            numbers = [value for value in record if isinstance(value, (int, float))]
+            pop = int(numbers[-1])
         if record[1] != "Total all ages":
             continue
         code = CODE.get(name)
         if not code:
             raise SystemExit("state name %s" % name)
-        row = {"code": code, "rape": record[6]}
+        row = {
+            "code": code,
+            "rape": int(record[6]),
+            "forgery": int(record[14]),
+            "fraud": int(record[15]),
+            "embezzlement": int(record[16]),
+            "pop": pop,
+        }
         if limited and (name.title() in limited or code in ("FL", "ND")):
             row["note"] = limited
         if code == "DC":
@@ -229,6 +246,9 @@ def state_arrests(ws):
         states.append(row)
     if len(states) != 51:
         raise SystemExit("states %s" % len(states))
+    alabama = [row for row in states if row["code"] == "AL"][0]
+    if alabama["fraud"] != 761 or alabama["forgery"] != 359 or alabama["embezzlement"] != 31 or alabama["pop"] != 4953248 or alabama["rape"] != 203:
+        raise SystemExit("alabama %s" % alabama)
     return states
 
 

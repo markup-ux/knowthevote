@@ -249,7 +249,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
       <h2>Crime</h2>
       <p class="deck">These are the FBI's estimated offenses known to law enforcement in 2025, for the 50 states and the District of Columbia. The file is the Summary Reporting System estimates on the Crime Data Explorer, last modified August 2026. Indigo is an offense rate. A darker indigo is a higher rate.</p>
       <p class="deck">The rate is the estimated offense count divided by the population in that same row, times 100,000. The rate uses the population printed in the FBI's row. The population map above uses the Census Bureau's July 1, 2025 estimate.</p>
-      <p class="deck">Violent crime is murder and nonnegligent manslaughter, rape, robbery, and aggravated assault. Property crime is burglary, larceny-theft, and motor vehicle theft. Rape uses the definition the FBI adopted in 2013. Arson has no estimate in this file. Arrest estimates for arson, fraud, embezzlement, forgery, and the other categories the FBI publishes are under Arrests by race. Where an agency sent 3 to 11 months, the FBI estimated the missing months from that agency's reports. Where an agency sent fewer than 3 months, the FBI estimated from similar places in the state. The count is offenses known to law enforcement.</p>
+      <p class="deck">Violent crime is murder and nonnegligent manslaughter, rape, robbery, and aggravated assault. Property crime is burglary, larceny-theft, and motor vehicle theft. Rape uses the definition the FBI adopted in 2013. Arson has no estimate in this file. Fraud, forgery and counterfeiting, and embezzlement are the first measures. Those three maps are Table 69 arrests, in orange. The other measures are estimated offenses, in indigo. Where an agency sent 3 to 11 months, the FBI estimated the missing months from that agency's reports. Where an agency sent fewer than 3 months, the FBI estimated from similar places in the state. The count on an indigo map is offenses known to law enforcement.</p>
       <p class="deck">The FBI's summary of this release says estimated violent crime fell 9.3 percent from 2024 to 2025, and estimated property crime fell 12.4 percent. It says 17,075 agencies sent data, covering 96.2 percent of the population, and that the figures are as of April 2, 2026. The 2024 figures in the file were updated for this release. The file notes that limited data for 2025 were available for Florida and North Dakota. The District of Columbia row includes offenses reported by the Metro Transit Police and the District of Columbia Fire and Emergency Medical Services Arson Investigation Unit.</p>
       <div class="sheet-switch" id="crime-measures" role="group" aria-label="Crime measure"></div>
       <div class="health-tools" id="crime-zoom" role="group" aria-label="Crime map zoom"></div>
@@ -267,7 +267,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
       <div id="crime-detail"></div>
       <section class="where" id="crime-neighborhoods">
         <h2>Crime by neighborhood</h2>
-        <p class="deck">Each dot is a neighborhood, suburb, or quarter from the same OpenStreetMap names as the restaurant list. The color is the 2025 offense rate for that neighborhood's city in FBI Table 8, Offenses Known to Law Enforcement. The rate is the city's count divided by the population printed on that row, times 100,000. It is not a count inside the neighborhood. A neighborhood whose city is not in Table 8 is not drawn. Zoom in to separate the dots. Indigo is the city rate. A darker indigo is a higher rate among the cities in this table. A city population of a few hundred people can produce a high rate from a small count.</p>
+        <p class="deck">Each dot is a neighborhood, suburb, or quarter from the same OpenStreetMap names as the restaurant list. The color is the 2025 offense rate for that neighborhood's city in FBI Table 8, Offenses Known to Law Enforcement. The rate is the city's count divided by the population printed on that row, times 100,000. It is not a count inside the neighborhood. A neighborhood whose city is not in Table 8 is not drawn. Zoom in to separate the dots. Indigo is the city rate. A darker indigo is a higher rate among the cities in this table. Fraud, forgery and counterfeiting, and embezzlement are not in Table 8, so those measures draw no dots. A city population of a few hundred people can produce a high rate from a small count.</p>
         <p class="deck">Four Table 8 rows use a longer agency name. Charlotte-Mecklenburg is used for Charlotte, Athens-Clarke County for Athens, Louisville Metro for Louisville, and Metropolitan Nashville Police Department for Nashville. Florida and North Dakota cities carry the FBI's limited-data note.</p>
         <div id="crime-hood-wrap">
           <div id="crime-hood-base"></div>
@@ -551,7 +551,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
 <script src="census.js?v=5"></script>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
-<script src="crime.js?v=14"></script>
+<script src="crime.js?v=16"></script>
 <script src="water.js?v=8"></script>
 <script src="health.js?v=38"></script>
 </body>
