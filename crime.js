@@ -1622,18 +1622,19 @@
     var host = document.getElementById("offense-table");
     host.innerHTML = "";
     var wrap = document.createElement("div");
-    wrap.className = "census-scroll";
+    wrap.className = "census-scroll source-scroll";
     var table = document.createElement("table");
-    table.className = "totals";
+    table.className = "totals source-table";
     var columns = [
       { id: "offense", label: "Offense" },
-      { id: "estimated", label: "Estimated arrests", num: true },
-      { id: "raceTotal", label: "Arrests with race", num: true },
-      { id: "whitePct", label: "White", num: true },
-      { id: "blackPct", label: "Black", num: true },
-      { id: "aianPct", label: "American Indian", num: true },
-      { id: "asianPct", label: "Asian", num: true },
-      { id: "nhpiPct", label: "Pacific Islander", num: true },
+      { id: "estimated", label: "Table 29 estimate", num: true },
+      { id: "raceTotal", label: "Table 43 total", num: true },
+      { id: "white", pct: "whitePct", label: "White", num: true },
+      { id: "black", pct: "blackPct", label: "Black", num: true },
+      { id: "aian", pct: "aianPct", label: "American Indian", num: true },
+      { id: "asian", pct: "asianPct", label: "Asian", num: true },
+      { id: "nhpi", pct: "nhpiPct", label: "Pacific Islander", num: true },
+      { id: "ethnicityTotal", label: "With ethnicity", num: true },
       { id: "hispanicPct", label: "Hispanic", num: true }
     ];
     var head = document.createElement("thead");
@@ -1653,9 +1654,14 @@
       columns.forEach(function (column) {
         var cell = document.createElement("td");
         if (column.num) cell.className = "num";
-        if (column.id === "offense") cell.textContent = row.offense;
-        else if (column.id === "estimated" || column.id === "raceTotal") cell.textContent = people(row[column.id]);
-        else cell.textContent = pctCell(row[column.id]);
+        if (column.pct) {
+          cell.appendChild(document.createTextNode(people(row[column.id])));
+          var share = document.createElement("small");
+          share.textContent = row[column.pct] == null ? "*" : pctCell(row[column.pct]) + "%";
+          cell.appendChild(share);
+        } else if (column.id === "offense") cell.textContent = row.offense;
+        else if (column.id === "hispanicPct") cell.textContent = row.hispanicPct == null ? "*" : pctCell(row.hispanicPct) + "%";
+        else cell.textContent = people(row[column.id]);
         tr.appendChild(cell);
       });
       body.appendChild(tr);
@@ -1818,6 +1824,7 @@
     if (statusLine) statusLine.textContent = "Olive runs from a small share of the row to a large share. The same olive is used for every group.";
     renderPairs();
   }
+
 
   buildMeasures();
   status.textContent = "Reading the FBI estimates.";
