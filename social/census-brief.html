@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Leaders.vote · Census</title>
+<style>
+  :root {
+    --paper: #f4f0e6;
+    --ink: #1c1915;
+    --muted: #5c564c;
+    --bar: #0a3161;
+    --stripe: #bf0a30;
+    --bar-ink: #f4f7fb;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #111; }
+  .card {
+    width: 1080px;
+    height: 1350px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  header {
+    background: var(--bar);
+    color: var(--bar-ink);
+    border-bottom: 8px solid var(--stripe);
+    flex: none;
+  }
+  header .bar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 22px 56px 16px;
+  }
+  .brand {
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .section {
+    font-size: 20px;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .stage { flex: 1; padding: 28px 56px 0; display: flex; flex-direction: column; min-height: 0; }
+  .kicker {
+    margin: 0;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 650;
+    color: var(--muted);
+  }
+  h1 {
+    margin: 8px 0 0;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+  .count {
+    margin: 14px 0 0;
+    font-variant-numeric: tabular-nums;
+    font-size: 40px;
+    font-weight: 650;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .count span { display: block; margin-top: 6px; font-size: 20px; font-weight: 400; letter-spacing: 0; color: var(--muted); }
+  #map { height: 250px; margin-top: 8px; }
+  #map svg { width: 100%; height: 100%; display: block; }
+  #map path { stroke: var(--ink); stroke-width: 0.7; stroke-linejoin: round; }
+  .legend { margin: 4px 0 0; font-size: 18px; color: var(--muted); display: flex; align-items: center; gap: 12px; }
+  .swatches { display: flex; gap: 5px; }
+  .swatches i { width: 22px; height: 14px; border: 1px solid var(--ink); display: block; }
+  .facts { margin-top: 22px; display: grid; gap: 16px; }
+  .facts h2 {
+    margin: 2px 0 0;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+  }
+  .facts p { margin: 4px 0 0; font-size: 22px; line-height: 1.35; }
+  .facts .fine { margin-top: 4px; font-size: 16px; color: var(--muted); }
+  .panel {
+    flex: none;
+    border-top: 1px solid var(--ink);
+    padding: 18px 56px 22px;
+  }
+  .url {
+    margin: 0;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+  }
+  .note { margin: 6px 0 0; font-size: 16px; color: var(--muted); }
+</style>
+</head>
+<body>
+<article class="card">
+  <header>
+    <div class="bar">
+      <div class="brand">leaders.vote</div>
+      <div class="section">Census</div>
+    </div>
+  </header>
+  <div class="stage">
+    <p class="kicker">United States · Census Bureau · July 1, 2025</p>
+    <h1>National figures.</h1>
+    <p class="count" id="count">341,784,857<span>people in the states and the District of Columbia.</span></p>
+    <div id="map" role="img" aria-label="Map of the states. A darker purple is more people on July 1, 2025."></div>
+    <div class="legend">
+      <span class="swatches" id="swatches"></span>
+      <span>A darker purple is more people.</span>
+    </div>
+    <div class="facts">
+      <section>
+        <p class="kicker">Crime · FBI · 2025</p>
+        <h2>Violent crime fell 9.3 percent.</h2>
+        <p>Estimated property crime fell 12.4 percent. 1,119,768 violent offenses. 5,245,768 property offenses.</p>
+        <p class="fine">The FBI’s summary of the 2025 estimates. Florida and North Dakota had limited data.</p>
+      </section>
+      <section>
+        <p class="kicker">Sexual assault</p>
+        <h2>123,332 estimated rape offenses.</h2>
+        <p>18,729 estimated rape arrests. The offense count uses the definition the FBI adopted in 2013.</p>
+      </section>
+      <section>
+        <p class="kicker">Health</p>
+        <h2>Fast food, and drinking water.</h2>
+        <p>Chemicals measured in fast food. Quarters with a drinking-water violation, by neighborhood.</p>
+      </section>
+    </div>
+  </div>
+  <div class="panel">
+    <p class="url">leaders.vote/census</p>
+    <p class="note">Independent voter guide. Not a government site.</p>
+  </div>
+</article>
+<script>
+(function () {
+  var POP = ["#e8e0f7", "#c4b3ef", "#8b6ad4", "#5530a0", "#2a1458"];
+  var box = document.getElementById("swatches");
+  POP.forEach(function (color) {
+    var mark = document.createElement("i");
+    mark.style.background = color;
+    box.appendChild(mark);
+  });
+  function band(value, list, count) {
+    var below = 0;
+    for (var i = 0; i < list.length; i++) if (list[i] < value) below++;
+    return Math.min(count - 1, Math.floor(below / list.length * count));
+  }
+  function load(url) {
+    var request = new XMLHttpRequest();
+    request.open("GET", url, false);
+    request.send();
+    return request.responseText;
+  }
+  var data = JSON.parse(load("../census/us.json"));
+  var holder = document.getElementById("map");
+  holder.innerHTML = load("../preview/us.svg");
+  var svg = holder.querySelector("svg");
+  svg.removeAttribute("width");
+  svg.removeAttribute("height");
+  svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+  var pops = data.states.map(function (state) { return state.pop; });
+  data.states.forEach(function (state) {
+    var path = svg.querySelector("#s" + state.code);
+    if (!path) return;
+    path.setAttribute("fill", POP[band(state.pop, pops, 5)]);
+  });
+  document.getElementById("count").innerHTML = data.nation.pop.toLocaleString("en-US") + "<span>people in the states and the District of Columbia.</span>";
+  document.documentElement.dataset.ready = "1";
+})();
+</script>
+</body>
+</html>

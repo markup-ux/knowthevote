@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaders.vote · The House</title>
+<meta name="description" content="House roll calls for the 119th Congress, the yes and no of each member, office contact, and the latest House floor list. Green is a yes. Rose is a no. Gold is scheduled.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="guide.css?v=blend1">
+<style>
+#congress-map { width: 100%; height: auto; background: transparent; }
+#congress-map path { fill: var(--chip); stroke: var(--ink); stroke-width: 0.8; cursor: pointer; }
+#congress-map path.is-on { stroke: #1c1915; stroke-width: 2.6; }
+.congress-tools { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: flex-end; margin: 8px 0 14px; }
+.congress-tools label { margin: 0; }
+.congress-tools input, .congress-tools select { margin-top: 6px; font: inherit; color: var(--ink); background: var(--paper); border: 1px solid var(--ink); padding: 6px 8px; }
+.congress-tools input { width: min(100%, 22rem); }
+.vote-scroll, .people-scroll { max-height: 640px; min-height: 640px; overflow: auto; margin-top: 8px; }
+.vote-row, .person-row, .floor-row {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 4px;
+  cursor: pointer;
+}
+.vote-row.is-on, .person-row.is-on, .floor-row.is-on { background: #e4d8c4; }
+div.floor-row { cursor: default; }
+.vote-row strong, .floor-row strong { display: block; font-size: 18px; font-weight: 650; }
+.vote-meta, .person-meta { color: var(--muted); font-size: 15px; }
+.vote-bar, .mini-bar { display: flex; width: 100%; height: 18px; background: #ebe4d6; margin: 8px 0 4px; }
+.mini-bar { height: 12px; max-width: 280px; }
+.vote-bar i, .mini-bar i { display: block; height: 100%; }
+.swatch.yes-scale { width: 48px; background: linear-gradient(90deg, #cfe8d6, #0e6a38); }
+.swatch.no-scale { width: 48px; background: linear-gradient(90deg, #f6d0d6, #8d2344); }
+.swatch.gold { background: #e6b422; }
+.swatch.stone { background: #c8c0b4; }
+.swatch.present { background: #3d4f86; }
+.swatch.tie { background: #6a4a78; }
+.party-d { color: #1e4d7b; }
+.party-r { color: #8d3232; }
+.party-i { color: #3e5c45; }
+.party-o { color: #5c4a2a; }
+.party-line { display: grid; grid-template-columns: 11rem minmax(0, 1fr) 16rem; gap: 10px; align-items: center; margin: 6px 0; }
+.party-line span:last-child { font-size: 15px; }
+.state-block { margin: 14px 0; }
+.state-block h3 { font-size: 22px; margin: 0 0 4px; }
+.person-row { display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 12px; align-items: center; }
+.portrait, .portrait-letter { width: 56px; height: 70px; object-fit: cover; object-position: center top; background: #e4ddd0; }
+.portrait-letter { display: flex; align-items: center; justify-content: center; font-family: Georgia, "Palatino Linotype", serif; font-size: 22px; }
+.portrait-lg { width: 120px; height: 150px; }
+.portrait-letter.portrait-lg { font-size: 42px; }
+.person-card { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; align-items: start; background: var(--chip); padding: 14px 16px; margin: 12px 0; }
+.person-card h3 { margin: 0 0 6px; }
+.person-card p { margin: 4px 0; }
+#floor, #roll-calls, #senators, #open-vote { scroll-margin-top: 140px; overflow-anchor: none; }
+.census-topic { margin: 12px 0 16px; font-size: 18px; }
+.census-topic a { color: inherit; }
+.congress-actions { margin: 8px 0 0; }
+.congress-actions button, button.linkish {
+  font: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+button.search-submit, button.search-clear {
+  font: inherit;
+  font-size: 16px;
+  border: 1px solid var(--ink);
+  padding: 8px 16px;
+  cursor: pointer;
+  align-self: end;
+}
+button.search-submit {
+  color: var(--paper);
+  background: var(--ink);
+}
+button.search-clear {
+  color: var(--ink);
+  background: transparent;
+}
+#search-results { margin: 4px 0 20px; }
+#search-list { max-height: 640px; overflow: auto; }
+.act-note { margin: 10px 0 16px; max-width: 68rem; }
+.act-note p { margin: 6px 0; }
+.act-line { margin: 4px 0 0; }
+.sponsors h3 { font-size: 22px; margin: 16px 0 8px; }
+.sponsors .person-card { margin-top: 0; }
+@media (max-width: 800px) {
+  .party-line { grid-template-columns: 1fr; gap: 4px; }
+  .person-card { grid-template-columns: 72px minmax(0, 1fr); }
+  .portrait-lg, .portrait-letter.portrait-lg { width: 72px; height: 90px; font-size: 28px; }
+  #floor, #roll-calls, #senators, #open-vote { scroll-margin-top: 240px; }
+}
+</style>
+
+<!-- seo -->
+<link rel="canonical" href="https://leaders.vote/house.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="application-name" content="Leaders.vote">
+<meta property="og:site_name" content="Leaders.vote">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://leaders.vote/house.html">
+<meta property="og:title" content="Leaders.vote · The House">
+<meta property="og:description" content="House roll calls for the 119th Congress, the yes and no of each member, office contact, and the latest House floor list. Green is a yes. Rose is a no. Gold is scheduled.">
+<meta property="og:image" content="https://leaders.vote/social/house-ad.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="2160">
+<meta property="og:image:height" content="2700">
+<meta property="og:image:alt" content="Leaders.vote The House. A photograph of the House chamber, and the colors for yes, no, and the floor list. Green is a yes. Rose is a no. Gold is on the floor list.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leaders.vote · The House">
+<meta name="twitter:description" content="House roll calls for the 119th Congress, the yes and no of each member, office contact, and the latest House floor list. Green is a yes. Rose is a no. Gold is scheduled.">
+<meta name="twitter:image" content="https://leaders.vote/social/house-ad.png">
+<link rel="icon" href="https://leaders.vote/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://leaders.vote/#website","name":"Leaders.vote","url":"https://leaders.vote/","description":"Leaders.vote is an independent, nonpartisan voter guide for every U.S. state on November 3, 2026. Candidates, offices, sample ballots, and unofficial results. No endorsements.","inLanguage":"en","publisher":{"@id":"https://leaders.vote/#publisher"}},{"@type":"Organization","@id":"https://leaders.vote/#publisher","name":"Leaders.vote","url":"https://leaders.vote/","description":"Independent, nonpartisan voter guide. Not a campaign and not a government site.","logo":{"@type":"ImageObject","url":"https://leaders.vote/favicon.svg"}},{"@type":"WebPage","@id":"https://leaders.vote/house.html#webpage","url":"https://leaders.vote/house.html","name":"Leaders.vote · The House","description":"House roll calls for the 119th Congress, the yes and no of each member, office contact, and the latest House floor list. Green is a yes. Rose is a no. Gold is scheduled.","isPartOf":{"@id":"https://leaders.vote/#website"},"breadcrumb":{"@id":"https://leaders.vote/house.html#breadcrumb"},"inLanguage":"en","isAccessibleForFree":true,"primaryImageOfPage":{"@type":"ImageObject","url":"https://leaders.vote/social/house-ad.png"}},{"@type":"BreadcrumbList","@id":"https://leaders.vote/house.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Leaders.vote","item":"https://leaders.vote/"},{"@type":"ListItem","position":2,"name":"The House","item":"https://leaders.vote/house.html"}]}]}</script>
+<!-- /seo -->
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="bar-top">
+      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      <div class="lang notranslate" translate="no">
+        <span class="visually-hidden">Language</span>
+        <select id="lang" class="visually-hidden" aria-hidden="true" tabindex="-1">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-CN">中文</option>
+          <option value="pl">Polski</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ko">한국어</option>
+          <option value="tl">Tagalog</option>
+          <option value="ar">العربية</option>
+          <option value="ur">اردو</option>
+          <option value="uk">Українська</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="fr">Français</option>
+        </select>
+        <button type="button" class="lang-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">English</button>
+        <ul id="lang-list" class="lang-menu" role="listbox" aria-label="Translate this page" hidden>
+          <li role="none"><button type="button" role="option" data-lang="en" aria-selected="true">English</button></li>
+          <li role="none"><button type="button" role="option" data-lang="es">Español</button></li>
+          <li role="none"><button type="button" role="option" data-lang="zh-CN">中文</button></li>
+          <li role="none"><button type="button" role="option" data-lang="pl">Polski</button></li>
+          <li role="none"><button type="button" role="option" data-lang="hi">हिन्दी</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ko">한국어</button></li>
+          <li role="none"><button type="button" role="option" data-lang="tl">Tagalog</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ar">العربية</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ur">اردو</button></li>
+          <li role="none"><button type="button" role="option" data-lang="uk">Українська</button></li>
+          <li role="none"><button type="button" role="option" data-lang="vi">Tiếng Việt</button></li>
+          <li role="none"><button type="button" role="option" data-lang="fr">Français</button></li>
+        </ul>
+      </div>
+    </div>
+    <p class="here notranslate" translate="no"><img src="flags/us.svg" alt=""><span>The House</span></p>
+    <nav>
+      <a href="index.html">All states</a>
+      <a href="countries.html">Countries</a>
+      <a href="census.html">Census</a>
+      <a href="house.html" aria-current="page">The House</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="play.html">Play</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero">
+    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
+    <p class="kicker">United States · 119th Congress</p>
+    <p class="census-topic"><a href="#floor">Floor list</a> · <a href="#roll-calls">Roll calls</a> · <a href="#senate-votes">Senate roll calls</a> · <a href="#senators">Senators</a></p>
+    <h1>The House.</h1>
+    <p class="deck">What the House voted on, who voted yes, who voted no, and how to reach the member. The floor list is the latest week the House has published. A roll call published later is added while this page is open.</p>
+    <p class="deck">The <a href="https://live.house.gov/">House floor</a> is live on FloorCast when the House is in session. Each roll call links to that day's floor recording. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's channel</a> posts a floor video when one is published.</p>
+    <p class="deck">Under a roll call, a short account says what the measure does. Read the full summary on this page, or open the text of the act. The member who introduced it is shown with a portrait and an office.</p>
+    <div class="result-legend" id="congress-legend">
+      <span><i class="swatch yes-scale"></i> Yes. A darker green is a larger yes share.</span>
+      <span><i class="swatch no-scale"></i> No. A darker rose is a larger no share.</span>
+      <span><i class="swatch present"></i> Present</span>
+      <span><i class="swatch stone"></i> Did not vote</span>
+      <span><i class="swatch gold"></i> On the floor list, with no roll call that week</span>
+      <span><i class="swatch tie"></i> A state tied yes and no</span>
+      <span><i class="swatch d"></i> Democratic, in the name</span>
+      <span><i class="swatch r"></i> Republican, in the name</span>
+      <span><i class="swatch o"></i> Another party, in the name</span>
+    </div>
+    <p id="congress-status" class="note" aria-live="polite">Loading the roll calls.</p>
+    <p class="congress-actions"><button type="button" id="congress-check">Check for new roll calls</button></p>
+
+    <form id="congress-find" class="congress-tools" role="search">
+      <label>Search
+        <input id="congress-q" type="search" placeholder="Bill, question, or member" autocomplete="off">
+      </label>
+      <button type="submit" class="search-submit">Search</button>
+      <button type="button" class="search-clear" id="congress-clear">Clear</button>
+      <label>Year
+        <select id="congress-year">
+          <option value="all">All years</option>
+          <option value="2026">2026</option>
+          <option value="2025">2025</option>
+        </select>
+      </label>
+      <label>Result
+        <select id="congress-result">
+          <option value="all">All results</option>
+          <option value="Passed">Passed</option>
+          <option value="Failed">Failed</option>
+          <option value="Agreed to">Agreed to</option>
+          <option value="other">Another result</option>
+        </select>
+      </label>
+      <label>State
+        <select id="congress-state"></select>
+      </label>
+      <div class="sheet-switch" id="congress-party" role="group" aria-label="Party">
+        <button type="button" data-party="all" aria-pressed="true">All parties</button>
+        <button type="button" data-party="D" aria-pressed="false">Democratic</button>
+        <button type="button" data-party="R" aria-pressed="false">Republican</button>
+        <button type="button" data-party="other" aria-pressed="false">Another party</button>
+      </div>
+    </form>
+
+    <section id="search-results" hidden>
+      <h2>Search results</h2>
+      <p class="congress-actions"><button type="button" id="congress-clear-results">Clear results</button></p>
+      <p id="search-count" class="sub"></p>
+      <div id="search-list"></div>
+    </section>
+
+    <section id="floor">
+      <h2>Floor list</h2>
+      <p id="floor-blurb" class="deck"></p>
+      <div id="floor-list"></div>
+    </section>
+
+    <section id="roll-calls">
+      <h2>House roll calls</h2>
+      <p id="vote-count" class="sub"></p>
+      <div id="vote-list" class="vote-scroll"></div>
+      <div id="open-vote"></div>
+      <section id="pending" hidden>
+        <h2>No roll call yet</h2>
+        <p class="deck">These bills are in the bill status file. The Clerk has no House roll call for them, so there is no yes or no to show.</p>
+        <div id="pending-list"></div>
+      </section>
+    </section>
+
+    <section id="senate-votes">
+      <h2>Senate roll calls</h2>
+      <p class="deck">Each senator's yes or no is listed here. The Senate site does not offer these files to this page, so the roll calls are copied from <a href="https://voteview.com/data">Voteview</a>, which records the Senate's roll calls. A vote taken by unanimous consent has no senator-by-senator yes or no.</p>
+      <p id="senate-count" class="sub"></p>
+      <div id="senate-list" class="vote-scroll"></div>
+      <div id="open-senate"></div>
+    </section>
+
+    <section id="senators">
+      <h2>Senators</h2>
+      <p class="deck">The phone, office, and website are the ones on file for the current Senate. A senator who left office after casting a vote in this Congress is marked former.</p>
+      <div id="senator-list" class="people-scroll"></div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Green is a yes. A darker green is a larger yes share. Rose is a no. A darker rose is a larger no share. Indigo is present. Stone is a member who did not vote. Gold is on the House floor list and has no roll call that week. Plum on the map is a tie between yes and no. A blue name is Democratic, a red name is Republican, and an olive or brown name is another party.</p>
+    <p>House roll calls are copied from the <a href="https://clerk.house.gov/evs">Clerk of the House</a> for 2025 and 2026. The question, the description, and the counts are the Clerk's. While this page is open it asks <a href="https://api.congress.gov/">Congress.gov</a> for a House roll call newer than that copy. The floor list is the latest week in the House file at <a href="https://docs.house.gov/floor/">docs.house.gov</a>. Office phone, room, and website are copied from the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators</a> file for the current Congress. Portraits are public-domain photographs from the Congressional Pictorial Directory, through the <a href="https://unitedstates.github.io/images/congress/225x275/">congress images</a> collection, and from the <a href="https://bioguide.congress.gov/">Biographical Directory</a> when that collection has no photograph. A floor recording is the House <a href="https://live.house.gov/">FloorCast</a> for the day of the roll call. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's YouTube channel</a> posts a floor video when one is published. A short account of a measure is the <a href="https://www.govinfo.gov/bulkdata/BILLSUM/119">Congressional Research Service summary</a> published by GovInfo. The full text is that measure's text page on <a href="https://www.congress.gov/">Congress.gov</a>. The sponsor is the member named in the <a href="https://www.govinfo.gov/bulkdata/BILLSTATUS/119">GovInfo bill status file</a>. Senate roll calls are copied from <a href="https://voteview.com/data">Voteview</a>'s record of the Senate, because the <a href="https://www.senate.gov/legislative/votes_new.htm">Senate</a> site does not offer those files to this page. The question, the description, and each senator's yes or no are Voteview's. When the bill status file says the Senate passed a measure by unanimous consent, this page says so, because that action has no senator-by-senator vote.</p>
+  </div>
+</footer>
+<div id="google_translate_element" aria-hidden="true"></div>
+<script src="lang.js"></script>
+<script src="congress.js?v=15"></script>
+</body>
+</html>

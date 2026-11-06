@@ -71,10 +71,10 @@
     color: var(--muted);
   }
   h1 {
-    margin: 6px 0 0;
+    margin: 4px 0 0;
     font-family: Georgia, "Palatino Linotype", serif;
     font-weight: 500;
-    font-size: 46px;
+    font-size: 40px;
     line-height: 0.95;
     letter-spacing: -0.03em;
   }
@@ -85,15 +85,15 @@
     font-weight: 650;
   }
   .count span { font-weight: 400; color: var(--muted); }
-  #map {
-    height: 168px;
-    margin-top: 4px;
+  #map, #crime-map {
+    height: 148px;
+    margin-top: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  #map svg { width: 100%; height: 100%; display: block; }
-  #map path {
+  #map svg, #crime-map svg { width: 100%; height: 100%; display: block; }
+  #map path, #crime-map path {
     stroke: var(--ink);
     stroke-width: 0.7;
     stroke-linejoin: round;
@@ -114,35 +114,30 @@
     border: 1px solid var(--ink);
     display: block;
   }
-  .health {
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-  }
+  .health { margin-top: 8px; display: flex; flex-direction: column; min-height: 0; }
   .health h2 {
-    margin: 2px 0 0;
+    margin: 1px 0 0;
     font-family: Georgia, "Palatino Linotype", serif;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 26px;
     letter-spacing: -0.02em;
   }
   #health-map, #water-map {
     width: 100%;
-    height: 228px;
-    margin-top: 4px;
+    height: 168px;
+    margin-top: 2px;
     display: block;
     background: transparent;
   }
-  .health-legend { margin-bottom: 16px; }
+  .health-legend { margin-bottom: 2px; }
   .factory-key { display: inline-flex; align-items: center; gap: 8px; }
   .factory-key canvas { width: 28px; height: 28px; display: block; }
   .panel {
     flex: none;
     border-top: 1px solid var(--ink);
-    padding: 22px 56px 26px;
+    padding: 14px 48px 16px;
   }
-  .measures { margin: 0; font-size: 22px; line-height: 1.4; }
+  .measures { margin: 0; font-size: 18px; line-height: 1.35; }
   .url {
     margin: 12px 0 0;
     font-family: Georgia, "Palatino Linotype", serif;
@@ -190,8 +185,17 @@
     <div id="map" role="img" aria-label="Map of the states, colored by the Census Bureau population estimate. A darker state has more people."></div>
     <div class="legend">
       <span class="swatches" id="swatches"></span>
-      <span>A darker place has a larger count.</span>
+      <span>A darker purple is a larger count.</span>
     </div>
+    <section class="health">
+      <p class="kicker">Crime · FBI · 2025</p>
+      <h2>Fraud arrests.</h2>
+      <div id="crime-map" role="img" aria-label="Map of the states colored by the fraud arrest rate. A darker orange is a higher rate. These are Table 69 arrests, not estimated offenses."></div>
+      <div class="legend">
+        <span class="swatches" id="crime-swatches"></span>
+        <span>A darker orange is a higher arrest rate.</span>
+      </div>
+    </section>
     <section class="health">
       <p class="kicker">Health</p>
       <h2>Tagged fast food.</h2>
@@ -221,6 +225,7 @@
 <script>
 (function () {
   var POP = ["#e8e0f7", "#c4b3ef", "#8b6ad4", "#5530a0", "#2a1458"];
+  var ARREST = ["#feedde", "#fdbe85", "#fd8d3c", "#e6550d", "#a63603"];
   var HEAT = ["#fff1b8", "#ffd15c", "#f5a03a", "#e36b3a", "#9a3d5c"];
   var WATER = [["#c5e4ec", "0"], ["#5eb8cc", "1–3"], ["#1d8eab", "4–6"], ["#14627a", "7–9"], ["#0c3d4e", "10–12"]];
   var STATE = {
@@ -246,6 +251,7 @@
     });
   }
   paintSwatches("swatches", POP);
+  paintSwatches("crime-swatches", ARREST);
   paintSwatches("health-swatches", HEAT);
   var waterKey = document.getElementById("water-swatches");
   WATER.forEach(function (pair) {
@@ -445,31 +451,59 @@
     });
   }
 
-  Promise.all([
-    fetch("../census/us.json").then(function (r) { return r.json(); }),
-    fetch("../preview/us.svg").then(function (r) { return r.text(); }),
-    fetch("../census/health.json").then(function (r) { return r.json(); }),
-    fetch("../census/water.json").then(function (r) { return r.json(); }),
-    fetch("../census/neighborhoods.json").then(function (r) { return r.json(); })
-  ]).then(function (pair) {
-    var data = pair[0];
-    var holder = document.getElementById("map");
-    holder.innerHTML = pair[1];
-    var svg = holder.querySelector("svg");
-    svg.removeAttribute("width");
-    svg.removeAttribute("height");
-    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
-    var pops = data.states.map(function (state) { return state.pop; });
-    data.states.forEach(function (state) {
-      var path = svg.querySelector("#s" + state.code);
-      if (!path) return;
-      path.setAttribute("fill", POP[bandRank(state.pop, pops, 5)]);
-    });
-    document.getElementById("count").innerHTML = people(data.nation.pop) + " <span>people in the states and the District of Columbia.</span>";
-    drawHealth(pair[2]);
-    drawWater(pair[3], pair[4]);
-    document.documentElement.dataset.ready = "1";
+  function loadJson(url) {
+    var request = new XMLHttpRequest();
+    request.open("GET", url, false);
+    request.send();
+    return JSON.parse(request.responseText);
+  }
+
+  function loadText(url) {
+    var request = new XMLHttpRequest();
+    request.open("GET", url, false);
+    request.send();
+    return request.responseText;
+  }
+
+  var data = loadJson("../census/us.json");
+  var svgText = loadText("../preview/us.svg");
+  var arrestFile = loadJson("../census/arrests.json");
+  var health = loadJson("../census/health.json");
+  var water = loadJson("../census/water.json");
+  var hoods = loadJson("../census/neighborhoods.json");
+  var holder = document.getElementById("map");
+  holder.innerHTML = svgText;
+  var svg = holder.querySelector("svg");
+  svg.removeAttribute("width");
+  svg.removeAttribute("height");
+  svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+  var pops = data.states.map(function (state) { return state.pop; });
+  data.states.forEach(function (state) {
+    var path = svg.querySelector("#s" + state.code);
+    if (!path) return;
+    path.setAttribute("fill", POP[bandRank(state.pop, pops, 5)]);
   });
+  var arrests = {};
+  arrestFile.states.forEach(function (row) { arrests[row.code] = row; });
+  var rates = arrestFile.states.filter(function (row) { return row.pop; }).map(function (row) {
+    return Math.round(row.fraud / row.pop * 1000000) / 10;
+  });
+  var crime = document.getElementById("crime-map");
+  crime.innerHTML = svgText;
+  var crimeSvg = crime.querySelector("svg");
+  crimeSvg.removeAttribute("width");
+  crimeSvg.removeAttribute("height");
+  crimeSvg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+  crimeSvg.querySelectorAll("path[data-code]").forEach(function (path) {
+    var row = arrests[path.getAttribute("data-code")];
+    if (!row || !row.pop) return;
+    var value = Math.round(row.fraud / row.pop * 1000000) / 10;
+    path.setAttribute("fill", ARREST[bandRank(value, rates, 5)]);
+  });
+  document.getElementById("count").innerHTML = people(data.nation.pop) + " <span>people in the states and the District of Columbia.</span>";
+  drawHealth(health);
+  drawWater(water, hoods);
+  document.documentElement.dataset.ready = "1";
 })();
 </script>
 </body>

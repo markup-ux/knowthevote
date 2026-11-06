@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Leaders.vote · The House</title>
+<style>
+  :root {
+    --paper: #f4f0e6;
+    --ink: #1c1915;
+    --muted: #5c564c;
+    --line: #d8d0c2;
+    --bar: #0a3161;
+    --stripe: #bf0a30;
+    --bar-ink: #f4f7fb;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #111; }
+  .card {
+    width: 1080px;
+    height: 1350px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  header { background: var(--bar); color: var(--bar-ink); border-bottom: 8px solid var(--stripe); flex: none; }
+  header .bar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 22px 56px 16px;
+  }
+  .brand {
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .section {
+    font-size: 20px;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .stage { flex: 1; padding: 26px 56px 28px; display: flex; flex-direction: column; min-height: 0; }
+  .kicker {
+    margin: 0;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 650;
+    color: var(--muted);
+  }
+  h1 {
+    margin: 8px 0 0;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+  .deck { margin: 12px 0 0; font-size: 24px; line-height: 1.3; max-width: 28em; }
+  figure { margin: 18px 0 0; }
+  figure img { width: 100%; height: 448px; object-fit: cover; object-position: center 42%; display: block; border: 1px solid var(--ink); }
+  figcaption { margin-top: 8px; font-size: 15px; line-height: 1.35; color: var(--muted); }
+  .keys { margin-top: 20px; display: grid; gap: 10px; }
+  .key { display: grid; grid-template-columns: 168px 1fr; gap: 16px; align-items: center; }
+  .chip { height: 28px; border: 1px solid var(--ink); display: block; }
+  .yes { background: linear-gradient(90deg, #cfe8d6, #0e6a38); }
+  .no { background: linear-gradient(90deg, #f6d0d6, #8d2344); }
+  .gold { background: #e6b422; }
+  .key strong { font-size: 22px; font-weight: 650; }
+  .key span { color: var(--muted); font-weight: 400; font-size: 20px; }
+  .pair { margin-top: 12px; display: flex; gap: 28px; }
+  .pair span { display: flex; align-items: center; gap: 10px; font-size: 20px; }
+  .dot { width: 22px; height: 16px; border: 1px solid var(--ink); display: inline-block; }
+  .present { background: #3d4f86; }
+  .stone { background: #c8c0b4; }
+  .facts { margin-top: 22px; display: grid; gap: 16px; }
+  .facts h2 {
+    margin: 2px 0 0;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .facts p { margin: 4px 0 0; font-size: 20px; line-height: 1.35; }
+  .panel { flex: none; border-top: 1px solid var(--ink); padding: 18px 56px 22px; }
+  .url {
+    margin: 0;
+    font-family: Georgia, "Palatino Linotype", serif;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+  }
+  .note { margin: 6px 0 0; font-size: 16px; color: var(--muted); }
+</style>
+</head>
+<body>
+<article class="card">
+  <header>
+    <div class="bar">
+      <div class="brand">leaders.vote</div>
+      <div class="section">The House</div>
+    </div>
+  </header>
+  <div class="stage">
+    <div>
+      <p class="kicker">United States · 119th Congress</p>
+      <h1>The House.</h1>
+      <p class="deck">What the House voted on, who voted yes, who voted no, and how to reach the member.</p>
+      <figure>
+        <img src="house-chamber.jpg" alt="The House chamber, seen from the gallery, with the desks empty and the flag behind the rostrum.">
+        <figcaption>Photograph: Office of the Speaker of the House, February 27, 2017. Public domain.</figcaption>
+      </figure>
+      <div class="keys">
+        <div class="key">
+          <i class="chip yes"></i>
+          <div><strong>Yes. </strong><span>A darker green is a larger yes share.</span></div>
+        </div>
+        <div class="key">
+          <i class="chip no"></i>
+          <div><strong>No. </strong><span>A darker rose is a larger no share.</span></div>
+        </div>
+        <div class="key">
+          <i class="chip gold"></i>
+          <div><strong>Floor list. </strong><span>Scheduled, with no roll call that week.</span></div>
+        </div>
+      </div>
+      <div class="pair">
+        <span><i class="dot present"></i> Present</span>
+        <span><i class="dot stone"></i> Did not vote</span>
+      </div>
+    </div>
+    <div class="facts">
+      <section>
+        <p class="kicker">Each roll call</p>
+        <h2>Who introduced it, and how each member voted.</h2>
+        <p>A phone, an office, and a website are listed for the member.</p>
+      </section>
+      <section>
+        <p class="kicker">While the page is open</p>
+        <h2>A roll call published later is added while the page is open.</h2>
+        <p>The floor list is the latest week the House has published. A senator is listed with a phone, an office, and a website.</p>
+      </section>
+    </div>
+  </div>
+  <div class="panel">
+    <p class="url">leaders.vote/house</p>
+    <p class="note">Independent voter guide. Not a government site.</p>
+  </div>
+</article>
+</body>
+</html>
