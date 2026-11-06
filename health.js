@@ -1404,6 +1404,59 @@
     }
   }
 
+  function renderFoodFound() {
+    var block = document.createElement("div");
+    block.className = "food-found";
+    var intro = document.createElement("p");
+    intro.className = "note";
+    intro.textContent = "In each food, these are the plasticizers Edwards and coauthors detected. The percent is how often that chemical was found in the orders of that food. It is not a dose. DiBP and DiNP were measured only in the first round, so those counts are smaller. DEHT was measured in the second round. Cheese pizza, chicken nuggets, and plain patties were not tested for DEHT.";
+    block.appendChild(intro);
+    var overall = {};
+    data.chemicals.forEach(function (row) { overall[row.name] = row.detected; });
+    var names = Object.keys(CHEM).filter(function (name) { return CHEM[name].labels == null && CHEM_FOODS.length === CHEM[name].foods.length; });
+    CHEM_FOODS.forEach(function (label, index) {
+      var head = document.createElement("h3");
+      head.textContent = label[1];
+      block.appendChild(head);
+      var found = [];
+      var missed = [];
+      var skipped = [];
+      names.forEach(function (name) {
+        var food = CHEM[name].foods[index];
+        if (!food.sampled) skipped.push(name);
+        else if (food.pct > 0) found.push({ name: name, pct: food.pct, tested: food.tested, median: food.median });
+        else missed.push(name);
+      });
+      found.sort(function (a, b) {
+        return b.pct - a.pct || (overall[b.name] || 0) - (overall[a.name] || 0) || a.name.localeCompare(b.name);
+      });
+      found.forEach(function (item) {
+        var line = document.createElement("div");
+        line.className = "food-hit";
+        var mark = document.createElement("canvas");
+        mark.className = "harm-mark";
+        mark.width = 64;
+        mark.height = 64;
+        mark.setAttribute("aria-hidden", "true");
+        mark.getContext("2d").drawImage(harmSprite(item.name), 0, 0);
+        var text = document.createElement("span");
+        var amount = item.median === null ? "median below the detection limit" : "median " + chemAmount(item.median) + " µg/kg";
+        text.textContent = item.name + " · " + item.pct + "% of " + item.tested + " · " + amount;
+        line.appendChild(mark);
+        line.appendChild(text);
+        block.appendChild(line);
+      });
+      var rest = document.createElement("p");
+      rest.className = "note";
+      var sentence = "";
+      if (missed.length) sentence += "Not detected: " + missed.join(", ") + ".";
+      if (skipped.length) sentence += (sentence ? " " : "") + "Not tested: " + skipped.join(", ") + ".";
+      rest.textContent = sentence;
+      if (sentence) block.appendChild(rest);
+    });
+    return block;
+  }
+
   function renderChemicals() {
     syncStudy();
     var picks = document.getElementById("chem-picks");
@@ -1440,9 +1493,14 @@
       pack: "In the packaging, not in the food. Schaider and coauthors, samples from 2014 and 2015."
     };
     var seenSet = {};
+    var foodsDrawn = false;
     rows.forEach(function (row) {
       var setName = chemSet(row);
       if (!seenSet[setName]) {
+        if (seenSet.edwards && setName !== "edwards" && !foodsDrawn) {
+          picks.appendChild(renderFoodFound());
+          foodsDrawn = true;
+        }
         seenSet[setName] = true;
         var heading = document.createElement("p");
         heading.className = "chem-set";
@@ -1484,6 +1542,7 @@
       });
       picks.appendChild(button);
     });
+    if (seenSet.edwards && !foodsDrawn) picks.appendChild(renderFoodFound());
     visual.textContent = "";
     var chem = CHEM[chemId];
     if (!chem) {
