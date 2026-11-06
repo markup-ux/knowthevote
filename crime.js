@@ -46,6 +46,28 @@
     return rate(count, pop).toFixed(1);
   }
 
+  function legendCaption(legend, text) {
+    legend.innerHTML = "";
+    var caption = document.createElement("span");
+    caption.className = "legend-unit";
+    caption.textContent = text;
+    legend.appendChild(caption);
+  }
+
+  function pairLabel(label) {
+    if (label === "Black or African American") return "Black";
+    if (label === "Hispanic or Latino") return "Hispanic";
+    if (label === "Not Hispanic or Latino") return "Not Hispanic";
+    return label;
+  }
+
+  function pairNote(note, labels) {
+    var extra = labels.filter(function (label) { return pairLabel(label) !== label; }).map(function (label) {
+      return pairLabel(label) + " is " + label + " in the FBI table.";
+    });
+    return extra.length ? note + " " + extra.join(" ") : note;
+  }
+
   function current() {
     return MEASURES.filter(function (item) { return item.id === measure; })[0];
   }
@@ -163,7 +185,9 @@
       if (!bands[shade.band]) bands[shade.band] = { fill: shade.fill, values: [] };
       bands[shade.band].values.push(rate(measureCount(state), measurePop(state)));
     });
-    legend.innerHTML = "";
+    legendCaption(legend, current().arrest
+      ? "Per 100,000 people in 2025. Population printed for that state in the FBI arrest table."
+      : "Per 100,000 people in 2025. Population printed on the FBI's offense row.");
     Object.keys(bands).sort().forEach(function (key) {
       var group = bands[key];
       var span = document.createElement("span");
@@ -177,6 +201,9 @@
       legend.appendChild(span);
     });
     blurb.textContent = current().blurb;
+    svg.setAttribute("aria-label", current().arrest
+      ? "Map of the states, colored by arrests per 100,000 people in 2025"
+      : "Map of the states, colored by estimated offenses per 100,000 people in 2025");
   }
 
   function readSort(state) {
@@ -222,13 +249,13 @@
       ? [
         { id: "name", label: "State" },
         { id: "count", label: "Arrests", num: true },
-        { id: "rate", label: "Rate", num: true }
+        { id: "rate", label: "Per 100,000", num: true }
       ]
       : [
         { id: "name", label: "State" },
         { id: "count", label: "Offenses", num: true },
-        { id: "rate", label: "Rate", num: true },
-        { id: "prior", label: "2024 rate", num: true }
+        { id: "rate", label: "Per 100,000", num: true },
+        { id: "prior", label: "2024 per 100,000", num: true }
       ];
     var head = document.createElement("thead");
     var headRow = document.createElement("tr");
@@ -336,7 +363,7 @@
       path.addEventListener("mouseenter", function () {
         var state = data.states.filter(function (item) { return item.code === code; })[0];
         if (!state) return;
-        status.textContent = state.name + " · " + rateText(measureCount(state), measurePop(state)) + " per 100,000";
+        status.textContent = state.name + " · " + rateText(measureCount(state), measurePop(state)) + " per 100,000 people in 2025";
       });
       path.addEventListener("mouseleave", function () { status.textContent = ""; });
     });
@@ -538,7 +565,9 @@
       if (!bands[shade.band]) bands[shade.band] = { fill: shade.fill, values: [] };
       bands[shade.band].values.push(sexValue(state));
     });
-    legend.innerHTML = "";
+    legendCaption(legend, sexMode === "arrests"
+      ? "Per 100,000 people in 2025. Arrests from agencies that sent 12 months, divided by the population on the offense row."
+      : "Per 100,000 people in 2025. Population printed on the FBI's offense row.");
     Object.keys(bands).sort().forEach(function (key) {
       var group = bands[key];
       var span = document.createElement("span");
@@ -551,6 +580,9 @@
       span.appendChild(document.createTextNode(lo === hi ? lo.toFixed(1) : lo.toFixed(1) + " to " + hi.toFixed(1)));
       legend.appendChild(span);
     });
+    sexSvg.setAttribute("aria-label", sexMode === "arrests"
+      ? "Map of the states, colored by rape arrests per 100,000 people in 2025"
+      : "Map of the states, colored by the estimated rape rate per 100,000 people in 2025");
     blurb.textContent = sexMode === "arrests"
       ? "Orange is rape arrests from agencies that sent 12 months of data, per 100,000 people in the FBI population used for the offense rate. A darker orange is a higher rate. The count is an arrest, a citation, or a summons."
       : "Rose is the estimated rape rate. A darker rose is a higher rate. The count is offenses known to law enforcement.";
@@ -564,9 +596,9 @@
     var columns = [
       { id: "name", label: "State" },
       { id: "offenses", label: "Offenses", num: true },
-      { id: "rate", label: "Offense rate", num: true },
+      { id: "rate", label: "Offenses per 100,000", num: true },
       { id: "arrests", label: "Arrests", num: true },
-      { id: "arrestRate", label: "Arrest rate", num: true }
+      { id: "arrestRate", label: "Arrests per 100,000", num: true }
     ];
     var head = document.createElement("thead");
     var headRow = document.createElement("tr");
@@ -711,6 +743,15 @@
         if (sexSvg.__panned) { sexSvg.__panned = false; return; }
         chooseSex(path.getAttribute("data-code"), true);
       });
+      path.addEventListener("mouseenter", function () {
+        var state = data.states.filter(function (item) { return item.code === path.getAttribute("data-code"); })[0];
+        if (!state) return;
+        var row = arrestRow(state.code);
+        var count = row ? row.rape : 0;
+        var value = sexMode === "arrests" ? rateText(count, state.pop) : rateText(state.rape, state.pop);
+        sexStatus.textContent = state.name + " · " + value + " per 100,000 people in 2025";
+      });
+      path.addEventListener("mouseleave", function () { sexStatus.textContent = ""; });
     });
     var bar = document.getElementById("sex-measures");
     [
@@ -1065,7 +1106,14 @@
     }
     var legend = document.getElementById("crime-hood-legend");
     if (!legend) return;
-    legend.innerHTML = "";
+    if (hoodCanvas) {
+      hoodCanvas.setAttribute("aria-label", hoodItem().arrest
+        ? "Neighborhoods colored by the state arrest rate per 100,000 people in 2025"
+        : "Neighborhoods colored by the city offense rate per 100,000 people in 2025");
+    }
+    legendCaption(legend, hoodItem().arrest
+      ? "Per 100,000 people in 2025. The state's population in the FBI arrest table."
+      : "Per 100,000 people in 2025. Population printed on the city's FBI row.");
     Object.keys(bands).sort().forEach(function (key) {
       var group = bands[key];
       var span = document.createElement("span");
@@ -1095,7 +1143,7 @@
       var button = document.createElement("button");
       button.type = "button";
       if (hoodPick && hoodPick[0] === row[0] && hoodPick[1] === row[1] && hoodPick[3] === row[3]) button.className = "is-on";
-      button.textContent = row[0] + ", " + row[1] + ", " + row[2] + " · " + rateLabel(hoodCount(row), hoodPop(row));
+      button.textContent = row[0] + ", " + row[1] + ", " + row[2] + " · " + rateLabel(hoodCount(row), hoodPop(row)) + " per 100,000";
       button.addEventListener("click", function () {
         hoodPick = row;
         fitHood(row[3], row[4], 0.4);
@@ -1372,7 +1420,9 @@
         ctx.stroke();
       }
       var legend = document.getElementById("sex-hood-legend");
-      legend.innerHTML = "";
+      var sexHoodMap = document.getElementById("sex-hood-map");
+      if (sexHoodMap) sexHoodMap.setAttribute("aria-label", "Neighborhoods colored by the city rape rate per 100,000 people in 2025");
+      legendCaption(legend, "Per 100,000 people in 2025. Population printed on the city's FBI row.");
       Object.keys(bands).sort().forEach(function (key) {
         var group = bands[key];
         var span = document.createElement("span");
@@ -1399,7 +1449,7 @@
         var button = document.createElement("button");
         button.type = "button";
         if (pick && pick[0] === row[0] && pick[1] === row[1] && pick[3] === row[3]) button.className = "is-on";
-        button.textContent = row[0] + ", " + row[1] + ", " + row[2] + " · " + rateLabel(rapeCount(city), city.pop) + " · " + people(rapeCount(city)) + " reports";
+        button.textContent = row[0] + ", " + row[1] + ", " + row[2] + " · " + rateLabel(rapeCount(city), city.pop) + " per 100,000 · " + people(rapeCount(city)) + " reports";
         button.addEventListener("click", function () {
           pick = row;
           fit(row[3], row[4], 0.4);
@@ -1693,7 +1743,8 @@
     headRow.appendChild(corner);
     labels.forEach(function (label) {
       var cell = document.createElement("th");
-      cell.textContent = label;
+      cell.textContent = pairLabel(label);
+      if (pairLabel(label) !== label) cell.title = label;
       headRow.appendChild(cell);
     });
     head.appendChild(headRow);
@@ -1703,7 +1754,8 @@
       var tr = document.createElement("tr");
       var rowHead = document.createElement("th");
       rowHead.scope = "row";
-      rowHead.textContent = rowLabel;
+      rowHead.textContent = pairLabel(rowLabel);
+      if (pairLabel(rowLabel) !== rowLabel) rowHead.title = rowLabel;
       tr.appendChild(rowHead);
       var total = 0;
       labels.forEach(function (_, colIndex) {
@@ -1731,10 +1783,13 @@
       body.appendChild(tr);
     });
     table.appendChild(body);
-    host.appendChild(table);
+    var scroller = document.createElement("div");
+    scroller.className = "pair-scroll";
+    scroller.appendChild(table);
+    host.appendChild(scroller);
     var line = document.createElement("p");
     line.className = "note";
-    line.textContent = note;
+    line.textContent = pairNote(note, labels);
     host.appendChild(line);
   }
 

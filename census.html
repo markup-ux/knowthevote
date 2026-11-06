@@ -30,8 +30,10 @@
 .race-track i { display: block; height: 16px; background: #e6550d; }
 .race-tick { position: absolute; top: -4px; width: 2px; height: 24px; background: #1c1915; }
 .race-fig { display: flex; flex-direction: column; font-size: 15px; line-height: 1.25; white-space: nowrap; }
-.pair-table { width: 100%; max-width: 860px; border-collapse: collapse; margin: 8px 0 18px; }
-.pair-table th, .pair-table td { padding: 8px 10px; border: 1px solid #d9d0c3; text-align: right; vertical-align: top; }
+.pair-scroll { overflow-x: auto; margin: 8px 0 18px; }
+.pair-table { width: max-content; min-width: 100%; max-width: none; border-collapse: collapse; margin: 0; }
+.pair-table th, .pair-table td { padding: 8px 10px; border: 1px solid #d9d0c3; text-align: right; vertical-align: top; white-space: nowrap; }
+.result-legend .legend-unit { flex-basis: 100%; font-weight: 650; color: var(--ink); }
 .pair-table th:first-child, .pair-table td:first-child { text-align: left; }
 .pair-table .on-dark { color: #f4f7fb; }
 .pair-cell small { display: block; font-size: 14px; }
@@ -248,8 +250,8 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
     <div id="census-detail"></div>
     <section class="where" id="crime">
       <h2>Crime</h2>
-      <p class="deck">The map opens on fraud arrests from Table 69. Indigo measures are the FBI's estimated offenses known to law enforcement in 2025, for the 50 states and the District of Columbia. That file is the Summary Reporting System estimates on the Crime Data Explorer, last modified August 2026. A darker indigo is a higher offense rate. A darker orange is a higher arrest rate.</p>
-      <p class="deck">The rate is the estimated offense count divided by the population in that same row, times 100,000. The rate uses the population printed in the FBI's row. The population map above uses the Census Bureau's July 1, 2025 estimate.</p>
+      <p class="deck">These maps are drawn on this page. The numbers are the FBI's. The map opens on fraud arrests from Crime in the United States, 2025, Table 69: arrests by state for agencies that sent 12 months of data. Indigo measures are the FBI's estimated offenses known to law enforcement in 2025, for the 50 states and the District of Columbia. That file is the Summary Reporting System estimates on the Crime Data Explorer, last modified August 2026. A darker indigo is a higher offense rate. On the population map above, purple is a count. A darker orange is a higher arrest rate.</p>
+      <p class="deck">The rate is the count divided by the population for that state, times 100,000, for 2025. On an orange map, that population is the one printed for the state in Table 69. On an indigo map, it is the population printed on the FBI's offense row. The population map above uses the Census Bureau's July 1, 2025 estimate.</p>
       <p class="deck">Violent crime is murder and nonnegligent manslaughter, rape, robbery, and aggravated assault. Property crime is burglary, larceny-theft, and motor vehicle theft. Rape uses the definition the FBI adopted in 2013. Arson has no estimate in this file. Fraud, forgery and counterfeiting, and embezzlement are the first measures. Those three maps are Table 69 arrests, in orange. The other measures are estimated offenses, in indigo. Where an agency sent 3 to 11 months, the FBI estimated the missing months from that agency's reports. Where an agency sent fewer than 3 months, the FBI estimated from similar places in the state. The count on an indigo map is offenses known to law enforcement.</p>
       <p class="deck">The FBI's summary of this release says estimated violent crime fell 9.3 percent from 2024 to 2025, and estimated property crime fell 12.4 percent. It says 17,075 agencies sent data, covering 96.2 percent of the population, and that the figures are as of April 2, 2026. The 2024 figures in the file were updated for this release. The file notes that limited data for 2025 were available for Florida and North Dakota. The District of Columbia row includes offenses reported by the Metro Transit Police and the District of Columbia Fire and Emergency Medical Services Arson Investigation Unit.</p>
       <div class="sheet-switch" id="crime-measures" role="group" aria-label="Crime measure"></div>
@@ -290,7 +292,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
     </section>
     <section class="where" id="sexual-assault">
       <h2>Sexual assault</h2>
-      <p class="deck">Rape in these FBI tables uses the definition the FBI adopted in 2013. Rose is the estimated rape rate, from the same offense file as the crime map. A darker rose is a higher rate. Orange is rape arrests from Table 69 of Crime in the United States, 2025. A darker orange is a higher rate. Table 69 counts agencies that sent 12 months of arrest data. It is not a national estimate.</p>
+      <p class="deck">Rape in these FBI tables uses the definition the FBI adopted in 2013. Rose is the estimated rape rate per 100,000 people in 2025, from the same offense file as the crime map. A darker rose is a higher rate. Orange is rape arrests per 100,000 people in 2025, from Table 69 of Crime in the United States: arrests by state for agencies that sent 12 months of data. A darker orange is a higher rate. That table is not a national estimate.</p>
       <p class="deck">The FBI estimates 123,332 rape offenses in the United States in 2025, and 18,729 rape arrests. The arrest estimate is Table 29. An arrest in the Uniform Crime Reporting program is an arrest, a citation, or a summons. The sheet for arrests by race titles a column Offense charged. That is the offense on the arrest. It is not a charge a prosecutor filed, and it is not a conviction.</p>
       <p class="deck">The estimated offense file has no race. Table 43 records the race an agency wrote down for a person who was arrested. It does not record the race of people in reports that did not end in an arrest. These tables cannot show that one group is reported and another is arrested. A bar longer than the Census mark is a difference between an arrest share and a Census race-alone share. It is not a measure of who commits an offense.</p>
       <div class="sheet-switch" id="sex-measures" role="group" aria-label="Sexual assault measure"></div>
@@ -541,7 +543,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
 </main>
 <footer>
   <div class="wrap">
-    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Purple on the population map is a Census Bureau count. Brown and green on that map are a drop and a rise since 2020. Indigo on the crime map is an FBI offense rate. Rose is the estimated rape rate, and orange is a rape-arrest rate. Olive is a share of a murder row. Yellow-green in Health is a count or a measured amount. Cyan in Water is quarters with a violation.</p>
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Purple on the population map is a Census Bureau count. Brown and green on that map are a drop and a rise since 2020. Indigo on the crime map is an FBI offense rate per 100,000 people in 2025. Rose is the estimated rape rate per 100,000 people in 2025, and orange is a rape-arrest rate per 100,000 people in 2025. Olive is a share of a murder row. Yellow-green in Health is a count or a measured amount. Cyan in Water is quarters with a violation.</p>
     <p>Population, change, age, and median age are from the Census Bureau's <a href="https://www.census.gov/programs-surveys/popest.html">Population Estimates Program</a>, vintage 2025. House seats are from the <a href="https://www.census.gov/data/tables/2020/dec/2020-apportionment-data.html">2020 census apportionment</a>. Leaders.vote copies those published figures.</p>
     <p>Crime counts are copied from the FBI <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Crime Data Explorer</a> file of Summary Reporting System estimates, estimated_crimes_1979_2025, last modified August 2026. The national percent changes, the agency count, and the April 2, 2026 date are from the FBI's <a href="https://cde.ucr.cjis.gov/LATEST/resources/reports/UCR_Summary_of_Reported_Crimes_in_the_Nation_2025.pdf">UCR Summary of Reported Crimes in the Nation, 2025</a>. An indigo state is an estimated offense rate. A rose state is the estimated rape rate. An orange state is a Table 69 arrest rate. A neighborhood dot uses the city rate in Table 8, Offenses Known to Law Enforcement by State by City, 2025. All crime on that map is the city's violent-crime count plus its property-crime count. Fraud, forgery, and embezzlement dots use the state's Table 69 arrest rate. Rose dots are the rape rate.</p>
     <p>Rape arrests by state are Table 69 of the FBI's Crime in the United States, 2025, from the persons-arrested tables on the Crime Data Explorer. The national arrest estimates are Table 29, including fraud, embezzlement, forgery and counterfeiting, and the other offense categories in that table. Arrests by race and Hispanic origin are Table 43. The victim-and-offender murder table is Expanded Homicide Data Table 6, and the situation counts are Table 4. The race-alone population shares and the Hispanic share are the Census Bureau's July 1, 2025 estimates in sc-est2025-alldata6.</p>
@@ -553,7 +555,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
 <script src="census.js?v=5"></script>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
-<script src="crime.js?v=19"></script>
+<script src="crime.js?v=20"></script>
 <script src="water.js?v=8"></script>
 <script src="health.js?v=38"></script>
 </body>
