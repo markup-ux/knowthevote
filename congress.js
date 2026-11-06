@@ -50,11 +50,22 @@
   var voteSide = "all";
   var senateSide = "all";
   var selectedSenate = "";
+  var slips = [];
+  var selectedSlip = "";
   var appliedQuery = "";
   var searchPerson = "";
   var searchIntroLimit = 100;
   var searchPeopleLimit = 80;
   var checking = false;
+  var slipChecking = false;
+  var slipNote = "";
+  var STATE_CODE = {};
+  var NO_SENATE = { DC: true, PR: true, GU: true, VI: true, MP: true, AS: true };
+  Object.keys(STATES).forEach(function (code) { STATE_CODE[STATES[code].toLowerCase()] = code; });
+  STATE_CODE["the district of columbia"] = "DC";
+  STATE_CODE["the virgin islands"] = "VI";
+  STATE_CODE["virgin islands"] = "VI";
+  STATE_CODE["the northern mariana islands"] = "MP";
   var mapSlot = document.createElement("div");
   var mapReady = false;
   mapSlot.id = "congress-map-slot";
@@ -818,6 +829,7 @@
       add(item.legis);
       (item.p || []).forEach(function (person) { add(person[1]); });
     });
+    slips.forEach(function (item) { add(slipBlob(item)); });
   }
 
   function correctedToken(token) {
@@ -1385,8 +1397,10 @@
     var intros = matchedIntroduced();
     var introShown = intros.slice(0, searchIntroLimit);
     var peopleShown = people.slice(0, searchPeopleLimit);
+    var slipRows = slips.filter(slipPasses);
     if (people.length) count += " " + people.length + (people.length === 1 ? " member." : " members.");
     if (intros.length) count += " " + intros.length + " introduced.";
+    if (slipRows.length) count += " " + slipRows.length + (slipRows.length === 1 ? " blue slip." : " blue slips.");
     if (intros.length > introShown.length) count += " The first " + introShown.length + " introductions are listed.";
     if (spellNote) count = spellNote + " " + count;
     countEl.textContent = count;
@@ -1448,12 +1462,13 @@
       if (item.status) row.appendChild(el("p", "", item.status));
       list.appendChild(row);
     });
-    if (!votes.length && !pending.length && !senateVotes.length && !intros.length && !floorItems.length && !people.length) {
+    if (!votes.length && !pending.length && !senateVotes.length && !intros.length && !floorItems.length && !people.length && !slipRows.length) {
       var miss = "Nothing on this page matches this search.";
       countEl.textContent = spellNote ? spellNote + " " + miss : miss;
       list.appendChild(el("p", "note", miss));
       return;
     }
+    slipRows.forEach(function (item) { list.appendChild(slipButton(item)); });
     votes.forEach(function (vote) { list.appendChild(voteButton(vote)); });
     senateVotes.forEach(function (vote) { list.appendChild(voteButton(vote)); });
     introShown.forEach(function (item) { list.appendChild(introButton(item)); });
@@ -1997,6 +2012,460 @@
     }
   }
 
+  function slipSenators(item) {
+    if (!item || item.slip === "none") return [];
+    return data.members.filter(function (member) {
+      return member[5] === "senate" && member[3] === item.state && member[11] !== "Former senator";
+    }).sort(function (a, b) { return a[1].localeCompare(b[1]); });
+  }
+
+  function slipKind(item) {
+    if (item.kind === "circuit") return "Circuit court";
+    if (item.kind === "national") return "National court";
+    if (item.kind === "territory") return "Territorial court";
+    return "District court";
+  }
+
+  function slipSentence(item) {
+    if (item.slip === "back") return "Both home-state senators returned the blue slip. The committee does not hear a district-court nomination unless both slips come back.";
+    if (item.slip === "note") return "A blue slip goes to each home-state senator. The committee can hear a circuit nomination without those slips. This record does not say whether the slips came back.";
+    if (item.slip === "none") return "This court has no home-state senators. The committee does not send a blue slip for this nomination.";
+    if (/returned to the president/i.test(item.action || "")) return "The Senate returned this nomination to the President. This record does not say whether the blue slips came back.";
+    return "A blue slip goes to each home-state senator. The committee has not published a returned slip, and it has not set a hearing.";
+  }
+
+  function slipBlob(item) {
+    var people = slipSenators(item).map(function (member) { return member[1]; }).join(" ");
+    return [item.name, item.court, item.action, item.id, stateName(item.state), slipKind(item), slipSentence(item), people, "blue slip judge"].join(" ");
+  }
+
+  function slipPasses(item) {
+    var year = yearValue();
+    if (year !== "all") {
+      var acted = String(item.date || "").slice(0, 4);
+      var received = String(item.received || "").slice(0, 4);
+      if (acted !== year && received !== year) return false;
+    }
+    var result = resultValue();
+    var action = item.action || "";
+    if (result === "Passed" && !/confirmed/i.test(action)) return false;
+    if (result === "Failed" && !/returned to the president|rejected/i.test(action)) return false;
+    if (result === "Agreed to") return false;
+    if (result === "other" && /confirmed|returned to the president|rejected/i.test(action)) return false;
+    if (stateCode !== "all" && item.state !== stateCode) return false;
+    if (party !== "all" && !slipSenators(item).some(function (member) { return passesParty(member); })) return false;
+    var q = interpretedQuery();
+    if (!q) return true;
+    return textMatches(slipBlob(item), q);
+  }
+
+  function slipVote(item) {
+    if (!/confirmed/i.test(item.action || "")) return null;
+    var name = (item.name || "").toLowerCase();
+    if (!name) return null;
+    var hits = (data.senateVotes || []).filter(function (vote) {
+      return (vote.desc || "").toLowerCase().indexOf(name) >= 0 && /confirmed/i.test(vote.result || "");
+    });
+    if (!hits.length) return null;
+    var dated = hits.filter(function (vote) { return vote.date === item.date; });
+    return dated[0] || hits[0];
+  }
+
+  function slipWho(node, item) {
+    var people = slipSenators(item);
+    if (!people.length) return;
+    node.appendChild(document.createTextNode(item.slip === "back" ? "Both slips came back. They went to " : "The slips go to "));
+    people.forEach(function (member, index) {
+      if (index) node.appendChild(document.createTextNode(index === people.length - 1 ? " and " : ", "));
+      node.appendChild(document.createTextNode("Senator "));
+      node.appendChild(el("span", partyClass(member[2]), member[1]));
+    });
+    node.appendChild(document.createTextNode("."));
+  }
+
+  function nomineeFace(item, large) {
+    var letter = (item.name || "?").trim().charAt(0).toUpperCase() || "?";
+    var className = large ? "portrait portrait-lg" : "portrait";
+    if (!item.photo) return el("span", className.replace("portrait", "portrait-letter"), letter);
+    var img = document.createElement("img");
+    img.className = className;
+    img.alt = "Portrait of " + (item.name || "the nominee");
+    img.loading = "lazy";
+    img.decoding = "async";
+    img.addEventListener("error", function () {
+      img.replaceWith(el("span", className.replace("portrait", "portrait-letter"), letter));
+    });
+    img.src = item.photo;
+    return img;
+  }
+
+  function slipButton(item) {
+    var shell = el("div", "slip-row slip-" + (item.slip || "out") + (item.id === selectedSlip ? " is-on" : ""));
+    var row = el("button", "vote-row");
+    row.type = "button";
+    row.setAttribute("data-slip", item.id);
+    row.appendChild(nomineeFace(item, false));
+    var when = formatDate(item.date || item.received) + " · " + slipKind(item);
+    if (item.state) when += " · " + stateName(item.state);
+    row.appendChild(el("p", "vote-meta", when));
+    row.appendChild(el("strong", "", item.name || "Judicial nomination"));
+    if (item.court) row.appendChild(el("p", "", item.court));
+    row.appendChild(el("p", "act-line", slipSentence(item)));
+    var people = slipSenators(item);
+    if (people.length) {
+      var whoRow = el("div", "intro-who");
+      var faces = el("div", "intro-faces");
+      people.forEach(function (member) { faces.appendChild(portrait(member[0], member[1], false)); });
+      whoRow.appendChild(faces);
+      var who = el("p", "act-line");
+      slipWho(who, item);
+      whoRow.appendChild(who);
+      row.appendChild(whoRow);
+    }
+    if (item.action) row.appendChild(el("p", "vote-meta", item.action));
+    shell.appendChild(row);
+    return shell;
+  }
+
+  function renderSlipDetail() {
+    var box = document.getElementById("open-slip");
+    if (!box) return;
+    box.innerHTML = "";
+    var item = null;
+    slips.forEach(function (row) { if (row.id === selectedSlip) item = row; });
+    if (!item) return;
+    var wrap = el("div", "act-note");
+    var card = el("div", "person-card");
+    card.appendChild(nomineeFace(item, true));
+    var copy = el("div", "person-copy");
+    copy.appendChild(el("h3", "", item.name || "Judicial nomination"));
+    copy.appendChild(el("p", "vote-meta", [slipKind(item), item.state ? stateName(item.state) : "", formatDate(item.date || item.received)].filter(Boolean).join(" · ")));
+    if (item.court) copy.appendChild(el("p", "", item.court + "."));
+    copy.appendChild(el("p", "", slipSentence(item)));
+    card.appendChild(copy);
+    wrap.appendChild(card);
+    if (item.received) wrap.appendChild(el("p", "", "Received " + formatDate(item.received) + "."));
+    if (item.action) wrap.appendChild(el("p", "", "Latest action, " + formatDate(item.date) + ": " + item.action));
+    if (item.url) {
+      var links = el("p", "");
+      links.appendChild(link(item.url, item.id || "Nomination"));
+      wrap.appendChild(links);
+    }
+    var vote = slipVote(item);
+    if (vote) {
+      var button = el("button", "linkish", "Senate roll call " + vote.n + " · " + formatDate(vote.date) + " · " + (vote.result || ""));
+      button.type = "button";
+      button.setAttribute("data-vote", vote.id);
+      button.setAttribute("data-chamber", "senate");
+      var holder = el("p", "");
+      holder.appendChild(button);
+      wrap.appendChild(holder);
+    }
+    var people = slipSenators(item);
+    if (people.length) {
+      wrap.appendChild(el("h3", "", people.length === 1 ? "Home-state senator" : "Home-state senators"));
+      people.forEach(function (member) {
+        var row = el("button", "person-row" + (member[0] === pinned ? " is-on" : ""));
+        row.type = "button";
+        row.setAttribute("data-person", member[0]);
+        row.appendChild(portrait(member[0], member[1], false));
+        var copy = el("div", "");
+        copy.appendChild(el("strong", partyClass(member[2]), member[1]));
+        var meta = ["Senator", partyWord(member[2]), stateName(member[3])];
+        if (member[11]) meta.push(member[11]);
+        if (member[6]) meta.push(member[6]);
+        copy.appendChild(el("p", "person-meta", meta.join(" · ")));
+        row.appendChild(copy);
+        wrap.appendChild(row);
+      });
+    }
+    var person = pinned ? memberById(pinned) : null;
+    if (person && people.some(function (member) { return member[0] === person[0]; })) {
+      var card = contactBlock(person);
+      card.classList.add("pinned-card");
+      var clear = el("p", "");
+      var close = el("button", "linkish", "Close this member");
+      close.type = "button";
+      close.addEventListener("click", function () {
+        pinned = "";
+        renderSlipDetail();
+      });
+      clear.appendChild(close);
+      card.querySelector(".person-copy").appendChild(clear);
+      wrap.appendChild(card);
+    }
+    box.appendChild(wrap);
+  }
+
+  function renderSlips() {
+    var list = document.getElementById("slip-list");
+    var countEl = document.getElementById("slip-count");
+    if (!list || !countEl) return;
+    var rows = slips.filter(slipPasses);
+    countEl.textContent = slipCountText();
+    list.innerHTML = "";
+    if (!slips.length) {
+      list.appendChild(el("p", "note", "The blue slip file did not load."));
+      var missing = document.getElementById("open-slip");
+      if (missing) missing.innerHTML = "";
+      return;
+    }
+    if (!rows.length) {
+      list.appendChild(el("p", "note", "No blue slip matches these choices."));
+      renderSlipDetail();
+      return;
+    }
+    rows.forEach(function (item) { list.appendChild(slipButton(item)); });
+    renderSlipDetail();
+  }
+
+  function slipCountText() {
+    var rows = slips.filter(slipPasses);
+    var count = "Showing " + rows.length + " of " + slips.length + " judicial nominations.";
+    if (spellNote) count = spellNote + " " + count;
+    if (slipNote) count += " " + slipNote;
+    return count;
+  }
+
+  function stateCodeFromName(name) {
+    var text = String(name || "").replace(/\s+/g, " ").trim().replace(/\.+$/, "").toLowerCase();
+    if (STATE_CODE[text]) return STATE_CODE[text];
+    if (text.indexOf("the ") === 0 && STATE_CODE[text.slice(4)]) return STATE_CODE[text.slice(4)];
+    return "";
+  }
+
+  function courtState(court) {
+    var match = /(?:Northern|Southern|Eastern|Western|Middle|Central) District of (.+)$|District Court of (?:the )?(.+)$|District of (.+)$/.exec(court || "");
+    if (!match) return "";
+    var name = (match[1] || match[2] || match[3]).split(/\bfor\b|,/)[0];
+    return stateCodeFromName(name);
+  }
+
+  function slipKindCode(court) {
+    var text = court || "";
+    if (text.indexOf("Circuit Judge") >= 0) return "circuit";
+    if (/International Trade|Federal Claims|Federal Circuit|Supreme Court/.test(text)) return "national";
+    if (/Virgin Islands|Guam|Northern Mariana|Puerto Rico/.test(text)) return "territory";
+    if (text.indexOf("District Judge") >= 0 || text.indexOf("District Court") >= 0) return "district";
+    return "other";
+  }
+
+  function slipMark(kind, state, action) {
+    var moved = /hearings held|executive calendar|confirmed by the senate|ordered to be reported|cloture/i.test(action || "");
+    if (NO_SENATE[state]) return "none";
+    if (kind === "circuit") return "note";
+    if (kind === "district" && moved) return "back";
+    if (kind === "district") return "out";
+    return "none";
+  }
+
+  function slipRank(action) {
+    var text = (action || "").toLowerCase();
+    if (text.indexOf("confirmed") >= 0) return 4;
+    if (/executive calendar|ordered to be reported|cloture/.test(text)) return 3;
+    if (/hearings held|returned to the president|rejected/.test(text)) return 2;
+    return 1;
+  }
+
+  function latestAction(row) {
+    var action = row.latestAction;
+    if (!action) return null;
+    if (action.length) action = action[0];
+    if (!action || !action.text) return null;
+    return {
+      date: String(action.actionDate || "").slice(0, 10),
+      text: String(action.text).replace(/\s+/g, " ").trim()
+    };
+  }
+
+  function slipId(row) {
+    if (row.citation) return String(row.citation).replace(/\s+/g, "");
+    var part = String(row.partNumber || "00");
+    var suffix = part !== "00" && part !== "0" ? "-" + String(+part || part) : "";
+    return "PN" + row.number + suffix;
+  }
+
+  function slipPage(row) {
+    var citation = /PN(\d+)(?:-(\d+))?/.exec(String(row.citation || ""));
+    var number = (citation && citation[1]) || row.number;
+    var part = (citation && citation[2]) || "";
+    if (!part) {
+      var raw = String(row.partNumber || "00");
+      if (raw !== "00" && raw !== "0") part = String(+raw || raw);
+    }
+    var base = "https://www.congress.gov/nomination/119th-congress/" + number;
+    return part ? base + "/" + part : base;
+  }
+
+  function slipFromApi(row) {
+    var desc = String(row.description || "").replace(/\s+/g, " ").trim();
+    var match = /^(.+), of ([^,]+), to be (.+?)(?:, vice .*)?\.?$/.exec(desc);
+    if (!match || !/Judge|Justice/.test(match[3])) return null;
+    var action = latestAction(row);
+    if (!action || !action.date) return null;
+    var court = match[3].replace(/\.\s*$/, "").trim();
+    var kind = slipKindCode(court);
+    var home = stateCodeFromName(match[2]);
+    var state = kind === "district" || kind === "territory" ? courtState(court) : home;
+    if (!state) state = home;
+    var vote = /Record Vote Number:\s*(\d+)/.exec(action.text);
+    var item = {
+      id: slipId(row),
+      name: match[1].replace(/\s+/g, " ").trim(),
+      state: state,
+      court: court,
+      kind: kind,
+      slip: slipMark(kind, state, action.text),
+      received: String(row.receivedDate || "").slice(0, 10),
+      date: action.date,
+      action: action.text,
+      vote: vote ? +vote[1] : null,
+      url: slipPage(row),
+      live: true
+    };
+    if (home && home !== state) item.home = home;
+    return item;
+  }
+
+  function slipPhoto(name) {
+    var photo = "";
+    slips.forEach(function (row) {
+      if (row.name === name && row.photo) photo = row.photo;
+    });
+    return photo;
+  }
+
+  function applySlip(item) {
+    if (!item || !item.id) return "";
+    var index = -1;
+    slips.forEach(function (row, i) { if (row.id === item.id) index = i; });
+    if (index < 0) {
+      if (!item.photo) item.photo = slipPhoto(item.name);
+      if (!item.photo) delete item.photo;
+      slips.push(item);
+      return "added";
+    }
+    var current = slips[index];
+    var newer = item.date > current.date || (item.date === current.date && slipRank(item.action) > slipRank(current.action));
+    if (!newer) return "";
+    if (current.photo) item.photo = current.photo;
+    else if (!item.photo) delete item.photo;
+    slips[index] = item;
+    return "updated";
+  }
+
+  function sortSlips() {
+    slips.sort(function (a, b) {
+      if (a.date !== b.date) return a.date < b.date ? 1 : -1;
+      if (a.name === b.name) return 0;
+      return a.name < b.name ? 1 : -1;
+    });
+  }
+
+  function slipSince() {
+    var newest = "";
+    slips.forEach(function (item) {
+      if (item.date && item.date > newest) newest = item.date;
+    });
+    return (newest || "2025-01-03") + "T00:00:00Z";
+  }
+
+  function listNominations(offset, rows, since) {
+    var path = "/nomination/119?limit=250&offset=" + offset;
+    if (since) path += "&fromDateTime=" + encodeURIComponent(since);
+    return api(path).then(function (response) {
+      if (!response.ok) throw new Error(String(response.status));
+      return response.json();
+    }).then(function (body) {
+      var page = body.nominations || [];
+      var all = rows.concat(page);
+      if (body.pagination && body.pagination.next && page.length && all.length < 1000) {
+        return listNominations(offset + page.length, all, since);
+      }
+      return all;
+    });
+  }
+
+  function storeLiveSlips() {
+    try {
+      var extra = slips.filter(function (item) { return item.live; });
+      sessionStorage.setItem("lv-slips-live", JSON.stringify({ at: Date.now(), slips: extra }));
+    } catch (error) { /* A full storage box still leaves the page usable. */ }
+  }
+
+  function restoreLiveSlips() {
+    try {
+      var saved = JSON.parse(sessionStorage.getItem("lv-slips-live") || "null");
+      if (!saved || !saved.slips) return;
+      saved.slips.forEach(applySlip);
+      sortSlips();
+    } catch (error) { /* Ignore a broken saved check. */ }
+  }
+
+  function finishSlips(note, changed) {
+    slipChecking = false;
+    slipNote = note;
+    if (!changed) {
+      var countEl = document.getElementById("slip-count");
+      if (countEl) countEl.textContent = slipCountText();
+      return;
+    }
+    var list = document.getElementById("slip-list");
+    var top = list ? list.scrollTop : 0;
+    indexWords();
+    renderSlips();
+    if (list) list.scrollTop = top;
+  }
+
+  function checkSlips() {
+    if (slipChecking) return;
+    var last = 0;
+    try { last = +sessionStorage.getItem("lv-slips-checked") || 0; } catch (error) { last = 0; }
+    if (Date.now() - last < 19 * 60 * 1000) return;
+    slipChecking = true;
+    slipNote = "Checking Congress.gov for blue slips.";
+    var countEl = document.getElementById("slip-count");
+    if (countEl) countEl.textContent = slipCountText();
+    listNominations(0, [], slipSince()).catch(function (error) {
+      if (String(error && error.message || "") !== "400") throw error;
+      return listNominations(0, [], "");
+    }).then(function (rows) {
+      var added = 0;
+      var updated = 0;
+      rows.forEach(function (row) {
+        var change = applySlip(slipFromApi(row));
+        if (change === "added") added += 1;
+        if (change === "updated") updated += 1;
+      });
+      if (added || updated) sortSlips();
+      try { sessionStorage.setItem("lv-slips-checked", String(Date.now())); } catch (error) { /* ignore */ }
+      if (added || updated) storeLiveSlips();
+      var note = "Congress.gov lists no judicial nomination newer than this copy.";
+      if (added || updated) {
+        var parts = [];
+        if (added) parts.push(added + (added === 1 ? " new judicial nomination" : " new judicial nominations"));
+        if (updated) parts.push("updated " + updated);
+        note = "Congress.gov " + parts.join(" and ") + ".";
+      }
+      finishSlips(note, added + updated > 0);
+    }).catch(function (error) {
+      var message = String(error && error.message || "");
+      finishSlips(message === "429" || message === "403"
+        ? "Congress.gov asked this browser to wait. The saved copy is on the page."
+        : "Congress.gov did not answer. The saved copy is on the page.", false);
+    });
+  }
+
+  function chooseSlip(id, scroll) {
+    selectedSlip = id;
+    if (history.replaceState) history.replaceState(null, "", "#slip-" + id);
+    renderSlips();
+    if (scroll) {
+      var open = document.getElementById("open-slip");
+      if (open) open.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
   function render() {
     queryCacheRaw = null;
     renderFloor();
@@ -2008,6 +2477,7 @@
     renderDetail();
     renderSenateVotes();
     renderSenateDetail();
+    renderSlips();
     renderSenators();
     loadMap();
   }
@@ -2022,6 +2492,7 @@
     renderDetail();
     renderSenateVotes();
     renderSenateDetail();
+    renderSlips();
     renderSenators();
   }
 
@@ -2214,12 +2685,14 @@
     indexMembers();
     indexBills();
     restoreLive();
+    restoreLiveSlips();
     fillStates();
     var votes = sortedVotes();
     var hash = location.hash.replace(/^#/, "");
     selected = votes.some(function (vote) { return vote.id === hash; }) ? hash : (votes[0] ? votes[0].id : "");
     selectedSenate = data.senateVotes.some(function (vote) { return vote.id === hash; }) ? hash : (data.senateVotes[0] ? data.senateVotes[0].id : "");
     if (hash.indexOf("i-") === 0 && introduced[hash.slice(2)]) selectedIntro = hash.slice(2);
+    if (hash.indexOf("slip-") === 0 && slips.some(function (item) { return item.id === hash.slice(5); })) selectedSlip = hash.slice(5);
     if (hash.indexOf("p-") === 0 && memberById(hash.slice(2))) searchPerson = hash.slice(2);
     renderStatus("");
     render();
@@ -2232,6 +2705,9 @@
     } else if (hash && hash === selected) {
       var openVote = document.getElementById("open-vote");
       if (openVote && openVote.firstChild) openVote.scrollIntoView({ block: "start" });
+    } else if (hash.indexOf("slip-") === 0 && selectedSlip) {
+      var openSlip = document.getElementById("open-slip");
+      if (openSlip && openSlip.firstChild) openSlip.scrollIntoView({ block: "start" });
     } else if (hash && hash === selectedSenate) {
       var openSenate = document.getElementById("open-senate");
       if (openSenate && openSenate.firstChild) openSenate.scrollIntoView({ block: "start" });
@@ -2318,6 +2794,11 @@
         showPersonCard(document.querySelector("#search-list .pinned-card"));
         return;
       }
+      var slip = event.target.closest("button[data-slip]");
+      if (slip) {
+        chooseSlip(slip.getAttribute("data-slip"), true);
+        return;
+      }
       var intro = event.target.closest("button[data-intro]");
       if (intro) {
         selectedIntro = intro.getAttribute("data-intro");
@@ -2350,6 +2831,16 @@
       renderIntroduced();
       showPersonCard(document.getElementById("open-intro"));
     });
+    var slipList = document.getElementById("blue-slips");
+    if (slipList) slipList.addEventListener("click", function (event) {
+      var vote = event.target.closest("button[data-vote]");
+      if (vote) {
+        chooseSenate(vote.getAttribute("data-vote"), true);
+        return;
+      }
+      var button = event.target.closest("button[data-slip]");
+      if (button) chooseSlip(button.getAttribute("data-slip"), true);
+    });
     document.getElementById("senate-list").addEventListener("click", function (event) {
       var button = event.target.closest("button[data-vote]");
       if (button) chooseSenate(button.getAttribute("data-vote"), true);
@@ -2363,6 +2854,11 @@
         showPersonCard(document.querySelector("#open-senate .pinned-card"));
         return;
       }
+      if (event.target.closest("#open-slip")) {
+        renderSlipDetail();
+        showPersonCard(document.querySelector("#open-slip .pinned-card"));
+        return;
+      }
       renderDetail();
       renderSenators();
       showPersonCard(document.querySelector("#open-vote .pinned-card"));
@@ -2370,6 +2866,8 @@
     document.getElementById("congress-check").addEventListener("click", function () { checkLive(true); });
     checkLive(false);
     setInterval(function () { checkLive(false); }, 20 * 60 * 1000);
+    setTimeout(checkSlips, 8000);
+    setInterval(checkSlips, 20 * 60 * 1000);
   }
 
   fetch("congress/votes.json?v=1").then(function (response) {
@@ -2404,6 +2902,16 @@
           }).catch(function () {
             payload.senate = null;
             return payload;
+          }).then(function (ready) {
+            return fetch("congress/slips.json?v=3").then(function (response) {
+              if (!response.ok) return { slips: [] };
+              return response.json();
+            }).catch(function () {
+              return { slips: [] };
+            }).then(function (extraSlips) {
+              slips = (extraSlips && extraSlips.slips) || [];
+              return ready;
+            });
           });
         });
       });
