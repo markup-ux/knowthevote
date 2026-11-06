@@ -20,7 +20,7 @@
   ];
 
   var data = null;
-  var measure = "violent";
+  var measure = "fraud";
   var sortKey = "rate";
   var sortDir = -1;
   var selected = null;
