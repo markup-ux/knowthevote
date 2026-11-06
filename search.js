@@ -92,7 +92,7 @@
   function hasToken(hay, token) {
     if (!token) return false;
     if (hay.indexOf(token) !== -1) return true;
-    if (token.length < 3) return false;
+    if (token.length < 2) return false;
     return hay.replace(/ /g, "").indexOf(token) !== -1;
   }
 
@@ -339,7 +339,7 @@
 
   function load() {
     if (pending) return pending;
-    pending = fetch(base + "search.json?v=4")
+    pending = fetch(base + "search.json?v=5")
       .then(function (response) {
         if (!response.ok) throw new Error("search");
         return response.json();

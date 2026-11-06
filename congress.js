@@ -1343,6 +1343,28 @@
     if (!section || !list || !countEl) return;
     var q = interpretedQuery();
     list.innerHTML = "";
+    if (!q && searchPerson) {
+      var direct = memberById(searchPerson);
+      section.hidden = !direct;
+      if (!direct) return;
+      countEl.textContent = "1 member.";
+      var directRow = el("button", "person-row is-on");
+      directRow.type = "button";
+      directRow.setAttribute("data-person", direct[0]);
+      directRow.appendChild(portrait(direct[0], direct[1], false));
+      var directCopy = el("div", "");
+      directCopy.appendChild(el("strong", partyClass(direct[2]), direct[1]));
+      var directMeta = [direct[5] === "senate" ? "Senator" : "Representative", partyWord(direct[2]), stateName(direct[3])];
+      if (direct[11]) directMeta.push(direct[11]);
+      if (direct[7]) directMeta.push(direct[7]);
+      directCopy.appendChild(el("p", "person-meta", directMeta.filter(Boolean).join(" · ")));
+      directRow.appendChild(directCopy);
+      list.appendChild(directRow);
+      var directCard = contactBlock(direct);
+      directCard.classList.add("pinned-card");
+      list.appendChild(directCard);
+      return;
+    }
     if (!q) {
       section.hidden = true;
       return;
@@ -2195,8 +2217,22 @@
     selected = votes.some(function (vote) { return vote.id === hash; }) ? hash : (votes[0] ? votes[0].id : "");
     selectedSenate = data.senateVotes.some(function (vote) { return vote.id === hash; }) ? hash : (data.senateVotes[0] ? data.senateVotes[0].id : "");
     if (hash.indexOf("i-") === 0 && introduced[hash.slice(2)]) selectedIntro = hash.slice(2);
+    if (hash.indexOf("p-") === 0 && memberById(hash.slice(2))) searchPerson = hash.slice(2);
     renderStatus("");
     render();
+    if (searchPerson) {
+      var foundPerson = document.getElementById("search-results");
+      if (foundPerson) foundPerson.scrollIntoView({ block: "start" });
+    } else if (hash.indexOf("i-") === 0 && selectedIntro) {
+      var openIntro = document.getElementById("open-intro");
+      if (openIntro && openIntro.firstChild) openIntro.scrollIntoView({ block: "start" });
+    } else if (hash && hash === selected) {
+      var openVote = document.getElementById("open-vote");
+      if (openVote && openVote.firstChild) openVote.scrollIntoView({ block: "start" });
+    } else if (hash && hash === selectedSenate) {
+      var openSenate = document.getElementById("open-senate");
+      if (openSenate && openSenate.firstChild) openSenate.scrollIntoView({ block: "start" });
+    }
     function clearSearch() {
       appliedQuery = "";
       searchPerson = "";
