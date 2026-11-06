@@ -234,3 +234,173 @@
     fixTimer = setTimeout(function () { fixOfficeNames(select.value); }, 500);
   }, { passive: true });
 })();
+
+(function () {
+  if (!document.body || document.body.classList.contains("wall")) return;
+  var header = document.querySelector("header");
+  if (!header) return;
+  var jump = document.querySelector("nav.jump");
+  var mq = window.matchMedia("(max-width: 800px)");
+  var idleMs = 1200;
+  var timer = 0;
+  var held = false;
+  var hideToken = 0;
+  var lastY = window.scrollY || 0;
+  var lastMove = Date.now();
+
+  var style = document.createElement("style");
+  style.id = "chrome-idle-style";
+  style.textContent = [
+    "@media (max-width: 800px) {",
+    "header { transition: top 0.28s ease, max-height 0.28s ease, border-bottom-width 0.28s ease; }",
+    "nav.jump { transition: transform 0.28s ease; }",
+    "body.chrome-away header { top: calc(-1 * var(--header-open, 240px) - 12px); pointer-events: none; }",
+    "body.chrome-at-top, body.chrome-at-top * { overflow-anchor: none; }",
+    "body.chrome-at-top header { border-bottom-width: 0; pointer-events: none; }",
+    "body.chrome-at-top header::after { height: 0; }",
+    "body.chrome-idle nav.jump { transform: translateY(calc(100% + 16px)); pointer-events: none; }",
+    "}",
+    "@media (max-width: 800px) and (prefers-reduced-motion: reduce) {",
+    "header, nav.jump { transition: none; }",
+    "}"
+  ].join("\n");
+  document.head.appendChild(style);
+
+  function mobile() { return mq.matches; }
+
+  function motionOk() {
+    return !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  function busy() {
+    var active = document.activeElement;
+    if (active && active !== document.body && header.contains(active)) return true;
+    if (jump && active && jump.contains(active)) return true;
+    var menu = document.getElementById("lang-list");
+    if (menu && !menu.hidden) return true;
+    var list = document.getElementById("site-search-list");
+    if (list && !list.hidden) return true;
+    return false;
+  }
+
+  function show() {
+    hideToken += 1;
+    document.body.classList.remove("chrome-idle", "chrome-away", "chrome-at-top");
+    header.style.maxHeight = "";
+    header.style.overflow = "";
+    header.inert = false;
+    if (jump) jump.inert = false;
+  }
+
+  function hide() {
+    if (!mobile()) return;
+    if (busy() || held || Date.now() - lastMove < 160) {
+      arm();
+      return;
+    }
+    var y = window.scrollY || 0;
+    var extra = document.documentElement.scrollHeight - window.innerHeight;
+    if (y <= 4 && extra <= 8) return;
+    var headerH = Math.ceil(header.getBoundingClientRect().height);
+    var collapse = y <= 4 && extra > headerH + 16;
+    var away = y > 4 && headerH > 0;
+    if (!collapse && !away && !jump) return;
+    var token = ++hideToken;
+    if (away) {
+      document.documentElement.style.setProperty("--header-open", headerH + "px");
+      document.body.classList.remove("chrome-at-top");
+      document.body.classList.add("chrome-away");
+      header.style.maxHeight = "";
+      header.style.overflow = "";
+      header.inert = true;
+    } else if (collapse) {
+      header.style.overflow = "hidden";
+      header.style.maxHeight = headerH + "px";
+      document.body.classList.remove("chrome-away");
+      document.body.classList.add("chrome-at-top");
+      header.inert = true;
+      var finish = function () {
+        if (token !== hideToken || !document.body.classList.contains("chrome-at-top")) return;
+        header.style.maxHeight = "0px";
+        setTimeout(function () { lastY = window.scrollY || 0; }, 0);
+      };
+      if (motionOk()) requestAnimationFrame(function () { requestAnimationFrame(finish); });
+      else finish();
+    }
+    document.body.classList.add("chrome-idle");
+    if (jump) jump.inert = true;
+  }
+
+  function arm() {
+    clearTimeout(timer);
+    if (!mobile()) {
+      show();
+      return;
+    }
+    timer = setTimeout(hide, idleMs);
+  }
+
+  function revealFromUser() {
+    if (!mobile()) return;
+    lastMove = Date.now();
+    show();
+    arm();
+  }
+
+  window.addEventListener("scroll", function () {
+    var y = window.scrollY || 0;
+    var delta = Math.abs(y - lastY);
+    lastY = y;
+    if (!mobile() || delta < 1) return;
+    revealFromUser();
+  }, { passive: true });
+
+  document.addEventListener("scroll", function (event) {
+    var target = event.target;
+    if (!target || target === document || target === document.documentElement || target === document.body) return;
+    revealFromUser();
+  }, true);
+
+  window.addEventListener("wheel", revealFromUser, { passive: true });
+  window.addEventListener("touchmove", revealFromUser, { passive: true });
+  window.addEventListener("keydown", function (event) {
+    var key = event.key;
+    if (key !== "ArrowDown" && key !== "ArrowUp" && key !== "PageDown" && key !== "PageUp" && key !== "Home" && key !== "End" && key !== " ") return;
+    var tag = event.target && event.target.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (event.target && event.target.isContentEditable)) return;
+    revealFromUser();
+  });
+
+  if (mq.addEventListener) mq.addEventListener("change", function () { show(); arm(); });
+  else if (mq.addListener) mq.addListener(function () { show(); arm(); });
+
+  document.addEventListener("focusin", function () {
+    if (busy()) {
+      clearTimeout(timer);
+      show();
+    }
+  });
+  document.addEventListener("focusout", function () { arm(); });
+
+  header.addEventListener("pointerdown", function () {
+    held = true;
+    clearTimeout(timer);
+    show();
+  });
+  if (jump) {
+    jump.addEventListener("pointerdown", function () {
+      held = true;
+      clearTimeout(timer);
+      show();
+    });
+  }
+  function release() {
+    if (!held) return;
+    held = false;
+    arm();
+  }
+  window.addEventListener("pointerup", release);
+  window.addEventListener("pointercancel", release);
+
+  arm();
+})();

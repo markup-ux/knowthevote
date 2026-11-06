@@ -1,0 +1,908 @@
+{
+  "source": "https://www.elections.ca/res/rep/off/ovrGE45/62/table8E.html",
+  "fetchedAt": "2026-11-06T20:00:20.742794+00:00",
+  "status": "Elections Canada table of valid votes by political affiliation for the House of Commons election on 28 April 2025. The table is the official count. A province or territory is colored only from those votes. Independent is every independent candidate added together. This page does not declare a result.",
+  "strings": {
+    "blank": "No votes reported"
+  },
+  "tables": [
+    {
+      "title": "Valid votes, added across the provinces and territories",
+      "note": "Each affiliation's provincial totals added together. Affiliations under one percent are left off this table. Independent is every independent candidate added together. This is not a count of seats.",
+      "column": "Party",
+      "rows": [
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 8595488,
+          "percent": 43.761508381444074
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 8113484,
+          "percent": 41.307520651382724
+        },
+        {
+          "name": "Bloc Québécois",
+          "votes": 1236349,
+          "percent": 6.294523024857925
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 1234673,
+          "percent": 6.285990142484371
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 238892,
+          "percent": 1.216251393784732
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "slug": "newfoundland-and-labrador",
+      "name": "Newfoundland and Labrador",
+      "votes": 278007,
+      "leader": "Liberal Party of Canada ahead",
+      "color": "#d71920",
+      "amount": 0.7171775512103045,
+      "summary": "Liberal Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 150458,
+          "percent": 54.12021999446057,
+          "color": "#d71920"
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 110259,
+          "percent": 39.66051214537764,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 15319,
+          "percent": 5.510292906293726,
+          "color": "#e87722"
+        },
+        {
+          "name": "Independent",
+          "votes": 637,
+          "percent": 0.22913092116385558,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "People's Party of Canada",
+          "votes": 537,
+          "percent": 0.19316060386968673,
+          "color": "#6b4c9a"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 299,
+          "percent": 0.10755124870956487,
+          "color": "#2f6b34"
+        },
+        {
+          "name": "Parti Rhinocéros Party",
+          "votes": 230,
+          "percent": 0.08273172977658835,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Animal Protection Party of Canada",
+          "votes": 170,
+          "percent": 0.06114953940008705,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Communist Party of Canada",
+          "votes": 98,
+          "percent": 0.035250910948285474,
+          "color": "#3f4f3a"
+        }
+      ]
+    },
+    {
+      "slug": "prince-edward-island",
+      "name": "Prince Edward Island",
+      "votes": 97241,
+      "leader": "Liberal Party of Canada ahead",
+      "color": "#d71920",
+      "amount": 0.8100185677813287,
+      "summary": "Liberal Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 56011,
+          "percent": 57.60018922059625,
+          "color": "#d71920"
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 35846,
+          "percent": 36.86305159346366,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 2367,
+          "percent": 2.4341584311144477,
+          "color": "#e87722"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 2170,
+          "percent": 2.231568988389671,
+          "color": "#2f6b34"
+        },
+        {
+          "name": "People's Party of Canada",
+          "votes": 443,
+          "percent": 0.45556915292931993,
+          "color": "#6b4c9a"
+        },
+        {
+          "name": "Independent",
+          "votes": 404,
+          "percent": 0.4154626135066484,
+          "color": "#3f4f3a"
+        }
+      ]
+    },
+    {
+      "slug": "nova-scotia",
+      "name": "Nova Scotia",
+      "votes": 578543,
+      "leader": "Liberal Party of Canada ahead",
+      "color": "#d71920",
+      "amount": 0.8360431949066357,
+      "summary": "Liberal Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 332354,
+          "percent": 57.4467239254472,
+          "color": "#d71920"
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 204051,
+          "percent": 35.269807084348095,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 29413,
+          "percent": 5.083978200410341,
+          "color": "#e87722"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 5448,
+          "percent": 0.9416758996306238,
+          "color": "#2f6b34"
+        },
+        {
+          "name": "People's Party of Canada",
+          "votes": 5130,
+          "percent": 0.8867102358856646,
+          "color": "#6b4c9a"
+        },
+        {
+          "name": "Independent",
+          "votes": 1573,
+          "percent": 0.27188990273843083,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Libertarian Party of Canada",
+          "votes": 320,
+          "percent": 0.05531135974335529,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Canadian Future Party",
+          "votes": 169,
+          "percent": 0.029211311864459515,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Marxist-Leninist Party of Canada",
+          "votes": 85,
+          "percent": 0.01469207993182875,
+          "color": "#3f4f3a"
+        }
+      ]
+    },
+    {
+      "slug": "new-brunswick",
+      "name": "New Brunswick",
+      "votes": 467778,
+      "leader": "Liberal Party of Canada ahead",
+      "color": "#d71920",
+      "amount": 0.6902866045105103,
+      "summary": "Liberal Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 250659,
+          "percent": 53.58503392634968,
+          "color": "#d71920"
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 190429,
+          "percent": 40.709268071606616,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 13626,
+          "percent": 2.912920231391814,
+          "color": "#e87722"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 7982,
+          "percent": 1.7063649850997695,
+          "color": "#2f6b34"
+        },
+        {
+          "name": "People's Party of Canada",
+          "votes": 3771,
+          "percent": 0.806151636032477,
+          "color": "#6b4c9a"
+        },
+        {
+          "name": "Libertarian Party of Canada",
+          "votes": 776,
+          "percent": 0.16589065753412943,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Canadian Future Party",
+          "votes": 345,
+          "percent": 0.07375293408411683,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Communist Party of Canada",
+          "votes": 146,
+          "percent": 0.031211386597916106,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Centrist Party of Canada",
+          "votes": 44,
+          "percent": 0.009406171303481566,
+          "color": "#3f4f3a"
+        }
+      ]
+    },
+    {
+      "slug": "quebec",
+      "name": "Quebec",
+      "votes": 4470702,
+      "leader": "Liberal Party of Canada ahead",
+      "color": "#d71920",
+      "amount": 0.8007272847580567,
+      "summary": "Liberal Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 1904206,
+          "percent": 42.59299769924276,
+          "color": "#d71920"
+        },
+        {
+          "name": "Bloc Québécois",
+          "votes": 1236349,
+          "percent": 27.654471266481192,
+          "color": "#3d8eb9"
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 1040992,
+          "percent": 23.284754832686232,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 200900,
+          "percent": 4.493701436597653,
+          "color": "#e87722"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 40795,
+          "percent": 0.9124965162070744,
+          "color": "#2f6b34"
+        },
+        {
+          "name": "People's Party of Canada",
+          "votes": 35082,
+          "percent": 0.7847089785899396,
+          "color": "#6b4c9a"
+        },
+        {
+          "name": "Parti Rhinocéros Party",
+          "votes": 4998,
+          "percent": 0.11179452354462453,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Independent",
+          "votes": 3687,
+          "percent": 0.08247026976971401,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Marxist-Leninist Party of Canada",
+          "votes": 2385,
+          "percent": 0.053347326661450485,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Communist Party of Canada",
+          "votes": 572,
+          "percent": 0.01279441125800825,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "No Affiliation",
+          "votes": 495,
+          "percent": 0.011072086665584062,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Christian Heritage Party of Canada",
+          "votes": 181,
+          "percent": 0.0040485811847893235,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Centrist Party of Canada",
+          "votes": 60,
+          "percent": 0.0013420711109798863,
+          "color": "#3f4f3a"
+        }
+      ]
+    },
+    {
+      "slug": "ontario",
+      "name": "Ontario",
+      "votes": 7588695,
+      "leader": "Liberal Party of Canada ahead",
+      "color": "#d71920",
+      "amount": 0.558753912184787,
+      "summary": "Liberal Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 3730652,
+          "percent": 49.160652786809855,
+          "color": "#d71920"
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 3324929,
+          "percent": 43.81423947068633,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 367819,
+          "percent": 4.846933497788487,
+          "color": "#e87722"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 85907,
+          "percent": 1.13203917142539,
+          "color": "#2f6b34"
+        },
+        {
+          "name": "People's Party of Canada",
+          "votes": 51580,
+          "percent": 0.6796952572214326,
+          "color": "#6b4c9a"
+        },
+        {
+          "name": "Independent",
+          "votes": 7740,
+          "percent": 0.1019938210720025,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Christian Heritage Party of Canada",
+          "votes": 5193,
+          "percent": 0.0684307380913319,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Centrist Party of Canada",
+          "votes": 3103,
+          "percent": 0.04088977090263873,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "United Party of Canada (UP)",
+          "votes": 2498,
+          "percent": 0.03291738566380649,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Libertarian Party of Canada",
+          "votes": 2484,
+          "percent": 0.03273290071613103,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Marxist-Leninist Party of Canada",
+          "votes": 1898,
+          "percent": 0.025010887906286916,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Communist Party of Canada",
+          "votes": 1707,
+          "percent": 0.022493986120143188,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Canadian Future Party",
+          "votes": 872,
+          "percent": 0.011490776740928446,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Parti Rhinocéros Party",
+          "votes": 839,
+          "percent": 0.01105591936426487,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Animal Protection Party of Canada",
+          "votes": 723,
+          "percent": 0.009527329797811086,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "No Affiliation",
+          "votes": 618,
+          "percent": 0.00814369269024516,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Marijuana Party",
+          "votes": 133,
+          "percent": 0.0017526070029168389,
+          "color": "#3f4f3a"
+        }
+      ]
+    },
+    {
+      "slug": "manitoba",
+      "name": "Manitoba",
+      "votes": 641037,
+      "leader": "Conservative Party of Canada ahead",
+      "color": "#1d4e89",
+      "amount": 0.5723387449161372,
+      "summary": "Conservative Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 297510,
+          "percent": 46.4107376017297,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 261113,
+          "percent": 40.73290621290191,
+          "color": "#d71920"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 70685,
+          "percent": 11.026664607503156,
+          "color": "#e87722"
+        },
+        {
+          "name": "People's Party of Canada",
+          "votes": 6008,
+          "percent": 0.9372313922597292,
+          "color": "#6b4c9a"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 4579,
+          "percent": 0.7143113424030126,
+          "color": "#2f6b34"
+        },
+        {
+          "name": "Communist Party of Canada",
+          "votes": 428,
+          "percent": 0.06676681689200467,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "United Party of Canada (UP)",
+          "votes": 404,
+          "percent": 0.06302288323450908,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Animal Protection Party of Canada",
+          "votes": 213,
+          "percent": 0.03322741121027335,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Independent",
+          "votes": 97,
+          "percent": 0.01513173186571134,
+          "color": "#3f4f3a"
+        }
+      ]
+    },
+    {
+      "slug": "saskatchewan",
+      "name": "Saskatchewan",
+      "votes": 561519,
+      "leader": "Conservative Party of Canada ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "Conservative Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 362495,
+          "percent": 64.55614146627273,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 149397,
+          "percent": 26.605867299236536,
+          "color": "#d71920"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 42378,
+          "percent": 7.547028684692771,
+          "color": "#e87722"
+        },
+        {
+          "name": "People's Party of Canada",
+          "votes": 3003,
+          "percent": 0.5347993567448297,
+          "color": "#6b4c9a"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 2869,
+          "percent": 0.5109355159843211,
+          "color": "#2f6b34"
+        },
+        {
+          "name": "Independent",
+          "votes": 583,
+          "percent": 0.10382551614460063,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Canadian Future Party",
+          "votes": 568,
+          "percent": 0.10115419068633474,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Libertarian Party of Canada",
+          "votes": 226,
+          "percent": 0.040247970237872625,
+          "color": "#3f4f3a"
+        }
+      ]
+    },
+    {
+      "slug": "alberta",
+      "name": "Alberta",
+      "votes": 2267230,
+      "leader": "Conservative Party of Canada ahead",
+      "color": "#1d4e89",
+      "amount": 1,
+      "summary": "Conservative Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 1442094,
+          "percent": 63.60598615932217,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 631929,
+          "percent": 27.87229350352633,
+          "color": "#d71920"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 142198,
+          "percent": 6.271882429219797,
+          "color": "#e87722"
+        },
+        {
+          "name": "People's Party of Canada",
+          "votes": 19704,
+          "percent": 0.8690781261715839,
+          "color": "#6b4c9a"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 8944,
+          "percent": 0.3944901928785346,
+          "color": "#2f6b34"
+        },
+        {
+          "name": "Independent",
+          "votes": 7830,
+          "percent": 0.3453553455097189,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "No Affiliation",
+          "votes": 4096,
+          "percent": 0.18066098278516074,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Christian Heritage Party of Canada",
+          "votes": 3604,
+          "percent": 0.15896049364202133,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "United Party of Canada (UP)",
+          "votes": 3030,
+          "percent": 0.13364325630835866,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Canadian Future Party",
+          "votes": 1079,
+          "percent": 0.047591113385055776,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Communist Party of Canada",
+          "votes": 865,
+          "percent": 0.03815228274149513,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Libertarian Party of Canada",
+          "votes": 623,
+          "percent": 0.02747846491092655,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Parti Rhinocéros Party",
+          "votes": 616,
+          "percent": 0.027169718114174565,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Marxist-Leninist Party of Canada",
+          "votes": 511,
+          "percent": 0.02253851616289481,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Centrist Party of Canada",
+          "votes": 107,
+          "percent": 0.004719415321780322,
+          "color": "#3f4f3a"
+        }
+      ]
+    },
+    {
+      "slug": "british-columbia",
+      "name": "British Columbia",
+      "votes": 2644069,
+      "leader": "Liberal Party of Canada ahead",
+      "color": "#d71920",
+      "amount": 0.4648212768306467,
+      "summary": "Liberal Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 1105033,
+          "percent": 41.792895722464124,
+          "color": "#d71920"
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 1088655,
+          "percent": 41.17347164540713,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 343670,
+          "percent": 12.997769725374035,
+          "color": "#e87722"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 79255,
+          "percent": 2.997463379359616,
+          "color": "#2f6b34"
+        },
+        {
+          "name": "Independent",
+          "votes": 11738,
+          "percent": 0.44393697743893973,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "People's Party of Canada",
+          "votes": 11719,
+          "percent": 0.4432183880224003,
+          "color": "#6b4c9a"
+        },
+        {
+          "name": "Libertarian Party of Canada",
+          "votes": 1132,
+          "percent": 0.04281280102750722,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Christian Heritage Party of Canada",
+          "votes": 1087,
+          "percent": 0.04111087872517699,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Communist Party of Canada",
+          "votes": 869,
+          "percent": 0.03286601068277719,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Parti Rhinocéros Party",
+          "votes": 380,
+          "percent": 0.014371788330788645,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Animal Protection Party of Canada",
+          "votes": 195,
+          "percent": 0.007374996643431015,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "United Party of Canada (UP)",
+          "votes": 129,
+          "percent": 0.0048788439333466715,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Marxist-Leninist Party of Canada",
+          "votes": 117,
+          "percent": 0.004424997986058609,
+          "color": "#3f4f3a"
+        },
+        {
+          "name": "Canadian Future Party",
+          "votes": 90,
+          "percent": 0.0034038446046604685,
+          "color": "#3f4f3a"
+        }
+      ]
+    },
+    {
+      "slug": "yukon",
+      "name": "Yukon",
+      "votes": 22636,
+      "leader": "Liberal Party of Canada ahead",
+      "color": "#d71920",
+      "amount": 0.7239611957698393,
+      "summary": "Liberal Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 12009,
+          "percent": 53.05265948047358,
+          "color": "#d71920"
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 8719,
+          "percent": 38.51828945043294,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 1434,
+          "percent": 6.335041526771515,
+          "color": "#e87722"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 474,
+          "percent": 2.094009542321965,
+          "color": "#2f6b34"
+        }
+      ]
+    },
+    {
+      "slug": "northwest-territories",
+      "name": "Northwest Territories",
+      "votes": 16549,
+      "leader": "Liberal Party of Canada ahead",
+      "color": "#d71920",
+      "amount": 0.8274138904573687,
+      "summary": "Liberal Party of Canada has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 8855,
+          "percent": 53.507764819626566,
+          "color": "#d71920"
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 5513,
+          "percent": 33.31319112937338,
+          "color": "#1d4e89"
+        },
+        {
+          "name": "New Democratic Party",
+          "votes": 2011,
+          "percent": 12.151791649042238,
+          "color": "#e87722"
+        },
+        {
+          "name": "Green Party of Canada",
+          "votes": 170,
+          "percent": 1.0272524019578222,
+          "color": "#2f6b34"
+        }
+      ]
+    },
+    {
+      "slug": "nunavut",
+      "name": "Nunavut",
+      "votes": 7657,
+      "leader": "New Democratic Party ahead",
+      "color": "#e87722",
+      "amount": 0.4643708377146863,
+      "summary": "New Democratic Party has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result.",
+      "rows": [
+        {
+          "name": "New Democratic Party",
+          "votes": 2853,
+          "percent": 37.260023507901266,
+          "color": "#e87722"
+        },
+        {
+          "name": "Liberal Party of Canada",
+          "votes": 2812,
+          "percent": 36.72456575682382,
+          "color": "#d71920"
+        },
+        {
+          "name": "Conservative Party of Canada",
+          "votes": 1992,
+          "percent": 26.015410735274912,
+          "color": "#1d4e89"
+        }
+      ]
+    }
+  ],
+  "card": "House of Commons on 28 April 2025. Elections Canada's table is the official count. The map is valid votes, by province and territory."
+}

@@ -368,6 +368,7 @@ body.theme-cz { --bar: #11457e; --bar-stripe: #d7141a; --bar-line: #fff; --bar-h
 body.theme-es { --bar: #c60b1e; --bar-stripe: #ffc400; --bar-line: #c60b1e; --bar-hover: #ffc400; --bar-hover-ink: #1c1915; }
 body.theme-fr { --bar: #002395; --bar-stripe: #ed2939; --bar-line: #fff; --bar-hover: #fff; --bar-hover-ink: #002395; }
 body.theme-it { --bar: #009246; --bar-stripe: #ce2b37; --bar-line: #fff; --bar-hover: #fff; --bar-hover-ink: #009246; }
+body.theme-ca { --bar: #d80621; --bar-stripe: #fff; --bar-line: #d80621; --bar-hover: #fff; --bar-hover-ink: #9f1d14; }
 .water-chem[data-picked="true"] { background: var(--chip, #e4ddd0); }
 @media (max-width: 800px) {
   h1 { font-size: 34px; }

@@ -4,11 +4,13 @@ A place is colored only from those reported votes. This module does not keep
 a polling place, an address, a phone number, an email, or an identity number.
 """
 import csv
+import html
 import io
 import re
 import zipfile
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+from html.parser import HTMLParser
 
 import openpyxl
 
@@ -32,6 +34,9 @@ FR_PAGE = (
 )
 IT_URL = "https://documenti.camera.it/leg19/risultatiElettorali2022/UGE/VotiListe/ItaliaVotiListeCIRC.csv"
 IT_PAGE = "https://documenti.camera.it/leg19/risultatiElettorali2022/UGE/VotiListe/"
+CA_URL = "https://www.elections.ca/res/rep/off/ovrGE45/62/table8E.html"
+CA_PAGE = "https://www.elections.ca/res/rep/off/ovrGE45/home.html"
+CA_DATE = "https://www.elections.ca/content.aspx?section=ele&dir=pas/45ge&document=index&lang=e"
 
 PL_NAMES = {
     "dolnośląskie": "Lower Silesian Voivodeship",
@@ -155,6 +160,30 @@ IT_COLORS = {
     "M5S": "#e6a817",
     "AZ-IV": "#6b8cae",
 }
+CA_PLACES = [
+    ("N.L.", "Newfoundland and Labrador"),
+    ("P.E.I.", "Prince Edward Island"),
+    ("N.S.", "Nova Scotia"),
+    ("N.B.", "New Brunswick"),
+    ("Que.", "Quebec"),
+    ("Ont.", "Ontario"),
+    ("Man.", "Manitoba"),
+    ("Sask.", "Saskatchewan"),
+    ("Alta.", "Alberta"),
+    ("B.C.", "British Columbia"),
+    ("Y.T.", "Yukon"),
+    ("N.W.T.", "Northwest Territories"),
+    ("Nun.", "Nunavut"),
+]
+CA_COLORS = {
+    "Liberal Party of Canada": "#d71920",
+    "Conservative Party of Canada": "#1d4e89",
+    "New Democratic Party": "#e87722",
+    "Bloc Québécois": "#3d8eb9",
+    "Green Party of Canada": "#2f6b34",
+    "People's Party of Canada": "#6b4c9a",
+}
+CA_HEADER = ["Political affiliation"] + [abbr for abbr, _name in CA_PLACES] + ["Total"]
 IT_AREAS = [
     ("PIEMONTE", "nord ovest"),
     ("VALLE", "nord ovest"),
@@ -722,12 +751,143 @@ def build_italy():
     )
 
 
+class CanadaCells(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.rows = []
+        self.row = None
+        self.cell = None
+        self.capture = False
+        self.in_table = False
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "table":
+            self.in_table = True
+        if not self.in_table:
+            return
+        if tag == "tr":
+            self.row = []
+        elif tag in ("td", "th") and self.row is not None:
+            self.capture = True
+            self.cell = []
+
+    def handle_endtag(self, tag):
+        if tag in ("td", "th") and self.capture:
+            self.row.append(" ".join("".join(self.cell).split()))
+            self.capture = False
+        elif tag == "tr" and self.row is not None:
+            if any(self.row):
+                self.rows.append(self.row)
+            self.row = None
+        elif tag == "table":
+            self.in_table = False
+
+    def handle_data(self, data):
+        if self.capture:
+            self.cell.append(data)
+
+
+def ca_votes(value):
+    text = str(value).strip().replace(",", "").replace("\u00a0", "")
+    if not text:
+        raise RuntimeError("Canada table has an empty vote cell")
+    return whole(text)
+
+
+def canada_date():
+    text = html.unescape(b.fetch(CA_DATE).decode("iso-8859-1"))
+    if "45th General Election" not in text or "April 28, 2025" not in text:
+        raise RuntimeError("Elections Canada does not state that the 45th general election was 28 April 2025")
+    return "28 April 2025"
+
+
+def canada_parties():
+    page = b.fetch(CA_URL).decode("utf-8-sig")
+    folded = re.sub(r"\s+", " ", page)
+    if "forty-fifth general election 2025" not in folded.lower():
+        raise RuntimeError("Canada table is not the forty-fifth general election of 2025")
+    if "Number of valid votes by political affiliation" not in folded:
+        raise RuntimeError("Canada table is not valid votes by political affiliation")
+    parser = CanadaCells()
+    parser.feed(page)
+    parser.close()
+    rows = [row for row in parser.rows if row and row[0]]
+    if not rows or rows[0] != CA_HEADER:
+        raise RuntimeError("Canada table columns changed")
+    if len(rows[-1]) != len(CA_HEADER) or rows[-1][0] != "Totals":
+        raise RuntimeError("Canada table has no totals row")
+    totals = [ca_votes(cell) for cell in rows[-1][1:]]
+    parties = {}
+    for row in rows[1:-1]:
+        if len(row) != len(CA_HEADER):
+            raise RuntimeError("Canada row has the wrong number of cells: %s" % row[0])
+        name = row[0]
+        if name in parties or name == "Totals":
+            raise RuntimeError("duplicate affiliation %s" % name)
+        numbers = [ca_votes(cell) for cell in row[1:]]
+        if sum(numbers[:-1]) != numbers[-1]:
+            raise RuntimeError("%s province votes do not add up to its total" % name)
+        parties[name] = numbers
+    for index, (abbr, _name) in enumerate(CA_PLACES):
+        got = sum(numbers[index] for numbers in parties.values())
+        if got != totals[index]:
+            raise RuntimeError("province column %s does not add up" % abbr)
+    if sum(totals[:-1]) != totals[-1]:
+        raise RuntimeError("Canada totals row does not add up")
+    return parties
+
+
+def ca_color(name):
+    return CA_COLORS.get(name, AHEAD)
+
+
+def build_canada():
+    shapes = b.shapes_of("CAN")
+    require_labels(shapes, {b.norm(name) for _abbr, name in CA_PLACES})
+    pretty = canada_date()
+    parties = canada_parties()
+    summary = "%(short)s has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result."
+    tie = "Valid votes are reported, and the top affiliations are tied. The map stays beige."
+    rows_by_key = {}
+    for index, (_abbr, name) in enumerate(CA_PLACES):
+        bucket = place_bucket(summary, tie)
+        add_parties(bucket, {party: numbers[index] for party, numbers in parties.items()}, ca_color)
+        rows_by_key[b.norm(name)] = bucket
+    publish(
+        {
+            "code": "ca",
+            "country": "Canada",
+            "flag": "can.svg",
+            "title": "Leaders.vote · Canada, %s" % pretty,
+            "description": "Canada's House of Commons vote by province and territory, copied from Elections Canada's official results.",
+            "map_label": "Map of Canadian provinces and territories",
+            "kicker": "Canada · House of Commons · %s" % pretty,
+            "source": CA_URL,
+            "footer": 'Vote totals are copied from Elections Canada\'s <a href="%s">table of valid votes by political affiliation</a> for the %s general election. The table is listed with the <a href="%s">official voting results</a>. A province or territory is colored only from those reported votes. This site does not declare a result. It does not ask for a home address, a phone number, or an email address.' % (CA_URL, pretty, CA_PAGE),
+            "list_title": "Provinces and territories",
+            "list_note": "Open a name for the valid votes reported there. The table already adds each candidate of one affiliation into a single number. Independent is every independent candidate added together. No Affiliation is a separate row. These numbers are not a count of seats.",
+            "place_note": "You are looking at one Canadian province or territory. The numbers are valid votes for the House of Commons, added by political affiliation. Independent is every independent candidate added together. These are not a count of seats.",
+            "card": "House of Commons on %s. Elections Canada's table is the official count. The map is valid votes, by province and territory." % pretty,
+            "intro": """    <p class="kicker">Canada · House of Commons · %s</p>
+    <h1>Canada's official count for the House of Commons.</h1>
+    <p class="deck">The House of Commons is the elected house of Parliament. This vote was held on %s. Elections Canada's table lists valid votes by political affiliation for each province and territory.</p>
+    <p class="deck">A mark means one affiliation has more valid votes than the others. Independent means every independent candidate added together, not one person. No Affiliation is its own row in the table. The table has no color code, so the color is only there to tell affiliations apart. The seat table in the same report is not used.</p>""" % (pretty, pretty),
+        },
+        shapes,
+        rows_by_key,
+        "Elections Canada table of valid votes by political affiliation for the House of Commons election on %s. The table is the official count. A province or territory is colored only from those votes. Independent is every independent candidate added together. This page does not declare a result." % pretty,
+        "Valid votes, added across the provinces and territories",
+        "Each affiliation's provincial totals added together. Affiliations under one percent are left off this table. Independent is every independent candidate added together. This is not a count of seats.",
+    )
+
+
 def build_all():
     build_poland()
     build_czechia()
     build_spain()
     build_france()
     build_italy()
+    build_canada()
 
 
 if __name__ == "__main__":

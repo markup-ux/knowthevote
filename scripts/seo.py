@@ -42,6 +42,7 @@ SKIP_DIRS = {"data", "scripts", "preview", ".git", ".github"}
 COUNTRIES = {
     "au": "Australia",
     "br": "Brazil",
+    "ca": "Canada",
     "ch": "Switzerland",
     "cy": "Cyprus",
     "cz": "Czechia",

@@ -1490,6 +1490,7 @@
       var side = vote.chamber === "senate" ? senateSide : voteSide;
       if (side === "Y" && code !== "Y") return;
       if (side === "N" && code !== "N") return;
+      if (side === "X" && code !== "X") return;
       var q = interpretedQuery();
       var about = textMatches(vote.question + " " + vote.desc + " " + vote.legis + " " + summaryBlob(vote.legis), q);
       if (q && !textMatches(member[1], q) && about) {
@@ -1679,8 +1680,8 @@
     var sideSwitch = el("div", "sheet-switch");
     sideSwitch.id = vote.chamber === "senate" ? "senate-side" : "vote-side";
     sideSwitch.setAttribute("role", "group");
-    sideSwitch.setAttribute("aria-label", "Yes or no");
-    [["all", "All"], ["Y", "Yes"], ["N", "No"]].forEach(function (choice) {
+    sideSwitch.setAttribute("aria-label", "Who voted");
+    [["all", "All"], ["Y", "Yes"], ["N", "No"], ["X", "Did not vote"]].forEach(function (choice) {
       var button = el("button", "", choice[1]);
       button.type = "button";
       button.setAttribute("aria-pressed", side === choice[0] ? "true" : "false");
@@ -1696,12 +1697,14 @@
       sideSwitch.appendChild(button);
     });
     box.appendChild(sideSwitch);
+    if (side === "X") box.appendChild(el("p", "sub", "These members were on this roll call and did not vote. A person who was not in office for this vote is not listed."));
     var groups = peopleOnVote(vote);
     var states = Object.keys(groups).sort(function (a, b) { return stateName(a).localeCompare(stateName(b)); });
     if (!states.length) {
       var empty = "No member matches this party, state, or search on the open roll call.";
       if (side === "Y") empty = "No member who voted yes matches this party, state, or search.";
       if (side === "N") empty = "No member who voted no matches this party, state, or search.";
+      if (side === "X") empty = "No member who did not vote matches this party, state, or search.";
       box.appendChild(el("p", "note", empty));
     }
     states.forEach(function (code) {

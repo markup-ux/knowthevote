@@ -18,6 +18,7 @@ OUT = os.path.join(ROOT, "search.json")
 COUNTRY = {
     "au": "Australia",
     "br": "Brazil",
+    "ca": "Canada",
     "ch": "Switzerland",
     "cy": "Cyprus",
     "cz": "Czechia",
@@ -34,6 +35,7 @@ COUNTRY = {
 PLACE = {
     "au": "State or territory",
     "br": "State",
+    "ca": "Province or territory",
     "ch": "Canton",
     "cy": "District",
     "cz": "Region",
@@ -61,7 +63,7 @@ PAGES = [
     ("Health", "Fast-food restaurants", "census.html#health", "restaurant brand neighborhood"),
     ("Neighborhoods", "Fast-food restaurants by neighborhood", "census.html#neighborhoods", "neighborhood restaurant"),
     ("Gallery", "Photographs", "gallery.html", "photo photograph picture unsplash"),
-    ("Play", "Questions from facts on this site", "play.html", "quiz questions"),
+    ("Trivia", "Questions from facts on this site", "play.html", "quiz questions trivia"),
     ("Search", "Find a name or a place", "search.html", ""),
 ]
 TITLE_RE = re.compile(r"<title>([^<]*)</title>")

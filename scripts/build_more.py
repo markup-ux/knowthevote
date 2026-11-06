@@ -1522,6 +1522,13 @@ def write_flags():
 <rect x="60" width="30" height="60" fill="#ce2b37"/>
 </svg>
 """,
+        "can.svg": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60">
+<rect width="120" height="60" fill="#fff"/>
+<rect width="30" height="60" fill="#ff0000"/>
+<rect x="90" width="30" height="60" fill="#ff0000"/>
+<path fill="#ff0000" d="M60 8 L63 16 L71 13 L67 21 L79 21 L69 27 L76 35 L66 33 L67 41 L62 35 L60 49 L58 35 L53 41 L54 33 L44 35 L51 27 L41 21 L53 21 L49 13 L57 16 Z"/>
+</svg>
+""",
     }
     folder = os.path.join(ROOT, "flags")
     for name, markup in flags.items():
@@ -1553,7 +1560,8 @@ def write_countries():
       <a href="cz/index.html"><img src="flags/cz.svg" alt=""><strong>Czechia</strong><span>%s</span></a>
       <a href="es/index.html"><img src="flags/es.svg" alt=""><strong>Spain</strong><span>%s</span></a>
       <a href="fr/index.html"><img src="flags/fr.svg" alt=""><strong>France</strong><span>%s</span></a>
-      <a href="it/index.html"><img src="flags/it.svg" alt=""><strong>Italy</strong><span>%s</span></a>""" % (
+      <a href="it/index.html"><img src="flags/it.svg" alt=""><strong>Italy</strong><span>%s</span></a>
+      <a href="ca/index.html"><img src="flags/can.svg" alt=""><strong>Canada</strong><span>%s</span></a>""" % (
         esc(country_card(
             "ch",
             "Two yes-or-no questions on 27 September 2026. The official file still marks the count provisional. The map is the neutrality question, by canton.",
@@ -1594,6 +1602,10 @@ def write_countries():
             "it",
             "Chamber of Deputies on 25 September 2022. The Chamber file is the published count. The map is five areas, from each list's circoscrizione figure. Valle d'Aosta is not in the file.",
         )),
+        esc(country_card(
+            "ca",
+            "House of Commons on 28 April 2025. Elections Canada's table is the official count. The map is valid votes, by province and territory.",
+        )),
     )
     nav = """
       <a href="index.html">United States</a>
@@ -1610,7 +1622,8 @@ def write_countries():
       <a href="cz/index.html">Czechia</a>
       <a href="es/index.html">Spain</a>
       <a href="fr/index.html">France</a>
-      <a href="it/index.html">Italy</a>"""
+      <a href="it/index.html">Italy</a>
+      <a href="ca/index.html">Canada</a>"""
     page = """<!DOCTYPE html>
 <html lang="en">
 <head>
