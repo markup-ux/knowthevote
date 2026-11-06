@@ -893,6 +893,7 @@
       var person = memberById(pinned);
       if (person) {
         var card = contactBlock(person);
+        card.classList.add("pinned-card");
         var index = memberIndex[person[0]];
         var code = readCast(vote, index, person[0]);
         var copy = card.querySelector(".person-copy");
@@ -1186,6 +1187,7 @@
       var person = memberById(pinned);
       if (person) {
         var card = contactBlock(person);
+        card.classList.add("pinned-card");
         var code = readCast(vote, memberIndex[person[0]], person[0]);
         var copy = card.querySelector(".person-copy");
         copy.insertBefore(el("p", "", "On this roll call: " + voteWord(code) + "."), copy.children[1] || null);
@@ -1202,6 +1204,18 @@
       }
     }
     appendWhoVoted(box, vote);
+  }
+
+  function showPersonCard(card) {
+    if (!card) return;
+    var root = document.documentElement;
+    var previous = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    var header = document.querySelector("header");
+    var bar = header ? header.getBoundingClientRect().height : 0;
+    var top = card.getBoundingClientRect().top + window.scrollY - bar - 12;
+    window.scrollTo(0, Math.max(0, top));
+    root.style.scrollBehavior = previous;
   }
 
   function chooseSenate(id, scroll) {
@@ -1490,14 +1504,12 @@
       pinned = button.getAttribute("data-person");
       if (event.target.closest("#open-senate")) {
         renderSenateDetail();
-        var senateCard = document.querySelector("#open-senate .person-card");
-        if (senateCard) senateCard.scrollIntoView({ behavior: "smooth", block: "start" });
+        showPersonCard(document.querySelector("#open-senate .pinned-card"));
         return;
       }
       renderDetail();
       renderSenators();
-      var card = document.querySelector("#open-vote .person-card");
-      if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+      showPersonCard(document.querySelector("#open-vote .pinned-card"));
     });
     document.getElementById("congress-check").addEventListener("click", function () { checkLive(true); });
     checkLive(false);
