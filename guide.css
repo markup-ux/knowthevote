@@ -905,6 +905,7 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #sex-hood-base::after {
   min-height: 2.8em;
   font-size: 14px;
   line-height: 1.4;
+  white-space: pre-line;
 }
 .life-aside { margin: 8px 0 0; font-size: 14px; }
 .rank { list-style: none; margin: 10px 0 0; padding: 0; }

@@ -338,7 +338,7 @@
     var top = rows[0];
     card.classList.remove("is-empty");
     text("aid-num", count(top.snap));
-    text("aid-unit", "SNAP households in " + top.neighborhood);
+    text("aid-unit", "SNAP households in " + top.neighborhood + ",\nNew York City, New York");
     document.getElementById("aid-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>";
     showSnap(year);
     var nation = aid[2023];
@@ -361,7 +361,7 @@
     var nation = home[2025];
     card.classList.remove("is-empty");
     text("home-num", count(top.people));
-    text("home-unit", "people in shelters in " + top.name);
+    text("home-unit", "people in shelters in " + top.name + ",\nNew York City, New York");
     list.innerHTML = "";
     var spoken = [];
     rows.forEach(function (row) {
@@ -374,13 +374,13 @@
       place.textContent = row.name;
       var meta = document.createElement("p");
       meta.className = "rank-meta";
-      meta.textContent = row.place + " · in shelters";
+      meta.textContent = row.place + ", New York City, New York · in shelters";
       body.appendChild(place);
       body.appendChild(meta);
       li.appendChild(num);
       li.appendChild(body);
       list.appendChild(li);
-      spoken.push(row.name + ", " + row.place + ", " + count(row.people) + " people in shelters");
+      spoken.push(row.name + ", " + row.place + ", New York City, New York, " + count(row.people) + " people in shelters");
     });
     list.setAttribute("aria-label", "Neighborhoods with the most people in New York City shelters on October 31, " + year + ". " + spoken.join(". ") + ".");
     document.getElementById("home-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>";
@@ -419,13 +419,13 @@
       place.textContent = row.neighborhood;
       var meta = document.createElement("p");
       meta.className = "rank-meta";
-      meta.textContent = row.place + " · " + rate(pct, 1) + " of households";
+      meta.textContent = row.place + ", New York City, New York · " + rate(pct, 1) + " of households";
       body.appendChild(place);
       body.appendChild(meta);
       li.appendChild(num);
       li.appendChild(body);
       list.appendChild(li);
-      spoken.push(row.neighborhood + ", " + row.place + ", " + row.tract + ", " + count(row.snap) + " households, " + rate(pct, 1) + ", margin " + count(row.moe));
+      spoken.push(row.neighborhood + ", " + row.place + ", New York City, New York, " + row.tract + ", " + count(row.snap) + " households, " + rate(pct, 1) + ", margin " + count(row.moe));
     });
     list.setAttribute("aria-label", "Neighborhoods with the most people on SNAP. The count is SNAP households in one census tract in that neighborhood, from the " + year + " five-year estimates. " + spoken.join(". ") + ".");
     var margins = rows.map(function (row) {
