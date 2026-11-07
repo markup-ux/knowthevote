@@ -545,7 +545,7 @@
       title.textContent = item.title;
       var track = document.createElement("span");
       track.className = "water-track";
-      var fills = ["#5eb8cc", "#5eb8cc", "#5eb8cc", "#1d8eab", "#1d8eab", "#1d8eab", "#14627a", "#14627a", "#14627a", "#0c3d4e", "#0c3d4e", "#0c3d4e"];
+      var fills = [3, 3, 3, 6, 6, 6, 9, 9, 9, 12, 12, 12].map(function (q) { return quarterFill(q); });
       for (var block = 0; block < 12; block++) {
         var bar = document.createElement("i");
         if (block < item.q) bar.style.background = fills[block];
@@ -737,11 +737,12 @@
   }
 
   function quarterFill(q) {
-    if (q <= 0) return "#c5e4ec";
-    if (q <= 3) return "#5eb8cc";
-    if (q <= 6) return "#1d8eab";
-    if (q <= 9) return "#14627a";
-    return "#0c3d4e";
+    var dark = document.documentElement.getAttribute("data-theme") === "dark";
+    if (q <= 0) return dark ? "#d5f4fb" : "#c5e4ec";
+    if (q <= 3) return dark ? "#7ed0e4" : "#5eb8cc";
+    if (q <= 6) return dark ? "#3aa8c4" : "#1d8eab";
+    if (q <= 9) return dark ? "#1d7f9c" : "#14627a";
+    return dark ? "#146078" : "#0c3d4e";
   }
 
   function dotRadius() {
@@ -779,12 +780,31 @@
     baseMap.jumpTo({ center: center, zoom: zoom });
   }
 
+  function mapStyle() {
+    return document.documentElement.getAttribute("data-theme") === "dark"
+      ? "https://tiles.openfreemap.org/styles/dark"
+      : "https://tiles.openfreemap.org/styles/liberty";
+  }
+
+  function followTheme(map, redraw) {
+    map.__style = mapStyle();
+    new MutationObserver(function () {
+      var next = mapStyle();
+      if (next === map.__style) return;
+      map.__style = next;
+      map.setStyle(next);
+      map.once("style.load", redraw);
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  }
+
   function drawMap() {
     if (!mapCtx) return;
     mapCtx.clearRect(0, 0, mapCssW, mapCssH);
     syncBase();
-    mapCtx.fillStyle = "rgba(244, 240, 230, 0.55)";
-    mapCtx.fillRect(0, 0, mapCssW, mapCssH);
+    if (document.documentElement.getAttribute("data-theme") !== "dark") {
+      mapCtx.fillStyle = "rgba(244, 240, 230, 0.55)";
+      mapCtx.fillRect(0, 0, mapCssW, mapCssH);
+    }
     if (!dots) return;
     var radius = dotRadius();
     for (var i = 0; i < dots.length; i++) {
@@ -857,7 +877,7 @@
   if (mapCanvas && window.maplibregl) {
     baseMap = new maplibregl.Map({
       container: "water-basemap",
-      style: "https://tiles.openfreemap.org/styles/liberty",
+      style: mapStyle(),
       center: [-97, 38.5],
       zoom: 3,
       interactive: false,
@@ -865,6 +885,10 @@
       fadeDuration: 0
     });
     baseMap.on("load", function () { syncBase(); });
+    followTheme(baseMap, function () {
+      drawMap();
+      if (water) render();
+    });
     mapCanvas.addEventListener("pointerdown", function (event) {
       var p = mapPos(event);
       mapDrag = { x: p[0], y: p[1], cx: mapView.cx, cy: mapView.cy, moved: false, id: event.pointerId };

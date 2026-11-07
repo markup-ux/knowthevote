@@ -1,8 +1,7 @@
 """Build the Group Chat file from saved campaign statements and candidate photos.
 
 A line is included only when a guide already stored it. Party and portrait come
-from the NBC candidate record when the name matches. Illinois campaign sentences
-copied on November 6, 2026 replace the shorter notes for those five members.
+from the NBC candidate record when the name matches.
 """
 import json
 import os
@@ -66,13 +65,6 @@ def walk_candidates(node, found, office=""):
 
 def main():
     found = load(os.path.join(ROOT, "photos", "found.json"))
-    said = load(os.path.join(ROOT, "illinois", "said.json"))
-    said_lines = {}
-    for person in said.get("people") or []:
-        lines = [line.get("text") for line in person.get("lines") or [] if line.get("text")]
-        if lines:
-            said_lines[key(person.get("name"))] = lines
-
     states = []
     preview_dir = os.path.join(ROOT, "preview", "states")
     codes = sorted(name[:-5] for name in os.listdir(preview_dir) if name.endswith(".json"))
@@ -107,9 +99,7 @@ def main():
             name = key(raw_name.split("|")[-1])
             if not name:
                 continue
-            lines = said_lines.get(name) if code == "il" else None
-            if not lines:
-                lines = [item.strip() for item in (info.get("issues") or []) if isinstance(item, str) and item.strip()]
+            lines = [item.strip() for item in (info.get("issues") or []) if isinstance(item, str) and item.strip()]
             if not lines:
                 continue
             meta = roster.get(name) or {}

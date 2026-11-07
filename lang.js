@@ -4,7 +4,7 @@
     var searchSrc = searchScript.getAttribute("src") || "";
     var searchBase = searchSrc.replace(/[^/]*$/, "");
     var searchTag = document.createElement("script");
-    searchTag.src = searchBase + "search.js?v=7";
+    searchTag.src = searchBase + "search.js?v=8";
     searchTag.setAttribute("data-site-search", "1");
     document.head.appendChild(searchTag);
     if (!document.querySelector("script[data-site-visits]")) {

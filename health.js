@@ -111,11 +111,41 @@
     draw();
   }
 
+  function mapStyle() {
+    return document.documentElement.getAttribute("data-theme") === "dark"
+      ? "https://tiles.openfreemap.org/styles/dark"
+      : "https://tiles.openfreemap.org/styles/liberty";
+  }
+
+  function followTheme(map, redraw) {
+    map.__style = mapStyle();
+    new MutationObserver(function () {
+      var next = mapStyle();
+      if (next === map.__style) return;
+      map.__style = next;
+      map.setStyle(next);
+      map.once("style.load", redraw);
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  }
+
+  function densityInk() {
+    if (document.documentElement.getAttribute("data-theme") === "dark") {
+      return ["#f4fbe4", "#c6e86a", "#8fbf3a", "#4f8f28", "#2d6a18"];
+    }
+    return INK;
+  }
+
+  function paperVeil(alpha) {
+    if (document.documentElement.getAttribute("data-theme") === "dark") return;
+    ctx.fillStyle = "rgba(244, 240, 230, " + alpha + ")";
+    ctx.fillRect(0, 0, cssW, cssH);
+  }
+
   var baseMap = null;
   if (window.maplibregl && document.getElementById("health-basemap")) {
     baseMap = new maplibregl.Map({
       container: "health-basemap",
-      style: "https://tiles.openfreemap.org/styles/liberty",
+      style: mapStyle(),
       center: [-97, 38.5],
       zoom: 3,
       interactive: false,
@@ -125,6 +155,11 @@
     baseMap.on("load", function () {
       baseMap.resize();
       syncBase();
+    });
+    followTheme(baseMap, function () {
+      baseMap.resize();
+      syncBase();
+      draw();
     });
   }
 
@@ -445,16 +480,14 @@
     if (brandFilter === null && studyIds && !dotMode()) drawStudyFoods();
     else if (dotMode()) drawDots();
     else {
-      ctx.fillStyle = "rgba(244, 240, 230, 0.45)";
-      ctx.fillRect(0, 0, cssW, cssH);
+      paperVeil(0.45);
       drawDensity();
     }
     if (showCenters) drawCenters();
   }
 
   function drawDots() {
-    ctx.fillStyle = "rgba(244, 240, 230, 0.5)";
-    ctx.fillRect(0, 0, cssW, cssH);
+    paperVeil(0.5);
     var size = markSize();
     var places = data.places;
     for (var i = 0; i < places.length; i++) {
@@ -473,8 +506,7 @@
   }
 
   function drawStudyFoods() {
-    ctx.fillStyle = "rgba(244, 240, 230, 0.5)";
-    ctx.fillRect(0, 0, cssW, cssH);
+    paperVeil(0.5);
     var places = data.places;
     for (var i = 0; i < places.length; i++) {
       var place = places[i];
@@ -534,12 +566,12 @@
         if (brandFilter !== null) {
           ctx.drawImage(sprite(brandFilter), col * cell, row * cell, cell - 1, cell - 1);
         } else {
-          ctx.fillStyle = INK[index];
+          ctx.fillStyle = densityInk()[index];
           ctx.fillRect(col * cell, row * cell, cell - 1, cell - 1);
         }
       }
     }
-    var key = "bins|" + (brandFilter === null ? "all" : brandFilter) + "|" + (showCenters ? "1" : "0") + "|" + hoodFilter + "|" + ranges.map(function (range) {
+    var key = "bins|" + (document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light") + "|" + (brandFilter === null ? "all" : brandFilter) + "|" + (showCenters ? "1" : "0") + "|" + hoodFilter + "|" + ranges.map(function (range) {
       return range[1] < 0 ? "-" : range[0] + ":" + range[1];
     }).join(",");
     paintLegend(key, function () {
@@ -553,7 +585,7 @@
         for (var s = 0; s < 5; s++) {
           if (ranges[s][1] < 0) continue;
           var label = ranges[s][0] === ranges[s][1] ? commas(ranges[s][0]) : commas(ranges[s][0]) + " to " + commas(ranges[s][1]);
-          addSwatch(INK[s], label + " in a cell");
+          addSwatch(densityInk()[s], label + " in a cell");
         }
       }
       if (showCenters) addFactorySwatch();

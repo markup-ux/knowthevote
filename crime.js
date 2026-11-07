@@ -1,5 +1,25 @@
 (function () {
   var CHIP = "#ebe4d6";
+  function mapStyle() {
+    return document.documentElement.getAttribute("data-theme") === "dark"
+      ? "https://tiles.openfreemap.org/styles/dark"
+      : "https://tiles.openfreemap.org/styles/liberty";
+  }
+
+  function followTheme(map, redraw) {
+    map.__style = mapStyle();
+    new MutationObserver(function () {
+      var next = mapStyle();
+      if (next === map.__style) return;
+      map.__style = next;
+      map.setStyle(next);
+      map.once("style.load", redraw);
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  }
+
+  function dotRing() {
+    return document.documentElement.getAttribute("data-theme") === "dark" ? "#f4f7fb" : "#1c1915";
+  }
   var INK = ["#e8eaf6", "#c5cae9", "#7986cb", "#3949ab", "#1a237e"];
   var SEX_INK = ["#fde7f0", "#f4b6d0", "#e48ab0", "#ad1457", "#6a0d3a"];
   var ARREST_INK = ["#feedde", "#fdbe85", "#fd8d3c", "#e6550d", "#a63603"];
@@ -1101,7 +1121,7 @@
       hoodCtx.fillStyle = picked.fill;
       hoodCtx.fill();
       hoodCtx.lineWidth = 2;
-      hoodCtx.strokeStyle = "#1c1915";
+      hoodCtx.strokeStyle = dotRing();
       hoodCtx.stroke();
     }
     var legend = document.getElementById("crime-hood-legend");
@@ -1244,7 +1264,7 @@
     if (window.maplibregl) {
       hoodBase = new maplibregl.Map({
         container: "crime-hood-base",
-        style: "https://tiles.openfreemap.org/styles/liberty",
+        style: mapStyle(),
         center: [-97, 38.5],
         zoom: 3,
         interactive: false,
@@ -1252,6 +1272,7 @@
         fadeDuration: 0
       });
       hoodBase.on("load", function () { drawHoods(); });
+      followTheme(hoodBase, function () { drawHoods(); });
     }
     hoodCanvas.addEventListener("pointerdown", function (event) {
       var p = hoodPos(event);
@@ -1416,7 +1437,7 @@
         ctx.fillStyle = picked.fill;
         ctx.fill();
         ctx.lineWidth = 2;
-        ctx.strokeStyle = "#1c1915";
+        ctx.strokeStyle = dotRing();
         ctx.stroke();
       }
       var legend = document.getElementById("sex-hood-legend");
@@ -1513,7 +1534,7 @@
     if (window.maplibregl) {
       base = new maplibregl.Map({
         container: "sex-hood-base",
-        style: "https://tiles.openfreemap.org/styles/liberty",
+        style: mapStyle(),
         center: [-97, 38.5],
         zoom: 3,
         interactive: false,
@@ -1521,6 +1542,7 @@
         fadeDuration: 0
       });
       base.on("load", function () { draw(); });
+      followTheme(base, function () { draw(); });
     }
     canvas.addEventListener("pointerdown", function (event) {
       var p = pos(event);
