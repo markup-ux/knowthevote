@@ -11,6 +11,7 @@ import html
 import json
 import os
 import re
+import subprocess
 import time
 import urllib.error
 import urllib.parse
@@ -94,6 +95,33 @@ def save(path, data):
     with open(temporary, "w", encoding="utf-8") as handle:
         json.dump(data, handle, ensure_ascii=False, separators=(",", ":"))
     os.replace(temporary, path)
+
+
+def publish_chat():
+    """Push a finished batch when this copy is running on GitHub."""
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        return
+    try:
+        subprocess.run(
+            ["git", "add", "--", "chat/posts.json", "chat/accounts.json", "chat/feeds.json"],
+            cwd=ROOT,
+            check=True,
+        )
+        quiet = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT)
+        if quiet.returncode == 0:
+            return
+        subprocess.run(
+            ["git", "commit", "-m", "Update Group Chat with the latest official social posts."],
+            cwd=ROOT,
+            check=True,
+        )
+        pushed = subprocess.run(["git", "push", "origin", "HEAD"], cwd=ROOT)
+        if pushed.returncode != 0:
+            subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=ROOT, check=True)
+            subprocess.run(["git", "push", "origin", "HEAD"], cwd=ROOT, check=True)
+        print("published", flush=True)
+    except Exception as error:
+        print("publish failed", error, flush=True)
 
 
 def read_url(url, timeout, ua=None, limit=500000):
@@ -313,6 +341,7 @@ def x_posts(handle):
             "text": body[:700],
             "at": x_time(tweet.get("created_at") or ""),
             "url": "https://x.com" + permalink,
+            "context": x_context(tweet),
         })
         if len(posts) == 3:
             break
@@ -348,7 +377,14 @@ def mastodon_posts(handle):
         url = row.get("url") or ""
         if not usable(body) or not url.startswith("https://"):
             continue
-        posts.append({"net": "mastodon", "handle": handle, "text": body[:700], "at": row.get("created_at") or "", "url": url})
+        posts.append({
+            "net": "mastodon",
+            "handle": handle,
+            "text": body[:700],
+            "at": row.get("created_at") or "",
+            "url": url,
+            "context": mastodon_context(host, row),
+        })
         if len(posts) == 3:
             break
     return posts
@@ -382,6 +418,7 @@ def bluesky_posts(handle):
             "text": body[:700],
             "at": post.get("indexedAt") or record.get("createdAt") or "",
             "url": "https://bsky.app/profile/" + handle + "/post/" + rkey,
+            "context": bluesky_context(item),
         })
         if len(posts) == 3:
             break
@@ -415,7 +452,14 @@ def truth_posts(handle):
         url = row.get("url") or ""
         if not usable(body) or not url.startswith("https://"):
             continue
-        posts.append({"net": "truth", "handle": handle, "text": body[:700], "at": row.get("created_at") or "", "url": url})
+        posts.append({
+            "net": "truth",
+            "handle": handle,
+            "text": body[:700],
+            "at": row.get("created_at") or "",
+            "url": url,
+            "context": mastodon_context("truthsocial.com", row),
+        })
         if len(posts) == 3:
             break
     return posts
@@ -438,13 +482,103 @@ def fetch_feed(account):
     return []
 
 
+def pack_context(name, handle, text, url, profile, net):
+    handle = (handle or "").strip().lstrip("@")
+    if not handle and not text:
+        return None
+    return {
+        "net": net,
+        "name": (name or handle or "").strip(),
+        "handle": handle,
+        "text": (text or "")[:280],
+        "url": url if isinstance(url, str) and url.startswith("https://") else "",
+        "profile": profile if isinstance(profile, str) and profile.startswith("https://") else "",
+    }
+
+
+def x_context(tweet):
+    quoted = tweet.get("quoted_status") or {}
+    user = quoted.get("user") or {}
+    handle = user.get("screen_name") or tweet.get("in_reply_to_screen_name") or ""
+    if not handle:
+        return None
+    permalink = quoted.get("permalink") or ""
+    return pack_context(
+        user.get("name") or handle,
+        handle,
+        clean_post(quoted.get("full_text") or ""),
+        "https://x.com" + permalink if isinstance(permalink, str) and permalink.startswith("/") else "",
+        "https://x.com/" + handle,
+        "x",
+    )
+
+
+def mastodon_context(host, row):
+    parent_id = row.get("in_reply_to_id")
+    if not parent_id:
+        return None
+    try:
+        status, raw, _headers = read_url("https://" + host + "/api/v1/statuses/" + urllib.parse.quote(str(parent_id)), 15)
+        if status != 200 or not raw:
+            return None
+        parent = json.loads(raw.decode("utf-8"))
+    except Exception:
+        return None
+    account = parent.get("account") or {}
+    handle = account.get("acct") or account.get("username") or ""
+    return pack_context(
+        account.get("display_name") or handle,
+        handle,
+        clean_post(parent.get("content") or ""),
+        parent.get("url") or "",
+        account.get("url") or "",
+        "mastodon" if host != "truthsocial.com" else "truth",
+    )
+
+
+def bluesky_context(item):
+    parent = ((item.get("reply") or {}).get("parent") or {})
+    author = parent.get("author") or {}
+    record = parent.get("record") or {}
+    handle = author.get("handle") or ""
+    text = clean_post(record.get("text") or "")
+    uri = parent.get("uri") or ""
+    if not handle:
+        embed = ((item.get("post") or {}).get("embed") or {})
+        quoted = embed.get("record") or {}
+        if quoted.get("record"):
+            quoted = quoted.get("record") or {}
+        author = quoted.get("author") or {}
+        value = quoted.get("value") or {}
+        handle = author.get("handle") or ""
+        text = clean_post(value.get("text") or "")
+        uri = quoted.get("uri") or ""
+    if not handle:
+        return None
+    rkey = uri.rsplit("/", 1)[-1] if "/" in uri else ""
+    url = "https://bsky.app/profile/" + handle + "/post/" + rkey if rkey else ""
+    return pack_context(author.get("displayName") or handle, handle, text, url, "https://bsky.app/profile/" + handle, "bluesky")
+
+
+def missing_context(account, row):
+    if row.get("context"):
+        return False
+    if account["net"] != "x":
+        return True
+    for post in row.get("posts") or []:
+        if str(post.get("at") or "")[:10] >= "2026-11-03":
+            return True
+    return False
+
+
 def store_feed(feeds, account, found):
     feed_key = account["net"] + ":" + account["handle"].lower()
-    previous = (feeds.get(feed_key) or {}).get("posts") or []
+    previous = feeds.get(feed_key) or {}
     feeds[feed_key] = {
         "at": now(),
         "ok": found is not None,
-        "posts": previous if found is None else found,
+        "posts": (previous.get("posts") or []) if found is None else found,
+        "context": True if found is not None else bool(previous.get("context")),
     }
 
 
@@ -604,8 +738,8 @@ def main():
     refresh = []
     for feed_key, account in needed.items():
         row = feeds.get(feed_key) or {}
-        hours = 30 if account["net"] == "x" else 10
-        if row.get("ok") and fresh(row.get("at"), hours):
+        hours = 6 if account["net"] == "x" else 10
+        if row.get("ok") and fresh(row.get("at"), hours) and not missing_context(account, row):
             continue
         refresh.append(account)
     fast = [account for account in refresh if account["net"] != "x"]
@@ -620,6 +754,10 @@ def main():
             done += 1
             if done % 100 == 0 or done == len(fast):
                 print("feeds", done, "/", len(fast), flush=True)
+    if fast:
+        save(FEEDS_PATH, feeds)
+        write_posts(roster, sites, congress, pages, feeds)
+        publish_chat()
     index = 0
     missed = 0
     raw_budget = os.environ.get("CHAT_POSTS_BUDGET_MINUTES") or ""
@@ -637,6 +775,7 @@ def main():
         except RateLimit as limited:
             save(FEEDS_PATH, feeds)
             write_posts(roster, sites, congress, pages, feeds)
+            publish_chat()
             if not x_pause(limited.reset):
                 break
             continue
@@ -653,12 +792,16 @@ def main():
         except (TypeError, ValueError):
             remaining = None
         if remaining is not None and remaining <= 1:
+            save(FEEDS_PATH, feeds)
+            write_posts(roster, sites, congress, pages, feeds)
+            publish_chat()
             if not x_pause(x_posts.reset):
                 break
         else:
             time.sleep(1)
     save(FEEDS_PATH, feeds)
     account_count, people_count, post_count = write_posts(roster, sites, congress, pages, feeds)
+    publish_chat()
     ok = sum(1 for row in feeds.values() if isinstance(row, dict) and row.get("ok"))
     print("accounts", account_count, "people with accounts", people_count, "posts", post_count, "feeds ok", ok, flush=True)
 

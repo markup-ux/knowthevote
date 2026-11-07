@@ -131,7 +131,7 @@
   }
 
   function darkNow() {
-    return document.documentElement.getAttribute("data-theme") === "dark";
+    return /dark$/.test(document.documentElement.getAttribute("data-theme") || "");
   }
 
   function hueOf(hex) {
@@ -216,7 +216,7 @@
     return "c" + n.toString(16);
   }
 
-  function recordBubble(kind, label, text, url) {
+  function recordBubble(kind, label, text, url, context) {
     var bubble = el("p", "bubble " + kind);
     bubble.id = messageId(url || text);
     if (url && (url.indexOf("https://") === 0 || url.indexOf("house.html#") === 0)) {
@@ -226,8 +226,49 @@
     } else if (label) {
       bubble.appendChild(el("span", "net", label));
     }
+    if (context && (context.text || context.profile || context.handle)) {
+      var quote = el("span", "context");
+      var who = el("a", "context-name", context.name || context.handle || "Profile");
+      if (context.profile) {
+        who.href = context.profile;
+        who.target = "_blank";
+        who.rel = "noopener";
+      }
+      quote.appendChild(who);
+      if (context.net && context.handle) {
+        var opener = el("button", "context-page", "Profile");
+        opener.type = "button";
+        opener.addEventListener("click", function () {
+          openProfile(context.net, context.handle, context.profile);
+        });
+        quote.appendChild(opener);
+      }
+      if (context.text) quote.appendChild(el("span", "context-text", context.text));
+      bubble.appendChild(quote);
+    }
     bubble.appendChild(document.createTextNode(text));
     return bubble;
+  }
+
+  function openProfile(net, handle, profile) {
+    var key = net + ":" + String(handle || "").toLowerCase();
+    var cluster = null;
+    Array.prototype.forEach.call(log.querySelectorAll(".cluster"), function (node) {
+      if (cluster) return;
+      var handles = (node.getAttribute("data-handles") || "").split(" ");
+      if (handles.indexOf(key) !== -1) cluster = node;
+    });
+    if (!cluster) {
+      if (profile) window.open(profile, "_blank", "noopener");
+      return;
+    }
+    var block = cluster.closest(".day-block");
+    if (block) showDay(block.getAttribute("data-day"));
+    cluster.hidden = false;
+    var card = cluster.querySelector(".card");
+    var button = cluster.querySelector(".name");
+    if (card && card.hidden && button) button.click();
+    cluster.scrollIntoView({ block: "center" });
   }
 
   function showDay(key) {
@@ -456,7 +497,7 @@
           postCount += 1;
           var stamp = posted(post.at);
           var label = (NET[post.net] || "Post") + (stamp ? " · " + stamp : "");
-          addItem(Object.assign({ at: post.at }, meta), recordBubble("", label, post.text, post.url));
+          addItem(Object.assign({ at: post.at }, meta), recordBubble("", label, post.text, post.url, post.context));
         });
         (records[ident] || []).forEach(function (row) {
           if (!row || !row.text || !sinceStart(row.at)) return;
@@ -503,6 +544,10 @@
       body.appendChild(who);
       if (card) body.appendChild(card);
       block.appendChild(body);
+      var handles = (item.accounts || []).map(function (account) {
+        return account && account.net && account.handle ? account.net + ":" + String(account.handle).toLowerCase() : "";
+      }).filter(Boolean);
+      if (handles.length) block.setAttribute("data-handles", handles.join(" "));
       parent.appendChild(block);
       return { who: who, body: body, messages: [], name: item.name, kind: item.kind };
     }
@@ -653,7 +698,8 @@
   }
 
   function readJson(url) {
-    return fetch(url, { cache: "no-store" }).then(function (response) {
+    var fresh = url + (url.indexOf("?") === -1 ? "?" : "&") + "t=" + Math.floor(Date.now() / 60000);
+    return fetch(fresh, { cache: "reload" }).then(function (response) {
       if (!response.ok) throw new Error(String(response.status));
       return response.json();
     });
