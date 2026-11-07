@@ -854,11 +854,26 @@
       var postsStamp = files[1].updated || "";
       var officialStamp = files[2].updated || "";
       if (!seen.ready || postsStamp !== seen.posts || officialStamp !== seen.official || rolled) {
+        var place = null;
+        if (seen.ready && window.scrollY > 280) {
+          var bubbles = log.querySelectorAll(".bubble");
+          for (var i = 0; i < bubbles.length; i++) {
+            var rect = bubbles[i].getBoundingClientRect();
+            if (rect.bottom > 90) {
+              place = { id: bubbles[i].id, top: rect.top };
+              break;
+            }
+          }
+        }
         seen.ready = true;
         seen.posts = postsStamp;
         seen.official = officialStamp;
         try {
           render(files[0], files[1], files[2], files[3]);
+          if (place && place.id) {
+            var kept = document.getElementById(place.id);
+            if (kept) window.scrollBy(0, kept.getBoundingClientRect().top - place.top);
+          }
         } catch (error) {
           typing.hidden = true;
           status.textContent = error && error.message ? error.message : "The Group Chat file did not load.";

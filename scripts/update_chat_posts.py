@@ -3,9 +3,12 @@
 Office accounts for sitting members of Congress come from the public
 congress-legislators social file. Every other account is a link on the
 campaign site already stored for that person. Posts are read from the public
-feeds those networks provide: X, Mastodon, and Bluesky. Facebook, Instagram,
-and YouTube are linked, because they do not publish a post feed this page can
-copy. A failed refresh keeps the previous posts for that account.
+feeds those networks provide: X, Mastodon, Bluesky, and Truth Social.
+Facebook, Instagram, and YouTube are linked, because they do not publish a
+post feed this page can copy. The live site runs this every ten minutes.
+X allows about 30 account reads every 15 minutes, so each run reads the
+leaders who posted recently first, then continues through the rest. A failed
+refresh keeps the previous posts for that account.
 """
 import html
 import json
@@ -280,22 +283,92 @@ def x_stop():
 x_stop.deadline = None
 
 
-def x_pause(reset):
+X_EACH_RUN = 30
+HOT_WINDOW = timedelta(hours=18)
+SINCE_DAY = "2026-11-03"
+
+
+def parsed(stamp):
+    if not stamp:
+        return None
     try:
-        reset_at = float(reset)
-    except (TypeError, ValueError):
-        reset_at = time.time() + 60
-    delay = reset_at - time.time() + 3
-    if delay < 5:
-        delay = 30
-    if delay > 20 * 60:
-        delay = 20 * 60
-    if x_stop.deadline and time.time() + delay > x_stop.deadline:
-        print("Stopping so this run can be published. The rest will be copied next time.", flush=True)
-        return False
-    print("X allows 30 reads at a time. Waiting", int(delay), "seconds.", flush=True)
-    time.sleep(delay)
-    return True
+        moment = datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if moment.tzinfo is None:
+        moment = moment.replace(tzinfo=timezone.utc)
+    return moment.astimezone(timezone.utc)
+
+
+def latest_post(row):
+    latest = ""
+    for post in row.get("posts") or []:
+        stamp = str(post.get("at") or "")
+        if stamp > latest:
+            latest = stamp
+    return latest
+
+
+def feed_due(account, row, moment):
+    """True when this account should be read on this run."""
+    if not row.get("ok") or not row.get("counts") or not row.get("views") or missing_context(account, row):
+        return True
+    checked = parsed(row.get("at") or "")
+    if checked is None:
+        return True
+    age = moment - checked
+    latest = parsed(latest_post(row))
+    hot = latest is not None and moment - latest <= HOT_WINDOW
+    if account["net"] != "x":
+        return age >= (timedelta(minutes=12) if hot else timedelta(hours=2))
+    if hot:
+        return age >= timedelta(minutes=12)
+    if latest is not None and latest.strftime("%Y-%m-%d") >= SINCE_DAY:
+        return age >= timedelta(minutes=45)
+    return age >= timedelta(hours=6)
+
+
+def choose_x(feeds, accounts, moment):
+    """Read recent voices first, and keep a few reads for everyone else.
+
+    Thirty reads is the whole X allowance for about 15 minutes. Twelve of
+    them follow leaders who posted in the last 18 hours, twelve follow
+    leaders who have posted since November 3, and six rotate through the
+    remaining accounts. Leftover reads continue down that same order.
+    """
+    groups = [[], [], []]
+    for account in accounts:
+        row = feeds.get("x:" + account["handle"].lower()) or {}
+        latest = parsed(latest_post(row))
+        checked = row.get("at") or ""
+        if latest and moment - latest <= HOT_WINDOW:
+            bucket = 0
+        elif latest and latest.strftime("%Y-%m-%d") >= SINCE_DAY:
+            bucket = 1
+        else:
+            bucket = 2
+        groups[bucket].append((checked, account))
+    for group in groups:
+        group.sort(key=lambda item: item[0])
+    chosen, seen = [], set()
+
+    def take(bucket, count):
+        for _checked, account in groups[bucket]:
+            if count <= 0 or len(chosen) >= X_EACH_RUN:
+                return
+            token = account["handle"].lower()
+            if token in seen:
+                continue
+            seen.add(token)
+            chosen.append(account)
+            count -= 1
+
+    take(0, 12)
+    take(1, 12)
+    take(2, 6)
+    for bucket in (0, 1, 2):
+        take(bucket, X_EACH_RUN)
+    return chosen
 
 
 def x_posts(handle):
@@ -656,6 +729,9 @@ def write_posts(roster, sites, congress, pages, feeds):
         people[person["id"]] = {"accounts": accounts, "posts": posts}
         post_count += len(posts)
         account_count += len(accounts)
+    previous = load(POSTS_PATH)
+    if previous.get("people") == people:
+        return account_count, len(people), post_count
     save(POSTS_PATH, {"updated": now(), "people": people})
     return account_count, len(people), post_count
 
@@ -790,16 +866,13 @@ def main():
             if account["net"] in ("x", "mastodon", "bluesky", "truth"):
                 feed_key = account["net"] + ":" + account["handle"].lower()
                 needed[feed_key] = account
-    refresh = []
+    moment = datetime.now(timezone.utc)
+    due = []
     for feed_key, account in needed.items():
-        row = feeds.get(feed_key) or {}
-        hours = 6 if account["net"] == "x" else 10
-        if row.get("ok") and fresh(row.get("at"), hours) and not missing_context(account, row) and row.get("counts") and row.get("views"):
-            continue
-        refresh.append(account)
-    fast = [account for account in refresh if account["net"] != "x"]
-    slow = [account for account in refresh if account["net"] == "x"]
-    slow.sort(key=lambda account: ((feeds.get("x:" + account["handle"].lower()) or {}).get("at") or ""))
+        if feed_due(account, feeds.get(feed_key) or {}, moment):
+            due.append(account)
+    fast = [account for account in due if account["net"] != "x"]
+    slow = choose_x(feeds, [account for account in due if account["net"] == "x"], moment)
     print("feeds to read", len(fast) + len(slow), "of", len(needed), "x", len(slow), flush=True)
     done = 0
     with ThreadPoolExecutor(max_workers=6) as pool:
@@ -827,33 +900,26 @@ def main():
         account = slow[index]
         try:
             found = fetch_feed(account)
-        except RateLimit as limited:
-            save(FEEDS_PATH, feeds)
-            write_posts(roster, sites, congress, pages, feeds)
-            publish_chat()
-            if not x_pause(limited.reset):
-                break
-            continue
+        except RateLimit:
+            print("X allows 30 reads at a time. Publishing what was copied and continuing next run.", flush=True)
+            break
         if found is None:
             missed += 1
         store_feed(feeds, account, found)
         index += 1
-        if index % 20 == 0 or index == len(slow):
+        if index % 10 == 0 or index == len(slow):
             save(FEEDS_PATH, feeds)
             counts = write_posts(roster, sites, congress, pages, feeds)
             print("x", index, "/", len(slow), "posts", counts[2], "missed", missed, flush=True)
+            publish_chat()
         try:
             remaining = int(x_posts.remaining)
         except (TypeError, ValueError):
             remaining = None
         if remaining is not None and remaining <= 1:
-            save(FEEDS_PATH, feeds)
-            write_posts(roster, sites, congress, pages, feeds)
-            publish_chat()
-            if not x_pause(x_posts.reset):
-                break
-        else:
-            time.sleep(1)
+            print("X allows 30 reads at a time. Publishing what was copied and continuing next run.", flush=True)
+            break
+        time.sleep(1)
     save(FEEDS_PATH, feeds)
     account_count, people_count, post_count = write_posts(roster, sites, congress, pages, feeds)
     publish_chat()

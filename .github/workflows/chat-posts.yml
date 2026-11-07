@@ -2,7 +2,9 @@ name: Update Group Chat posts
 
 on:
   schedule:
-    - cron: "15 */2 * * *"
+    # GitHub's shortest schedule is five minutes. Ten minutes leaves room
+    # for one batch of X reads, which allows about 30 accounts per 15 minutes.
+    - cron: "*/10 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,9 +17,9 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 70
+    timeout-minutes: 15
     env:
-      CHAT_POSTS_BUDGET_MINUTES: "50"
+      CHAT_POSTS_BUDGET_MINUTES: "8"
     steps:
       - uses: actions/checkout@v4
         with:
