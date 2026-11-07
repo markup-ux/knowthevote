@@ -38,6 +38,33 @@
   var style = document.createElement("style");
   style.textContent = [
     "header .lang { display: flex; align-items: center; gap: 8px; }",
+    "header .now { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--bar-ink, #f4f7fb); font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }",
+    ":root { --clock-face: #f4f0e6; --clock-rim: #bf0a30; --clock-mark: #1c1915; --clock-hour: #0a3161; --clock-minute: #c4922a; --clock-pin: #1e4d7b; }",
+    ".clock { width: 1.45em; height: 1.45em; display: inline-block; vertical-align: -0.28em; margin-right: 0.4em; flex: none; }",
+    "header .now .clock { width: 22px; height: 22px; margin: 0; }",
+    ".clock-rim { fill: var(--clock-rim); } .clock-face { fill: var(--clock-face); }",
+    ".clock-marks { fill: none; stroke: var(--clock-mark); stroke-width: 1.35; stroke-linecap: round; }",
+    ".clock-hour { fill: none; stroke: var(--clock-hour); stroke-width: 2.2; stroke-linecap: round; }",
+    ".clock-minute { fill: none; stroke: var(--clock-minute); stroke-width: 1.5; stroke-linecap: round; }",
+    ".clock-pin { fill: var(--clock-pin); }",
+    ".clock-hour, .clock-minute { transform-box: view-box; transform-origin: 16px 16px; }",
+    'html[data-theme="dark"] { --clock-face: #1c1915; --clock-rim: #f6d56a; --clock-mark: #f4f0e6; --clock-hour: #e7a3a3; --clock-minute: #9ec0e8; --clock-pin: #e6b422; }',
+    'html[data-theme="spring"] { --clock-face: #f3fbea; --clock-rim: #246b3a; --clock-mark: #1a2a14; --clock-hour: #e07a9a; --clock-minute: #3a9ad4; --clock-pin: #e6c84a; }',
+    'html[data-theme="spring-dark"] { --clock-face: #121a14; --clock-rim: #e6c84a; --clock-mark: #e8f6df; --clock-hour: #e07a9a; --clock-minute: #7eb6d6; --clock-pin: #f4b8cc; }',
+    'html[data-theme="summer"] { --clock-face: #f4f8fc; --clock-rim: #0e6f9c; --clock-mark: #1a2838; --clock-hour: #e07060; --clock-minute: #f0b429; --clock-pin: #14b0b8; }',
+    'html[data-theme="summer-dark"] { --clock-face: #101820; --clock-rim: #f0b429; --clock-mark: #f4efe2; --clock-hour: #e07060; --clock-minute: #2ec4c4; --clock-pin: #e0a030; }',
+    'html[data-theme="fall"] { --clock-face: #fff8ef; --clock-rim: #c2410c; --clock-mark: #3d160e; --clock-hour: #6b3a8a; --clock-minute: #1f6b3a; --clock-pin: #f6c431; }',
+    'html[data-theme="fall-dark"] { --clock-face: #1a100c; --clock-rim: #f6c431; --clock-mark: #fff1e4; --clock-hour: #e07020; --clock-minute: #7dcea0; --clock-pin: #e0a020; }',
+    'html[data-theme="winter"] { --clock-face: #f4f8fb; --clock-rim: #1c4e7a; --clock-mark: #172433; --clock-hour: #c23b45; --clock-minute: #e6d3a1; --clock-pin: #7eb0d4; }',
+    'html[data-theme="winter-dark"] { --clock-face: #10161c; --clock-rim: #e6d3a1; --clock-mark: #e7eef6; --clock-hour: #e07a80; --clock-minute: #7eb6d6; --clock-pin: #c4b48a; }',
+    'html[data-theme="holiday"] { --clock-face: #f4f8fb; --clock-rim: #1e5c45; --clock-mark: #172433; --clock-hour: #c23b45; --clock-minute: #e6c85a; --clock-pin: #6aa8d0; }',
+    'html[data-theme="holiday-dark"] { --clock-face: #10161c; --clock-rim: #e6d27a; --clock-mark: #e7eef6; --clock-hour: #c45a68; --clock-minute: #7eb6d6; --clock-pin: #c4a04a; }',
+    'html[data-theme="tropical"] { --clock-face: #fffaf0; --clock-rim: #0e8f4a; --clock-mark: #1a2410; --clock-hour: #e83e78; --clock-minute: #14c4c0; --clock-pin: #ffe08a; }',
+    'html[data-theme="tropical-dark"] { --clock-face: #14100c; --clock-rim: #14b8b0; --clock-mark: #fff6e8; --clock-hour: #e24b78; --clock-minute: #1ec8b8; --clock-pin: #ffe08a; }',
+    'html[data-theme="birthday"] { --clock-face: #fff8fb; --clock-rim: #a33d68; --clock-mark: #2a1620; --clock-hour: #6a8ee0; --clock-minute: #6ec9a0; --clock-pin: #ffe7a8; }',
+    'html[data-theme="birthday-dark"] { --clock-face: #1a1016; --clock-rim: #e0b04a; --clock-mark: #fceef3; --clock-hour: #7aa0e8; --clock-minute: #6ec9a0; --clock-pin: #ffe7a8; }',
+    'html[data-theme="rainbow"] { --clock-face: #fff6f8; --clock-rim: #4a3aad; --clock-mark: #1c1915; --clock-hour: #c43b4a; --clock-minute: #2f7a40; --clock-pin: #f0b429; }',
+    'html[data-theme="rainbow-dark"] { --clock-face: #1a1020; --clock-rim: #f6d0ee; --clock-mark: #f6f1ea; --clock-hour: #e85d6a; --clock-minute: #3cba55; --clock-pin: #f0b429; }',
     ".theme-button { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: 0; background: transparent; cursor: pointer; flex: none; color: var(--bar-ink, #f4f7fb); }",
     ".theme-mark svg { width: 26px; height: 26px; display: block; }",
     ".theme-button.is-night .theme-mark-sun { display: none; }",
@@ -56,37 +83,37 @@
     ".theme-wheel-name { position: absolute; left: 50%; top: 50%; width: 76px; margin: 0; transform: translate(-50%, -50%); text-align: center; color: #f4f0e6; font: 650 13px/1.2 'Segoe UI', 'Helvetica Neue', sans-serif; pointer-events: none; }",
     "@media (prefers-reduced-motion: no-preference) { .theme-wheel.is-open .theme-wheel-face { animation: theme-wheel-in 160ms ease; } }",
     "@keyframes theme-wheel-in { from { transform: scale(.55); opacity: .2; } to { transform: none; opacity: 1; } }",
-    'html[data-theme="dark"] { --paper: #12141c; --ink: #f3efe6; --muted: #b7c0cc; --line: #2c3648; --chip: #3a2c22; --map: #1a2430; --map-ink: #f3efe6; --map-on: #8eafd4; --map-tint: #4a6ea0; }',
-    'html[data-theme="spring"] { color-scheme: light; --paper: #eef6e4; --ink: #1a2a14; --muted: #4e6844; --line: #cfe0c0; --chip: #ffe56a; --map: #d5e7c4; --map-ink: #1a2a14; --map-on: #e7a0c4; --map-tint: #3a9ad4; }',
+    'html[data-theme="dark"] { --paper: #161410; --ink: #f3efe6; --muted: #c4b8a8; --line: #3a342c; --chip: #1a3348; --map: #3a3018; --map-ink: #f3efe6; --map-on: #f6d56a; --map-tint: #4a6ea0; }',
+    'html[data-theme="spring"] { color-scheme: light; --paper: #eef6e4; --ink: #1a2a14; --muted: #4e6844; --line: #cfe0c0; --chip: #f3dc86; --map: #e7d2ae; --map-ink: #1a2a14; --map-on: #e7a0c4; --map-tint: #3a9ad4; }',
     'html[data-theme="spring"] body { --bar: #246b3a; --bar-stripe: #f4b8cc; --bar-line: #8ec8ea; --bar-ink: #f3fbea; --bar-hover: #f4b8cc; --bar-hover-ink: #1a2a14; }',
-    'html[data-theme="spring-dark"] { --paper: #121a14; --ink: #e8f6df; --muted: #a9c79a; --line: #2a3a28; --chip: #3a3414; --map: #1c3322; --map-ink: #e8f6df; --map-on: #e7c84a; --map-tint: #3a8ec4; }',
+    'html[data-theme="spring-dark"] { --paper: #121a14; --ink: #e8f6df; --muted: #a9c79a; --line: #2a3a28; --chip: #3a3414; --map: #2c2418; --map-ink: #e8f6df; --map-on: #e7c84a; --map-tint: #3a8ec4; }',
     'html[data-theme="spring-dark"] body { --bar: #1a4a2c; --bar-stripe: #e07a9a; --bar-line: #7eb6d6; --bar-ink: #e8f6df; --bar-hover: #e07a9a; --bar-hover-ink: #1a2a14; }',
     'html[data-theme="summer"] { color-scheme: light; --paper: #e7f3fb; --ink: #1a2838; --muted: #4d6274; --line: #c5dff0; --chip: #ffc9b8; --map: #d3e7f6; --map-ink: #1a2838; --map-on: #f0b429; --map-tint: #14b0b8; }',
-    'html[data-theme="summer"] body { --bar: #0e6f9c; --bar-stripe: #f0b429; --bar-line: #fff; --bar-ink: #f4f8fc; --bar-hover: #f0b429; --bar-hover-ink: #1a2838; }',
+    'html[data-theme="summer"] body { --bar: #0e6f9c; --bar-stripe: #f0b429; --bar-line: #3d9a4a; --bar-ink: #f4f8fc; --bar-hover: #f0b429; --bar-hover-ink: #1a2838; }',
     'html[data-theme="summer-dark"] { --paper: #101820; --ink: #f4efe2; --muted: #b7c4ce; --line: #243444; --chip: #4a2830; --map: #163044; --map-ink: #f4efe2; --map-on: #f0b429; --map-tint: #2ec4c4; }',
-    'html[data-theme="summer-dark"] body { --bar: #0e4a6c; --bar-stripe: #e0a030; --bar-line: #f0e2b0; --bar-ink: #f4efe2; --bar-hover: #e0a030; --bar-hover-ink: #1a2838; }',
-    'html[data-theme="fall"] { color-scheme: light; --paper: #fff3c4; --ink: #3d160e; --muted: #8a4e32; --line: #ead48a; --chip: #d5e6cc; --map: #f6c56b; --map-ink: #3d160e; --map-on: #c2410c; --map-tint: #e07020; }',
+    'html[data-theme="summer-dark"] body { --bar: #0e4a6c; --bar-stripe: #e0a030; --bar-line: #1e6b3c; --bar-ink: #f4efe2; --bar-hover: #e0a030; --bar-hover-ink: #1a2838; }',
+    'html[data-theme="fall"] { color-scheme: light; --paper: #fff3c4; --ink: #3d160e; --muted: #8a4e32; --line: #ead48a; --chip: #ead6f4; --map: #f6c56b; --map-ink: #3d160e; --map-on: #c2410c; --map-tint: #e07020; }',
     'html[data-theme="fall"] body { --bar: #c2410c; --bar-stripe: #f6c431; --bar-line: #1f6b3a; --bar-ink: #fff8ef; --bar-hover: #f6c431; --bar-hover-ink: #3d160e; }',
     'html[data-theme="fall"] header::after, html[data-theme="fall"] footer::before { height: 6px; }',
-    'html[data-theme="fall-dark"] { --paper: #1a100c; --ink: #fff1e4; --muted: #e0b09a; --line: #4a2820; --chip: #243628; --map: #2a1810; --map-ink: #fff1e4; --map-on: #f6c431; --map-tint: #e07020; }',
+    'html[data-theme="fall-dark"] { --paper: #1a100c; --ink: #fff1e4; --muted: #e0b09a; --line: #4a2820; --chip: #3c2848; --map: #2a1810; --map-ink: #fff1e4; --map-on: #f6c431; --map-tint: #e07020; }',
     'html[data-theme="fall-dark"] body { --bar: #8a3014; --bar-stripe: #e0a020; --bar-line: #1a4730; --bar-ink: #fff1e4; --bar-hover: #e0a020; --bar-hover-ink: #3d160e; }',
     'html[data-theme="fall-dark"] header::after, html[data-theme="fall-dark"] footer::before { height: 6px; }',
-    'html[data-theme="winter"] { color-scheme: light; --paper: #f5f8fc; --ink: #172433; --muted: #5a6d80; --line: #d5e2ee; --chip: #d4e4f4; --map: #e6eef6; --map-ink: #172433; --map-on: #e6d3a1; --map-tint: #7eb0d4; }',
+    'html[data-theme="winter"] { color-scheme: light; --paper: #f5f8fc; --ink: #172433; --muted: #5a6d80; --line: #d5e2ee; --chip: #e7d3b0; --map: #e6eef6; --map-ink: #172433; --map-on: #e6d3a1; --map-tint: #7eb0d4; }',
     'html[data-theme="winter"] body { --bar: #1c4e7a; --bar-stripe: #e6d3a1; --bar-line: #c5d8ea; --bar-ink: #f4f8fb; --bar-hover: #e6d3a1; --bar-hover-ink: #172433; }',
-    'html[data-theme="winter-dark"] { --paper: #10161c; --ink: #e7eef6; --muted: #a9b8c6; --line: #28343e; --chip: #1a3048; --map: #152433; --map-ink: #e7eef6; --map-on: #e6d3a1; --map-tint: #6aa0c8; }',
+    'html[data-theme="winter-dark"] { --paper: #10161c; --ink: #e7eef6; --muted: #a9b8c6; --line: #28343e; --chip: #3a2c22; --map: #152433; --map-ink: #e7eef6; --map-on: #e6d3a1; --map-tint: #6aa0c8; }',
     'html[data-theme="winter-dark"] body { --bar: #163a5c; --bar-stripe: #c4b48a; --bar-line: #7eb6d6; --bar-ink: #e7eef6; --bar-hover: #c4b48a; --bar-hover-ink: #172433; }',
     'html[data-theme="holiday"] { color-scheme: light; --paper: #f4f7fb; --ink: #172433; --muted: #536678; --line: #d3e0ea; --chip: #d6e8f4; --map: #e7eef4; --map-ink: #172433; --map-on: #c23b45; --map-tint: #6aa8d0; }',
-    'html[data-theme="holiday"] body { --bar: #1e5c45; --bar-stripe: #c23b45; --bar-line: #fff; --bar-ink: #f4f8fb; --bar-hover: #c23b45; --bar-hover-ink: #fff; }',
+    'html[data-theme="holiday"] body { --bar: #1e5c45; --bar-stripe: #c23b45; --bar-line: #e6c85a; --bar-ink: #f4f8fb; --bar-hover: #c23b45; --bar-hover-ink: #fff; }',
     'html[data-theme="holiday-dark"] { --paper: #10161c; --ink: #e7eef6; --muted: #a9b8c6; --line: #28343e; --chip: #1e3348; --map: #1a2834; --map-ink: #e7eef6; --map-on: #e6d27a; --map-tint: #7eb6d6; }',
-    'html[data-theme="holiday-dark"] body { --bar: #1a3d34; --bar-stripe: #c45a68; --bar-line: #e7eef6; --bar-ink: #e7eef6; --bar-hover: #c45a68; --bar-hover-ink: #fff; }',
-    'html[data-theme="tropical"] { color-scheme: light; --paper: #fff6df; --ink: #1a2410; --muted: #6a5a3a; --line: #f0ddb0; --chip: #ffd0dc; --map: #d8f6ea; --map-ink: #1a2410; --map-on: #e83e78; --map-tint: #00c2c7; }',
+    'html[data-theme="holiday-dark"] body { --bar: #1a3d34; --bar-stripe: #c45a68; --bar-line: #c4a04a; --bar-ink: #e7eef6; --bar-hover: #c45a68; --bar-hover-ink: #fff; }',
+    'html[data-theme="tropical"] { color-scheme: light; --paper: #fff6df; --ink: #1a2410; --muted: #6a5a3a; --line: #f0ddb0; --chip: #ffe08a; --map: #d8f6ea; --map-ink: #1a2410; --map-on: #e83e78; --map-tint: #00c2c7; }',
     'html[data-theme="tropical"] body { --bar: #0e8f4a; --bar-stripe: #e83e78; --bar-line: #14c4c0; --bar-ink: #fffaf0; --bar-hover: #e83e78; --bar-hover-ink: #fff; }',
-    'html[data-theme="tropical-dark"] { --paper: #14100c; --ink: #fff6e8; --muted: #d4c4a8; --line: #3a3024; --chip: #4a1830; --map: #143028; --map-ink: #fff6e8; --map-on: #ff7aa0; --map-tint: #1ec8b8; }',
+    'html[data-theme="tropical-dark"] { --paper: #14100c; --ink: #fff6e8; --muted: #d4c4a8; --line: #3a3024; --chip: #4a3414; --map: #143028; --map-ink: #fff6e8; --map-on: #ff7aa0; --map-tint: #1ec8b8; }',
     'html[data-theme="tropical-dark"] body { --bar: #0c7a48; --bar-stripe: #e24b78; --bar-line: #14b8b0; --bar-ink: #fff6e8; --bar-hover: #e24b78; --bar-hover-ink: #fff; }',
     'html[data-theme="birthday"] { color-scheme: light; --paper: #fff4f7; --ink: #2a1620; --muted: #7a5564; --line: #f3d5de; --chip: #d7e4ff; --map: #f8e4ea; --map-ink: #2a1620; --map-on: #e07098; --map-tint: #6a8ee0; }',
-    'html[data-theme="birthday"] body { --bar: #a33d68; --bar-stripe: #ffe7a8; --bar-line: #fff; --bar-ink: #fff8fb; --bar-hover: #ffe7a8; --bar-hover-ink: #2a1620; }',
+    'html[data-theme="birthday"] body { --bar: #a33d68; --bar-stripe: #ffe7a8; --bar-line: #6ec9a0; --bar-ink: #fff8fb; --bar-hover: #ffe7a8; --bar-hover-ink: #2a1620; }',
     'html[data-theme="birthday-dark"] { --paper: #1a1016; --ink: #fceef3; --muted: #d4a8b6; --line: #3a242e; --chip: #243056; --map: #321824; --map-ink: #fceef3; --map-on: #ffe7a8; --map-tint: #7aa0e8; }',
-    'html[data-theme="birthday-dark"] body { --bar: #6b2448; --bar-stripe: #e0b04a; --bar-line: #fceef3; --bar-ink: #fceef3; --bar-hover: #e0b04a; --bar-hover-ink: #2a1620; }',
+    'html[data-theme="birthday-dark"] body { --bar: #6b2448; --bar-stripe: #e0b04a; --bar-line: #1f6b48; --bar-ink: #fceef3; --bar-hover: #e0b04a; --bar-hover-ink: #2a1620; }',
     'html[data-theme="rainbow"] { color-scheme: light; --paper: rgba(255,252,248,.86); --ink: #1c1915; --muted: #5c564c; --line: #e4d4cc; --chip: rgba(255,255,255,.74); --map: #fff6f2; --map-ink: #1c1915; --map-on: #7a6ad6; --map-tint: #e07098; }',
     'html[data-theme="rainbow"] body { --bar: #3a2a6a; --bar-stripe: #fff; --bar-line: transparent; --bar-ink: #fff; --bar-hover: #1c1915; --bar-hover-ink: #fff; background: linear-gradient(145deg, #ffd0d0, #ffe3a8, #d9f5b8, #bfeee4, #d4e2ff, #f6d0ee) fixed; }',
     'html[data-theme="rainbow-dark"] { --paper: rgba(18,14,16,.82); --ink: #f6f1ea; --muted: #c8beb2; --line: #3c342e; --chip: rgba(32,26,28,.78); --map: #2a2028; --map-ink: #f6f1ea; --map-on: #f6d0ee; --map-tint: #c47ad4; }',
@@ -305,6 +332,105 @@
   apply(saved());
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount);
   else mount();
+
+  function clockMarkup() {
+    var marks = "";
+    for (var i = 0; i < 12; i++) {
+      var a = i * Math.PI / 6;
+      var inner = i % 3 === 0 ? 7.1 : 8.5;
+      var outer = 11.15;
+      marks += '<line x1="' + (16 + Math.sin(a) * inner).toFixed(2) + '" y1="' + (16 - Math.cos(a) * inner).toFixed(2) + '" x2="' + (16 + Math.sin(a) * outer).toFixed(2) + '" y2="' + (16 - Math.cos(a) * outer).toFixed(2) + '"/>';
+    }
+    return '<svg class="clock" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle class="clock-rim" cx="16" cy="16" r="15"/><circle class="clock-face" cx="16" cy="16" r="12.15"/><g class="clock-marks">' + marks + '</g><line class="clock-hour" x1="16" y1="16.8" x2="16" y2="9.1"/><line class="clock-minute" x1="16" y1="17.2" x2="16" y2="6.3"/><circle class="clock-pin" cx="16" cy="16" r="1.55"/></svg>';
+  }
+
+  function setClockHands(root, d) {
+    if (!root) return;
+    var clock = root.querySelector ? root.querySelector(".clock") : null;
+    if (!clock && root.classList && root.classList.contains("clock")) clock = root;
+    if (!clock) return;
+    var minute = d.getMinutes();
+    var hour = d.getHours() % 12;
+    var hourHand = clock.querySelector(".clock-hour");
+    var minuteHand = clock.querySelector(".clock-minute");
+    if (hourHand) hourHand.style.transform = "rotate(" + (hour * 30 + minute * 0.5) + "deg)";
+    if (minuteHand) minuteHand.style.transform = "rotate(" + (minute * 6) + "deg)";
+  }
+
+  function ensureClock(before) {
+    var prev = before.previousElementSibling;
+    if (prev && prev.classList.contains("clock")) return prev;
+    before.insertAdjacentHTML("beforebegin", clockMarkup());
+    return before.previousElementSibling;
+  }
+
+  function showLocalNow() {
+    var today = document.getElementById("today");
+    if (today) {
+      ensureClock(today);
+      setClockHands(today.parentNode, new Date());
+      document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "visible") setClockHands(today.parentNode, new Date());
+      });
+      return;
+    }
+    var bar = document.querySelector("header .bar");
+    if (!bar || bar.querySelector(".now")) return;
+    var line = document.createElement("p");
+    line.className = "now";
+    line.insertAdjacentHTML("afterbegin", clockMarkup());
+    var el = document.createElement("time");
+    line.appendChild(el);
+    var here = bar.querySelector(".here");
+    var top = bar.querySelector(".bar-top");
+    var after = here || top;
+    if (after && after.nextSibling) bar.insertBefore(line, after.nextSibling);
+    else bar.appendChild(line);
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    function pad(n) { return n < 10 ? "0" + n : String(n); }
+    function zoneName(d) {
+      try {
+        var parts = new Intl.DateTimeFormat("en-US", { timeZoneName: "short" }).formatToParts(d);
+        for (var i = 0; i < parts.length; i++) {
+          if (parts[i].type === "timeZoneName") return parts[i].value;
+        }
+      } catch (e) {}
+      return "";
+    }
+    function show() {
+      var d = new Date();
+      var y = d.getFullYear();
+      var m = d.getMonth();
+      var day = d.getDate();
+      var hour = d.getHours();
+      var minute = d.getMinutes();
+      var h12 = hour % 12 || 12;
+      var ap = hour < 12 ? "a.m." : "p.m.";
+      var off = -d.getTimezoneOffset();
+      var sign = off >= 0 ? "+" : "-";
+      var abs = Math.abs(off);
+      var zone = zoneName(d);
+      el.dateTime = y + "-" + pad(m + 1) + "-" + pad(day) + "T" + pad(hour) + ":" + pad(minute) + ":00" + sign + pad(Math.floor(abs / 60)) + ":" + pad(abs % 60);
+      el.textContent = days[d.getDay()] + ", " + months[m] + " " + day + ", " + y + " · " + h12 + ":" + pad(minute) + " " + ap + (zone ? " " + zone : "");
+      setClockHands(line, d);
+    }
+    function waitForNextMinute() {
+      var d = new Date();
+      var next = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes() + 1, 0, 0);
+      setTimeout(function () {
+        show();
+        waitForNextMinute();
+      }, Math.max(250, next - d + 50));
+    }
+    show();
+    waitForNextMinute();
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible") show();
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", showLocalNow);
+  else showLocalNow();
 
   window.addEventListener("storage", function (event) {
     if (event.key === KEY) apply(ALLOWED[event.newValue] ? event.newValue : "light");

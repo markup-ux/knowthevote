@@ -737,7 +737,7 @@
   }
 
   function quarterFill(q) {
-    var dark = document.documentElement.getAttribute("data-theme") === "dark";
+    var dark = /dark$/.test(document.documentElement.getAttribute("data-theme") || "");
     if (q <= 0) return dark ? "#d5f4fb" : "#c5e4ec";
     if (q <= 3) return dark ? "#7ed0e4" : "#5eb8cc";
     if (q <= 6) return dark ? "#3aa8c4" : "#1d8eab";
@@ -781,7 +781,7 @@
   }
 
   function mapStyle() {
-    return document.documentElement.getAttribute("data-theme") === "dark"
+    return /dark$/.test(document.documentElement.getAttribute("data-theme") || "")
       ? "https://tiles.openfreemap.org/styles/dark"
       : "https://tiles.openfreemap.org/styles/liberty";
   }
@@ -790,10 +790,13 @@
     map.__style = mapStyle();
     new MutationObserver(function () {
       var next = mapStyle();
-      if (next === map.__style) return;
-      map.__style = next;
-      map.setStyle(next);
-      map.once("style.load", redraw);
+      if (next !== map.__style) {
+        map.__style = next;
+        map.setStyle(next);
+        map.once("style.load", redraw);
+        return;
+      }
+      redraw();
     }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   }
 
@@ -801,10 +804,6 @@
     if (!mapCtx) return;
     mapCtx.clearRect(0, 0, mapCssW, mapCssH);
     syncBase();
-    if (document.documentElement.getAttribute("data-theme") !== "dark") {
-      mapCtx.fillStyle = "rgba(244, 240, 230, 0.55)";
-      mapCtx.fillRect(0, 0, mapCssW, mapCssH);
-    }
     if (!dots) return;
     var radius = dotRadius();
     for (var i = 0; i < dots.length; i++) {

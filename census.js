@@ -1,5 +1,8 @@
 (function () {
-  var CHIP = "#ebe4d6";
+  function mapHex() {
+    var raw = getComputedStyle(document.documentElement).getPropertyValue("--map").trim();
+    return raw.charAt(0) === "#" ? raw.slice(0, 7) : "#ebe4d6";
+  }
   var INK = ["#e8e0f7", "#c4b3ef", "#8b6ad4", "#5530a0", "#2a1458"];
   var LOSS = ["#f3e4da", "#e2c2b0", "#c48b74", "#8a4d3a"];
   var GAIN = ["#dce6da", "#b7d0b4", "#6fa376", "#2c5a3c"];
@@ -80,7 +83,7 @@
       var loss = present.filter(function (value) { return value < 0; }).map(Math.abs);
       var gain = present.filter(function (value) { return value > 0; });
       return function (value) {
-        if (value == null || value === 0) return { fill: CHIP, light: false, band: "flat" };
+        if (value == null || value === 0) return { fill: mapHex(), light: false, band: "flat" };
         if (value < 0) {
           var lossBand = band(Math.abs(value), loss, 4);
           return { fill: LOSS[lossBand], light: lossBand >= 2, band: "loss" + lossBand };
@@ -90,7 +93,7 @@
       };
     }
     return function (value) {
-      if (value == null) return { fill: CHIP, light: false, band: "none" };
+      if (value == null) return { fill: mapHex(), light: false, band: "none" };
       var step = band(value, present, 5);
       return { fill: INK[step], light: step >= 2, band: "q" + step };
     };
@@ -612,4 +615,9 @@
   }).catch(function () {
     status.textContent = "The census file did not load.";
   });
+  new MutationObserver(function () {
+    if (!data) return;
+    paintCountry();
+    if (countySvg) paintCounties();
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();

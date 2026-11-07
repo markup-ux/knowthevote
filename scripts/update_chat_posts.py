@@ -342,6 +342,7 @@ def x_posts(handle):
             "at": x_time(tweet.get("created_at") or ""),
             "url": "https://x.com" + permalink,
             "context": x_context(tweet),
+            "counts": tweet_counts(tweet),
         })
         if len(posts) == 3:
             break
@@ -384,6 +385,7 @@ def mastodon_posts(handle):
             "at": row.get("created_at") or "",
             "url": url,
             "context": mastodon_context(host, row),
+            "counts": pack_counts(row.get("replies_count"), row.get("reblogs_count"), row.get("favourites_count")),
         })
         if len(posts) == 3:
             break
@@ -419,6 +421,7 @@ def bluesky_posts(handle):
             "at": post.get("indexedAt") or record.get("createdAt") or "",
             "url": "https://bsky.app/profile/" + handle + "/post/" + rkey,
             "context": bluesky_context(item),
+            "counts": pack_counts(post.get("replyCount"), post.get("repostCount"), post.get("likeCount")),
         })
         if len(posts) == 3:
             break
@@ -459,6 +462,7 @@ def truth_posts(handle):
             "at": row.get("created_at") or "",
             "url": url,
             "context": mastodon_context("truthsocial.com", row),
+            "counts": pack_counts(row.get("replies_count"), row.get("reblogs_count"), row.get("favourites_count")),
         })
         if len(posts) == 3:
             break
@@ -480,6 +484,55 @@ def fetch_feed(account):
     except Exception:
         return None
     return []
+
+
+def tweet_counts(tweet):
+    legacy = tweet.get("legacy") or {}
+    metrics = tweet.get("public_metrics") or legacy.get("public_metrics") or {}
+
+    def pick(*values):
+        for value in values:
+            if value is not None and value != "":
+                return value
+        return None
+
+    views = pick(
+        tweet.get("view_count"),
+        legacy.get("view_count"),
+        tweet.get("views_count"),
+        legacy.get("views_count"),
+        metrics.get("impression_count"),
+    )
+    if views is None:
+        for source in (tweet, legacy):
+            raw = source.get("views")
+            if isinstance(raw, dict):
+                raw = raw.get("count")
+            if raw is None or raw == "":
+                raw = (source.get("ext_views") or {}).get("count")
+            if raw is not None and raw != "":
+                views = raw
+                break
+    return pack_counts(
+        pick(tweet.get("reply_count"), legacy.get("reply_count"), metrics.get("reply_count")),
+        pick(tweet.get("retweet_count"), legacy.get("retweet_count"), metrics.get("retweet_count")),
+        pick(tweet.get("favorite_count"), legacy.get("favorite_count"), metrics.get("like_count")),
+        views,
+    )
+
+
+def pack_counts(replies, reposts, likes, views=None):
+    counts = {}
+    for key, value in (("replies", replies), ("reposts", reposts), ("likes", likes), ("views", views)):
+        if isinstance(value, str):
+            value = value.replace(",", "").strip()
+        try:
+            number = int(value)
+        except (TypeError, ValueError):
+            continue
+        if number >= 0:
+            counts[key] = number
+    return counts or None
 
 
 def pack_context(name, handle, text, url, profile, net):
@@ -579,6 +632,8 @@ def store_feed(feeds, account, found):
         "ok": found is not None,
         "posts": (previous.get("posts") or []) if found is None else found,
         "context": True if found is not None else bool(previous.get("context")),
+        "counts": True if found is not None else bool(previous.get("counts")),
+        "views": True if found is not None else bool(previous.get("views")),
     }
 
 
@@ -739,7 +794,7 @@ def main():
     for feed_key, account in needed.items():
         row = feeds.get(feed_key) or {}
         hours = 6 if account["net"] == "x" else 10
-        if row.get("ok") and fresh(row.get("at"), hours) and not missing_context(account, row):
+        if row.get("ok") and fresh(row.get("at"), hours) and not missing_context(account, row) and row.get("counts") and row.get("views"):
             continue
         refresh.append(account)
     fast = [account for account in refresh if account["net"] != "x"]

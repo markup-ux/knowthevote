@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<script src="theme.js?v=2" defer></script>
+<script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="theme.js?v=19" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · Gallery</title>
 <meta name="description" content="Political photography and art from Unsplash, drawn to fill the screen. An election map can sit on top. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="guide.css?v=dark2">
+<link rel="stylesheet" href="guide.css?v=life14">
 <style>
   body.wall { background: #1c1915; }
   #wall-stage {
@@ -44,7 +44,7 @@
   #wall-map[hidden] { display: none; }
   #wall-map svg { width: 100%; height: 100%; display: block; }
   #wall-map path {
-    fill: var(--lead, #ebe4d6);
+    fill: var(--lead, var(--map));
     stroke: #1c1915;
     stroke-width: 0.75;
   }
@@ -98,7 +98,7 @@
     border-top: 5px solid var(--bar-stripe);
     box-shadow: inset 0 3px 0 var(--bar);
   }
-  html[data-theme="dark"] #wall-panel { box-shadow: inset 0 3px 0 color-mix(in srgb, var(--bar) 38%, #100e0c); }
+  html:is([data-theme="dark"], [data-theme$="-dark"]) #wall-panel { box-shadow: inset 0 3px 0 color-mix(in srgb, var(--bar) 38%, #100e0c); }
   body.wall header,
   #wall-panel { transition: opacity 0.45s ease, transform 0.45s ease; }
   body.wall.is-quiet header {
@@ -372,6 +372,6 @@
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
 <script src="live.js?v=16"></script>
-<script src="gallery.js?v=9"></script>
+<script src="gallery.js?v=10"></script>
 </body>
 </html>

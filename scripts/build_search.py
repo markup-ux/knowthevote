@@ -579,6 +579,18 @@ def chat_since(value):
     return isinstance(value, str) and len(value) >= 10 and value[:10] >= "2026-11-03"
 
 
+def add_presidents(index):
+    path = os.path.join(ROOT, "congress", "presidents.json")
+    if not os.path.isfile(path):
+        return
+    payload = load_json(path)
+    for person in payload.get("people") or []:
+        name = person.get("name") or ""
+        line = person.get("line") or ""
+        photo = person.get("photo") or (name[:1] or "?")
+        index.add(name, "President · The House", "house.html#presidents", 1, line, photo)
+
+
 def add_chat(index):
     messages_path = os.path.join(ROOT, "chat", "messages.json")
     posts_path = os.path.join(ROOT, "chat", "posts.json")
@@ -614,7 +626,8 @@ def add_chat(index):
         for post in bucket.get("posts") or []:
             if not chat_since(post.get("at")):
                 continue
-            emit(name, detail, post.get("url") or "", post.get("text") or "", photo)
+            context = (post.get("context") or {}).get("text") or ""
+            emit(name, detail, post.get("url") or "", " ".join(part for part in (post.get("text") or "", context) if part), photo)
 
     records = official.get("people") or {}
     for ident, rows in records.items():
@@ -668,6 +681,7 @@ def main():
     add_passages(index)
     add_water_text(index)
     add_health_text(index)
+    add_presidents(index)
     add_chat(index)
     index.rows.sort(key=lambda row: (row[3], row[0].lower(), row[2]))
     payload = json.dumps({"items": index.rows}, ensure_ascii=False, separators=(",", ":"))

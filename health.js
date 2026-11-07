@@ -112,7 +112,7 @@
   }
 
   function mapStyle() {
-    return document.documentElement.getAttribute("data-theme") === "dark"
+    return /dark$/.test(document.documentElement.getAttribute("data-theme") || "")
       ? "https://tiles.openfreemap.org/styles/dark"
       : "https://tiles.openfreemap.org/styles/liberty";
   }
@@ -121,25 +121,24 @@
     map.__style = mapStyle();
     new MutationObserver(function () {
       var next = mapStyle();
-      if (next === map.__style) return;
-      map.__style = next;
-      map.setStyle(next);
-      map.once("style.load", redraw);
+      if (next !== map.__style) {
+        map.__style = next;
+        map.setStyle(next);
+        map.once("style.load", redraw);
+        return;
+      }
+      redraw();
     }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   }
 
   function densityInk() {
-    if (document.documentElement.getAttribute("data-theme") === "dark") {
+    if (/dark$/.test(document.documentElement.getAttribute("data-theme") || "")) {
       return ["#f4fbe4", "#c6e86a", "#8fbf3a", "#4f8f28", "#2d6a18"];
     }
     return INK;
   }
 
-  function paperVeil(alpha) {
-    if (document.documentElement.getAttribute("data-theme") === "dark") return;
-    ctx.fillStyle = "rgba(244, 240, 230, " + alpha + ")";
-    ctx.fillRect(0, 0, cssW, cssH);
-  }
+  function paperVeil() {}
 
   var baseMap = null;
   if (window.maplibregl && document.getElementById("health-basemap")) {
@@ -571,7 +570,7 @@
         }
       }
     }
-    var key = "bins|" + (document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light") + "|" + (brandFilter === null ? "all" : brandFilter) + "|" + (showCenters ? "1" : "0") + "|" + hoodFilter + "|" + ranges.map(function (range) {
+    var key = "bins|" + (/dark$/.test(document.documentElement.getAttribute("data-theme") || "") ? "dark" : "light") + "|" + (brandFilter === null ? "all" : brandFilter) + "|" + (showCenters ? "1" : "0") + "|" + hoodFilter + "|" + ranges.map(function (range) {
       return range[1] < 0 ? "-" : range[0] + ":" + range[1];
     }).join(",");
     paintLegend(key, function () {

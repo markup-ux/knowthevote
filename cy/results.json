@@ -4,7 +4,7 @@
   "status": "Official open-data file of the 2026 parliamentary election, totaled by district. A district is colored only when one party has more reported votes than the others. The file does not publish a color. This page does not declare a result.",
   "strings": {
     "blank": "No votes reported",
-    "missing": "This district has no total in the Republic's open-data file. It stays beige."
+    "missing": "This district has no total in the Republic's open-data file. It stays the land color."
   },
   "tables": [
     {

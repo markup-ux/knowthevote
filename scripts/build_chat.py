@@ -63,6 +63,36 @@ def walk_candidates(node, found, office=""):
             walk_candidates(value, found, office)
 
 
+def attach_presidents(states):
+    path = os.path.join(ROOT, "congress", "presidents.json")
+    try:
+        payload = json.load(open(path, encoding="utf-8"))
+    except (OSError, ValueError):
+        return states
+    labels = {"D": ("dem", "Democratic"), "R": ("gop", "Republican")}
+    rows = []
+    for person in payload.get("people") or []:
+        if not isinstance(person, dict) or not person.get("name"):
+            continue
+        code, label = labels.get(person.get("party") or "", ("other", "Another party"))
+        line = person.get("line") or ""
+        rows.append({
+            "name": person.get("name") or "",
+            "party": code,
+            "partyLabel": label,
+            "photo": person.get("photo") or "",
+            "office": "President",
+            "lines": [line] if line else [],
+            "source": person.get("url") or "",
+        })
+    if not rows:
+        return states
+    states = [state for state in states if state.get("code") != "US"]
+    states.append({"code": "US", "name": "United States", "people": rows})
+    states.sort(key=lambda state: state["name"])
+    return states
+
+
 def main():
     found = load(os.path.join(ROOT, "photos", "found.json"))
     states = []
@@ -127,6 +157,7 @@ def main():
                 "people": rows,
             })
     states.sort(key=lambda state: state["name"])
+    states = attach_presidents(states)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump({"states": states}, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     people = sum(len(state["people"]) for state in states)

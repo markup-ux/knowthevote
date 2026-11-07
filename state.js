@@ -29,7 +29,7 @@
     return node;
   }
 
-  var BLEND_LINE = "The color mixes the votes reported in that place. The swatches are the colors in that mix. A place with no votes stays beige. This does not call a race.";
+  var BLEND_LINE = "The color mixes the votes reported in that place. The swatches are the colors in that mix. A place with no votes stays the land color. This does not call a race.";
 
   function blendOn() {
     try { return localStorage.getItem("leaders-blend") !== "0"; }
@@ -82,7 +82,10 @@
   }
 
   function tint(hex, amount) {
-    var chip = [235, 228, 214];
+    var rawMap = getComputedStyle(document.documentElement).getPropertyValue("--map").trim();
+    var chip = rawMap.charAt(0) === "#"
+      ? [parseInt(rawMap.slice(1, 3), 16), parseInt(rawMap.slice(3, 5), 16), parseInt(rawMap.slice(5, 7), 16)]
+      : [235, 228, 214];
     var rgb = [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
     return "rgb(" + chip.map(function (channel, index) {
       return Math.round(channel + (rgb[index] - channel) * amount);
@@ -209,7 +212,8 @@
         color = tone(row.candidates, item.candidates || []);
       }
       if (!color && alone) color = whole;
-      path.style.fill = color || "#ebe4d6";
+      var land = getComputedStyle(document.documentElement).getPropertyValue("--map").trim();
+      path.style.fill = color || (land.charAt(0) === "#" ? land.slice(0, 7) : "#ebe4d6");
     });
   }
 
@@ -565,4 +569,8 @@
       .then(function (json) { fillPhotos(json); show(json); })
       .catch(function () {});
   }, LIVE_EVERY);
+  new MutationObserver(function () {
+    var item = race();
+    if (item && svg) paintMap(item);
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();

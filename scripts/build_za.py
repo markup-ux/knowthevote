@@ -327,14 +327,14 @@ def shell(title, description, root, local, here, nav, body, place=""):
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
-<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<script src="%stheme.js?v=2" defer></script>
+<script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="%stheme.js?v=19" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>%s</title>
 <meta name="description" content="%s">
 <link rel="icon" href="%s">
-<link rel="stylesheet" href="%sguide.css?v=dark2">
+<link rel="stylesheet" href="%sguide.css?v=life14">
 </head>
 <body class="theme-za" data-results="%sresults.json"%s>
 <header>
@@ -364,7 +364,7 @@ def shell(title, description, root, local, here, nav, body, place=""):
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="%slang.js"></script>
-<script src="%smap.js?v=blend2"></script>
+<script src="%smap.js?v=blend4"></script>
 </body>
 </html>
 """ % (
@@ -431,7 +431,7 @@ def write_html(catalog):
         body = """    <p class="kicker">%s · Local government elections · 4 November 2026</p>
     <h1 class="notranslate" translate="no">%s</h1>
     <p class="deck">You are looking at one local council in South Africa. The large name is that council. The smaller line above it is the province, one of the country's nine regions. A council's name can be a city, a rural area, or a person. It is not a candidate, and this is not an election for the national government.</p>
-    <p class="sub">When the Electoral Commission publishes votes for this council, they appear below. Leaders.vote does not add a candidate's positions or a photo. Until a total is published, this place stays beige on the country map. A lead in the count is not a declared winner.</p>
+    <p class="sub">When the Electoral Commission publishes votes for this council, they appear below. Leaders.vote does not add a candidate's positions or a photo. Until a total is published, this place stays the land color on the country map. A lead in the count is not a declared winner.</p>
     <p id="place-status" class="note">The Electoral Commission has not published a vote total for this council yet.</p>
     <div id="place-rows"></div>
     <p class="deck"><a href="%s">Electoral Commission results</a> · <a href="%s">Electoral Commission of South Africa</a></p>""" % (

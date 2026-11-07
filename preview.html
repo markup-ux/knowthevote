@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<script src="theme.js?v=2" defer></script>
+<script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="theme.js?v=19" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · Preview · All states</title>
@@ -14,7 +14,10 @@
     --ink: #1c1915;
     --muted: #5c564c;
     --line: #d8d0c2;
-    --chip: #ebe4d6;
+    --chip: #d9e7f5;
+    --map: #f6d56a;
+    --map-ink: #1c1915;
+    --map-on: #8eafd4;
     --max: 1080px;
   }
   * { box-sizing: border-box; }
@@ -110,7 +113,7 @@
     h1 { font-size: 34px; }
     .result-layout { grid-template-columns: 1fr; }
   }
-  html[data-theme="dark"] {
+  html:is([data-theme="dark"], [data-theme$="-dark"]) {
     color-scheme: dark;
     --paper: #161410;
     --ink: #f3efe6;
@@ -118,12 +121,12 @@
     --line: #3c362e;
     --chip: #26221c;
   }
-  html[data-theme="dark"] select { background: var(--paper); color: var(--ink); }
-  html[data-theme="dark"] #us-map path,
-  html[data-theme="dark"] #state-map path { fill: #ebe4d6; stroke: #1c1915; }
-  html[data-theme="dark"] .districts img { background: #3a342c; }
-  html[data-theme="dark"] header,
-  html[data-theme="dark"] footer { background: color-mix(in srgb, #0a3161 38%, #100e0c); }
+  html:is([data-theme="dark"], [data-theme$="-dark"]) select { background: var(--paper); color: var(--ink); }
+  html:is([data-theme="dark"], [data-theme$="-dark"]) #us-map path,
+  html:is([data-theme="dark"], [data-theme$="-dark"]) #state-map path { fill: var(--map); stroke: var(--map-ink); }
+  html:is([data-theme="dark"], [data-theme$="-dark"]) .districts img { background: #3a342c; }
+  html:is([data-theme="dark"], [data-theme$="-dark"]) header,
+  html:is([data-theme="dark"], [data-theme$="-dark"]) footer { background: color-mix(in srgb, #0a3161 38%, #100e0c); }
 </style>
 
 <!-- seo -->
@@ -239,8 +242,16 @@
     return node;
   }
 
+  function mapLand() {
+    var raw = getComputedStyle(document.documentElement).getPropertyValue("--map").trim();
+    return raw.charAt(0) === "#" ? raw.slice(0, 7) : "#ebe4d6";
+  }
+
   function tint(hex, amount) {
-    var chip = [235, 228, 214];
+    var rawMap = getComputedStyle(document.documentElement).getPropertyValue("--map").trim();
+    var chip = rawMap.charAt(0) === "#"
+      ? [parseInt(rawMap.slice(1, 3), 16), parseInt(rawMap.slice(3, 5), 16), parseInt(rawMap.slice(5, 7), 16)]
+      : [235, 228, 214];
     var rgb = [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
     return "rgb(" + chip.map(function (channel, index) {
       return Math.round(channel + (rgb[index] - channel) * amount);
@@ -320,7 +331,7 @@
     stateSvg.querySelectorAll("path").forEach(function (path) {
       path.classList.toggle("is-on", path.getAttribute("data-fips") === selected);
       var row = counties && counties[path.getAttribute("data-fips")];
-      path.style.fill = row ? (tone(row.candidates) || "#ebe4d6") : "#ebe4d6";
+      path.style.fill = row ? (tone(row.candidates) || mapLand()) : mapLand();
     });
   }
 
@@ -574,6 +585,7 @@
     var requested = (location.hash || "#il").replace("#", "").toUpperCase();
     if (national && national.states.some(function (state) { return state.code === requested; })) showState(requested);
   });
+  new MutationObserver(function () { paintMap(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();
 </script>
 </body>

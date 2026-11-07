@@ -26,6 +26,9 @@
   var findNote = document.getElementById("chat-find-note");
   var picker = document.getElementById("day-picker");
   var chosen = "";
+  var manualDay = "";
+  var manualOn = "";
+  var openDay = "";
 
   function el(tag, className, text) {
     var node = document.createElement(tag);
@@ -216,7 +219,82 @@
     return "c" + n.toString(16);
   }
 
-  function recordBubble(kind, label, text, url, context) {
+  function domainName(value) {
+    return /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/.test(value || "");
+  }
+
+  function readMention(text, at, net) {
+    var body = text.slice(at + 1);
+    var token;
+    if (net === "mastodon") {
+      var full = body.match(/^([A-Za-z0-9_]{1,30})@([A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+)/);
+      if (full && domainName(full[2])) return { handle: full[1] + "@" + full[2], length: full[0].length };
+      token = body.match(/^[A-Za-z0-9_]{1,30}/);
+      if (!token || (body.length > token[0].length && /[A-Za-z0-9_@.]/.test(body.charAt(token[0].length)))) return null;
+      return { handle: token[0], length: token[0].length };
+    }
+    if (net === "bluesky") {
+      token = body.match(/^[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+/);
+      if (!token || !domainName(token[0])) return null;
+      return { handle: token[0], length: token[0].length };
+    }
+    if (net === "x" || net === "truth") {
+      token = body.match(/^[A-Za-z0-9_]+/);
+      if (!token || token[0].length > (net === "x" ? 15 : 30)) return null;
+      return { handle: token[0], length: token[0].length };
+    }
+    return null;
+  }
+
+  function profileUrl(net, handle, poster) {
+    if (net === "x") return "https://x.com/" + handle;
+    if (net === "bluesky") return "https://bsky.app/profile/" + handle;
+    if (net === "truth") return "https://truthsocial.com/@" + handle;
+    if (net === "mastodon") {
+      var user = handle;
+      var host = "";
+      var split = handle.indexOf("@");
+      if (split !== -1) {
+        user = handle.slice(0, split);
+        host = handle.slice(split + 1);
+      } else if (poster && poster.indexOf("@") !== -1) {
+        host = poster.slice(poster.indexOf("@") + 1);
+      }
+      if (user && domainName(host)) return "https://" + host + "/@" + user;
+    }
+    return "";
+  }
+
+  function appendMessage(parent, text, net, poster) {
+    var source = text || "";
+    var i = 0;
+    while (i < source.length) {
+      var at = source.indexOf("@", i);
+      if (at === -1) {
+        parent.appendChild(document.createTextNode(source.slice(i)));
+        return;
+      }
+      var before = at > 0 ? source.charAt(at - 1) : "";
+      var mention = !before || !/[A-Za-z0-9/]/.test(before) ? readMention(source, at, net) : null;
+      var url = mention ? profileUrl(net, mention.handle, poster) : "";
+      if (!mention || !url) {
+        parent.appendChild(document.createTextNode(source.slice(i, at + 1)));
+        i = at + 1;
+        continue;
+      }
+      if (at > i) parent.appendChild(document.createTextNode(source.slice(i, at)));
+      parent.appendChild(mentionLink(net, "@" + mention.handle, url));
+      i = at + 1 + mention.length;
+    }
+  }
+
+  function ownRetweet(text, handle) {
+    if (!text || !handle) return text || "";
+    var escaped = String(handle).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return text.replace(new RegExp("^RT\\s+@" + escaped + "\\s*:\\s*", "i"), "");
+  }
+
+  function recordBubble(kind, label, text, url, context, net, poster, counts) {
     var bubble = el("p", "bubble " + kind);
     bubble.id = messageId(url || text);
     if (url && (url.indexOf("https://") === 0 || url.indexOf("house.html#") === 0)) {
@@ -228,47 +306,90 @@
     }
     if (context && (context.text || context.profile || context.handle)) {
       var quote = el("span", "context");
-      var who = el("a", "context-name", context.name || context.handle || "Profile");
-      if (context.profile) {
-        who.href = context.profile;
-        who.target = "_blank";
-        who.rel = "noopener";
-      }
+      var who = mentionLink(context.net, context.name || context.handle || "", context.profile || "");
+      who.className = "context-name";
       quote.appendChild(who);
-      if (context.net && context.handle) {
-        var opener = el("button", "context-page", "Profile");
-        opener.type = "button";
-        opener.addEventListener("click", function () {
-          openProfile(context.net, context.handle, context.profile);
-        });
-        quote.appendChild(opener);
+      if (context.text) {
+        var quoted = el("span", "context-text");
+        appendMessage(quoted, ownRetweet(context.text, context.handle), context.net, context.handle);
+        quote.appendChild(quoted);
       }
-      if (context.text) quote.appendChild(el("span", "context-text", context.text));
       bubble.appendChild(quote);
     }
-    bubble.appendChild(document.createTextNode(text));
+    appendMessage(bubble, ownRetweet(text, poster), net, poster);
+    appendStats(bubble, counts);
     return bubble;
   }
 
-  function openProfile(net, handle, profile) {
-    var key = net + ":" + String(handle || "").toLowerCase();
-    var cluster = null;
-    Array.prototype.forEach.call(log.querySelectorAll(".cluster"), function (node) {
-      if (cluster) return;
-      var handles = (node.getAttribute("data-handles") || "").split(" ");
-      if (handles.indexOf(key) !== -1) cluster = node;
+  function statIcon(kind) {
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("aria-hidden", "true");
+    var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", "currentColor");
+    path.setAttribute("stroke-width", "1.8");
+    path.setAttribute("stroke-linecap", "round");
+    path.setAttribute("stroke-linejoin", "round");
+    if (kind === "replies") path.setAttribute("d", "M5 16.5V19l3.4-2.5H18a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v6.5a2 2 0 0 0 2 2z");
+    else if (kind === "reposts") path.setAttribute("d", "M7 7h10.2M14.2 4.2 17.2 7l-3 2.8M17 17H6.8M9.8 19.8 6.8 17l3-2.8");
+    else if (kind === "likes") path.setAttribute("d", "M12 19.2 10.9 18C6.4 14 4 11.7 4 8.8 4 6.5 5.8 4.8 8 4.8c1.3 0 2.5.6 3.2 1.6.7-1 1.9-1.6 3.2-1.6 2.2 0 4 1.7 4 4 0 2.9-2.4 5.2-6.9 9.2z");
+    else path.setAttribute("d", "M4 19V11M9 19V7M14 19V4M19 19v-6");
+    svg.appendChild(path);
+    return svg;
+  }
+
+  function appendStats(parent, counts) {
+    if (!counts) return;
+    var words = [
+      ["replies", "reply", "replies"],
+      ["reposts", "repost", "reposts"],
+      ["likes", "like", "likes"],
+      ["views", "view", "views"]
+    ];
+    var row = el("span", "stats");
+    words.forEach(function (item) {
+      var number = Number(counts[item[0]]);
+      if (!isFinite(number) || number < 0) return;
+      var shown = Math.round(number).toLocaleString("en-US");
+      var stat = el("span", "stat");
+      stat.setAttribute("title", shown + " " + (number === 1 ? item[1] : item[2]));
+      stat.setAttribute("aria-label", shown + " " + (number === 1 ? item[1] : item[2]));
+      stat.appendChild(statIcon(item[0]));
+      stat.appendChild(el("span", "stat-n", shown));
+      row.appendChild(stat);
     });
-    if (!cluster) {
-      if (profile) window.open(profile, "_blank", "noopener");
-      return;
+    if (row.childNodes.length) parent.appendChild(row);
+  }
+
+  function networkMark(net) {
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "mark");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("aria-hidden", "true");
+    var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("fill", "currentColor");
+    if (net === "x") path.setAttribute("d", "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z");
+    else if (net === "bluesky") path.setAttribute("d", "M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.415-.054-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498.142-6.498-.138-.016-.277-.034-.415-.056.14.016.279.034.415.054 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z");
+    else if (net === "mastodon") path.setAttribute("d", "M12 2.2c2.8 0 5.1 1.8 5.1 5.1v4.2c0 1.9-1.1 2.8-2.8 2.8-1.1 0-1.9-.5-2.3-1.2-.4.7-1.2 1.2-2.3 1.2-1.7 0-2.8-.9-2.8-2.8V7.3c0-3.3 2.3-5.1 5.1-5.1zm-2 3.6v3.4c0 .6.4 1 1 1s1-.4 1-1V5.8h-2zm4 0v3.4c0 .6.4 1 1 1s1-.4 1-1V5.8h-2z");
+    else if (net === "truth") path.setAttribute("d", "M4 3.5h16v4h-6v13h-4v-13H4z");
+    else return document.createDocumentFragment();
+    svg.appendChild(path);
+    return svg;
+  }
+
+  function mentionLink(net, label, url) {
+    var node = url && url.indexOf("https://") === 0 ? document.createElement("a") : document.createElement("span");
+    node.className = "mention";
+    if (node.tagName === "A") {
+      node.href = url;
+      node.target = "_blank";
+      node.rel = "noopener";
     }
-    var block = cluster.closest(".day-block");
-    if (block) showDay(block.getAttribute("data-day"));
-    cluster.hidden = false;
-    var card = cluster.querySelector(".card");
-    var button = cluster.querySelector(".name");
-    if (card && card.hidden && button) button.click();
-    cluster.scrollIntoView({ block: "center" });
+    var mark = networkMark(net);
+    if (mark.tagName) node.appendChild(mark);
+    node.appendChild(document.createTextNode(label));
+    return node;
   }
 
   function showDay(key) {
@@ -497,7 +618,7 @@
           postCount += 1;
           var stamp = posted(post.at);
           var label = (NET[post.net] || "Post") + (stamp ? " · " + stamp : "");
-          addItem(Object.assign({ at: post.at }, meta), recordBubble("", label, post.text, post.url, post.context));
+          addItem(Object.assign({ at: post.at }, meta), recordBubble("", label, post.text, post.url, post.context, post.net, post.handle, post.counts));
         });
         (records[ident] || []).forEach(function (row) {
           if (!row || !row.text || !sinceStart(row.at)) return;
@@ -582,6 +703,16 @@
     });
 
     var today = todayKey();
+    if (!log.querySelector('.day-block[data-day="' + today + '"]')) {
+      var todayBlock = el("section", "day-block is-today");
+      todayBlock.setAttribute("data-day", today);
+      todayBlock.hidden = true;
+      var todayChip = el("h2", "day");
+      todayChip.appendChild(el("span", "", "Today"));
+      todayBlock.appendChild(todayChip);
+      todayBlock.appendChild(el("p", "empty-day", "No messages yet today."));
+      log.insertBefore(todayBlock, log.firstChild);
+    }
     Array.prototype.forEach.call(log.querySelectorAll(".day-block"), function (block) {
       if (!picker) return;
       var key = block.getAttribute("data-day");
@@ -595,6 +726,8 @@
       button.addEventListener("click", function () {
         if (findBox) findBox.value = "";
         Array.prototype.forEach.call(log.querySelectorAll(".cluster, .bubble"), function (node) { node.hidden = false; });
+        manualDay = key;
+        manualOn = todayKey();
         showDay(key);
         if (findNote) {
           findNote.hidden = true;
@@ -606,10 +739,10 @@
     var hash = (location.hash || "").replace(/^#/, "");
     var hashed = hash && document.getElementById(hash);
     var hashedDay = hashed && hashed.closest(".day-block");
-    if (hashedDay) chosen = hashedDay.getAttribute("data-day");
-    else if (!chosen || !log.querySelector('.day-block[data-day="' + chosen + '"]')) {
-      chosen = log.querySelector('.day-block[data-day="' + today + '"]') ? today : ((log.querySelector(".day-block") || {}).getAttribute ? log.querySelector(".day-block").getAttribute("data-day") : "");
-    }
+    if (manualDay && manualOn === today && log.querySelector('.day-block[data-day="' + manualDay + '"]')) chosen = manualDay;
+    else if (hashedDay) chosen = hashedDay.getAttribute("data-day");
+    else chosen = today;
+    openDay = today;
 
     status.textContent = "Since November 3, 2026. " + postCount + " posts. " + recordCount + " official records. Checked " + posted(new Date().toISOString()) + ".";
     typing.hidden = true;
@@ -710,6 +843,7 @@
   }
 
   function pull() {
+    var rolled = openDay && todayKey() !== openDay;
     if (!seen.ready) status.textContent = "Checking for records since November 3.";
     Promise.all([
       readJsonRetry("chat/messages.json"),
@@ -719,7 +853,7 @@
     ]).then(function (files) {
       var postsStamp = files[1].updated || "";
       var officialStamp = files[2].updated || "";
-      if (!seen.ready || postsStamp !== seen.posts || officialStamp !== seen.official) {
+      if (!seen.ready || postsStamp !== seen.posts || officialStamp !== seen.official || rolled) {
         seen.ready = true;
         seen.posts = postsStamp;
         seen.official = officialStamp;

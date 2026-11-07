@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<script src="theme.js?v=2" defer></script>
+<script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="theme.js?v=14" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · The House</title>
-<meta name="description" content="House roll calls for the 119th Congress, the yes and no of each member, office contact, the latest House floor list, and the blue slips for federal judges. Green is a yes. Rose is a no. Gold is scheduled. Blue is a blue slip.">
+<meta name="description" content="House roll calls for the 119th Congress, the yes and no of each member, office contact, the latest House floor list, the blue slips for federal judges, and the living presidents. Green is a yes. Rose is a no. Gold is scheduled. Blue is a blue slip.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="guide.css?v=dark2">
+<link rel="stylesheet" href="guide.css?v=life7">
 <style>
 #congress-map { width: 100%; height: auto; background: transparent; }
 #congress-map path { fill: var(--chip); stroke: var(--ink); stroke-width: 0.8; cursor: pointer; }
@@ -34,7 +34,7 @@
 div.floor-row { cursor: default; }
 .vote-row strong, .floor-row strong { display: block; font-size: 18px; font-weight: 650; }
 .vote-meta, .person-meta { color: var(--muted); font-size: 15px; }
-.vote-bar, .mini-bar { display: flex; width: 100%; height: 18px; background: #ebe4d6; margin: 8px 0 4px; }
+.vote-bar, .mini-bar { display: flex; width: 100%; height: 18px; background: var(--chip); margin: 8px 0 4px; }
 .mini-bar { height: 12px; max-width: 280px; }
 .vote-bar i, .mini-bar i { display: block; height: 100%; }
 .swatch.yes-scale { width: 48px; background: linear-gradient(90deg, #cfe8d6, #0e6a38); }
@@ -62,7 +62,7 @@ div.floor-row { cursor: default; }
 .person-card { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; align-items: start; background: var(--chip); padding: 14px 16px; margin: 12px 0; }
 .person-card h3 { margin: 0 0 6px; }
 .person-card p { margin: 4px 0; }
-#congress-find, #search-results, #taxpayer, #floor, #introduced, #roll-calls, #senate-votes, #blue-slips, #senators, #open-vote, #open-intro, #open-slip { scroll-margin-top: 140px; overflow-anchor: none; }
+#congress-find, #search-results, #taxpayer, #floor, #introduced, #roll-calls, #senate-votes, #blue-slips, #presidents, #senators, #open-vote, #open-intro, #open-slip { scroll-margin-top: 140px; overflow-anchor: none; }
 #top { scroll-margin-top: 0; height: 0; }
 body { padding-bottom: 84px; }
 .jump {
@@ -77,9 +77,9 @@ body { padding-bottom: 84px; }
   gap: 6px;
   padding: 14px 10px calc(8px + env(safe-area-inset-bottom));
   background:
-    linear-gradient(#bf0a30, #bf0a30) top left / 100% 4px no-repeat,
-    linear-gradient(#ffffff, #ffffff) top 4px left / 100% 4px no-repeat,
-    #002868;
+    linear-gradient(var(--jump-stripe, #bf0a30), var(--jump-stripe, #bf0a30)) top left / 100% 4px no-repeat,
+    linear-gradient(var(--jump-line, #ffffff), var(--jump-line, #ffffff)) top 4px left / 100% 4px no-repeat,
+    var(--jump, #002868);
   border-top: 0;
   overflow-x: auto;
 }
@@ -96,22 +96,22 @@ body { padding-bottom: 84px; }
   white-space: nowrap;
 }
 .jump a:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }
-.jump a.jump-top { background: #1c1915; color: #f4f0e6; border-color: #f4f0e6; }
-.jump a.jump-search { background: #0f6e78; color: #f4f7fb; border-color: #0f6e78; }
-.jump a.jump-money { background: #c4924a; color: #2c1d0e; border-color: #c4924a; }
-.jump a.jump-floor { background: #e6b422; color: #2c1d0e; border-color: #e6b422; }
-.jump a.jump-introduced { background: #efe6d4; color: #1c1915; border-color: #efe6d4; }
+.jump a.jump-top { background: var(--j-top, #1c1915); color: var(--j-top-ink, #f4f0e6); border-color: var(--j-top-line, #f4f0e6); }
+.jump a.jump-search { background: var(--j-search, #0f6e78); color: var(--j-search-ink, #f4f7fb); border-color: var(--j-search-line, #0f6e78); }
+.jump a.jump-money { background: var(--j-money, #c4924a); color: var(--j-money-ink, #2c1d0e); border-color: var(--j-money-line, #c4924a); }
+.jump a.jump-floor { background: var(--j-floor, #e6b422); color: var(--j-floor-ink, #2c1d0e); border-color: var(--j-floor-line, #e6b422); }
+.jump a.jump-introduced { background: var(--j-intro, #efe6d4); color: var(--j-intro-ink, #1c1915); border-color: var(--j-intro-line, #efe6d4); }
 .jump a.jump-house, .jump a.jump-senate {
-  background-color: #f4f0e6;
-  color: #1c1915;
-  border-color: #f4f0e6;
-  background-image: linear-gradient(#0e6a38, #0e6a38), linear-gradient(#8d2344, #8d2344);
+  background-color: var(--j-vote, #f4f0e6);
+  color: var(--j-vote-ink, #1c1915);
+  border-color: var(--j-vote-line, #f4f0e6);
+  background-image: linear-gradient(var(--j-yes, #0e6a38), var(--j-yes, #0e6a38)), linear-gradient(var(--j-no, #8d2344), var(--j-no, #8d2344));
   background-size: 50% 5px, 50% 5px;
   background-position: left bottom, right bottom;
   background-repeat: no-repeat;
 }
-.jump a.jump-slip { background: #0e6fa8; color: #f4f8fb; border-color: #0e6fa8; }
-.jump a.jump-people { background: #d9c8b4; color: #1c1915; border-color: #d9c8b4; }
+.jump a.jump-slip { background: var(--j-slip, #0e6fa8); color: var(--j-slip-ink, #f4f8fb); border-color: var(--j-slip-line, #0e6fa8); }
+.jump a.jump-people { background: var(--j-people, #d9c8b4); color: var(--j-people-ink, #1c1915); border-color: var(--j-people-line, #d9c8b4); }
 .census-topic { margin: 12px 0 16px; font-size: 18px; }
 .census-topic a { color: inherit; }
 .census-topic a[href="#floor"] { color: #e6b422; }
@@ -126,6 +126,7 @@ body { padding-bottom: 84px; }
   -webkit-text-fill-color: transparent;
 }
 .census-topic a[href="#blue-slips"] { color: #0e6fa8; }
+.census-topic a[href="#presidents"],
 .census-topic a[href="#senators"] { color: #8a7360; }
 #taxpayer > h2 { color: #c4924a; }
 #floor > h2 { color: #e6b422; }
@@ -139,6 +140,7 @@ body { padding-bottom: 84px; }
   color: transparent;
 }
 #blue-slips > h2 { color: #0e6fa8; }
+#presidents > h2,
 #senators > h2 { color: #8a7360; }
 .slip-row { border-bottom: 1px solid var(--line); border-left: 8px solid #9ecae4; background: #f4f9fc; }
 .slip-row.slip-back { border-left-color: #0e6fa8; background: #e5f3fb; }
@@ -205,30 +207,30 @@ strong.with-money, h2.with-money, h3.with-money, p.with-money { display: flex; f
 .intro-read a { text-underline-offset: 3px; }
 .sponsors h3 { font-size: 22px; margin: 16px 0 8px; }
 .sponsors .person-card { margin-top: 0; }
-html[data-theme="dark"] .vote-row.is-on,
-html[data-theme="dark"] .person-row.is-on,
-html[data-theme="dark"] .floor-row.is-on,
-html[data-theme="dark"] .intro-row.is-on { background: #3a3228; }
-html[data-theme="dark"] .slip-row { background: #1c2a33; }
-html[data-theme="dark"] .slip-row.slip-back { background: #163044; }
-html[data-theme="dark"] .slip-row.is-on,
-html[data-theme="dark"] .slip-row.slip-note.is-on { background: #3a3228; }
-html[data-theme="dark"] .party-d { color: #9ec0e8; }
-html[data-theme="dark"] .party-r { color: #e7a3a3; }
-html[data-theme="dark"] .party-i { color: #9dcaa8; }
-html[data-theme="dark"] .party-o { color: #d4c09a; }
-html[data-theme="dark"] .portrait,
-html[data-theme="dark"] .portrait-letter { background: #3a342c; color: var(--ink); }
-html[data-theme="dark"] .vote-bar,
-html[data-theme="dark"] .mini-bar { background: var(--chip); }
-html[data-theme="dark"] #congress-map path { fill: #ebe4d6; stroke: #1c1915; }
-html[data-theme="dark"] #congress-map path.is-on { stroke: #1c1915; }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .vote-row.is-on,
+html:is([data-theme="dark"], [data-theme$="-dark"]) .person-row.is-on,
+html:is([data-theme="dark"], [data-theme$="-dark"]) .floor-row.is-on,
+html:is([data-theme="dark"], [data-theme$="-dark"]) .intro-row.is-on { background: #3a3228; }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .slip-row { background: #1c2a33; }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .slip-row.slip-back { background: #163044; }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .slip-row.is-on,
+html:is([data-theme="dark"], [data-theme$="-dark"]) .slip-row.slip-note.is-on { background: #3a3228; }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .party-d { color: #9ec0e8; }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .party-r { color: #e7a3a3; }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .party-i { color: #9dcaa8; }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .party-o { color: #d4c09a; }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .portrait,
+html:is([data-theme="dark"], [data-theme$="-dark"]) .portrait-letter { background: #3a342c; color: var(--ink); }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .vote-bar,
+html:is([data-theme="dark"], [data-theme$="-dark"]) .mini-bar { background: var(--chip); }
+html:is([data-theme="dark"], [data-theme$="-dark"]) #congress-map path { fill: var(--map); stroke: var(--map-ink); }
+html:is([data-theme="dark"], [data-theme$="-dark"]) #congress-map path.is-on { stroke: var(--bar); }
 @media (max-width: 800px) {
   body { padding-bottom: 168px; }
   .party-line { grid-template-columns: 1fr; gap: 4px; }
   .person-card { grid-template-columns: 72px minmax(0, 1fr); }
   .portrait-lg, .portrait-letter.portrait-lg { width: 72px; height: 90px; font-size: 28px; }
-  #congress-find, #search-results, #taxpayer, #floor, #introduced, #roll-calls, #senate-votes, #blue-slips, #senators, #open-vote, #open-intro, #open-slip { scroll-margin-top: 240px; }
+  #congress-find, #search-results, #taxpayer, #floor, #introduced, #roll-calls, #senate-votes, #blue-slips, #presidents, #senators, #open-vote, #open-intro, #open-slip { scroll-margin-top: 240px; }
 }
 </style>
 
@@ -241,7 +243,7 @@ html[data-theme="dark"] #congress-map path.is-on { stroke: #1c1915; }
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://leaders.vote/house.html">
 <meta property="og:title" content="Leaders.vote · The House">
-<meta property="og:description" content="House roll calls for the 119th Congress, the yes and no of each member, office contact, the latest House floor list, and the blue slips for federal judges. Green is a yes. Rose is a no. Gold is scheduled. Blue is a blue slip.">
+<meta property="og:description" content="House roll calls for the 119th Congress, the yes and no of each member, office contact, the latest House floor list, the blue slips for federal judges, and the living presidents. Green is a yes. Rose is a no. Gold is scheduled. Blue is a blue slip.">
 <meta property="og:image" content="https://leaders.vote/social/house-ad.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="2160">
@@ -249,10 +251,10 @@ html[data-theme="dark"] #congress-map path.is-on { stroke: #1c1915; }
 <meta property="og:image:alt" content="Leaders.vote The House. A photograph of the House chamber, and the colors for yes, no, and the floor list. Green is a yes. Rose is a no. Gold is on the floor list.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Leaders.vote · The House">
-<meta name="twitter:description" content="House roll calls for the 119th Congress, the yes and no of each member, office contact, the latest House floor list, and the blue slips for federal judges. Green is a yes. Rose is a no. Gold is scheduled. Blue is a blue slip.">
+<meta name="twitter:description" content="House roll calls for the 119th Congress, the yes and no of each member, office contact, the latest House floor list, the blue slips for federal judges, and the living presidents. Green is a yes. Rose is a no. Gold is scheduled. Blue is a blue slip.">
 <meta name="twitter:image" content="https://leaders.vote/social/house-ad.png">
 <link rel="icon" href="https://leaders.vote/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://leaders.vote/#website","name":"Leaders.vote","url":"https://leaders.vote/","description":"Leaders.vote is an independent, nonpartisan voter guide for every U.S. state on November 3, 2026. Candidates, offices, sample ballots, and unofficial results. No endorsements.","inLanguage":"en","publisher":{"@id":"https://leaders.vote/#publisher"}},{"@type":"Organization","@id":"https://leaders.vote/#publisher","name":"Leaders.vote","url":"https://leaders.vote/","description":"Independent, nonpartisan voter guide. Not a campaign and not a government site.","logo":{"@type":"ImageObject","url":"https://leaders.vote/favicon.svg"}},{"@type":"WebPage","@id":"https://leaders.vote/house.html#webpage","url":"https://leaders.vote/house.html","name":"Leaders.vote · The House","description":"House roll calls for the 119th Congress, the yes and no of each member, office contact, the latest House floor list, and the blue slips for federal judges. Green is a yes. Rose is a no. Gold is scheduled. Blue is a blue slip.","isPartOf":{"@id":"https://leaders.vote/#website"},"breadcrumb":{"@id":"https://leaders.vote/house.html#breadcrumb"},"inLanguage":"en","isAccessibleForFree":true,"primaryImageOfPage":{"@type":"ImageObject","url":"https://leaders.vote/social/house-ad.png"}},{"@type":"BreadcrumbList","@id":"https://leaders.vote/house.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Leaders.vote","item":"https://leaders.vote/"},{"@type":"ListItem","position":2,"name":"The House","item":"https://leaders.vote/house.html"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://leaders.vote/#website","name":"Leaders.vote","url":"https://leaders.vote/","description":"Leaders.vote is an independent, nonpartisan voter guide for every U.S. state on November 3, 2026. Candidates, offices, sample ballots, and unofficial results. No endorsements.","inLanguage":"en","publisher":{"@id":"https://leaders.vote/#publisher"}},{"@type":"Organization","@id":"https://leaders.vote/#publisher","name":"Leaders.vote","url":"https://leaders.vote/","description":"Independent, nonpartisan voter guide. Not a campaign and not a government site.","logo":{"@type":"ImageObject","url":"https://leaders.vote/favicon.svg"}},{"@type":"WebPage","@id":"https://leaders.vote/house.html#webpage","url":"https://leaders.vote/house.html","name":"Leaders.vote · The House","description":"House roll calls for the 119th Congress, the yes and no of each member, office contact, the latest House floor list, the blue slips for federal judges, and the living presidents. Green is a yes. Rose is a no. Gold is scheduled. Blue is a blue slip.","isPartOf":{"@id":"https://leaders.vote/#website"},"breadcrumb":{"@id":"https://leaders.vote/house.html#breadcrumb"},"inLanguage":"en","isAccessibleForFree":true,"primaryImageOfPage":{"@type":"ImageObject","url":"https://leaders.vote/social/house-ad.png"}},{"@type":"BreadcrumbList","@id":"https://leaders.vote/house.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Leaders.vote","item":"https://leaders.vote/"},{"@type":"ListItem","position":2,"name":"The House","item":"https://leaders.vote/house.html"}]}]}</script>
 <!-- /seo -->
 </head>
 <body>
@@ -310,11 +312,11 @@ html[data-theme="dark"] #congress-map path.is-on { stroke: #1c1915; }
   <div class="wrap hero">
     <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
     <p class="kicker">United States · 119th Congress</p>
-    <p class="census-topic"><a href="#floor">Floor list</a> · <a href="#taxpayer">Taxpayer money</a> · <a href="#introduced">Introduced</a> · <a href="#roll-calls">Roll calls</a> · <a href="#senate-votes">Senate roll calls</a> · <a href="#blue-slips">Blue slips</a> · <a href="#senators">Senators</a></p>
+    <p class="census-topic"><a href="#floor">Floor list</a> · <a href="#taxpayer">Taxpayer money</a> · <a href="#introduced">Introduced</a> · <a href="#roll-calls">Roll calls</a> · <a href="#senate-votes">Senate roll calls</a> · <a href="#blue-slips">Blue slips</a> · <a href="#presidents">Presidents</a> · <a href="#senators">Senators</a></p>
     <h1>The House.</h1>
     <p class="deck">What the House voted on, who voted yes, who voted no, and how to reach the member. Bills and resolutions introduced in this Congress are listed too, with a portrait of the person who introduced each one. The floor list is the latest week the House has published. A roll call published later is added while this page is open.</p>
     <p class="deck">The <a href="https://live.house.gov/">House floor</a> is live on FloorCast when the House is in session. Each roll call links to that day's floor recording. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's channel</a> posts a floor video when one is published.</p>
-    <p class="deck">Under a roll call, a short account says what the measure does. Read the full summary on this page, or read the full bill or the full resolution. When a measure names taxpayer money, the amount is marked beside the title. A paler brass mark is a smaller amount. A deeper bronze mark is a larger amount. Those measures are listed together, largest amount first. The bar at the bottom of the screen is navy, with a red stripe and a white stripe. On a phone, the top bar and that bar step aside when the page is still, and they return when you scroll. Ink returns to the top. Teal opens the search. Brass opens taxpayer money, the same brass as the mark beside a title. Gold opens the floor list. Parchment opens bills that were introduced. A green and rose edge opens a roll call. Blue opens the blue slips. A deeper blue means both home-state senators returned the paper for a district judge. A paler blue means that return is not on this record. The portrait tone opens the senators.</p>
+    <p class="deck">Under a roll call, a short account says what the measure does. Read the full summary on this page, or read the full bill or the full resolution. When a measure names taxpayer money, the amount is marked beside the title. A paler brass mark is a smaller amount. A deeper bronze mark is a larger amount. Those measures are listed together, largest amount first. The bar at the bottom of the screen matches the theme. On Day it is navy, with a red stripe and a white stripe. On a phone, the top bar and that bar step aside when the page is still, and they return when you scroll. Ink returns to the top. Teal opens the search. Brass opens taxpayer money, the same brass as the mark beside a title. Gold opens the floor list. Parchment opens bills that were introduced. A green and rose edge opens a roll call. Blue opens the blue slips. A deeper blue means both home-state senators returned the paper for a district judge. A paler blue means that return is not on this record. The portrait tone opens the presidents and the senators.</p>
     <div class="result-legend" id="congress-legend">
       <span><i class="swatch yes-scale"></i> Yes. A darker green is a larger yes share.</span>
       <span><i class="swatch no-scale"></i> No. A darker rose is a larger no share.</span>
@@ -422,6 +424,12 @@ html[data-theme="dark"] #congress-map path.is-on { stroke: #1c1915; }
       <div id="open-slip"></div>
     </section>
 
+    <section id="presidents">
+      <h2>Presidents</h2>
+      <p class="deck">These are the living presidents. The current president is first. A former president stays on this list. The name, the party, and the term are copied from the <a href="https://unitedstates.github.io/congress-legislators/executive.json">congress-legislators executive file</a>. A person is left off when <a href="https://www.wikidata.org/">Wikidata</a> records a date of death. The current president’s office site is the White House. The executive file does not list a phone number. A state filter does not hide this list.</p>
+      <div id="president-list"></div>
+    </section>
+
     <section id="senators">
       <h2>Senators</h2>
       <p class="deck">The phone, office, and website are the ones on file for the current Senate. A senator who left office after casting a vote in this Congress is marked former.</p>
@@ -431,8 +439,8 @@ html[data-theme="dark"] #congress-map path.is-on { stroke: #1c1915; }
 </main>
 <footer>
   <div class="wrap">
-    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Green is a yes. A darker green is a larger yes share. Rose is a no. A darker rose is a larger no share. Indigo is present. Stone is a member who did not vote. Gold is on the House floor list and has no roll call that week. A bar sits at the bottom of the screen. On a phone, the top bar and that bar step aside when the page is still, and they return when you scroll. The bar is navy, with a red stripe and a white stripe along the top. Ink returns to the top. Teal opens the search. Brass opens the measures that name taxpayer money. Gold opens the floor list. Parchment opens bills that were introduced. A green and rose edge opens House roll calls and Senate roll calls. Blue opens the blue slips. A deeper blue means both home-state senators returned the paper for a district judge. A paler blue means that return is not on this record. An outline is a circuit nomination: the slip is sent, and it does not decide the hearing. The portrait tone opens the senators. A brass mark beside a title is taxpayer money named in the measure. Paler brass is a smaller amount. Deeper bronze is a larger amount. Plum on the map is a tie between yes and no. A blue name is Democratic, a red name is Republican, and an olive or brown name is another party.</p>
-    <p>House roll calls are copied from the <a href="https://clerk.house.gov/evs">Clerk of the House</a> for 2025 and 2026. The question, the description, and the counts are the Clerk's. While this page is open it asks <a href="https://api.congress.gov/">Congress.gov</a> for a House roll call newer than that copy. The floor list is the latest week in the House file at <a href="https://docs.house.gov/floor/">docs.house.gov</a>. Office phone, room, and website are copied from the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators</a> file for the current Congress. Portraits are public-domain photographs from the Congressional Pictorial Directory, through the <a href="https://unitedstates.github.io/images/congress/225x275/">congress images</a> collection, and from the <a href="https://bioguide.congress.gov/">Biographical Directory</a> when that collection has no photograph. A floor recording is the House <a href="https://live.house.gov/">FloorCast</a> for the day of the roll call. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's YouTube channel</a> posts a floor video when one is published. A short account of a measure is the <a href="https://www.govinfo.gov/bulkdata/BILLSUM/119">Congressional Research Service summary</a> published by GovInfo. When that short account leads with dollar amounts, the amount and the office or program named with it are copied from that summary or from the measure's text on GovInfo. The line gives the largest amounts, not every amount in the measure. The full text is that measure's text page on <a href="https://www.congress.gov/">Congress.gov</a>. The sponsor is the member named in the <a href="https://www.govinfo.gov/bulkdata/BILLSTATUS/119">GovInfo bill status file</a>. Bills and resolutions that were introduced are copied from that same file. The introducer, the introduction date, the title, and the latest action are the file's. Senate roll calls are copied from <a href="https://voteview.com/data">Voteview</a>'s record of the Senate, because the <a href="https://www.senate.gov/legislative/votes_new.htm">Senate</a> site does not offer those files to this page. The question, the description, and each senator's yes or no are Voteview's. When the bill status file says the Senate passed a measure by unanimous consent, this page says so, because that action has no senator-by-senator vote. Blue slips are copied from the <a href="https://www.judiciary.senate.gov/nominations/judicial">Senate Judiciary Committee's list of judicial nominations</a>. While this page is open it asks <a href="https://api.congress.gov/">Congress.gov</a> for a judicial nomination newer than that copy. The committee does not publish each slip. For a district court, a hearing, a place on the Executive Calendar, or a confirmation is the public sign that both home-state senators returned the slip, because the committee does not take up that nomination unless both slips come back. A circuit nomination can move without that return, so a circuit hearing is not shown as a returned slip. A portrait of a nominee is a public judicial photograph from the <a href="https://free.law/projects/judge-pics/">Free Law Project</a> when that file has one, or a freely licensed photograph from <a href="https://www.wikipedia.org/">Wikipedia</a>. A letter is shown when neither file has a photograph.</p>
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Green is a yes. A darker green is a larger yes share. Rose is a no. A darker rose is a larger no share. Indigo is present. Stone is a member who did not vote. Gold is on the House floor list and has no roll call that week. A bar sits at the bottom of the screen. On a phone, the top bar and that bar step aside when the page is still, and they return when you scroll. The bar matches the theme. On Day it is navy, with a red stripe and a white stripe along the top. Ink returns to the top. Teal opens the search. Brass opens the measures that name taxpayer money. Gold opens the floor list. Parchment opens bills that were introduced. A green and rose edge opens House roll calls and Senate roll calls. Blue opens the blue slips. A deeper blue means both home-state senators returned the paper for a district judge. A paler blue means that return is not on this record. An outline is a circuit nomination: the slip is sent, and it does not decide the hearing. The portrait tone opens the presidents and the senators. A brass mark beside a title is taxpayer money named in the measure. Paler brass is a smaller amount. Deeper bronze is a larger amount. Plum on the map is a tie between yes and no. A blue name is Democratic, a red name is Republican, and an olive or brown name is another party.</p>
+    <p>House roll calls are copied from the <a href="https://clerk.house.gov/evs">Clerk of the House</a> for 2025 and 2026. The question, the description, and the counts are the Clerk's. While this page is open it asks <a href="https://api.congress.gov/">Congress.gov</a> for a House roll call newer than that copy. The floor list is the latest week in the House file at <a href="https://docs.house.gov/floor/">docs.house.gov</a>. Office phone, room, and website are copied from the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators</a> file for the current Congress. Portraits are public-domain photographs from the Congressional Pictorial Directory, through the <a href="https://unitedstates.github.io/images/congress/225x275/">congress images</a> collection, and from the <a href="https://bioguide.congress.gov/">Biographical Directory</a> when that collection has no photograph. A floor recording is the House <a href="https://live.house.gov/">FloorCast</a> for the day of the roll call. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's YouTube channel</a> posts a floor video when one is published. A short account of a measure is the <a href="https://www.govinfo.gov/bulkdata/BILLSUM/119">Congressional Research Service summary</a> published by GovInfo. When that short account leads with dollar amounts, the amount and the office or program named with it are copied from that summary or from the measure's text on GovInfo. The line gives the largest amounts, not every amount in the measure. The full text is that measure's text page on <a href="https://www.congress.gov/">Congress.gov</a>. The sponsor is the member named in the <a href="https://www.govinfo.gov/bulkdata/BILLSTATUS/119">GovInfo bill status file</a>. Bills and resolutions that were introduced are copied from that same file. The introducer, the introduction date, the title, and the latest action are the file's. Senate roll calls are copied from <a href="https://voteview.com/data">Voteview</a>'s record of the Senate, because the <a href="https://www.senate.gov/legislative/votes_new.htm">Senate</a> site does not offer those files to this page. The question, the description, and each senator's yes or no are Voteview's. When the bill status file says the Senate passed a measure by unanimous consent, this page says so, because that action has no senator-by-senator vote. Blue slips are copied from the <a href="https://www.judiciary.senate.gov/nominations/judicial">Senate Judiciary Committee's list of judicial nominations</a>. While this page is open it asks <a href="https://api.congress.gov/">Congress.gov</a> for a judicial nomination newer than that copy. The committee does not publish each slip. For a district court, a hearing, a place on the Executive Calendar, or a confirmation is the public sign that both home-state senators returned the slip, because the committee does not take up that nomination unless both slips come back. A circuit nomination can move without that return, so a circuit hearing is not shown as a returned slip. A portrait of a nominee is a public judicial photograph from the <a href="https://free.law/projects/judge-pics/">Free Law Project</a> when that file has one, or a freely licensed photograph from <a href="https://www.wikipedia.org/">Wikipedia</a>. A letter is shown when neither file has a photograph. Living presidents are copied from the <a href="https://unitedstates.github.io/congress-legislators/executive.json">congress-legislators executive file</a>. A person is left off when <a href="https://www.wikidata.org/">Wikidata</a> records a date of death. A portrait is a public-domain photograph from <a href="https://commons.wikimedia.org/">Wikimedia Commons</a> when that file has one.</p>
   </div>
 </footer>
 <nav class="jump" aria-label="On this page">
@@ -444,10 +452,11 @@ html[data-theme="dark"] #congress-map path.is-on { stroke: #1c1915; }
   <a class="jump-house" href="#roll-calls">Roll calls</a>
   <a class="jump-senate" href="#senate-votes">Senate roll calls</a>
   <a class="jump-slip" href="#blue-slips">Blue slips</a>
+  <a class="jump-people" href="#presidents">Presidents</a>
   <a class="jump-people" href="#senators">Senators</a>
 </nav>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
-<script src="congress.js?v=45"></script>
+<script src="congress.js?v=49"></script>
 </body>
 </html>

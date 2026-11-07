@@ -10,7 +10,7 @@
     return node;
   }
 
-  var BLEND_LINE = "The color mixes the votes reported in that place. The swatches are the colors in that mix. A row with no color is left out of the mix. A place with no votes stays beige. This does not call a race.";
+  var BLEND_LINE = "The color mixes the votes reported in that place. The swatches are the colors in that mix. A row with no color is left out of the mix. A place with no votes stays the land color. This does not call a race.";
 
   function blendOn() {
     try { return localStorage.getItem("leaders-blend") !== "0"; }
@@ -66,7 +66,10 @@
   }
 
   function tint(hex, amount) {
-    var chip = [235, 228, 214];
+    var rawMap = getComputedStyle(document.documentElement).getPropertyValue("--map").trim();
+    var chip = rawMap.charAt(0) === "#"
+      ? [parseInt(rawMap.slice(1, 3), 16), parseInt(rawMap.slice(3, 5), 16), parseInt(rawMap.slice(5, 7), 16)]
+      : [235, 228, 214];
     var rgb = hex.length === 4
       ? [parseInt(hex[1] + hex[1], 16), parseInt(hex[2] + hex[2], 16), parseInt(hex[3] + hex[3], 16)]
       : [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
@@ -276,7 +279,7 @@
     var rows = data.national || [];
     if (!rows.length) return;
     host.appendChild(el("h2", "", "Parties, counted across the whole country"));
-    host.appendChild(el("p", "sub", "These are the parties in this local election, in the Electoral Commission's order. The numbers add every municipality together. They are not a vote for president. A zero is a reported zero, so the map stays beige."));
+    host.appendChild(el("p", "sub", "These are the parties in this local election, in the Electoral Commission's order. The numbers add every municipality together. They are not a vote for president. A zero is a reported zero, so the map stays the land color."));
     var table = el("table", "totals");
     var head = el("tr");
     head.appendChild(el("th", "", "Party"));
@@ -304,7 +307,7 @@
     var rows = data.unmatched || [];
     if (!rows.length) return;
     host.appendChild(el("h2", "", "Reported, but not drawn"));
-    host.appendChild(el("p", "sub", "The Commission published these totals, and each one did not match a single municipality outline. They are listed here and left beige, instead of being placed on a guess."));
+    host.appendChild(el("p", "sub", "The Commission published these totals, and each one did not match a single municipality outline. They are listed here and left in the land color, instead of being placed on a guess."));
     rows.forEach(function (place) {
       var line = el("p", "note");
       var label = place.name || place.code || "Municipality";
@@ -325,17 +328,17 @@
     var place = null;
     (data.places || []).forEach(function (item) { if (item.slug === slug) place = item; });
     if (!place) {
-      if (status) status.textContent = "No vote total has been published for this council yet. On the country map it stays beige.";
+      if (status) status.textContent = "No vote total has been published for this council yet. On the country map it stays the land color.";
       return;
     }
     if (!(place.votes > 0)) {
-      if (status) status.textContent = "The Commission reports " + count(place.votes || 0) + " votes for this council. On the country map it stays beige.";
+      if (status) status.textContent = "The Commission reports " + count(place.votes || 0) + " votes for this council. On the country map it stays the land color.";
       return;
     }
     if (status) {
       status.textContent = place.leader
         ? place.leader + " has more reported votes than the others. That is a lead in the count, not a declared winner."
-        : "Votes are reported, and no single party is ahead. The map stays beige.";
+        : "Votes are reported, and no single party is ahead. The map stays the land color.";
     }
     if (!host) return;
     host.textContent = "";
@@ -409,4 +412,7 @@
   mountBlend(function () { if (latest) draw(latest); });
   load();
   setInterval(load, EVERY);
+  new MutationObserver(function () {
+    if (latest) paintMap(latest);
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();

@@ -4,7 +4,7 @@
   "status": "Superior Electoral Court file dated 25/10/2026 23:26:38. The file marks the presidential count finished. A state is colored only from the votes reported there. The court does not publish a candidate color, so the legend colors only tell the two people apart. This page does not declare a winner.",
   "strings": {
     "blank": "No votes reported",
-    "missing": "No presidential total has been published for this state yet. It stays beige."
+    "missing": "No presidential total has been published for this state yet. It stays the land color."
   },
   "tables": [
     {

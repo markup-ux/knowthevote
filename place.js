@@ -15,7 +15,7 @@
     return strings[key] || fallback;
   }
 
-  var BLEND_LINE = "The color mixes the votes reported in that place. The swatches are the colors in that mix. A row with no color is left out of the mix. A place with no votes stays beige. This does not call a race.";
+  var BLEND_LINE = "The color mixes the votes reported in that place. The swatches are the colors in that mix. A row with no color is left out of the mix. A place with no votes stays the land color. This does not call a race.";
 
   function blendOn() {
     try { return localStorage.getItem("leaders-blend") !== "0"; }
@@ -80,7 +80,10 @@
   }
 
   function tint(hex, amount) {
-    var chip = [235, 228, 214];
+    var rawMap = getComputedStyle(document.documentElement).getPropertyValue("--map").trim();
+    var chip = rawMap.charAt(0) === "#"
+      ? [parseInt(rawMap.slice(1, 3), 16), parseInt(rawMap.slice(3, 5), 16), parseInt(rawMap.slice(5, 7), 16)]
+      : [235, 228, 214];
     var rgb = hex.length === 4
       ? [parseInt(hex[1] + hex[1], 16), parseInt(hex[2] + hex[2], 16), parseInt(hex[3] + hex[3], 16)]
       : [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
@@ -300,14 +303,14 @@
     var place = null;
     (data.places || []).forEach(function (item) { if (item.slug === slug) place = item; });
     if (!place) {
-      if (status) status.textContent = text(data, "missing", "No vote total has been published for this place yet. It stays beige.");
+      if (status) status.textContent = text(data, "missing", "No vote total has been published for this place yet. It stays the land color.");
       return;
     }
     if (!(place.votes > 0)) {
-      if (status) status.textContent = text(data, "zero", "The reported total is zero. The map stays beige.");
+      if (status) status.textContent = text(data, "zero", "The reported total is zero. The map stays the land color.");
       return;
     }
-    if (status) status.textContent = place.leader ? place.summary : text(data, "tie", "Votes are reported, and no one is strictly ahead. The map stays beige.");
+    if (status) status.textContent = place.leader ? place.summary : text(data, "tie", "Votes are reported, and no one is strictly ahead. The map stays the land color.");
     if (!host) return;
     host.textContent = "";
     addTable(host, "", "", place.rows, "Name");
@@ -365,4 +368,7 @@
   mountBlend(function () { if (latest) draw(latest); });
   load();
   setInterval(load, EVERY);
+  new MutationObserver(function () {
+    if (latest) paintMap(latest);
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();

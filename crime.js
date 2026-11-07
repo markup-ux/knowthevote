@@ -1,7 +1,10 @@
 (function () {
-  var CHIP = "#ebe4d6";
+  function mapHex() {
+    var raw = getComputedStyle(document.documentElement).getPropertyValue("--map").trim();
+    return raw.charAt(0) === "#" ? raw.slice(0, 7) : "#ebe4d6";
+  }
   function mapStyle() {
-    return document.documentElement.getAttribute("data-theme") === "dark"
+    return /dark$/.test(document.documentElement.getAttribute("data-theme") || "")
       ? "https://tiles.openfreemap.org/styles/dark"
       : "https://tiles.openfreemap.org/styles/liberty";
   }
@@ -10,15 +13,18 @@
     map.__style = mapStyle();
     new MutationObserver(function () {
       var next = mapStyle();
-      if (next === map.__style) return;
-      map.__style = next;
-      map.setStyle(next);
-      map.once("style.load", redraw);
+      if (next !== map.__style) {
+        map.__style = next;
+        map.setStyle(next);
+        map.once("style.load", redraw);
+        return;
+      }
+      redraw();
     }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   }
 
   function dotRing() {
-    return document.documentElement.getAttribute("data-theme") === "dark" ? "#f4f7fb" : "#1c1915";
+    return /dark$/.test(document.documentElement.getAttribute("data-theme") || "") ? "#f4f7fb" : "#1c1915";
   }
   var INK = ["#e8eaf6", "#c5cae9", "#7986cb", "#3949ab", "#1a237e"];
   var SEX_INK = ["#fde7f0", "#f4b6d0", "#e48ab0", "#ad1457", "#6a0d3a"];
@@ -196,7 +202,7 @@
       var state = data.states.filter(function (item) { return item.code === code; })[0];
       path.classList.toggle("is-on", !!selected && selected.code === code);
       if (!state) {
-        path.style.fill = CHIP;
+        path.style.fill = mapHex();
         return;
       }
       var shade = shadeOf(rate(measureCount(state), measurePop(state)), rates, ink);
@@ -576,7 +582,7 @@
       var state = data.states.filter(function (item) { return item.code === code; })[0];
       path.classList.toggle("is-on", !!sexSelected && sexSelected.code === code);
       if (!state) {
-        path.style.fill = CHIP;
+        path.style.fill = mapHex();
         return;
       }
       var shade = shadeOf(sexValue(state), values, ink);

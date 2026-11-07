@@ -45,6 +45,8 @@
   var memberIndex = {};
   var selected = "";
   var pinned = "";
+  var presidents = [];
+  var openPresident = "";
   var party = "all";
   var stateCode = "all";
   var voteSide = "all";
@@ -807,6 +809,7 @@
       add(vote.result);
     });
     data.members.forEach(function (member) { add(memberBlob(member)); });
+    presidents.forEach(function (person) { add(presidentBlob(person)); });
     (data.floor && data.floor.items || []).forEach(function (item) {
       add(item.title);
       add(item.legis);
@@ -1398,12 +1401,17 @@
     var introShown = intros.slice(0, searchIntroLimit);
     var peopleShown = people.slice(0, searchPeopleLimit);
     var slipRows = slips.filter(slipPasses);
+    var presidentHits = matchedPresidents();
+    if (presidentHits.length) count += " " + presidentHits.length + (presidentHits.length === 1 ? " president." : " presidents.");
     if (people.length) count += " " + people.length + (people.length === 1 ? " member." : " members.");
     if (intros.length) count += " " + intros.length + " introduced.";
     if (slipRows.length) count += " " + slipRows.length + (slipRows.length === 1 ? " blue slip." : " blue slips.");
     if (intros.length > introShown.length) count += " The first " + introShown.length + " introductions are listed.";
     if (spellNote) count = spellNote + " " + count;
     countEl.textContent = count;
+    presidentHits.forEach(function (person) {
+      list.appendChild(presidentRow(person));
+    });
     peopleShown.forEach(function (member) {
       var row = el("button", "person-row" + (member[0] === searchPerson ? " is-on" : ""));
       row.type = "button";
@@ -1659,7 +1667,7 @@
     });
 
     box.appendChild(mapSlot);
-    box.appendChild(el("p", "sub", "A green state cast more yes votes than no votes. A rose state cast more no votes. A darker color is a larger share of that state's yes and no votes. Plum is a tie. Beige means no yes or no was recorded there."));
+    box.appendChild(el("p", "sub", "A green state cast more yes votes than no votes. A rose state cast more no votes. A darker color is a larger share of that state's yes and no votes. Plum is a tie. The land color means no yes or no was recorded there."));
     paintMap(vote);
 
     if (pinned) {
@@ -1773,7 +1781,14 @@
     });
   }
 
+  var mapVote = null;
+  function mapHex() {
+    var raw = getComputedStyle(document.documentElement).getPropertyValue("--map").trim();
+    return raw.charAt(0) === "#" ? raw.slice(0, 7) : "#ebe4d6";
+  }
+
   function paintMap(vote) {
+    mapVote = vote;
     var svg = mapSlot.querySelector("svg");
     if (!svg) return;
     var tally = {};
@@ -1787,7 +1802,7 @@
       var code = path.getAttribute("data-code");
       var row = tally[code] || { Y: 0, N: 0, P: 0, X: 0 };
       var yn = row.Y + row.N;
-      var fill = "#ebe4d6";
+      var fill = mapHex();
       var label = stateName(code) + ". No yes or no on this roll call.";
       if (yn && row.Y === row.N) {
         fill = "#6a4a78";
@@ -1834,6 +1849,101 @@
       data.votes.forEach(function (item) { if (item.id === selected) vote = item; });
       if (vote) paintMap(vote);
     }).catch(function () { mapReady = false; });
+  }
+
+  function presidentNumbers(person) {
+    var numbers = person.numbers || [];
+    var words = numbers.map(ordinal);
+    if (words.length < 2) return (words[0] || "") + " President";
+    if (words.length === 2) return words[0] + " and " + words[1] + " President";
+    return words.slice(0, -1).join(", ") + ", and " + words[words.length - 1] + " President";
+  }
+
+  function presidentBlob(person) {
+    return [person.name, partyWord(person.party), "president", person.current ? "white house" : "", presidentNumbers(person), person.line || ""].join(" ");
+  }
+
+  function matchedPresidents() {
+    var q = interpretedQuery();
+    return presidents.filter(function (person) {
+      if (!passesParty([null, null, person.party])) return false;
+      if (!q) return true;
+      return textMatches(presidentBlob(person), q);
+    });
+  }
+
+  function presidentFace(person, large) {
+    var letter = (person.name || "?").trim().charAt(0).toUpperCase() || "?";
+    var steps = [];
+    if (person.photo) steps.push(person.photo);
+    if (person.bioguide) {
+      steps.push("https://unitedstates.github.io/images/congress/225x275/" + person.bioguide + ".jpg");
+      steps.push("https://bioguide.congress.gov/bioguide/photo/" + person.bioguide.charAt(0) + "/" + person.bioguide + ".jpg");
+    }
+    var klass = large ? "portrait portrait-lg" : "portrait";
+    if (!steps.length) return el("span", klass.replace("portrait", "portrait-letter"), letter);
+    var img = document.createElement("img");
+    img.className = klass;
+    img.alt = "Portrait of " + person.name;
+    img.loading = "lazy";
+    img.decoding = "async";
+    var step = 0;
+    img.src = steps[0];
+    img.addEventListener("error", function () {
+      step += 1;
+      if (step < steps.length) img.src = steps[step];
+      else img.replaceWith(el("span", klass.replace("portrait", "portrait-letter"), letter));
+    });
+    return img;
+  }
+
+  function presidentCard(person) {
+    var card = el("div", "person-card");
+    card.id = "president-card";
+    card.appendChild(presidentFace(person, true));
+    var copy = el("div", "person-copy");
+    var name = el("h3", "");
+    name.appendChild(el("span", partyClass(person.party), person.name));
+    copy.appendChild(name);
+    if (person.line) copy.appendChild(el("p", "", person.line));
+    if (person.url && person.url.indexOf("https://") === 0) {
+      var sites = el("p", "");
+      sites.appendChild(link(person.url, host(person.url)));
+      copy.appendChild(sites);
+    } else {
+      copy.appendChild(el("p", "note", "No office website is in the executive file for this name."));
+    }
+    card.appendChild(copy);
+    return card;
+  }
+
+  function presidentRow(person) {
+    var row = el("button", "person-row" + (person.id === openPresident ? " is-on" : ""));
+    row.type = "button";
+    row.setAttribute("data-president", person.id);
+    row.appendChild(presidentFace(person, false));
+    var copy = el("div", "");
+    copy.appendChild(el("strong", partyClass(person.party), person.name));
+    var meta = [partyWord(person.party), presidentNumbers(person)];
+    if (person.current) meta.push("In office");
+    copy.appendChild(el("p", "person-meta", meta.join(" · ")));
+    row.appendChild(copy);
+    return row;
+  }
+
+  function renderPresidents() {
+    var list = document.getElementById("president-list");
+    if (!list) return;
+    list.innerHTML = "";
+    var people = matchedPresidents();
+    if (!people.length) {
+      list.appendChild(el("p", "note", presidents.length ? "No president matches this party or search." : "The president file did not load."));
+      return;
+    }
+    people.forEach(function (person) {
+      list.appendChild(presidentRow(person));
+      if (person.id === openPresident) list.appendChild(presidentCard(person));
+    });
   }
 
   function renderSenators() {
@@ -2478,6 +2588,7 @@
     renderSenateVotes();
     renderSenateDetail();
     renderSlips();
+    renderPresidents();
     renderSenators();
     loadMap();
   }
@@ -2493,6 +2604,7 @@
     renderSenateVotes();
     renderSenateDetail();
     renderSlips();
+    renderPresidents();
     renderSenators();
   }
 
@@ -2787,6 +2899,14 @@
         renderSearchPanel();
         return;
       }
+      var president = event.target.closest("button[data-president]");
+      if (president) {
+        openPresident = president.getAttribute("data-president");
+        renderPresidents();
+        var section = document.getElementById("presidents");
+        if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
       var person = event.target.closest("button[data-person]");
       if (person) {
         searchPerson = person.getAttribute("data-person");
@@ -2840,6 +2960,13 @@
       }
       var button = event.target.closest("button[data-slip]");
       if (button) chooseSlip(button.getAttribute("data-slip"), true);
+    });
+    document.getElementById("president-list").addEventListener("click", function (event) {
+      var button = event.target.closest("button[data-president]");
+      if (!button) return;
+      var id = button.getAttribute("data-president");
+      openPresident = openPresident === id ? "" : id;
+      renderPresidents();
     });
     document.getElementById("senate-list").addEventListener("click", function (event) {
       var button = event.target.closest("button[data-vote]");
@@ -2910,7 +3037,15 @@
               return { slips: [] };
             }).then(function (extraSlips) {
               slips = (extraSlips && extraSlips.slips) || [];
-              return ready;
+              return fetch("congress/presidents.json?v=1").then(function (response) {
+                if (!response.ok) return { people: [] };
+                return response.json();
+              }).catch(function () {
+                return { people: [] };
+              }).then(function (extraPresidents) {
+                presidents = (extraPresidents && extraPresidents.people) || [];
+                return ready;
+              });
             });
           });
         });
@@ -2943,4 +3078,7 @@
       if (history.pushState) history.pushState(null, "", "#" + id);
     });
   });
+  new MutationObserver(function () {
+    if (mapVote) paintMap(mapVote);
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();

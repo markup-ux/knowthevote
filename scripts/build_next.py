@@ -345,7 +345,7 @@ def build_poland():
     if len(party_at) < 5:
         raise RuntimeError("Poland file has no committee columns")
     summary = "%(short)s has more list votes than the other committees. A list vote is a vote for that committee's candidates in this voivodeship. The Commission's file has no color code, so the mark is only there to tell committees apart. This site does not declare a result."
-    tie = "List votes are reported, and the top committees are tied. The map stays beige."
+    tie = "List votes are reported, and the top committees are tied. The map stays the land color."
     rows_by_key = {}
     included = True
     for row in rows[1:]:
@@ -410,7 +410,7 @@ def build_czechia():
     require_labels(shapes, {b.norm(label) for label in CZ_NAMES.values()})
     root = ET.fromstring(b.fetch(CZ_URL))
     summary = "%(short)s has more list votes than the other parties. A list vote is a vote for that party's candidates in this region. The Statistical Office file has no color code, so the mark is only there to tell parties apart. This site does not declare a result."
-    tie = "List votes are reported, and the top parties are tied. The map stays beige."
+    tie = "List votes are reported, and the top parties are tied. The map stays the land color."
     rows_by_key = {}
     finished = True
     for kraj in root.iter():
@@ -535,7 +535,7 @@ def build_spain():
     day = max(item[0] for item in vote_rows)
     pretty = datetime.strptime(day, "%Y-%m-%d").strftime("%d %B %Y").lstrip("0")
     summary = "%(short)s has more Congress votes than the other lists. This community's number adds the ministry's province columns. The ministry file has no color code, so the mark is only there to tell lists apart. This site does not declare a result."
-    tie = "Congress votes are reported, and the top lists are tied. The map stays beige."
+    tie = "Congress votes are reported, and the top lists are tied. The map stays the land color."
     rows_by_key = {}
     summed = {code: 0 for _, code in provinces}
     for _, party, cells in vote_rows:
@@ -606,7 +606,7 @@ def build_france():
     if not groups:
         raise RuntimeError("France file has no nuance columns")
     summary = "%(short)s has more first-round votes than the other groups. A nuance is the ministry's code for a group of candidates. The ministry file has no color code, so the mark is only there to tell groups apart. This site does not declare a result."
-    tie = "First-round votes are reported, and the top groups are tied. The map stays beige."
+    tie = "First-round votes are reported, and the top groups are tied. The map stays the land color."
     rows_by_key = {}
     for row in rows[1:]:
         if not row or not row[label_at].strip():
@@ -720,7 +720,7 @@ def build_italy():
     rows_by_key = {}
     for area, parties in grouped.items():
         summary = "%(short)s has the largest circoscrizione figure. That figure is the list's valid votes plus the votes the Chamber assigns to the list in each circoscrizione. " + notes[area] + " The names are the abbreviations printed in the Chamber file. The file has no color code, so the mark is only there to tell lists apart. This site does not declare a result."
-        bucket = place_bucket(summary, "List votes are reported, and the top lists are tied. The map stays beige.")
+        bucket = place_bucket(summary, "List votes are reported, and the top lists are tied. The map stays the land color.")
         add_parties(bucket, parties, it_color)
         rows_by_key[area] = bucket
     publish(
@@ -847,7 +847,7 @@ def build_canada():
     pretty = canada_date()
     parties = canada_parties()
     summary = "%(short)s has more valid votes than the other affiliations. A valid vote is a ballot counted for that affiliation. Independent is every independent candidate added together, not one person. No Affiliation is its own row. The table has no color code, so the mark is only there to tell affiliations apart. This site does not declare a result."
-    tie = "Valid votes are reported, and the top affiliations are tied. The map stays beige."
+    tie = "Valid votes are reported, and the top affiliations are tied. The map stays the land color."
     rows_by_key = {}
     for index, (_abbr, name) in enumerate(CA_PLACES):
         bucket = place_bucket(summary, tie)

@@ -6,7 +6,10 @@
     trip: document.getElementById("trip-year"),
     date: document.getElementById("date-year"),
     gpa: document.getElementById("gpa-year"),
-    pet: document.getElementById("pet-year")
+    pet: document.getElementById("pet-year"),
+    job: document.getElementById("job-year"),
+    aid: document.getElementById("aid-year"),
+    home: document.getElementById("home-year")
   };
   if (!sliders.gas) return;
 
@@ -54,15 +57,44 @@
     2024: { n: 13128, href: "https://www.childcareaware.org/price-landscape24/", name: "Child Care Aware, 2024 price of care" },
     2025: { n: 13184, href: "https://info.childcareaware.org/price-and-supply-2025", name: "Child Care Aware, 2025 price of care" }
   };
+  var petReport = "https://www.petfoodprocessing.net/articles/19123-us-pet-food-treat-industry-amasses-65-billion-in-sales";
   var pets = {
-    2010: 480, 2011: 502, 2012: 522, 2013: 460, 2014: 507, 2015: 528,
-    2016: 583, 2017: 710, 2018: 662, 2019: 681, 2020: 690, 2021: 770,
-    2022: 741, 2023: 876, 2024: 880, 2025: 997
+    2023: { sales: 147e9, homes: 82e6, href: petReport, name: "APPA 2025 State of the Industry" },
+    2024: { sales: 152e9, homes: 94e6, href: petReport, name: "APPA 2025 State of the Industry" },
+    2025: { sales: 158e9, homes: 95e6, href: "https://americanpetproducts.org/news/u.s.-pet-industry-reaches-158-billion-in-2025-poised-for-continued-growth-in-2026", name: "APPA, 2025 pet industry sales" }
+  };
+  var jobs = {
+    2012: 8.1, 2013: 7.4, 2014: 6.2, 2015: 5.3, 2016: 4.9, 2017: 4.4, 2018: 3.9,
+    2019: 3.7, 2020: 8.1, 2021: 5.3, 2022: 3.6, 2023: 3.6, 2024: 4.0, 2025: 4.3
+  };
+  var jobMonth = { year: 2026, month: "October", n: 4.1, priorMonth: "September", prior: 4.2 };
+  var aid = {
+    2023: { n: 20.9, people: "69.6 million" }
+  };
+  var home = {
+    2025: { count: 745652, pop: 341784857 }
+  };
+  var shelterDistricts = {
+    2026: [
+      { name: "Jamaica-St. Albans-Hollis", place: "Queens", people: 8369 },
+      { name: "Astoria-Queensbridge", place: "Queens", people: 4532 },
+      { name: "Ocean Hill-Brownsville", place: "Brooklyn", people: 3985 },
+      { name: "Midtown-Flatiron-Union Square", place: "Manhattan", people: 3140 },
+      { name: "East New York-Cypress Hills", place: "Brooklyn", people: 2957 }
+    ]
+  };
+  var snapTracts = {
+    2024: [
+      { tract: "Census Tract 6", neighborhood: "Chinatown-Two Bridges", place: "Manhattan", census: "New York County", snap: 2495, all: 5393, moe: 596 },
+      { tract: "Census Tract 393", neighborhood: "Belmont", place: "the Bronx", census: "Bronx County", snap: 2131, all: 3092, moe: 343 },
+      { tract: "Census Tract 342", neighborhood: "Coney Island-Sea Gate", place: "Brooklyn", census: "Kings County", snap: 2058, all: 2927, moe: 370 },
+      { tract: "Census Tract 175", neighborhood: "Concourse-Concourse Village", place: "the Bronx", census: "Bronx County", snap: 1955, all: 2975, moe: 517 },
+      { tract: "Census Tract 51", neighborhood: "Mott Haven-Port Morris", place: "the Bronx", census: "Bronx County", snap: 1951, all: 2930, moe: 379 }
+    ]
   };
   var gasLive = null;
   var gasFromBls = {};
   var spendFromBls = {};
-  var petFromBls = {};
   var gpas = { 1990: 2.68, 1994: 2.79, 1998: 2.90, 2000: 2.94, 2005: 2.98, 2009: 3.00, 2019: 3.11 };
   var gpaYears = [1990, 1994, 1998, 2000, 2005, 2009, 2019];
   var cards = {
@@ -72,9 +104,18 @@
     trip: document.querySelector(".life-trip"),
     date: document.querySelector(".life-date"),
     gpa: document.querySelector(".life-gpa"),
-    pet: document.querySelector(".life-pet")
+    pet: document.querySelector(".life-pet"),
+    job: document.querySelector(".life-job"),
+    aid: document.querySelector(".life-aid"),
+    home: document.querySelector(".life-home")
   };
 
+  function rate(n, digits) {
+    return n.toLocaleString("en-US", { minimumFractionDigits: digits, maximumFractionDigits: digits }) + "%";
+  }
+  function count(n) {
+    return n.toLocaleString("en-US");
+  }
   function money(n, digits) {
     return n.toLocaleString("en-US", {
       style: "currency",
@@ -128,6 +169,13 @@
     if (key === "pet") return sortedKeys(pets);
     if (key === "trip") return sortedKeys(trips);
     if (key === "date") return sortedKeys(dates);
+    if (key === "job") {
+      var jobYears = sortedKeys(jobs);
+      if (jobYears.indexOf(jobMonth.year) < 0) jobYears.push(jobMonth.year);
+      return jobYears;
+    }
+    if (key === "aid") return sortedKeys(snapTracts);
+    if (key === "home") return sortedKeys(shelterDistricts);
     return gpaYears.filter(function (y) { return gpas[y] != null; });
   }
   function atPresent(key, year) {
@@ -188,35 +236,193 @@
     link("care-src", row.href, row.name);
     document.getElementById("care-viz").setAttribute("aria-label", "In " + year + " the national average price of child care was " + money(row.n, 0) + ", on a scale from 0 to 15,000 dollars.");
   }
+  function petAverage(row) {
+    return Math.round(row.sales / row.homes);
+  }
   function showPet(year) {
     stamp("pet", year);
     var card = cards.pet;
-    var amount = pets[year];
+    var row = pets[year];
     var past = document.getElementById("pet-past");
     var prior = previousYear(yearList("pet"), year);
-    if (amount == null) {
-      empty(card, "pet-num", "spent on pets, per consumer unit", "pet-what", "The Consumer Expenditure Survey has not published pet spending for " + year + ".");
+    if (!row) {
+      empty(card, "pet-num", "per household that owns a pet", "pet-what", "A pet-owning household figure has not been published for " + year + ".");
       document.getElementById("pet-track").style.setProperty("--fill", "0%");
       past.hidden = true;
       document.getElementById("pet-key").textContent = "";
       return;
     }
+    var amount = petAverage(row);
     card.classList.remove("is-empty");
     text("pet-num", money(amount, 0));
-    text("pet-unit", "spent on pets in " + year + ", per consumer unit");
-    document.getElementById("pet-track").style.setProperty("--fill", (amount / 1500 * 100).toFixed(1) + "%");
+    text("pet-unit", "per household that owns a pet, " + year);
+    document.getElementById("pet-track").style.setProperty("--fill", (amount / 2500 * 100).toFixed(1) + "%");
     past.hidden = prior == null;
-    if (prior != null) past.style.left = (pets[prior] / 1500 * 100).toFixed(1) + "%";
-    document.getElementById("pet-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>" + (prior == null ? "" : '<span><i class="dot past"></i> ' + money(pets[prior], 0) + " in " + prior + "</span>");
-    var what = "Bureau of Labor Statistics, Consumer Expenditure Survey. This is the average a household spent on pets in " + year + ", including food, supplies, medicine, services, and the veterinarian. Homes without a pet are in the average, so it is lower than what a pet-owning home spends. The bar runs from $0 to $1,500.";
-    if (prior != null) what += " The tick is " + money(pets[prior], 0) + ", " + prior + ".";
-    if (spend[year]) {
-      var pct = amount / spend[year] * 100;
-      what += " That is " + pct.toFixed(1) + "% of the " + money(spend[year], 0) + " an average household spent in " + year + ".";
-    }
+    if (prior != null) past.style.left = (petAverage(pets[prior]) / 2500 * 100).toFixed(1) + "%";
+    document.getElementById("pet-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>" + (prior == null ? "" : '<span><i class="dot past"></i> ' + money(petAverage(pets[prior]), 0) + " in " + prior + "</span>");
+    var what = "American Pet Products Association. In " + year + " the pet industry’s sales were $" + (row.sales / 1e9) + " billion, and " + (row.homes / 1e6) + " million households owned a pet. Dividing those figures gives " + money(amount, 0) + " per pet-owning household. Homes without a pet are not in that count. The bar runs from $0 to $2,500.";
+    if (prior != null) what += " The tick is " + money(petAverage(pets[prior]), 0) + ", " + prior + ".";
+    if (year === 2024) what += " More households owned a pet than in 2023, and industry sales rose by less, so this average is lower.";
     text("pet-what", what);
-    link("pet-src", "https://data.bls.gov/timeseries/CXUPETSLB0101M", "BLS consumer expenditures, pets");
-    document.getElementById("pet-viz").setAttribute("aria-label", "In " + year + " the average household spent " + money(amount, 0) + " on pets, on a scale from 0 to 1,500 dollars.");
+    link("pet-src", row.href, row.name);
+    document.getElementById("pet-viz").setAttribute("aria-label", "In " + year + ", " + money(amount, 0) + " of pet industry sales per household that owns a pet, on a scale from 0 to 2,500 dollars.");
+  }
+  function showJob(year) {
+    stamp("job", year);
+    var card = cards.job;
+    var past = document.getElementById("job-past");
+    var scale = 15;
+    var n;
+    var tickN = null;
+    var tickLabel = "";
+    var what;
+    var href = "https://www.bls.gov/cps/tables.htm";
+    var srcName = "BLS annual averages, Current Population Survey";
+    if (year === jobMonth.year) {
+      n = jobMonth.n;
+      tickN = jobMonth.prior;
+      tickLabel = rate(jobMonth.prior, 1) + " in " + jobMonth.priorMonth + " " + year;
+      text("job-unit", "of the labor force, " + jobMonth.month + " " + year);
+      what = "Bureau of Labor Statistics, Current Population Survey, seasonally adjusted. This is the unemployment rate for " + jobMonth.month + " " + year + ", the share of the labor force without a job and looking for one. It is not an average for the year. A " + year + " annual average has not been published. The bar runs from 0% to 15%. The tick is " + tickLabel + ".";
+      href = "https://fred.stlouisfed.org/series/UNRATE";
+      srcName = "FRED UNRATE, from BLS";
+      document.getElementById("job-key").innerHTML = '<span><i class="dot now"></i> ' + jobMonth.month + " " + year + '</span><span><i class="dot past"></i> ' + tickLabel + "</span>";
+    } else if (jobs[year] != null) {
+      n = jobs[year];
+      var prior = previousYear(yearList("job").filter(function (y) { return y !== jobMonth.year; }), year);
+      if (prior != null) {
+        tickN = jobs[prior];
+        tickLabel = rate(jobs[prior], 1) + " in " + prior;
+      }
+      text("job-unit", "of the labor force, annual average");
+      what = "Bureau of Labor Statistics, Current Population Survey. This is the annual average unemployment rate for " + year + ", the share of the labor force without a job and looking for one. The bar runs from 0% to 15%.";
+      if (prior != null) what += " The tick is " + tickLabel + ".";
+      if (year === 2025) what += " The 2025 average uses 11 months. BLS did not collect October 2025 during a lapse in federal funding, so this year is not strictly comparable with the other years.";
+      document.getElementById("job-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>" + (tickLabel ? '<span><i class="dot past"></i> ' + tickLabel + "</span>" : "");
+    } else {
+      empty(card, "job-num", "of the labor force", "job-what", "No unemployment rate is on this card for " + year + ".");
+      document.getElementById("job-track").style.setProperty("--fill", "0%");
+      past.hidden = true;
+      document.getElementById("job-key").textContent = "";
+      return;
+    }
+    card.classList.remove("is-empty");
+    text("job-num", rate(n, 1));
+    document.getElementById("job-track").style.setProperty("--fill", (n / scale * 100).toFixed(1) + "%");
+    past.hidden = tickN == null;
+    if (tickN != null) past.style.left = (tickN / scale * 100).toFixed(1) + "%";
+    text("job-what", what);
+    link("job-src", href, srcName);
+    document.getElementById("job-viz").setAttribute("aria-label", "In " + year + ", " + rate(n, 1) + " of the labor force was unemployed, on a scale from 0 to 15 percent." + (tickLabel ? " The tick is " + tickLabel + "." : ""));
+  }
+  function showAid(year) {
+    stamp("aid", year);
+    var card = cards.aid;
+    var rows = snapTracts[year];
+    var list = document.getElementById("snap-viz");
+    if (!rows || !rows.length) {
+      empty(card, "aid-num", "SNAP households", "aid-what", "This neighborhood list is not on this card for " + year + ".");
+      if (list) list.innerHTML = "";
+      document.getElementById("aid-key").textContent = "";
+      return;
+    }
+    var top = rows[0];
+    card.classList.remove("is-empty");
+    text("aid-num", count(top.snap));
+    text("aid-unit", top.neighborhood + ", the neighborhood with the most SNAP households");
+    document.getElementById("aid-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>";
+    showSnap(year);
+    var nation = aid[2023];
+    text("aid-what", "U.S. Department of Health and Human Services, Indicator 3 of the 25th Welfare Indicators and Risk Factors report. In 2023, " + rate(nation.n, 1) + " of the population, " + nation.people + " people, received or lived with a family member who received TANF, SNAP, or SSI in any amount at any point during the year. An average-month caseload is a different measure. TANF cash assistance, the program long called welfare, reached 0.8 percent of people, 2.7 million, in an average month of 2024. This report’s latest year for that recipiency rate is 2023.");
+    link("aid-src", "https://aspe.hhs.gov/sites/default/files/documents/9726be6ff81604c026fb82eceec5d716/25th%20Welfare%20Indicators%20Report%20to%20Congress.pdf", "HHS, 25th Welfare Indicators report");
+  }
+  function showHome(year) {
+    stamp("home", year);
+    var card = cards.home;
+    var rows = shelterDistricts[year];
+    var list = document.getElementById("shelter-viz");
+    if (!rows || !rows.length) {
+      empty(card, "home-num", "people counted as homeless", "home-what", "This place list is not on this card for " + year + ".");
+      if (list) list.innerHTML = "";
+      document.getElementById("home-key").textContent = "";
+      return;
+    }
+    var top = rows[0];
+    var nation = home[2025];
+    card.classList.remove("is-empty");
+    text("home-num", count(top.people));
+    text("home-unit", "people in shelters in " + top.name + ", the neighborhood with the most homeless people");
+    list.innerHTML = "";
+    var spoken = [];
+    rows.forEach(function (row) {
+      var li = document.createElement("li");
+      var num = document.createElement("b");
+      num.textContent = count(row.people);
+      var body = document.createElement("div");
+      var place = document.createElement("p");
+      place.className = "rank-place";
+      place.textContent = row.name;
+      var meta = document.createElement("p");
+      meta.className = "rank-meta";
+      meta.textContent = row.place + " · in shelters";
+      body.appendChild(place);
+      body.appendChild(meta);
+      li.appendChild(num);
+      li.appendChild(body);
+      list.appendChild(li);
+      spoken.push(row.name + ", " + row.place + ", " + count(row.people) + " people in shelters");
+    });
+    list.setAttribute("aria-label", "Neighborhoods with the most people in New York City shelters on October 31, " + year + ". " + spoken.join(". ") + ".");
+    document.getElementById("home-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>";
+    var lines = rows.map(function (row) {
+      return row.name + " in " + row.place + ", " + count(row.people);
+    }).join(". ");
+    var share = "";
+    if (nation) {
+      var pct = nation.count / nation.pop * 100;
+      var per = Math.round(nation.count / nation.pop * 10000);
+      share = " HUD’s national count is not by neighborhood. On one night in January 2025 it counted " + count(nation.count) + " people. Leaders.vote divided that count by the Census Bureau’s July 1, 2025 population, " + count(nation.pop) + ". HUD did not publish this percentage. That is " + rate(pct, 2) + ", about " + count(per) + " people in every 10,000.";
+    }
+    text("home-what", top.name + " had the most people in New York City shelters on October 31, " + year + ": " + count(top.people) + ". Department of Homeless Services census of individuals, counted at the shelter’s community district. These are people in shelters and shelter hotels. Unsheltered people are not in this count. The name is the City Planning name for that district. " + lines + "." + share);
+    link("home-src", "https://data.cityofnewyork.us/d/veav-vj3r", "NYC Department of Homeless Services, shelter census");
+  }
+  function showSnap(year) {
+    var rows = snapTracts[year];
+    var list = document.getElementById("snap-viz");
+    if (!list) return;
+    if (!rows || !rows.length) {
+      list.innerHTML = "";
+      text("snap-what", "This tract list is not on this card for " + year + ".");
+      return;
+    }
+    text("snap-label", "Neighborhoods with the most people on SNAP, " + year);
+    list.innerHTML = "";
+    var spoken = [];
+    rows.forEach(function (row) {
+      var li = document.createElement("li");
+      var pct = row.snap / row.all * 100;
+      var num = document.createElement("b");
+      num.textContent = count(row.snap);
+      var body = document.createElement("div");
+      var place = document.createElement("p");
+      place.className = "rank-place";
+      place.textContent = row.neighborhood;
+      var meta = document.createElement("p");
+      meta.className = "rank-meta";
+      meta.textContent = row.place + " · " + rate(pct, 1) + " of households";
+      body.appendChild(place);
+      body.appendChild(meta);
+      li.appendChild(num);
+      li.appendChild(body);
+      list.appendChild(li);
+      spoken.push(row.neighborhood + ", " + row.place + ", " + row.tract + ", " + count(row.snap) + " households, " + rate(pct, 1) + ", margin " + count(row.moe));
+    });
+    list.setAttribute("aria-label", "Neighborhoods with the most people on SNAP. The count is SNAP households in one census tract in that neighborhood, from the " + year + " five-year estimates. " + spoken.join(". ") + ".");
+    var margins = rows.map(function (row) {
+      return row.neighborhood + " is " + row.tract + " in " + row.place + ", " + count(row.snap) + " households, margin " + count(row.moe);
+    }).join(". ");
+    text("snap-what", "These are the neighborhoods with the most people on SNAP. Census Bureau, American Community Survey " + year + " five-year estimates, table B22003, for census tracts in the 50 states and the District of Columbia. A tract is a small Census area. It is the geography nearest to a neighborhood, and the Census does not publish a neighborhood ranking. The name on each row is the Neighborhood Tabulation Area from the New York City Department of City Planning, the neighborhood that contains that tract. The household count is for the tract. The rest of the neighborhood is not included. These are households that received SNAP in the past 12 months, and the count is of households. " + margins + ". Margins of error overlap, so a neighborhood next to another on this list may be just as large. The percent beside a name is that tract’s share of its own households. The estimates cover " + (year - 4) + " through " + year + ".");
+    link("snap-src", "https://data.census.gov/table/ACSDT5Y" + year + ".B22003", "Census ACS " + year + ", table B22003");
   }
   function choose(key) {
     var list = yearList(key);
@@ -444,6 +650,9 @@
     syncSlider("date");
     syncSlider("gpa");
     syncSlider("pet");
+    syncSlider("job");
+    syncSlider("aid");
+    syncSlider("home");
     showGas(selected.gas);
     showSpend(selected.spend);
     showCare(selected.care);
@@ -451,13 +660,15 @@
     showDate(selected.date);
     showGpa(selected.gpa);
     showPet(selected.pet);
+    showJob(selected.job);
+    showAid(selected.aid);
+    showHome(selected.home);
   }
   function refreshBls() {
     var end = new Date().getFullYear() + 1;
     return Promise.all([
       fetch("https://api.bls.gov/publicAPI/v2/timeseries/data/APU000074714?startyear=2024&endyear=" + end).then(function (response) { return response.json(); }),
-      fetch("https://api.bls.gov/publicAPI/v2/timeseries/data/CXUTOTALEXPLB0101M?startyear=2016&endyear=" + end).then(function (response) { return response.json(); }),
-      fetch("https://api.bls.gov/publicAPI/v2/timeseries/data/CXUPETSLB0101M?startyear=2016&endyear=" + end).then(function (response) { return response.json(); }).catch(function () { return null; })
+      fetch("https://api.bls.gov/publicAPI/v2/timeseries/data/CXUTOTALEXPLB0101M?startyear=2016&endyear=" + end).then(function (response) { return response.json(); })
     ]).then(function (both) {
       var months = blsRows(both[0]).filter(function (row) { return row.period.charAt(0) === "M" && row.value !== "-"; });
       months.sort(function (a, b) { return (b.year + b.period).localeCompare(a.year + a.period); });
@@ -497,24 +708,12 @@
           spendRead = true;
         }
       });
-      var petRead = false;
-      if (both[2]) {
-        blsRows(both[2]).forEach(function (row) {
-          if (row.period === "A01" && row.value !== "-") {
-            pets[Number(row.year)] = Math.round(Number(row.value));
-            petFromBls[Number(row.year)] = true;
-            petRead = true;
-          }
-        });
-      }
-      if (gasLive || spendRead || petRead) {
+      if (gasLive || spendRead) {
         var bits = [];
         if (spendRead) bits.push("Household spending");
-        if (petRead) bits.push("pet spending");
         if (gasLive) bits.push("the latest gasoline month");
         var read = bits[0];
         if (bits.length === 2) read += " and " + bits[1];
-        if (bits.length === 3) read = bits[0] + ", " + bits[1] + ", and " + bits[2];
         var note = document.getElementById("life-year-note");
         note.textContent = "Open Details to change a card’s year. The slider stops on years that were published. Dollars are what people paid then, not today’s prices. " + read + (bits.length === 1 ? " was" : " were") + " read from the Bureau of Labor Statistics just now" + (gasLive ? ", " + gasLive.month + " " + gasLive.year + "." : ".");
       }
@@ -529,6 +728,9 @@
   sliders.date.addEventListener("input", function () { showDate(choose("date")); });
   sliders.gpa.addEventListener("input", function () { showGpa(choose("gpa")); });
   sliders.pet.addEventListener("input", function () { showPet(choose("pet")); });
+  sliders.job.addEventListener("input", function () { showJob(choose("job")); });
+  sliders.aid.addEventListener("input", function () { showAid(choose("aid")); });
+  sliders.home.addEventListener("input", function () { showHome(choose("home")); });
   showAll();
   refreshBls();
 })();

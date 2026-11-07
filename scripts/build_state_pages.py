@@ -297,7 +297,7 @@ def footer(state_name, guide):
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js"></script>
 <script src="live.js?v=16"></script>
-<script src="state.js?v=blend2"></script>
+<script src="state.js?v=blend3"></script>
 </body>
 </html>
 """ % (esc(state_name), names)
@@ -550,14 +550,14 @@ def page(data):
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
-<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<script src="theme.js?v=2" defer></script>
+<script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="theme.js?v=19" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · %s, November 3, 2026</title>
 <meta name="description" content="Leaders.vote guide to the %s general election on November 3, 2026. Candidates, sample ballot, and unofficial results. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%%3E%%3Crect width='32' height='32' fill='%%231c1915'/%%3E%%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%%23f4f0e6'%%3EL%%3C/text%%3E%%3C/svg%%3E">
-<link rel="stylesheet" href="guide.css?v=dark2">
+<link rel="stylesheet" href="guide.css?v=life14">
 </head>
 <body data-state="%s">
 %s
@@ -623,14 +623,14 @@ def index_page(states):
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
-<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<script src="theme.js?v=2" defer></script>
+<script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="theme.js?v=19" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Know who you're voting for.</title>
 <meta name="description" content="Leaders.vote is an independent, nonpartisan voter guide for the November 3, 2026 election. No endorsements.">
 <link rel="icon" href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%%3E%%3Crect width='32' height='32' fill='%%231c1915'/%%3E%%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%%23f4f0e6'%%3EL%%3C/text%%3E%%3C/svg%%3E">
-<link rel="stylesheet" href="guide.css?v=dark2">
+<link rel="stylesheet" href="guide.css?v=life14">
 </head>
 <body>
 %s
@@ -752,7 +752,7 @@ fetch("preview/us.svg").then(function (response) { return response.text(); }).th
   });
   var PARTY = { dem: "#1e4d7b", gop: "#8d3232", ind: "#3e5c45", other: "#5c4a2a" };
   var PARTY_LABEL = { dem: "Democratic", gop: "Republican", ind: "Independent", lib: "Libertarian", other: "Other" };
-  var BLEND_LINE = "The color mixes the votes in that state. The swatches are the colors in that mix. Where a state file reports only the lead and the margin, the rest of the vote is blended as the other of Democratic blue and Republican red. A state with no votes stays beige. This does not call a race.";
+  var BLEND_LINE = "The color mixes the votes in that state. The swatches are the colors in that mix. Where a state file reports only the lead and the margin, the rest of the vote is blended as the other of Democratic blue and Republican red. A state with no votes stays the land color. This does not call a race.";
   var lastLeads = null;
   function blendOn() {
     try { return localStorage.getItem("leaders-blend") !== "0"; }

@@ -303,14 +303,14 @@ def shell(spec, here, nav, body, place=""):
     markup = Template("""<!DOCTYPE html>
 <html lang="en">
 <head>
-<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<script src="${root}theme.js?v=2" defer></script>
+<script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="${root}theme.js?v=19" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$title</title>
 <meta name="description" content="$description">
 <link rel="icon" href="$icon">
-<link rel="stylesheet" href="${root}guide.css?v=dark2">
+<link rel="stylesheet" href="${root}guide.css?v=life14">
 </head>
 <body class="theme-$code" data-results="${local}results.json"$place>
 <header>
@@ -340,7 +340,7 @@ $body
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="${root}lang.js"></script>
-<script src="${root}place.js?v=blend2"></script>
+<script src="${root}place.js?v=blend3"></script>
 </body>
 </html>
 """).substitute(
@@ -419,7 +419,7 @@ def write_pages(spec, shapes, data):
         body = """    <p class="kicker">%s</p>
     <h1 class="notranslate" translate="no">%s</h1>
     <p class="deck">%s</p>
-    <p id="place-status" class="note">No vote total has been published for this place yet. It stays beige.</p>
+    <p id="place-status" class="note">No vote total has been published for this place yet. It stays the land color.</p>
     <div id="place-rows"></div>
     <p class="deck"><a href="%s">Official results</a></p>""" % (
             esc(spec["kicker"]),
@@ -452,7 +452,7 @@ def match_shapes(shapes, rows_by_key):
             "leader": "",
             "color": "",
             "amount": 0.7,
-            "summary": row.get("tie") or "Votes are reported, and no one is strictly ahead. The map stays beige.",
+            "summary": row.get("tie") or "Votes are reported, and no one is strictly ahead. The map stays the land color.",
             "rows": [
                 dict(
                     {"name": item["name"], "votes": item["votes"], "percent": item["percent"]},
@@ -543,7 +543,7 @@ def build_brazil():
         rows_by_key[key] = {
             "rows": brazil_rows(payload),
             "summary": "%(short)s has more reported presidential votes here than the other candidate. That is a lead in the count, not a declaration by this site.",
-            "tie": "Votes are reported, and the two candidates are tied. The map stays beige.",
+            "tie": "Votes are reported, and the two candidates are tied. The map stays the land color.",
         }
     places, missed = match_shapes(shapes, rows_by_key)
     if missed:
@@ -554,7 +554,7 @@ def build_brazil():
         "fetchedAt": datetime.now(timezone.utc).isoformat(),
         "status": "Superior Electoral Court file dated %s %s. The file marks the presidential count finished. A state is colored only from the votes reported there. The court does not publish a candidate color, so the legend colors only tell the two people apart. This page does not declare a winner."
         % (national.get("dt") or "", national.get("ht") or ""),
-        "strings": {"blank": "No votes reported", "missing": "No presidential total has been published for this state yet. It stays beige."},
+        "strings": {"blank": "No votes reported", "missing": "No presidential total has been published for this state yet. It stays the land color."},
         "tables": [
             {
                 "title": "Presidential vote, whole country",
@@ -636,7 +636,7 @@ def build_sweden():
         rows_by_key[norm(shape_name)] = {
             "rows": list(bucket.values()),
             "summary": "%(short)s has more reported parliamentary votes in this county than the other parties. The color is the one in the Election Authority's file. A lead is not a declaration by this site.",
-            "tie": "Votes are reported, and the top parties are tied. The map stays beige.",
+            "tie": "Votes are reported, and the top parties are tied. The map stays the land color.",
         }
     missing = [name for name in by_name if name not in assigned]
     if missing:
@@ -747,7 +747,7 @@ def build_switzerland():
         rows_by_key[shape["key"]] = {
             "rows": yes_no(official["resultat"]),
             "summary": "%(short)s has more reported votes than the other answer on the neutrality question. Green means yes. Brown means no. A lead is not a declaration by this site.",
-            "tie": "Yes and no have the same reported total. The map stays beige.",
+            "tie": "Yes and no have the same reported total. The map stays the land color.",
             "tables": [
                 {
                     "title": titles[1],
@@ -867,7 +867,7 @@ def build_slovakia():
         rows_by_key[norm(key)] = {
             "rows": rows,
             "summary": "%(short)s has more reported votes for regional chair than the others." + note + " The office did not publish a color, so a mark only means someone is ahead. This site does not declare the result.",
-            "tie": "Votes are reported, and the top candidates are tied. The map stays beige.",
+            "tie": "Votes are reported, and the top candidates are tied. The map stays the land color.",
             "tables": [
                 {
                     "title": "Council vote in this region",
@@ -966,7 +966,7 @@ def build_cyprus():
         rows_by_key[norm(district)] = {
             "rows": rows,
             "summary": "%(short)s has more reported votes in this district than the other parties. The open-data file does not publish a color, so the mark only means someone is ahead. This site does not declare a result.",
-            "tie": "Votes are reported, and the top parties are tied. The map stays beige.",
+            "tie": "Votes are reported, and the top parties are tied. The map stays the land color.",
         }
     places, missed = match_shapes(shapes, rows_by_key)
     if missed:
@@ -980,7 +980,7 @@ def build_cyprus():
         "source": "https://data.gov.cy/en/dataset/2356",
         "fetchedAt": datetime.now(timezone.utc).isoformat(),
         "status": "Official open-data file of the 2026 parliamentary election, totaled by district. A district is colored only when one party has more reported votes than the others. The file does not publish a color. This page does not declare a result.",
-        "strings": {"blank": "No votes reported", "missing": "This district has no total in the Republic's open-data file. It stays beige."},
+        "strings": {"blank": "No votes reported", "missing": "This district has no total in the Republic's open-data file. It stays the land color."},
         "tables": [
             {
                 "title": "Parties, added across the districts in the file",
@@ -1105,7 +1105,7 @@ def build_germany():
         rows_by_key[norm(name)] = {
             "rows": party_rows,
             "summary": "%(short)s has more second votes than the other parties. Second votes are the party-list vote. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
-            "tie": "Second votes are reported, and the top parties are tied. The map stays beige.",
+            "tie": "Second votes are reported, and the top parties are tied. The map stays the land color.",
         }
     places, missed = match_shapes(shapes, rows_by_key)
     if missed:
@@ -1196,7 +1196,7 @@ def build_australia():
         rows_by_key[norm(name)] = {
             "rows": party_rows,
             "summary": "%(short)s has more first-preference votes than the other rows. A first preference is the vote as marked, before any transfer. Independent is every independent candidate added together, not one person. This site does not declare a result.",
-            "tie": "First-preference votes are reported, and the top rows are tied. The map stays beige.",
+            "tie": "First-preference votes are reported, and the top rows are tied. The map stays the land color.",
         }
     places, missed = match_shapes(shapes, rows_by_key)
     if missed:
@@ -1390,7 +1390,7 @@ def build_japan():
         rows_by_key[norm(name)] = {
             "rows": party_rows,
             "summary": "%(short)s has more constituency votes than the other parties. A constituency vote is a vote for a candidate in a single-member district, added up inside this prefecture. 無所属 is every independent candidate added together. 諸派 is the ministry's group of smaller parties. A few cells in the ministry file include a fraction, and the table keeps that fraction. The file has no color code, so the mark is only there to tell parties apart. This site does not declare a result.",
-            "tie": "Constituency votes are reported, and the top parties are tied. The map stays beige.",
+            "tie": "Constituency votes are reported, and the top parties are tied. The map stays the land color.",
         }
     for row in national.values():
         row["votes"] = jp_plain(row["votes"])
@@ -1629,14 +1629,14 @@ def write_countries():
     page = """<!DOCTYPE html>
 <html lang="en">
 <head>
-<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<script src="theme.js?v=2" defer></script>
+<script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="theme.js?v=19" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · Countries</title>
 <meta name="description" content="Leaders.vote election guides. A place is colored only from reported vote totals. Not an endorsement.">
 <link rel="icon" href="%s">
-<link rel="stylesheet" href="guide.css?v=dark2">
+<link rel="stylesheet" href="guide.css?v=life14">
 </head>
 <body>
 <header>

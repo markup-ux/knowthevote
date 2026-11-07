@@ -521,7 +521,10 @@
   function tint(hex, amount) {
     var rgb = hexChannels(hex);
     if (!rgb) return hex || "";
-    var chip = [235, 228, 214];
+    var rawMap = getComputedStyle(document.documentElement).getPropertyValue("--map").trim();
+    var chip = rawMap.charAt(0) === "#"
+      ? [parseInt(rawMap.slice(1, 3), 16), parseInt(rawMap.slice(3, 5), 16), parseInt(rawMap.slice(5, 7), 16)]
+      : [235, 228, 214];
     return "rgb(" + chip.map(function (channel, i) {
       return Math.round(channel + (rgb[i] - channel) * amount);
     }).join(",") + ")";
@@ -1041,4 +1044,7 @@
   }
 
   wake();
+  new MutationObserver(function () {
+    if (mapOn()) mountMap(mapPick.value);
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();
