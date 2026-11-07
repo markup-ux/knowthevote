@@ -2,9 +2,11 @@
   var sliders = {
     gas: document.getElementById("gas-year"),
     spend: document.getElementById("spend-year"),
+    care: document.getElementById("care-year"),
     trip: document.getElementById("trip-year"),
     date: document.getElementById("date-year"),
-    gpa: document.getElementById("gpa-year")
+    gpa: document.getElementById("gpa-year"),
+    pet: document.getElementById("pet-year")
   };
   if (!sliders.gas) return;
 
@@ -42,17 +44,35 @@
     2022: { n: 91, exact: 91, href: "https://www.mlive.com/public-interest/2022/10/first-dates-cost-91-on-average-rising-prices-have-people-going-out-less.html", name: "LendingTree survey, October 2022" },
     2026: { n: 93, exact: 92.91, band: true, href: "https://www.jgwentworth.com/resources/cost-of-dating-2026", name: "J.G. Wentworth, cost of dating 2026" }
   };
+  var careReport = "https://info.childcareaware.org/hubfs/FINAL-Demanding%20Change%20Report-020322.pdf";
+  var care = {
+    2018: { n: 9504, href: careReport, name: "Child Care Aware, Demanding Change" },
+    2019: { n: 9687, href: careReport, name: "Child Care Aware, Demanding Change" },
+    2020: { n: 10174, href: careReport, name: "Child Care Aware, Demanding Change" },
+    2022: { n: 10853, href: "https://www.childcareaware.org/catalyzing-growth-using-data-to-change-child-care-2022/", name: "Child Care Aware, 2022 price of care" },
+    2023: { n: 11582, href: "https://www.childcareaware.org/thechildcarestandstill/", name: "Child Care Aware, 2023 price of care" },
+    2024: { n: 13128, href: "https://www.childcareaware.org/price-landscape24/", name: "Child Care Aware, 2024 price of care" },
+    2025: { n: 13184, href: "https://info.childcareaware.org/price-and-supply-2025", name: "Child Care Aware, 2025 price of care" }
+  };
+  var pets = {
+    2010: 480, 2011: 502, 2012: 522, 2013: 460, 2014: 507, 2015: 528,
+    2016: 583, 2017: 710, 2018: 662, 2019: 681, 2020: 690, 2021: 770,
+    2022: 741, 2023: 876, 2024: 880, 2025: 997
+  };
   var gasLive = null;
   var gasFromBls = {};
   var spendFromBls = {};
+  var petFromBls = {};
   var gpas = { 1990: 2.68, 1994: 2.79, 1998: 2.90, 2000: 2.94, 2005: 2.98, 2009: 3.00, 2019: 3.11 };
   var gpaYears = [1990, 1994, 1998, 2000, 2005, 2009, 2019];
   var cards = {
     gas: document.querySelector(".life-gas"),
     spend: document.querySelector(".life-living"),
+    care: document.querySelector(".life-child"),
     trip: document.querySelector(".life-trip"),
     date: document.querySelector(".life-date"),
-    gpa: document.querySelector(".life-gpa")
+    gpa: document.querySelector(".life-gpa"),
+    pet: document.querySelector(".life-pet")
   };
 
   function money(n, digits) {
@@ -104,6 +124,8 @@
       return list;
     }
     if (key === "spend") return sortedKeys(spend);
+    if (key === "care") return sortedKeys(care);
+    if (key === "pet") return sortedKeys(pets);
     if (key === "trip") return sortedKeys(trips);
     if (key === "date") return sortedKeys(dates);
     return gpaYears.filter(function (y) { return gpas[y] != null; });
@@ -116,6 +138,8 @@
     sliders[key].setAttribute("aria-valuenow", String(year));
     sliders[key].setAttribute("aria-valuetext", String(year));
     document.getElementById(key + "-year-out").textContent = String(year);
+    var glance = document.getElementById(key + "-year-glance");
+    if (glance) glance.textContent = String(year);
   }
   function syncSlider(key) {
     var list = yearList(key);
@@ -131,6 +155,68 @@
     document.getElementById(key + "-year-start").textContent = String(list[0]);
     document.getElementById(key + "-year-end").textContent = String(list[list.length - 1]);
     stamp(key, year);
+  }
+  function previousYear(list, year) {
+    var best = null;
+    list.forEach(function (y) { if (y < year) best = y; });
+    return best;
+  }
+  function showCare(year) {
+    stamp("care", year);
+    var card = cards.care;
+    var row = care[year];
+    var past = document.getElementById("care-past");
+    var prior = previousYear(yearList("care"), year);
+    if (!row) {
+      empty(card, "care-num", "average annual price of child care", "care-what", "Child Care Aware has not published this national price for " + year + ".");
+      document.getElementById("care-track").style.setProperty("--fill", "0%");
+      past.hidden = true;
+      document.getElementById("care-key").textContent = "";
+      return;
+    }
+    card.classList.remove("is-empty");
+    text("care-num", money(row.n, 0));
+    text("care-unit", "average annual price of child care");
+    document.getElementById("care-track").style.setProperty("--fill", (row.n / 15000 * 100).toFixed(1) + "%");
+    past.hidden = prior == null;
+    if (prior != null) past.style.left = (care[prior].n / 15000 * 100).toFixed(1) + "%";
+    document.getElementById("care-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>" + (prior == null ? "" : '<span><i class="dot past"></i> ' + money(care[prior].n, 0) + " in " + prior + "</span>");
+    var what = "Child Care Aware of America. This is the national average annual price, the average of three ways of combining state prices for infants and 4-year-olds in centers and in family child care homes. School-age care is not included. It is the price of care, not the spending of a home without a child in care. State prices differ widely. The bar runs from $0 to $15,000.";
+    if (prior != null) what += " The tick is " + money(care[prior].n, 0) + ", " + prior + ".";
+    if (year === 2022) what += " 2021 is not on this slider because that report did not publish this same national figure.";
+    text("care-what", what);
+    link("care-src", row.href, row.name);
+    document.getElementById("care-viz").setAttribute("aria-label", "In " + year + " the national average price of child care was " + money(row.n, 0) + ", on a scale from 0 to 15,000 dollars.");
+  }
+  function showPet(year) {
+    stamp("pet", year);
+    var card = cards.pet;
+    var amount = pets[year];
+    var past = document.getElementById("pet-past");
+    var prior = previousYear(yearList("pet"), year);
+    if (amount == null) {
+      empty(card, "pet-num", "spent on pets, per consumer unit", "pet-what", "The Consumer Expenditure Survey has not published pet spending for " + year + ".");
+      document.getElementById("pet-track").style.setProperty("--fill", "0%");
+      past.hidden = true;
+      document.getElementById("pet-key").textContent = "";
+      return;
+    }
+    card.classList.remove("is-empty");
+    text("pet-num", money(amount, 0));
+    text("pet-unit", "spent on pets in " + year + ", per consumer unit");
+    document.getElementById("pet-track").style.setProperty("--fill", (amount / 1500 * 100).toFixed(1) + "%");
+    past.hidden = prior == null;
+    if (prior != null) past.style.left = (pets[prior] / 1500 * 100).toFixed(1) + "%";
+    document.getElementById("pet-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>" + (prior == null ? "" : '<span><i class="dot past"></i> ' + money(pets[prior], 0) + " in " + prior + "</span>");
+    var what = "Bureau of Labor Statistics, Consumer Expenditure Survey. This is the average a household spent on pets in " + year + ", including food, supplies, medicine, services, and the veterinarian. Homes without a pet are in the average, so it is lower than what a pet-owning home spends. The bar runs from $0 to $1,500.";
+    if (prior != null) what += " The tick is " + money(pets[prior], 0) + ", " + prior + ".";
+    if (spend[year]) {
+      var pct = amount / spend[year] * 100;
+      what += " That is " + pct.toFixed(1) + "% of the " + money(spend[year], 0) + " an average household spent in " + year + ".";
+    }
+    text("pet-what", what);
+    link("pet-src", "https://data.bls.gov/timeseries/CXUPETSLB0101M", "BLS consumer expenditures, pets");
+    document.getElementById("pet-viz").setAttribute("aria-label", "In " + year + " the average household spent " + money(amount, 0) + " on pets, on a scale from 0 to 1,500 dollars.");
   }
   function choose(key) {
     var list = yearList(key);
@@ -353,20 +439,25 @@
   function showAll() {
     syncSlider("gas");
     syncSlider("spend");
+    syncSlider("care");
     syncSlider("trip");
     syncSlider("date");
     syncSlider("gpa");
+    syncSlider("pet");
     showGas(selected.gas);
     showSpend(selected.spend);
+    showCare(selected.care);
     showTrip(selected.trip);
     showDate(selected.date);
     showGpa(selected.gpa);
+    showPet(selected.pet);
   }
   function refreshBls() {
     var end = new Date().getFullYear() + 1;
     return Promise.all([
       fetch("https://api.bls.gov/publicAPI/v2/timeseries/data/APU000074714?startyear=2024&endyear=" + end).then(function (response) { return response.json(); }),
-      fetch("https://api.bls.gov/publicAPI/v2/timeseries/data/CXUTOTALEXPLB0101M?startyear=2016&endyear=" + end).then(function (response) { return response.json(); })
+      fetch("https://api.bls.gov/publicAPI/v2/timeseries/data/CXUTOTALEXPLB0101M?startyear=2016&endyear=" + end).then(function (response) { return response.json(); }),
+      fetch("https://api.bls.gov/publicAPI/v2/timeseries/data/CXUPETSLB0101M?startyear=2016&endyear=" + end).then(function (response) { return response.json(); }).catch(function () { return null; })
     ]).then(function (both) {
       var months = blsRows(both[0]).filter(function (row) { return row.period.charAt(0) === "M" && row.value !== "-"; });
       months.sort(function (a, b) { return (b.year + b.period).localeCompare(a.year + a.period); });
@@ -398,23 +489,46 @@
           }
         });
       }
+      var spendRead = false;
       blsRows(both[1]).forEach(function (row) {
         if (row.period === "A01" && row.value !== "-") {
           spend[Number(row.year)] = Math.round(Number(row.value));
           if (Number(row.year) !== 2025) spendFromBls[Number(row.year)] = true;
+          spendRead = true;
         }
       });
-      var note = document.getElementById("life-year-note");
-      note.textContent = "Each card has its own year, and the slider stops on years that were published. Dollars are what people paid then, not today’s prices. Household spending and the latest gasoline month were read from the Bureau of Labor Statistics just now" + (gasLive ? ", " + gasLive.month + " " + gasLive.year + "." : ".");
+      var petRead = false;
+      if (both[2]) {
+        blsRows(both[2]).forEach(function (row) {
+          if (row.period === "A01" && row.value !== "-") {
+            pets[Number(row.year)] = Math.round(Number(row.value));
+            petFromBls[Number(row.year)] = true;
+            petRead = true;
+          }
+        });
+      }
+      if (gasLive || spendRead || petRead) {
+        var bits = [];
+        if (spendRead) bits.push("Household spending");
+        if (petRead) bits.push("pet spending");
+        if (gasLive) bits.push("the latest gasoline month");
+        var read = bits[0];
+        if (bits.length === 2) read += " and " + bits[1];
+        if (bits.length === 3) read = bits[0] + ", " + bits[1] + ", and " + bits[2];
+        var note = document.getElementById("life-year-note");
+        note.textContent = "Open Details to change a card’s year. The slider stops on years that were published. Dollars are what people paid then, not today’s prices. " + read + (bits.length === 1 ? " was" : " were") + " read from the Bureau of Labor Statistics just now" + (gasLive ? ", " + gasLive.month + " " + gasLive.year + "." : ".");
+      }
       showAll();
     }).catch(function () {});
   }
 
   sliders.gas.addEventListener("input", function () { showGas(choose("gas")); });
   sliders.spend.addEventListener("input", function () { showSpend(choose("spend")); });
+  sliders.care.addEventListener("input", function () { showCare(choose("care")); });
   sliders.trip.addEventListener("input", function () { showTrip(choose("trip")); });
   sliders.date.addEventListener("input", function () { showDate(choose("date")); });
   sliders.gpa.addEventListener("input", function () { showGpa(choose("gpa")); });
+  sliders.pet.addEventListener("input", function () { showPet(choose("pet")); });
   showAll();
   refreshBls();
 })();

@@ -759,6 +759,10 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #sex-hood-base::after {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
   margin-top: 14px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .life-grid { grid-template-columns: repeat(4, 1fr); }
 }
 .life-card {
   background: var(--chip);
@@ -768,10 +772,30 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #sex-hood-base::after {
 }
 .life-gas { --life: #d55e00; }
 .life-living { --life: #0072b2; }
+.life-child { --life: #5e4fa2; }
 .life-trip { --life: #e69f00; }
 .life-date { --life: #cc79a7; }
 .life-gpa { --life: #009e73; }
+.life-pet { --life: #0f7a8a; }
 .life-head { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.life-glance-year {
+  margin: 0 0 0 auto;
+  font-family: Georgia, "Palatino Linotype", serif;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--life);
+  font-variant-numeric: tabular-nums;
+}
+.life-more { margin-top: 8px; }
+.life-more summary {
+  cursor: pointer;
+  padding: 6px 0 2px;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--life);
+}
+.life-more summary:focus-visible { outline: 2px solid var(--life); outline-offset: 2px; }
+.life-more .life-what { margin-top: 8px; }
 .life-icon { width: 30px; height: 30px; flex: none; color: var(--life); }
 .life-icon .mark { fill: currentColor; }
 .life-icon .cut { fill: var(--chip); }
