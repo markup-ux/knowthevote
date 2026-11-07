@@ -327,12 +327,14 @@ def shell(title, description, root, local, here, nav, body, place=""):
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
+<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="%stheme.js?v=2" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>%s</title>
 <meta name="description" content="%s">
 <link rel="icon" href="%s">
-<link rel="stylesheet" href="%sguide.css?v=blend1">
+<link rel="stylesheet" href="%sguide.css?v=dark2">
 </head>
 <body class="theme-za" data-results="%sresults.json"%s>
 <header>
@@ -366,6 +368,7 @@ def shell(title, description, root, local, here, nav, body, place=""):
 </body>
 </html>
 """ % (
+        root,
         esc(title),
         esc(description),
         icon(),

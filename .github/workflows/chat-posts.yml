@@ -1,0 +1,35 @@
+name: Update Group Chat posts
+
+on:
+  schedule:
+    - cron: "40 9,21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chat-posts
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Copy official social posts
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          python scripts/update_chat_posts.py
+          git add -- chat/posts.json chat/accounts.json chat/feeds.json
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Update Group Chat with the latest official social posts."
+            git push
+          fi

@@ -62,6 +62,7 @@ PAGES = [
     ("Water", "Drinking water systems", "census.html#water", "epa drinking water violation"),
     ("Health", "Fast-food restaurants", "census.html#health", "restaurant brand neighborhood"),
     ("Neighborhoods", "Fast-food restaurants by neighborhood", "census.html#neighborhoods", "neighborhood restaurant"),
+    ("Group Chat", "Messages since November 3, 2026", "chat.html", "social post white house senate house"),
     ("Gallery", "Photographs", "gallery.html", "photo photograph picture unsplash"),
     ("Trivia", "Questions from facts on this site", "play.html", "quiz questions trivia"),
     ("Search", "Find a name or a place", "search.html", ""),
@@ -114,6 +115,8 @@ class Index:
     def anchor_ok(self, page, anchor, body):
         # Census states and counties are chosen from the hash, not from an id.
         # Chemical hashes are opened by water.js and health.js after the files load.
+        if page == "chat.html" and re.fullmatch(r"c[0-9a-f]+", anchor):
+            return True
         if page == "census.html" and (
             re.fullmatch(r"[A-Z]{2}(?:\.\d+)?", anchor)
             or re.fullmatch(r"chem-\d+-(?:mcl|tt|mrdl)", anchor)
@@ -553,6 +556,91 @@ def add_water_text(index):
             index.add(name, "Drinking water · Census", "census.html#chem-%s-%s" % (code, kind), 0, extra)
 
 
+def chat_key(name):
+    chars = []
+    for char in (name or "").lower():
+        if char.isalnum():
+            chars.append(char)
+        elif char.isspace() or char in "-'’":
+            chars.append(" ")
+    return " ".join("".join(chars).split())
+
+
+def chat_id(value):
+    n = 0
+    encoded = (value or "").encode("utf-16-le")
+    for index in range(0, len(encoded), 2):
+        unit = encoded[index] + (encoded[index + 1] << 8)
+        n = (n * 33 + unit) & 0xFFFFFFFF
+    return "c%x" % n
+
+
+def chat_since(value):
+    return isinstance(value, str) and len(value) >= 10 and value[:10] >= "2026-11-03"
+
+
+def add_chat(index):
+    messages_path = os.path.join(ROOT, "chat", "messages.json")
+    posts_path = os.path.join(ROOT, "chat", "posts.json")
+    official_path = os.path.join(ROOT, "chat", "official.json")
+    if not (os.path.isfile(messages_path) and os.path.isfile(posts_path) and os.path.isfile(official_path)):
+        return
+    messages = load_json(messages_path)
+    posts = load_json(posts_path).get("people") or {}
+    official = load_json(official_path)
+    roster = {}
+    for state in messages.get("states") or []:
+        code = state.get("code") or ""
+        for person in state.get("people") or []:
+            roster[code + "|" + chat_key(person.get("name"))] = (person, state)
+
+    def emit(name, detail, url, text, portrait):
+        text = clean(text)
+        if not name or not text:
+            return
+        token = url if isinstance(url, str) and url.startswith("https://") else text
+        index.add(name, detail, "chat.html#" + chat_id(token), 6, text, portrait)
+
+    for ident, bucket in posts.items():
+        person, state = roster.get(ident) or (None, None)
+        if not person:
+            continue
+        name = person.get("name") or ""
+        bits = ["Group Chat", state.get("name") or ""]
+        if person.get("office"):
+            bits.append(person.get("office"))
+        detail = " · ".join(part for part in bits if part)
+        photo = person.get("photo") or ""
+        for post in bucket.get("posts") or []:
+            if not chat_since(post.get("at")):
+                continue
+            emit(name, detail, post.get("url") or "", post.get("text") or "", photo)
+
+    records = official.get("people") or {}
+    for ident, rows in records.items():
+        person, state = roster.get(ident) or (None, None)
+        if not person:
+            continue
+        name = person.get("name") or ""
+        bits = ["Group Chat", state.get("name") or ""]
+        if person.get("office"):
+            bits.append(person.get("office"))
+        detail = " · ".join(part for part in bits if part)
+        for row in rows or []:
+            if not chat_since(row.get("at")):
+                continue
+            emit(name, detail, row.get("url") or "", row.get("text") or "", person.get("photo") or "")
+
+    for row in official.get("whitehouse") or []:
+        if not chat_since(row.get("at")):
+            continue
+        emit("White House", "Group Chat · White House", row.get("url") or "", row.get("text") or "", "photos/white-house.jpg")
+    for row in official.get("floor") or []:
+        if not chat_since(row.get("at")):
+            continue
+        emit("House floor", "Group Chat · House floor", row.get("url") or "", row.get("text") or "", "H")
+
+
 def add_health_text(index):
     path = os.path.join(ROOT, "health.js")
     if not os.path.isfile(path):
@@ -580,6 +668,7 @@ def main():
     add_passages(index)
     add_water_text(index)
     add_health_text(index)
+    add_chat(index)
     index.rows.sort(key=lambda row: (row[3], row[0].lower(), row[2]))
     payload = json.dumps({"items": index.rows}, ensure_ascii=False, separators=(",", ":"))
     with open(OUT, "w", encoding="utf-8", newline="\n") as handle:

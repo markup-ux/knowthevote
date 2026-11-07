@@ -4,6 +4,8 @@
   --muted: #5c564c;
   --line: #d8d0c2;
   --chip: #ebe4d6;
+  --map: #ebe4d6;
+  --map-ink: #1c1915;
   --max: 1080px;
   --bar: #0a3161;
   --bar-stripe: #bf0a30;
@@ -42,7 +44,7 @@ header::after { content: ""; display: block; height: 3px; background: var(--bar-
 nav { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; }
 nav a { text-decoration: none; color: var(--bar-ink); }
 nav a:hover { text-decoration: underline; text-decoration-color: var(--bar-stripe); text-underline-offset: 3px; }
-.lang { position: relative; }
+.lang { position: relative; display: flex; align-items: center; gap: 8px; }
 .lang-button {
   position: relative;
   background: transparent;
@@ -115,9 +117,9 @@ h3 { font-size: 26px; margin: 0; }
 .races span { color: var(--muted); font-size: 14px; }
 .races img { width: 56px; height: auto; margin-bottom: 8px; border: 1px solid var(--line); }
 #us-map, #state-map, #place-map { width: 100%; height: auto; }
-#us-map path { fill: var(--lead, var(--chip)); stroke: var(--ink); stroke-width: 0.8; cursor: pointer; }
-#state-map path { fill: var(--chip); stroke: var(--ink); stroke-width: 0.8; cursor: pointer; }
-#place-map path { fill: var(--lead, var(--chip)); stroke: var(--ink); stroke-width: 0.45; cursor: pointer; }
+#us-map path { fill: var(--lead, var(--map)); stroke: var(--map-ink); stroke-width: 0.8; cursor: pointer; }
+#state-map path { fill: var(--map); stroke: var(--map-ink); stroke-width: 0.8; cursor: pointer; }
+#place-map path { fill: var(--lead, var(--map)); stroke: var(--map-ink); stroke-width: 0.45; cursor: pointer; }
 #us-map path:hover, #us-map path.is-on, #state-map path.is-on, #place-map path:hover, #place-map path.is-on { fill: #8eafd4; stroke: #0a3161; stroke-width: 2.2; }
 .totals { width: 100%; max-width: 720px; border-collapse: collapse; margin: 8px 0 18px; }
 .totals th, .totals td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: baseline; }
@@ -134,7 +136,7 @@ h3 { font-size: 26px; margin: 0; }
 .legend, .result-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 8px 0 18px; font-size: 14px; color: var(--muted); }
 .legend span, .result-legend span { display: inline-flex; align-items: center; gap: 6px; }
 .swatch { width: 14px; height: 14px; border: 1px solid var(--ink); }
-.swatch.blank { background: var(--chip); }
+.swatch.blank { background: var(--map); }
 .swatch.d { background: #1e4d7b; }
 .swatch.r { background: #8d3232; }
 .swatch.o { background: #5c4a2a; }
@@ -376,4 +378,47 @@ body.theme-ca { --bar: #d80621; --bar-stripe: #fff; --bar-line: #d80621; --bar-h
   .avatar, .mono { width: 100%; height: 240px; }
   .candidate.compact { grid-template-columns: 56px 1fr; }
   .candidate.compact .avatar, .candidate.compact .mono { width: 56px; height: 70px; }
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #161410;
+  --ink: #f3efe6;
+  --muted: #b7aea0;
+  --line: #3c362e;
+  --chip: #26221c;
+}
+html[data-theme="dark"] .pill.d,
+html[data-theme="dark"] .chip.d { color: #9ec0e8; }
+html[data-theme="dark"] .pill.r,
+html[data-theme="dark"] .chip.r,
+html[data-theme="dark"] .zip-error { color: #e7a3a3; }
+html[data-theme="dark"] .pill.i,
+html[data-theme="dark"] .chip.i { color: #9dcaa8; }
+html[data-theme="dark"] .pill.o,
+html[data-theme="dark"] .chip.o { color: #d4c09a; }
+html[data-theme="dark"] select { background: var(--paper); color: var(--ink); }
+html[data-theme="dark"] .state-list a.is-on { color: #1c1915; }
+html[data-theme="dark"] .avatar,
+html[data-theme="dark"] .mono,
+html[data-theme="dark"] .person img,
+html[data-theme="dark"] .search-face,
+html[data-theme="dark"] .search-letter { background: #3a342c; color: var(--ink); }
+html[data-theme="dark"] header,
+html[data-theme="dark"] footer,
+html[data-theme="dark"] .lang-menu {
+  background: color-mix(in srgb, var(--bar) 38%, #100e0c);
+}
+html[data-theme="dark"] .site-search input,
+html[data-theme="dark"] .lang-button {
+  background: color-mix(in srgb, var(--bar) 16%, #0a0908);
+  border-color: color-mix(in srgb, var(--bar-ink) 70%, var(--bar));
+  color: var(--bar-ink);
+}
+html[data-theme="dark"] .site-search input::placeholder {
+  color: color-mix(in srgb, var(--bar-ink) 76%, var(--bar));
+}
+html[data-theme="dark"] .site-search-list {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--line);
 }

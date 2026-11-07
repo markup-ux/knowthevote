@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="theme.js?v=2" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · Census</title>
 <meta name="description" content="National figures for the United States, including Census Bureau population estimates, FBI crime estimates, rape offenses and arrests, and a health map of fast-food locations.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="guide.css?v=blend1">
+<link rel="stylesheet" href="guide.css?v=dark2">
 <style>
 #census-map, #census-counties, #crime-map, #sex-map { width: 100%; height: auto; background: transparent; touch-action: none; }
 #census-map path, #census-counties path, #crime-map path, #sex-map path { fill: var(--chip); stroke: var(--ink); stroke-width: 0.8; cursor: pointer; }
@@ -154,6 +156,25 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
 .health-check { display: flex; align-items: center; gap: 8px; margin: 8px 0 0; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 400; }
 .health-check input { margin: 0; }
 #health-readout { min-height: 1.4em; }
+html[data-theme="dark"] #census-map path,
+html[data-theme="dark"] #census-counties path,
+html[data-theme="dark"] #crime-map path,
+html[data-theme="dark"] #sex-map path { fill: #ebe4d6; stroke: #1c1915; }
+html[data-theme="dark"] #census-map path.is-on,
+html[data-theme="dark"] #census-counties path.is-on,
+html[data-theme="dark"] #crime-map path.is-on,
+html[data-theme="dark"] #sex-map path.is-on { stroke: #1c1915; }
+html[data-theme="dark"] #crime-hood-list button.is-on,
+html[data-theme="dark"] #sex-hood-list button.is-on,
+html[data-theme="dark"] #census-states button.is-on,
+html[data-theme="dark"] #crime-states button.is-on,
+html[data-theme="dark"] .census-scroll tr.is-on td { background: #3a3228; }
+html[data-theme="dark"] .race-track { background: #2c2822; }
+html[data-theme="dark"] .race-tick { background: var(--ink); }
+html[data-theme="dark"] .pair-table th,
+html[data-theme="dark"] .pair-table td { border-color: var(--line); }
+html[data-theme="dark"] .pair-table td { color: #1c1915; }
+html[data-theme="dark"] .pair-table td.on-dark { color: #f4f7fb; }
 @media (max-width: 800px) {
   .health-layout { grid-template-columns: 1fr; }
   #health-map-wrap, #water-map-wrap, #crime-hood-wrap, #sex-hood-wrap { height: 420px; }
@@ -229,6 +250,7 @@ button.chem-row.is-on { border-bottom-color: var(--ink); }
       <a href="census.html" aria-current="page">Census</a>
       <a href="house.html">The House</a>
       <a href="gallery.html">Gallery</a>
+      <a href="chat.html">Group Chat</a>
       <a href="play.html">Trivia</a>
     </nav>
   </div>

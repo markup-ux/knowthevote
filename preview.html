@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="theme.js?v=2" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · Preview · All states</title>
@@ -108,6 +110,20 @@
     h1 { font-size: 34px; }
     .result-layout { grid-template-columns: 1fr; }
   }
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #161410;
+    --ink: #f3efe6;
+    --muted: #b7aea0;
+    --line: #3c362e;
+    --chip: #26221c;
+  }
+  html[data-theme="dark"] select { background: var(--paper); color: var(--ink); }
+  html[data-theme="dark"] #us-map path,
+  html[data-theme="dark"] #state-map path { fill: #ebe4d6; stroke: #1c1915; }
+  html[data-theme="dark"] .districts img { background: #3a342c; }
+  html[data-theme="dark"] header,
+  html[data-theme="dark"] footer { background: color-mix(in srgb, #0a3161 38%, #100e0c); }
 </style>
 
 <!-- seo -->

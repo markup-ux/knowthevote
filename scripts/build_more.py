@@ -303,12 +303,14 @@ def shell(spec, here, nav, body, place=""):
     markup = Template("""<!DOCTYPE html>
 <html lang="en">
 <head>
+<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="${root}theme.js?v=2" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$title</title>
 <meta name="description" content="$description">
 <link rel="icon" href="$icon">
-<link rel="stylesheet" href="${root}guide.css?v=blend1">
+<link rel="stylesheet" href="${root}guide.css?v=dark2">
 </head>
 <body class="theme-$code" data-results="${local}results.json"$place>
 <header>
@@ -1627,12 +1629,14 @@ def write_countries():
     page = """<!DOCTYPE html>
 <html lang="en">
 <head>
+<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="theme.js?v=2" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · Countries</title>
 <meta name="description" content="Leaders.vote election guides. A place is colored only from reported vote totals. Not an endorsement.">
 <link rel="icon" href="%s">
-<link rel="stylesheet" href="guide.css?v=blend1">
+<link rel="stylesheet" href="guide.css?v=dark2">
 </head>
 <body>
 <header>

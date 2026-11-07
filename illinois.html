@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="theme.js?v=2" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · Illinois, November 3, 2026</title>
@@ -554,6 +556,31 @@
     .avatar, .mono { width: 100%; height: 280px; }
     .retain { columns: 1; }
   }
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #161410;
+    --ink: #f3efe6;
+    --muted: #b7aea0;
+    --line: #3c362e;
+    --chip: #26221c;
+    --dem: #9ec0e8;
+    --rep: #e7a3a3;
+    --ind: #9dcaa8;
+    --other: #d4c09a;
+  }
+  html[data-theme="dark"] .races span { color: var(--muted); }
+  html[data-theme="dark"] .avatar,
+  html[data-theme="dark"] .mono,
+  html[data-theme="dark"] .result-person img { background: #3a342c; color: var(--ink); }
+  html[data-theme="dark"] .swatch { border-color: var(--ink); }
+  html[data-theme="dark"] header,
+  html[data-theme="dark"] footer,
+  html[data-theme="dark"] .lang-menu { background: color-mix(in srgb, #0a3161 38%, #100e0c); }
+  html[data-theme="dark"] .lang-button {
+    background: color-mix(in srgb, #0a3161 16%, #0a0908);
+    border-color: color-mix(in srgb, #f4f7fb 70%, #0a3161);
+  }
+  header .lang { display: flex; align-items: center; gap: 8px; }
 </style>
 
 <!-- seo -->
@@ -620,6 +647,7 @@
     <p class="here notranslate" translate="no"><img src="flags/il.svg" alt=""><span>Illinois</span></p>
     <nav>
       <a href="index.html">All states</a>
+      <a href="chat.html">Group Chat</a>
       <a href="countries.html">Countries</a>
       <a href="#results">Results</a>
       <a href="#senate">Senate</a>
@@ -2292,9 +2320,16 @@
     var searchSrc = searchScript.getAttribute("src") || "";
     var searchBase = searchSrc.replace(/[^/]*$/, "");
     var searchTag = document.createElement("script");
-    searchTag.src = searchBase + "search.js?v=6";
+    searchTag.src = searchBase + "search.js?v=7";
     searchTag.setAttribute("data-site-search", "1");
     document.head.appendChild(searchTag);
+    if (!document.querySelector("script[data-site-visits]")) {
+      var visitTag = document.createElement("script");
+      visitTag.src = searchBase + "visit.js?v=1";
+      visitTag.async = true;
+      visitTag.setAttribute("data-site-visits", "1");
+      document.head.appendChild(visitTag);
+    }
   }
   var select = document.getElementById("lang");
   var note = document.getElementById("lang-note");

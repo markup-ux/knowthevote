@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="theme.js?v=2" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · Trivia</title>
 <meta name="description" content="Questions and a count, using facts already printed on Leaders.vote. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="guide.css?v=play2">
+<link rel="stylesheet" href="guide.css?v=dark2">
 <style>
   #play-root { padding-top: 8px; }
   #play-root .play-lead { margin: 0 0 18px; max-width: 62ch; color: var(--muted); }
@@ -196,6 +198,14 @@
   #play-root .play-note a { color: inherit; }
   #play-root button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
+  html[data-theme="dark"] #play-root .play-card { background: var(--chip); }
+  html[data-theme="dark"] #play-root .play-choice { background: var(--paper); }
+  html[data-theme="dark"] #play-root .play-oval { background: transparent; }
+  html[data-theme="dark"] #play-root .play-choice.is-wrong { background: #3a2422; border-color: #e7a3a3; }
+  html[data-theme="dark"] #play-root .play-choice.is-wrong .play-mark,
+  html[data-theme="dark"] #play-root .play-choice.is-wrong .play-oval { color: #e7a3a3; border-color: #e7a3a3; }
+  html[data-theme="dark"] #play-root .play-choice.is-wrong .play-oval { background: transparent; }
+
   @media (max-width: 720px) {
     #play-root h3.play-q { font-size: 24px; }
     #play-root .play-body,
@@ -233,6 +243,38 @@
   <div class="wrap bar">
     <div class="bar-top">
       <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      <div class="lang notranslate" translate="no">
+        <span class="visually-hidden">Language</span>
+        <select id="lang" class="visually-hidden" aria-hidden="true" tabindex="-1">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-CN">中文</option>
+          <option value="pl">Polski</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ko">한국어</option>
+          <option value="tl">Tagalog</option>
+          <option value="ar">العربية</option>
+          <option value="ur">اردو</option>
+          <option value="uk">Українська</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="fr">Français</option>
+        </select>
+        <button type="button" class="lang-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">English</button>
+        <ul id="lang-list" class="lang-menu" role="listbox" aria-label="Translate this page" hidden>
+          <li role="none"><button type="button" role="option" data-lang="en" aria-selected="true">English</button></li>
+          <li role="none"><button type="button" role="option" data-lang="es">Español</button></li>
+          <li role="none"><button type="button" role="option" data-lang="zh-CN">中文</button></li>
+          <li role="none"><button type="button" role="option" data-lang="pl">Polski</button></li>
+          <li role="none"><button type="button" role="option" data-lang="hi">हिन्दी</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ko">한국어</button></li>
+          <li role="none"><button type="button" role="option" data-lang="tl">Tagalog</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ar">العربية</button></li>
+          <li role="none"><button type="button" role="option" data-lang="ur">اردو</button></li>
+          <li role="none"><button type="button" role="option" data-lang="uk">Українська</button></li>
+          <li role="none"><button type="button" role="option" data-lang="vi">Tiếng Việt</button></li>
+          <li role="none"><button type="button" role="option" data-lang="fr">Français</button></li>
+        </ul>
+      </div>
     </div>
     <nav>
       <a href="index.html">All states</a>
@@ -240,12 +282,14 @@
       <a href="census.html">Census</a>
       <a href="house.html">The House</a>
       <a href="gallery.html">Gallery</a>
+      <a href="chat.html">Group Chat</a>
       <a href="play.html" aria-current="page">Trivia</a>
     </nav>
   </div>
 </header>
 <main>
   <div class="wrap hero">
+    <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
     <p class="kicker">Trivia</p>
     <h1>Questions from the pages.</h1>
     <p class="deck">Two short rounds, drawn from facts already printed here. Nothing endorses a candidate, calls a race, or ranks anyone.</p>
@@ -1483,5 +1527,7 @@
   show("ballot");
 })();
 </script>
+<div id="google_translate_element" aria-hidden="true"></div>
+<script src="lang.js"></script>
 </body>
 </html>

@@ -4,8 +4,8 @@ Each public page gets a canonical URL, a crawl rule, social tags, and
 structured data. robots.txt and sitemap.xml list the same pages. The home
 title and the countries description live here so a later rebuild keeps them.
 
-Files under data/ and scripts/ are left alone. preview.html and health.html
-are marked noindex and left out of the sitemap.
+Files under data/ and scripts/ are left alone. preview.html, health.html,
+and visits.html are marked noindex and left out of the sitemap.
 """
 import html
 import json
@@ -37,7 +37,7 @@ COUNTRIES_DESCRIPTION = (
     "A place is colored only from reported vote totals. Not an endorsement."
 )
 INDEX_ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-NOINDEX = {"preview.html", "health.html"}
+NOINDEX = {"preview.html", "health.html", "visits.html"}
 SKIP_DIRS = {"data", "scripts", "preview", ".git", ".github"}
 COUNTRIES = {
     "au": "Australia",

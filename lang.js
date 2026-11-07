@@ -4,9 +4,16 @@
     var searchSrc = searchScript.getAttribute("src") || "";
     var searchBase = searchSrc.replace(/[^/]*$/, "");
     var searchTag = document.createElement("script");
-    searchTag.src = searchBase + "search.js?v=6";
+    searchTag.src = searchBase + "search.js?v=7";
     searchTag.setAttribute("data-site-search", "1");
     document.head.appendChild(searchTag);
+    if (!document.querySelector("script[data-site-visits]")) {
+      var visitTag = document.createElement("script");
+      visitTag.src = searchBase + "visit.js?v=1";
+      visitTag.async = true;
+      visitTag.setAttribute("data-site-visits", "1");
+      document.head.appendChild(visitTag);
+    }
   }
   var select = document.getElementById("lang");
   var note = document.getElementById("lang-note");

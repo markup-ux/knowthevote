@@ -1,0 +1,35 @@
+name: Update Group Chat official records
+
+on:
+  schedule:
+    - cron: "15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chat-official
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Copy White House, House, and Senate records since November 3
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          python scripts/build_chat_official.py
+          git add -- chat/official.json
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Update Group Chat from the White House, House, and Senate records."
+            git push
+          fi

@@ -550,12 +550,14 @@ def page(data):
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
+<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="theme.js?v=2" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · %s, November 3, 2026</title>
 <meta name="description" content="Leaders.vote guide to the %s general election on November 3, 2026. Candidates, sample ballot, and unofficial results. Not an endorsement.">
 <link rel="icon" href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%%3E%%3Crect width='32' height='32' fill='%%231c1915'/%%3E%%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%%23f4f0e6'%%3EL%%3C/text%%3E%%3C/svg%%3E">
-<link rel="stylesheet" href="guide.css?v=blend1">
+<link rel="stylesheet" href="guide.css?v=dark2">
 </head>
 <body data-state="%s">
 %s
@@ -621,12 +623,14 @@ def index_page(states):
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
+<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="theme.js?v=2" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Know who you're voting for.</title>
 <meta name="description" content="Leaders.vote is an independent, nonpartisan voter guide for the November 3, 2026 election. No endorsements.">
 <link rel="icon" href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%%3E%%3Crect width='32' height='32' fill='%%231c1915'/%%3E%%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%%23f4f0e6'%%3EL%%3C/text%%3E%%3C/svg%%3E">
-<link rel="stylesheet" href="guide.css?v=blend1">
+<link rel="stylesheet" href="guide.css?v=dark2">
 </head>
 <body>
 %s

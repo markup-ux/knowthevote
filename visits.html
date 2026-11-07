@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>try{if(localStorage.getItem("leaders-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="theme.js?v=2" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page loads · Leaders.vote</title>
+<meta name="description" content="Anonymous page loads on Leaders.vote. No cookie and no visitor identifier.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="guide.css?v=dark2">
+<style>
+  main { padding-bottom: 48px; }
+  h1 { font-size: 28px; font-weight: 650; margin: 28px 0 8px; }
+  .quiet { color: var(--muted); max-width: 38rem; }
+  .loads { font-size: 64px; line-height: 1; font-variant-numeric: tabular-nums; margin: 18px 0 0; }
+  .rows { width: min(32rem, 100%); border-collapse: collapse; margin-top: 22px; }
+  .rows th, .rows td { text-align: left; padding: 8px 0; border-bottom: 1px solid var(--line); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .rows td { text-align: right; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+  </div>
+</header>
+<main class="wrap">
+  <h1>Page loads</h1>
+  <p class="quiet">This counts opens of a page on leaders.vote. It does not count people, and it does not keep a cookie, a browser identifier, or an address. There is nothing to accept. Opening this page does not add to the count.</p>
+  <p class="quiet">All pages</p>
+  <p class="loads" id="total">…</p>
+  <p class="quiet" id="status">Checking the counter.</p>
+  <table class="rows">
+    <tbody id="rows"></tbody>
+  </table>
+</main>
+<script src="visit.js?v=1"></script>
+<script>
+(function () {
+  var api = window.leadersVisits;
+  var statusEl = document.getElementById("status");
+  var rowsEl = document.getElementById("rows");
+  var rows = [
+    { id: "today", label: "Today, US Central", name: function () { return "day-" + api.day(0); } },
+    { id: "yesterday", label: "Yesterday", name: function () { return "day-" + api.day(-1); } }
+  ].concat(api.sections.map(function (pair) {
+    return { id: pair[0], label: pair[1], name: function () { return pair[0]; } };
+  }));
+
+  rows.forEach(function (row) {
+    var tr = document.createElement("tr");
+    var label = document.createElement("th");
+    var value = document.createElement("td");
+    label.textContent = row.label;
+    label.scope = "row";
+    value.id = "count-" + row.id;
+    value.textContent = "…";
+    tr.appendChild(label);
+    tr.appendChild(value);
+    rowsEl.appendChild(tr);
+  });
+
+  function format(value) {
+    var number = Number(value);
+    if (!isFinite(number)) return "0";
+    return number.toLocaleString("en-US");
+  }
+
+  function read(name) {
+    return fetch(api.origin + "get/" + encodeURIComponent(api.key(name)), {
+      credentials: "omit",
+      cache: "no-store",
+      referrerPolicy: "no-referrer"
+    }).then(function (response) {
+      if (response.status === 404) return 0;
+      if (!response.ok) throw new Error("status");
+      return response.json().then(function (body) { return Number(body.value) || 0; });
+    });
+  }
+
+  function refresh() {
+    Promise.all([read("total")].concat(rows.map(function (row) { return read(row.name()); }))).then(function (values) {
+      document.getElementById("total").textContent = format(values[0]);
+      rows.forEach(function (row, index) {
+        document.getElementById("count-" + row.id).textContent = format(values[index + 1]);
+      });
+      statusEl.textContent = "Updated " + new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/Chicago",
+        hour: "numeric",
+        minute: "2-digit",
+        second: "2-digit"
+      }).format(new Date()) + " US Central. This page checks again every few seconds.";
+    }).catch(function () {
+      statusEl.textContent = "The counter did not answer. This page will try again.";
+    });
+  }
+
+  refresh();
+  setInterval(refresh, 5000);
+})();
+</script>
+</body>
+</html>
