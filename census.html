@@ -101,7 +101,7 @@
   text-align: left;
 }
 .health-tools button[aria-pressed="true"], .health-brands button.is-on, .health-centers button.is-on, .health-hoods button.is-on { border-bottom-color: var(--ink); }
-#health-map-wrap, #water-map-wrap, #crime-hood-wrap, #sex-hood-wrap { position: relative; width: 100%; height: 560px; background: var(--paper); }
+#health-map-wrap, #water-map-wrap, #crime-hood-wrap, #sex-hood-wrap { position: relative; z-index: 1; overflow: hidden; width: 100%; height: 560px; background: var(--paper); }
 #health-basemap, #water-basemap, #crime-hood-base, #sex-hood-base { position: absolute; inset: 0; }
 #health-map, #water-map, #crime-hood-map, #sex-hood-map { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; display: block; background: transparent; cursor: grab; touch-action: none; }
 #health-map.is-drag, #water-map.is-drag, #crime-hood-map.is-drag, #sex-hood-map.is-drag { cursor: grabbing; }
