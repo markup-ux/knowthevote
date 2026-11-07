@@ -5,7 +5,7 @@
   var SHADE_KEY = "leaders-shade";
 
   var MODES = [
-    { id: "day", label: "Day", light: "light", dark: "dark", lightFill: "#f4f0e6", darkFill: "#12141c", lightInk: "#1c1915", darkInk: "#f3efe6", accent: "#bf0a30", mark: "sun" },
+    { id: "day", label: "Default", light: "light", dark: "dark", lightFill: "#f4f0e6", darkFill: "#12141c", lightInk: "#1c1915", darkInk: "#f3efe6", accent: "#bf0a30", mark: "sun" },
     { id: "spring", label: "Spring", light: "spring", dark: "spring-dark", lightFill: "#eef6e4", darkFill: "#121a14", lightInk: "#1a2a14", darkInk: "#e8f6df", accent: "#e6c84a", mark: "sprout" },
     { id: "summer", label: "Summer", light: "summer", dark: "summer-dark", lightFill: "#e7f3fb", darkFill: "#101820", lightInk: "#1a2838", darkInk: "#f4efe2", accent: "#e07060", mark: "sun" },
     { id: "fall", label: "Fall", light: "fall", dark: "fall-dark", lightFill: "#fff3c4", darkFill: "#1a100c", lightInk: "#3d160e", darkInk: "#fff1e4", accent: "#e07020", mark: "leaf" },
