@@ -21,6 +21,24 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "slips.json"
+
+
+def write_if_changed(path, payload):
+    text = json.dumps(payload, separators=(",", ":"), ensure_ascii=False)
+    if path.exists():
+        try:
+            old = json.loads(path.read_text(encoding="utf-8"))
+            fresh = json.loads(text)
+        except (OSError, ValueError):
+            old = None
+        else:
+            old.pop("updated", None)
+            fresh.pop("updated", None)
+            if old == fresh:
+                print("unchanged", path.name, flush=True)
+                return False
+    path.write_text(text, encoding="utf-8")
+    return True
 SOURCE = "https://www.judiciary.senate.gov/nominations/judicial?keyword=Judge"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 
@@ -363,7 +381,7 @@ def main():
         "source": "https://www.judiciary.senate.gov/nominations/judicial",
         "slips": public,
     }
-    OUT.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
+    write_if_changed(OUT, payload)
     counts = {}
     for item in parsed:
         key = item["kind"] + ":" + item["slip"]

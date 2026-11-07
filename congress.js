@@ -2997,30 +2997,33 @@
     setInterval(checkSlips, 20 * 60 * 1000);
   }
 
-  fetch("congress/votes.json?v=1").then(function (response) {
+  function published(path) {
+    return path + (path.indexOf("?") < 0 ? "?" : "&") + "t=" + Math.floor(Date.now() / 3600000);
+  }
+  fetch(published("congress/votes.json?v=1")).then(function (response) {
     if (!response.ok) throw new Error(String(response.status));
     return response.json();
   }).then(function (payload) {
-    return fetch("congress/summaries.json?v=4").then(function (response) {
+    return fetch(published("congress/summaries.json?v=4")).then(function (response) {
       if (!response.ok) throw new Error(String(response.status));
       return response.json();
     }).then(function (extra) {
       summaries = extra || {};
-      return fetch("congress/money.json?v=1").then(function (response) {
+        return fetch(published("congress/money.json?v=1")).then(function (response) {
         if (!response.ok) return {};
         return response.json();
       }).catch(function () {
         return {};
       }).then(function (extraMoney) {
         money = extraMoney || {};
-        return fetch("congress/introduced.json?v=1").then(function (response) {
+        return fetch(published("congress/introduced.json?v=1")).then(function (response) {
           if (!response.ok) return {};
           return response.json();
         }).catch(function () {
           return {};
         }).then(function (extraIntro) {
           introduced = extraIntro || {};
-          return fetch("congress/senate.json?v=1").then(function (response) {
+          return fetch(published("congress/senate.json?v=1")).then(function (response) {
             if (!response.ok) throw new Error(String(response.status));
             return response.json();
           }).then(function (senate) {
@@ -3030,14 +3033,14 @@
             payload.senate = null;
             return payload;
           }).then(function (ready) {
-            return fetch("congress/slips.json?v=3").then(function (response) {
+            return fetch(published("congress/slips.json?v=3")).then(function (response) {
               if (!response.ok) return { slips: [] };
               return response.json();
             }).catch(function () {
               return { slips: [] };
             }).then(function (extraSlips) {
               slips = (extraSlips && extraSlips.slips) || [];
-              return fetch("congress/presidents.json?v=1").then(function (response) {
+              return fetch(published("congress/presidents.json?v=1")).then(function (response) {
                 if (!response.ok) return { people: [] };
                 return response.json();
               }).catch(function () {

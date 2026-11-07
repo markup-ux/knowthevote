@@ -1857,7 +1857,7 @@
   buildMeasures();
   status.textContent = "Reading the FBI estimates.";
   Promise.all([
-    fetch("census/crime.json").then(function (response) { if (!response.ok) throw new Error("json"); return response.json(); }),
+    fetch("census/crime.json?t=" + Math.floor(Date.now() / 3600000)).then(function (response) { if (!response.ok) throw new Error("json"); return response.json(); }),
     fetch("preview/us.svg").then(function (response) { if (!response.ok) throw new Error("map"); return response.text(); }),
     fetch("census/arrests.json?v=2").then(function (response) { if (!response.ok) throw new Error("arrests"); return response.json(); }).catch(function () { return null; }),
     fetch("census/crime-cities.json").then(function (response) { if (!response.ok) throw new Error("cities"); return response.json(); }).catch(function () { return null; }),

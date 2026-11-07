@@ -19,8 +19,26 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "votes.json"
 SUMMARIES = ROOT / "summaries.json"
+
+
+def write_if_changed(path, payload):
+    text = json.dumps(payload, separators=(",", ":"), ensure_ascii=False)
+    if path.exists():
+        try:
+            old = json.loads(path.read_text(encoding="utf-8"))
+            fresh = json.loads(text)
+        except (OSError, ValueError):
+            old = None
+        else:
+            old.pop("updated", None)
+            fresh.pop("updated", None)
+            if old == fresh:
+                print("unchanged", path.name, flush=True)
+                return False
+    path.write_text(text, encoding="utf-8")
+    return True
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-TODAY = date(2026, 11, 6)
+TODAY = date.today()
 
 BILL_PATTERNS = [
     ("HJRES", re.compile(r"^H\s*J\s*RES\s+(\d+)")),
@@ -876,7 +894,7 @@ def main():
         "votes": votes,
         "floor": floor,
     }
-    OUT.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
+    write_if_changed(OUT, payload)
     dates = [vote["date"] for vote in votes if vote["date"]]
     print("votes", len(votes), "members", len(members), "floor", len(floor["items"]), "week", floor.get("week"))
     print("dates", min(dates) if dates else None, max(dates) if dates else None)

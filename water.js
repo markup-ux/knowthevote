@@ -956,7 +956,7 @@
     resizeMap();
   }
 
-  fetch("census/water.json")
+  fetch("census/water.json?t=" + Math.floor(Date.now() / 3600000))
     .then(function (response) { return response.json(); })
     .then(function (payload) {
       water = payload;

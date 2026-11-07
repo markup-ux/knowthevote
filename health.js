@@ -1954,7 +1954,7 @@
 
   window.addEventListener("resize", resize);
 
-  fetch("census/health.json")
+  fetch("census/health.json?t=" + Math.floor(Date.now() / 3600000))
     .then(function (res) {
       if (!res.ok) throw new Error(String(res.status));
       return res.json();

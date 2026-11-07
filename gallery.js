@@ -146,7 +146,7 @@
   }
 
   var catalog = new XMLHttpRequest();
-  catalog.open("GET", "gallery-photos.json", true);
+  catalog.open("GET", "gallery-photos.json?t=" + Math.floor(Date.now() / 3600000), true);
   catalog.onload = function () {
     if (catalog.status >= 200 && catalog.status < 300) {
       try {

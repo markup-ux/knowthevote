@@ -183,6 +183,7 @@
     return list.length > 0 && year === list[list.length - 1];
   }
   function stamp(key, year) {
+    if (!sliders[key]) return;
     sliders[key].setAttribute("aria-valuenow", String(year));
     sliders[key].setAttribute("aria-valuetext", String(year));
     document.getElementById(key + "-year-out").textContent = String(year);
@@ -192,6 +193,7 @@
   function syncSlider(key) {
     var list = yearList(key);
     var input = sliders[key];
+    if (!input || !list.length) return;
     var year = selected[key];
     if (!pinned[key] || year == null || list.indexOf(year) < 0) year = list[list.length - 1];
     selected[key] = year;
@@ -268,6 +270,7 @@
     document.getElementById("pet-viz").setAttribute("aria-label", "In " + year + ", " + money(amount, 0) + " of pet industry sales per household that owns a pet, on a scale from 0 to 2,500 dollars.");
   }
   function showJob(year) {
+    if (!sliders.job) return;
     stamp("job", year);
     var card = cards.job;
     var past = document.getElementById("job-past");
@@ -316,6 +319,7 @@
     document.getElementById("job-viz").setAttribute("aria-label", "In " + year + ", " + rate(n, 1) + " of the labor force was unemployed, on a scale from 0 to 15 percent." + (tickLabel ? " The tick is " + tickLabel + "." : ""));
   }
   function showAid(year) {
+    if (!sliders.aid) return;
     stamp("aid", year);
     var card = cards.aid;
     var rows = snapTracts[year];
@@ -337,6 +341,7 @@
     link("aid-src", "https://aspe.hhs.gov/sites/default/files/documents/9726be6ff81604c026fb82eceec5d716/25th%20Welfare%20Indicators%20Report%20to%20Congress.pdf", "HHS, 25th Welfare Indicators report");
   }
   function showHome(year) {
+    if (!sliders.home) return;
     stamp("home", year);
     var card = cards.home;
     var rows = shelterDistricts[year];
@@ -464,14 +469,14 @@
     if (gasLive && year === gasLive.year && gasAnnual[year] == null) {
       gasCard.classList.remove("is-empty");
       text("gas-num", money(gasLive.value, 2));
-      text("gas-unit", "per gallon, " + gasLive.month + " " + gasLive.year);
+      text("gas-unit", gasLive.unit || ("per gallon, " + gasLive.month + " " + gasLive.year));
       document.getElementById("gas-track").style.setProperty("--fill", (gasLive.value / 5 * 100).toFixed(1) + "%");
       past.hidden = gasLive.ago == null;
       if (gasLive.ago != null) past.style.left = (gasLive.ago / 5 * 100).toFixed(1) + "%";
-      document.getElementById("gas-key").innerHTML = '<span><i class="dot now"></i> ' + gasLive.month + " " + gasLive.year + "</span>" + (gasLive.ago == null ? "" : '<span><i class="dot past"></i> ' + money(gasLive.ago, 2) + " a year earlier</span>");
-      text("gas-what", "Bureau of Labor Statistics U.S. city average for unleaded regular, " + money(gasLive.value, 2) + " in " + gasLive.month + " " + gasLive.year + ". This is the latest month on the feed, read when the page opens. It is not a full-year average. The bar runs from $0 to $5." + (gasLive.ago == null ? "" : " The tick is " + money(gasLive.ago, 2) + ", " + gasLive.month + " the year before."));
-      link("gas-src", "https://data.bls.gov/timeseries/APU000074714", "BLS average price, unleaded regular");
-      document.getElementById("gas-viz").setAttribute("aria-label", "In " + gasLive.month + " " + gasLive.year + " the average was " + money(gasLive.value, 2) + " a gallon.");
+      document.getElementById("gas-key").innerHTML = '<span><i class="dot now"></i> ' + (gasLive.label || (gasLive.month + " " + gasLive.year)) + "</span>" + (gasLive.ago == null ? "" : '<span><i class="dot past"></i> ' + money(gasLive.ago, 2) + " a year earlier</span>");
+      text("gas-what", gasLive.what || ("Bureau of Labor Statistics U.S. city average for unleaded regular, " + money(gasLive.value, 2) + " in " + gasLive.month + " " + gasLive.year + ". This is the latest month on the feed, read when the page opens. It is not a full-year average. The bar runs from $0 to $5." + (gasLive.ago == null ? "" : " The tick is " + money(gasLive.ago, 2) + ", " + gasLive.month + " the year before.")));
+      link("gas-src", gasLive.href || "https://data.bls.gov/timeseries/APU000074714", gasLive.name || "BLS average price, unleaded regular");
+      document.getElementById("gas-viz").setAttribute("aria-label", "In " + (gasLive.label || (gasLive.month + " " + gasLive.year)) + " the average was " + money(gasLive.value, 2) + " a gallon.");
     } else if (year === 2026 && gasAnnual[2026] == null) {
       gasCard.classList.remove("is-empty");
       text("gas-num", "$4.04");
@@ -672,7 +677,7 @@
     ]).then(function (both) {
       var months = blsRows(both[0]).filter(function (row) { return row.period.charAt(0) === "M" && row.value !== "-"; });
       months.sort(function (a, b) { return (b.year + b.period).localeCompare(a.year + a.period); });
-      if (months.length) {
+      if (months.length && !(gasLive && gasLive.href)) {
         var latest = months[0];
         var agoRow = null;
         months.forEach(function (row) {
@@ -721,16 +726,52 @@
     }).catch(function () {});
   }
 
-  sliders.gas.addEventListener("input", function () { showGas(choose("gas")); });
-  sliders.spend.addEventListener("input", function () { showSpend(choose("spend")); });
-  sliders.care.addEventListener("input", function () { showCare(choose("care")); });
-  sliders.trip.addEventListener("input", function () { showTrip(choose("trip")); });
-  sliders.date.addEventListener("input", function () { showDate(choose("date")); });
-  sliders.gpa.addEventListener("input", function () { showGpa(choose("gpa")); });
-  sliders.pet.addEventListener("input", function () { showPet(choose("pet")); });
-  sliders.job.addEventListener("input", function () { showJob(choose("job")); });
-  sliders.aid.addEventListener("input", function () { showAid(choose("aid")); });
-  sliders.home.addEventListener("input", function () { showHome(choose("home")); });
+  function onYear(key, show) {
+    if (!sliders[key]) return;
+    sliders[key].addEventListener("input", function () { show(choose(key)); });
+  }
+  function applyFeed(feed) {
+    if (!feed) return;
+    if (feed.gasLive && feed.gasLive.value != null) gasLive = feed.gasLive;
+    Object.keys(feed.gasAnnual || {}).forEach(function (key) {
+      var year = Number(key);
+      if (feed.gasAnnual[key] == null) return;
+      gasAnnual[year] = Number(feed.gasAnnual[key]);
+      if (feed.gasFromBls && feed.gasFromBls[key]) gasFromBls[year] = true;
+    });
+    Object.keys(feed.spend || {}).forEach(function (key) {
+      var year = Number(key);
+      if (feed.spend[key] == null) return;
+      spend[year] = Math.round(Number(feed.spend[key]));
+      if (feed.spendFromBls && feed.spendFromBls[key] && year !== 2025) spendFromBls[year] = true;
+    });
+    if (feed.jobMonth) jobMonth = feed.jobMonth;
+    Object.keys(feed.jobs || {}).forEach(function (key) {
+      if (feed.jobs[key] != null) jobs[Number(key)] = Number(feed.jobs[key]);
+    });
+    showAll();
+  }
+  function pullLife() {
+    return fetch("life.json?t=" + Math.floor(Date.now() / 900000), { cache: "no-store" })
+      .then(function (response) { return response.ok ? response.json() : null; })
+      .then(applyFeed)
+      .catch(function () {});
+  }
+  onYear("gas", showGas);
+  onYear("spend", showSpend);
+  onYear("care", showCare);
+  onYear("trip", showTrip);
+  onYear("date", showDate);
+  onYear("gpa", showGpa);
+  onYear("pet", showPet);
+  onYear("job", showJob);
+  onYear("aid", showAid);
+  onYear("home", showHome);
   showAll();
+  pullLife();
   refreshBls();
+  setInterval(pullLife, 15 * 60 * 1000);
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible") pullLife();
+  });
 })();

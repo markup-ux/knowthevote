@@ -590,7 +590,7 @@
   buildMeasures();
   status.textContent = "Reading the Census Bureau counts.";
   Promise.all([
-    fetch("census/us.json").then(function (response) { if (!response.ok) throw new Error("json"); return response.json(); }),
+    fetch("census/us.json?t=" + Math.floor(Date.now() / 3600000)).then(function (response) { if (!response.ok) throw new Error("json"); return response.json(); }),
     fetch("preview/us.svg").then(function (response) { if (!response.ok) throw new Error("map"); return response.text(); })
   ]).then(function (parts) {
     data = parts[0];

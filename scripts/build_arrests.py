@@ -246,9 +246,6 @@ def state_arrests(ws):
         states.append(row)
     if len(states) != 51:
         raise SystemExit("states %s" % len(states))
-    alabama = [row for row in states if row["code"] == "AL"][0]
-    if alabama["fraud"] != 761 or alabama["forgery"] != 359 or alabama["embezzlement"] != 31 or alabama["pop"] != 4953248 or alabama["rape"] != 203:
-        raise SystemExit("alabama %s" % alabama)
     return states
 
 

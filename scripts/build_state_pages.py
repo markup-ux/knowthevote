@@ -551,7 +551,7 @@ def page(data):
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<script src="theme.js?v=19" defer></script>
+<script src="theme.js?v=20" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · %s, November 3, 2026</title>
@@ -624,7 +624,7 @@ def index_page(states):
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<script src="theme.js?v=19" defer></script>
+<script src="theme.js?v=20" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Know who you're voting for.</title>

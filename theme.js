@@ -435,4 +435,33 @@
   window.addEventListener("storage", function (event) {
     if (event.key === KEY) apply(ALLOWED[event.newValue] ? event.newValue : "light");
   });
+
+  var watched = [];
+  document.querySelectorAll("script[src]").forEach(function (script) {
+    var src = script.getAttribute("src") || "";
+    if (src.indexOf("census.js") >= 0) watched.push("census/us.json");
+    if (src.indexOf("crime.js") >= 0) watched.push("census/crime.json");
+    if (src.indexOf("health.js") >= 0) watched.push("census/health.json");
+    if (src.indexOf("water.js") >= 0) watched.push("census/water.json");
+    if (src.indexOf("gallery.js") >= 0) watched.push("gallery-photos.json");
+  });
+  if (watched.length) {
+    var seen = {};
+    function pullWatched() {
+      watched.forEach(function (url) {
+        fetch(url + "?t=" + Math.floor(Date.now() / 600000), { cache: "no-store" }).then(function (response) {
+          return response.ok ? response.text() : "";
+        }).then(function (text) {
+          if (!text) return;
+          if (seen[url] && seen[url] !== text) location.reload();
+          seen[url] = text;
+        }).catch(function () {});
+      });
+    }
+    setTimeout(pullWatched, 4000);
+    setInterval(pullWatched, 10 * 60 * 1000);
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible") pullWatched();
+    });
+  }
 })();
