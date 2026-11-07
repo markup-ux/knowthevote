@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t);var raw=localStorage.getItem("leaders-look");if(raw){var o=JSON.parse(raw),el=document.documentElement,css="",st=document.createElement("style");function hex(v){return typeof v==="string"&&/^#[0-9a-fA-F]{6}$/.test(v)?v:""}function lum(h){var n=parseInt(h.slice(1),16);return (((n>>16)&255)*3+((n>>8)&255)*6+(n&255))/10}function face(v){return typeof v==="string"&&v.length>0&&v.length<80?v:""}var body=face(o.body),display=face(o.display),paper=hex(o.paper),ink=hex(o.ink),bar=hex(o.bar),stripe=hex(o.stripe);if(body){el.style.setProperty("--look-body",body);el.classList.add("look-body");css+="html.look-body body{font-family:var(--look-body)}"}if(display){el.style.setProperty("--look-display",display);el.classList.add("look-display");css+="html.look-display h1,html.look-display h2,html.look-display h3,html.look-display .brand{font-family:var(--look-display)}"}if(paper){el.style.setProperty("--look-paper",paper);el.classList.add("look-paper");css+="html.look-paper{--paper:var(--look-paper)}"}if(ink){el.style.setProperty("--look-ink",ink);el.classList.add("look-ink");css+="html.look-ink{--ink:var(--look-ink)}"}if(bar){el.style.setProperty("--look-bar",bar);el.style.setProperty("--look-bar-ink",lum(bar)>150?"#1c1915":"#f4f7fb");el.classList.add("look-bar");css+="html.look-bar body{--bar:var(--look-bar);--bar-ink:var(--look-bar-ink)}"}if(stripe){el.style.setProperty("--look-stripe",stripe);el.classList.add("look-stripe");css+="html.look-stripe body{--bar-stripe:var(--look-stripe);--bar-hover:var(--look-stripe)}"}if(css){st.textContent=css;document.head.appendChild(st)}}}catch(e){}</script>
-<script src="theme.js?v=34" defer></script>
+<script src="theme.js?v=35" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · The House</title>
@@ -41,9 +41,9 @@ div.floor-row { cursor: default; }
 .swatch.stone { background: #c8c0b4; }
 .swatch.present { background: #3d4f86; }
 .swatch.tie { background: #6a4a78; }
-.swatch.slip-back { background: #0e6fa8; }
-.swatch.slip-out { background: #d5eaf8; }
-.swatch.slip-note { background: var(--paper); box-shadow: inset 0 0 0 3px #0e6fa8; }
+.swatch.slip-back { background: var(--slip-deep, #0e6fa8); }
+.swatch.slip-out { background: var(--slip-pale, #d5eaf8); }
+.swatch.slip-note { background: var(--paper); box-shadow: inset 0 0 0 3px var(--slip-ink, #0e6fa8); }
 .party-d { color: var(--tone-party-d, #1e4d7b); }
 .party-r { color: var(--tone-party-r, #8d3232); }
 .party-i { color: var(--tone-party-i, #3e5c45); }
@@ -165,7 +165,7 @@ body { padding-bottom: 84px; }
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.census-topic a[href="#blue-slips"] { color: #0e6fa8; }
+.census-topic a[href="#blue-slips"] { color: var(--slip-ink, #0e6fa8); }
 .census-topic a[href="#presidents"],
 .census-topic a[href="#senators"] { color: #8a7360; }
 #taxpayer > h2 { color: #c4924a; }
@@ -179,15 +179,16 @@ body { padding-bottom: 84px; }
   background-clip: text;
   color: transparent;
 }
-#blue-slips > h2 { color: #0e6fa8; }
+#blue-slips > h2 { color: var(--slip-ink, #0e6fa8); }
 #presidents > h2,
 #senators > h2 { color: #8a7360; }
-.slip-row { border-bottom: 1px solid var(--line); border-left: 8px solid var(--tone-bill, #9ecae4); background: color-mix(in srgb, var(--tone-bill, #0e6fa8) 12%, var(--chip)); }
-.slip-row.slip-back { border-left-color: var(--tone-gov, #0e6fa8); background: color-mix(in srgb, var(--tone-gov, #0e6fa8) 18%, var(--chip)); }
-.slip-row.slip-note { border-left: 8px double var(--tone-gov, #0e6fa8); background-color: transparent; background-image: none; }
+.slip-row { border-bottom: 1px solid var(--line); border-left: 8px solid var(--slip-pale, #9ecae4); background: color-mix(in srgb, var(--slip-ink, #0e6fa8) 12%, var(--chip)); }
+.slip-row.slip-back { border-left-color: var(--slip-deep, #0e6fa8); background: color-mix(in srgb, var(--slip-deep, #0e6fa8) 18%, var(--chip)); }
+.slip-row.slip-note { border-left: 8px double var(--slip-ink, #0e6fa8); background-color: transparent; background-image: none; }
 .slip-row.slip-none { border-left-color: var(--tone-absent, #c8c0b4); background: transparent; }
-.slip-row.is-on { background-color: color-mix(in srgb, var(--tone-bill, #0e6fa8) 22%, var(--chip)); }
-.slip-row.slip-note.is-on { background-color: color-mix(in srgb, var(--tone-open, #e6b422) 16%, var(--chip)); background-image: none; }
+.slip-row.is-on { background-color: color-mix(in srgb, var(--slip-ink, #0e6fa8) 22%, var(--chip)); }
+.slip-row.slip-note.is-on { background-color: color-mix(in srgb, var(--slip-ink, #0e6fa8) 16%, var(--chip)); background-image: none; }
+.slip-row .card-about { color: var(--slip-ink, #0e6fa8); }
 .slip-row > .vote-row {
   display: grid;
   grid-template-columns: 56px minmax(0, 1fr);
@@ -351,7 +352,10 @@ html[data-theme]:not([data-theme="dark"]):not([data-theme$="-dark"]) body {
   --j-vote-line: color-mix(in srgb, var(--bar-stripe) 36%, var(--paper));
   --j-yes: oklch(from var(--bar) clamp(0.28, l, 0.46) c h);
   --j-no: oklch(from var(--bar-stripe) clamp(0.32, l, 0.50) c h);
-  --j-slip: oklch(from var(--bar-line, var(--map-tint)) clamp(0.32, l, 0.46) c h);
+  --slip-ink: oklch(from color-mix(in srgb, #0e6fa8 78%, var(--ink)) min(l, 0.40) max(c, 0.072) h);
+  --slip-deep: oklch(from color-mix(in srgb, #0a568c 80%, var(--ink)) min(l, 0.36) max(c, 0.07) h);
+  --slip-pale: oklch(from color-mix(in srgb, #6aafd4 72%, var(--paper)) clamp(0.68, l, 0.82) max(c, 0.055) h);
+  --j-slip: oklch(from color-mix(in srgb, #0e6fa8 84%, var(--bar)) clamp(0.34, l, 0.46) max(c, 0.075) h);
   --j-slip-ink: var(--paper);
   --j-slip-line: var(--j-slip);
   --j-people: color-mix(in srgb, var(--bar-stripe) 30%, var(--paper));
@@ -395,6 +399,9 @@ html.theme-mix-dark:not([data-theme]) body {
   --j-floor: #7a5e10; --j-floor-ink: #ffe9a8; --j-floor-line: #e6b422;
   --j-intro: #1a3348; --j-intro-ink: #d6e6f4; --j-intro-line: #7eb0d4;
   --j-vote: #1c1915; --j-vote-ink: #f3efe6; --j-vote-line: #3c362e; --j-yes: #3d9a62; --j-no: #e07a90;
+  --slip-ink: #7eb6d6;
+  --slip-deep: #3aa0d8;
+  --slip-pale: #1a4568;
   --j-slip: #0a4f78; --j-slip-ink: #d6ecf8; --j-slip-line: #3aa0d8;
   --j-people: #3a3228; --j-people-ink: #f3efe6; --j-people-line: #d9c8b4;
 }
@@ -448,7 +455,10 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
   --j-vote-line: color-mix(in srgb, var(--bar-stripe) 40%, var(--ink));
   --j-yes: oklch(from var(--bar-line, var(--map-tint)) clamp(0.55, l, 0.72) c h);
   --j-no: oklch(from var(--map-on, var(--bar-stripe)) clamp(0.55, l, 0.72) c h);
-  --j-slip: oklch(from var(--map-tint, var(--bar-line)) clamp(0.34, l, 0.46) c h);
+  --slip-ink: oklch(from color-mix(in srgb, #7eb6d6 74%, var(--ink)) max(l, 0.78) max(c, 0.055) h);
+  --slip-deep: oklch(from color-mix(in srgb, #3aa0d8 70%, var(--ink)) clamp(0.64, l, 0.78) max(c, 0.065) h);
+  --slip-pale: oklch(from color-mix(in srgb, #1a5278 60%, var(--chip)) clamp(0.34, l, 0.48) max(c, 0.05) h);
+  --j-slip: oklch(from color-mix(in srgb, #145a8c 72%, var(--bar)) clamp(0.32, l, 0.46) max(c, 0.07) h);
   --j-slip-ink: var(--ink);
   --j-slip-line: var(--j-slip);
   --j-people: color-mix(in srgb, var(--bar-stripe) 28%, var(--ink));

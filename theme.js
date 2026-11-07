@@ -124,6 +124,62 @@
     if (!meta) return "sans-serif";
     return fontStack(name, meta.group, meta.alt);
   }
+  var MOBILE_FACE = {
+    "Candara": "Nunito",
+    "Constantia": "Source Serif 4",
+    "Century Gothic": "Montserrat",
+    "Trebuchet MS": "Fira Sans",
+    "Bookman Old Style": "Neuton",
+    "Calisto MT": "Libre Caslon Text",
+    "Corbel": "Source Sans 3",
+    "Sitka Text": "Source Serif 4",
+    "Palatino Linotype": "Libre Baskerville",
+    "Segoe Script": "Caveat",
+    "Maiandra GD": "Quicksand",
+    "Comic Sans MS": "Comic Neue",
+    "Segoe Print": "Patrick Hand",
+    "Verdana": "Nunito Sans",
+    "Arial Black": "Archivo Black",
+    "Arial": "Arimo",
+    "Courier New": "Courier Prime",
+    "Times New Roman": "Tinos",
+    "Rockwell": "Zilla Slab",
+    "Calibri": "Carlito",
+    "Cambria": "Caladea",
+    "Lucida Console": "Share Tech Mono",
+    "Goudy Old Style": "EB Garamond",
+    "Baskerville Old Face": "Libre Baskerville",
+    "Gabriola": "Great Vibes",
+    "Consolas": "Inconsolata",
+    "OCR A": "Share Tech Mono",
+    "Garamond": "EB Garamond",
+    "Old English Text MT": "UnifrakturCook",
+    "Century Schoolbook": "Literata",
+    "Book Antiqua": "Libre Baskerville",
+    "Cooper Black": "Lilita One",
+    "Lucida Sans Unicode": "Nunito Sans",
+    "Kristen ITC": "Sniglet",
+    "Bahnschrift": "Barlow",
+    "Agency FB": "Oswald",
+    "Perpetua": "Cormorant Garamond",
+    "Arial Narrow": "Archivo Narrow",
+    "Impact": "Anton"
+  };
+  var MOBILE_WEIGHT = { "UnifrakturCook": "700" };
+  function mobileFile(family) {
+    return "/fonts/" + family.toLowerCase().replace(/ /g, "-") + ".woff2";
+  }
+  function themeStack(name) {
+    var meta = FONT_META[name] || { group: "Sans", alt: "" };
+    var group = meta.group;
+    var tail = group === "Mono" ? "monospace" : group === "Script" ? "cursive" : (group === "Serif" || SERIF_DISPLAY[name]) ? "serif" : "sans-serif";
+    var parts = [quoteFace(name)];
+    var mobile = MOBILE_FACE[name];
+    if (mobile) parts.push(quoteFace(mobile));
+    if (meta.alt && meta.alt !== mobile) parts.push(quoteFace(meta.alt));
+    parts.push(tail);
+    return parts.join(", ");
+  }
   var THEME_TYPE = [
     ["spring", "Candara", "Constantia"],
     ["summer", "Century Gothic", "Trebuchet MS"],
@@ -153,9 +209,9 @@
     var rules = [];
     THEME_TYPE.forEach(function (row) {
       var id = row[0];
-      var body = stackOf(row[1]);
-      var display = stackOf(row[2]);
-      var sub = row[3] ? stackOf(row[3]) : display;
+      var body = themeStack(row[1]);
+      var display = themeStack(row[2]);
+      var sub = row[3] ? themeStack(row[3]) : display;
       var b = 'html[data-theme="' + id + '"] body, html[data-theme="' + id + '-dark"] body';
       var title = 'html[data-theme="' + id + '"] h1, html[data-theme="' + id + '"] h2, html[data-theme="' + id + '"] .brand, html[data-theme="' + id + '-dark"] h1, html[data-theme="' + id + '-dark"] h2, html[data-theme="' + id + '-dark"] .brand';
       var h3 = 'html[data-theme="' + id + '"] h3, html[data-theme="' + id + '-dark"] h3';
@@ -170,6 +226,41 @@
       }
     });
     return rules.join("\n");
+  }
+  var faceStyle = null;
+  var facesOn = "";
+  function ensureThemeFaces(theme) {
+    var id = String(theme || "light").replace(/-dark$/, "");
+    var row = null;
+    var i;
+    for (i = 0; i < THEME_TYPE.length; i++) {
+      if (THEME_TYPE[i][0] === id) { row = THEME_TYPE[i]; break; }
+    }
+    var wanted = [];
+    var seen = {};
+    if (row) {
+      var picks = [row[1], row[2]];
+      if (row[3]) picks.push(row[3]);
+      for (i = 0; i < picks.length; i++) {
+        var family = MOBILE_FACE[picks[i]];
+        if (!family || seen[family]) continue;
+        seen[family] = 1;
+        wanted.push(family);
+      }
+    }
+    var css = "";
+    for (i = 0; i < wanted.length; i++) {
+      var family = wanted[i];
+      var weight = MOBILE_WEIGHT[family] || "400";
+      css += "@font-face{font-family:" + quoteFace(family) + ";font-style:normal;font-weight:" + weight + ";font-display:swap;src:url(\"" + mobileFile(family) + "\") format(\"woff2\");}";
+    }
+    if (css === facesOn) return;
+    facesOn = css;
+    if (!faceStyle) {
+      faceStyle = document.createElement("style");
+      document.head.appendChild(faceStyle);
+    }
+    faceStyle.textContent = css;
   }
   function faceInstalled(name) {
     try {
@@ -403,6 +494,11 @@
     "html.theme-mix.look-bar header, html.theme-mix.look-bar footer, html.theme-mix.look-bar .lang-menu { background: var(--bar); }"
   ].join("\n");
   document.head.appendChild(style);
+  try {
+    ensureThemeFaces(localStorage.getItem(KEY) || "light");
+  } catch (error) {
+    ensureThemeFaces("light");
+  }
 
   var button = null;
   var wheel = null;
@@ -654,6 +750,7 @@
 
   function apply(theme) {
     if (!ALLOWED[theme]) theme = "light";
+    ensureThemeFaces(theme);
     if (theme === "light") document.documentElement.removeAttribute("data-theme");
     else document.documentElement.setAttribute("data-theme", theme);
     var mode = modeOf(theme);
