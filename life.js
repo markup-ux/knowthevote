@@ -183,12 +183,17 @@
     return list.length > 0 && year === list[list.length - 1];
   }
   function stamp(key, year) {
-    if (!sliders[key]) return;
-    sliders[key].setAttribute("aria-valuenow", String(year));
-    sliders[key].setAttribute("aria-valuetext", String(year));
-    document.getElementById(key + "-year-out").textContent = String(year);
+    if (!sliders[key] || year == null || year !== year) return;
+    var shown = String(year);
+    sliders[key].setAttribute("aria-valuenow", shown);
+    sliders[key].setAttribute("aria-valuetext", shown);
+    var out = document.getElementById(key + "-year-out");
+    if (out) {
+      out.value = shown;
+      out.textContent = shown;
+    }
     var glance = document.getElementById(key + "-year-glance");
-    if (glance) glance.textContent = String(year);
+    if (glance) glance.textContent = shown;
   }
   function syncSlider(key) {
     var list = yearList(key);
@@ -431,7 +436,12 @@
   }
   function choose(key) {
     var list = yearList(key);
-    var year = list[Number(sliders[key].value)];
+    var index = Math.round(Number(sliders[key].value));
+    if (!isFinite(index)) index = list.length - 1;
+    if (index < 0) index = 0;
+    if (index > list.length - 1) index = list.length - 1;
+    sliders[key].value = String(index);
+    var year = list[index];
     pinned[key] = year !== list[list.length - 1];
     selected[key] = year;
     return year;
@@ -728,7 +738,9 @@
 
   function onYear(key, show) {
     if (!sliders[key]) return;
-    sliders[key].addEventListener("input", function () { show(choose(key)); });
+    function apply() { show(choose(key)); }
+    sliders[key].addEventListener("input", apply);
+    sliders[key].addEventListener("change", apply);
   }
   function applyFeed(feed) {
     if (!feed) return;
