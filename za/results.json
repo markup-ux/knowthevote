@@ -2,14 +2,14 @@
   "source": "https://results.elections.org.za/dashboards/lge/MapsJason/2026/EEID1887LiteMapsNational.js",
   "partySource": "https://results.elections.org.za/dashboards/lge/MapsJason/2016/PartyList.js",
   "eventId": 1887,
-  "reportDate": "2026-11-07T21:24:00.9469129+02:00",
-  "fetchedAt": "2026-11-07T19:26:43+00:00",
+  "reportDate": "2026-11-08T00:49:37.8073617+02:00",
+  "fetchedAt": "2026-11-07T22:53:42+00:00",
   "progress": {
-    "vdComplete": 23623,
+    "vdComplete": 23644,
     "vdExpected": 23696,
-    "wardsComplete": 4430,
+    "wardsComplete": 4448,
     "wardsExpected": 4485,
-    "municipalitiesComplete": 208,
+    "municipalitiesComplete": 209,
     "municipalitiesExpected": 213
   },
   "parties": {
@@ -92,37 +92,37 @@
   "national": [
     {
       "id": 7,
-      "votes": 9121007,
-      "percent": 30.83,
+      "votes": 9133847,
+      "percent": 30.82,
       "order": 1
     },
     {
       "id": 52,
-      "votes": 7271657,
-      "percent": 24.58,
+      "votes": 7294108,
+      "percent": 24.61,
       "order": 2
     },
     {
       "id": 1748,
-      "votes": 2865371,
-      "percent": 9.69,
+      "votes": 2870209,
+      "percent": 9.68,
       "order": 3
     },
     {
       "id": 3,
-      "votes": 1390506,
+      "votes": 1391997,
       "percent": 4.7,
       "order": 4
     },
     {
       "id": 957,
-      "votes": 586077,
+      "votes": 586415,
       "percent": 1.98,
       "order": 5
     },
     {
       "id": 1863,
-      "votes": 131033,
+      "votes": 131094,
       "percent": 0.44,
       "order": 6
     },
@@ -134,37 +134,37 @@
     },
     {
       "id": -2,
-      "votes": 2641368,
+      "votes": 2647760,
       "percent": 8.63,
       "order": 8
     },
     {
       "id": 945,
-      "votes": 1845918,
+      "votes": 1848544,
       "percent": 6.24,
       "order": 9
     },
     {
       "id": 1511,
-      "votes": 1680551,
+      "votes": 1684076,
       "percent": 5.68,
       "order": 10
     },
     {
       "id": 445,
-      "votes": 705862,
+      "votes": 707526,
       "percent": 2.39,
       "order": 11
     },
     {
       "id": 4,
-      "votes": 887353,
+      "votes": 888190,
       "percent": 3.0,
       "order": 12
     },
     {
       "id": 1318,
-      "votes": 290801,
+      "votes": 291121,
       "percent": 0.98,
       "order": 13
     },
@@ -1046,34 +1046,34 @@
     {
       "code": "JHB",
       "name": "City of Johannesburg",
-      "votes": 1368150,
+      "votes": 1369285,
       "rows": [
         {
           "id": 7,
-          "votes": 502720,
-          "percent": 20.25
+          "votes": 503563,
+          "percent": 20.26
         },
         {
           "id": 52,
-          "votes": 865430,
-          "percent": 34.87
+          "votes": 865722,
+          "percent": 34.84
         }
       ],
       "leader": "DA",
       "leaderId": 52,
       "color": "#f4f400",
-      "amount": 0.828,
+      "amount": 0.827,
       "slug": "city-of-johannesburg"
     },
     {
       "code": "TSH",
       "name": "City of Tshwane",
-      "votes": 614965,
+      "votes": 615694,
       "rows": [
         {
           "id": 52,
-          "votes": 614965,
-          "percent": 34.38
+          "votes": 615694,
+          "percent": 34.37
         }
       ],
       "leader": "DA",
@@ -1119,12 +1119,12 @@
     {
       "code": "GT421",
       "name": "Emfuleni",
-      "votes": 145305,
+      "votes": 151682,
       "rows": [
         {
           "id": 52,
-          "votes": 145305,
-          "percent": 41.24
+          "votes": 151682,
+          "percent": 41.06
         }
       ],
       "leader": "DA",
@@ -1209,12 +1209,12 @@
     {
       "code": "ETH",
       "name": "eThekwini",
-      "votes": 729462,
+      "votes": 733073,
       "rows": [
         {
           "id": 1748,
-          "votes": 729462,
-          "percent": 39.13
+          "votes": 733073,
+          "percent": 38.71
         }
       ],
       "leader": "MKP",
@@ -2902,12 +2902,12 @@
     {
       "code": "LIM361",
       "name": "Thabazimbi",
-      "votes": 12434,
+      "votes": 13878,
       "rows": [
         {
           "id": 7,
-          "votes": 12434,
-          "percent": 27.98
+          "votes": 13878,
+          "percent": 29.07
         }
       ],
       "leader": "ANC",
@@ -3055,12 +3055,12 @@
     {
       "code": "NW373",
       "name": "Rustenburg",
-      "votes": 107283,
+      "votes": 107864,
       "rows": [
         {
           "id": 7,
-          "votes": 107283,
-          "percent": 38.25
+          "votes": 107864,
+          "percent": 38.19
         }
       ],
       "leader": "ANC",
