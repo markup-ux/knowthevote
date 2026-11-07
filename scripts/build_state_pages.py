@@ -295,7 +295,7 @@ def footer(state_name, guide):
   </div>
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
-<script src="lang.js"></script>
+<script src="lang.js?v=2"></script>
 <script src="live.js?v=16"></script>
 <script src="state.js?v=blend3"></script>
 </body>
@@ -551,7 +551,7 @@ def page(data):
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<script src="theme.js?v=20" defer></script>
+<script src="theme.js?v=22" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · %s, November 3, 2026</title>
@@ -624,7 +624,7 @@ def index_page(states):
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<script src="theme.js?v=20" defer></script>
+<script src="theme.js?v=22" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Know who you're voting for.</title>
@@ -664,7 +664,7 @@ def index_page(states):
   </div>
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
-<script src="lang.js"></script>
+<script src="lang.js?v=2"></script>
 <script src="live.js?v=16"></script>
 <script>
 fetch("preview/us.svg").then(function (response) { return response.text(); }).then(function (markup) {

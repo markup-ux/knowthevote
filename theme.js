@@ -38,7 +38,7 @@
   var style = document.createElement("style");
   style.textContent = [
     "header .lang { display: flex; align-items: center; gap: 8px; }",
-    "header .now { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--bar-ink, #f4f7fb); font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }",
+    "header .now { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0; color: var(--bar-ink, #f4f7fb); font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }",
     ":root { --clock-face: #f4f0e6; --clock-rim: #bf0a30; --clock-mark: #1c1915; --clock-hour: #0a3161; --clock-minute: #c4922a; --clock-pin: #1e4d7b; }",
     ".clock { width: 1.45em; height: 1.45em; display: inline-block; vertical-align: -0.28em; margin-right: 0.4em; flex: none; }",
     "header .now .clock { width: 22px; height: 22px; margin: 0; }",
@@ -46,8 +46,9 @@
     ".clock-marks { fill: none; stroke: var(--clock-mark); stroke-width: 1.35; stroke-linecap: round; }",
     ".clock-hour { fill: none; stroke: var(--clock-hour); stroke-width: 2.2; stroke-linecap: round; }",
     ".clock-minute { fill: none; stroke: var(--clock-minute); stroke-width: 1.5; stroke-linecap: round; }",
+    ".clock-second { fill: none; stroke: var(--clock-rim); stroke-width: 1; stroke-linecap: round; }",
     ".clock-pin { fill: var(--clock-pin); }",
-    ".clock-hour, .clock-minute { transform-box: view-box; transform-origin: 16px 16px; }",
+    ".clock-hour, .clock-minute, .clock-second { transform-box: view-box; transform-origin: 16px 16px; }",
     'html[data-theme="dark"] { --clock-face: #1c1915; --clock-rim: #f6d56a; --clock-mark: #f4f0e6; --clock-hour: #e7a3a3; --clock-minute: #9ec0e8; --clock-pin: #e6b422; }',
     'html[data-theme="spring"] { --clock-face: #f3fbea; --clock-rim: #246b3a; --clock-mark: #1a2a14; --clock-hour: #e07a9a; --clock-minute: #3a9ad4; --clock-pin: #e6c84a; }',
     'html[data-theme="spring-dark"] { --clock-face: #121a14; --clock-rim: #e6c84a; --clock-mark: #e8f6df; --clock-hour: #e07a9a; --clock-minute: #7eb6d6; --clock-pin: #f4b8cc; }',
@@ -80,7 +81,10 @@
     ".theme-choice svg { width: 20px; height: 20px; display: block; }",
     ".theme-choice[aria-pressed='true'] { box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--accent, #c4b8a4); }",
     ".theme-choice:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }",
-    ".theme-wheel-name { position: absolute; left: 50%; top: 50%; width: 76px; margin: 0; transform: translate(-50%, -50%); text-align: center; color: #f4f0e6; font: 650 13px/1.2 'Segoe UI', 'Helvetica Neue', sans-serif; pointer-events: none; }",
+    ".theme-wheel-name { position: absolute; left: 50%; top: 38%; width: 76px; margin: 0; transform: translate(-50%, -50%); text-align: center; color: #f4f0e6; font: 650 13px/1.2 'Segoe UI', 'Helvetica Neue', sans-serif; pointer-events: none; }",
+    ".theme-wheel-exit { position: absolute; left: 50%; top: 56%; z-index: 2; transform: translate(-50%, -50%); min-width: 64px; height: 28px; padding: 0 10px; border: 1px solid rgba(255,255,255,.85); border-radius: 999px; background: #1c1915; color: #f4f0e6; font: 650 12px/1 'Segoe UI', 'Helvetica Neue', sans-serif; letter-spacing: 0.04em; cursor: pointer; }",
+    ".theme-wheel-exit:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }",
+    "@media (max-width: 800px) { html.theme-open header { z-index: 9; } }",
     "@media (prefers-reduced-motion: no-preference) { .theme-wheel.is-open .theme-wheel-face { animation: theme-wheel-in 160ms ease; } }",
     "@keyframes theme-wheel-in { from { transform: scale(.55); opacity: .2; } to { transform: none; opacity: 1; } }",
     'html[data-theme="dark"] { --paper: #161410; --ink: #f3efe6; --muted: #c4b8a8; --line: #3a342c; --chip: #1a3348; --map: #3a3018; --map-ink: #f3efe6; --map-on: #f6d56a; --map-tint: #4a6ea0; }',
@@ -186,13 +190,24 @@
   function choose(value) {
     try { localStorage.setItem(KEY, value); } catch (error) {}
     apply(value);
-    closeWheel();
   }
 
   function place() {
     if (!button || !wheel) return;
+    var narrow = window.matchMedia("(max-width: 800px)").matches;
+    var header = document.querySelector("header");
+    var headerBottom = 0;
+    if (header) {
+      var hr = header.getBoundingClientRect();
+      if (hr.height > 0 && hr.bottom > 0) headerBottom = hr.bottom;
+    }
     var rect = button.getBoundingClientRect();
+    var below = Math.max(rect.bottom + 8, headerBottom + 8);
     var size = window.innerWidth < 360 ? 260 : 300;
+    if (narrow) {
+      var room = window.innerHeight - below - 8;
+      size = Math.min(300, window.innerWidth - 16, Math.max(160, room));
+    }
     wheel.style.width = size + "px";
     wheel.style.height = size + "px";
     var face = wheel.querySelector(".theme-wheel-face");
@@ -200,11 +215,12 @@
       face.style.transform = size < 300 ? "scale(" + (size / 300) + ")" : "";
       face.style.transformOrigin = "top left";
     }
-    var left = rect.right - size;
+    var left = narrow ? Math.max(8, (window.innerWidth - size) / 2) : rect.right - size;
     if (left < 8) left = 8;
-    if (left + size > window.innerWidth - 8) left = window.innerWidth - size - 8;
-    var top = rect.bottom + 8;
-    if (top + size > window.innerHeight - 8) top = Math.max(8, rect.top - size - 8);
+    if (left + size > window.innerWidth - 8) left = Math.max(8, window.innerWidth - size - 8);
+    var top = narrow ? below : rect.bottom + 8;
+    if (!narrow && top + size > window.innerHeight - 8) top = Math.max(8, rect.top - size - 8);
+    if (narrow && headerBottom > 0) top = Math.max(top, headerBottom + 8);
     wheel.style.left = left + "px";
     wheel.style.top = top + "px";
   }
@@ -214,10 +230,20 @@
     open = false;
     wheel.hidden = true;
     wheel.classList.remove("is-open");
+    document.documentElement.classList.remove("theme-open");
     if (button) {
       button.setAttribute("aria-expanded", "false");
       button.focus();
     }
+  }
+
+  function showHeader() {
+    var header = document.querySelector("header");
+    if (!header) return;
+    document.body.classList.remove("chrome-idle", "chrome-away", "chrome-at-top");
+    header.style.maxHeight = "";
+    header.style.overflow = "";
+    header.inert = false;
   }
 
   function openWheel() {
@@ -225,6 +251,8 @@
     open = true;
     wheel.hidden = false;
     wheel.classList.add("is-open");
+    document.documentElement.classList.add("theme-open");
+    showHeader();
     place();
     if (button) button.setAttribute("aria-expanded", "true");
     var current = wheel.querySelector(".theme-choice[aria-pressed='true']") || wheel.querySelector(".theme-choice");
@@ -272,6 +300,15 @@
     nameEl.className = "theme-wheel-name";
     nameEl.setAttribute("aria-hidden", "true");
     face.appendChild(nameEl);
+    var exit = document.createElement("button");
+    exit.type = "button";
+    exit.className = "theme-wheel-exit";
+    exit.textContent = "Exit";
+    exit.addEventListener("click", function (event) {
+      event.stopPropagation();
+      closeWheel();
+    });
+    face.appendChild(exit);
     wheel.appendChild(face);
     document.body.appendChild(wheel);
     wheel.addEventListener("keydown", function (event) {
@@ -320,12 +357,8 @@
       else openWheel();
     });
     mountWheel();
-    document.addEventListener("click", function (event) {
-      if (!open) return;
-      if (wheel.contains(event.target) || button.contains(event.target)) return;
-      closeWheel();
-    });
     window.addEventListener("resize", function () { if (open) place(); });
+    window.addEventListener("scroll", function () { if (open) place(); }, { passive: true });
     apply(saved());
   }
 
@@ -341,51 +374,40 @@
       var outer = 11.15;
       marks += '<line x1="' + (16 + Math.sin(a) * inner).toFixed(2) + '" y1="' + (16 - Math.cos(a) * inner).toFixed(2) + '" x2="' + (16 + Math.sin(a) * outer).toFixed(2) + '" y2="' + (16 - Math.cos(a) * outer).toFixed(2) + '"/>';
     }
-    return '<svg class="clock" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle class="clock-rim" cx="16" cy="16" r="15"/><circle class="clock-face" cx="16" cy="16" r="12.15"/><g class="clock-marks">' + marks + '</g><line class="clock-hour" x1="16" y1="16.8" x2="16" y2="9.1"/><line class="clock-minute" x1="16" y1="17.2" x2="16" y2="6.3"/><circle class="clock-pin" cx="16" cy="16" r="1.55"/></svg>';
+    return '<svg class="clock" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle class="clock-rim" cx="16" cy="16" r="15"/><circle class="clock-face" cx="16" cy="16" r="12.15"/><g class="clock-marks">' + marks + '</g><line class="clock-hour" x1="16" y1="16.8" x2="16" y2="9.1"/><line class="clock-minute" x1="16" y1="17.2" x2="16" y2="6.3"/><line class="clock-second" x1="16" y1="18.4" x2="16" y2="5.2"/><circle class="clock-pin" cx="16" cy="16" r="1.55"/></svg>';
   }
 
-  function setClockHands(root, d) {
-    if (!root) return;
-    var clock = root.querySelector ? root.querySelector(".clock") : null;
-    if (!clock && root.classList && root.classList.contains("clock")) clock = root;
-    if (!clock) return;
-    var minute = d.getMinutes();
-    var hour = d.getHours() % 12;
-    var hourHand = clock.querySelector(".clock-hour");
-    var minuteHand = clock.querySelector(".clock-minute");
-    if (hourHand) hourHand.style.transform = "rotate(" + (hour * 30 + minute * 0.5) + "deg)";
-    if (minuteHand) minuteHand.style.transform = "rotate(" + (minute * 6) + "deg)";
-  }
-
-  function ensureClock(before) {
-    var prev = before.previousElementSibling;
-    if (prev && prev.classList.contains("clock")) return prev;
-    before.insertAdjacentHTML("beforebegin", clockMarkup());
-    return before.previousElementSibling;
+  function setClockHands(d) {
+    var clocks = document.querySelectorAll(".clock");
+    var seconds = d.getSeconds() + d.getMilliseconds() / 1000;
+    var minute = d.getMinutes() + seconds / 60;
+    var hour = (d.getHours() % 12) + minute / 60;
+    for (var i = 0; i < clocks.length; i++) {
+      var hourHand = clocks[i].querySelector(".clock-hour");
+      var minuteHand = clocks[i].querySelector(".clock-minute");
+      var secondHand = clocks[i].querySelector(".clock-second");
+      if (hourHand) hourHand.style.transform = "rotate(" + (hour * 30) + "deg)";
+      if (minuteHand) minuteHand.style.transform = "rotate(" + (minute * 6) + "deg)";
+      if (secondHand) secondHand.style.transform = "rotate(" + (seconds * 6) + "deg)";
+    }
   }
 
   function showLocalNow() {
-    var today = document.getElementById("today");
-    if (today) {
-      ensureClock(today);
-      setClockHands(today.parentNode, new Date());
-      document.addEventListener("visibilitychange", function () {
-        if (document.visibilityState === "visible") setClockHands(today.parentNode, new Date());
-      });
-      return;
+    var bar = document.querySelector("header .bar") || document.querySelector("header");
+    var line = bar ? bar.querySelector(".now") : null;
+    if (bar && !line) {
+      line = document.createElement("p");
+      line.className = "now";
+      line.insertAdjacentHTML("afterbegin", clockMarkup());
+      var time = document.createElement("time");
+      line.appendChild(time);
+      var here = bar.querySelector(".here");
+      var top = bar.querySelector(".bar-top");
+      var after = here || top;
+      if (after && after.parentNode === bar) bar.insertBefore(line, after.nextSibling);
+      else bar.appendChild(line);
     }
-    var bar = document.querySelector("header .bar");
-    if (!bar || bar.querySelector(".now")) return;
-    var line = document.createElement("p");
-    line.className = "now";
-    line.insertAdjacentHTML("afterbegin", clockMarkup());
-    var el = document.createElement("time");
-    line.appendChild(el);
-    var here = bar.querySelector(".here");
-    var top = bar.querySelector(".bar-top");
-    var after = here || top;
-    if (after && after.nextSibling) bar.insertBefore(line, after.nextSibling);
-    else bar.appendChild(line);
+    var el = line ? line.querySelector("time") : null;
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     function pad(n) { return n < 10 ? "0" + n : String(n); }
@@ -398,33 +420,33 @@
       } catch (e) {}
       return "";
     }
+    var shownMinute = "";
     function show() {
       var d = new Date();
+      setClockHands(d);
+      if (!el) return;
       var y = d.getFullYear();
       var m = d.getMonth();
       var day = d.getDate();
       var hour = d.getHours();
       var minute = d.getMinutes();
+      var stamp = y + "-" + m + "-" + day + "-" + hour + "-" + minute;
+      if (stamp === shownMinute) return;
+      shownMinute = stamp;
       var h12 = hour % 12 || 12;
       var ap = hour < 12 ? "a.m." : "p.m.";
       var off = -d.getTimezoneOffset();
       var sign = off >= 0 ? "+" : "-";
       var abs = Math.abs(off);
       var zone = zoneName(d);
-      el.dateTime = y + "-" + pad(m + 1) + "-" + pad(day) + "T" + pad(hour) + ":" + pad(minute) + ":00" + sign + pad(Math.floor(abs / 60)) + ":" + pad(abs % 60);
+      el.dateTime = y + "-" + pad(m + 1) + "-" + pad(day) + "T" + pad(hour) + ":" + pad(minute) + ":" + pad(d.getSeconds()) + sign + pad(Math.floor(abs / 60)) + ":" + pad(abs % 60);
       el.textContent = days[d.getDay()] + ", " + months[m] + " " + day + ", " + y + " · " + h12 + ":" + pad(minute) + " " + ap + (zone ? " " + zone : "");
-      setClockHands(line, d);
     }
-    function waitForNextMinute() {
-      var d = new Date();
-      var next = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes() + 1, 0, 0);
-      setTimeout(function () {
-        show();
-        waitForNextMinute();
-      }, Math.max(250, next - d + 50));
+    function keepTime() {
+      show();
+      setTimeout(keepTime, 100);
     }
-    show();
-    waitForNextMinute();
+    keepTime();
     document.addEventListener("visibilitychange", function () {
       if (document.visibilityState === "visible") show();
     });

@@ -338,7 +338,7 @@
     var top = rows[0];
     card.classList.remove("is-empty");
     text("aid-num", count(top.snap));
-    text("aid-unit", top.neighborhood + ", the neighborhood with the most SNAP households");
+    text("aid-unit", "SNAP households in " + top.neighborhood);
     document.getElementById("aid-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>";
     showSnap(year);
     var nation = aid[2023];
@@ -361,7 +361,7 @@
     var nation = home[2025];
     card.classList.remove("is-empty");
     text("home-num", count(top.people));
-    text("home-unit", "people in shelters in " + top.name + ", the neighborhood with the most homeless people");
+    text("home-unit", "people in shelters in " + top.name);
     list.innerHTML = "";
     var spoken = [];
     rows.forEach(function (row) {
@@ -715,23 +715,12 @@
           }
         });
       }
-      var spendRead = false;
       blsRows(both[1]).forEach(function (row) {
         if (row.period === "A01" && row.value !== "-") {
           spend[Number(row.year)] = Math.round(Number(row.value));
           if (Number(row.year) !== 2025) spendFromBls[Number(row.year)] = true;
-          spendRead = true;
         }
       });
-      if (gasLive || spendRead) {
-        var bits = [];
-        if (spendRead) bits.push("Household spending");
-        if (gasLive) bits.push("the latest gasoline month");
-        var read = bits[0];
-        if (bits.length === 2) read += " and " + bits[1];
-        var note = document.getElementById("life-year-note");
-        note.textContent = "Open Details to change a card’s year. The slider stops on years that were published. Dollars are what people paid then, not today’s prices. " + read + (bits.length === 1 ? " was" : " were") + " read from the Bureau of Labor Statistics just now" + (gasLive ? ", " + gasLive.month + " " + gasLive.year + "." : ".");
-      }
       showAll();
     }).catch(function () {});
   }

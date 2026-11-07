@@ -287,6 +287,8 @@
     if (menu && !menu.hidden) return true;
     var list = document.getElementById("site-search-list");
     if (list && !list.hidden) return true;
+    var wheel = document.querySelector(".theme-wheel");
+    if (wheel && !wheel.hidden) return true;
     return false;
   }
 

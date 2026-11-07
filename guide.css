@@ -51,6 +51,7 @@ header::after { content: ""; display: block; height: 3px; background: var(--bar-
 header .now {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0;
   color: var(--bar-ink);
@@ -66,8 +67,9 @@ header .now .clock { width: 22px; height: 22px; margin: 0; }
 .clock-marks { fill: none; stroke: var(--clock-mark); stroke-width: 1.35; stroke-linecap: round; }
 .clock-hour { fill: none; stroke: var(--clock-hour); stroke-width: 2.2; stroke-linecap: round; }
 .clock-minute { fill: none; stroke: var(--clock-minute); stroke-width: 1.5; stroke-linecap: round; }
+.clock-second { fill: none; stroke: var(--clock-rim); stroke-width: 1; stroke-linecap: round; }
 .clock-pin { fill: var(--clock-pin); }
-.clock-hour, .clock-minute { transform-box: view-box; transform-origin: 16px 16px; }
+.clock-hour, .clock-minute, .clock-second { transform-box: view-box; transform-origin: 16px 16px; }
 .brand { color: var(--bar-ink); font-family: Georgia, "Palatino Linotype", serif; font-size: 22px; text-decoration: none; letter-spacing: -0.03em; }
 nav { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; }
 nav a { text-decoration: none; color: var(--bar-ink); }
@@ -833,7 +835,7 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #sex-hood-base::after {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
   margin-top: 14px;
-  align-items: start;
+  align-items: stretch;
 }
 @media (min-width: 900px) {
   .life-grid { grid-template-columns: repeat(4, 1fr); }
@@ -841,6 +843,8 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #sex-hood-base::after {
 .life-card {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  min-height: 217px;
   background: var(--chip);
   border-top: 8px solid var(--life);
   padding: 12px 12px 14px;
@@ -896,7 +900,12 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #sex-hood-base::after {
   line-height: 1;
   letter-spacing: -0.03em;
 }
-.life-unit { margin: 0; font-size: 14px; }
+.life-unit {
+  margin: 0;
+  min-height: 2.8em;
+  font-size: 14px;
+  line-height: 1.4;
+}
 .life-aside { margin: 8px 0 0; font-size: 14px; }
 .rank { list-style: none; margin: 10px 0 0; padding: 0; }
 .rank li { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 8px; align-items: baseline; margin: 0; }
@@ -962,7 +971,7 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #sex-hood-base::after {
   display: flex;
   height: 18px;
   gap: 2px;
-  margin: 12px 0 8px;
+  margin: 12px 0 4px;
   outline: 1px solid var(--line);
 }
 .stack .seg { min-width: 0; height: 100%; }
@@ -983,7 +992,7 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #sex-hood-base::after {
 .seg-move { background: #2171b5; }
 .seg-food { background: #3d92c8; }
 .seg-ins { background: repeating-linear-gradient(-45deg, #08306b 0 1.5px, #7eb3d8 1.5px 5px); }
-.cells { display: flex; gap: 2px; margin: 12px 0 6px; }
+.cells { display: flex; gap: 2px; margin: 12px 0 4px; }
 .cells i { flex: 1; height: 18px; background: color-mix(in srgb, var(--ink) 24%, var(--chip)); }
 .cells i.on { background: var(--life); }
 .share-cap {

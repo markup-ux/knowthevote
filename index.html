@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<script src="theme.js?v=20" defer></script>
+<script src="theme.js?v=22" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote — Know who you&#x27;re voting for.</title>
 <meta name="description" content="Leaders.vote is an independent, nonpartisan guide to the leaders we vote for.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="guide.css?v=life17">
+<link rel="stylesheet" href="guide.css?v=life18">
 
 <!-- seo -->
 <link rel="canonical" href="https://leaders.vote/">
@@ -121,8 +121,7 @@
     })();
     </script>
     <section class="life" aria-labelledby="life-heading">
-      <h2 id="life-heading">Seven national averages</h2>
-      <p id="life-year-note" class="note">Open Details to change a card’s year. The slider stops on years that were published. Dollars are what people paid then, not today’s prices.</p>
+      <h2 id="life-heading">National averages</h2>
       <div class="life-grid">
         <article class="life-card life-living">
           <div class="life-head">
@@ -163,6 +162,106 @@
           </ul>
             <p class="life-what" id="spend-what">Bureau of Labor Statistics, Consumer Expenditure Survey. A consumer unit is a household that shares its major bills. The bar is one year of spending, largest share first. Dots mark the remainder, which is not one category. The survey missed October and November 2025 during a lapse in federal funding, and BLS adjusted the weights.</p>
             <p class="life-src"><a id="spend-src" href="https://www.bls.gov/news.release/cesan.htm">BLS Consumer Expenditures, 2025</a></p>
+          </details>
+        </article>
+        <article class="life-card life-job">
+          <div class="life-head">
+            <svg class="life-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <path class="line" d="M5 26.5h22M7.5 26.5V16M13.5 26.5V11M19.5 26.5V14M25.5 26.5V8"/>
+            </svg>
+            <h3>Unemployment</h3>
+            <p class="life-glance-year" id="job-year-glance">2026</p>
+          </div>
+          <p class="life-num" id="job-num">4.1%</p>
+          <p class="life-unit" id="job-unit">of the labor force, October 2026</p>
+          <div class="gauge" id="job-viz" role="img" aria-label="In 2026, 4.1% of the labor force was unemployed, on a scale from 0 to 15 percent. The tick is 4.2% in September 2026.">
+            <div class="gauge-track" id="job-track" style="--fill:27.3%">
+              <i class="gauge-past" id="job-past" style="left:28%"></i>
+            </div>
+            <div class="gauge-ends"><span>0%</span><span>15%</span></div>
+          </div>
+          <details class="life-more">
+            <summary>Details<span class="visually-hidden"> for unemployment</span></summary>
+            <div class="life-year">
+              <div class="life-year-top">
+                <label for="job-year">Year</label>
+                <output id="job-year-out">2026</output>
+              </div>
+              <input id="job-year" type="range" min="0" max="14" value="14" step="1" aria-valuemin="2012" aria-valuemax="2026" aria-valuenow="2026" aria-valuetext="2026">
+              <div class="life-year-ends"><span id="job-year-start">2012</span><span id="job-year-end">2026</span></div>
+            </div>
+            <p class="life-key" id="job-key"><span><i class="dot now"></i> October 2026</span><span><i class="dot past"></i> 4.2% in September 2026</span></p>
+            <p class="life-what" id="job-what">Bureau of Labor Statistics, Current Population Survey, seasonally adjusted. This is the unemployment rate for October 2026, the share of the labor force without a job and looking for one. It is not an average for the year. A 2026 annual average has not been published. The bar runs from 0% to 15%. The tick is 4.2% in September 2026.</p>
+            <p class="life-src"><a id="job-src" href="https://fred.stlouisfed.org/series/UNRATE">FRED UNRATE, from BLS</a></p>
+          </details>
+        </article>
+        <article class="life-card life-aid">
+          <div class="life-head">
+            <svg class="life-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect class="line" x="7" y="7" width="18" height="18" rx="2"/>
+              <path class="line" d="M11 16h10M16 11v10"/>
+            </svg>
+            <h3>Welfare</h3>
+            <p class="life-glance-year" id="aid-year-glance">2024</p>
+          </div>
+          <p class="life-num" id="aid-num">2,495</p>
+          <p class="life-unit" id="aid-unit">SNAP households in Chinatown-Two Bridges</p>
+          <details class="life-more">
+            <summary>Details<span class="visually-hidden"> for welfare</span></summary>
+            <div class="life-year">
+              <div class="life-year-top">
+                <label for="aid-year">Year</label>
+                <output id="aid-year-out">2024</output>
+              </div>
+              <input id="aid-year" type="range" min="0" max="0" value="0" step="1" aria-valuemin="2024" aria-valuemax="2024" aria-valuenow="2024" aria-valuetext="2024">
+              <div class="life-year-ends"><span id="aid-year-start">2024</span><span id="aid-year-end">2024</span></div>
+            </div>
+            <p class="life-key" id="aid-key"><span><i class="dot now"></i> 2024</span></p>
+            <p class="rank-title" id="snap-label">Neighborhoods with the most people on SNAP, 2024</p>
+            <ol class="rank" id="snap-viz">
+              <li><b>2,495</b><div><p class="rank-place">Chinatown-Two Bridges</p><p class="rank-meta">Manhattan · 46.3% of households</p></div></li>
+              <li><b>2,131</b><div><p class="rank-place">Belmont</p><p class="rank-meta">the Bronx · 68.9% of households</p></div></li>
+              <li><b>2,058</b><div><p class="rank-place">Coney Island-Sea Gate</p><p class="rank-meta">Brooklyn · 70.3% of households</p></div></li>
+              <li><b>1,955</b><div><p class="rank-place">Concourse-Concourse Village</p><p class="rank-meta">the Bronx · 65.7% of households</p></div></li>
+              <li><b>1,951</b><div><p class="rank-place">Mott Haven-Port Morris</p><p class="rank-meta">the Bronx · 66.6% of households</p></div></li>
+            </ol>
+            <p class="life-what" id="aid-what">U.S. Department of Health and Human Services, Indicator 3 of the 25th Welfare Indicators and Risk Factors report. In 2023, 20.9% of the population, 69.6 million people, received or lived with a family member who received TANF, SNAP, or SSI in any amount at any point during the year. An average-month caseload is a different measure. TANF cash assistance, the program long called welfare, reached 0.8 percent of people, 2.7 million, in an average month of 2024. This report’s latest year for that recipiency rate is 2023.</p>
+            <p class="life-src"><a id="aid-src" href="https://aspe.hhs.gov/sites/default/files/documents/9726be6ff81604c026fb82eceec5d716/25th%20Welfare%20Indicators%20Report%20to%20Congress.pdf">HHS, 25th Welfare Indicators report</a></p>
+            <p class="life-what" id="snap-what">These are the neighborhoods with the most people on SNAP. Census Bureau, American Community Survey 2024 five-year estimates, table B22003. The household count is for one census tract in that neighborhood. The rest of the neighborhood is not included.</p>
+            <p class="life-src"><a id="snap-src" href="https://data.census.gov/table/ACSDT5Y2024.B22003">Census ACS 2024, table B22003</a></p>
+          </details>
+        </article>
+        <article class="life-card life-home">
+          <div class="life-head">
+            <svg class="life-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <path class="mark" d="M4.5 14.5 16 5.2l11.5 9.3V27H4.5z"/>
+              <path class="cut" d="M13 27v-7h6v7z"/>
+            </svg>
+            <h3>Homeless</h3>
+            <p class="life-glance-year" id="home-year-glance">2026</p>
+          </div>
+          <p class="life-num" id="home-num">8,369</p>
+          <p class="life-unit" id="home-unit">people in shelters in Jamaica-St. Albans-Hollis</p>
+          <details class="life-more">
+            <summary>Details<span class="visually-hidden"> for homeless</span></summary>
+            <div class="life-year">
+              <div class="life-year-top">
+                <label for="home-year">Year</label>
+                <output id="home-year-out">2026</output>
+              </div>
+              <input id="home-year" type="range" min="0" max="0" value="0" step="1" aria-valuemin="2026" aria-valuemax="2026" aria-valuenow="2026" aria-valuetext="2026">
+              <div class="life-year-ends"><span id="home-year-start">2026</span><span id="home-year-end">2026</span></div>
+            </div>
+            <p class="life-key" id="home-key"><span><i class="dot now"></i> 2026</span></p>
+            <ol class="rank" id="shelter-viz" aria-label="Neighborhoods with the most people in New York City shelters on October 31, 2026.">
+              <li><b>8,369</b><div><p class="rank-place">Jamaica-St. Albans-Hollis</p><p class="rank-meta">Queens · in shelters</p></div></li>
+              <li><b>4,532</b><div><p class="rank-place">Astoria-Queensbridge</p><p class="rank-meta">Queens · in shelters</p></div></li>
+              <li><b>3,985</b><div><p class="rank-place">Ocean Hill-Brownsville</p><p class="rank-meta">Brooklyn · in shelters</p></div></li>
+              <li><b>3,140</b><div><p class="rank-place">Midtown-Flatiron-Union Square</p><p class="rank-meta">Manhattan · in shelters</p></div></li>
+              <li><b>2,957</b><div><p class="rank-place">East New York-Cypress Hills</p><p class="rank-meta">Brooklyn · in shelters</p></div></li>
+            </ol>
+            <p class="life-what" id="home-what">Jamaica-St. Albans-Hollis had the most people in New York City shelters on October 31, 2026: 8,369. Department of Homeless Services census of individuals, counted at the shelter’s community district. These are people in shelters and shelter hotels. Unsheltered people are not in this count.</p>
+            <p class="life-src"><a id="home-src" href="https://data.cityofnewyork.us/d/veav-vj3r">NYC Department of Homeless Services, shelter census</a></p>
           </details>
         </article>
         <article class="life-card life-child">
@@ -338,7 +437,6 @@
           <p class="life-unit" id="trip-unit">expected for a summer 2026 trip</p>
           <div class="share" id="trip-viz" role="img" aria-label="Twenty cells. One gold cell stands for about 5 percent. 3,940 dollars is 4.8 percent of the 81,905 dollars a consumer unit spent in 2025.">
             <div class="cells" id="trip-cells" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <p class="share-cap" id="trip-cap"><i></i> One cell in twenty. The trip is 4.8% of the year.</p>
           </div>
           <details class="life-more">
             <summary>Details<span class="visually-hidden"> for vacation</span></summary>
@@ -350,6 +448,7 @@
             <input id="trip-year" type="range" min="0" max="3" value="3" step="1" aria-valuemin="2023" aria-valuemax="2026" aria-valuenow="2026" aria-valuetext="2026">
             <div class="life-year-ends"><span id="trip-year-start">2023</span><span id="trip-year-end">2026</span></div>
           </div>
+            <p class="share-cap" id="trip-cap"><i></i> One cell in twenty. The trip is 4.8% of the year.</p>
             <p class="life-what" id="trip-what">NerdWallet’s survey of people planning a summer 2026 vacation with a flight or paid lodging. The gold cell sets that expected spend against the $81,905 a household spent in 2025. It is a different source, and it leaves out people who are not taking that kind of trip.</p>
             <p class="life-src"><a id="trip-src" href="https://www.nerdwallet.com/travel/studies/summer-travel-report">NerdWallet 2026 Summer Travel Report</a></p>
           </details>
@@ -587,8 +686,8 @@
   });
 })();
 </script>
-<script src="lang.js"></script>
-<script src="life.js?v=12"></script>
+<script src="lang.js?v=2"></script>
+<script src="life.js?v=15"></script>
 <script src="live.js?v=16"></script>
 <script>
 fetch("preview/us.svg").then(function (response) { return response.text(); }).then(function (markup) {

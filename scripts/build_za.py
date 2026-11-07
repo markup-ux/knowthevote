@@ -328,7 +328,7 @@ def shell(title, description, root, local, here, nav, body, place=""):
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<script src="%stheme.js?v=20" defer></script>
+<script src="%stheme.js?v=22" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>%s</title>
@@ -363,7 +363,7 @@ def shell(title, description, root, local, here, nav, body, place=""):
   </div>
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
-<script src="%slang.js"></script>
+<script src="%slang.js?v=2"></script>
 <script src="%smap.js?v=blend4"></script>
 </body>
 </html>

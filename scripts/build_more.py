@@ -304,7 +304,7 @@ def shell(spec, here, nav, body, place=""):
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<script src="${root}theme.js?v=20" defer></script>
+<script src="${root}theme.js?v=22" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$title</title>
@@ -339,7 +339,7 @@ $body
   </div>
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
-<script src="${root}lang.js"></script>
+<script src="${root}lang.js?v=2"></script>
 <script src="${root}place.js?v=blend3"></script>
 </body>
 </html>
@@ -1630,7 +1630,7 @@ def write_countries():
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<script src="theme.js?v=20" defer></script>
+<script src="theme.js?v=22" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · Countries</title>
@@ -1666,7 +1666,7 @@ def write_countries():
   </div>
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
-<script src="lang.js"></script>
+<script src="lang.js?v=2"></script>
 </body>
 </html>
 """ % (
