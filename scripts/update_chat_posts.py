@@ -240,6 +240,18 @@ def name_keys(name):
     return [item for item in found if item]
 
 
+def x_stop():
+    raw = os.environ.get("CHAT_POSTS_BUDGET_MINUTES") or ""
+    try:
+        minutes = float(raw)
+    except ValueError:
+        return False
+    return minutes > 0 and time.time() >= x_stop.deadline
+
+
+x_stop.deadline = None
+
+
 def x_pause(reset):
     try:
         reset_at = float(reset)
@@ -250,8 +262,12 @@ def x_pause(reset):
         delay = 30
     if delay > 20 * 60:
         delay = 20 * 60
+    if x_stop.deadline and time.time() + delay > x_stop.deadline:
+        print("Stopping so this run can be published. The rest will be copied next time.", flush=True)
+        return False
     print("X allows 30 reads at a time. Waiting", int(delay), "seconds.", flush=True)
     time.sleep(delay)
+    return True
 
 
 def x_posts(handle):
@@ -606,14 +622,23 @@ def main():
                 print("feeds", done, "/", len(fast), flush=True)
     index = 0
     missed = 0
+    raw_budget = os.environ.get("CHAT_POSTS_BUDGET_MINUTES") or ""
+    try:
+        x_stop.deadline = time.time() + float(raw_budget) * 60 if float(raw_budget) > 0 else None
+    except ValueError:
+        x_stop.deadline = None
     while index < len(slow):
+        if x_stop():
+            print("Stopping so this run can be published. The rest will be copied next time.", flush=True)
+            break
         account = slow[index]
         try:
             found = fetch_feed(account)
         except RateLimit as limited:
             save(FEEDS_PATH, feeds)
             write_posts(roster, sites, congress, pages, feeds)
-            x_pause(limited.reset)
+            if not x_pause(limited.reset):
+                break
             continue
         if found is None:
             missed += 1
@@ -628,7 +653,8 @@ def main():
         except (TypeError, ValueError):
             remaining = None
         if remaining is not None and remaining <= 1:
-            x_pause(x_posts.reset)
+            if not x_pause(x_posts.reset):
+                break
         else:
             time.sleep(1)
     save(FEEDS_PATH, feeds)

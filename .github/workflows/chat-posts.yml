@@ -16,6 +16,8 @@ jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    env:
+      CHAT_POSTS_BUDGET_MINUTES: "35"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
