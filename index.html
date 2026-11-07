@@ -437,8 +437,11 @@ New York City, New York</p>
           
           <p class="life-num" id="trip-num">$3,940</p>
           <p class="life-unit" id="trip-unit">expected for a summer 2026 trip</p>
-          <div class="share" id="trip-viz" role="img" aria-label="Twenty cells. One gold cell stands for about 5 percent. 3,940 dollars is 4.8 percent of the 81,905 dollars a consumer unit spent in 2025.">
-            <div class="cells" id="trip-cells" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="gauge" id="trip-viz" role="img" aria-label="A scale from 0 to 5,000 dollars. The expected summer 2026 trip is 3,940 dollars. A tick marks 3,861 dollars in 2025.">
+            <div class="gauge-track" id="trip-track" style="--fill:78.8%">
+              <i class="gauge-past" id="trip-past" style="left:77.2%"></i>
+            </div>
+            <div class="gauge-ends"><span>$0</span><span>$5,000</span></div>
           </div>
           <details class="life-more">
             <summary>Details<span class="visually-hidden"> for vacation</span></summary>
@@ -450,8 +453,8 @@ New York City, New York</p>
             <input id="trip-year" type="range" min="0" max="3" value="3" step="1" aria-valuemin="2023" aria-valuemax="2026" aria-valuenow="2026" aria-valuetext="2026">
             <div class="life-year-ends"><span id="trip-year-start">2023</span><span id="trip-year-end">2026</span></div>
           </div>
-            <p class="share-cap" id="trip-cap"><i></i> One cell in twenty. The trip is 4.8% of the year.</p>
-            <p class="life-what" id="trip-what">NerdWallet’s survey of people planning a summer 2026 vacation with a flight or paid lodging. The gold cell sets that expected spend against the $81,905 a household spent in 2025. It is a different source, and it leaves out people who are not taking that kind of trip.</p>
+            <p class="life-key" id="trip-key"><span><i class="dot now"></i> 2026</span><span><i class="dot past"></i> $3,861 in 2025</span></p>
+            <p class="life-what" id="trip-what">NerdWallet’s survey of people planning a summer 2026 vacation with a flight or paid lodging. They expected to spend $3,940. The bar runs from $0 to $5,000. The tick is $3,861, 2025. Set against the $81,905 a household spent in 2025, the trip is 4.8% of that year. It is a different source, and it leaves out people who are not taking that kind of trip.</p>
             <p class="life-src"><a id="trip-src" href="https://www.nerdwallet.com/travel/studies/summer-travel-report">NerdWallet 2026 Summer Travel Report</a></p>
           </details>
         </article>
@@ -689,7 +692,7 @@ New York City, New York</p>
 })();
 </script>
 <script src="lang.js?v=3"></script>
-<script src="life.js?v=16"></script>
+<script src="life.js?v=17"></script>
 <script src="live.js?v=16"></script>
 <script>
 fetch("preview/us.svg").then(function (response) { return response.text(); }).then(function (markup) {

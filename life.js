@@ -466,11 +466,7 @@
       key.appendChild(li);
     });
   }
-  function cells(onCount) {
-    var box = document.getElementById("trip-cells");
-    var marks = box.querySelectorAll("i");
-    for (var i = 0; i < marks.length; i++) marks[i].classList.toggle("on", i < onCount);
-  }
+  var TRIP_MAX = 5000;
 
   function showGas(year) {
     stamp("gas", year);
@@ -560,23 +556,30 @@
     var tripYear = trips[year] ? year : (atPresent("trip", year) ? latestKey(trips, year) : null);
     var trip = tripYear != null ? trips[tripYear] : null;
     var tripCard = cards.trip;
+    var past = document.getElementById("trip-past");
+    var track = document.getElementById("trip-track");
     if (trip) {
       tripCard.classList.remove("is-empty");
       text("trip-num", money(trip.n, 0));
       text("trip-unit", "expected for a summer " + tripYear + " trip");
+      var prior = previousYear(yearList("trip"), tripYear);
+      track.style.setProperty("--fill", (trip.n / TRIP_MAX * 100).toFixed(1) + "%");
+      past.hidden = prior == null;
+      if (prior != null) past.style.left = (trips[prior].n / TRIP_MAX * 100).toFixed(1) + "%";
+      document.getElementById("trip-key").innerHTML = '<span><i class="dot now"></i> ' + tripYear + "</span>" + (prior == null ? "" : '<span><i class="dot past"></i> ' + money(trips[prior].n, 0) + " in " + prior + "</span>");
       var baseYear = spend[tripYear] ? tripYear : (spend[2025] ? 2025 : latestKey(spend, tripYear));
-      var pct = trip.n / spend[baseYear] * 100;
-      var lit = Math.max(1, Math.round(pct / 5));
-      cells(lit);
-      var cap = pct.toFixed(1) + "% of " + (baseYear === year ? "this year’s" : baseYear) + " average spending";
-      document.getElementById("trip-cap").innerHTML = "<i></i> " + cap;
-      text("trip-what", (tripYear === year ? "" : "No survey for " + year + ". This card keeps the latest one, " + tripYear + ". ") + "NerdWallet’s survey of people planning a summer " + tripYear + " vacation with a flight or paid lodging. They expected to spend " + money(trip.n, 0) + ". The gold cell is that amount against " + money(spend[baseYear], 0) + " of " + baseYear + " spending. It leaves out people who are not taking that kind of trip.");
+      var share = "";
+      if (baseYear != null && spend[baseYear]) {
+        share = " Set against " + money(spend[baseYear], 0) + " of " + baseYear + " household spending, the trip is " + (trip.n / spend[baseYear] * 100).toFixed(1) + "% of that year.";
+      }
+      text("trip-what", (tripYear === year ? "" : "No survey for " + year + ". This card keeps the latest one, " + tripYear + ". ") + "NerdWallet’s survey of people planning a summer " + tripYear + " vacation with a flight or paid lodging. They expected to spend " + money(trip.n, 0) + ". The bar runs from $0 to $5,000." + (prior == null ? "" : " The tick is " + money(trips[prior].n, 0) + ", " + prior + ".") + share + " It is a different source, and it leaves out people who are not taking that kind of trip.");
       link("trip-src", trip.href, trip.name);
-      document.getElementById("trip-viz").setAttribute("aria-label", money(trip.n, 0) + " is " + pct.toFixed(1) + " percent of average spending in " + baseYear + ".");
+      document.getElementById("trip-viz").setAttribute("aria-label", "A scale from 0 to 5,000 dollars. The expected summer " + tripYear + " trip is " + money(trip.n, 0) + "." + (prior == null ? "" : " A tick marks " + money(trips[prior].n, 0) + " in " + prior + "."));
     } else {
       empty(tripCard, "trip-num", "expected summer trip", "trip-what", "NerdWallet’s summer travel survey was not published with a comparable average for " + year + ". The years on this card are 2023, 2024, 2025, and 2026.");
-      cells(0);
-      document.getElementById("trip-cap").innerHTML = "<i></i> No survey for this year";
+      track.style.setProperty("--fill", "0%");
+      past.hidden = true;
+      document.getElementById("trip-key").textContent = "";
       link("trip-src", "https://www.nerdwallet.com/travel/studies/summer-travel-report", "NerdWallet summer travel reports");
       document.getElementById("trip-viz").setAttribute("aria-label", "No vacation survey for " + year + ".");
     }
