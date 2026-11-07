@@ -506,9 +506,8 @@
       addMoneyChip(title, item.legis, (item.title || "") + " " + (item.line || ""));
       if (!title.querySelector(".money-chip")) title.appendChild(moneyChip({ value: item.value, label: item.label }));
       row.appendChild(title);
-      var meta = item.legis || "";
-      if (item.date) meta += (meta ? " · " : "") + formatDate(item.date);
-      if (meta) row.appendChild(el("p", "vote-meta", meta));
+      if (item.legis) row.appendChild(el("p", "card-bill", item.legis));
+      if (item.date) row.appendChild(el("p", "card-when", formatDate(item.date)));
       var intro = introduced[item.key];
       var whoRow = el("div", "intro-who");
       var faces = intro ? introFaces(intro) : null;
@@ -523,25 +522,25 @@
       }
       if (faces) whoRow.appendChild(faces);
       if (intro) {
-        var who = el("p", "act-line");
+        var who = el("p", "act-line card-who");
         appendIntroducers(who, intro);
         whoRow.appendChild(who);
       }
       if (whoRow.childNodes.length) row.appendChild(whoRow);
       if (item.line) {
-        var cash = el("p", "act-line");
+        var cash = el("p", "act-line card-money");
         cash.appendChild(paintMoney(item.line));
         row.appendChild(cash);
       } else {
         var blurb = taxpayerBlurb(item);
         if (blurb) {
-          var about = el("p", "act-line");
+          var about = el("p", "act-line card-about");
           about.appendChild(paintMoney(blurb));
           row.appendChild(about);
         }
       }
       var votes = billsVoted[item.key] || [];
-      if (votes.length) row.appendChild(el("p", "vote-meta", votes.length === 1 ? "One roll call on this page." : votes.length + " roll calls on this page."));
+      if (votes.length) row.appendChild(el("p", "card-when", votes.length === 1 ? "One roll call on this page." : votes.length + " roll calls on this page."));
       shell.appendChild(row);
       var page = textUrl(congressBillUrl(item.key));
       if (page) {
@@ -718,9 +717,10 @@
 
   function sideColor(side, share) {
     var t = Math.max(0, Math.min(1, (share - 0.5) / 0.5));
-    if (side === "Y") return mix("#cfe8d6", "#0e6a38", t);
-    if (side === "N") return mix("#f6d0d6", "#8d2344", t);
-    return "#c8c0b4";
+    var pct = Math.round(t * 100);
+    if (side === "Y") return "color-mix(in srgb, var(--tone-pass, #0e6a38) " + pct + "%, var(--tone-yes-soft, #cfe8d6))";
+    if (side === "N") return "color-mix(in srgb, var(--tone-fail, #8d2344) " + pct + "%, var(--tone-no-soft, #f6d0d6))";
+    return "var(--tone-absent, #c8c0b4)";
   }
 
   function readCast(vote, index, id) {
@@ -947,23 +947,47 @@
     var yn = yea + nay;
     add(yea, sideColor("Y", yn ? yea / yn : 0), yea + " yes");
     add(nay, sideColor("N", yn ? nay / yn : 0), nay + " no");
-    add(present, "#3d4f86", present + " present");
-    add(notVoting, "#c8c0b4", notVoting + " did not vote");
+    add(present, "var(--tone-present, #3d4f86)", present + " present");
+    add(notVoting, "var(--tone-absent, #c8c0b4)", notVoting + " did not vote");
     if (!total) {
       var empty = document.createElement("i");
       empty.style.width = "100%";
-      empty.style.background = "#e6b422";
+      empty.style.background = "var(--tone-open, #e6b422)";
       bar.appendChild(empty);
     }
     return bar;
   }
 
-  function countLine(vote) {
-    var parts = [vote.yea + " yes", vote.nay + " no"];
-    if (vote.present) parts.push(vote.present + " present");
-    if (vote.notVoting) parts.push(vote.notVoting + " did not vote");
-    parts.push(vote.result || "Result not recorded");
-    return parts.join(" · ");
+  function resultTone(result) {
+    var word = (result || "").toLowerCase();
+    if (word.indexOf("pass") >= 0 || word.indexOf("agreed") >= 0 || word.indexOf("confirm") >= 0) return "passed";
+    if (word.indexOf("fail") >= 0 || word.indexOf("reject") >= 0) return "failed";
+    return "open";
+  }
+
+  function resultClass(result) {
+    var tone = resultTone(result);
+    if (tone === "passed") return "card-yes";
+    if (tone === "failed") return "card-no";
+    return "card-result";
+  }
+
+  function appendCounts(node, vote) {
+    function bit(className, text) {
+      if (node.childNodes.length) node.appendChild(document.createTextNode(" · "));
+      node.appendChild(el("span", className, text));
+    }
+    bit("card-yes", vote.yea + " yes");
+    bit("card-no", vote.nay + " no");
+    if (vote.present) bit("card-present", vote.present + " present");
+    if (vote.notVoting) bit("card-absent", vote.notVoting + " did not vote");
+    bit(resultClass(vote.result), vote.result || "Result not recorded");
+  }
+
+  function counts(vote) {
+    var line = el("p", "card-counts");
+    appendCounts(line, vote);
+    return line;
   }
 
   function renderStatus(extra) {
@@ -1009,7 +1033,7 @@
       list.appendChild(el("h3", "", category));
       items.filter(function (item) { return item.category === category; }).forEach(function (item) {
         var vote = floorVote(item);
-        var row = el(vote ? "button" : "div", "floor-row" + (vote && vote.id === selected ? " is-on" : ""));
+        var row = el(vote ? "button" : "div", "floor-row vote-" + (vote ? resultTone(vote.result) : "open") + (vote && vote.id === selected ? " is-on" : ""));
         if (vote) {
           row.type = "button";
           row.setAttribute("data-vote", vote.id);
@@ -1018,29 +1042,28 @@
         titleNode.appendChild(document.createTextNode(item.title || item.legis || "Scheduled item"));
         addMoneyChip(titleNode, item.legis);
         row.appendChild(titleNode);
-        var meta = el("p", "vote-meta");
-        if (item.legis) meta.appendChild(document.createTextNode(item.legis + " · "));
-        meta.appendChild(document.createTextNode(vote ? "Roll call " + vote.n + " · " + formatDate(vote.date) : "Scheduled"));
-        row.appendChild(meta);
+        if (item.legis) row.appendChild(el("p", "card-bill", item.legis));
+        row.appendChild(el("p", vote ? "card-when" : "card-result", vote ? "Roll call " + vote.n + " · " + formatDate(vote.date) : "Scheduled"));
         if (vote) row.appendChild(makeBar(vote.yea, vote.nay, vote.present, vote.notVoting));
         else {
           var bar = el("span", "vote-bar");
           var piece = document.createElement("i");
           piece.style.width = "100%";
-          piece.style.background = "#e6b422";
+          piece.style.background = "var(--tone-open, #e6b422)";
           piece.title = "Scheduled";
           bar.appendChild(piece);
           row.appendChild(bar);
         }
-        row.appendChild(el("p", "vote-meta", vote ? countLine(vote) : "No roll call on or after " + formatDate(item.week)));
+        if (vote) row.appendChild(counts(vote));
+        else row.appendChild(el("p", "card-result", "No roll call on or after " + formatDate(item.week)));
         if (vote) {
-          var sentenceNode = el("p", "act-line");
+          var sentenceNode = el("p", "act-line card-about");
           var cash = moneyLine(item.legis);
           if (cash) sentenceNode.appendChild(paintMoney(cash));
           else sentenceNode.textContent = actSentence(item.legis);
           if (sentenceNode.textContent || sentenceNode.childNodes.length) row.appendChild(sentenceNode);
           var introduced = sponsorLine(item.legis);
-          if (introduced) row.appendChild(el("p", "act-line", introduced));
+          if (introduced) row.appendChild(el("p", "act-line card-who", introduced));
         } else {
           var note = actBlock(item.legis, item.bill);
           if (note) row.appendChild(note);
@@ -1066,12 +1089,12 @@
     section.hidden = !keys.length;
     keys.forEach(function (key) {
       var item = summaries[key];
-      var block = el("div", "floor-row");
+      var block = el("div", "floor-row vote-open");
       var pendingTitle = el("strong", "with-money");
       pendingTitle.appendChild(document.createTextNode(item.title || item.legis || "A bill with no roll call"));
       addMoneyChip(pendingTitle, item.legis);
       block.appendChild(pendingTitle);
-      if (item.legis) block.appendChild(el("p", "vote-meta", item.legis));
+      if (item.legis) block.appendChild(el("p", "card-bill", item.legis));
       var note = actBlock(item.legis, item.bill);
       if (note) block.appendChild(note);
       list.appendChild(block);
@@ -1155,29 +1178,29 @@
     row.setAttribute("data-intro", item.key);
     var when = "Introduced " + formatDate(item.d);
     when += item.c === "senate" ? " · Senate" : " · House";
-    row.appendChild(el("p", "vote-meta", when));
+    row.appendChild(el("p", "card-when", when));
     var title = el("strong", "with-money");
     title.appendChild(document.createTextNode(item.t || item.legis || "Introduced measure"));
     addMoneyChip(title, item.legis, introTitles(item));
     row.appendChild(title);
-    if (item.legis) row.appendChild(el("p", "vote-meta", item.legis));
+    if (item.legis) row.appendChild(el("p", "card-bill", item.legis));
     var whoRow = el("div", "intro-who");
     var faces = introFaces(item);
     if (faces) whoRow.appendChild(faces);
-    var who = el("p", "act-line");
+    var who = el("p", "act-line card-who");
     appendIntroducers(who, item);
     whoRow.appendChild(who);
     row.appendChild(whoRow);
     if (item.o) {
-      var official = el("p", "act-line");
+      var official = el("p", "act-line card-about");
       official.appendChild(paintMoney(item.o));
       row.appendChild(official);
     } else if (moneyLine(item.legis)) {
-      var cash = el("p", "act-line");
+      var cash = el("p", "act-line card-money");
       cash.appendChild(paintMoney(moneyLine(item.legis)));
       row.appendChild(cash);
     }
-    if (item.s) row.appendChild(el("p", "vote-meta", item.s));
+    if (item.s) row.appendChild(el("p", "card-result", item.s));
     shell.appendChild(row);
     var page = textUrl(congressBillUrl(item.key));
     if (page) {
@@ -1305,7 +1328,7 @@
   }
 
   function voteButton(vote) {
-    var row = el("button", "vote-row" + (vote.id === selected ? " is-on" : ""));
+    var row = el("button", "vote-row vote-" + resultTone(vote.result) + (vote.id === selected ? " is-on" : ""));
     row.type = "button";
     row.setAttribute("data-vote", vote.id);
     if (vote.chamber === "senate") row.setAttribute("data-chamber", "senate");
@@ -1313,7 +1336,7 @@
     var clock = formatTime(vote.time);
     if (clock) when += " · " + clock;
     when += " · " + (vote.chamber === "senate" ? "Senate roll call " : "Roll call ") + vote.n;
-    row.appendChild(el("p", "vote-meta", when));
+    row.appendChild(el("p", "card-when", when));
     var title = el("strong", "with-money");
     title.appendChild(document.createTextNode(vote.question || vote.legis || "House roll call " + vote.n));
     if (!vote.desc) addMoneyChip(title, vote.legis);
@@ -1324,8 +1347,8 @@
       addMoneyChip(desc, vote.legis);
       row.appendChild(desc);
     }
-    if (vote.legis) row.appendChild(el("p", "vote-meta", vote.legis));
-    var sentenceNode = el("p", "act-line");
+    if (vote.legis) row.appendChild(el("p", "card-bill", vote.legis));
+    var sentenceNode = el("p", "act-line card-about");
     var cash = moneyLine(vote.legis);
     if (cash) sentenceNode.appendChild(paintMoney(cash));
     else if (actSentence(vote.legis)) sentenceNode.textContent = actSentence(vote.legis);
@@ -1338,16 +1361,16 @@
         faces.appendChild(portrait(person[0], person[1] || "A member", false));
       });
       whoRow.appendChild(faces);
-      var who = el("p", "act-line");
+      var who = el("p", "act-line card-who");
       appendIntroducers(who, { p: people });
       whoRow.appendChild(who);
       row.appendChild(whoRow);
     } else {
       var introduced = sponsorLine(vote.legis);
-      if (introduced) row.appendChild(el("p", "act-line", introduced));
+      if (introduced) row.appendChild(el("p", "act-line card-who", introduced));
     }
     row.appendChild(makeBar(vote.yea, vote.nay, vote.present, vote.notVoting));
-    row.appendChild(el("p", "vote-meta", countLine(vote)));
+    row.appendChild(counts(vote));
     return row;
   }
 
@@ -1363,7 +1386,7 @@
       section.hidden = !direct;
       if (!direct) return;
       countEl.textContent = "1 member.";
-      var directRow = el("button", "person-row is-on");
+      var directRow = el("button", "person-row " + partyClass(direct[2]) + " is-on");
       directRow.type = "button";
       directRow.setAttribute("data-person", direct[0]);
       directRow.appendChild(portrait(direct[0], direct[1], false));
@@ -1414,7 +1437,7 @@
       if (person.id === openPresident) list.appendChild(presidentCard(person));
     });
     peopleShown.forEach(function (member) {
-      var row = el("button", "person-row" + (member[0] === searchPerson ? " is-on" : ""));
+      var row = el("button", "person-row " + partyClass(member[2]) + (member[0] === searchPerson ? " is-on" : ""));
       row.type = "button";
       row.setAttribute("data-person", member[0]);
       row.appendChild(portrait(member[0], member[1], false));
@@ -1561,31 +1584,46 @@
   }
 
   function contactBlock(member) {
-    var card = el("div", "person-card");
+    var card = el("div", "person-card " + partyClass(member[2]));
     card.appendChild(portrait(member[0], member[1], true));
     var copy = el("div", "person-copy");
     var name = el("h3", "");
-    var nameText = el("span", partyClass(member[2]), member[1]);
-    name.appendChild(nameText);
+    name.appendChild(el("span", partyClass(member[2]), member[1]));
     copy.appendChild(name);
-    var bits = [partyWord(member[2]), seat(member)];
-    if (member[10]) bits.push(member[10]);
-    copy.appendChild(el("p", "", bits.filter(Boolean).join(" · ")));
+    var seatLine = el("p", "card-seat");
+    seatLine.appendChild(el("span", "card-party " + partyClass(member[2]), partyWord(member[2])));
+    var where = [seat(member)];
+    if (member[10]) where.push(member[10]);
+    where = where.filter(Boolean).join(" · ");
+    if (where) seatLine.appendChild(document.createTextNode(where));
+    copy.appendChild(seatLine);
+    function marked(href, markName, label, aria, blank) {
+      var anchor = blank ? link(href, "") : el("a", "");
+      if (!blank) anchor.href = href;
+      anchor.textContent = "";
+      if (window.leadersMark) anchor.appendChild(leadersMark(markName));
+      if (label) anchor.appendChild(el("span", "mark-label", label));
+      if (aria) anchor.setAttribute("aria-label", aria);
+      return anchor;
+    }
     if (member[6]) {
-      var phone = el("p", "");
-      phone.appendChild(document.createTextNode("Phone "));
-      phone.appendChild(link("tel:" + member[6].replace(/[^\d+]/g, ""), member[6]));
+      var phone = el("p", "card-phone");
+      phone.appendChild(marked("tel:" + member[6].replace(/[^\d+]/g, ""), "phone", member[6], "Phone " + member[6], false));
       copy.appendChild(phone);
     }
-    if (member[7]) copy.appendChild(el("p", "", member[7]));
+    if (member[7]) {
+      var room = el("p", "card-room");
+      if (window.leadersMark) room.appendChild(leadersMark("office"));
+      room.appendChild(el("span", "", member[7]));
+      copy.appendChild(room);
+    }
     if (member[8] || member[9]) {
-      var sites = el("p", "");
-      if (member[8]) sites.appendChild(link(member[8], host(member[8])));
-      if (member[8] && member[9]) sites.appendChild(document.createTextNode(" · "));
-      if (member[9]) sites.appendChild(link(member[9], "Contact form"));
+      var sites = el("p", "card-gov");
+      if (member[8]) sites.appendChild(marked(member[8], "gov", host(member[8]), "Official website " + host(member[8]), true));
+      if (member[9]) sites.appendChild(marked(member[9], "form", "", "Contact form", true));
       copy.appendChild(sites);
     }
-    if (!member[6] && !member[7] && !member[8]) copy.appendChild(el("p", "note", "No office phone or website is in the member file for this name."));
+    if (!member[6] && !member[7] && !member[8]) copy.appendChild(el("p", "card-note", "No office phone or website is in the member file for this name."));
     card.appendChild(copy);
     return card;
   }
@@ -1623,7 +1661,7 @@
     if (clock) when += " · " + clock;
     when += " · Roll call " + vote.n;
     if (TYPE_LABEL[vote.type] || vote.type) when += " · " + (TYPE_LABEL[vote.type] || vote.type);
-    box.appendChild(el("p", "vote-meta", when));
+    box.appendChild(el("p", "card-when", when));
     if (vote.desc) {
       var deck = el("p", "deck with-money");
       deck.appendChild(document.createTextNode(vote.desc));
@@ -1632,7 +1670,7 @@
     }
     var note = actBlock(vote.legis, vote.bill);
     if (note) box.appendChild(note);
-    var links = el("p", "");
+    var links = el("p", "card-bill");
     if (vote.legis) links.appendChild(document.createTextNode(vote.legis + " · "));
     if (vote.bill) {
       links.appendChild(link(vote.bill, "Bill"));
@@ -1645,7 +1683,7 @@
       box.appendChild(el("p", "sub", "FloorCast keeps the House floor for this day, including this roll call. The Clerk's channel lists a video when one was posted."));
     }
     box.appendChild(makeBar(vote.yea, vote.nay, vote.present, vote.notVoting));
-    box.appendChild(el("p", "", countLine(vote)));
+    box.appendChild(counts(vote));
     if (vote.majority === "D" || vote.majority === "R" || vote.majority === "I") {
       box.appendChild(el("p", "sub", "The Clerk recorded the House majority party as " + partyWord(vote.majority) + "."));
     }
@@ -1660,10 +1698,16 @@
       var line = el("div", "party-line");
       line.appendChild(el("span", partyClass(code), partyWord(code)));
       line.appendChild(makeBar(row[0], row[1], row[2], row[3]));
-      var detail = row[0] + " yes · " + row[1] + " no";
-      if (row[2]) detail += " · " + row[2] + " present";
-      if (row[3]) detail += " · " + row[3] + " did not vote";
-      line.appendChild(el("span", "", detail));
+      var detail = document.createElement("span");
+      function addBit(className, text) {
+        if (detail.childNodes.length) detail.appendChild(document.createTextNode(" · "));
+        detail.appendChild(el("span", className, text));
+      }
+      addBit("card-yes", row[0] + " yes");
+      addBit("card-no", row[1] + " no");
+      if (row[2]) addBit("card-present", row[2] + " present");
+      if (row[3]) addBit("card-absent", row[3] + " did not vote");
+      line.appendChild(detail);
       box.appendChild(line);
     });
 
@@ -1679,7 +1723,7 @@
         var index = memberIndex[person[0]];
         var code = readCast(vote, index, person[0]);
         var copy = card.querySelector(".person-copy");
-        copy.insertBefore(el("p", "", "On this roll call: " + voteWord(code) + "."), copy.children[1] || null);
+        copy.insertBefore(el("p", code === "Y" ? "card-yes" : code === "N" ? "card-no" : code === "P" ? "card-present" : "card-absent", "On this roll call: " + voteWord(code) + "."), copy.children[1] || null);
         var clear = el("p", "");
         var button = el("button", "linkish", "Close this member");
         button.type = "button";
@@ -1756,7 +1800,7 @@
         }
         return a.member[1].localeCompare(b.member[1]);
       }).forEach(function (entry) {
-        var row = el("button", "person-row" + (entry.member[0] === pinned ? " is-on" : ""));
+        var row = el("button", "person-row " + partyClass(entry.member[2]) + (entry.member[0] === pinned ? " is-on" : ""));
         row.type = "button";
         row.setAttribute("data-person", entry.member[0]);
         row.appendChild(portrait(entry.member[0], entry.member[1], false));
@@ -1926,27 +1970,35 @@
   }
 
   function presidentCard(person) {
-    var card = el("div", "person-card");
+    var card = el("div", "person-card " + partyClass(person.party));
     card.setAttribute("data-president-card", person.id);
     card.appendChild(presidentFace(person, true));
     var copy = el("div", "person-copy");
     var name = el("h3", "");
     name.appendChild(el("span", partyClass(person.party), person.name));
     copy.appendChild(name);
-    if (person.line) copy.appendChild(el("p", "", person.line));
+    var seatLine = el("p", "card-seat");
+    seatLine.appendChild(el("span", "card-party " + partyClass(person.party), partyWord(person.party)));
+    if (person.line) seatLine.appendChild(document.createTextNode(person.line));
+    copy.appendChild(seatLine);
     if (person.url && person.url.indexOf("https://") === 0) {
-      var sites = el("p", "");
-      sites.appendChild(link(person.url, host(person.url)));
+      var sites = el("p", "card-gov");
+      var office = link(person.url, "");
+      office.textContent = "";
+      if (window.leadersMark) office.appendChild(leadersMark("gov"));
+      office.appendChild(el("span", "mark-label", host(person.url)));
+      office.setAttribute("aria-label", "Official website " + host(person.url));
+      sites.appendChild(office);
       copy.appendChild(sites);
     } else {
-      copy.appendChild(el("p", "note", "No office website is in the executive file for this name."));
+      copy.appendChild(el("p", "card-note", "No office website is in the executive file for this name."));
     }
     card.appendChild(copy);
     return card;
   }
 
   function presidentRow(person) {
-    var row = el("button", "person-row" + (person.id === openPresident ? " is-on" : ""));
+    var row = el("button", "person-row " + partyClass(person.party) + (person.id === openPresident ? " is-on" : ""));
     row.type = "button";
     row.setAttribute("data-president", person.id);
     row.appendChild(presidentFace(person, false));
@@ -1996,7 +2048,7 @@
     Object.keys(groups).sort(function (a, b) { return stateName(a).localeCompare(stateName(b)); }).forEach(function (code) {
       list.appendChild(el("h3", "", stateName(code)));
       groups[code].sort(function (a, b) { return a[1].localeCompare(b[1]); }).forEach(function (member) {
-        var row = el("button", "person-row" + (member[0] === pinned ? " is-on" : ""));
+        var row = el("button", "person-row " + partyClass(member[2]) + (member[0] === pinned ? " is-on" : ""));
         row.type = "button";
         row.setAttribute("data-person", member[0]);
         row.appendChild(portrait(member[0], member[1], false));
@@ -2082,7 +2134,7 @@
     if (!vote.desc) addMoneyChip(heading, vote.legis);
     box.appendChild(heading);
     var when = formatDate(vote.date) + " · Senate roll call " + vote.n;
-    box.appendChild(el("p", "vote-meta", when));
+    box.appendChild(el("p", "card-when", when));
     if (vote.desc) {
       var deck = el("p", "deck with-money");
       deck.appendChild(document.createTextNode(vote.desc));
@@ -2094,7 +2146,7 @@
       var note = actBlock(vote.legis, vote.bill);
       if (note) box.appendChild(note);
     }
-    var links = el("p", "");
+    var links = el("p", "card-bill");
     if (vote.legis) links.appendChild(document.createTextNode(vote.legis + " · "));
     if (vote.bill) {
       links.appendChild(link(vote.bill, vote.legis.indexOf("PN ") === 0 ? "Nomination" : "Bill"));
@@ -2103,7 +2155,7 @@
     if (vote.source) links.appendChild(link(vote.source, "Voteview roll call"));
     box.appendChild(links);
     box.appendChild(makeBar(vote.yea, vote.nay, vote.present, vote.notVoting));
-    box.appendChild(el("p", "", countLine(vote)));
+    box.appendChild(counts(vote));
     if (pinned) {
       var person = memberById(pinned);
       if (person) {
@@ -2111,7 +2163,7 @@
         card.classList.add("pinned-card");
         var code = readCast(vote, memberIndex[person[0]], person[0]);
         var copy = card.querySelector(".person-copy");
-        copy.insertBefore(el("p", "", "On this roll call: " + voteWord(code) + "."), copy.children[1] || null);
+        copy.insertBefore(el("p", code === "Y" ? "card-yes" : code === "N" ? "card-no" : code === "P" ? "card-present" : "card-absent", "On this roll call: " + voteWord(code) + "."), copy.children[1] || null);
         var clear = el("p", "");
         var button = el("button", "linkish", "Close this member");
         button.type = "button";
@@ -2245,22 +2297,22 @@
     row.appendChild(nomineeFace(item, false));
     var when = formatDate(item.date || item.received) + " · " + slipKind(item);
     if (item.state) when += " · " + stateName(item.state);
-    row.appendChild(el("p", "vote-meta", when));
+    row.appendChild(el("p", "card-when", when));
     row.appendChild(el("strong", "", item.name || "Judicial nomination"));
-    if (item.court) row.appendChild(el("p", "", item.court));
-    row.appendChild(el("p", "act-line", slipSentence(item)));
+    if (item.court) row.appendChild(el("p", "card-bill", item.court));
+    row.appendChild(el("p", "act-line card-about", slipSentence(item)));
     var people = slipSenators(item);
     if (people.length) {
       var whoRow = el("div", "intro-who");
       var faces = el("div", "intro-faces");
       people.forEach(function (member) { faces.appendChild(portrait(member[0], member[1], false)); });
       whoRow.appendChild(faces);
-      var who = el("p", "act-line");
+      var who = el("p", "act-line card-who");
       slipWho(who, item);
       whoRow.appendChild(who);
       row.appendChild(whoRow);
     }
-    if (item.action) row.appendChild(el("p", "vote-meta", item.action));
+    if (item.action) row.appendChild(el("p", "card-result", item.action));
     shell.appendChild(row);
     return shell;
   }
@@ -2285,7 +2337,7 @@
     if (item.received) wrap.appendChild(el("p", "", "Received " + formatDate(item.received) + "."));
     if (item.action) wrap.appendChild(el("p", "", "Latest action, " + formatDate(item.date) + ": " + item.action));
     if (item.url) {
-      var links = el("p", "");
+      var links = el("p", "card-bill");
       links.appendChild(link(item.url, item.id || "Nomination"));
       wrap.appendChild(links);
     }
@@ -2303,7 +2355,7 @@
     if (people.length) {
       wrap.appendChild(el("h3", "", people.length === 1 ? "Home-state senator" : "Home-state senators"));
       people.forEach(function (member) {
-        var row = el("button", "person-row" + (member[0] === pinned ? " is-on" : ""));
+        var row = el("button", "person-row " + partyClass(member[2]) + (member[0] === pinned ? " is-on" : ""));
         row.type = "button";
         row.setAttribute("data-person", member[0]);
         row.appendChild(portrait(member[0], member[1], false));

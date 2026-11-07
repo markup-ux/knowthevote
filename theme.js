@@ -66,6 +66,149 @@
 
   var MARK = '<svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="leaders-theme-rainbow" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#e85d6a"></stop><stop offset="0.28" stop-color="#f0b429"></stop><stop offset="0.52" stop-color="#3cba55"></stop><stop offset="0.76" stop-color="#178fd0"></stop><stop offset="1" stop-color="#7a6ad6"></stop></linearGradient><clipPath id="leaders-theme-core"><circle cx="12" cy="12" r="3.15"></circle></clipPath></defs><g stroke="#fff" stroke-width="0.85" stroke-linejoin="round"><path fill="#ffe14a" d="M12.00 7.40L12.00 1.60A10.4 10.4 0 0 1 18.68 4.03L14.96 8.48A4.6 4.6 0 0 0 12.00 7.40Z"></path><path fill="#3cba55" d="M14.96 8.48L18.68 4.03A10.4 10.4 0 0 1 22.24 10.19L16.53 11.20A4.6 4.6 0 0 0 14.96 8.48Z"></path><path fill="#178fd0" d="M16.53 11.20L22.24 10.19A10.4 10.4 0 0 1 21.01 17.20L15.98 14.30A4.6 4.6 0 0 0 16.53 11.20Z"></path><path fill="#e25822" d="M15.98 14.30L21.01 17.20A10.4 10.4 0 0 1 15.56 21.77L13.57 16.32A4.6 4.6 0 0 0 15.98 14.30Z"></path><path fill="#7eb0d4" d="M13.57 16.32L15.56 21.77A10.4 10.4 0 0 1 8.44 21.77L10.43 16.32A4.6 4.6 0 0 0 13.57 16.32Z"></path><path fill="#c23b45" d="M10.43 16.32L8.44 21.77A10.4 10.4 0 0 1 2.99 17.20L8.02 14.30A4.6 4.6 0 0 0 10.43 16.32Z"></path><path fill="#14c4c0" d="M8.02 14.30L2.99 17.20A10.4 10.4 0 0 1 1.76 10.19L7.47 11.20A4.6 4.6 0 0 0 8.02 14.30Z"></path><path fill="#e25688" d="M7.47 11.20L1.76 10.19A10.4 10.4 0 0 1 5.32 4.03L9.04 8.48A4.6 4.6 0 0 0 7.47 11.20Z"></path><path fill="url(#leaders-theme-rainbow)" d="M9.04 8.48L5.32 4.03A10.4 10.4 0 0 1 12.00 1.60L12.00 7.40A4.6 4.6 0 0 0 9.04 8.48Z"></path></g><circle class="theme-mark-now" cx="12" cy="12" r="3.45" fill="#f4f0e6" stroke="#fff" stroke-width="0.9"></circle><g clip-path="url(#leaders-theme-core)"><g class="theme-mark-sun" fill="none" stroke="#1c1915" stroke-width="0.9" stroke-linecap="round"><circle cx="12" cy="12" r="1.05" fill="#1c1915" stroke="none"></circle><path d="M12 9.2v.85M12 13.95v.85M9.2 12h.85M13.95 12h.85M10.05 10.05l.6.6M13.35 13.35l.6.6M13.95 10.05l-.6.6M10.65 13.35l-.6.6"></path></g><g class="theme-mark-moon"><path fill="#fff" d="M13.35 9.85a2.2 2.2 0 1 0 1.7 3.9 1.75 1.75 0 1 1-1.7-3.9z"></path></g></g></svg>';
 
+  var FONT_LEGACY = {
+    "Segoe UI": '"Segoe UI", "Helvetica Neue", sans-serif',
+    "Arial": "Arial, Helvetica, sans-serif",
+    "Verdana": "Verdana, Geneva, sans-serif",
+    "Calibri": "Calibri, Candara, sans-serif",
+    "Georgia": "Georgia, Palatino, serif",
+    "Palatino Linotype": '"Palatino Linotype", Palatino, serif',
+    "Cambria": "Cambria, Georgia, serif",
+    "Times New Roman": '"Times New Roman", Times, serif'
+  };
+  var SERIF_DISPLAY = { "Algerian": 1, "Broadway": 1, "Castellar": 1, "Colonna MT": 1, "Cooper Black": 1, "Elephant": 1, "Engravers MT": 1, "Felix Titling": 1, "Goudy Stout": 1, "Old English Text MT": 1, "Onyx": 1, "Papyrus": 1, "Perpetua Titling MT": 1, "Playbill": 1, "Wide Latin": 1 };
+  var FONT_LINES = [
+    "Sans:Agency FB:Arial Narrow", "Sans:Alef", "Sans:Arial", "Sans:Arial Black:Impact", "Sans:Arial Narrow:Arial", "Sans:Arial Rounded MT Bold:Arial",
+    "Sans:Bahnschrift:Arial", "Sans:Bahnschrift Condensed", "Sans:Bahnschrift Light", "Sans:Bahnschrift SemiBold", "Sans:Bahnschrift SemiCondensed",
+    "Sans:Berlin Sans FB", "Sans:Calibri", "Sans:Calibri Light", "Sans:Candara:Calibri", "Sans:Candara Light", "Sans:Carlito", "Sans:Century Gothic:Trebuchet MS", "Sans:Corbel:Calibri", "Sans:Corbel Light",
+    "Sans:DejaVu Sans", "Sans:DejaVu Sans Condensed", "Sans:DejaVu Sans Light", "Sans:Dubai", "Sans:Dubai Light", "Sans:Dubai Medium", "Sans:Ebrima",
+    "Sans:Eras ITC",
+    "Sans:Franklin Gothic", "Sans:Franklin Gothic Book", "Sans:Franklin Gothic Heavy", "Sans:Franklin Gothic Medium",
+    "Sans:Gadugi", "Sans:Gill Sans MT", "Sans:Gill Sans MT Condensed", "Sans:Leelawadee UI", "Sans:Liberation Sans", "Sans:Liberation Sans Narrow:Arial Narrow",
+    "Sans:Lucida Sans", "Sans:Lucida Sans Unicode:Lucida Grande", "Sans:Maiandra GD:Trebuchet MS", "Sans:Microsoft Sans Serif:Arial", "Sans:MS Reference Sans Serif", "Sans:Nirmala UI", "Sans:Noto Sans", "Sans:Rubik",
+    "Sans:Segoe UI", "Sans:Segoe UI Black", "Sans:Segoe UI Light", "Sans:Segoe UI Semibold", "Sans:Tahoma:Arial", "Sans:Tempus Sans ITC", "Sans:Trebuchet MS:Arial", "Sans:Tw Cen MT", "Sans:Tw Cen MT Condensed", "Sans:Verdana",
+    "Sans:Avenir", "Sans:Avenir Next", "Sans:Avenir Next Condensed", "Sans:Cantarell", "Sans:Chalkboard SE", "Sans:DIN Alternate", "Sans:DIN Condensed", "Sans:Droid Sans", "Sans:FreeSans", "Sans:Futura", "Sans:Geneva", "Sans:Gill Sans", "Sans:Helvetica", "Sans:Helvetica Neue", "Sans:Lucida Grande", "Sans:Nimbus Sans", "Sans:Noteworthy", "Sans:Optima", "Sans:Roboto", "Sans:Roboto Condensed", "Sans:SF Pro Display", "Sans:SF Pro Text", "Sans:Ubuntu", "Sans:Ubuntu Condensed",
+    "Serif:Baskerville Old Face:Georgia", "Serif:Bell MT", "Serif:Bodoni MT", "Serif:Bodoni MT Black", "Serif:Bodoni MT Condensed", "Serif:Book Antiqua:Palatino", "Serif:Bookman Old Style:Georgia", "Serif:Caladea", "Serif:Californian FB", "Serif:Calisto MT:Georgia", "Serif:Cambria", "Serif:Centaur", "Serif:Century", "Serif:Century Schoolbook:Georgia", "Serif:Constantia:Georgia",
+    "Serif:DejaVu Serif", "Serif:DejaVu Serif Condensed", "Serif:Footlight MT Light", "Serif:Garamond:Georgia", "Serif:Gentium Basic", "Serif:Gentium Book Basic", "Serif:Georgia", "Serif:Goudy Old Style:Palatino", "Serif:High Tower Text", "Serif:Liberation Serif", "Serif:Linux Biolinum G", "Serif:Linux Libertine Display G", "Serif:Linux Libertine G",
+    "Serif:Lucida Bright", "Serif:Lucida Fax", "Serif:Modern No. 20", "Serif:Noto Serif", "Serif:Palatino Linotype", "Serif:Perpetua:Georgia", "Serif:Poor Richard", "Serif:Rockwell:Georgia", "Serif:Rockwell Condensed", "Serif:Sitka Banner", "Serif:Sitka Display", "Serif:Sitka Heading", "Serif:Sitka Small", "Serif:Sitka Subheading", "Serif:Sitka Text:Cambria", "Serif:Sylfaen", "Serif:Times New Roman",
+    "Serif:American Typewriter", "Serif:Baskerville", "Serif:Big Caslon", "Serif:Charter", "Serif:Cochin", "Serif:Didot", "Serif:Droid Serif", "Serif:FreeSerif", "Serif:Hoefler Text", "Serif:Iowan Old Style", "Serif:New York", "Serif:Nimbus Roman", "Serif:Palatino", "Serif:Roboto Slab", "Serif:Superclarendon",
+    "Mono:Cascadia Code", "Mono:Cascadia Code ExtraLight", "Mono:Cascadia Code Light", "Mono:Cascadia Code SemiBold", "Mono:Cascadia Mono", "Mono:Cascadia Mono ExtraLight", "Mono:Cascadia Mono Light", "Mono:Cascadia Mono SemiBold",
+    "Mono:Consolas:Courier New", "Mono:Courier New:Courier", "Mono:DejaVu Sans Mono", "Mono:Liberation Mono", "Mono:Lucida Console:Courier New", "Mono:Lucida Sans Typewriter", "Mono:Miriam Mono CLM", "Mono:OCR A:Consolas",
+    "Mono:Andale Mono", "Mono:Courier", "Mono:Droid Sans Mono", "Mono:FreeMono", "Mono:Menlo", "Mono:Monaco", "Mono:Noto Sans Mono", "Mono:Roboto Mono", "Mono:SF Mono", "Mono:Ubuntu Mono",
+    "Script:Blackadder ITC", "Script:Bradley Hand ITC", "Script:Brush Script MT", "Script:Comic Sans MS:Marker Felt", "Script:Curlz MT", "Script:Edwardian Script ITC", "Script:Freestyle Script", "Script:French Script MT", "Script:Gabriola:Georgia", "Script:Gigi", "Script:Harlow Solid", "Script:Informal Roman", "Script:Ink Free", "Script:Juice ITC", "Script:Kristen ITC:Comic Sans MS", "Script:Kunstler Script", "Script:Lucida Calligraphy", "Script:Lucida Handwriting", "Script:Magneto", "Script:Matura MT Script Capitals", "Script:Mistral", "Script:Monotype Corsiva", "Script:Palace Script MT", "Script:Parchment", "Script:Pristina", "Script:Rage", "Script:Script MT", "Script:Segoe Print:Comic Sans MS", "Script:Segoe Script:Brush Script MT", "Script:Viner Hand ITC", "Script:Vivaldi", "Script:Vladimir Script",
+    "Script:Apple Chancery", "Script:Bradley Hand", "Script:Marker Felt", "Script:Savoye LET", "Script:SignPainter", "Script:Snell Roundhand", "Script:Zapfino",
+    "Display:Algerian", "Display:Bauhaus 93", "Display:Bernard MT Condensed", "Display:Broadway", "Display:Castellar", "Display:Chiller", "Display:Colonna MT", "Display:Cooper Black:Georgia", "Display:Copperplate Gothic", "Display:Copperplate Gothic Light", "Display:Elephant", "Display:Engravers MT", "Display:Felix Titling", "Display:Forte", "Display:Goudy Stout", "Display:Haettenschweiler", "Display:Harrington", "Display:Impact:Arial Black", "Display:Imprint MT Shadow", "Display:Jokerman", "Display:MV Boli", "Display:Niagara Engraved", "Display:Niagara Solid", "Display:Old English Text MT:Georgia", "Display:Onyx", "Display:Papyrus:Georgia", "Display:Perpetua Titling MT", "Display:Playbill", "Display:Ravie", "Display:Showcard Gothic", "Display:Snap ITC", "Display:Stencil", "Display:Wide Latin",
+    "Display:Chalkduster", "Display:Copperplate", "Display:Herculanum", "Display:Luminari", "Display:Phosphate"
+  ];
+  var FONT_META = {};
+  function quoteFace(name) {
+    return /[^A-Za-z0-9-]/.test(name) ? '"' + name + '"' : name;
+  }
+  function fontStack(name, group, alt) {
+    if (FONT_LEGACY[name]) return FONT_LEGACY[name];
+    var tail = group === "Mono" ? "monospace" : group === "Script" ? "cursive" : (group === "Serif" || SERIF_DISPLAY[name]) ? "serif" : "sans-serif";
+    var parts = [quoteFace(name)];
+    if (alt) parts.push(quoteFace(alt));
+    parts.push(tail);
+    var value = parts.join(", ");
+    if (value.length >= 80) value = quoteFace(name) + ", " + tail;
+    return value;
+  }
+  FONT_LINES.forEach(function (line) {
+    var parts = line.split(":");
+    if (!parts[1] || FONT_META[parts[1]]) return;
+    FONT_META[parts[1]] = { group: parts[0], alt: parts[2] || "" };
+  });
+  function stackOf(name) {
+    var meta = FONT_META[name];
+    if (!meta) return "sans-serif";
+    return fontStack(name, meta.group, meta.alt);
+  }
+  var THEME_TYPE = [
+    ["spring", "Candara", "Constantia"],
+    ["summer", "Century Gothic", "Trebuchet MS"],
+    ["fall", "Bookman Old Style", "Calisto MT"],
+    ["winter", "Corbel", "Sitka Text"],
+    ["holiday", "Palatino Linotype", "Segoe Script"],
+    ["tropical", "Maiandra GD", "Maiandra GD"],
+    ["birthday", "Comic Sans MS", "Segoe Print"],
+    ["rainbow", "Verdana", "Arial Black"],
+    ["bw", "Arial", "Arial"],
+    ["typewriter", "Courier New", "Courier New"],
+    ["newsroom", "Times New Roman", "Rockwell"],
+    ["office", "Calibri", "Cambria"],
+    ["arcade", "Lucida Console", "Lucida Console"],
+    ["verdant", "Goudy Old Style", "Goudy Old Style"],
+    ["fantasy", "Baskerville Old Face", "Gabriola"],
+    ["cyberpunk", "Consolas", "OCR A"],
+    ["medieval", "Garamond", "Old English Text MT", "Garamond"],
+    ["school", "Century Schoolbook", "Century Schoolbook"],
+    ["farmhouse", "Book Antiqua", "Cooper Black"],
+    ["treehouse", "Lucida Sans Unicode", "Kristen ITC"],
+    ["alien", "Bahnschrift", "Agency FB"],
+    ["zodiac", "Perpetua", "Perpetua"],
+    ["sportsball", "Arial Narrow", "Impact"]
+  ];
+  function themeFaceCss() {
+    var rules = [];
+    THEME_TYPE.forEach(function (row) {
+      var id = row[0];
+      var body = stackOf(row[1]);
+      var display = stackOf(row[2]);
+      var sub = row[3] ? stackOf(row[3]) : display;
+      var b = 'html[data-theme="' + id + '"] body, html[data-theme="' + id + '-dark"] body';
+      var title = 'html[data-theme="' + id + '"] h1, html[data-theme="' + id + '"] h2, html[data-theme="' + id + '"] .brand, html[data-theme="' + id + '-dark"] h1, html[data-theme="' + id + '-dark"] h2, html[data-theme="' + id + '-dark"] .brand';
+      var h3 = 'html[data-theme="' + id + '"] h3, html[data-theme="' + id + '-dark"] h3';
+      if (body === display && sub === display) rules.push(b + ", " + title + ", " + h3 + " { font-family: " + body + "; }");
+      else {
+        rules.push(b + " { font-family: " + body + "; }");
+        if (display === sub) rules.push(title + ", " + h3 + " { font-family: " + display + "; }");
+        else {
+          rules.push(title + " { font-family: " + display + "; }");
+          rules.push(h3 + " { font-family: " + sub + "; }");
+        }
+      }
+    });
+    return rules.join("\n");
+  }
+  function faceInstalled(name) {
+    try {
+      var canvas = faceInstalled.canvas || (faceInstalled.canvas = document.createElement("canvas"));
+      var ctx = canvas.getContext && canvas.getContext("2d");
+      if (!ctx) return true;
+      var sample = "mmmmmmmmmmlliWW";
+      function width(spec) {
+        ctx.font = "72px " + spec;
+        return ctx.measureText(sample).width;
+      }
+      var quoted = quoteFace(name);
+      var mono = width("monospace");
+      var sans = width("sans-serif");
+      return width(quoted + ", monospace") !== mono || width(quoted + ", sans-serif") !== sans;
+    } catch (e) {
+      return true;
+    }
+  }
+  var FONT_IDS = { "": true, "sans-serif": true, "serif": true, "monospace": true, "cursive": true, "fantasy": true };
+  var FONT_READY = [];
+  Object.keys(FONT_META).forEach(function (name) {
+    if (!faceInstalled(name)) return;
+    var meta = FONT_META[name];
+    var id = fontStack(name, meta.group, meta.alt);
+    if (FONT_IDS[id]) return;
+    FONT_IDS[id] = true;
+    FONT_READY.push({ id: id, label: name, group: meta.group });
+  });
+  FONT_READY.sort(function (a, b) { return a.label < b.label ? -1 : a.label > b.label ? 1 : 0; });
+  var FONTS = [
+    { id: "", label: "Site", group: "" },
+    { id: "sans-serif", label: "Sans", group: "Sans" },
+    { id: "serif", label: "Serif", group: "Serif" },
+    { id: "monospace", label: "Mono", group: "Mono" },
+    { id: "cursive", label: "Script", group: "Script" },
+    { id: "fantasy", label: "Display", group: "Display" }
+  ].concat(FONT_READY);
+
   var style = document.createElement("style");
   style.textContent = [
     "header .lang { display: flex; align-items: center; gap: 8px; }",
@@ -169,14 +312,16 @@
     ".look-button { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: 0; background: transparent; cursor: pointer; flex: none; color: var(--bar-ink, #f4f7fb); font: 650 16px/1 Georgia, 'Palatino Linotype', serif; letter-spacing: -0.03em; }",
     ".look-button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }",
     ".look-button-fixed { position: fixed; top: 10px; right: 56px; z-index: 6; }",
-    ".look-menu { position: fixed; z-index: 8; width: min(320px, calc(100vw - 16px)); }",
+    ".look-menu { position: fixed; z-index: 8; width: min(420px, calc(100vw - 16px)); }",
     ".look-menu[hidden] { display: none; }",
     ".look-panel { max-height: calc(100vh - 16px); overflow: auto; padding: 14px 14px 12px; border-radius: 16px; background: #1c1915; color: #f4f0e6; box-shadow: 0 16px 40px rgba(0,0,0,.4), inset 0 0 0 2px rgba(255,255,255,.45); }",
     ".look-panel, .look-panel button, .look-panel select, .look-panel label { font-family: 'Segoe UI', 'Helvetica Neue', sans-serif; }",
     ".look-kicker { margin: 10px 0 4px; font-size: 12px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; color: #d9d0c3; }",
     ".look-kicker:first-child { margin-top: 0; }",
     ".look-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 6px 0; font-size: 15px; font-weight: 650; }",
-    ".look-row select { font: inherit; color: #1c1915; background: #f4f0e6; border: 0; border-radius: 6px; padding: 5px 8px; max-width: 11.5rem; }",
+    ".look-row select { font: inherit; color: #1c1915; background: #f4f0e6; border: 0; border-radius: 6px; padding: 5px 8px; flex: 1; min-width: 0; max-width: 16.5rem; }",
+    ".look-row select optgroup { font-family: 'Segoe UI', 'Helvetica Neue', sans-serif; font-size: 12px; }",
+    ".look-row select option { font-size: 16px; }",
     ".look-row input[type='color'] { width: 44px; height: 30px; padding: 0; border: 2px solid #fff; border-radius: 6px; background: transparent; cursor: pointer; }",
     ".look-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }",
     ".look-actions button { min-width: 64px; height: 28px; padding: 0 10px; border: 1px solid rgba(255,255,255,.85); border-radius: 999px; background: #1c1915; color: #f4f0e6; font: 650 12px/1 'Segoe UI', 'Helvetica Neue', sans-serif; letter-spacing: 0.04em; cursor: pointer; }",
@@ -206,14 +351,6 @@
     'html[data-theme="verdant"] body { --bar: #1d6b3a; --bar-stripe: #8fbf3f; --bar-line: #d7ecc4; --bar-ink: #f3faf0; --bar-hover: #8fbf3f; --bar-hover-ink: #102418; }',
     'html[data-theme="verdant-dark"] { --paper: #0e1a12; --ink: #e5f6e4; --muted: #a9c8a4; --line: #243828; --chip: #163022; --map: #163022; --map-ink: #e5f6e4; --map-on: #b6e06a; --map-tint: #3d8a48; --clock-face: #0e1a12; --clock-rim: #8fbf3f; --clock-mark: #e5f6e4; --clock-hour: #d7ecc4; --clock-minute: #6aaa4a; --clock-pin: #8fbf3f; }',
     'html[data-theme="verdant-dark"] body { --bar: #0f3d22; --bar-stripe: #8fbf3f; --bar-line: #2f6a40; --bar-ink: #e5f6e4; --bar-hover: #8fbf3f; --bar-hover-ink: #102418; }',
-    'html[data-theme="bw"] body, html[data-theme="bw-dark"] body, html[data-theme="bw"] h1, html[data-theme="bw"] h2, html[data-theme="bw"] h3, html[data-theme="bw"] .brand, html[data-theme="bw-dark"] h1, html[data-theme="bw-dark"] h2, html[data-theme="bw-dark"] h3, html[data-theme="bw-dark"] .brand { font-family: Arial, Helvetica, sans-serif; }',
-    'html[data-theme="typewriter"] body, html[data-theme="typewriter-dark"] body, html[data-theme="typewriter"] h1, html[data-theme="typewriter"] h2, html[data-theme="typewriter"] h3, html[data-theme="typewriter"] .brand, html[data-theme="typewriter-dark"] h1, html[data-theme="typewriter-dark"] h2, html[data-theme="typewriter-dark"] h3, html[data-theme="typewriter-dark"] .brand { font-family: "Courier New", Courier, monospace; }',
-    'html[data-theme="newsroom"] body, html[data-theme="newsroom-dark"] body { font-family: "Times New Roman", Times, serif; }',
-    'html[data-theme="newsroom"] h1, html[data-theme="newsroom"] h2, html[data-theme="newsroom"] h3, html[data-theme="newsroom"] .brand, html[data-theme="newsroom-dark"] h1, html[data-theme="newsroom-dark"] h2, html[data-theme="newsroom-dark"] h3, html[data-theme="newsroom-dark"] .brand { font-family: Georgia, "Times New Roman", serif; }',
-    'html[data-theme="office"] body, html[data-theme="office-dark"] body { font-family: Calibri, Candara, sans-serif; }',
-    'html[data-theme="office"] h1, html[data-theme="office"] h2, html[data-theme="office"] h3, html[data-theme="office"] .brand, html[data-theme="office-dark"] h1, html[data-theme="office-dark"] h2, html[data-theme="office-dark"] h3, html[data-theme="office-dark"] .brand { font-family: Cambria, Georgia, serif; }',
-    'html[data-theme="arcade"] body, html[data-theme="arcade-dark"] body, html[data-theme="arcade"] h1, html[data-theme="arcade"] h2, html[data-theme="arcade"] h3, html[data-theme="arcade"] .brand, html[data-theme="arcade-dark"] h1, html[data-theme="arcade-dark"] h2, html[data-theme="arcade-dark"] h3, html[data-theme="arcade-dark"] .brand { font-family: Consolas, "Courier New", monospace; }',
-    'html[data-theme="verdant"] body, html[data-theme="verdant-dark"] body, html[data-theme="verdant"] h1, html[data-theme="verdant"] h2, html[data-theme="verdant"] h3, html[data-theme="verdant"] .brand, html[data-theme="verdant-dark"] h1, html[data-theme="verdant-dark"] h2, html[data-theme="verdant-dark"] h3, html[data-theme="verdant-dark"] .brand { font-family: "Palatino Linotype", Palatino, serif; }',
     'html[data-theme="fantasy"] { color-scheme: light; --paper: #f6efe0; --ink: #2a1848; --muted: #6a5878; --line: #e4d6c4; --chip: #efe4c8; --map: #efe6d4; --map-ink: #2a1848; --map-on: #6b3fa0; --map-tint: #c9a227; --clock-face: #f6efe0; --clock-rim: #3a2068; --clock-mark: #2a1848; --clock-hour: #6b3fa0; --clock-minute: #c9a227; --clock-pin: #6b3fa0; }',
     'html[data-theme="fantasy"] body { --bar: #3a2068; --bar-stripe: #e6b422; --bar-line: #c9a0e0; --bar-ink: #f6efe0; --bar-hover: #e6b422; --bar-hover-ink: #2a1848; }',
     'html[data-theme="fantasy-dark"] { --paper: #140e22; --ink: #f6efe4; --muted: #c4b4d4; --line: #2e2444; --chip: #221838; --map: #1c1430; --map-ink: #f6efe4; --map-on: #e6b422; --map-tint: #6b3fa0; --clock-face: #140e22; --clock-rim: #e6b422; --clock-mark: #f6efe4; --clock-hour: #c9a0e0; --clock-minute: #e6b422; --clock-pin: #e6b422; }',
@@ -246,20 +383,11 @@
     'html[data-theme="zodiac"] body { --bar: #1e1a4a; --bar-stripe: #e6c15a; --bar-line: #7a6ad6; --bar-ink: #f7f3ea; --bar-hover: #e6c15a; --bar-hover-ink: #1a1430; }',
     'html[data-theme="zodiac-dark"] { --paper: #0c0a18; --ink: #f4efe4; --muted: #c4bdd4; --line: #262038; --chip: #1a1630; --map: #161228; --map-ink: #f4efe4; --map-on: #e6c15a; --map-tint: #7a6ad6; --clock-face: #0c0a18; --clock-rim: #e6c15a; --clock-mark: #f4efe4; --clock-hour: #e6c15a; --clock-minute: #a898e0; --clock-pin: #e6c15a; }',
     'html[data-theme="zodiac-dark"] body { --bar: #090818; --bar-stripe: #e6c15a; --bar-line: #7a6ad6; --bar-ink: #f4efe4; --bar-hover: #e6c15a; --bar-hover-ink: #1a1430; }',
-    'html[data-theme="fantasy"] body, html[data-theme="fantasy-dark"] body, html[data-theme="fantasy"] h1, html[data-theme="fantasy"] h2, html[data-theme="fantasy"] h3, html[data-theme="fantasy"] .brand, html[data-theme="fantasy-dark"] h1, html[data-theme="fantasy-dark"] h2, html[data-theme="fantasy-dark"] h3, html[data-theme="fantasy-dark"] .brand { font-family: Georgia, "Palatino Linotype", serif; }',
-    'html[data-theme="cyberpunk"] body, html[data-theme="cyberpunk-dark"] body, html[data-theme="cyberpunk"] h1, html[data-theme="cyberpunk"] h2, html[data-theme="cyberpunk"] h3, html[data-theme="cyberpunk"] .brand, html[data-theme="cyberpunk-dark"] h1, html[data-theme="cyberpunk-dark"] h2, html[data-theme="cyberpunk-dark"] h3, html[data-theme="cyberpunk-dark"] .brand { font-family: "Lucida Console", "Courier New", monospace; }',
-    'html[data-theme="medieval"] body, html[data-theme="medieval-dark"] body, html[data-theme="medieval"] h1, html[data-theme="medieval"] h2, html[data-theme="medieval"] h3, html[data-theme="medieval"] .brand, html[data-theme="medieval-dark"] h1, html[data-theme="medieval-dark"] h2, html[data-theme="medieval-dark"] h3, html[data-theme="medieval-dark"] .brand { font-family: "Times New Roman", Times, serif; }',
-    'html[data-theme="school"] body, html[data-theme="school-dark"] body, html[data-theme="school"] h1, html[data-theme="school"] h2, html[data-theme="school"] h3, html[data-theme="school"] .brand, html[data-theme="school-dark"] h1, html[data-theme="school-dark"] h2, html[data-theme="school-dark"] h3, html[data-theme="school-dark"] .brand { font-family: Verdana, Geneva, sans-serif; }',
-    'html[data-theme="farmhouse"] body, html[data-theme="farmhouse-dark"] body, html[data-theme="farmhouse"] h1, html[data-theme="farmhouse"] h2, html[data-theme="farmhouse"] h3, html[data-theme="farmhouse"] .brand, html[data-theme="farmhouse-dark"] h1, html[data-theme="farmhouse-dark"] h2, html[data-theme="farmhouse-dark"] h3, html[data-theme="farmhouse-dark"] .brand { font-family: Cambria, Georgia, serif; }',
-    'html[data-theme="treehouse"] body, html[data-theme="treehouse-dark"] body, html[data-theme="treehouse"] h1, html[data-theme="treehouse"] h2, html[data-theme="treehouse"] h3, html[data-theme="treehouse"] .brand, html[data-theme="treehouse-dark"] h1, html[data-theme="treehouse-dark"] h2, html[data-theme="treehouse-dark"] h3, html[data-theme="treehouse-dark"] .brand { font-family: "Trebuchet MS", "Segoe UI", sans-serif; }',
-    'html[data-theme="alien"] body, html[data-theme="alien-dark"] body, html[data-theme="alien"] h1, html[data-theme="alien"] h2, html[data-theme="alien"] h3, html[data-theme="alien"] .brand, html[data-theme="alien-dark"] h1, html[data-theme="alien-dark"] h2, html[data-theme="alien-dark"] h3, html[data-theme="alien-dark"] .brand { font-family: Consolas, "Courier New", monospace; }',
-    'html[data-theme="zodiac"] body, html[data-theme="zodiac-dark"] body, html[data-theme="zodiac"] h1, html[data-theme="zodiac"] h2, html[data-theme="zodiac"] h3, html[data-theme="zodiac"] .brand, html[data-theme="zodiac-dark"] h1, html[data-theme="zodiac-dark"] h2, html[data-theme="zodiac-dark"] h3, html[data-theme="zodiac-dark"] .brand { font-family: "Palatino Linotype", Palatino, "Book Antiqua", serif; }',
     'html[data-theme="sportsball"] { color-scheme: light; --paper: #f4f7f2; --ink: #142033; --muted: #5c6a78; --line: #d5dde4; --chip: #e7f3dc; --map: #e4f0dc; --map-ink: #142033; --map-on: #ff6a1a; --map-tint: #1f7a3a; --clock-face: #f7f8f4; --clock-rim: #145c32; --clock-mark: #142033; --clock-hour: #ff6a1a; --clock-minute: #1f7a3a; --clock-pin: #ffb000; }',
     'html[data-theme="sportsball"] body { --bar: #145c32; --bar-stripe: #ff6a1a; --bar-line: #f7f4ea; --bar-ink: #f7f8f4; --bar-hover: #ff6a1a; --bar-hover-ink: #102018; }',
     'html[data-theme="sportsball-dark"] { --paper: #0c1210; --ink: #f3f6f1; --muted: #b7c4b4; --line: #243028; --chip: #162018; --map: #142018; --map-ink: #f3f6f1; --map-on: #ffb000; --map-tint: #1f7a3a; --clock-face: #0c1210; --clock-rim: #ffb000; --clock-mark: #f3f6f1; --clock-hour: #ff6a1a; --clock-minute: #7dffb0; --clock-pin: #ffb000; }',
     'html[data-theme="sportsball-dark"] body { --bar: #07110c; --bar-stripe: #ffb000; --bar-line: #ff6a1a; --bar-ink: #f3f6f1; --bar-hover: #ffb000; --bar-hover-ink: #102018; }',
-    'html[data-theme="sportsball"] body, html[data-theme="sportsball-dark"] body { font-family: "Arial Narrow", Arial, sans-serif; }',
-    'html[data-theme="sportsball"] h1, html[data-theme="sportsball"] h2, html[data-theme="sportsball"] h3, html[data-theme="sportsball"] .brand, html[data-theme="sportsball-dark"] h1, html[data-theme="sportsball-dark"] h2, html[data-theme="sportsball-dark"] h3, html[data-theme="sportsball-dark"] .brand { font-family: Impact, "Arial Black", sans-serif; }',
+    themeFaceCss(),
     "html.theme-mix { --paper: var(--mix-paper); --ink: var(--mix-ink); --muted: var(--mix-muted); --line: var(--mix-line); --chip: var(--mix-chip); --map: var(--mix-map); --map-ink: var(--mix-map-ink); --map-on: var(--mix-map-on); --map-tint: var(--mix-map-tint); --clock-face: var(--mix-clock-face); --clock-rim: var(--mix-clock-rim); --clock-mark: var(--mix-clock-mark); --clock-hour: var(--mix-clock-hour); --clock-minute: var(--mix-clock-minute); --clock-pin: var(--mix-clock-pin); color-scheme: light; }",
     "html.theme-mix.theme-mix-dark { color-scheme: dark; }",
     "html.theme-mix body { --bar: var(--mix-bar); --bar-stripe: var(--mix-bar-stripe); --bar-line: var(--mix-bar-line); --bar-ink: var(--mix-bar-ink); --bar-hover: var(--mix-bar-hover); --bar-hover-ink: var(--mix-bar-hover-ink); background: var(--mix-bg); }",
@@ -734,19 +862,6 @@
   }
 
   var LOOK_KEY = "leaders-look";
-  var FONTS = [
-    { id: "", label: "Site" },
-    { id: '"Segoe UI", "Helvetica Neue", sans-serif', label: "Segoe" },
-    { id: "Arial, Helvetica, sans-serif", label: "Arial" },
-    { id: "Verdana, Geneva, sans-serif", label: "Verdana" },
-    { id: "Calibri, Candara, sans-serif", label: "Calibri" },
-    { id: "Georgia, Palatino, serif", label: "Georgia" },
-    { id: '"Palatino Linotype", Palatino, serif', label: "Palatino" },
-    { id: "Cambria, Georgia, serif", label: "Cambria" },
-    { id: '"Times New Roman", Times, serif', label: "Times" }
-  ];
-  var FONT_IDS = {};
-  FONTS.forEach(function (font) { FONT_IDS[font.id] = true; });
   var lookButton = null;
   var lookMenu = null;
   var lookOpen = false;
@@ -865,8 +980,14 @@
     if (!lookMenu) return;
     var bodySelect = lookMenu.querySelector("[data-look='body']");
     var displaySelect = lookMenu.querySelector("[data-look='display']");
-    if (bodySelect) bodySelect.value = look.body;
-    if (displaySelect) displaySelect.value = look.display;
+    if (bodySelect) {
+      bodySelect.value = look.body;
+      bodySelect.style.fontFamily = look.body || "";
+    }
+    if (displaySelect) {
+      displaySelect.value = look.display;
+      displaySelect.style.fontFamily = look.display || "";
+    }
     [["paper", false], ["ink", false], ["bar", true], ["stripe", true]].forEach(function (part) {
       var input = lookMenu.querySelector("[data-look='" + part[0] + "']");
       if (!input) return;
@@ -956,16 +1077,29 @@
       var select = document.createElement("select");
       select.setAttribute("data-look", name);
       select.setAttribute("aria-label", label + " font");
-      FONTS.forEach(function (font) {
+      function addOption(parent, font) {
         var option = document.createElement("option");
         option.value = font.id;
         option.textContent = font.label;
-        select.appendChild(option);
+        if (font.id) option.style.fontFamily = font.id;
+        parent.appendChild(option);
+      }
+      FONTS.forEach(function (font) {
+        if (!font.group) addOption(select, font);
+      });
+      ["Sans", "Serif", "Mono", "Script", "Display"].forEach(function (group) {
+        var faces = FONTS.filter(function (font) { return font.group === group; });
+        if (!faces.length) return;
+        var box = document.createElement("optgroup");
+        box.label = group;
+        faces.forEach(function (font) { addOption(box, font); });
+        select.appendChild(box);
       });
       select.addEventListener("change", function () {
         look[name] = FONT_IDS[select.value] ? select.value : "";
         storeLook();
         applyLook();
+        select.style.fontFamily = select.value || "";
       });
       row.appendChild(select);
       return row;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t);var raw=localStorage.getItem("leaders-look");if(raw){var o=JSON.parse(raw),el=document.documentElement,css="",st=document.createElement("style");function hex(v){return typeof v==="string"&&/^#[0-9a-fA-F]{6}$/.test(v)?v:""}function lum(h){var n=parseInt(h.slice(1),16);return (((n>>16)&255)*3+((n>>8)&255)*6+(n&255))/10}function face(v){return typeof v==="string"&&v.length>0&&v.length<80?v:""}var body=face(o.body),display=face(o.display),paper=hex(o.paper),ink=hex(o.ink),bar=hex(o.bar),stripe=hex(o.stripe);if(body){el.style.setProperty("--look-body",body);el.classList.add("look-body");css+="html.look-body body{font-family:var(--look-body)}"}if(display){el.style.setProperty("--look-display",display);el.classList.add("look-display");css+="html.look-display h1,html.look-display h2,html.look-display h3,html.look-display .brand{font-family:var(--look-display)}"}if(paper){el.style.setProperty("--look-paper",paper);el.classList.add("look-paper");css+="html.look-paper{--paper:var(--look-paper)}"}if(ink){el.style.setProperty("--look-ink",ink);el.classList.add("look-ink");css+="html.look-ink{--ink:var(--look-ink)}"}if(bar){el.style.setProperty("--look-bar",bar);el.style.setProperty("--look-bar-ink",lum(bar)>150?"#1c1915":"#f4f7fb");el.classList.add("look-bar");css+="html.look-bar body{--bar:var(--look-bar);--bar-ink:var(--look-bar-ink)}"}if(stripe){el.style.setProperty("--look-stripe",stripe);el.classList.add("look-stripe");css+="html.look-stripe body{--bar-stripe:var(--look-stripe);--bar-hover:var(--look-stripe)}"}if(css){st.textContent=css;document.head.appendChild(st)}}}catch(e){}</script>
-<script src="theme.js?v=31" defer></script>
+<script src="theme.js?v=34" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · The House</title>
@@ -26,11 +26,9 @@
   color: inherit;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid var(--line);
   padding: 12px 4px;
   cursor: pointer;
 }
-.vote-row.is-on, .person-row.is-on, .floor-row.is-on { background: #e4d8c4; }
 div.floor-row { cursor: default; }
 .vote-row strong, .floor-row strong { display: block; font-size: 18px; font-weight: 650; }
 .vote-meta, .person-meta { color: var(--muted); font-size: 15px; }
@@ -46,22 +44,64 @@ div.floor-row { cursor: default; }
 .swatch.slip-back { background: #0e6fa8; }
 .swatch.slip-out { background: #d5eaf8; }
 .swatch.slip-note { background: var(--paper); box-shadow: inset 0 0 0 3px #0e6fa8; }
-.party-d { color: #1e4d7b; }
-.party-r { color: #8d3232; }
-.party-i { color: #3e5c45; }
-.party-o { color: #5c4a2a; }
+.party-d { color: var(--tone-party-d, #1e4d7b); }
+.party-r { color: var(--tone-party-r, #8d3232); }
+.party-i { color: var(--tone-party-i, #3e5c45); }
+.party-o { color: var(--tone-party-o, #5c4a2a); }
 .party-line { display: grid; grid-template-columns: 11rem minmax(0, 1fr) 16rem; gap: 10px; align-items: center; margin: 6px 0; }
 .party-line span:last-child { font-size: 15px; }
 .state-block { margin: 14px 0; }
 .state-block h3 { font-size: 22px; margin: 0 0 4px; }
 .person-row { display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 12px; align-items: center; }
-.portrait, .portrait-letter { width: 56px; height: 70px; object-fit: cover; object-position: center top; background: #e4ddd0; }
+.portrait, .portrait-letter { width: 56px; height: 70px; object-fit: cover; object-position: center top; background: var(--chip); }
 .portrait-letter { display: flex; align-items: center; justify-content: center; font-family: Georgia, "Palatino Linotype", serif; font-size: 22px; }
 .portrait-lg { width: 120px; height: 150px; }
 .portrait-letter.portrait-lg { font-size: 42px; }
-.person-card { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; align-items: start; background: var(--chip); padding: 14px 16px; margin: 12px 0; }
-.person-card h3 { margin: 0 0 6px; }
-.person-card p { margin: 4px 0; }
+.person-card {
+  --c-party: var(--tone-party-o, #5c4a2a);
+  --c-seat: var(--tone-seat, #243e6b);
+  --c-phone: var(--tone-phone, #0c5c64);
+  --c-room: var(--tone-room, #8a4e1a);
+  --c-gov: var(--tone-gov, #0e5f96);
+  --c-camp: var(--tone-camp, #6a3478);
+  --c-social: var(--tone-social, #8d3048);
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  margin: 12px 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--c-party) 10%, var(--chip));
+  box-shadow: inset 6px 0 0 var(--c-party);
+}
+.person-card.party-d { --c-party: var(--tone-party-d, #1e4d7b); }
+.person-card.party-r { --c-party: var(--tone-party-r, #8d3232); }
+.person-card.party-i { --c-party: var(--tone-party-i, #246b3a); }
+.person-card .portrait,
+.person-card .portrait-letter { border-radius: 6px; box-shadow: 0 0 0 3px var(--c-party); }
+.person-card h3 { margin: 0 0 8px; font-size: 22px; }
+.person-card p { margin: 5px 0; }
+.person-card a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; text-underline-offset: 3px; }
+.person-card .card-mark { width: 22px; height: 22px; flex: none; display: block; }
+.person-card .card-phone,
+.person-card .card-room,
+.person-card .card-gov,
+.person-card .card-camp,
+.person-card .card-social { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 12px; }
+.person-card .mark-label { text-decoration: underline; text-underline-offset: 3px; }
+.person-card .card-seat { color: var(--c-seat); }
+.person-card .card-party { display: inline-block; margin-right: 6px; padding: 1px 8px; border-radius: 999px; background: color-mix(in srgb, var(--c-party) 16%, transparent); font-size: 13px; font-weight: 700; letter-spacing: 0.02em; }
+.person-card .card-phone,
+.person-card .card-phone a { color: var(--c-phone); }
+.person-card .card-room { color: var(--c-room); }
+.person-card .card-gov,
+.person-card .card-gov a { color: var(--c-gov); }
+.person-card .card-camp,
+.person-card .card-camp a { color: var(--c-camp); }
+.person-card .card-social,
+.person-card .card-social a { color: var(--c-social); }
+.person-card .card-note { color: var(--muted); }
 #congress-find, #search-results, #taxpayer, #floor, #introduced, #roll-calls, #senate-votes, #blue-slips, #presidents, #senators, #open-vote, #open-intro, #open-slip { scroll-margin-top: 140px; overflow-anchor: none; }
 #top { scroll-margin-top: 0; height: 0; }
 body { padding-bottom: 84px; }
@@ -142,12 +182,12 @@ body { padding-bottom: 84px; }
 #blue-slips > h2 { color: #0e6fa8; }
 #presidents > h2,
 #senators > h2 { color: #8a7360; }
-.slip-row { border-bottom: 1px solid var(--line); border-left: 8px solid #9ecae4; background: #f4f9fc; }
-.slip-row.slip-back { border-left-color: #0e6fa8; background: #e5f3fb; }
-.slip-row.slip-note { border-left: 8px double #0e6fa8; background-color: transparent; background-image: none; }
-.slip-row.slip-none { border-left-color: #c8c0b4; background: transparent; }
-.slip-row.is-on { background-color: #e4d8c4; }
-.slip-row.slip-note.is-on { background-color: #e4d8c4; background-image: none; }
+.slip-row { border-bottom: 1px solid var(--line); border-left: 8px solid var(--tone-bill, #9ecae4); background: color-mix(in srgb, var(--tone-bill, #0e6fa8) 12%, var(--chip)); }
+.slip-row.slip-back { border-left-color: var(--tone-gov, #0e6fa8); background: color-mix(in srgb, var(--tone-gov, #0e6fa8) 18%, var(--chip)); }
+.slip-row.slip-note { border-left: 8px double var(--tone-gov, #0e6fa8); background-color: transparent; background-image: none; }
+.slip-row.slip-none { border-left-color: var(--tone-absent, #c8c0b4); background: transparent; }
+.slip-row.is-on { background-color: color-mix(in srgb, var(--tone-bill, #0e6fa8) 22%, var(--chip)); }
+.slip-row.slip-note.is-on { background-color: color-mix(in srgb, var(--tone-open, #e6b422) 16%, var(--chip)); background-image: none; }
 .slip-row > .vote-row {
   display: grid;
   grid-template-columns: 56px minmax(0, 1fr);
@@ -192,39 +232,229 @@ button.search-clear {
 .act-note { margin: 10px 0 16px; max-width: 68rem; }
 .act-note p { margin: 6px 0; }
 .act-line { margin: 4px 0 0; }
-.act-money { font-weight: 600; }
+.act-money, .card-money { color: var(--tone-money, #8a4e1a); font-weight: 600; }
+.card-when { color: var(--tone-when, #243e6b); }
+.card-bill, .card-bill a { color: var(--tone-bill, #0e5f96); }
+.card-about, .act-short { color: var(--tone-about, #0c5c64); }
+.card-who { color: var(--tone-who, #6a3478); }
+.card-yes { color: var(--tone-yes, #0e6a38); }
+.card-no { color: var(--tone-no, #8d2344); }
+.card-present { color: var(--tone-present, #3d4f86); }
+.card-absent { color: var(--tone-absent, #6b5344); }
+.card-result { color: var(--tone-result, #8a5a12); }
+#vote-list > .vote-row,
+#senate-list > .vote-row,
+#search-list > .vote-row,
+#floor-list .floor-row,
+#pending-list .floor-row,
+.intro-row,
+.person-row {
+  --c-card: var(--tone-when, #243e6b);
+  margin: 8px 0;
+  padding: 14px 16px 14px 18px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--c-card) 10%, var(--chip));
+  box-shadow: inset 6px 0 0 var(--c-card);
+}
+#vote-list > .vote-row.vote-passed,
+#senate-list > .vote-row.vote-passed,
+#search-list > .vote-row.vote-passed,
+#floor-list .floor-row.vote-passed,
+#pending-list .floor-row.vote-passed { --c-card: var(--tone-pass, #0e6a38); }
+#vote-list > .vote-row.vote-failed,
+#senate-list > .vote-row.vote-failed,
+#search-list > .vote-row.vote-failed,
+#floor-list .floor-row.vote-failed,
+#pending-list .floor-row.vote-failed { --c-card: var(--tone-fail, #8d2344); }
+#vote-list > .vote-row.vote-open,
+#senate-list > .vote-row.vote-open,
+#search-list > .vote-row.vote-open,
+#floor-list .floor-row.vote-open,
+#pending-list .floor-row.vote-open { --c-card: var(--tone-open, #a07a10); }
+.intro-row { --c-card: var(--tone-intro, #7a6248); }
+.person-row.party-d { --c-card: var(--tone-party-d, #1e4d7b); }
+.person-row.party-r { --c-card: var(--tone-party-r, #8d3232); }
+.person-row.party-i { --c-card: var(--tone-party-i, #246b3a); }
+.person-row.party-o { --c-card: var(--tone-party-o, #5c4a2a); }
+#vote-list > .vote-row.is-on,
+#senate-list > .vote-row.is-on,
+#search-list > .vote-row.is-on,
+#floor-list .floor-row.is-on,
+.intro-row.is-on,
+.person-row.is-on { background: color-mix(in srgb, var(--c-card) 20%, var(--chip)); }
+.intro-row > .vote-row { margin: 0; padding: 0 0 2px; border-radius: 0; background: transparent; box-shadow: none; }
 strong.with-money, h2.with-money, h3.with-money, p.with-money { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
 .money-chip { display: inline-block; padding: 2px 8px; font-weight: 750; line-height: 1.35; white-space: nowrap; }
 .intro-who { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
 .intro-who .act-line { margin: 0; }
 .intro-faces { display: flex; gap: 6px; flex: none; }
 .intro-faces .portrait, .intro-faces .portrait-letter { width: 40px; height: 50px; font-size: 16px; }
-.intro-row { border-bottom: 1px solid var(--line); }
-.intro-row.is-on { background: #e4d8c4; }
 .intro-row > .vote-row { border-bottom: 0; padding-bottom: 2px; }
 .intro-row.is-on > .vote-row { background: transparent; }
 .intro-read { margin: 0; padding: 0 4px 12px; }
-.intro-read a { text-underline-offset: 3px; }
+.intro-read a { color: var(--tone-bill, #0e5f96); text-underline-offset: 3px; }
 .sponsors h3 { font-size: 22px; margin: 16px 0 8px; }
 .sponsors .person-card { margin-top: 0; }
-html:is([data-theme="dark"], [data-theme$="-dark"]) .vote-row.is-on,
-html:is([data-theme="dark"], [data-theme$="-dark"]) .person-row.is-on,
-html:is([data-theme="dark"], [data-theme$="-dark"]) .floor-row.is-on,
-html:is([data-theme="dark"], [data-theme$="-dark"]) .intro-row.is-on { background: #3a3228; }
-html:is([data-theme="dark"], [data-theme$="-dark"]) .slip-row { background: #1c2a33; }
-html:is([data-theme="dark"], [data-theme$="-dark"]) .slip-row.slip-back { background: #163044; }
-html:is([data-theme="dark"], [data-theme$="-dark"]) .slip-row.is-on,
-html:is([data-theme="dark"], [data-theme$="-dark"]) .slip-row.slip-note.is-on { background: #3a3228; }
-html:is([data-theme="dark"], [data-theme$="-dark"]) .party-d { color: #9ec0e8; }
-html:is([data-theme="dark"], [data-theme$="-dark"]) .party-r { color: #e7a3a3; }
-html:is([data-theme="dark"], [data-theme$="-dark"]) .party-i { color: #9dcaa8; }
-html:is([data-theme="dark"], [data-theme$="-dark"]) .party-o { color: #d4c09a; }
 html:is([data-theme="dark"], [data-theme$="-dark"]) .portrait,
-html:is([data-theme="dark"], [data-theme$="-dark"]) .portrait-letter { background: #3a342c; color: var(--ink); }
+html:is([data-theme="dark"], [data-theme$="-dark"]) .portrait-letter { background: var(--chip); color: var(--ink); }
 html:is([data-theme="dark"], [data-theme$="-dark"]) .vote-bar,
 html:is([data-theme="dark"], [data-theme$="-dark"]) .mini-bar { background: var(--chip); }
 html:is([data-theme="dark"], [data-theme$="-dark"]) #congress-map path { fill: var(--map); stroke: var(--map-ink); }
 html:is([data-theme="dark"], [data-theme$="-dark"]) #congress-map path.is-on { stroke: var(--bar); }
+html[data-theme]:not([data-theme="dark"]):not([data-theme$="-dark"]) body {
+    --tone-yes: oklch(from var(--bar) min(l, 0.32) c h);
+  --tone-no: oklch(from var(--bar-stripe) min(l, 0.32) c h);
+  --tone-when: oklch(from var(--map-tint, var(--bar)) min(l, 0.32) c h);
+  --tone-bill: oklch(from var(--bar-line, var(--bar)) min(l, 0.32) c h);
+  --tone-about: oklch(from var(--map-on, var(--bar-stripe)) min(l, 0.32) c h);
+  --tone-who: oklch(from var(--bar-hover, var(--bar-stripe)) min(l, 0.32) c h);
+  --tone-money: oklch(from var(--map-on, var(--bar-stripe)) min(l, 0.32) c h);
+  --tone-result: oklch(from var(--bar-stripe) min(l, 0.32) c h);
+  --tone-present: oklch(from var(--map-tint, var(--bar)) min(l, 0.32) c h);
+  --tone-absent: var(--muted);
+  --tone-seat: oklch(from var(--map-tint, var(--bar)) min(l, 0.32) c h);
+  --tone-phone: oklch(from var(--bar-line, var(--bar)) min(l, 0.32) c h);
+  --tone-room: oklch(from var(--map-on, var(--bar-stripe)) min(l, 0.32) c h);
+  --tone-gov: oklch(from var(--bar) min(l, 0.32) c h);
+  --tone-camp: oklch(from var(--bar-hover, var(--bar-stripe)) min(l, 0.32) c h);
+  --tone-social: oklch(from var(--bar-stripe) min(l, 0.32) c h);
+  --tone-pass: oklch(from var(--bar) min(l, 0.46) c h);
+  --tone-fail: oklch(from var(--bar-stripe) min(l, 0.48) c h);
+  --tone-open: oklch(from var(--map-on, var(--bar-stripe)) min(l, 0.50) c h);
+  --tone-intro: oklch(from var(--map-tint, var(--bar)) min(l, 0.42) c h);
+  --tone-yes-soft: color-mix(in srgb, var(--tone-pass) 24%, var(--chip));
+  --tone-no-soft: color-mix(in srgb, var(--tone-fail) 24%, var(--chip));
+  --tone-party-d: color-mix(in srgb, #1e4d7b 66%, var(--ink));
+  --tone-party-r: color-mix(in srgb, #8d3232 66%, var(--ink));
+  --tone-party-i: color-mix(in srgb, #246b3a 66%, var(--ink));
+  --tone-party-o: color-mix(in srgb, #5c4a2a 66%, var(--ink));
+  --jump: var(--bar);
+  --jump-stripe: var(--bar-stripe);
+  --jump-line: var(--bar-line);
+  --j-top: oklch(from var(--ink) min(l, 0.18) c h);
+  --j-top-ink: var(--paper);
+  --j-top-line: var(--bar-stripe);
+  --j-search: oklch(from var(--map-tint, var(--bar-line)) clamp(0.28, l, 0.42) c h);
+  --j-search-ink: var(--paper);
+  --j-search-line: var(--j-search);
+  --j-money: oklch(from var(--map-on, var(--bar-stripe)) clamp(0.68, l, 0.80) c h);
+  --j-money-ink: var(--ink);
+  --j-money-line: var(--j-money);
+  --j-floor: oklch(from var(--bar-stripe) clamp(0.72, l, 0.86) c h);
+  --j-floor-ink: var(--ink);
+  --j-floor-line: var(--j-floor);
+  --j-intro: color-mix(in srgb, var(--bar-line, var(--chip)) 24%, var(--paper));
+  --j-intro-ink: var(--ink);
+  --j-intro-line: color-mix(in srgb, var(--bar-stripe) 46%, var(--paper));
+  --j-vote: color-mix(in srgb, var(--paper) 78%, var(--chip));
+  --j-vote-ink: var(--ink);
+  --j-vote-line: color-mix(in srgb, var(--bar-stripe) 36%, var(--paper));
+  --j-yes: oklch(from var(--bar) clamp(0.28, l, 0.46) c h);
+  --j-no: oklch(from var(--bar-stripe) clamp(0.32, l, 0.50) c h);
+  --j-slip: oklch(from var(--bar-line, var(--map-tint)) clamp(0.32, l, 0.46) c h);
+  --j-slip-ink: var(--paper);
+  --j-slip-line: var(--j-slip);
+  --j-people: color-mix(in srgb, var(--bar-stripe) 30%, var(--paper));
+  --j-people-ink: var(--ink);
+  --j-people-line: color-mix(in srgb, var(--bar-stripe) 52%, var(--paper));
+}
+html[data-theme="dark"] body,
+html.theme-mix-dark:not([data-theme]) body {
+  --tone-yes: color-mix(in srgb, #8dcea8 78%, var(--ink));
+  --tone-no: color-mix(in srgb, #e7a3a3 78%, var(--ink));
+  --tone-when: color-mix(in srgb, #cbbdf5 72%, var(--ink));
+  --tone-bill: color-mix(in srgb, #9ec8ea 74%, var(--ink));
+  --tone-about: color-mix(in srgb, #8fd0c8 72%, var(--ink));
+  --tone-who: color-mix(in srgb, #e0b4e4 72%, var(--ink));
+  --tone-money: color-mix(in srgb, #e2b56a 74%, var(--ink));
+  --tone-result: color-mix(in srgb, #e6c85a 70%, var(--ink));
+  --tone-present: color-mix(in srgb, #b7c0ea 72%, var(--ink));
+  --tone-absent: var(--muted);
+  --tone-seat: color-mix(in srgb, #cbbdf5 72%, var(--ink));
+  --tone-phone: color-mix(in srgb, #8fd0c8 74%, var(--ink));
+  --tone-room: color-mix(in srgb, #e2b56a 74%, var(--ink));
+  --tone-gov: color-mix(in srgb, #9ec8ea 74%, var(--ink));
+  --tone-camp: color-mix(in srgb, #e0b4e4 72%, var(--ink));
+  --tone-social: color-mix(in srgb, #e7a3b8 74%, var(--ink));
+  --tone-pass: #8dcea8;
+  --tone-fail: #e7a3a3;
+  --tone-open: #e6c85a;
+  --tone-intro: #d4c09a;
+  --tone-yes-soft: color-mix(in srgb, #8dcea8 28%, var(--chip));
+  --tone-no-soft: color-mix(in srgb, #e7a3a3 28%, var(--chip));
+  --tone-party-d: color-mix(in srgb, #9ec0e8 72%, var(--ink));
+  --tone-party-r: color-mix(in srgb, #e7a3a3 72%, var(--ink));
+  --tone-party-i: color-mix(in srgb, #9dcaa8 72%, var(--ink));
+  --tone-party-o: color-mix(in srgb, #d4c09a 72%, var(--ink));
+  --jump: color-mix(in srgb, var(--bar) 62%, #100e0c);
+  --jump-stripe: var(--bar-stripe);
+  --jump-line: var(--bar-line);
+  --j-top: #100e0c; --j-top-ink: #f4f0e6; --j-top-line: #f4f0e6;
+  --j-search: #0c4f56; --j-search-ink: #d7f4f6; --j-search-line: #3aabb4;
+  --j-money: #6b4a22; --j-money-ink: #f6e2c4; --j-money-line: #c4924a;
+  --j-floor: #7a5e10; --j-floor-ink: #ffe9a8; --j-floor-line: #e6b422;
+  --j-intro: #1a3348; --j-intro-ink: #d6e6f4; --j-intro-line: #7eb0d4;
+  --j-vote: #1c1915; --j-vote-ink: #f3efe6; --j-vote-line: #3c362e; --j-yes: #3d9a62; --j-no: #e07a90;
+  --j-slip: #0a4f78; --j-slip-ink: #d6ecf8; --j-slip-line: #3aa0d8;
+  --j-people: #3a3228; --j-people-ink: #f3efe6; --j-people-line: #d9c8b4;
+}
+html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
+    --tone-yes: oklch(from var(--bar-stripe) max(l, 0.84) c h);
+  --tone-no: oklch(from var(--map-on, var(--bar-stripe)) max(l, 0.84) c h);
+  --tone-when: oklch(from var(--map-tint, var(--bar-line)) max(l, 0.84) c h);
+  --tone-bill: oklch(from var(--bar-line, var(--map-tint)) max(l, 0.84) c h);
+  --tone-about: oklch(from var(--bar-hover, var(--map-tint)) max(l, 0.84) c h);
+  --tone-who: oklch(from var(--bar-stripe) max(l, 0.84) c h);
+  --tone-money: oklch(from var(--map-on, var(--bar-stripe)) max(l, 0.84) c h);
+  --tone-result: oklch(from var(--bar-line, var(--bar-stripe)) max(l, 0.84) c h);
+  --tone-present: oklch(from var(--map-tint, var(--bar-line)) max(l, 0.84) c h);
+  --tone-absent: var(--muted);
+  --tone-seat: oklch(from var(--map-tint, var(--bar-line)) max(l, 0.84) c h);
+  --tone-phone: oklch(from var(--bar-hover, var(--map-tint)) max(l, 0.84) c h);
+  --tone-room: oklch(from var(--map-on, var(--bar-stripe)) max(l, 0.84) c h);
+  --tone-gov: oklch(from var(--bar-line, var(--map-tint)) max(l, 0.84) c h);
+  --tone-camp: oklch(from var(--bar-stripe) max(l, 0.84) c h);
+  --tone-social: oklch(from var(--map-tint, var(--bar-stripe)) max(l, 0.84) c h);
+  --tone-pass: oklch(from var(--bar-stripe) max(l, 0.70) c h);
+  --tone-fail: oklch(from var(--map-on, var(--bar-stripe)) max(l, 0.72) c h);
+  --tone-open: oklch(from var(--bar-line, var(--map-on)) max(l, 0.74) c h);
+  --tone-intro: oklch(from var(--map-tint, var(--bar-stripe)) max(l, 0.68) c h);
+  --tone-yes-soft: color-mix(in srgb, var(--tone-pass) 28%, var(--chip));
+  --tone-no-soft: color-mix(in srgb, var(--tone-fail) 28%, var(--chip));
+  --tone-party-d: color-mix(in srgb, #9ec0e8 72%, var(--ink));
+  --tone-party-r: color-mix(in srgb, #e7a3a3 72%, var(--ink));
+  --tone-party-i: color-mix(in srgb, #9dcaa8 72%, var(--ink));
+  --tone-party-o: color-mix(in srgb, #d4c09a 72%, var(--ink));
+  --jump: var(--bar);
+  --jump-stripe: var(--bar-stripe);
+  --jump-line: var(--bar-line);
+  --j-top: oklch(from var(--paper) min(l, 0.16) c h);
+  --j-top-ink: var(--ink);
+  --j-top-line: var(--bar-stripe);
+  --j-search: oklch(from var(--map-tint, var(--bar-line)) clamp(0.38, l, 0.52) c h);
+  --j-search-ink: var(--ink);
+  --j-search-line: var(--j-search);
+  --j-money: oklch(from var(--map-on, var(--bar-stripe)) clamp(0.62, l, 0.78) c h);
+  --j-money-ink: var(--paper);
+  --j-money-line: var(--j-money);
+  --j-floor: oklch(from var(--bar-stripe) clamp(0.74, l, 0.88) c h);
+  --j-floor-ink: var(--paper);
+  --j-floor-line: var(--j-floor);
+  --j-intro: color-mix(in srgb, var(--bar-line, var(--map-tint)) 34%, var(--ink));
+  --j-intro-ink: var(--paper);
+  --j-intro-line: color-mix(in srgb, var(--bar-stripe) 55%, var(--ink));
+  --j-vote: color-mix(in srgb, var(--ink) 86%, var(--paper));
+  --j-vote-ink: var(--paper);
+  --j-vote-line: color-mix(in srgb, var(--bar-stripe) 40%, var(--ink));
+  --j-yes: oklch(from var(--bar-line, var(--map-tint)) clamp(0.55, l, 0.72) c h);
+  --j-no: oklch(from var(--map-on, var(--bar-stripe)) clamp(0.55, l, 0.72) c h);
+  --j-slip: oklch(from var(--map-tint, var(--bar-line)) clamp(0.34, l, 0.46) c h);
+  --j-slip-ink: var(--ink);
+  --j-slip-line: var(--j-slip);
+  --j-people: color-mix(in srgb, var(--bar-stripe) 28%, var(--ink));
+  --j-people-ink: var(--paper);
+  --j-people-line: color-mix(in srgb, var(--bar-stripe) 48%, var(--ink));
+}
 @media (max-width: 800px) {
   body { padding-bottom: 168px; }
   .party-line { grid-template-columns: 1fr; gap: 4px; }
@@ -457,6 +687,7 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #congress-map path.is-on { s
 </nav>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js?v=3"></script>
-<script src="congress.js?v=51"></script>
+<script src="logos.js?v=1"></script>
+<script src="congress.js?v=55"></script>
 </body>
 </html>

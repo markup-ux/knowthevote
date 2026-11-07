@@ -134,7 +134,8 @@
   }
 
   function darkNow() {
-    return /dark$/.test(document.documentElement.getAttribute("data-theme") || "");
+    var root = document.documentElement;
+    return /dark$/.test(root.getAttribute("data-theme") || "") || root.classList.contains("theme-mix-dark");
   }
 
   function hueOf(hex) {
@@ -174,27 +175,29 @@
 
   function paintPerson(who, messages, name) {
     var tone = voice(name);
-    var dark = darkNow();
     var accent = tone[0];
-    var wash = tone[1];
-    var ink = "#1c1915";
-    if (dark) {
+    if (darkNow()) {
       var hue = hueOf(tone[0]);
       accent = fromHue(hue[0], Math.max(hue[1], 0.42), 0.74);
-      wash = fromHue(hue[0], Math.min(Math.max(hue[1], 0.38), 0.62), 0.2);
-      ink = "#f3efe6";
     }
+    var cluster = who.parentElement;
+    if (cluster) cluster.style.setProperty("--voice", accent);
     var button = who.querySelector(".name");
     if (button) button.style.color = accent;
     else who.style.color = accent;
-    var title = who.parentElement && who.parentElement.querySelector(".card-name");
+    var title = cluster && cluster.querySelector(".card-name");
     if (title) title.style.color = accent;
+    var card = cluster && cluster.querySelector(".card");
+    if (card) {
+      card.style.background = "";
+      card.style.boxShadow = "";
+    }
     messages.forEach(function (message) {
-      message.style.background = wash;
-      message.style.color = ink;
-      message.style.boxShadow = "inset 4px 0 0 " + accent;
+      message.style.background = "";
+      message.style.color = "";
+      message.style.boxShadow = "";
       var link = message.querySelector(".net");
-      if (link) link.style.color = accent;
+      if (link) link.style.color = "";
     });
   }
 
@@ -210,7 +213,7 @@
 
   new MutationObserver(repaintVoices).observe(document.documentElement, {
     attributes: true,
-    attributeFilter: ["data-theme"]
+    attributeFilter: ["data-theme", "class"]
   });
   function messageId(value) {
     var n = 0;
@@ -352,7 +355,7 @@
       var number = Number(counts[item[0]]);
       if (!isFinite(number) || number < 0) return;
       var shown = Math.round(number).toLocaleString("en-US");
-      var stat = el("span", "stat");
+      var stat = el("span", "stat stat-" + item[0]);
       stat.setAttribute("title", shown + " " + (number === 1 ? item[1] : item[2]));
       stat.setAttribute("aria-label", shown + " " + (number === 1 ? item[1] : item[2]));
       stat.appendChild(statIcon(item[0]));
@@ -438,7 +441,15 @@
       return n + suffix;
     }
 
-    function seatText(item, contact) {
+    function partyTone(label) {
+      var word = (label || "").toLowerCase();
+      if (word.indexOf("democrat") === 0) return "d";
+      if (word.indexOf("republican") === 0) return "r";
+      if (word.indexOf("independent") === 0 || word.indexOf("libertarian") === 0) return "i";
+      return "o";
+    }
+
+    function placeText(item, contact) {
       var state = item.stateName || "";
       var seat = "";
       if (contact.chamber === "senate") seat = state ? "Senator, " + state : "Senator";
@@ -446,7 +457,7 @@
         var district = contact.district === 0 ? "At large" : ordinal(contact.district) + " District";
         seat = state ? state + ", " + district : district;
       } else if (item.office) seat = item.office;
-      return [item.party || "", seat, contact.leadership || ""].filter(Boolean).join(" · ");
+      return [seat, contact.leadership || ""].filter(Boolean).join(" · ");
     }
 
     function cardFace(name, photo, bioguide) {
@@ -471,52 +482,58 @@
     }
 
     function infoCard(item) {
-      var card = el("div", "card");
-      card.hidden = true;
       var contact = contacts[item.ident] || {};
+      var card = el("div", "card card-" + partyTone(item.party));
+      card.hidden = true;
       card.appendChild(cardFace(item.name, item.photo, contact.id));
       var copy = el("div", "card-copy");
       copy.appendChild(el("h3", "card-name", item.name));
-      var seat = seatText(item, contact);
-      if (seat) copy.appendChild(el("p", "", seat));
+      var place = placeText(item, contact);
+      if (item.party || place) {
+        var seat = el("p", "card-seat");
+        if (item.party) seat.appendChild(el("span", "card-party", item.party));
+        if (place) seat.appendChild(document.createTextNode(place));
+        copy.appendChild(seat);
+      }
       var wrote = false;
-      function addLine(node) {
-        var row = el("p", "");
+      function addLine(className, node) {
+        var row = el("p", className);
         row.appendChild(node);
         copy.appendChild(row);
         wrote = true;
       }
-      if (contact.phone) {
-        var phone = document.createDocumentFragment();
-        phone.appendChild(document.createTextNode("Phone "));
-        var tel = el("a", "", contact.phone);
-        tel.href = "tel:" + contact.phone.replace(/[^\d+]/g, "");
-        phone.appendChild(tel);
-        addLine(phone);
+      function marked(href, markName, label, aria) {
+        var anchor = el("a", "");
+        anchor.href = href;
+        if (window.leadersMark) anchor.appendChild(leadersMark(markName));
+        if (label) anchor.appendChild(el("span", "mark-label", label));
+        if (aria) anchor.setAttribute("aria-label", aria);
+        return anchor;
       }
-      if (contact.room) addLine(document.createTextNode(contact.room));
+      if (contact.phone) {
+        addLine("card-phone", marked("tel:" + contact.phone.replace(/[^\d+]/g, ""), "phone", contact.phone, "Phone " + contact.phone));
+      }
+      if (contact.room) {
+        var room = document.createDocumentFragment();
+        if (window.leadersMark) room.appendChild(leadersMark("office"));
+        room.appendChild(el("span", "", contact.room));
+        addLine("card-room", room);
+      }
       var officeUrl = contact.url || "";
       var sites = document.createDocumentFragment();
       var siteCount = 0;
       if (officeUrl.indexOf("https://") === 0) {
-        var office = el("a", "", host(officeUrl));
-        office.href = officeUrl;
-        sites.appendChild(office);
+        sites.appendChild(marked(officeUrl, "gov", host(officeUrl), "Official website " + host(officeUrl)));
         siteCount += 1;
       }
       if (contact.form && contact.form.indexOf("https://") === 0) {
-        if (siteCount) sites.appendChild(document.createTextNode(" · "));
-        var form = el("a", "", "Contact form");
-        form.href = contact.form;
-        sites.appendChild(form);
+        sites.appendChild(marked(contact.form, "form", "", "Contact form"));
         siteCount += 1;
       }
-      if (siteCount) addLine(sites);
+      if (siteCount) addLine("card-gov", sites);
       var campaign = item.source || "";
       if (campaign.indexOf("https://") === 0 && campaign.replace(/\/$/, "") !== officeUrl.replace(/\/$/, "")) {
-        var site = el("a", "", host(campaign));
-        site.href = campaign;
-        addLine(site);
+        addLine("card-camp", marked(campaign, "campaign", host(campaign), "Campaign website " + host(campaign)));
       }
       var seenAccounts = {};
       (item.accounts || []).forEach(function (account) {
@@ -526,13 +543,10 @@
         if (seenAccounts[account.url]) return;
         seenAccounts[account.url] = true;
         var net = NET[account.net] || "Site";
-        var label = net;
-        if (handle && !(account.net === "youtube" && /^UC[\w-]{20,}$/.test(handle))) label += " · " + handle;
-        var link = el("a", "", label);
-        link.href = account.url;
-        addLine(link);
+        var showHandle = handle && !(account.net === "youtube" && /^UC[\w-]{20,}$/.test(handle));
+        addLine("card-social", marked(account.url, account.net, showHandle ? handle : "", net + (showHandle ? " " + handle : "")));
       });
-      if (!wrote && !contact.phone && !contact.room && !officeUrl) copy.appendChild(el("p", "", "No phone or website is on file for this name."));
+      if (!wrote && !contact.phone && !contact.room && !officeUrl) copy.appendChild(el("p", "card-note", "No phone or website is on file for this name."));
       card.appendChild(copy);
       return card;
     }
