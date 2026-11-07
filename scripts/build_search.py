@@ -117,6 +117,9 @@ class Index:
         # Chemical hashes are opened by water.js and health.js after the files load.
         if page == "chat.html" and re.fullmatch(r"c[0-9a-f]+", anchor):
             return True
+        # A president hash opens that person's contact card after the page loads.
+        if page == "house.html" and re.fullmatch(r"president-[A-Za-z0-9]+", anchor):
+            return True
         if page == "census.html" and (
             re.fullmatch(r"[A-Z]{2}(?:\.\d+)?", anchor)
             or re.fullmatch(r"chem-\d+-(?:mcl|tt|mrdl)", anchor)
@@ -588,7 +591,9 @@ def add_presidents(index):
         name = person.get("name") or ""
         line = person.get("line") or ""
         photo = person.get("photo") or (name[:1] or "?")
-        index.add(name, "President · The House", "house.html#presidents", 1, line, photo)
+        ident = person.get("id") or ""
+        href = "house.html#president-" + ident if ident else "house.html#presidents"
+        index.add(name, "President · The House", href, 1, line, photo)
 
 
 def add_chat(index):

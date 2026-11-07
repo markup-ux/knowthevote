@@ -1411,6 +1411,7 @@
     countEl.textContent = count;
     presidentHits.forEach(function (person) {
       list.appendChild(presidentRow(person));
+      if (person.id === openPresident) list.appendChild(presidentCard(person));
     });
     peopleShown.forEach(function (member) {
       var row = el("button", "person-row" + (member[0] === searchPerson ? " is-on" : ""));
@@ -1897,9 +1898,36 @@
     return img;
   }
 
+  function presidentByHash(hash) {
+    var token = hash || "";
+    if (token.indexOf("president-") === 0) token = token.slice("president-".length);
+    for (var i = 0; i < presidents.length; i++) {
+      if (presidents[i].id === token) return presidents[i];
+    }
+    return null;
+  }
+
+  function presidentsNamed(query) {
+    return presidents.filter(function (person) {
+      if (!passesParty([null, null, person.party])) return false;
+      return textMatches(person.name, query);
+    });
+  }
+
+  function showPresident(id, scroll) {
+    openPresident = id || "";
+    if (history.replaceState) history.replaceState(null, "", openPresident ? "#president-" + openPresident : "#presidents");
+    renderPresidents();
+    if (document.getElementById("search-results") && !document.getElementById("search-results").hidden) renderSearchPanel();
+    if (!scroll || !openPresident) return;
+    var card = document.querySelector("#search-list [data-president-card='" + openPresident + "']")
+      || document.querySelector("#president-list [data-president-card='" + openPresident + "']");
+    if (card) showPersonCard(card);
+  }
+
   function presidentCard(person) {
     var card = el("div", "person-card");
-    card.id = "president-card";
+    card.setAttribute("data-president-card", person.id);
     card.appendChild(presidentFace(person, true));
     var copy = el("div", "person-copy");
     var name = el("h3", "");
@@ -2806,9 +2834,14 @@
     if (hash.indexOf("i-") === 0 && introduced[hash.slice(2)]) selectedIntro = hash.slice(2);
     if (hash.indexOf("slip-") === 0 && slips.some(function (item) { return item.id === hash.slice(5); })) selectedSlip = hash.slice(5);
     if (hash.indexOf("p-") === 0 && memberById(hash.slice(2))) searchPerson = hash.slice(2);
+    var hashedPresident = presidentByHash(hash);
+    if (hashedPresident) openPresident = hashedPresident.id;
     renderStatus("");
     render();
-    if (searchPerson) {
+    if (openPresident) {
+      var presidentCardNode = document.querySelector("[data-president-card='" + openPresident + "']");
+      if (presidentCardNode) showPersonCard(presidentCardNode);
+    } else if (searchPerson) {
       var foundPerson = document.getElementById("search-results");
       if (foundPerson) foundPerson.scrollIntoView({ block: "start" });
     } else if (hash.indexOf("i-") === 0 && selectedIntro) {
@@ -2841,9 +2874,17 @@
       searchIntroLimit = 100;
       searchPeopleLimit = 80;
       queryCacheRaw = null;
+      var named = presidentsNamed(interpretedQuery());
+      if (named.length === 1) openPresident = named[0].id;
       renderMatches();
-      var section = document.getElementById("search-results");
-      if (appliedQuery && section && !section.hidden) section.scrollIntoView({ block: "nearest" });
+      var landed = openPresident && document.querySelector("#search-list [data-president-card='" + openPresident + "']");
+      if (landed) {
+        showPersonCard(landed);
+        if (history.replaceState) history.replaceState(null, "", "#president-" + openPresident);
+      } else {
+        var section = document.getElementById("search-results");
+        if (appliedQuery && section && !section.hidden) section.scrollIntoView({ block: "nearest" });
+      }
     });
     document.getElementById("congress-clear").addEventListener("click", clearSearch);
     document.getElementById("congress-clear-results").addEventListener("click", clearSearch);
@@ -2901,10 +2942,7 @@
       }
       var president = event.target.closest("button[data-president]");
       if (president) {
-        openPresident = president.getAttribute("data-president");
-        renderPresidents();
-        var section = document.getElementById("presidents");
-        if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+        showPresident(president.getAttribute("data-president"), true);
         return;
       }
       var person = event.target.closest("button[data-person]");
@@ -2965,8 +3003,7 @@
       var button = event.target.closest("button[data-president]");
       if (!button) return;
       var id = button.getAttribute("data-president");
-      openPresident = openPresident === id ? "" : id;
-      renderPresidents();
+      showPresident(openPresident === id ? "" : id, openPresident !== id);
     });
     document.getElementById("senate-list").addEventListener("click", function (event) {
       var button = event.target.closest("button[data-vote]");

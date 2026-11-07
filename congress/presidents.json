@@ -1,0 +1,116 @@
+{
+  "updated": "2026-11-07T16:39:51+00:00",
+  "asOf": "2026-11-07",
+  "sources": [
+    "https://unitedstates.github.io/congress-legislators/executive.json",
+    "https://query.wikidata.org/sparql"
+  ],
+  "people": [
+    {
+      "id": "g412733",
+      "bioguide": "",
+      "name": "Donald Trump",
+      "party": "R",
+      "current": true,
+      "numbers": [
+        45,
+        47
+      ],
+      "service": [
+        {
+          "number": 45,
+          "start": "2017-01-20",
+          "end": "2021-01-20"
+        },
+        {
+          "number": 47,
+          "start": "2025-01-20",
+          "end": "2029-01-20"
+        }
+      ],
+      "line": "45th President, from January 20, 2017 to January 20, 2021, and 47th President, in office since January 20, 2025.",
+      "url": "https://www.whitehouse.gov/",
+      "photo": "photos/presidents/donald-trump.jpg"
+    },
+    {
+      "id": "B000444",
+      "bioguide": "B000444",
+      "name": "Joe Biden",
+      "party": "D",
+      "current": false,
+      "numbers": [
+        46
+      ],
+      "service": [
+        {
+          "number": 46,
+          "start": "2021-01-20",
+          "end": "2025-01-20"
+        }
+      ],
+      "line": "46th President, from January 20, 2021 to January 20, 2025.",
+      "url": "",
+      "photo": "photos/presidents/joe-biden.jpg"
+    },
+    {
+      "id": "O000167",
+      "bioguide": "O000167",
+      "name": "Barack Obama",
+      "party": "D",
+      "current": false,
+      "numbers": [
+        44
+      ],
+      "service": [
+        {
+          "number": 44,
+          "start": "2009-01-20",
+          "end": "2017-01-20"
+        }
+      ],
+      "line": "44th President, from January 20, 2009 to January 20, 2017.",
+      "url": "",
+      "photo": "photos/presidents/barack-obama.jpg"
+    },
+    {
+      "id": "g412375",
+      "bioguide": "",
+      "name": "George W. Bush",
+      "party": "R",
+      "current": false,
+      "numbers": [
+        43
+      ],
+      "service": [
+        {
+          "number": 43,
+          "start": "2001-01-20",
+          "end": "2009-01-20"
+        }
+      ],
+      "line": "43rd President, from January 20, 2001 to January 20, 2009.",
+      "url": "",
+      "photo": "photos/presidents/george-w-bush.jpg"
+    },
+    {
+      "id": "g412374",
+      "bioguide": "",
+      "name": "Bill Clinton",
+      "party": "D",
+      "current": false,
+      "numbers": [
+        42
+      ],
+      "service": [
+        {
+          "number": 42,
+          "start": "1993-01-20",
+          "end": "2001-01-20"
+        }
+      ],
+      "line": "42nd President, from January 20, 1993 to January 20, 2001.",
+      "url": "",
+      "photo": "photos/presidents/bill-clinton.jpg"
+    }
+  ]
+}
