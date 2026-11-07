@@ -1,0 +1,36 @@
+name: Update homepage figures
+
+on:
+  schedule:
+    - cron: "25 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: life-figures
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Copy the latest published figures
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          python -m pip install xlrd==1.2.0
+          python scripts/update_life.py
+          git add -- life.json
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Update the homepage figures from the offices that publish them."
+            git push
+          fi

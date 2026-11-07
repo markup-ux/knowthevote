@@ -1,0 +1,46 @@
+name: Update census, crime, and Congress files
+
+on:
+  schedule:
+    - cron: "40 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: published-records
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the spreadsheet reader
+        run: python -m pip install openpyxl
+      - name: Copy the official files
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          set +e
+          python congress/build.py
+          python congress/senate_build.py
+          python congress/slips_build.py
+          python scripts/build_census.py
+          python scripts/build_crime.py
+          python scripts/build_arrests.py
+          python scripts/build_offenses.py
+          python scripts/build_search.py
+          set -e
+          git add -- life.json congress/votes.json congress/summaries.json congress/senate.json congress/slips.json census/us.json census/crime.json census/arrests.json census/offenses.json search.json
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Update Congress, census, and crime files from the offices that publish them."
+            git push
+          fi
