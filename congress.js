@@ -1622,7 +1622,7 @@
     }
     if (member[7]) {
       var room = el("p", "card-room");
-      if (window.leadersMark) room.appendChild(leadersMark("office"));
+      if (window.leadersMark) room.appendChild(leadersMark("office", member[7]));
       room.appendChild(el("span", "", member[7]));
       copy.appendChild(room);
     }

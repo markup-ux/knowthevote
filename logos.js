@@ -36,7 +36,7 @@
     ]);
   }
 
-  function office() {
+  function house() {
     var c = ["#c4844a", "#5c3a16", "#6a3478", "#6ec8f5", "#f7f4ee", "#9dcaa8", "#f0b4c2", "#1c1915", "#8d3232"];
     return mark([
       h("polygon", { points: "2,9 12,2.5 22,9", fill: c[1] }),
@@ -49,6 +49,32 @@
       h("rect", { x: "11.6", y: "1.2", width: "0.8", height: "3.2", fill: c[7] }),
       h("polygon", { points: "12.4,1.2 17,2.2 12.4,3.5", fill: c[8] })
     ]);
+  }
+
+  function office() {
+    var c = ["#d8c4a2", "#1e3f66", "#5eb7e8", "#f4f7fb", "#6aaa78", "#e0a15a", "#b5523a", "#e6b422", "#6b5344"];
+    return mark([
+      h("rect", { x: "2", y: "21.4", width: "20", height: "1.5", rx: "0.3", fill: c[8] }),
+      h("rect", { x: "6.4", y: "2.4", width: "11.2", height: "19.2", fill: c[0] }),
+      h("rect", { x: "5.5", y: "1.2", width: "13", height: "1.8", fill: c[1] }),
+      h("rect", { x: "7.6", y: "4", width: "2.5", height: "2.3", fill: c[2] }),
+      h("rect", { x: "10.75", y: "4", width: "2.5", height: "2.3", fill: c[3] }),
+      h("rect", { x: "13.9", y: "4", width: "2.5", height: "2.3", fill: c[4] }),
+      h("rect", { x: "7.6", y: "7.4", width: "2.5", height: "2.3", fill: c[5] }),
+      h("rect", { x: "10.75", y: "7.4", width: "2.5", height: "2.3", fill: c[2] }),
+      h("rect", { x: "13.9", y: "7.4", width: "2.5", height: "2.3", fill: c[3] }),
+      h("rect", { x: "7.6", y: "10.8", width: "2.5", height: "2.3", fill: c[4] }),
+      h("rect", { x: "10.75", y: "10.8", width: "2.5", height: "2.3", fill: c[5] }),
+      h("rect", { x: "13.9", y: "10.8", width: "2.5", height: "2.3", fill: c[2] }),
+      h("rect", { x: "7.6", y: "14.2", width: "2.5", height: "2.3", fill: c[3] }),
+      h("rect", { x: "13.9", y: "14.2", width: "2.5", height: "2.3", fill: c[4] }),
+      h("rect", { x: "9.3", y: "16.6", width: "5.4", height: "1", fill: c[7] }),
+      h("rect", { x: "10.1", y: "17.6", width: "3.8", height: "4", fill: c[6] })
+    ]);
+  }
+
+  function workplace(place) {
+    return /\b(office|building|bldg|suite|plaza|tower|center|centre|floor|capitol|headquarters|company|business|store|shop|bureau|agency|department|inc|llc|corp)\b|\bste\.?\b/i.test(place || "");
   }
 
   function gov() {
@@ -236,6 +262,7 @@
 
   var draw = {
     phone: phone,
+    house: house,
     office: office,
     gov: gov,
     campaign: campaign,
@@ -250,7 +277,8 @@
     site: site
   };
 
-  window.leadersMark = function (name) {
+  window.leadersMark = function (name, place) {
+    if ((name === "office" || name === "house") && place) name = workplace(place) ? "office" : "house";
     var fn = draw[name] || draw.site;
     return fn();
   };

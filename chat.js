@@ -515,7 +515,7 @@
       }
       if (contact.room) {
         var room = document.createDocumentFragment();
-        if (window.leadersMark) room.appendChild(leadersMark("office"));
+        if (window.leadersMark) room.appendChild(leadersMark("office", contact.room));
         room.appendChild(el("span", "", contact.room));
         addLine("card-room", room);
       }
