@@ -600,12 +600,9 @@
   revealHash();
   window.addEventListener("hashchange", revealHash);
 
-  var previewHost = location.hostname;
-  if (!previewHost || previewHost === "localhost" || previewHost === "127.0.0.1") {
-    var preview = document.createElement("script");
-    preview.src = "news/preview/note.js?v=26";
-    document.body.appendChild(preview);
-  }
+  var preview = document.createElement("script");
+  preview.src = "news/preview/note.js?v=27";
+  document.body.appendChild(preview);
 
   document.querySelectorAll(".who").forEach(function (button) {
     button.addEventListener("click", function () {
