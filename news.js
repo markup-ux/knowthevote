@@ -771,7 +771,7 @@
   window.addEventListener("hashchange", revealHash);
 
   var preview = document.createElement("script");
-  preview.src = "news/preview/note.js?v=38";
+  preview.src = "news/preview/note.js?v=39";
   preview.onload = function () {
     var card = document.getElementById("card-mark");
     if (card) markLinks(card);
