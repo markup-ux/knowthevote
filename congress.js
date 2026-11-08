@@ -972,21 +972,30 @@
     return "card-result";
   }
 
-  function appendCounts(node, vote) {
-    function bit(className, text) {
+  function countControl(className, text, side, button) {
+    var node = el(button && side ? "button" : "span", className + (side ? " count-jump" : ""), text);
+    if (!side) return node;
+    if (button) node.type = "button";
+    node.setAttribute("data-side", side);
+    node.title = side === "Y" ? "Show who voted yes" : side === "N" ? "Show who voted no" : "Show who did not vote";
+    return node;
+  }
+
+  function appendCounts(node, vote, button) {
+    function bit(className, text, side) {
       if (node.childNodes.length) node.appendChild(document.createTextNode(" · "));
-      node.appendChild(el("span", className, text));
+      node.appendChild(countControl(className, text, side, button));
     }
-    bit("card-yes", vote.yea + " yes");
-    bit("card-no", vote.nay + " no");
+    bit("card-yes", vote.yea + " yes", "Y");
+    bit("card-no", vote.nay + " no", "N");
     if (vote.present) bit("card-present", vote.present + " present");
-    if (vote.notVoting) bit("card-absent", vote.notVoting + " did not vote");
+    if (vote.notVoting) bit("card-absent", vote.notVoting + " did not vote", "X");
     bit(resultClass(vote.result), vote.result || "Result not recorded");
   }
 
-  function counts(vote) {
+  function counts(vote, button) {
     var line = el("p", "card-counts");
-    appendCounts(line, vote);
+    appendCounts(line, vote, button);
     return line;
   }
 
@@ -1683,7 +1692,7 @@
       box.appendChild(el("p", "sub", "FloorCast keeps the House floor for this day, including this roll call. The Clerk's channel lists a video when one was posted."));
     }
     box.appendChild(makeBar(vote.yea, vote.nay, vote.present, vote.notVoting));
-    box.appendChild(counts(vote));
+    box.appendChild(counts(vote, true));
     if (vote.majority === "D" || vote.majority === "R" || vote.majority === "I") {
       box.appendChild(el("p", "sub", "The Clerk recorded the House majority party as " + partyWord(vote.majority) + "."));
     }
@@ -1699,14 +1708,14 @@
       line.appendChild(el("span", partyClass(code), partyWord(code)));
       line.appendChild(makeBar(row[0], row[1], row[2], row[3]));
       var detail = document.createElement("span");
-      function addBit(className, text) {
+      function addBit(className, text, side) {
         if (detail.childNodes.length) detail.appendChild(document.createTextNode(" · "));
-        detail.appendChild(el("span", className, text));
+        detail.appendChild(countControl(className, text, side, true));
       }
-      addBit("card-yes", row[0] + " yes");
-      addBit("card-no", row[1] + " no");
+      addBit("card-yes", row[0] + " yes", "Y");
+      addBit("card-no", row[1] + " no", "N");
       if (row[2]) addBit("card-present", row[2] + " present");
-      if (row[3]) addBit("card-absent", row[3] + " did not vote");
+      if (row[3]) addBit("card-absent", row[3] + " did not vote", "X");
       line.appendChild(detail);
       box.appendChild(line);
     });
@@ -1743,7 +1752,9 @@
   }
 
   function appendWhoVoted(box, vote) {
-    box.appendChild(el("h3", "", "Who voted"));
+    var who = el("h3", "", "Who voted");
+    who.id = vote.chamber === "senate" ? "senate-who-voted" : "who-voted";
+    box.appendChild(who);
     var side = vote.chamber === "senate" ? senateSide : voteSide;
     var sideSwitch = el("div", "sheet-switch");
     sideSwitch.id = vote.chamber === "senate" ? "senate-side" : "vote-side";
@@ -2155,7 +2166,7 @@
     if (vote.source) links.appendChild(link(vote.source, "Voteview roll call"));
     box.appendChild(links);
     box.appendChild(makeBar(vote.yea, vote.nay, vote.present, vote.notVoting));
-    box.appendChild(counts(vote));
+    box.appendChild(counts(vote, true));
     if (pinned) {
       var person = memberById(pinned);
       if (person) {
@@ -2697,6 +2708,35 @@
     codes.forEach(function (code) { select.appendChild(new Option(stateName(code), code)); });
   }
 
+  function scrollToNode(node) {
+    if (!node) return;
+    var header = document.querySelector("header");
+    var bar = header ? Math.max(0, header.getBoundingClientRect().bottom) : 0;
+    var top = node.getBoundingClientRect().top + window.scrollY - bar - 12;
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  }
+
+  function showVoteSide(chamber, id, side) {
+    var senate = chamber === "senate";
+    if (senate) senateSide = side;
+    else voteSide = side;
+    var same = senate ? id === selectedSenate : id === selected;
+    if (senate) {
+      if (same) renderSenateDetail();
+      else chooseSenate(id, false);
+    } else if (same) renderDetail();
+    else choose(id, false);
+    if (same && history.replaceState) history.replaceState(null, "", "#" + id);
+    scrollToNode(document.getElementById(senate ? "senate-who-voted" : "who-voted"));
+  }
+
+  function countedSide(event, button) {
+    var side = event.target.closest("[data-side]");
+    if (!side || !button.contains(side)) return false;
+    showVoteSide(button.getAttribute("data-chamber") === "senate" ? "senate" : "house", button.getAttribute("data-vote"), side.getAttribute("data-side"));
+    return true;
+  }
+
   function choose(id, scroll) {
     selected = id;
     if (history.replaceState) history.replaceState(null, "", "#" + id);
@@ -2981,6 +3021,7 @@
     document.getElementById("vote-list").addEventListener("click", function (event) {
       var button = event.target.closest("button[data-vote]");
       if (!button) return;
+      if (countedSide(event, button)) return;
       if (button.getAttribute("data-chamber") === "senate") chooseSenate(button.getAttribute("data-vote"), true);
       else choose(button.getAttribute("data-vote"), true);
     });
@@ -3019,6 +3060,7 @@
       }
       var button = event.target.closest("button[data-vote]");
       if (!button) return;
+      if (countedSide(event, button)) return;
       if (button.getAttribute("data-chamber") === "senate") chooseSenate(button.getAttribute("data-vote"), true);
       else choose(button.getAttribute("data-vote"), true);
     });
@@ -3059,7 +3101,20 @@
     });
     document.getElementById("senate-list").addEventListener("click", function (event) {
       var button = event.target.closest("button[data-vote]");
-      if (button) chooseSenate(button.getAttribute("data-vote"), true);
+      if (!button) return;
+      if (countedSide(event, button)) return;
+      chooseSenate(button.getAttribute("data-vote"), true);
+    });
+    document.getElementById("open-vote").addEventListener("click", function (event) {
+      var side = event.target.closest("[data-side]");
+      if (!side || !selected) return;
+      showVoteSide("house", selected, side.getAttribute("data-side"));
+    });
+    var openSenate = document.getElementById("open-senate");
+    if (openSenate) openSenate.addEventListener("click", function (event) {
+      var side = event.target.closest("[data-side]");
+      if (!side || !selectedSenate) return;
+      showVoteSide("senate", selectedSenate, side.getAttribute("data-side"));
     });
     document.body.addEventListener("click", function (event) {
       var button = event.target.closest("button[data-person]");
