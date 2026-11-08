@@ -9,7 +9,7 @@
     document.head.appendChild(searchTag);
     if (!document.querySelector("script[data-site-visits]")) {
       var visitTag = document.createElement("script");
-      visitTag.src = searchBase + "visit.js?v=1";
+      visitTag.src = searchBase + "visit.js?v=2";
       visitTag.async = true;
       visitTag.setAttribute("data-site-visits", "1");
       document.head.appendChild(visitTag);

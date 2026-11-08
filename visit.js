@@ -9,6 +9,10 @@
     ["census", "Census"],
     ["search", "Search"],
     ["world", "Other countries"],
+    ["news", "News"],
+    ["chat", "Group Chat"],
+    ["play", "Trivia"],
+    ["gallery", "Gallery"],
     ["other", "Other pages"]
   ];
 
@@ -50,6 +54,10 @@
     if (path === "/census" || path.indexOf("/census/") === 0 || path.indexOf("/social/census") === 0) return "census";
     if (path === "/search") return "search";
     if (path === "/countries" || path.indexOf("/countries/") === 0) return "world";
+    if (path === "/news" || path.indexOf("/news/") === 0 || path.indexOf("/social/news") === 0) return "news";
+    if (path === "/chat" || path.indexOf("/chat/") === 0 || path.indexOf("/social/chat") === 0) return "chat";
+    if (path === "/play" || path.indexOf("/play/") === 0) return "play";
+    if (path === "/gallery" || path.indexOf("/gallery/") === 0) return "gallery";
     bits = path.split("/");
     if (bits.length > 2 && /^[a-z]{2}$/.test(bits[1])) return "world";
     return "other";
