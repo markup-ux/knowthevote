@@ -264,6 +264,8 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 .card[data-color] { --desk: var(--bar-stripe); --on: var(--bar-hover-ink); }
 .card[hidden] { display: none; }
 .contacts .card { scroll-margin-top: 110px; }
+.contacts .src a.with-mark { display: inline-flex; align-items: center; gap: 6px; }
+.contacts .src .mark { width: 28px; height: 28px; flex: none; }
 .card > img {
   width: 100%;
   height: auto;
