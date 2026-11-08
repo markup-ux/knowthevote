@@ -35,7 +35,7 @@
     "  display: flex; align-items: center; gap: 10px; margin: 0 0 18px; border: 0; padding: 0;",
     "  font-size: 15px;",
     "}",
-    "#note .essay .byline-face { display: inline-flex; align-items: center; gap: 8px; color: var(--name-orange); font-weight: 700; text-decoration: none; }",
+    "#note .essay .byline-face { display: inline-flex; align-items: center; gap: 8px; color: var(--name-orange); font-weight: 700; text-decoration: none; background: none; border: 0; padding: 0; font: inherit; cursor: pointer; text-align: left; }",
     "#note .essay .byline-face:hover, #note .essay .byline-face:focus-visible { text-decoration: underline; text-underline-offset: 3px; }",
     "#note .essay .byline-face img { width: 36px; height: 36px; border-radius: 0; object-fit: cover; object-position: center 18%; box-shadow: 0 0 0 1px var(--c-orange); }",
     "#note .essay .role { color: var(--plate-mute); }",
@@ -68,6 +68,7 @@
     "  margin: 1.4em 0 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;",
     "}",
     "#note .essay .card { margin: 0 0 8px; align-self: stretch; }",
+    "#note .essay .byline-card { margin: 0 0 18px; }",
     "#note .essay h4 {",
     "  margin: 1.8em 0 0.45em; padding-top: 0.85em; border-top: 1px solid var(--plate-edge);",
     "  font-size: 24px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2;",
@@ -133,7 +134,7 @@
     '</div>',
     '<h3 class="essay-title">Are We Being Taught to Hate Colors We Can No Longer Process?</h3>',
     '<p class="standfirst">The Rainbow Flag, Color Conceptualization, Rhythm Entrainment, and the Possibility of Learned Visual Aversion</p>',
-    '<p class="letter-by"><a class="byline-face" href="#card-mark"><img src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">Mark Ryan Wilson</a> <span class="role">Publisher, Chicago</span></p>',
+    '<p class="letter-by"><button type="button" class="byline-face" aria-expanded="false"><img src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">Mark Ryan Wilson</button> <span class="role">Publisher, Chicago</span></p>',
     '<figure class="essay-fig">',
     '<img src="news/preview/rainbow-flag-bertron.jpg" alt="A six-stripe rainbow flag, red, orange, yellow, green, blue, and violet, rippling on a pole against a blue sky.">',
     '<figcaption>Photograph by <a href="https://commons.wikimedia.org/wiki/File:Rainbow_flag_and_blue_skies.jpg" target="_blank" rel="noopener noreferrer">Ludovic Bertron</a>, October 5, 2008. Six-stripe rainbow flag in the wind. Shown as published, with no changes. <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>. <a href="https://commons.wikimedia.org/wiki/File:Rainbow_flag_and_blue_skies.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>',
@@ -274,7 +275,7 @@
     '</div>',
     '<h3 class="essay-title">Rhythm as a Superpower</h3>',
     '<p class="standfirst">What if an advantage in multiplayer combat begins with something we usually associate with a dance floor?</p>',
-    '<p class="letter-by"><a class="byline-face" href="#card-mark"><img src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">Mark Ryan Wilson</a> <span class="role">Publisher, Chicago · Sigma Xi</span></p>',
+    '<p class="letter-by"><button type="button" class="byline-face" aria-expanded="false"><img src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">Mark Ryan Wilson</button> <span class="role">Publisher, Chicago · Sigma Xi</span></p>',
     '<figure class="essay-fig">',
     '<img src="news/preview/dance-floor.jpg" alt="A crowded dance floor under crossing green laser lights, with a stage and screens behind the crowd.">',
     '<figcaption>Photograph by <a href="https://commons.wikimedia.org/wiki/File:Club_Tigerheat_on_the_Dance_Floor_with_Laser_Lights.jpg" target="_blank" rel="noopener noreferrer">Lanisha Cole</a>, June 27, 2019. The dance floor at Club Tigerheat in Hollywood. Shown as published, with no changes. <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. <a href="https://commons.wikimedia.org/wiki/File:Club_Tigerheat_on_the_Dance_Floor_with_Laser_Lights.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>',
@@ -317,7 +318,7 @@
     '</div>',
     '<h3 class="essay-title">Melanin: Devalued in People, Studied for Protection in Space</h3>',
     '<p class="standfirst">The pigmentation people ridicule is part of a family of materials researchers are testing as shielding.</p>',
-    '<p class="letter-by"><a class="byline-face" href="#card-mark"><img src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">Mark Ryan Wilson</a> <span class="role">Publisher, Chicago · Sigma Xi</span></p>',
+    '<p class="letter-by"><button type="button" class="byline-face" aria-expanded="false"><img src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">Mark Ryan Wilson</button> <span class="role">Publisher, Chicago · Sigma Xi</span></p>',
     '<figure class="essay-fig">',
     '<img src="news/preview/iss.jpg" alt="The International Space Station, with long solar arrays, above the curve of the Earth.">',
     '<figcaption>Photograph by the crew of STS-132, May 23, 2010. The International Space Station after Space Shuttle Atlantis undocked. Shown as published, with no changes. Public domain, NASA. <a href="https://commons.wikimedia.org/wiki/File:International_Space_Station_after_undocking_of_STS-132.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>',
@@ -368,7 +369,7 @@
     '</div>',
     '<h3 class="essay-title">Two books</h3>',
     '<p class="standfirst">The Grind Was Never the Game, and The Pattern Tribe. Both are his, and both are independently published.</p>',
-    '<p class="letter-by"><a class="byline-face" href="#card-mark"><img src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">Mark Ryan Wilson</a> <span class="role">Publisher, Chicago · Sigma Xi</span></p>',
+    '<p class="letter-by"><button type="button" class="byline-face" aria-expanded="false"><img src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">Mark Ryan Wilson</button> <span class="role">Publisher, Chicago · Sigma Xi</span></p>',
     '<figure class="cover-pair">',
     '<div class="covers">',
     '<img src="news/preview/grind-cover.jpg" alt="The published cover of The Grind Was Never the Game.">',
@@ -402,7 +403,7 @@
     '</div>',
     '<h3 class="essay-title">Video Games and Human Genetic Recycling</h3>',
     '<p class="standfirst">Advanced graphics may be asking some players to keep a rhythm their vision cannot hold.</p>',
-    '<p class="letter-by"><a class="byline-face" href="#card-mark"><img src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">Mark Ryan Wilson</a> <span class="role">Publisher, Chicago · Sigma Xi</span></p>',
+    '<p class="letter-by"><button type="button" class="byline-face" aria-expanded="false"><img src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">Mark Ryan Wilson</button> <span class="role">Publisher, Chicago · Sigma Xi</span></p>',
     '<figure class="essay-fig">',
     '<img src="news/preview/arcade-cabinet.jpg?v=1" alt="An arcade cabinet for Marble Madness, with a bright green maze on its screen and a trackball on the panel.">',
     '<figcaption>Photograph by <a href="https://commons.wikimedia.org/wiki/File:Marble_Madness_arcade_cabinet.jpg" target="_blank" rel="noopener noreferrer">Halcyanide</a>, March 14, 2019. A Marble Madness cabinet at an arcade in Takadanobaba, Shinjuku, Tokyo. Shown in full. <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. <a href="https://commons.wikimedia.org/wiki/File:Marble_Madness_arcade_cabinet.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>',
@@ -440,5 +441,24 @@
     rest.addEventListener("toggle", function () {
       summary.firstChild.nodeValue = rest.open ? "Hide the rest" : "Read the rest";
     });
+  });
+  var writer = section.querySelector("#card-mark");
+  section.addEventListener("click", function (event) {
+    var face = event.target.closest(".byline-face");
+    if (!face || !section.contains(face) || !writer) return;
+    var row = face.closest(".letter-by");
+    if (!row) return;
+    var next = row.nextElementSibling;
+    var openHere = next && next.classList.contains("byline-card");
+    section.querySelectorAll(".byline-card").forEach(function (node) { node.remove(); });
+    section.querySelectorAll(".byline-face").forEach(function (other) {
+      other.setAttribute("aria-expanded", "false");
+    });
+    if (openHere) return;
+    var card = writer.cloneNode(true);
+    card.removeAttribute("id");
+    card.classList.add("byline-card");
+    row.after(card);
+    face.setAttribute("aria-expanded", "true");
   });
 })();
