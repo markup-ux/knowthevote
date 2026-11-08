@@ -1,0 +1,35 @@
+name: Update POCIT Weekly
+
+on:
+  schedule:
+    - cron: "15 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pocit-weekly
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Add pieces POCIT has published
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          python scripts/update_pocit.py
+          git add -- news/pocit.json
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Add POCIT pieces published since the last News update."
+            git push
+          fi

@@ -380,6 +380,79 @@
     return response.json();
   }).then(takeNew).catch(function () {});
 
+  function canonUrl(url) {
+    return String(url || "").split("?")[0].split("#")[0].replace(/\/+$/, "").toLowerCase();
+  }
+
+  function weeklyCard(post) {
+    var article = document.createElement("article");
+    article.className = "story";
+    article.setAttribute("data-source", "weekly");
+    article.setAttribute("data-color", post.color || "brown");
+    if (post.id) article.id = post.id;
+    var tag = document.createElement("p");
+    tag.className = "tag";
+    tag.textContent = "POCIT Weekly";
+    var title = document.createElement("h3");
+    title.textContent = post.title || "A POCIT piece.";
+    var when = document.createElement("p");
+    when.className = "when";
+    var time = document.createElement("time");
+    time.setAttribute("datetime", post.date || "");
+    time.textContent = post.dateLabel || post.date || "";
+    when.appendChild(time);
+    if (post.author) when.appendChild(document.createTextNode(" · " + post.author));
+    var body = document.createElement("p");
+    body.textContent = post.text || "";
+    var src = document.createElement("p");
+    src.className = "src";
+    var link = document.createElement("a");
+    link.href = post.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "Read it at POCIT";
+    src.appendChild(link);
+    article.appendChild(tag);
+    if (post.image) {
+      var figure = document.createElement("figure");
+      figure.className = "shot";
+      var img = document.createElement("img");
+      img.src = post.image;
+      img.alt = "";
+      figure.appendChild(img);
+      article.appendChild(figure);
+    }
+    article.appendChild(title);
+    article.appendChild(when);
+    article.appendChild(body);
+    article.appendChild(src);
+    return article;
+  }
+
+  function takeWeekly(data) {
+    var list = document.querySelector("#weekly .desk-list");
+    if (!list || !data || !data.posts) return;
+    var known = {};
+    list.querySelectorAll(".src a").forEach(function (link) {
+      known[canonUrl(link.getAttribute("href"))] = true;
+    });
+    var fresh = data.posts.filter(function (post) {
+      return post && post.url && !known[canonUrl(post.url)];
+    });
+    fresh.sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
+    fresh.forEach(function (post) {
+      list.insertBefore(weeklyCard(post), list.firstChild);
+    });
+    if (!fresh.length) return;
+    apply();
+    mountItemPick(document.getElementById("weekly"));
+  }
+
+  fetch("news/pocit.json", { cache: "no-store" }).then(function (response) {
+    if (!response.ok) return null;
+    return response.json();
+  }).then(takeWeekly).catch(function () {});
+
   function initials(name) {
     var parts = String(name).replace(/\./g, "").split(/\s+/).filter(Boolean);
     if (!parts.length) return "";
