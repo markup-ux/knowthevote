@@ -423,7 +423,10 @@
     info: "<rect x='3' y='3' width='26' height='26' rx='6' fill='var(--c-brown)'/><rect x='5' y='5' width='22' height='22' rx='5' fill='var(--c-yellow)'/><path d='M22 5 L27 10 L22 10 Z' fill='var(--c-orange)'/><rect x='8' y='8' width='5' height='2' fill='var(--c-purple)'/><circle cx='16' cy='11' r='2' fill='var(--c-red)'/><rect x='14.5' y='14' width='3' height='8' rx='1' fill='var(--c-blue)'/><rect x='11' y='23' width='10' height='2' fill='var(--c-green)'/><circle cx='24' cy='22' r='2' fill='var(--c-pink)'/>",
     linkedin: "<rect x='2' y='4' width='28' height='24' rx='2' fill='var(--c-brown)'/><rect x='4' y='6' width='24' height='20' fill='var(--c-blue)'/><circle cx='12' cy='14' r='4.2' fill='var(--c-yellow)'/><path d='M8.2 13.4 C9.2 9 14.8 9 15.8 13.4 Z' fill='var(--c-red)'/><rect x='8' y='19' width='8' height='5' rx='1' fill='var(--c-green)'/><rect x='18' y='10' width='8' height='2.2' fill='var(--c-orange)'/><rect x='18' y='14.2' width='6' height='2.2' fill='var(--c-purple)'/><rect x='18' y='18.4' width='7' height='2.2' fill='var(--c-pink)'/>",
     handle: "<rect x='2' y='2' width='28' height='28' rx='5' fill='var(--c-brown)'/><path d='M22 11 A 8 8 0 1 0 22 23' fill='none' stroke='var(--c-red)' stroke-width='3.2' stroke-linecap='round'/><path d='M22 8 V25' fill='none' stroke='var(--c-orange)' stroke-width='3.2' stroke-linecap='round'/><circle cx='14.5' cy='17' r='3.3' fill='none' stroke='var(--c-yellow)' stroke-width='2.5'/><circle cx='14.5' cy='17' r='1.45' fill='var(--c-blue)'/><circle cx='14.5' cy='9' r='2.15' fill='var(--c-green)'/><circle cx='6.6' cy='17' r='2.15' fill='var(--c-purple)'/><circle cx='14.5' cy='25' r='2.15' fill='var(--c-pink)'/>",
-    team: "<rect x='5' y='2' width='22' height='28' rx='1' fill='var(--c-brown)'/><rect x='7' y='4' width='18' height='24' fill='var(--c-yellow)'/><rect x='7' y='4' width='18' height='5' fill='var(--c-red)'/><circle cx='11' cy='14.5' r='2.1' fill='var(--c-blue)'/><circle cx='16' cy='14.5' r='2.1' fill='var(--c-green)'/><circle cx='21' cy='14.5' r='2.1' fill='var(--c-purple)'/><rect x='9.2' y='17.4' width='3.6' height='5' fill='var(--c-orange)'/><rect x='14.2' y='17.4' width='3.6' height='5' fill='var(--c-pink)'/><rect x='19.2' y='17.4' width='3.6' height='5' fill='var(--c-blue)'/>"
+    team: "<rect x='5' y='2' width='22' height='28' rx='1' fill='var(--c-brown)'/><rect x='7' y='4' width='18' height='24' fill='var(--c-yellow)'/><rect x='7' y='4' width='18' height='5' fill='var(--c-red)'/><circle cx='11' cy='14.5' r='2.1' fill='var(--c-blue)'/><circle cx='16' cy='14.5' r='2.1' fill='var(--c-green)'/><circle cx='21' cy='14.5' r='2.1' fill='var(--c-purple)'/><rect x='9.2' y='17.4' width='3.6' height='5' fill='var(--c-orange)'/><rect x='14.2' y='17.4' width='3.6' height='5' fill='var(--c-pink)'/><rect x='19.2' y='17.4' width='3.6' height='5' fill='var(--c-blue)'/>",
+    apple: "<rect x='2' y='2' width='28' height='28' rx='4' fill='var(--c-brown)'/><rect x='6' y='8' width='20' height='1.7' fill='var(--c-red)'/><rect x='6' y='12' width='20' height='1.7' fill='var(--c-orange)'/><rect x='6' y='16' width='20' height='1.7' fill='var(--c-yellow)'/><rect x='6' y='20' width='20' height='1.7' fill='var(--c-green)'/><rect x='6' y='24' width='20' height='1.7' fill='var(--c-blue)'/><ellipse cx='13' cy='22.2' rx='4.2' ry='2.8' fill='var(--c-purple)'/><rect x='16.4' y='7' width='2.3' height='15.2' fill='var(--c-pink)'/>",
+    amazon: "<rect x='2' y='3' width='28' height='26' rx='3' fill='var(--c-brown)'/><rect x='5' y='18' width='3' height='8' fill='var(--c-red)'/><rect x='9.2' y='13' width='3' height='13' fill='var(--c-orange)'/><rect x='13.4' y='8' width='3' height='18' fill='var(--c-yellow)'/><rect x='17.6' y='14' width='3' height='12' fill='var(--c-green)'/><rect x='21.8' y='11' width='3' height='15' fill='var(--c-blue)'/><circle cx='15' cy='6.2' r='2' fill='var(--c-purple)'/><circle cx='26.2' cy='8' r='1.8' fill='var(--c-pink)'/>",
+    deezer: "<rect x='2' y='2' width='28' height='28' rx='5' fill='var(--c-brown)'/><path d='M8 16 Q16 6 24 16' fill='none' stroke='var(--c-red)' stroke-width='2.6' stroke-linecap='round'/><rect x='6' y='14' width='6' height='9' rx='2' fill='var(--c-orange)'/><rect x='20' y='14' width='6' height='9' rx='2' fill='var(--c-green)'/><rect x='7.3' y='16' width='3.4' height='5' rx='1' fill='var(--c-yellow)'/><rect x='21.3' y='16' width='3.4' height='5' rx='1' fill='var(--c-blue)'/><rect x='14' y='12' width='4' height='3' rx='1' fill='var(--c-purple)'/><circle cx='16' cy='24.5' r='1.7' fill='var(--c-pink)'/>"
   };
 
   function markIcon(kind) {
@@ -612,15 +615,23 @@
     if (/linkedin\.com/i.test(href)) return "linkedin";
     if (/twitter\.com|x\.com/i.test(href)) return "handle";
     if (/\/team\/?($|\?)/i.test(href)) return "team";
+    if (/music\.apple\.com/i.test(href)) return "apple";
+    if (/music\.amazon\./i.test(href)) return "amazon";
+    if (/deezer\.com/i.test(href)) return "deezer";
     return "";
   }
 
-  document.querySelectorAll(".contacts .src a").forEach(function (link) {
-    var kind = contactKind(link);
-    if (!kind) return;
-    link.classList.add("with-mark");
-    link.insertBefore(markIcon(kind), link.firstChild);
-  });
+  function markLinks(root) {
+    root.querySelectorAll(".src a").forEach(function (link) {
+      if (link.querySelector(".mark")) return;
+      var kind = contactKind(link);
+      if (!kind) return;
+      link.classList.add("with-mark");
+      link.insertBefore(markIcon(kind), link.firstChild);
+    });
+  }
+
+  markLinks(document.querySelector(".contacts") || document);
 
   paintFrame();
   apply();
@@ -630,7 +641,11 @@
   window.addEventListener("hashchange", revealHash);
 
   var preview = document.createElement("script");
-  preview.src = "news/preview/note.js?v=29";
+  preview.src = "news/preview/note.js?v=30";
+  preview.onload = function () {
+    var card = document.getElementById("card-mark");
+    if (card) markLinks(card);
+  };
   document.body.appendChild(preview);
 
   document.querySelectorAll(".who").forEach(function (button) {
