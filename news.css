@@ -968,7 +968,13 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
 
 @media (max-width: 800px) {
   .story h3 { font-size: 22px; }
-  .card { grid-template-columns: 84px minmax(0, 1fr); }
+  .card { display: flow-root; }
+  .card > img,
+  .card > .mono {
+    float: left;
+    width: 84px;
+    margin: 0 14px 8px 0;
+  }
   .card.person .portrait,
   .card.person .portrait-letter,
   .card.person > img { width: 64px; height: 64px; }
