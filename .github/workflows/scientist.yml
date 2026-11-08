@@ -1,0 +1,35 @@
+name: Update American Scientist
+
+on:
+  schedule:
+    - cron: "45 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: american-scientist
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Add issues Sigma Xi has listed
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          python scripts/update_scientist.py
+          git add -- news/scientist.json
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Add American Scientist issues listed since the last News update."
+            git push
+          fi

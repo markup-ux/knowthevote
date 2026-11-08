@@ -243,26 +243,28 @@
       state.label = picked.textContent;
       chooseIssue(picked.value);
     });
-    var byLabel = {};
+    document.querySelectorAll("#journal .story").forEach(bindReadHere);
+  }
+
+  function bindReadHere(story) {
+    if (!issueSelect || !story || story.querySelector(".read-here")) return;
+    var heading = story.querySelector("h3");
+    if (!heading) return;
+    var key = heading.textContent.split(".")[0].trim();
+    var url = null;
     Array.prototype.forEach.call(issueSelect.options, function (opt) {
-      byLabel[opt.textContent] = opt.value;
+      if (opt.textContent === key) url = opt.value;
     });
-    document.querySelectorAll("#journal .story").forEach(function (story) {
-      var heading = story.querySelector("h3");
-      if (!heading) return;
-      var key = heading.textContent.split(".")[0].trim();
-      var url = byLabel[key];
-      if (!url || story.querySelector(".read-here")) return;
-      var host = story.querySelector(".actions, .src");
-      if (!host) return;
-      var button = document.createElement("button");
-      button.type = "button";
-      button.className = "read-here";
-      button.setAttribute("data-turn", "hash");
-      button.setAttribute("data-url", url);
-      button.textContent = "Read in the frame";
-      host.insertBefore(button, host.firstChild);
-    });
+    if (!url) return;
+    var host = story.querySelector(".actions, .src");
+    if (!host) return;
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "read-here";
+    button.setAttribute("data-turn", "hash");
+    button.setAttribute("data-url", url);
+    button.textContent = "Read in the frame";
+    host.insertBefore(button, host.firstChild);
   }
 
   prev.addEventListener("click", function () {
@@ -453,6 +455,84 @@
     return response.json();
   }).then(takeWeekly).catch(function () {});
 
+  function journalCard(issue) {
+    var article = document.createElement("article");
+    article.className = "story";
+    article.setAttribute("data-source", "journal");
+    article.setAttribute("data-color", issue.color || "brown");
+    if (issue.id) article.id = issue.id;
+    var tag = document.createElement("p");
+    tag.className = "tag";
+    tag.textContent = "American Scientist";
+    var title = document.createElement("h3");
+    title.textContent = (issue.label || "American Scientist") + ".";
+    var when = document.createElement("p");
+    when.className = "when";
+    if (issue.volume && issue.number) when.textContent = "Volume " + issue.volume + ", number " + issue.number;
+    var body = document.createElement("p");
+    body.textContent = issue.pieces || "Sigma Xi lists this issue on their site.";
+    var src = document.createElement("p");
+    src.className = "src";
+    var link = document.createElement("a");
+    link.href = issue.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "Open this issue";
+    src.appendChild(link);
+    article.appendChild(tag);
+    if (issue.image) {
+      var figure = document.createElement("figure");
+      figure.className = "shot";
+      var img = document.createElement("img");
+      img.src = issue.image;
+      img.alt = "American Scientist, " + (issue.label || "");
+      figure.appendChild(img);
+      article.appendChild(figure);
+    }
+    article.appendChild(title);
+    article.appendChild(when);
+    article.appendChild(body);
+    article.appendChild(src);
+    return article;
+  }
+
+  function takeJournal(data) {
+    var list = document.querySelector("#journal > .desk-list");
+    if (!list || !data || !data.issues) return;
+    var known = {};
+    document.querySelectorAll("#journal .story h3").forEach(function (heading) {
+      known[heading.textContent.split(".")[0].replace(/[–—]/g, "-").replace(/\s+/g, " ").trim().toLowerCase()] = true;
+    });
+    list.querySelectorAll(".src a, .actions a").forEach(function (link) {
+      known[canonUrl(link.getAttribute("href"))] = true;
+    });
+    var fresh = data.issues.filter(function (issue) {
+      if (!issue || !issue.url || !issue.label) return false;
+      var key = String(issue.label).replace(/[–—]/g, "-").replace(/\s+/g, " ").trim().toLowerCase();
+      return !known[key] && !known[canonUrl(issue.url)];
+    });
+    fresh.sort(function (a, b) {
+      return (a.year - b.year) || (a.number - b.number);
+    });
+    fresh.forEach(function (issue) {
+      var node = journalCard(issue);
+      list.insertBefore(node, list.firstChild);
+      bindReadHere(node);
+    });
+    if (!fresh.length) return;
+    var newest = fresh[fresh.length - 1];
+    list.querySelectorAll(".story.lead").forEach(function (story) { story.classList.remove("lead"); });
+    var lead = document.getElementById(newest.id);
+    if (lead) lead.classList.add("lead");
+    apply();
+    mountResearchers();
+  }
+
+  fetch("news/scientist.json", { cache: "no-store" }).then(function (response) {
+    if (!response.ok) return null;
+    return response.json();
+  }).then(takeJournal).catch(function () {});
+
   function initials(name) {
     var parts = String(name).replace(/\./g, "").split(/\s+/).filter(Boolean);
     if (!parts.length) return "";
@@ -599,6 +679,7 @@
     if (!data) return;
     var seq = 0;
     document.querySelectorAll("#journal .story").forEach(function (story) {
+      if (story.querySelector(".pieces")) return;
       var heading = story.querySelector("h3");
       if (!heading) return;
       var key = heading.textContent.split(".")[0].trim();
