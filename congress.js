@@ -2064,13 +2064,28 @@
 
   function senatorMore(member) {
     var more = el("div", "person-more");
+    var added = false;
+    if (member[6]) {
+      var phone = el("p", "card-phone");
+      phone.appendChild(markLink("tel:" + member[6].replace(/[^\d+]/g, ""), "phone", member[6], "Phone " + member[6]));
+      more.appendChild(phone);
+      added = true;
+    }
+    if (member[7]) {
+      var room = el("p", "card-room");
+      if (window.leadersMark) room.appendChild(leadersMark("office", member[7]));
+      room.appendChild(el("span", "", member[7]));
+      more.appendChild(room);
+      added = true;
+    }
     if (member[8] || member[9]) {
       var sites = el("p", "card-gov");
       if (member[8]) sites.appendChild(markLink(member[8], "gov", host(member[8]), "Official website " + host(member[8])));
       if (member[9]) sites.appendChild(markLink(member[9], "form", "Contact form", "Contact form"));
       more.appendChild(sites);
-    } else {
-      more.appendChild(el("p", "card-note", "No office website is in the member file for this name."));
+      added = true;
+    } else if (!added) {
+      more.appendChild(el("p", "card-note", "No office phone or website is in the member file for this name."));
     }
     return more;
   }
@@ -2110,8 +2125,6 @@
         if (member[11]) meta.push(member[11]);
         if (member[12]) meta.push("class " + member[12]);
         if (member[10]) meta.push(member[10]);
-        if (member[6]) meta.push(member[6]);
-        if (member[7]) meta.push(member[7]);
         copy.appendChild(el("p", "person-meta", meta.join(" · ")));
         row.appendChild(copy);
         shell.appendChild(row);
