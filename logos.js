@@ -51,7 +51,146 @@
     ]);
   }
 
-  function office() {
+  function colonnade(base, glass, column, cornice, door, post, walk, accent) {
+    return [
+      h("rect", { x: "1", y: "21.4", width: "22", height: "1.4", fill: walk }),
+      h("rect", { x: "1.6", y: "14", width: "20.8", height: "7.4", fill: base }),
+      h("rect", { x: "2.4", y: "6.6", width: "19.2", height: "7.6", fill: glass }),
+      h("rect", { x: "2.6", y: "6.4", width: "1.7", height: "7.8", fill: column }),
+      h("rect", { x: "5.6", y: "6.4", width: "1.7", height: "7.8", fill: column }),
+      h("rect", { x: "8.6", y: "6.4", width: "1.7", height: "7.8", fill: column }),
+      h("rect", { x: "13.7", y: "6.4", width: "1.7", height: "7.8", fill: column }),
+      h("rect", { x: "16.7", y: "6.4", width: "1.7", height: "7.8", fill: column }),
+      h("rect", { x: "19.7", y: "6.4", width: "1.7", height: "7.8", fill: column }),
+      h("rect", { x: "1.4", y: "4.8", width: "21.2", height: "1.8", fill: cornice }),
+      h("rect", { x: "2.8", y: "2.8", width: "1.15", height: "2", fill: post }),
+      h("rect", { x: "6.2", y: "2.8", width: "1.15", height: "2", fill: post }),
+      h("rect", { x: "9.6", y: "2.8", width: "1.15", height: "2", fill: accent }),
+      h("rect", { x: "13.2", y: "2.8", width: "1.15", height: "2", fill: post }),
+      h("rect", { x: "16.6", y: "2.8", width: "1.15", height: "2", fill: post }),
+      h("rect", { x: "20", y: "2.8", width: "1.15", height: "2", fill: accent }),
+      h("rect", { x: "3.4", y: "16", width: "2.1", height: "2.3", fill: glass }),
+      h("rect", { x: "18.5", y: "16", width: "2.1", height: "2.3", fill: accent }),
+      h("rect", { x: "10.4", y: "16.4", width: "3.2", height: "5", fill: door })
+    ];
+  }
+
+  function cannon() {
+    var c = ["#c4a574", "#f3efe4", "#5eb7e8", "#1e3f66", "#b5523a", "#f7f4ee", "#6b5344", "#e2b48a", "#8a6232"];
+    return mark(colonnade(c[0], c[2], c[1], c[3], c[4], c[5], c[6], c[7]).concat([
+      h("rect", { x: "1.6", y: "16.2", width: "8.6", height: "0.55", fill: c[8] }),
+      h("rect", { x: "13.8", y: "16.2", width: "8.6", height: "0.55", fill: c[8] }),
+      h("rect", { x: "1.6", y: "18.6", width: "8.6", height: "0.55", fill: c[8] }),
+      h("rect", { x: "13.8", y: "18.6", width: "8.6", height: "0.55", fill: c[8] })
+    ]));
+  }
+
+  function russell() {
+    var c = ["#b7c0c8", "#f7f4ee", "#9ec0e8", "#e6b422", "#8a6232", "#f3efe4", "#6b5344", "#5eb7e8", "#8e98a3"];
+    return mark(colonnade(c[0], c[2], c[1], c[3], c[4], c[5], c[6], c[7]).concat([
+      h("rect", { x: "0.4", y: "19.2", width: "23.2", height: "2.2", fill: c[8] }),
+      h("rect", { x: "1", y: "21.4", width: "22", height: "1.4", fill: c[6] }),
+      h("rect", { x: "10.4", y: "16.4", width: "3.2", height: "2.8", fill: c[4] })
+    ]));
+  }
+
+  function longworth() {
+    var c = ["#f3efe4", "#d7a194", "#5eb7e8", "#f7f4ee", "#e6b422", "#1e3f66", "#b5523a", "#6b5344", "#6aaa78"];
+    return mark([
+      h("rect", { x: "1", y: "21.4", width: "22", height: "1.4", fill: c[7] }),
+      h("rect", { x: "1.4", y: "16.6", width: "21.2", height: "4.8", fill: c[1] }),
+      h("rect", { x: "1.4", y: "8.2", width: "6.2", height: "8.4", fill: c[0] }),
+      h("rect", { x: "16.4", y: "8.2", width: "6.2", height: "8.4", fill: c[0] }),
+      h("rect", { x: "2.4", y: "9.6", width: "1.8", height: "2.4", fill: c[2] }),
+      h("rect", { x: "4.8", y: "9.6", width: "1.8", height: "2.4", fill: c[3] }),
+      h("rect", { x: "2.4", y: "13", width: "1.8", height: "2.4", fill: c[8] }),
+      h("rect", { x: "4.8", y: "13", width: "1.8", height: "2.4", fill: c[2] }),
+      h("rect", { x: "17.4", y: "9.6", width: "1.8", height: "2.4", fill: c[3] }),
+      h("rect", { x: "19.8", y: "9.6", width: "1.8", height: "2.4", fill: c[2] }),
+      h("rect", { x: "17.4", y: "13", width: "1.8", height: "2.4", fill: c[8] }),
+      h("rect", { x: "19.8", y: "13", width: "1.8", height: "2.4", fill: c[3] }),
+      h("rect", { x: "7.4", y: "8.4", width: "9.2", height: "8.2", fill: c[5] }),
+      h("polygon", { points: "7.2,8.4 12,3.2 16.8,8.4", fill: c[4] }),
+      h("polygon", { points: "9.2,8.4 12,5.2 14.8,8.4", fill: c[8] }),
+      h("rect", { x: "8.2", y: "8.4", width: "1.5", height: "8.2", fill: c[0] }),
+      h("rect", { x: "10.5", y: "8.4", width: "1.5", height: "8.2", fill: c[3] }),
+      h("rect", { x: "12", y: "8.4", width: "1.5", height: "8.2", fill: c[0] }),
+      h("rect", { x: "14.3", y: "8.4", width: "1.5", height: "8.2", fill: c[0] }),
+      h("rect", { x: "10.5", y: "16.8", width: "3", height: "4.6", fill: c[6] })
+    ]);
+  }
+
+  function rayburn() {
+    var c = ["#f7f4ee", "#d7a194", "#5eb7e8", "#1e3f66", "#e6b422", "#b5523a", "#6b5344", "#e2b48a", "#8a6232"];
+    return mark([
+      h("rect", { x: "0.6", y: "21.2", width: "22.8", height: "1.6", fill: c[6] }),
+      h("rect", { x: "0.6", y: "11.4", width: "22.8", height: "9.8", fill: c[0] }),
+      h("rect", { x: "0.6", y: "17.6", width: "22.8", height: "3.6", fill: c[1] }),
+      h("rect", { x: "1.4", y: "12.4", width: "4.2", height: "4.6", fill: c[2] }),
+      h("rect", { x: "18.4", y: "12.4", width: "4.2", height: "4.6", fill: c[3] }),
+      h("rect", { x: "0.6", y: "11.4", width: "22.8", height: "0.7", fill: c[4] }),
+      h("polygon", { points: "6.2,11.4 12,6.2 17.8,11.4", fill: c[4] }),
+      h("polygon", { points: "8.6,11.4 12,8 15.4,11.4", fill: c[8] }),
+      h("rect", { x: "7.4", y: "11.4", width: "1.5", height: "6.2", fill: c[0] }),
+      h("rect", { x: "9.6", y: "11.4", width: "1.5", height: "6.2", fill: c[0] }),
+      h("rect", { x: "12.9", y: "11.4", width: "1.5", height: "6.2", fill: c[0] }),
+      h("rect", { x: "15.1", y: "11.4", width: "1.5", height: "6.2", fill: c[0] }),
+      h("rect", { x: "6.2", y: "14.2", width: "1.8", height: "4.6", fill: c[7] }),
+      h("rect", { x: "16", y: "14.2", width: "1.8", height: "4.6", fill: c[8] }),
+      h("rect", { x: "10.2", y: "16.4", width: "3.6", height: "4.8", fill: c[5] })
+    ]);
+  }
+
+  function dirksen() {
+    var c = ["#f3efe4", "#5eb7e8", "#1e3f66", "#8a6232", "#e6b422", "#6aaa78", "#b5523a", "#6b5344", "#f7f4ee"];
+    return mark([
+      h("rect", { x: "1", y: "21.4", width: "22", height: "1.4", fill: c[7] }),
+      h("rect", { x: "1.4", y: "5.4", width: "2.4", height: "16", fill: c[0] }),
+      h("rect", { x: "3.8", y: "5.4", width: "1.7", height: "16", fill: c[1] }),
+      h("rect", { x: "5.5", y: "5.4", width: "2.2", height: "16", fill: c[0] }),
+      h("rect", { x: "7.7", y: "5.4", width: "1.6", height: "16", fill: c[2] }),
+      h("rect", { x: "14.7", y: "5.4", width: "1.6", height: "16", fill: c[2] }),
+      h("rect", { x: "16.3", y: "5.4", width: "2.2", height: "16", fill: c[0] }),
+      h("rect", { x: "18.5", y: "5.4", width: "1.7", height: "16", fill: c[1] }),
+      h("rect", { x: "20.2", y: "5.4", width: "2.4", height: "16", fill: c[0] }),
+      h("rect", { x: "9.3", y: "7.6", width: "5.4", height: "13.8", fill: c[8] }),
+      h("polygon", { points: "8.4,7.6 12,3.4 15.6,7.6", fill: c[4] }),
+      h("polygon", { points: "10,7.6 12,5.2 14,7.6", fill: c[2] }),
+      h("rect", { x: "2", y: "10.2", width: "1.2", height: "1.2", fill: c[3] }),
+      h("rect", { x: "6", y: "10.2", width: "1.2", height: "1.2", fill: c[5] }),
+      h("rect", { x: "16.8", y: "10.2", width: "1.2", height: "1.2", fill: c[3] }),
+      h("rect", { x: "20.8", y: "10.2", width: "1.2", height: "1.2", fill: c[5] }),
+      h("rect", { x: "10.6", y: "16.8", width: "2.8", height: "4.6", fill: c[6] })
+    ]);
+  }
+
+  function hart() {
+    var c = ["#f3efe4", "#1e3f66", "#5eb7e8", "#8a6232", "#e2b48a", "#b5523a", "#6b5344", "#f7f4ee", "#6aaa78"];
+    function bay(x, y, glass, frame) {
+      return [
+        h("rect", { x: x, y: y, width: "4.2", height: "3.4", fill: frame }),
+        h("rect", { x: x + 0.7, y: y + 0.55, width: "2.8", height: "2.3", fill: glass })
+      ];
+    }
+    return mark([].concat(
+      [h("rect", { x: "2.2", y: "21.2", width: "19.6", height: "1.6", fill: c[6] }),
+      h("rect", { x: "3.2", y: "1.4", width: "17.6", height: "19.8", fill: c[3] })],
+      bay(4.2, 2.2, c[1], c[0]),
+      bay(9.9, 2.2, c[2], c[7]),
+      bay(15.6, 2.2, c[1], c[0]),
+      bay(4.2, 6.2, c[2], c[4]),
+      bay(9.9, 6.2, c[1], c[0]),
+      bay(15.6, 6.2, c[2], c[7]),
+      bay(4.2, 10.2, c[1], c[0]),
+      bay(9.9, 10.2, c[8], c[4]),
+      bay(15.6, 10.2, c[1], c[0]),
+      bay(4.2, 14.2, c[2], c[7]),
+      bay(15.6, 14.2, c[2], c[0]),
+      [h("rect", { x: "10.2", y: "16.4", width: "3.6", height: "4.8", fill: c[5] })]
+    ));
+  }
+
+  function officeBlock() {
     var c = ["#d8c4a2", "#1e3f66", "#5eb7e8", "#f4f7fb", "#6aaa78", "#e0a15a", "#b5523a", "#e6b422", "#6b5344"];
     return mark([
       h("rect", { x: "2", y: "21.4", width: "20", height: "1.5", rx: "0.3", fill: c[8] }),
@@ -71,6 +210,18 @@
       h("rect", { x: "9.3", y: "16.6", width: "5.4", height: "1", fill: c[7] }),
       h("rect", { x: "10.1", y: "17.6", width: "3.8", height: "4", fill: c[6] })
     ]);
+  }
+
+  function office(place) {
+    var named = /rayburn|longworth|cannon|russell|dirksen|hart/i.exec(place || "");
+    if (!named) return officeBlock();
+    var key = named[0].toLowerCase();
+    if (key === "cannon") return cannon();
+    if (key === "longworth") return longworth();
+    if (key === "rayburn") return rayburn();
+    if (key === "russell") return russell();
+    if (key === "dirksen") return dirksen();
+    return hart();
   }
 
   function workplace(place) {
@@ -278,7 +429,7 @@
   };
 
   window.leadersMark = function (name, place) {
-    if ((name === "office" || name === "house") && place) name = workplace(place) ? "office" : "house";
+    if ((name === "office" || name === "house") && place) return workplace(place) ? office(place) : house();
     var fn = draw[name] || draw.site;
     return fn();
   };

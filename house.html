@@ -57,6 +57,14 @@ div.floor-row { cursor: default; }
 .portrait-letter { display: flex; align-items: center; justify-content: center; font-family: Georgia, "Palatino Linotype", serif; font-size: 22px; }
 .portrait-lg { width: 120px; height: 150px; }
 .portrait-letter.portrait-lg { font-size: 42px; }
+.pinned-card { overflow: hidden; transform-origin: top center; animation: card-expand 220ms ease-out; }
+@keyframes card-expand {
+  from { max-height: 0; opacity: 0; margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0; }
+  to { max-height: 720px; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pinned-card { animation: none; }
+}
 .person-card {
   --c-party: var(--tone-party-o, #5c4a2a);
   --c-seat: var(--tone-seat, #243e6b);
@@ -700,7 +708,7 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
 </nav>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js?v=5"></script>
-<script src="logos.js?v=3"></script>
-<script src="congress.js?v=57"></script>
+<script src="logos.js?v=4"></script>
+<script src="congress.js?v=59"></script>
 </body>
 </html>

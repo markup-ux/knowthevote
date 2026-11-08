@@ -45,6 +45,7 @@
   var memberIndex = {};
   var selected = "";
   var pinned = "";
+  var pinnedAt = "";
   var presidents = [];
   var openPresident = "";
   var party = "all";
@@ -1654,6 +1655,41 @@
     return { yea: yea, nay: nay, present: present, absent: absent, rows: rows };
   }
 
+  function closePinned() {
+    var where = pinnedAt;
+    pinned = "";
+    pinnedAt = "";
+    if (where === "senate") renderSenateDetail();
+    else if (where === "slip") renderSlipDetail();
+    else if (where === "senators") renderSenators();
+    else {
+      renderDetail();
+      renderSenators();
+    }
+  }
+
+  function memberContactCard(person, vote) {
+    var card = contactBlock(person);
+    card.classList.add("pinned-card");
+    var copy = card.querySelector(".person-copy");
+    if (vote) {
+      var code = readCast(vote, memberIndex[person[0]], person[0]);
+      copy.insertBefore(el("p", code === "Y" ? "card-yes" : code === "N" ? "card-no" : code === "P" ? "card-present" : "card-absent", "On this roll call: " + voteWord(code) + "."), copy.children[1] || null);
+    }
+    var clear = el("p", "");
+    var button = el("button", "linkish", "Close this member");
+    button.type = "button";
+    button.addEventListener("click", closePinned);
+    clear.appendChild(button);
+    copy.appendChild(clear);
+    if (vote && person[5] === "house") {
+      var record = memberRecord(person);
+      copy.appendChild(el("p", "", "In the roll calls shown for this year filter: " + record.yea + " yes, " + record.nay + " no, " + record.present + " present, " + record.absent + " did not vote."));
+      copy.appendChild(makeBar(record.yea, record.nay, record.present, record.absent));
+    }
+    return card;
+  }
+
   function renderDetail() {
     var box = document.getElementById("open-vote");
     if (mapSlot.parentNode) mapSlot.parentNode.removeChild(mapSlot);
@@ -1724,30 +1760,6 @@
     box.appendChild(el("p", "sub", "A green state cast more yes votes than no votes. A rose state cast more no votes. A darker color is a larger share of that state's yes and no votes. Plum is a tie. The land color means no yes or no was recorded there."));
     paintMap(vote);
 
-    if (pinned) {
-      var person = memberById(pinned);
-      if (person) {
-        var card = contactBlock(person);
-        card.classList.add("pinned-card");
-        var index = memberIndex[person[0]];
-        var code = readCast(vote, index, person[0]);
-        var copy = card.querySelector(".person-copy");
-        copy.insertBefore(el("p", code === "Y" ? "card-yes" : code === "N" ? "card-no" : code === "P" ? "card-present" : "card-absent", "On this roll call: " + voteWord(code) + "."), copy.children[1] || null);
-        var clear = el("p", "");
-        var button = el("button", "linkish", "Close this member");
-        button.type = "button";
-        button.addEventListener("click", function () { pinned = ""; renderDetail(); });
-        clear.appendChild(button);
-        copy.appendChild(clear);
-        if (person[5] === "house") {
-          var record = memberRecord(person);
-          copy.appendChild(el("p", "", "In the roll calls shown for this year filter: " + record.yea + " yes, " + record.nay + " no, " + record.present + " present, " + record.absent + " did not vote."));
-          copy.appendChild(makeBar(record.yea, record.nay, record.present, record.absent));
-        }
-        box.appendChild(card);
-      }
-    }
-
     appendWhoVoted(box, vote);
   }
 
@@ -1811,7 +1823,9 @@
         }
         return a.member[1].localeCompare(b.member[1]);
       }).forEach(function (entry) {
-        var row = el("button", "person-row " + partyClass(entry.member[2]) + (entry.member[0] === pinned ? " is-on" : ""));
+        var here = vote.chamber === "senate" ? "senate" : "vote";
+        var openHere = pinnedAt === here && entry.member[0] === pinned;
+        var row = el("button", "person-row " + partyClass(entry.member[2]) + (openHere ? " is-on" : ""));
         row.type = "button";
         row.setAttribute("data-person", entry.member[0]);
         row.appendChild(portrait(entry.member[0], entry.member[1], false));
@@ -1832,6 +1846,7 @@
         copy.appendChild(swatch);
         row.appendChild(copy);
         block.appendChild(row);
+        if (openHere) block.appendChild(memberContactCard(entry.member, vote));
       });
       box.appendChild(block);
     });
@@ -2059,7 +2074,8 @@
     Object.keys(groups).sort(function (a, b) { return stateName(a).localeCompare(stateName(b)); }).forEach(function (code) {
       list.appendChild(el("h3", "", stateName(code)));
       groups[code].sort(function (a, b) { return a[1].localeCompare(b[1]); }).forEach(function (member) {
-        var row = el("button", "person-row " + partyClass(member[2]) + (member[0] === pinned ? " is-on" : ""));
+        var openHere = pinnedAt === "senators" && member[0] === pinned;
+        var row = el("button", "person-row " + partyClass(member[2]) + (openHere ? " is-on" : ""));
         row.type = "button";
         row.setAttribute("data-person", member[0]);
         row.appendChild(portrait(member[0], member[1], false));
@@ -2074,6 +2090,7 @@
         copy.appendChild(el("p", "person-meta", meta.join(" · ")));
         row.appendChild(copy);
         list.appendChild(row);
+        if (openHere) list.appendChild(memberContactCard(member, null));
       });
     });
   }
@@ -2167,27 +2184,31 @@
     box.appendChild(links);
     box.appendChild(makeBar(vote.yea, vote.nay, vote.present, vote.notVoting));
     box.appendChild(counts(vote, true));
-    if (pinned) {
-      var person = memberById(pinned);
-      if (person) {
-        var card = contactBlock(person);
-        card.classList.add("pinned-card");
-        var code = readCast(vote, memberIndex[person[0]], person[0]);
-        var copy = card.querySelector(".person-copy");
-        copy.insertBefore(el("p", code === "Y" ? "card-yes" : code === "N" ? "card-no" : code === "P" ? "card-present" : "card-absent", "On this roll call: " + voteWord(code) + "."), copy.children[1] || null);
-        var clear = el("p", "");
-        var button = el("button", "linkish", "Close this member");
-        button.type = "button";
-        button.addEventListener("click", function () {
-          pinned = "";
-          renderSenateDetail();
-        });
-        clear.appendChild(button);
-        copy.appendChild(clear);
-        box.appendChild(card);
-      }
-    }
     appendWhoVoted(box, vote);
+  }
+
+  function keepPlace(fn) {
+    var y = window.scrollY;
+    var ids = ["senator-list", "search-list", "vote-list", "senate-list", "slip-list"];
+    var tops = {};
+    ids.forEach(function (id) {
+      var node = document.getElementById(id);
+      if (node) tops[id] = node.scrollTop;
+    });
+    function restore() {
+      var root = document.documentElement;
+      var previous = root.style.scrollBehavior;
+      root.style.scrollBehavior = "auto";
+      window.scrollTo(0, y);
+      ids.forEach(function (id) {
+        var node = document.getElementById(id);
+        if (node && tops[id] != null) node.scrollTop = tops[id];
+      });
+      root.style.scrollBehavior = previous;
+    }
+    fn();
+    restore();
+    requestAnimationFrame(restore);
   }
 
   function showPersonCard(card) {
@@ -2366,7 +2387,8 @@
     if (people.length) {
       wrap.appendChild(el("h3", "", people.length === 1 ? "Home-state senator" : "Home-state senators"));
       people.forEach(function (member) {
-        var row = el("button", "person-row " + partyClass(member[2]) + (member[0] === pinned ? " is-on" : ""));
+        var openHere = pinnedAt === "slip" && member[0] === pinned;
+        var row = el("button", "person-row " + partyClass(member[2]) + (openHere ? " is-on" : ""));
         row.type = "button";
         row.setAttribute("data-person", member[0]);
         row.appendChild(portrait(member[0], member[1], false));
@@ -2378,22 +2400,8 @@
         copy.appendChild(el("p", "person-meta", meta.join(" · ")));
         row.appendChild(copy);
         wrap.appendChild(row);
+        if (openHere) wrap.appendChild(memberContactCard(member, null));
       });
-    }
-    var person = pinned ? memberById(pinned) : null;
-    if (person && people.some(function (member) { return member[0] === person[0]; })) {
-      var card = contactBlock(person);
-      card.classList.add("pinned-card");
-      var clear = el("p", "");
-      var close = el("button", "linkish", "Close this member");
-      close.type = "button";
-      close.addEventListener("click", function () {
-        pinned = "";
-        renderSlipDetail();
-      });
-      clear.appendChild(close);
-      card.querySelector(".person-copy").appendChild(clear);
-      wrap.appendChild(card);
     }
     box.appendChild(wrap);
   }
@@ -3040,9 +3048,9 @@
       }
       var person = event.target.closest("button[data-person]");
       if (person) {
-        searchPerson = person.getAttribute("data-person");
-        renderSearchPanel();
-        showPersonCard(document.querySelector("#search-list .pinned-card"));
+        var found = person.getAttribute("data-person");
+        searchPerson = searchPerson === found ? "" : found;
+        keepPlace(function () { renderSearchPanel(); });
         return;
       }
       var slip = event.target.closest("button[data-slip]");
@@ -3119,20 +3127,27 @@
     document.body.addEventListener("click", function (event) {
       var button = event.target.closest("button[data-person]");
       if (!button || event.target.closest("#search-list")) return;
-      pinned = button.getAttribute("data-person");
-      if (event.target.closest("#open-senate")) {
-        renderSenateDetail();
-        showPersonCard(document.querySelector("#open-senate .pinned-card"));
-        return;
+      var id = button.getAttribute("data-person");
+      var where = "vote";
+      if (event.target.closest("#open-senate")) where = "senate";
+      else if (event.target.closest("#open-slip")) where = "slip";
+      else if (event.target.closest("#senator-list")) where = "senators";
+      if (pinned === id && pinnedAt === where) {
+        pinned = "";
+        pinnedAt = "";
+      } else {
+        pinned = id;
+        pinnedAt = where;
       }
-      if (event.target.closest("#open-slip")) {
-        renderSlipDetail();
-        showPersonCard(document.querySelector("#open-slip .pinned-card"));
-        return;
-      }
-      renderDetail();
-      renderSenators();
-      showPersonCard(document.querySelector("#open-vote .pinned-card"));
+      keepPlace(function () {
+        if (where === "senate") renderSenateDetail();
+        else if (where === "slip") renderSlipDetail();
+        else if (where === "senators") renderSenators();
+        else {
+          renderDetail();
+          renderSenators();
+        }
+      });
     });
     document.getElementById("congress-check").addEventListener("click", function () { checkLive(true); });
     checkLive(false);
