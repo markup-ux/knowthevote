@@ -345,6 +345,8 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
 .desk-list > .card.person,
 .story:has(.shot) > .card.person { grid-column: 1 / -1; }
 .card.person {
+  min-width: 0;
+  max-width: 100%;
   scroll-margin-top: 110px;
   --desk: inherit;
   --on: inherit;
@@ -380,8 +382,8 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
 .card.person .card-name { margin: 0 0 8px; font-size: 22px; font-weight: 650; }
 .card.person .card-seat { margin: 0 0 8px; color: var(--plate-ink); font-weight: 650; }
 .card.person .src { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
-.card.person .src a, .card.person .open-page { color: var(--plate-ink); text-decoration: underline; text-decoration-color: var(--mako); text-underline-offset: 3px; }
-.card.person .with-mark { display: flex; align-items: flex-start; gap: 8px; }
+.card.person .src a, .card.person .open-page { min-width: 0; color: var(--plate-ink); text-decoration: underline; text-decoration-color: var(--mako); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.card.person .with-mark { display: flex; align-items: flex-start; gap: 8px; max-width: 100%; min-width: 0; }
 .card.person .mark { width: 28px; height: 28px; flex: none; }
 .card.person .sigma-logo,
 .story .sigma-logo {
@@ -511,23 +513,23 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   height: 2px;
   background: var(--see-blue);
 }
-.story .src, .story .actions {
+.story > .src, .story > .actions {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: auto;
   margin-bottom: 0;
 }
-#journal .story .src,
-#journal .story .actions {
+#journal .story > .src,
+#journal .story > .actions {
   padding-top: 14px;
   border-top: 1px solid color-mix(in srgb, var(--plate-ink) 16%, transparent);
 }
-#journal .desk-list .story:not(.lead) .src > *,
-#journal .desk-list .story:not(.lead) .actions > * {
+#journal .desk-list .story:not(.lead) > .src > *,
+#journal .desk-list .story:not(.lead) > .actions > * {
   flex: 1 1 0;
 }
-.story .src a, .story .actions a, .story .read-here {
+.story > .src a, .story > .actions a, .story .read-here {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -560,8 +562,8 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   color: var(--see-green);
   border-color: var(--see-green);
 }
-.story .src a:hover, .story .src a:focus-visible,
-.story .actions a:hover, .story .actions a:focus-visible {
+.story > .src a:hover, .story > .src a:focus-visible,
+.story > .actions a:hover, .story > .actions a:focus-visible {
   background: color-mix(in oklch, var(--c-brown) 78%, white);
   color: var(--on-brown);
   border-color: color-mix(in oklch, var(--c-brown) 78%, white);
