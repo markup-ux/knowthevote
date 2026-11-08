@@ -1629,7 +1629,7 @@
     if (member[8] || member[9]) {
       var sites = el("p", "card-gov");
       if (member[8]) sites.appendChild(marked(member[8], "gov", host(member[8]), "Official website " + host(member[8]), true));
-      if (member[9]) sites.appendChild(marked(member[9], "form", "", "Contact form", true));
+      if (member[9]) sites.appendChild(marked(member[9], "form", "Contact form", "Contact form", true));
       copy.appendChild(sites);
     }
     if (!member[6] && !member[7] && !member[8]) copy.appendChild(el("p", "card-note", "No office phone or website is in the member file for this name."));
@@ -1677,7 +1677,7 @@
     if (member[8] || member[9]) {
       var sites = el("p", "card-gov");
       if (member[8]) sites.appendChild(markLink(member[8], "gov", host(member[8]), "Official website " + host(member[8])));
-      if (member[9]) sites.appendChild(markLink(member[9], "form", "", "Contact form"));
+      if (member[9]) sites.appendChild(markLink(member[9], "form", "Contact form", "Contact form"));
       more.appendChild(sites);
       added = true;
     }
@@ -2067,7 +2067,7 @@
     if (member[8] || member[9]) {
       var sites = el("p", "card-gov");
       if (member[8]) sites.appendChild(markLink(member[8], "gov", host(member[8]), "Official website " + host(member[8])));
-      if (member[9]) sites.appendChild(markLink(member[9], "form", "", "Contact form"));
+      if (member[9]) sites.appendChild(markLink(member[9], "form", "Contact form", "Contact form"));
       more.appendChild(sites);
     } else {
       more.appendChild(el("p", "card-note", "No office website is in the member file for this name."));

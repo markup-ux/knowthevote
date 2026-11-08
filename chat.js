@@ -527,7 +527,7 @@
         siteCount += 1;
       }
       if (contact.form && contact.form.indexOf("https://") === 0) {
-        sites.appendChild(marked(contact.form, "form", "", "Contact form"));
+        sites.appendChild(marked(contact.form, "form", "Contact form", "Contact form"));
         siteCount += 1;
       }
       if (siteCount) addLine("card-gov", sites);
