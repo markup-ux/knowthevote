@@ -2,8 +2,8 @@
   "source": "https://results.elections.org.za/dashboards/lge/MapsJason/2026/EEID1887LiteMapsNational.js",
   "partySource": "https://results.elections.org.za/dashboards/lge/MapsJason/2016/PartyList.js",
   "eventId": 1887,
-  "reportDate": "2026-11-08T21:53:56.5219656+02:00",
-  "fetchedAt": "2026-11-08T19:55:44+00:00",
+  "reportDate": "2026-11-09T01:19:08.112177+02:00",
+  "fetchedAt": "2026-11-08T23:21:14+00:00",
   "progress": {
     "vdComplete": 23694,
     "vdExpected": 23696,
