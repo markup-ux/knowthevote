@@ -65,6 +65,7 @@ PAGES = [
     ("Group Chat", "Messages since November 3, 2026", "chat.html", "social post white house senate house"),
     ("Gallery", "Photographs", "gallery.html", "photo photograph picture unsplash"),
     ("Trivia", "Questions from facts on this site", "play.html", "quiz questions trivia"),
+    ("News", "American Scientist, POCIT Weekly, and The Edge", "news.html", "american scientist pocit martha boeckenfeld sigma xi"),
     ("Search", "Find a name or a place", "search.html", ""),
 ]
 TITLE_RE = re.compile(r"<title>([^<]*)</title>")
@@ -376,6 +377,7 @@ class PassageParser(HTMLParser):
 
     skip_tags = {"script", "style", "svg", "noscript", "button", "form", "select", "option", "label"}
     text_tags = {"p", "li", "h1", "h2", "h3"}
+    void_tags = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -394,7 +396,8 @@ class PassageParser(HTMLParser):
         tag = tag.lower()
         attr = {key: value or "" for key, value in attrs}
         if self.skip:
-            self.skip += 1
+            if tag not in self.void_tags:
+                self.skip += 1
             return
         if tag in self.skip_tags:
             self.skip = 1
@@ -422,6 +425,8 @@ class PassageParser(HTMLParser):
 
     def handle_endtag(self, tag):
         tag = tag.lower()
+        if tag in self.void_tags:
+            return
         if self.skip:
             self.skip -= 1
             return
@@ -484,6 +489,8 @@ def content_pages():
 def passage_detail(rel, states):
     if rel == "census.html":
         return "Census"
+    if rel == "news.html":
+        return "News"
     if rel in states:
         return states[rel]
     if "/" in rel:
@@ -659,6 +666,54 @@ def add_chat(index):
         emit("House floor", "Group Chat · House floor", row.get("url") or "", row.get("text") or "", "H")
 
 
+def add_news(index):
+    body = index.text("news.html")
+    if not body:
+        return
+    stories = {}
+    for ident, block in re.findall(r'<article class="story[^"]*"[^>]*\bid="([^"]+)"[^>]*>(.*?)</article>', body, re.S):
+        heading = re.search(r"<h3>(.*?)</h3>", block, re.S)
+        if not heading:
+            continue
+        name = clean(heading.group(1)).rstrip(".")
+        label = name.split(".")[0].strip()
+        tag = re.search(r'<p class="tag">([^<]*)</p>', block)
+        detail = ((clean(tag.group(1)) + " · News") if tag else "News")
+        bits = []
+        for paragraph in re.findall(r"<p(?![^>]*class=\"(?:tag|when|src)\")[^>]*>(.*?)</p>", block, re.S):
+            text = clean(paragraph)
+            if text and text != name:
+                bits.append(text)
+        stories.setdefault(label, ident)
+        index.add(name, detail, "news.html#" + ident, 2, " ".join(bits))
+    path = os.path.join(ROOT, "news", "researchers.js")
+    if not os.path.isfile(path):
+        return
+    raw = open(path, encoding="utf-8").read()
+    start = raw.find("{")
+    end = raw.rfind("}")
+    if start < 0 or end < start:
+        return
+    data = json.loads(raw[start:end + 1])
+    for label, issue in data.items():
+        ident = stories.get(label)
+        if not ident:
+            continue
+        href = "news.html#" + ident
+        for piece in issue.get("pieces") or []:
+            title = piece.get("title") or ""
+            page = piece.get("page")
+            for author in piece.get("authors") or []:
+                person = author.get("name") or ""
+                note = author.get("bio") or ""
+                where = title
+                if page:
+                    where = "%s, page %s" % (title, page)
+                extra = clean(" ".join(part for part in (where, note) if part))
+                letter = (clean(person)[:1] or "?").upper()
+                index.add(person, "American Scientist · News", href, 1, extra, letter)
+
+
 def add_health_text(index):
     path = os.path.join(ROOT, "health.js")
     if not os.path.isfile(path):
@@ -688,6 +743,7 @@ def main():
     add_health_text(index)
     add_presidents(index)
     add_chat(index)
+    add_news(index)
     index.rows.sort(key=lambda row: (row[3], row[0].lower(), row[2]))
     payload = json.dumps({"items": index.rows}, ensure_ascii=False, separators=(",", ":"))
     with open(OUT, "w", encoding="utf-8", newline="\n") as handle:

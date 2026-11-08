@@ -339,7 +339,7 @@
 
   function load() {
     if (pending) return pending;
-    pending = fetch(base + "search.json?v=9")
+    pending = fetch(base + "search.json?v=11")
       .then(function (response) {
         if (!response.ok) throw new Error("search");
         return response.json();

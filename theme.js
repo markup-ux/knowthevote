@@ -214,7 +214,7 @@
       var sub = row[3] ? themeStack(row[3]) : display;
       var b = 'html[data-theme="' + id + '"] body, html[data-theme="' + id + '-dark"] body';
       var title = 'html[data-theme="' + id + '"] h1, html[data-theme="' + id + '"] h2, html[data-theme="' + id + '"] .brand, html[data-theme="' + id + '-dark"] h1, html[data-theme="' + id + '-dark"] h2, html[data-theme="' + id + '-dark"] .brand';
-      var h3 = 'html[data-theme="' + id + '"] h3, html[data-theme="' + id + '-dark"] h3';
+      var h3 = 'html[data-theme="' + id + '"] h3, html[data-theme="' + id + '-dark"] h3, html[data-theme="' + id + '"] .nr .piece-title, html[data-theme="' + id + '-dark"] .nr .piece-title, html[data-theme="' + id + '"] .nr .card-name, html[data-theme="' + id + '-dark"] .nr .card-name, html[data-theme="' + id + '"] .nr .issue-date, html[data-theme="' + id + '-dark"] .nr .issue-date';
       if (body === display && sub === display) rules.push(b + ", " + title + ", " + h3 + " { font-family: " + body + "; }");
       else {
         rules.push(b + " { font-family: " + body + "; }");
@@ -291,6 +291,105 @@
     FONT_READY.push({ id: id, label: name, group: meta.group });
   });
   FONT_READY.sort(function (a, b) { return a.label < b.label ? -1 : a.label > b.label ? 1 : 0; });
+
+  var BASE_NAMES = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown"];
+  var BASE_HUE = { red: 25, orange: 50, yellow: 97, green: 150, blue: 255, purple: 308, pink: 352, brown: 78 };
+  var BASE_L = { red: 0.62, orange: 0.74, yellow: 0.86, green: 0.62, blue: 0.62, purple: 0.64, pink: 0.72, brown: 0.48 };
+  var BASE_C = { red: 0.17, orange: 0.15, yellow: 0.16, green: 0.15, blue: 0.14, purple: 0.16, pink: 0.15, brown: 0.11 };
+  var BASE_TUNE = {
+    light: {},
+    spring: { lead: ["green", "pink", "yellow"], hue: { green: -8, pink: 4 } },
+    summer: { lead: ["blue", "yellow", "orange"], hue: { blue: -12, orange: 4 } },
+    fall: { lead: ["orange", "red", "yellow", "brown"], hue: { orange: 5, red: 3, brown: -4 } },
+    winter: { lead: ["blue", "purple"], mute: 0.88, lift: 0.04, hue: { blue: 6 } },
+    holiday: { lead: ["red", "green", "yellow"] },
+    tropical: { lead: ["green", "pink", "yellow"], hue: { green: 10, pink: -6, yellow: 2 } },
+    birthday: { lead: ["pink", "yellow", "blue", "purple"], hue: { pink: 4 } },
+    rainbow: { chroma: 1.22 },
+    bw: { chroma: 0.85 },
+    typewriter: { lead: ["red", "brown", "yellow"], mute: 0.88 },
+    newsroom: { lead: ["red", "yellow", "blue"], mute: 0.9 },
+    office: { lead: ["blue", "green"], mute: 0.88 },
+    arcade: { lead: ["pink", "yellow", "blue", "purple", "green"], chroma: 1.32, hue: { pink: -10, blue: -18, green: 6 } },
+    verdant: { lead: ["green", "yellow"], mute: 0.9, hue: { green: -12 } },
+    fantasy: { lead: ["purple", "yellow", "pink"], hue: { purple: -6, yellow: -6 } },
+    cyberpunk: { lead: ["pink", "blue", "purple", "yellow"], chroma: 1.35, hue: { pink: -14, blue: -22 } },
+    medieval: { lead: ["red", "yellow", "brown"], mute: 0.9, hue: { yellow: -8, red: 2 } },
+    school: { lead: ["blue", "yellow", "red"] },
+    farmhouse: { lead: ["red", "green", "brown", "yellow"], mute: 0.88, hue: { red: 4, green: -6, brown: -6, yellow: -4 } },
+    treehouse: { lead: ["brown", "green", "yellow"], hue: { green: -8, brown: -8 } },
+    alien: { lead: ["green", "purple", "yellow"], chroma: 1.28, hue: { green: -16, yellow: 14, purple: -8 } },
+    zodiac: { lead: ["yellow", "purple", "blue"], hue: { yellow: -10, blue: 10, purple: 4 } },
+    sportsball: { lead: ["orange", "green", "yellow", "blue"], hue: { orange: -4, green: -6, yellow: -8 } }
+  };
+
+  function oklchHex(L, C, H) {
+    var rad = H * Math.PI / 180;
+    var a = C * Math.cos(rad);
+    var b = C * Math.sin(rad);
+    var l_ = L + 0.3963377774 * a + 0.2158037573 * b;
+    var m_ = L - 0.1055613458 * a - 0.0638541728 * b;
+    var s_ = L - 0.0894841775 * a - 1.2914855480 * b;
+    var l = l_ * l_ * l_;
+    var m = m_ * m_ * m_;
+    var s = s_ * s_ * s_;
+    var r = 4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s;
+    var g = -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s;
+    var bl = -0.0041960863 * l - 0.7034186147 * m + 1.7076147010 * s;
+    function gam(c) {
+      if (c < 0) c = 0;
+      if (c > 1) c = 1;
+      return c <= 0.0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - 0.055;
+    }
+    function byte(c) {
+      var v = Math.round(gam(c) * 255);
+      var hex = v.toString(16);
+      return hex.length === 1 ? "0" + hex : hex;
+    }
+    return "#" + byte(r) + byte(g) + byte(bl);
+  }
+
+  function baseVars(id) {
+    var family = id === "dark" ? "light" : id.replace(/-dark$/, "");
+    var spec = BASE_TUNE[family] || {};
+    var dark = id === "dark" || /-dark$/.test(id);
+    var lift = (spec.lift || 0) + (dark ? 0.08 : 0);
+    var gain = spec.chroma || 1;
+    if (dark) gain *= 0.94;
+    var out = {};
+    for (var i = 0; i < BASE_NAMES.length; i++) {
+      var name = BASE_NAMES[i];
+      var hue = BASE_HUE[name] + ((spec.hue && spec.hue[name]) || 0);
+      var l = BASE_L[name] + lift;
+      var c = BASE_C[name] * gain;
+      if (spec.lead && spec.lead.indexOf(name) !== -1) c *= 1.28;
+      else if (spec.mute) c *= spec.mute;
+      if (l > 0.92) l = 0.92;
+      if (c > 0.22) c = 0.22;
+      if (c < 0.045) c = 0.045;
+      hue = ((hue % 360) + 360) % 360;
+      out["--c-" + name] = oklchHex(l, c, hue);
+      out["--on-" + name] = l >= 0.68 ? "#1c1915" : "#fff";
+    }
+    return out;
+  }
+
+  function baseDecl(id) {
+    var vars = baseVars(id);
+    var parts = [];
+    for (var key in vars) parts.push(key + ": " + vars[key]);
+    return parts.join("; ");
+  }
+
+  function baseColorCss() {
+    var rules = ["html { " + baseDecl("light") + " }"];
+    for (var i = 0; i < MODES.length; i++) {
+      var mode = MODES[i];
+      if (mode.light !== "light") rules.push('html[data-theme="' + mode.light + '"] { ' + baseDecl(mode.light) + " }");
+      rules.push('html[data-theme="' + mode.dark + '"] { ' + baseDecl(mode.dark) + " }");
+    }
+    return rules.join("\n");
+  }
   var FONTS = [
     { id: "", label: "Site", group: "" },
     { id: "sans-serif", label: "Sans", group: "Sans" },
@@ -478,8 +577,9 @@
     'html[data-theme="sportsball"] body { --bar: #145c32; --bar-stripe: #ff6a1a; --bar-line: #f7f4ea; --bar-ink: #f7f8f4; --bar-hover: #ff6a1a; --bar-hover-ink: #102018; }',
     'html[data-theme="sportsball-dark"] { --paper: #0c1210; --ink: #f3f6f1; --muted: #b7c4b4; --line: #243028; --chip: #162018; --map: #142018; --map-ink: #f3f6f1; --map-on: #ffb000; --map-tint: #1f7a3a; --clock-face: #0c1210; --clock-rim: #ffb000; --clock-mark: #f3f6f1; --clock-hour: #ff6a1a; --clock-minute: #7dffb0; --clock-pin: #ffb000; }',
     'html[data-theme="sportsball-dark"] body { --bar: #07110c; --bar-stripe: #ffb000; --bar-line: #ff6a1a; --bar-ink: #f3f6f1; --bar-hover: #ffb000; --bar-hover-ink: #102018; }',
+    baseColorCss(),
     themeFaceCss(),
-    "html.theme-mix { --paper: var(--mix-paper); --ink: var(--mix-ink); --muted: var(--mix-muted); --line: var(--mix-line); --chip: var(--mix-chip); --map: var(--mix-map); --map-ink: var(--mix-map-ink); --map-on: var(--mix-map-on); --map-tint: var(--mix-map-tint); --clock-face: var(--mix-clock-face); --clock-rim: var(--mix-clock-rim); --clock-mark: var(--mix-clock-mark); --clock-hour: var(--mix-clock-hour); --clock-minute: var(--mix-clock-minute); --clock-pin: var(--mix-clock-pin); color-scheme: light; }",
+    "html.theme-mix { --paper: var(--mix-paper); --ink: var(--mix-ink); --muted: var(--mix-muted); --line: var(--mix-line); --chip: var(--mix-chip); --map: var(--mix-map); --map-ink: var(--mix-map-ink); --map-on: var(--mix-map-on); --map-tint: var(--mix-map-tint); --clock-face: var(--mix-clock-face); --clock-rim: var(--mix-clock-rim); --clock-mark: var(--mix-clock-mark); --clock-hour: var(--mix-clock-hour); --clock-minute: var(--mix-clock-minute); --clock-pin: var(--mix-clock-pin); --c-red: var(--mix-c-red); --c-orange: var(--mix-c-orange); --c-yellow: var(--mix-c-yellow); --c-green: var(--mix-c-green); --c-blue: var(--mix-c-blue); --c-purple: var(--mix-c-purple); --c-pink: var(--mix-c-pink); --c-brown: var(--mix-c-brown); --on-red: var(--mix-on-red); --on-orange: var(--mix-on-orange); --on-yellow: var(--mix-on-yellow); --on-green: var(--mix-on-green); --on-blue: var(--mix-on-blue); --on-purple: var(--mix-on-purple); --on-pink: var(--mix-on-pink); --on-brown: var(--mix-on-brown); color-scheme: light; }",
     "html.theme-mix.theme-mix-dark { color-scheme: dark; }",
     "html.theme-mix body { --bar: var(--mix-bar); --bar-stripe: var(--mix-bar-stripe); --bar-line: var(--mix-bar-line); --bar-ink: var(--mix-bar-ink); --bar-hover: var(--mix-bar-hover); --bar-hover-ink: var(--mix-bar-hover-ink); background: var(--mix-bg); }",
     "html.theme-mix header, html.theme-mix footer, html.theme-mix .lang-menu { background: var(--mix-header); color: var(--bar-ink); }",
@@ -542,7 +642,9 @@
     "--clock-minute": "#c4922a",
     "--clock-pin": "#1e4d7b"
   };
-  var MIX_NAMES = ["paper", "ink", "muted", "line", "chip", "map", "map-ink", "map-on", "map-tint", "clock-face", "clock-rim", "clock-mark", "clock-hour", "clock-minute", "clock-pin", "bar", "bar-stripe", "bar-line", "bar-ink", "bar-hover", "bar-hover-ink"];
+  var dayBase = baseVars("light");
+  for (var dayKey in dayBase) DAY_LIGHT[dayKey] = dayBase[dayKey];
+  var MIX_NAMES = ["paper", "ink", "muted", "line", "chip", "map", "map-ink", "map-on", "map-tint", "clock-face", "clock-rim", "clock-mark", "clock-hour", "clock-minute", "clock-pin", "bar", "bar-stripe", "bar-line", "bar-ink", "bar-hover", "bar-hover-ink", "c-red", "c-orange", "c-yellow", "c-green", "c-blue", "c-purple", "c-pink", "c-brown", "on-red", "on-orange", "on-yellow", "on-green", "on-blue", "on-purple", "on-pink", "on-brown"];
   var RAINBOW_HEADER = {
     light: "linear-gradient(90deg, #c43b4a, #d4920a, #2f7a40, #1a7aaa, #4a3aad, #c45080)",
     dark: "linear-gradient(90deg, #6a2430, #6a4a14, #245028, #145060, #2a2460, #5a2040)"
