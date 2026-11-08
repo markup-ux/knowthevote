@@ -263,6 +263,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 }
 .card[data-color] { --desk: var(--bar-stripe); --on: var(--bar-hover-ink); }
 .card[hidden] { display: none; }
+.contacts .card { scroll-margin-top: 110px; }
 .card > img {
   width: 100%;
   height: auto;
@@ -342,6 +343,7 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
 .desk-list > .card.person,
 .story:has(.shot) > .card.person { grid-column: 1 / -1; }
 .card.person {
+  scroll-margin-top: 110px;
   --desk: inherit;
   --on: inherit;
   grid-column: 1 / -1;

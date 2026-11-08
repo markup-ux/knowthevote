@@ -545,7 +545,9 @@
             if (prior) prior.remove();
             if (open) return;
             button.setAttribute("aria-expanded", "true");
-            story.after(personCard(person, piece, issue, key, id));
+            var card = personCard(person, piece, issue, key, id);
+            block.appendChild(card);
+            focusCard(card);
           });
           row.appendChild(button);
         });
@@ -580,6 +582,14 @@
         if (actions) actions.before(list);
         else story.appendChild(list);
       }
+    });
+  }
+
+  function focusCard(card) {
+    card.tabIndex = -1;
+    requestAnimationFrame(function () {
+      card.scrollIntoView({ block: "start" });
+      card.focus({ preventScroll: true });
     });
   }
 
@@ -620,7 +630,7 @@
           other.setAttribute("aria-expanded", "true");
         });
         card.hidden = false;
-        card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        focusCard(card);
       }
     });
   });
