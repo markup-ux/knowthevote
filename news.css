@@ -403,8 +403,12 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 .card[hidden] { display: none; }
 .contacts .card { scroll-margin-top: 110px; }
 .contacts .src a.with-mark,
+.author-cards .src a.with-mark,
+.story > .card .src a.with-mark,
 #card-mark .src a.with-mark { display: inline-flex; align-items: center; gap: 6px; }
 .contacts .src .mark,
+.author-cards .src .mark,
+.story > .card .src .mark,
 #card-mark .src .mark { width: 28px; height: 28px; flex: none; }
 .card > img {
   width: 100%;

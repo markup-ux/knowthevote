@@ -474,9 +474,11 @@
     page.target = "_blank";
     page.rel = "noopener noreferrer";
     page.textContent = "Pieces at POCIT";
+    page.setAttribute("data-kind", "pieces");
     src.appendChild(page);
     if (post.authorSite) {
       var site = document.createElement("a");
+      site.setAttribute("data-kind", "web");
       site.href = post.authorSite;
       site.target = "_blank";
       site.rel = "noopener noreferrer";
@@ -490,6 +492,7 @@
     body.appendChild(src);
     card.appendChild(body);
     host.appendChild(card);
+    markLinks(card);
     return id;
   }
 
@@ -714,7 +717,9 @@
     apple: "<rect x='2' y='2' width='28' height='28' rx='7' fill='var(--c-brown)'/><ellipse cx='12.5' cy='22' rx='5' ry='3.3' transform='rotate(-22 12.5 22)' fill='var(--c-purple)'/><rect x='16.6' y='8' width='2.4' height='14.2' fill='var(--c-pink)'/><path d='M19 8.2 C25 8.6 25.2 14.8 19 14.2' fill='none' stroke='var(--c-red)' stroke-width='2.3' stroke-linecap='round'/><rect x='22.2' y='17.5' width='3.2' height='2' fill='var(--c-orange)'/><rect x='22.2' y='20.4' width='3.2' height='2' fill='var(--c-yellow)'/><rect x='22.2' y='23.3' width='3.2' height='2' fill='var(--c-green)'/><circle cx='7.4' cy='10' r='1.7' fill='var(--c-blue)'/>",
     amazon: "<rect x='2' y='2' width='28' height='28' rx='6' fill='var(--c-brown)'/><path d='M11 9 L23 16 L11 23 Z' fill='var(--c-red)'/><path d='M13.2 12.2 L19.4 16 L13.2 19.8 Z' fill='var(--c-orange)'/><circle cx='8' cy='26.2' r='1.45' fill='var(--c-yellow)'/><circle cx='12' cy='27.3' r='1.45' fill='var(--c-green)'/><circle cx='16' cy='27.7' r='1.45' fill='var(--c-blue)'/><circle cx='20' cy='27.3' r='1.45' fill='var(--c-purple)'/><circle cx='24' cy='26.2' r='1.45' fill='var(--c-pink)'/>",
     deezer: "<circle cx='16' cy='16' r='14' fill='var(--c-brown)'/><rect x='8' y='7' width='16' height='2.4' rx='1.2' fill='var(--c-red)'/><rect x='6' y='11' width='20' height='2.4' rx='1.2' fill='var(--c-orange)'/><rect x='9' y='15' width='14' height='2.4' rx='1.2' fill='var(--c-yellow)'/><rect x='7' y='19' width='18' height='2.4' rx='1.2' fill='var(--c-green)'/><rect x='10' y='23' width='12' height='2.4' rx='1.2' fill='var(--c-blue)'/><circle cx='24.2' cy='8' r='1.5' fill='var(--c-purple)'/><circle cx='7.6' cy='24' r='1.5' fill='var(--c-pink)'/>",
-    spotify: "<circle cx='16' cy='16' r='14' fill='var(--c-brown)'/><circle cx='16' cy='16' r='11' fill='none' stroke='var(--c-red)' stroke-width='1.7'/><circle cx='16' cy='16' r='8.2' fill='none' stroke='var(--c-orange)' stroke-width='1.7'/><circle cx='16' cy='16' r='5.5' fill='var(--c-yellow)'/><circle cx='16' cy='16' r='3.3' fill='var(--c-green)'/><circle cx='16' cy='16' r='1.5' fill='var(--c-blue)'/><circle cx='23' cy='7.5' r='1.6' fill='var(--c-purple)'/><circle cx='9' cy='24.5' r='1.6' fill='var(--c-pink)'/>"
+    spotify: "<circle cx='16' cy='16' r='14' fill='var(--c-brown)'/><circle cx='16' cy='16' r='11' fill='none' stroke='var(--c-red)' stroke-width='1.7'/><circle cx='16' cy='16' r='8.2' fill='none' stroke='var(--c-orange)' stroke-width='1.7'/><circle cx='16' cy='16' r='5.5' fill='var(--c-yellow)'/><circle cx='16' cy='16' r='3.3' fill='var(--c-green)'/><circle cx='16' cy='16' r='1.5' fill='var(--c-blue)'/><circle cx='23' cy='7.5' r='1.6' fill='var(--c-purple)'/><circle cx='9' cy='24.5' r='1.6' fill='var(--c-pink)'/>",
+    pieces: "<rect x='3' y='4' width='22' height='26' rx='1' fill='var(--c-brown)'/><rect x='5' y='6' width='18' height='22' fill='var(--c-yellow)'/><rect x='5' y='6' width='18' height='5' fill='var(--c-red)'/><rect x='8' y='14' width='12' height='2' fill='var(--c-blue)'/><rect x='8' y='18' width='9' height='2' fill='var(--c-green)'/><rect x='8' y='22' width='6' height='2' fill='var(--c-purple)'/><path d='M18 17 L26 8 L28.2 10.2 L20.2 19.2 Z' fill='var(--c-orange)'/><circle cx='26.6' cy='8.4' r='1.5' fill='var(--c-pink)'/>",
+    web: "<rect x='2' y='2' width='28' height='28' rx='3' fill='var(--c-brown)'/><path d='M6 16 L16 7 L26 16 Z' fill='var(--c-red)'/><rect x='9' y='16' width='14' height='11' fill='var(--c-yellow)'/><rect x='14' y='20' width='4' height='7' fill='var(--c-blue)'/><rect x='10.5' y='18' width='3' height='3' fill='var(--c-green)'/><rect x='18.5' y='18' width='3' height='3' fill='var(--c-purple)'/><rect x='15' y='6' width='2.2' height='4' fill='var(--c-orange)'/><circle cx='24' cy='9' r='1.7' fill='var(--c-pink)'/>"
   };
 
   function markIcon(kind) {
@@ -1051,6 +1056,10 @@
     if (/spotify\.com/i.test(href)) return "spotify";
     if (/github\.com/i.test(href)) return "github";
     if (/leaders\.vote/i.test(href)) return "site";
+    if (/peopleofcolorintech\.com\/author\//i.test(href)) return "pieces";
+    var asked = link.getAttribute("data-kind");
+    if (asked && marks[asked]) return asked;
+    if (/habibakatsha\.com/i.test(href)) return "web";
     return "";
   }
 
@@ -1065,6 +1074,8 @@
   }
 
   markLinks(document.querySelector(".contacts") || document);
+  var authorCards = document.querySelector("#weekly .author-cards");
+  if (authorCards) markLinks(authorCards);
   prepareWeekly();
 
   paintFrame();
