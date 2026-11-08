@@ -9,7 +9,7 @@
     document.head.appendChild(searchTag);
     if (!document.querySelector("script[data-site-visits]")) {
       var visitTag = document.createElement("script");
-      visitTag.src = searchBase + "visit.js?v=2";
+      visitTag.src = searchBase + "visit.js?v=3";
       visitTag.async = true;
       visitTag.setAttribute("data-site-visits", "1");
       document.head.appendChild(visitTag);
@@ -254,7 +254,6 @@
   var hideToken = 0;
   var lastY = window.scrollY || 0;
   var lastMove = Date.now();
-  var moved = false;
 
   var style = document.createElement("style");
   style.id = "chrome-idle-style";
@@ -276,8 +275,8 @@
 
   function mobile() { return mq.matches; }
 
-  function atTop() {
-    return (window.scrollY || 0) <= 4;
+  function motionOk() {
+    return !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 
   function busy() {
@@ -303,25 +302,39 @@
   }
 
   function hide() {
-    if (!mobile() || !moved) return;
-    if (atTop()) {
-      show();
-      return;
-    }
+    if (!mobile()) return;
     if (busy() || held || Date.now() - lastMove < 160) {
       arm();
       return;
     }
+    var y = window.scrollY || 0;
+    var extra = document.documentElement.scrollHeight - window.innerHeight;
+    if (y <= 4 && extra <= 8) return;
     var headerH = Math.ceil(header.getBoundingClientRect().height);
-    if (headerH <= 0 && !jump) return;
-    hideToken += 1;
-    if (headerH > 0) {
+    var collapse = y <= 4 && extra > headerH + 16;
+    var away = y > 4 && headerH > 0;
+    if (!collapse && !away && !jump) return;
+    var token = ++hideToken;
+    if (away) {
       document.documentElement.style.setProperty("--header-open", headerH + "px");
       document.body.classList.remove("chrome-at-top");
       document.body.classList.add("chrome-away");
       header.style.maxHeight = "";
       header.style.overflow = "";
       header.inert = true;
+    } else if (collapse) {
+      header.style.overflow = "hidden";
+      header.style.maxHeight = headerH + "px";
+      document.body.classList.remove("chrome-away");
+      document.body.classList.add("chrome-at-top");
+      header.inert = true;
+      var finish = function () {
+        if (token !== hideToken || !document.body.classList.contains("chrome-at-top")) return;
+        header.style.maxHeight = "0px";
+        setTimeout(function () { lastY = window.scrollY || 0; }, 0);
+      };
+      if (motionOk()) requestAnimationFrame(function () { requestAnimationFrame(finish); });
+      else finish();
     }
     document.body.classList.add("chrome-idle");
     if (jump) jump.inert = true;
@@ -348,13 +361,6 @@
     var delta = Math.abs(y - lastY);
     lastY = y;
     if (!mobile() || delta < 1) return;
-    moved = true;
-    if (y <= 4) {
-      lastMove = Date.now();
-      show();
-      clearTimeout(timer);
-      return;
-    }
     revealFromUser();
   }, { passive: true });
 
@@ -404,4 +410,6 @@
   }
   window.addEventListener("pointerup", release);
   window.addEventListener("pointercancel", release);
+
+  arm();
 })();

@@ -13,7 +13,8 @@
     ["chat", "Group Chat"],
     ["play", "Trivia"],
     ["gallery", "Gallery"],
-    ["other", "Other pages"]
+    ["other", "News, Group Chat, Trivia, and Gallery before each had a line"],
+    ["rest", "Not listed above"]
   ];
 
   function chicagoDate(offsetDays) {
@@ -60,7 +61,7 @@
     if (path === "/gallery" || path.indexOf("/gallery/") === 0) return "gallery";
     bits = path.split("/");
     if (bits.length > 2 && /^[a-z]{2}$/.test(bits[1])) return "world";
-    return "other";
+    return "rest";
   }
 
   function key(name) {

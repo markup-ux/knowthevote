@@ -15,7 +15,7 @@
   h1 { font-size: 28px; font-weight: 650; margin: 28px 0 8px; }
   .quiet { color: var(--muted); max-width: 38rem; }
   .loads { font-size: 64px; line-height: 1; font-variant-numeric: tabular-nums; margin: 18px 0 0; }
-  .rows { width: min(32rem, 100%); border-collapse: collapse; margin-top: 22px; }
+  .rows { width: min(46rem, 100%); border-collapse: collapse; margin-top: 22px; }
   .rows th, .rows td { text-align: left; padding: 8px 0; border-bottom: 1px solid var(--line); font-weight: 500; font-variant-numeric: tabular-nums; }
   .rows td { text-align: right; }
 </style>
@@ -28,7 +28,7 @@
 </header>
 <main class="wrap">
   <h1>Page loads</h1>
-  <p class="quiet">This counts opens of a page on leaders.vote. It does not count people, and it does not keep a cookie, a browser identifier, or an address. There is nothing to accept. Opening this page does not add to the count. News, Group Chat, Trivia, and Gallery each have a line. Opens of those pages from before this list stay under Other pages.</p>
+  <p class="quiet">This counts opens of a page on leaders.vote. It does not count people, and it does not keep a cookie, a browser identifier, or an address. There is nothing to accept. Opening this page does not add to the count.</p>
   <p class="quiet">All pages</p>
   <p class="loads" id="total">…</p>
   <p class="quiet" id="status">Checking the counter.</p>
@@ -36,7 +36,7 @@
     <tbody id="rows"></tbody>
   </table>
 </main>
-<script src="visit.js?v=2"></script>
+<script src="visit.js?v=3"></script>
 <script>
 (function () {
   var api = window.leadersVisits;
