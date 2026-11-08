@@ -862,6 +862,8 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #sex-hood-base::after {
 .life-date { --life: #cc79a7; }
 .life-gpa { --life: #009e73; }
 .life-pet { --life: #0f7a8a; }
+.life-health { --life: #e25b45; }
+.life-war { --life: #7c6bb5; }
 .life-head { display: flex; align-items: center; gap: 8px; min-width: 0; }
 .life-glance-year {
   margin: 0 0 0 auto;

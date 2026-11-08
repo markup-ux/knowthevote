@@ -9,7 +9,9 @@
     pet: document.getElementById("pet-year"),
     job: document.getElementById("job-year"),
     aid: document.getElementById("aid-year"),
-    home: document.getElementById("home-year")
+    home: document.getElementById("home-year"),
+    health: document.getElementById("health-year"),
+    war: document.getElementById("war-year")
   };
   if (!sliders.gas) return;
 
@@ -95,6 +97,14 @@
   var gasLive = null;
   var gasFromBls = {};
   var spendFromBls = {};
+  var health = {
+    1990: 2835, 1991: 3065, 1992: 3284, 1993: 3486, 1994: 3641, 1995: 3807,
+    1996: 3966, 1997: 4141, 1998: 4335, 1999: 4559, 2000: 4842, 2001: 5209,
+    2002: 5678, 2003: 6112, 2004: 6481, 2005: 6871, 2006: 7266, 2007: 7662,
+    2008: 7907, 2009: 8132, 2010: 8377, 2011: 8590, 2012: 8860, 2013: 9024,
+    2014: 9421, 2015: 9860, 2016: 10229, 2017: 10582, 2018: 11042, 2019: 11487,
+    2020: 12637, 2021: 13137, 2022: 13689, 2023: 14580, 2024: 15474
+  };
   var gpas = { 1990: 2.68, 1994: 2.79, 1998: 2.90, 2000: 2.94, 2005: 2.98, 2009: 3.00, 2019: 3.11 };
   var gpaYears = [1990, 1994, 1998, 2000, 2005, 2009, 2019];
   var cards = {
@@ -107,7 +117,9 @@
     pet: document.querySelector(".life-pet"),
     job: document.querySelector(".life-job"),
     aid: document.querySelector(".life-aid"),
-    home: document.querySelector(".life-home")
+    home: document.querySelector(".life-home"),
+    health: document.querySelector(".life-health"),
+    war: document.querySelector(".life-war")
   };
 
   function rate(n, digits) {
@@ -176,6 +188,8 @@
     }
     if (key === "aid") return sortedKeys(snapTracts);
     if (key === "home") return sortedKeys(shelterDistricts);
+    if (key === "health") return sortedKeys(health);
+    if (key === "war") return [2022];
     return gpaYears.filter(function (y) { return gpas[y] != null; });
   }
   function atPresent(key, year) {
@@ -467,6 +481,61 @@
     });
   }
   var TRIP_MAX = 5000;
+  var HEALTH_MAX = 20000;
+
+  function showHealth(year) {
+    if (!sliders.health) return;
+    stamp("health", year);
+    var card = cards.health;
+    var n = health[year];
+    var past = document.getElementById("health-past");
+    var prior = previousYear(yearList("health"), year);
+    if (n == null) {
+      empty(card, "health-num", "average health spending per person", "health-what", "No per-person health spending figure is on this card for " + year + ".");
+      document.getElementById("health-track").style.setProperty("--fill", "0%");
+      past.hidden = true;
+      document.getElementById("health-key").textContent = "";
+      return;
+    }
+    card.classList.remove("is-empty");
+    text("health-num", money(n, 0));
+    text("health-unit", "average health spending per person");
+    document.getElementById("health-track").style.setProperty("--fill", (n / HEALTH_MAX * 100).toFixed(1) + "%");
+    past.hidden = prior == null;
+    if (prior != null) past.style.left = (health[prior] / HEALTH_MAX * 100).toFixed(1) + "%";
+    document.getElementById("health-key").innerHTML = '<span><i class="dot now"></i> ' + year + "</span>" + (prior == null ? "" : '<span><i class="dot past"></i> ' + money(health[prior], 0) + " in " + prior + "</span>");
+    var what = "Centers for Medicare & Medicaid Services, National Health Expenditure Accounts. This is all U.S. health spending in " + year + " divided by the population in those accounts, " + money(n, 0) + " per person. It counts care paid by households, employers, and government programs. It is not a bill a person receives. The bar runs from $0 to $20,000.";
+    if (prior != null) what += " The tick is " + money(health[prior], 0) + ", " + prior + ".";
+    if (year === 2024) what += " In 2024 the total was $5,278.6 billion, 18.0% of the economy, and the accounts use a population of 341 million. The federal government sponsored 31% of the spending, households 28%, private business 18%, state and local governments 16%, and other private revenue 6%. Out-of-pocket spending, paid at the point of care, was 11%, $556.6 billion. A different measure is what a household paid itself. In the 2025 Consumer Expenditure Survey, the average consumer unit spent $6,470 on health insurance, medical services, drugs, and supplies. That leaves out premiums an employer pays and care paid by Medicare, Medicaid, and other programs. The Office of the Actuary projects $16,486 per person for 2025 and $17,496 for 2026. Those are not historical figures, so they are not on this slider.";
+    text("health-what", what);
+    link("health-src", "https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data/historical", "CMS, National Health Expenditure Accounts");
+    document.getElementById("health-viz").setAttribute("aria-label", "In " + year + ", average health spending was " + money(n, 0) + " per person, on a scale from 0 to 20,000 dollars." + (prior == null ? "" : " The tick is " + money(health[prior], 0) + " in " + prior + "."));
+  }
+  function showWar(year) {
+    if (!sliders.war) return;
+    stamp("war", year);
+    var card = cards.war;
+    var past = document.getElementById("war-past");
+    if (year !== 2022) {
+      empty(card, "war-num", "estimated U.S. cost of post-9/11 wars", "war-what", "This card’s total is the estimate through fiscal year 2022.");
+      document.getElementById("war-track").style.setProperty("--fill", "0%");
+      past.hidden = true;
+      document.getElementById("war-key").textContent = "";
+      text("war-later", "");
+      return;
+    }
+    card.classList.remove("is-empty");
+    text("war-num", "$8 trillion");
+    text("war-unit", "estimated U.S. cost of post-9/11 wars,\nthrough fiscal year 2022");
+    document.getElementById("war-track").style.setProperty("--fill", "80%");
+    past.hidden = true;
+    document.getElementById("war-key").innerHTML = '<span><i class="dot now"></i> through fiscal year 2022</span>';
+    text("war-what", "Brown University’s Costs of War project, on a page updated in June 2025. From late 2001 through fiscal year 2022, it estimates the United States appropriated and is obligated to spend $8 trillion for the post-9/11 wars. About $5.8 trillion of that is appropriations. At least $2.2 trillion is obligated for veterans’ care over the coming decades, and most of that care has not been paid yet. About $2.3 trillion was spent on Overseas Contingency Operations, the budget category for these military operations. The estimate also counts interest already paid, more than $1 trillion, a higher Pentagon base budget of about $900 billion, and more than $1.1 trillion for the Department of Homeland Security, which is spending inside the United States. Future interest, state and local spending, and private costs are not included. The bar runs from $0 to $10 trillion. This is not the annual defense budget.");
+    link("war-src", "https://costsofwar.watson.brown.edu/costs/economic/us-federal-budget", "Costs of War, U.S. federal budget");
+    text("war-later", "Wars funded after fiscal year 2022 are separate, and they are not added to the $8 trillion. The Special Inspector General for Operation Atlantic Resolve reports $196.4 billion appropriated for that operation and the Ukraine response, including contributions from NATO allies and partners. Through June 30, 2026, $121.2 billion had been disbursed. Costs of War estimates that in the two years after October 7, 2023, the United States spent $21.7 billion on military aid to Israel and $9.65 billion to $12.07 billion on military operations in Yemen and the wider region, $31.35 billion to $33.77 billion in all. That page’s latest update is June 2025, so the estimate does not run through today.");
+    link("war-ukr", "https://www.ukraineoversight.gov/Funding/", "Special Inspector General, Ukraine response funding");
+    document.getElementById("war-viz").setAttribute("aria-label", "A scale from 0 to 10 trillion dollars. The estimated U.S. cost of post-9/11 wars through fiscal year 2022 is 8 trillion dollars.");
+  }
 
   function showGas(year) {
     stamp("gas", year);
@@ -671,6 +740,8 @@
     syncSlider("job");
     syncSlider("aid");
     syncSlider("home");
+    syncSlider("health");
+    syncSlider("war");
     showGas(selected.gas);
     showSpend(selected.spend);
     showCare(selected.care);
@@ -681,6 +752,8 @@
     showJob(selected.job);
     showAid(selected.aid);
     showHome(selected.home);
+    showHealth(selected.health);
+    showWar(selected.war);
   }
   function refreshBls() {
     var end = new Date().getFullYear() + 1;
@@ -771,6 +844,8 @@
   onYear("job", showJob);
   onYear("aid", showAid);
   onYear("home", showHome);
+  onYear("health", showHealth);
+  onYear("war", showWar);
   showAll();
   pullLife();
   refreshBls();
