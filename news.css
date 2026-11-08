@@ -177,6 +177,110 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   border-color: var(--mako);
   box-shadow: inset 0 -2px 0 var(--mako);
 }
+.item-pick {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 14px 0 18px;
+}
+#feed .item-pick {
+  max-height: 560px;
+  overflow: auto;
+}
+@media (max-width: 640px) {
+  #feed .item-pick { max-height: 70vh; }
+}
+.item-pick button {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  margin: 0;
+  padding: 0 0 12px;
+  text-align: left;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.35;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ink) 28%, transparent);
+  border-radius: 0;
+  cursor: pointer;
+}
+.item-pick button img,
+.item-pick .pick-shot img {
+  display: block;
+  width: 100%;
+  height: 108px;
+  object-fit: cover;
+  object-position: center;
+  background: var(--well);
+}
+.item-pick .pick-covers {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+  height: 108px;
+  padding: 6px 8px 0;
+  background: var(--well);
+}
+.item-pick .pick-covers img {
+  width: auto;
+  height: 100%;
+  max-width: calc(50% - 4px);
+  object-fit: contain;
+  background: transparent;
+}
+.item-pick .pick-title {
+  margin: 10px 10px 4px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+.item-pick .pick-when {
+  margin: 0 10px 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-yellow);
+}
+.item-pick .pick-detail {
+  margin: 0 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: color-mix(in srgb, var(--ink) 78%, transparent);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.item-pick button[data-color="red"] { --desk: var(--c-red); }
+.item-pick button[data-color="orange"] { --desk: var(--c-orange); }
+.item-pick button[data-color="yellow"] { --desk: var(--c-yellow); }
+.item-pick button[data-color="green"] { --desk: var(--c-green); }
+.item-pick button[data-color="blue"] { --desk: var(--c-blue); }
+.item-pick button[data-color="purple"] { --desk: var(--c-purple); }
+.item-pick button[data-color="pink"] { --desk: var(--c-pink); }
+.item-pick button[data-color="brown"] { --desk: var(--c-brown); }
+.item-pick button[aria-pressed="true"] {
+  border-color: var(--desk, var(--ink));
+  box-shadow: inset 0 -3px 0 var(--desk, var(--ink));
+}
+.item-pick button:focus-visible {
+  outline: 2px solid var(--mako);
+  outline-offset: 2px;
+}
+.desk.picking .desk-list > .story { display: none; }
+.desk.picking .desk-list > .story.is-open { display: flex; }
+.desk.picking .desk-list > .story.is-open .shot { height: auto; }
+.desk.picking .desk-list > .story.is-open .shot img { max-height: 420px; }
+
 .sources button:focus-visible, .read-here:focus-visible,
 .tabs button:focus-visible, .stage-tools button:focus-visible, .books button:focus-visible,
 .stage-tools input:focus-visible, .who:focus-visible, .researcher:focus-visible,
@@ -352,20 +456,28 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   scroll-margin-top: 110px;
   --desk: inherit;
   --on: inherit;
+  display: flex;
+  flex-direction: column;
   grid-column: 1 / -1;
-  grid-template-columns: 120px minmax(0, 1fr);
-  gap: 16px;
-  align-items: start;
+  gap: 10px;
+  align-items: stretch;
   margin: 10px 0 0;
-  padding: 16px;
+  padding: 14px 16px;
   box-shadow: inset 3px 0 0 var(--mako), 0 12px 28px color-mix(in srgb, #000 26%, transparent);
 }
-.card.person > div { min-width: 0; }
+.card.person > div,
+.person-head { min-width: 0; }
+.person-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 .card.person .portrait,
 .card.person .portrait-letter,
 .card.person > img {
-  width: 120px;
-  height: 150px;
+  width: 72px;
+  height: 72px;
+  flex: none;
   aspect-ratio: auto;
   object-fit: cover;
   object-position: center top;
@@ -377,15 +489,18 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 42px;
+  font-size: 26px;
   color: var(--plate-ink);
   background: var(--well);
 }
-.card.person .card-name { margin: 0 0 8px; font-size: 22px; font-weight: 650; }
-.card.person .card-seat { margin: 0 0 8px; color: var(--plate-ink); font-weight: 650; }
-.card.person .src { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.card.person .card-name { margin: 0; font-size: 22px; font-weight: 650; line-height: 1.15; }
+.card.person .card-bio { margin: 0; }
+.story .card.person p { margin-left: 0; margin-right: 0; }
+.card.person .card-seat { margin: 0; color: var(--plate-ink); font-weight: 650; }
+.card.person .src { display: flex; flex-flow: row wrap; align-items: center; gap: 8px 14px; }
 .card.person .src a, .card.person .open-page { min-width: 0; color: var(--plate-ink); text-decoration: underline; text-decoration-color: var(--mako); text-underline-offset: 3px; overflow-wrap: anywhere; }
 .card.person .with-mark { display: flex; align-items: flex-start; gap: 8px; max-width: 100%; min-width: 0; }
+.card.person .src .with-mark { align-items: center; width: auto; }
 .card.person .mark { width: 28px; height: 28px; flex: none; }
 .card.person .sigma-logo,
 .story .sigma-logo {
@@ -816,10 +931,9 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
 @media (max-width: 800px) {
   .story h3 { font-size: 22px; }
   .card { grid-template-columns: 84px minmax(0, 1fr); }
-  .card.person { grid-template-columns: 84px minmax(0, 1fr); }
   .card.person .portrait,
   .card.person .portrait-letter,
-  .card.person > img { width: 84px; height: 105px; }
-  .card.person .portrait-letter { font-size: 28px; }
+  .card.person > img { width: 64px; height: 64px; }
+  .card.person .portrait-letter { font-size: 22px; }
   .frame-hold iframe { min-height: 420px; }
 }

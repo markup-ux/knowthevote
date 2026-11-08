@@ -7775,7 +7775,6 @@ window.RESEARCHERS = {
           {
             "name": "B. Rosemary Grant",
             "bio": "In the March–April 2002 issue of American Scientist, the piece is “Adaptive Radiation of Darwin's Finches.” The digital reader does not include this issue.",
-            "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Dr._Peter_Grant_measures_bill_length_%282459195735%29.jpg/330px-Dr._Peter_Grant_measures_bill_length_%282459195735%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
             "wiki": "Peter and Rosemary Grant"
           }
         ]

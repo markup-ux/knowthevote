@@ -205,7 +205,8 @@
       var any = false;
       section.querySelectorAll(".story").forEach(function (story) {
         var earlier = story.getAttribute("data-earlier") === "true";
-        var show = (source === "all" || story.getAttribute("data-source") === source) && (!earlier || showEarlier);
+        var picked = story.classList.contains("is-open");
+        var show = (source === "all" || story.getAttribute("data-source") === source) && ((!earlier || showEarlier) || picked);
         story.hidden = !show;
         if (show) any = true;
       });
@@ -371,6 +372,7 @@
     list.querySelectorAll(".story.lead").forEach(function (story) { story.classList.remove("lead"); });
     if (first) first.classList.add("lead");
     apply();
+    mountItemPick(document.getElementById("feed"));
   }
 
   fetch("news/edge.json", { cache: "no-store" }).then(function (response) {
@@ -424,9 +426,12 @@
     linkedin: "<rect x='2' y='4' width='28' height='24' rx='2' fill='var(--c-brown)'/><rect x='4' y='6' width='24' height='20' fill='var(--c-blue)'/><circle cx='12' cy='14' r='4.2' fill='var(--c-yellow)'/><path d='M8.2 13.4 C9.2 9 14.8 9 15.8 13.4 Z' fill='var(--c-red)'/><rect x='8' y='19' width='8' height='5' rx='1' fill='var(--c-green)'/><rect x='18' y='10' width='8' height='2.2' fill='var(--c-orange)'/><rect x='18' y='14.2' width='6' height='2.2' fill='var(--c-purple)'/><rect x='18' y='18.4' width='7' height='2.2' fill='var(--c-pink)'/>",
     handle: "<rect x='2' y='2' width='28' height='28' rx='5' fill='var(--c-brown)'/><path d='M22 11 A 8 8 0 1 0 22 23' fill='none' stroke='var(--c-red)' stroke-width='3.2' stroke-linecap='round'/><path d='M22 8 V25' fill='none' stroke='var(--c-orange)' stroke-width='3.2' stroke-linecap='round'/><circle cx='14.5' cy='17' r='3.3' fill='none' stroke='var(--c-yellow)' stroke-width='2.5'/><circle cx='14.5' cy='17' r='1.45' fill='var(--c-blue)'/><circle cx='14.5' cy='9' r='2.15' fill='var(--c-green)'/><circle cx='6.6' cy='17' r='2.15' fill='var(--c-purple)'/><circle cx='14.5' cy='25' r='2.15' fill='var(--c-pink)'/>",
     team: "<rect x='5' y='2' width='22' height='28' rx='1' fill='var(--c-brown)'/><rect x='7' y='4' width='18' height='24' fill='var(--c-yellow)'/><rect x='7' y='4' width='18' height='5' fill='var(--c-red)'/><circle cx='11' cy='14.5' r='2.1' fill='var(--c-blue)'/><circle cx='16' cy='14.5' r='2.1' fill='var(--c-green)'/><circle cx='21' cy='14.5' r='2.1' fill='var(--c-purple)'/><rect x='9.2' y='17.4' width='3.6' height='5' fill='var(--c-orange)'/><rect x='14.2' y='17.4' width='3.6' height='5' fill='var(--c-pink)'/><rect x='19.2' y='17.4' width='3.6' height='5' fill='var(--c-blue)'/>",
-    apple: "<rect x='2' y='2' width='28' height='28' rx='4' fill='var(--c-brown)'/><rect x='6' y='8' width='20' height='1.7' fill='var(--c-red)'/><rect x='6' y='12' width='20' height='1.7' fill='var(--c-orange)'/><rect x='6' y='16' width='20' height='1.7' fill='var(--c-yellow)'/><rect x='6' y='20' width='20' height='1.7' fill='var(--c-green)'/><rect x='6' y='24' width='20' height='1.7' fill='var(--c-blue)'/><ellipse cx='13' cy='22.2' rx='4.2' ry='2.8' fill='var(--c-purple)'/><rect x='16.4' y='7' width='2.3' height='15.2' fill='var(--c-pink)'/>",
-    amazon: "<rect x='2' y='3' width='28' height='26' rx='3' fill='var(--c-brown)'/><rect x='5' y='18' width='3' height='8' fill='var(--c-red)'/><rect x='9.2' y='13' width='3' height='13' fill='var(--c-orange)'/><rect x='13.4' y='8' width='3' height='18' fill='var(--c-yellow)'/><rect x='17.6' y='14' width='3' height='12' fill='var(--c-green)'/><rect x='21.8' y='11' width='3' height='15' fill='var(--c-blue)'/><circle cx='15' cy='6.2' r='2' fill='var(--c-purple)'/><circle cx='26.2' cy='8' r='1.8' fill='var(--c-pink)'/>",
-    deezer: "<rect x='2' y='2' width='28' height='28' rx='5' fill='var(--c-brown)'/><path d='M8 16 Q16 6 24 16' fill='none' stroke='var(--c-red)' stroke-width='2.6' stroke-linecap='round'/><rect x='6' y='14' width='6' height='9' rx='2' fill='var(--c-orange)'/><rect x='20' y='14' width='6' height='9' rx='2' fill='var(--c-green)'/><rect x='7.3' y='16' width='3.4' height='5' rx='1' fill='var(--c-yellow)'/><rect x='21.3' y='16' width='3.4' height='5' rx='1' fill='var(--c-blue)'/><rect x='14' y='12' width='4' height='3' rx='1' fill='var(--c-purple)'/><circle cx='16' cy='24.5' r='1.7' fill='var(--c-pink)'/>"
+    site: "<rect x='2' y='2' width='28' height='28' rx='4' fill='var(--c-brown)'/><rect x='8' y='6' width='5' height='5' fill='var(--c-red)'/><rect x='8' y='11' width='5' height='4' fill='var(--c-orange)'/><rect x='8' y='15' width='5' height='4' fill='var(--c-yellow)'/><rect x='8' y='19' width='5' height='4' fill='var(--c-green)'/><rect x='8' y='23' width='5' height='4' fill='var(--c-blue)'/><rect x='13' y='23' width='6' height='4' fill='var(--c-purple)'/><rect x='19' y='23' width='5' height='4' fill='var(--c-pink)'/>",
+    github: "<rect x='2' y='2' width='28' height='28' rx='6' fill='var(--c-brown)'/><rect x='10' y='6' width='2.4' height='20' rx='1' fill='var(--c-blue)'/><path d='M12.2 10 C20 10 20 16 12.2 16' fill='none' stroke='var(--c-orange)' stroke-width='2.4' stroke-linecap='round'/><circle cx='11.2' cy='8' r='2.3' fill='var(--c-red)'/><circle cx='11.2' cy='16' r='2.3' fill='var(--c-yellow)'/><circle cx='11.2' cy='24' r='2.3' fill='var(--c-green)'/><circle cx='21' cy='10' r='2.2' fill='var(--c-purple)'/><circle cx='21' cy='16' r='2.2' fill='var(--c-pink)'/>",
+    apple: "<rect x='2' y='2' width='28' height='28' rx='7' fill='var(--c-brown)'/><ellipse cx='12.5' cy='22' rx='5' ry='3.3' transform='rotate(-22 12.5 22)' fill='var(--c-purple)'/><rect x='16.6' y='8' width='2.4' height='14.2' fill='var(--c-pink)'/><path d='M19 8.2 C25 8.6 25.2 14.8 19 14.2' fill='none' stroke='var(--c-red)' stroke-width='2.3' stroke-linecap='round'/><rect x='22.2' y='17.5' width='3.2' height='2' fill='var(--c-orange)'/><rect x='22.2' y='20.4' width='3.2' height='2' fill='var(--c-yellow)'/><rect x='22.2' y='23.3' width='3.2' height='2' fill='var(--c-green)'/><circle cx='7.4' cy='10' r='1.7' fill='var(--c-blue)'/>",
+    amazon: "<rect x='2' y='2' width='28' height='28' rx='6' fill='var(--c-brown)'/><path d='M11 9 L23 16 L11 23 Z' fill='var(--c-red)'/><path d='M13.2 12.2 L19.4 16 L13.2 19.8 Z' fill='var(--c-orange)'/><circle cx='8' cy='26.2' r='1.45' fill='var(--c-yellow)'/><circle cx='12' cy='27.3' r='1.45' fill='var(--c-green)'/><circle cx='16' cy='27.7' r='1.45' fill='var(--c-blue)'/><circle cx='20' cy='27.3' r='1.45' fill='var(--c-purple)'/><circle cx='24' cy='26.2' r='1.45' fill='var(--c-pink)'/>",
+    deezer: "<circle cx='16' cy='16' r='14' fill='var(--c-brown)'/><rect x='8' y='7' width='16' height='2.4' rx='1.2' fill='var(--c-red)'/><rect x='6' y='11' width='20' height='2.4' rx='1.2' fill='var(--c-orange)'/><rect x='9' y='15' width='14' height='2.4' rx='1.2' fill='var(--c-yellow)'/><rect x='7' y='19' width='18' height='2.4' rx='1.2' fill='var(--c-green)'/><rect x='10' y='23' width='12' height='2.4' rx='1.2' fill='var(--c-blue)'/><circle cx='24.2' cy='8' r='1.5' fill='var(--c-purple)'/><circle cx='7.6' cy='24' r='1.5' fill='var(--c-pink)'/>",
+    spotify: "<circle cx='16' cy='16' r='14' fill='var(--c-brown)'/><circle cx='16' cy='16' r='11' fill='none' stroke='var(--c-red)' stroke-width='1.7'/><circle cx='16' cy='16' r='8.2' fill='none' stroke='var(--c-orange)' stroke-width='1.7'/><circle cx='16' cy='16' r='5.5' fill='var(--c-yellow)'/><circle cx='16' cy='16' r='3.3' fill='var(--c-green)'/><circle cx='16' cy='16' r='1.5' fill='var(--c-blue)'/><circle cx='23' cy='7.5' r='1.6' fill='var(--c-purple)'/><circle cx='9' cy='24.5' r='1.6' fill='var(--c-pink)'/>"
   };
 
   function markIcon(kind) {
@@ -449,11 +454,11 @@
     card.className = "card person";
     card.id = id;
     card.appendChild(faceNode(person, true));
-    var body = document.createElement("div");
     var name = document.createElement("p");
     name.className = "card-name";
     name.textContent = person.name;
     var bio = document.createElement("p");
+    bio.className = "card-bio";
     bio.textContent = person.bio || "";
     var where = document.createElement("p");
     where.className = "card-seat with-mark";
@@ -504,12 +509,15 @@
     else if (issue.reader) note += " This edition’s reader does not name the article’s page in text.";
     if (person.email) note += " The address is printed in the issue.";
     fine.appendChild(document.createTextNode(note));
-    body.appendChild(name);
-    body.appendChild(bio);
-    body.appendChild(where);
-    if (src.childNodes.length) body.appendChild(src);
-    body.appendChild(fine);
-    card.appendChild(body);
+    var head = document.createElement("div");
+    head.className = "person-head";
+    head.appendChild(card.firstChild);
+    head.appendChild(name);
+    card.appendChild(head);
+    card.appendChild(bio);
+    src.insertBefore(where, src.firstChild);
+    if (src.childNodes.length) card.appendChild(src);
+    card.appendChild(fine);
     return card;
   }
 
@@ -604,10 +612,129 @@
     if (!id) return;
     var node = document.getElementById(id);
     if (!node) return;
+    var story = node.classList.contains("story") ? node : (node.closest && node.closest(".story"));
+    var section = story && story.closest(".desk");
+    if (story && section && section.classList.contains("picking")) openItem(section, story.id, false);
     var details = node.closest && node.closest("details");
     if (details) details.open = true;
     node.scrollIntoView({ block: "start" });
   }
+
+  function itemDetail(story) {
+    var node = story.querySelector(".standfirst");
+    if (!node) {
+      var paras = story.querySelectorAll(":scope > p");
+      for (var i = 0; i < paras.length; i++) {
+        var p = paras[i];
+        if (p.classList.contains("tag") || p.classList.contains("when") || p.classList.contains("src") || p.classList.contains("actions") || p.classList.contains("letter-by")) continue;
+        node = p;
+        break;
+      }
+    }
+    if (!node) return "";
+    var text = node.textContent.replace(/\s+/g, " ").trim();
+    if (text.length <= 160) return text;
+    var cut = text.slice(0, 160);
+    var space = cut.lastIndexOf(" ");
+    return (space > 90 ? cut.slice(0, space) : cut) + "…";
+  }
+
+  function openItem(section, id, scroll) {
+    var opened = null;
+    section.querySelectorAll(".desk-list > .story").forEach(function (story) {
+      var on = story.id === id;
+      story.classList.toggle("is-open", on);
+      if (on) {
+        story.hidden = false;
+        opened = story;
+      }
+    });
+    section.querySelectorAll(".item-pick button").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-item") === id ? "true" : "false");
+    });
+    if (scroll && opened) {
+      document.documentElement.style.scrollBehavior = "auto";
+      opened.scrollIntoView({ block: "start" });
+    }
+  }
+
+  function mountItemPick(section) {
+    if (!section) return;
+    var old = section.querySelector(".item-pick");
+    if (old) old.remove();
+    var stories = [].slice.call(section.querySelectorAll(".desk-list > .story"));
+    if (stories.length < 2) return;
+    var heading = section.querySelector("h2");
+    var nav = document.createElement("nav");
+    nav.className = "item-pick";
+    nav.setAttribute("aria-label", heading ? heading.textContent.replace(/\s+/g, " ").trim() : "Items");
+    var hash = decodeURIComponent((location.hash || "").slice(1));
+    var hashed = hash ? document.getElementById(hash) : null;
+    var hashedStory = hashed && (hashed.classList.contains("story") ? hashed : hashed.closest && hashed.closest(".story"));
+    if (hashedStory && !section.contains(hashedStory)) hashedStory = null;
+    var fallback = null;
+    stories.forEach(function (story) {
+      if (!fallback && story.getAttribute("data-earlier") !== "true") fallback = story;
+      var imgs = [].slice.call(story.querySelectorAll(":scope > .essay-fig img, :scope > .cover-pair img, :scope > .shot img"));
+      if (!imgs.length) {
+        var one = story.querySelector(":scope > figure img");
+        if (one) imgs = [one];
+      }
+      var title = story.querySelector("h3");
+      var when = story.querySelector(":scope > .when") || story.querySelector("time");
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.setAttribute("data-item", story.id);
+      btn.setAttribute("aria-pressed", "false");
+      var color = story.getAttribute("data-color");
+      if (color) btn.setAttribute("data-color", color);
+      if (imgs.length) {
+        var row = document.createElement("span");
+        row.className = imgs.length > 1 ? "pick-covers" : "pick-shot";
+        imgs.forEach(function (img) {
+          var thumb = document.createElement("img");
+          thumb.src = img.getAttribute("src");
+          thumb.alt = "";
+          row.appendChild(thumb);
+        });
+        btn.appendChild(row);
+      }
+      var titleEl = document.createElement("span");
+      titleEl.className = "pick-title";
+      titleEl.textContent = title ? title.textContent.trim() : "Untitled";
+      btn.appendChild(titleEl);
+      if (when && when.textContent.trim()) {
+        var whenEl = document.createElement("span");
+        whenEl.className = "pick-when";
+        whenEl.textContent = when.textContent.trim();
+        btn.appendChild(whenEl);
+      }
+      var detail = itemDetail(story);
+      if (detail) {
+        var detailEl = document.createElement("span");
+        detailEl.className = "pick-detail";
+        detailEl.textContent = detail;
+        btn.appendChild(detailEl);
+      }
+      btn.addEventListener("click", function () {
+        openItem(section, story.id, true);
+        if (story.id && history.replaceState) history.replaceState(null, "", "#" + story.id);
+      });
+      nav.appendChild(btn);
+    });
+    var deck = section.querySelector(".deck");
+    if (deck) deck.after(nav);
+    else section.insertBefore(nav, section.firstChild);
+    section.classList.add("picking");
+    if (section.id === "feed") {
+      var earlier = document.getElementById("earlier");
+      if (earlier && earlier.parentElement) earlier.parentElement.hidden = true;
+    }
+    var openId = (hashedStory && hashedStory.id) || (fallback && fallback.id) || stories[0].id;
+    openItem(section, openId, false);
+  }
+
+  window.mountItemPick = mountItemPick;
 
   function contactKind(link) {
     var href = link.getAttribute("href") || "";
@@ -618,6 +745,9 @@
     if (/music\.apple\.com/i.test(href)) return "apple";
     if (/music\.amazon\./i.test(href)) return "amazon";
     if (/deezer\.com/i.test(href)) return "deezer";
+    if (/spotify\.com/i.test(href)) return "spotify";
+    if (/github\.com/i.test(href)) return "github";
+    if (/leaders\.vote/i.test(href)) return "site";
     return "";
   }
 
@@ -641,10 +771,14 @@
   window.addEventListener("hashchange", revealHash);
 
   var preview = document.createElement("script");
-  preview.src = "news/preview/note.js?v=30";
+  preview.src = "news/preview/note.js?v=38";
   preview.onload = function () {
     var card = document.getElementById("card-mark");
     if (card) markLinks(card);
+    mountItemPick(document.getElementById("note"));
+    mountItemPick(document.getElementById("weekly"));
+    mountItemPick(document.getElementById("feed"));
+    revealHash();
   };
   document.body.appendChild(preview);
 
