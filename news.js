@@ -601,7 +601,7 @@
   window.addEventListener("hashchange", revealHash);
 
   var preview = document.createElement("script");
-  preview.src = "news/preview/note.js?v=27";
+  preview.src = "news/preview/note.js?v=28";
   document.body.appendChild(preview);
 
   document.querySelectorAll(".who").forEach(function (button) {
