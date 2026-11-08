@@ -1407,10 +1407,11 @@
       if (direct[7]) directMeta.push(direct[7]);
       directCopy.appendChild(el("p", "person-meta", directMeta.filter(Boolean).join(" · ")));
       directRow.appendChild(directCopy);
-      list.appendChild(directRow);
-      var directCard = contactBlock(direct);
-      directCard.classList.add("pinned-card");
-      list.appendChild(directCard);
+      directRow.setAttribute("aria-expanded", "true");
+      var directShell = el("div", "person-drop " + partyClass(direct[2]) + " is-on");
+      directShell.appendChild(directRow);
+      directShell.appendChild(memberMore(direct, null));
+      list.appendChild(directShell);
       return;
     }
     if (!q) {
@@ -1443,8 +1444,7 @@
     if (spellNote) count = spellNote + " " + count;
     countEl.textContent = count;
     presidentHits.forEach(function (person) {
-      list.appendChild(presidentRow(person));
-      if (person.id === openPresident) list.appendChild(presidentCard(person));
+      list.appendChild(presidentEntry(person));
     });
     peopleShown.forEach(function (member) {
       var row = el("button", "person-row " + partyClass(member[2]) + (member[0] === searchPerson ? " is-on" : ""));
@@ -1458,12 +1458,11 @@
       if (member[7]) meta.push(member[7]);
       copy.appendChild(el("p", "person-meta", meta.join(" · ")));
       row.appendChild(copy);
-      list.appendChild(row);
-      if (member[0] === searchPerson) {
-        var card = contactBlock(member);
-        card.classList.add("pinned-card");
-        list.appendChild(card);
-      }
+      row.setAttribute("aria-expanded", member[0] === searchPerson ? "true" : "false");
+      var shell = el("div", "person-drop " + partyClass(member[2]) + (member[0] === searchPerson ? " is-on" : ""));
+      shell.appendChild(row);
+      if (member[0] === searchPerson) shell.appendChild(memberMore(member, null));
+      list.appendChild(shell);
     });
     if (people.length > peopleShown.length) {
       var morePeople = el("button", "linkish", "Show more members");
@@ -1655,39 +1654,41 @@
     return { yea: yea, nay: nay, present: present, absent: absent, rows: rows };
   }
 
-  function closePinned() {
-    var where = pinnedAt;
-    pinned = "";
-    pinnedAt = "";
-    if (where === "senate") renderSenateDetail();
-    else if (where === "slip") renderSlipDetail();
-    else if (where === "senators") renderSenators();
-    else {
-      renderDetail();
-      renderSenators();
+  function memberMore(member, vote) {
+    var more = el("div", "person-more");
+    var added = false;
+    if (member[10]) {
+      more.appendChild(el("p", "card-seat", member[10]));
+      added = true;
     }
-  }
-
-  function memberContactCard(person, vote) {
-    var card = contactBlock(person);
-    card.classList.add("pinned-card");
-    var copy = card.querySelector(".person-copy");
-    if (vote) {
-      var code = readCast(vote, memberIndex[person[0]], person[0]);
-      copy.insertBefore(el("p", code === "Y" ? "card-yes" : code === "N" ? "card-no" : code === "P" ? "card-present" : "card-absent", "On this roll call: " + voteWord(code) + "."), copy.children[1] || null);
+    if (member[6]) {
+      var phone = el("p", "card-phone");
+      phone.appendChild(markLink("tel:" + member[6].replace(/[^\d+]/g, ""), "phone", member[6], "Phone " + member[6]));
+      more.appendChild(phone);
+      added = true;
     }
-    var clear = el("p", "");
-    var button = el("button", "linkish", "Close this member");
-    button.type = "button";
-    button.addEventListener("click", closePinned);
-    clear.appendChild(button);
-    copy.appendChild(clear);
-    if (vote && person[5] === "house") {
-      var record = memberRecord(person);
-      copy.appendChild(el("p", "", "In the roll calls shown for this year filter: " + record.yea + " yes, " + record.nay + " no, " + record.present + " present, " + record.absent + " did not vote."));
-      copy.appendChild(makeBar(record.yea, record.nay, record.present, record.absent));
+    if (member[7]) {
+      var room = el("p", "card-room");
+      if (window.leadersMark) room.appendChild(leadersMark("office", member[7]));
+      room.appendChild(el("span", "", member[7]));
+      more.appendChild(room);
+      added = true;
     }
-    return card;
+    if (member[8] || member[9]) {
+      var sites = el("p", "card-gov");
+      if (member[8]) sites.appendChild(markLink(member[8], "gov", host(member[8]), "Official website " + host(member[8])));
+      if (member[9]) sites.appendChild(markLink(member[9], "form", "", "Contact form"));
+      more.appendChild(sites);
+      added = true;
+    }
+    if (vote && member[5] === "house") {
+      var record = memberRecord(member);
+      more.appendChild(el("p", "", "In the roll calls shown for this year filter: " + record.yea + " yes, " + record.nay + " no, " + record.present + " present, " + record.absent + " did not vote."));
+      more.appendChild(makeBar(record.yea, record.nay, record.present, record.absent));
+      added = true;
+    }
+    if (!added) more.appendChild(el("p", "card-note", "No office phone or website is in the member file for this name."));
+    return more;
   }
 
   function renderDetail() {
@@ -1825,9 +1826,11 @@
       }).forEach(function (entry) {
         var here = vote.chamber === "senate" ? "senate" : "vote";
         var openHere = pinnedAt === here && entry.member[0] === pinned;
+        var shell = el("div", "person-drop " + partyClass(entry.member[2]) + (openHere ? " is-on" : ""));
         var row = el("button", "person-row " + partyClass(entry.member[2]) + (openHere ? " is-on" : ""));
         row.type = "button";
         row.setAttribute("data-person", entry.member[0]);
+        row.setAttribute("aria-expanded", openHere ? "true" : "false");
         row.appendChild(portrait(entry.member[0], entry.member[1], false));
         var copy = el("div", "");
         var name = el("strong", partyClass(entry.member[2]), entry.member[1]);
@@ -1845,8 +1848,9 @@
         swatch.appendChild(piece);
         copy.appendChild(swatch);
         row.appendChild(copy);
-        block.appendChild(row);
-        if (openHere) block.appendChild(memberContactCard(entry.member, vote));
+        shell.appendChild(row);
+        if (openHere) shell.appendChild(memberMore(entry.member, vote));
+        block.appendChild(shell);
       });
       box.appendChild(block);
     });
@@ -1987,46 +1991,44 @@
   function showPresident(id, scroll) {
     openPresident = id || "";
     if (history.replaceState) history.replaceState(null, "", openPresident ? "#president-" + openPresident : "#presidents");
-    renderPresidents();
-    if (document.getElementById("search-results") && !document.getElementById("search-results").hidden) renderSearchPanel();
+    keepPlace(function () {
+      renderPresidents();
+      if (document.getElementById("search-results") && !document.getElementById("search-results").hidden) renderSearchPanel();
+    });
     if (!scroll || !openPresident) return;
     var card = document.querySelector("#search-list [data-president-card='" + openPresident + "']")
       || document.querySelector("#president-list [data-president-card='" + openPresident + "']");
     if (card) showPersonCard(card);
   }
 
-  function presidentCard(person) {
-    var card = el("div", "person-card " + partyClass(person.party));
-    card.setAttribute("data-president-card", person.id);
-    card.appendChild(presidentFace(person, true));
-    var copy = el("div", "person-copy");
-    var name = el("h3", "");
-    name.appendChild(el("span", partyClass(person.party), person.name));
-    copy.appendChild(name);
-    var seatLine = el("p", "card-seat");
-    seatLine.appendChild(el("span", "card-party " + partyClass(person.party), partyWord(person.party)));
-    if (person.line) seatLine.appendChild(document.createTextNode(person.line));
-    copy.appendChild(seatLine);
+  function markLink(href, markName, label, aria) {
+    var anchor = link(href, "");
+    anchor.textContent = "";
+    if (window.leadersMark) anchor.appendChild(leadersMark(markName));
+    if (label) anchor.appendChild(el("span", "mark-label", label));
+    if (aria) anchor.setAttribute("aria-label", aria);
+    return anchor;
+  }
+
+  function presidentMore(person) {
+    var more = el("div", "person-more");
+    if (person.line) more.appendChild(el("p", "card-seat", person.line));
     if (person.url && person.url.indexOf("https://") === 0) {
       var sites = el("p", "card-gov");
-      var office = link(person.url, "");
-      office.textContent = "";
-      if (window.leadersMark) office.appendChild(leadersMark("gov"));
-      office.appendChild(el("span", "mark-label", host(person.url)));
-      office.setAttribute("aria-label", "Official website " + host(person.url));
-      sites.appendChild(office);
-      copy.appendChild(sites);
+      sites.appendChild(markLink(person.url, "gov", host(person.url), "Official website " + host(person.url)));
+      more.appendChild(sites);
     } else {
-      copy.appendChild(el("p", "card-note", "No office website is in the executive file for this name."));
+      more.appendChild(el("p", "card-note", "No office website is in the executive file for this name."));
     }
-    card.appendChild(copy);
-    return card;
+    return more;
   }
 
   function presidentRow(person) {
-    var row = el("button", "person-row " + partyClass(person.party) + (person.id === openPresident ? " is-on" : ""));
+    var open = person.id === openPresident;
+    var row = el("button", "person-row " + partyClass(person.party) + (open ? " is-on" : ""));
     row.type = "button";
     row.setAttribute("data-president", person.id);
+    row.setAttribute("aria-expanded", open ? "true" : "false");
     row.appendChild(presidentFace(person, false));
     var copy = el("div", "");
     copy.appendChild(el("strong", partyClass(person.party), person.name));
@@ -2035,6 +2037,15 @@
     copy.appendChild(el("p", "person-meta", meta.join(" · ")));
     row.appendChild(copy);
     return row;
+  }
+
+  function presidentEntry(person) {
+    var open = person.id === openPresident;
+    var shell = el("div", "person-drop " + partyClass(person.party) + (open ? " is-on" : ""));
+    if (open) shell.setAttribute("data-president-card", person.id);
+    shell.appendChild(presidentRow(person));
+    if (open) shell.appendChild(presidentMore(person));
+    return shell;
   }
 
   function renderPresidents() {
@@ -2047,9 +2058,21 @@
       return;
     }
     people.forEach(function (person) {
-      list.appendChild(presidentRow(person));
-      if (person.id === openPresident) list.appendChild(presidentCard(person));
+      list.appendChild(presidentEntry(person));
     });
+  }
+
+  function senatorMore(member) {
+    var more = el("div", "person-more");
+    if (member[8] || member[9]) {
+      var sites = el("p", "card-gov");
+      if (member[8]) sites.appendChild(markLink(member[8], "gov", host(member[8]), "Official website " + host(member[8])));
+      if (member[9]) sites.appendChild(markLink(member[9], "form", "", "Contact form"));
+      more.appendChild(sites);
+    } else {
+      more.appendChild(el("p", "card-note", "No office website is in the member file for this name."));
+    }
+    return more;
   }
 
   function renderSenators() {
@@ -2075,9 +2098,11 @@
       list.appendChild(el("h3", "", stateName(code)));
       groups[code].sort(function (a, b) { return a[1].localeCompare(b[1]); }).forEach(function (member) {
         var openHere = pinnedAt === "senators" && member[0] === pinned;
+        var shell = el("div", "person-drop " + partyClass(member[2]) + (openHere ? " is-on" : ""));
         var row = el("button", "person-row " + partyClass(member[2]) + (openHere ? " is-on" : ""));
         row.type = "button";
         row.setAttribute("data-person", member[0]);
+        row.setAttribute("aria-expanded", openHere ? "true" : "false");
         row.appendChild(portrait(member[0], member[1], false));
         var copy = el("div", "");
         copy.appendChild(el("strong", partyClass(member[2]), member[1]));
@@ -2089,8 +2114,9 @@
         if (member[7]) meta.push(member[7]);
         copy.appendChild(el("p", "person-meta", meta.join(" · ")));
         row.appendChild(copy);
-        list.appendChild(row);
-        if (openHere) list.appendChild(memberContactCard(member, null));
+        shell.appendChild(row);
+        if (openHere) shell.appendChild(senatorMore(member));
+        list.appendChild(shell);
       });
     });
   }
@@ -2388,9 +2414,11 @@
       wrap.appendChild(el("h3", "", people.length === 1 ? "Home-state senator" : "Home-state senators"));
       people.forEach(function (member) {
         var openHere = pinnedAt === "slip" && member[0] === pinned;
+        var shell = el("div", "person-drop " + partyClass(member[2]) + (openHere ? " is-on" : ""));
         var row = el("button", "person-row " + partyClass(member[2]) + (openHere ? " is-on" : ""));
         row.type = "button";
         row.setAttribute("data-person", member[0]);
+        row.setAttribute("aria-expanded", openHere ? "true" : "false");
         row.appendChild(portrait(member[0], member[1], false));
         var copy = el("div", "");
         copy.appendChild(el("strong", partyClass(member[2]), member[1]));
@@ -2399,8 +2427,9 @@
         if (member[6]) meta.push(member[6]);
         copy.appendChild(el("p", "person-meta", meta.join(" · ")));
         row.appendChild(copy);
-        wrap.appendChild(row);
-        if (openHere) wrap.appendChild(memberContactCard(member, null));
+        shell.appendChild(row);
+        if (openHere) shell.appendChild(memberMore(member, null));
+        wrap.appendChild(shell);
       });
     }
     box.appendChild(wrap);
@@ -3043,7 +3072,8 @@
       }
       var president = event.target.closest("button[data-president]");
       if (president) {
-        showPresident(president.getAttribute("data-president"), true);
+        var picked = president.getAttribute("data-president");
+        showPresident(openPresident === picked ? "" : picked, false);
         return;
       }
       var person = event.target.closest("button[data-person]");
@@ -3105,7 +3135,7 @@
       var button = event.target.closest("button[data-president]");
       if (!button) return;
       var id = button.getAttribute("data-president");
-      showPresident(openPresident === id ? "" : id, openPresident !== id);
+      showPresident(openPresident === id ? "" : id, false);
     });
     document.getElementById("senate-list").addEventListener("click", function (event) {
       var button = event.target.closest("button[data-vote]");
@@ -3132,6 +3162,7 @@
       if (event.target.closest("#open-senate")) where = "senate";
       else if (event.target.closest("#open-slip")) where = "slip";
       else if (event.target.closest("#senator-list")) where = "senators";
+      var previous = pinnedAt;
       if (pinned === id && pinnedAt === where) {
         pinned = "";
         pinnedAt = "";
@@ -3139,14 +3170,18 @@
         pinned = id;
         pinnedAt = where;
       }
-      keepPlace(function () {
-        if (where === "senate") renderSenateDetail();
-        else if (where === "slip") renderSlipDetail();
-        else if (where === "senators") renderSenators();
+      function paintPinned(place) {
+        if (place === "senate") renderSenateDetail();
+        else if (place === "slip") renderSlipDetail();
+        else if (place === "senators") renderSenators();
         else {
           renderDetail();
           renderSenators();
         }
+      }
+      keepPlace(function () {
+        paintPinned(where);
+        if (previous && previous !== where) paintPinned(previous);
       });
     });
     document.getElementById("congress-check").addEventListener("click", function () { checkLive(true); });

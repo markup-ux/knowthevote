@@ -293,6 +293,52 @@ button.count-jump { display: inline; font: inherit; background: none; border: 0;
 #floor-list .floor-row.is-on,
 .intro-row.is-on,
 .person-row.is-on { background: color-mix(in srgb, var(--c-card) 20%, var(--chip)); }
+.person-drop {
+  --c-card: var(--tone-party-o, #5c4a2a);
+  --c-party: var(--c-card);
+  --c-seat: var(--tone-seat, #243e6b);
+  --c-phone: var(--tone-phone, #0c5c64);
+  --c-room: var(--tone-room, #8a4e1a);
+  --c-gov: var(--tone-gov, #0e5f96);
+  margin: 8px 0;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--c-card) 10%, var(--chip));
+  box-shadow: inset 6px 0 0 var(--c-card);
+}
+.person-drop.party-d { --c-card: var(--tone-party-d, #1e4d7b); }
+.person-drop.party-r { --c-card: var(--tone-party-r, #8d3232); }
+.person-drop.party-i { --c-card: var(--tone-party-i, #246b3a); }
+.person-drop.party-o { --c-card: var(--tone-party-o, #5c4a2a); }
+.person-drop.is-on { background: color-mix(in srgb, var(--c-card) 20%, var(--chip)); }
+.person-drop > .person-row,
+.person-drop > .person-row.is-on {
+  margin: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.person-drop .person-more {
+  padding: 0 16px 14px 86px;
+  overflow: hidden;
+  animation: card-expand 220ms ease-out;
+}
+.person-drop .person-more p { margin: 4px 0; }
+.person-drop .person-more a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; text-underline-offset: 3px; }
+.person-drop .card-mark { width: 22px; height: 22px; flex: none; display: block; }
+.person-drop .mark-label { text-decoration: underline; text-underline-offset: 3px; }
+.person-drop .card-seat { color: var(--c-seat); }
+.person-drop .card-phone,
+.person-drop .card-phone a { color: var(--c-phone); }
+.person-drop .card-room { color: var(--c-room); }
+.person-drop .card-gov,
+.person-drop .card-gov a { color: var(--c-gov); }
+.person-drop .card-phone,
+.person-drop .card-room,
+.person-drop .card-gov { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 12px; }
+.person-drop .card-note { color: var(--muted); }
+@media (prefers-reduced-motion: reduce) {
+  .person-drop .person-more { animation: none; }
+}
 .intro-row > .vote-row { margin: 0; padding: 0 0 2px; border-radius: 0; background: transparent; box-shadow: none; }
 strong.with-money, h2.with-money, h3.with-money, p.with-money { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
 .money-chip { display: inline-block; padding: 2px 8px; font-weight: 750; line-height: 1.35; white-space: nowrap; }
@@ -709,6 +755,6 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js?v=5"></script>
 <script src="logos.js?v=4"></script>
-<script src="congress.js?v=59"></script>
+<script src="congress.js?v=61"></script>
 </body>
 </html>
