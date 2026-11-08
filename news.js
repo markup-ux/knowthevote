@@ -404,6 +404,7 @@
     time.textContent = post.dateLabel || post.date || "";
     when.appendChild(time);
     if (post.author) when.appendChild(document.createTextNode(" · " + post.author));
+    if (post.caption) article.setAttribute("data-caption", post.caption);
     var body = document.createElement("p");
     body.textContent = post.text || "";
     var src = document.createElement("p");
@@ -431,21 +432,150 @@
     return article;
   }
 
+  function storySlug(url) {
+    return canonUrl(url).split("/").pop();
+  }
+
+  function authorId(name) {
+    return "card-" + String(name || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+
+  function ensureAuthor(post) {
+    var name = post && post.author;
+    if (!name) return "";
+    var id = authorId(name);
+    if (document.getElementById(id)) return id;
+    var host = document.querySelector("#weekly .author-cards");
+    if (!host || !post.authorPage) return "";
+    var card = document.createElement("article");
+    card.className = "card";
+    card.id = id;
+    card.hidden = true;
+    card.setAttribute("data-color", "green");
+    if (post.avatar) {
+      var img = document.createElement("img");
+      img.src = post.avatar;
+      img.alt = "";
+      card.appendChild(img);
+    }
+    var body = document.createElement("div");
+    var title = document.createElement("p");
+    title.className = "card-name";
+    title.textContent = name;
+    var role = document.createElement("p");
+    role.className = "when";
+    role.textContent = "People of Color in Tech";
+    var note = document.createElement("p");
+    note.textContent = "The portrait is the one on POCIT's author page.";
+    var src = document.createElement("p");
+    src.className = "src";
+    var page = document.createElement("a");
+    page.href = post.authorPage;
+    page.target = "_blank";
+    page.rel = "noopener noreferrer";
+    page.textContent = "Pieces at POCIT";
+    src.appendChild(page);
+    if (post.authorSite) {
+      var site = document.createElement("a");
+      site.href = post.authorSite;
+      site.target = "_blank";
+      site.rel = "noopener noreferrer";
+      site.textContent = post.authorSite.replace(/^https?:\/\//, "").replace(/\/$/, "");
+      src.appendChild(document.createTextNode(" "));
+      src.appendChild(site);
+    }
+    body.appendChild(title);
+    body.appendChild(role);
+    body.appendChild(note);
+    body.appendChild(src);
+    card.appendChild(body);
+    host.appendChild(card);
+    return id;
+  }
+
+  function authorButton(name) {
+    var id = authorId(name);
+    var card = document.getElementById(id);
+    if (!card) return null;
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "who";
+    button.setAttribute("data-color", card.getAttribute("data-color") || "green");
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-controls", id);
+    button.setAttribute("aria-label", name + ", contact");
+    button.appendChild(document.createTextNode(name));
+    return button;
+  }
+
+  function wireWhen(story) {
+    var when = story.querySelector(":scope > .when");
+    if (!when || when.querySelector(".who")) return;
+    var parts = when.textContent.split("·");
+    if (parts.length < 2) return;
+    var name = parts[parts.length - 1].trim();
+    if (!name || name === "POCIT") return;
+    var button = authorButton(name);
+    if (!button) return;
+    var time = when.querySelector("time");
+    when.textContent = "";
+    if (time) when.appendChild(time);
+    when.appendChild(document.createTextNode(time ? " · " : ""));
+    when.appendChild(button);
+    if (story.querySelector(":scope > .fine")) return;
+    var fine = document.createElement("p");
+    fine.className = "fine";
+    var credit = "Written by " + name + " for People of Color in Tech.";
+    var caption = story.getAttribute("data-caption");
+    if (caption) credit += " POCIT captions the picture “" + caption + ".”";
+    else credit += " The picture is the one published with the piece.";
+    fine.textContent = credit;
+    var src = story.querySelector(":scope > .src");
+    if (src) src.before(fine);
+    else story.appendChild(fine);
+  }
+
+  function prepareWeekly() {
+    document.querySelectorAll("#weekly .desk-list > .story").forEach(wireWhen);
+  }
+
+  function foldWeekly() {
+    var list = document.querySelector("#weekly .desk-list");
+    if (!list) return;
+    var openCount = document.querySelectorAll("#feed .desk-list > .story:not([data-earlier])").length || 18;
+    var stories = [].slice.call(list.querySelectorAll(":scope > .story"));
+    stories.sort(function (a, b) {
+      var da = (a.querySelector("time") || {}).getAttribute ? a.querySelector("time").getAttribute("datetime") || "" : "";
+      var db = (b.querySelector("time") || {}).getAttribute ? b.querySelector("time").getAttribute("datetime") || "" : "";
+      return db.localeCompare(da) || 0;
+    });
+    stories.forEach(function (story, index) {
+      list.appendChild(story);
+      if (index >= openCount) story.setAttribute("data-earlier", "true");
+      else story.removeAttribute("data-earlier");
+    });
+  }
+
   function takeWeekly(data) {
     var list = document.querySelector("#weekly .desk-list");
     if (!list || !data || !data.posts) return;
     var known = {};
     list.querySelectorAll(".src a").forEach(function (link) {
       known[canonUrl(link.getAttribute("href"))] = true;
+      known[storySlug(link.getAttribute("href"))] = true;
+    });
+    (data.posts || []).forEach(function (post) {
+      if (post && post.author) ensureAuthor(post);
     });
     var fresh = data.posts.filter(function (post) {
-      return post && post.url && !known[canonUrl(post.url)];
+      return post && post.url && !known[canonUrl(post.url)] && !known[storySlug(post.url)];
     });
-    fresh.sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
+    fresh.sort(function (a, b) { return String(a.date || "").localeCompare(String(b.date || "")); });
     fresh.forEach(function (post) {
       list.insertBefore(weeklyCard(post), list.firstChild);
     });
-    if (!fresh.length) return;
+    foldWeekly();
+    prepareWeekly();
     apply();
     mountItemPick(document.getElementById("weekly"));
   }
@@ -780,7 +910,7 @@
       var paras = story.querySelectorAll(":scope > p");
       for (var i = 0; i < paras.length; i++) {
         var p = paras[i];
-        if (p.classList.contains("tag") || p.classList.contains("when") || p.classList.contains("src") || p.classList.contains("actions") || p.classList.contains("letter-by")) continue;
+        if (p.classList.contains("tag") || p.classList.contains("when") || p.classList.contains("src") || p.classList.contains("actions") || p.classList.contains("letter-by") || p.classList.contains("fine")) continue;
         node = p;
         break;
       }
@@ -814,8 +944,7 @@
 
   function mountItemPick(section) {
     if (!section) return;
-    var old = section.querySelector(".item-pick");
-    if (old) old.remove();
+    section.querySelectorAll(".item-pick, .more-pieces").forEach(function (node) { node.remove(); });
     var stories = [].slice.call(section.querySelectorAll(".desk-list > .story"));
     if (stories.length < 2) return;
     var heading = section.querySelector("h2");
@@ -879,6 +1008,26 @@
     var deck = section.querySelector(".deck");
     if (deck) deck.after(nav);
     else section.insertBefore(nav, section.firstChild);
+    if (section.id === "weekly") {
+      var earlyButtons = [].slice.call(nav.querySelectorAll("button")).filter(function (btn) {
+        var story = document.getElementById(btn.getAttribute("data-item"));
+        return story && story.getAttribute("data-earlier") === "true";
+      });
+      if (earlyButtons.length) {
+        var details = document.createElement("details");
+        details.className = "more-pieces";
+        var summary = document.createElement("summary");
+        summary.textContent = earlyButtons.length + (earlyButtons.length === 1 ? " earlier piece" : " earlier pieces");
+        var more = document.createElement("nav");
+        more.className = "item-pick";
+        more.setAttribute("aria-label", "Earlier POCIT pieces");
+        earlyButtons.forEach(function (btn) { more.appendChild(btn); });
+        details.appendChild(summary);
+        details.appendChild(more);
+        nav.after(details);
+        if (hashedStory && hashedStory.getAttribute("data-earlier") === "true") details.open = true;
+      }
+    }
     section.classList.add("picking");
     if (section.id === "feed") {
       var earlier = document.getElementById("earlier");
@@ -916,6 +1065,7 @@
   }
 
   markLinks(document.querySelector(".contacts") || document);
+  prepareWeekly();
 
   paintFrame();
   apply();
@@ -936,24 +1086,25 @@
   };
   document.body.appendChild(preview);
 
-  document.querySelectorAll(".who").forEach(function (button) {
-    button.addEventListener("click", function () {
-      var id = button.getAttribute("aria-controls");
-      var card = document.getElementById(id);
-      var open = button.getAttribute("aria-expanded") === "true";
-      document.querySelectorAll(".who").forEach(function (other) {
-        other.setAttribute("aria-expanded", "false");
-      });
-      document.querySelectorAll(".contacts .card").forEach(function (other) {
-        other.hidden = true;
-      });
-      if (!open && card) {
-        document.querySelectorAll('.who[aria-controls="' + id + '"]').forEach(function (other) {
-          other.setAttribute("aria-expanded", "true");
-        });
-        card.hidden = false;
-        focusCard(card);
-      }
+  document.addEventListener("click", function (event) {
+    var button = event.target.closest && event.target.closest(".who");
+    if (!button) return;
+    var id = button.getAttribute("aria-controls");
+    var card = id && document.getElementById(id);
+    var open = button.getAttribute("aria-expanded") === "true";
+    document.querySelectorAll(".who").forEach(function (other) {
+      other.setAttribute("aria-expanded", "false");
     });
+    document.querySelectorAll(".contacts .card, .author-cards .card, .story > .card").forEach(function (other) {
+      other.hidden = true;
+    });
+    if (!open && card) {
+      var story = button.closest(".story");
+      var when = story && story.querySelector(":scope > .when");
+      if (when) when.after(card);
+      button.setAttribute("aria-expanded", "true");
+      card.hidden = false;
+      focusCard(card);
+    }
   });
 })();

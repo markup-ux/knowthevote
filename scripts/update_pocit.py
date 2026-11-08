@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HTML = os.path.join(ROOT, "news.html")
 OUT = os.path.join(ROOT, "news", "pocit.json")
-API = "https://peopleofcolorintech.com/wp-json/wp/v2/posts?per_page=20&_embed=1"
+API = "https://peopleofcolorintech.com/wp-json/wp/v2/posts?per_page=20&_embed=1&page=%d"
 UA = {"User-Agent": "LeadersVoteNews/1.0 (markup.ux@gmail.com)"}
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown"]
 
@@ -46,12 +46,35 @@ def load_posts():
     return [post for post in posts if post.get("url")]
 
 
+def slug(url):
+    return canon(url).rsplit("/", 1)[-1]
+
+
 def known_urls(posts):
-    found = set(canon(url) for url in re.findall(
-        r'href="(https://peopleofcolorintech\.com/[^"]+)"', weekly_block()))
+    found = set()
+    for url in re.findall(r'href="(https://peopleofcolorintech\.com/(?:articles|founders)/[^"]+)"', weekly_block()):
+        found.add(canon(url))
+        found.add(slug(url))
     for post in posts:
         found.add(canon(post.get("url")))
+        found.add(slug(post.get("url")))
     return found
+
+
+def edge_total():
+    text = open(HTML, encoding="utf-8").read()
+    start = text.find('id="feed"')
+    if start < 0:
+        return 0
+    return len(re.findall(r'data-source="feed"', text[start:]))
+
+
+def weekly_total(posts):
+    block = weekly_block()
+    html_slugs = set(slug(url) for url in re.findall(
+        r'href="(https://peopleofcolorintech\.com/(?:articles|founders)/[^"]+)"', block))
+    extra = [post for post in posts if slug(post.get("url")) not in html_slugs]
+    return len(re.findall(r'<article class="story"', block)) + len(extra)
 
 
 def newest_date(posts):
@@ -77,57 +100,94 @@ def story_id(url):
     return "n-" + slug[:80]
 
 
+def media(post):
+    embedded = (post.get("_embedded") or {}).get("wp:featuredmedia") or []
+    if embedded and isinstance(embedded, list):
+        return embedded[0]
+    return {}
+
+
 def picture(post):
-    media = (post.get("_embedded") or {}).get("wp:featuredmedia") or []
-    if media and isinstance(media, list):
-        return media[0].get("source_url") or ""
-    return ""
+    return media(post).get("source_url") or ""
+
+
+def caption(post):
+    raw = (media(post).get("caption") or {}).get("rendered") or ""
+    return plain(raw)
 
 
 def writer(post):
     authors = (post.get("_embedded") or {}).get("author") or []
     if authors and isinstance(authors, list):
-        return plain(authors[0].get("name") or "")
-    return ""
+        return authors[0]
+    return {}
 
 
 def blurb(author, label):
     if author:
-        return "%s published this piece at POCIT on %s. The article is on their site." % (author, label)
-    return "POCIT published this piece on %s. The article is on their site." % label
+        return "%s wrote this for People of Color in Tech on %s. The article is on their site." % (author, label)
+    return "People of Color in Tech published this piece on %s. The article is on their site." % label
+
+
+def pack(post, used):
+    url = (post.get("link") or "").split("?")[0]
+    day = (post.get("date") or "")[:10]
+    title = plain((post.get("title") or {}).get("rendered"))
+    if not url or not day or not title:
+        return None
+    if title[-1] not in ".!?":
+        title += "."
+    person = writer(post)
+    author = plain(person.get("name") or "")
+    return {
+        "id": story_id(url),
+        "url": url,
+        "title": title,
+        "date": day,
+        "dateLabel": date_label(day),
+        "author": author,
+        "image": picture(post),
+        "caption": caption(post),
+        "text": blurb(author, date_label(day)),
+        "color": COLORS[used % len(COLORS)],
+        "avatar": ((person.get("avatar_urls") or {}).get("96") or ""),
+        "authorPage": person.get("link") or "",
+        "authorSite": person.get("url") or "",
+    }
 
 
 def main():
     posts = load_posts()
     known = known_urls(posts)
     floor = newest_date(posts)
+    room = edge_total() - weekly_total(posts)
     used = len(re.findall(r'<article class="story', weekly_block())) + len(posts)
     fresh = []
-    for post in fetch(API):
-        url = (post.get("link") or "").split("?")[0]
-        day = (post.get("date") or "")[:10]
-        if not url or not day or day < floor or canon(url) in known:
-            continue
-        title = plain((post.get("title") or {}).get("rendered"))
-        if not title:
-            continue
-        if title[-1] not in ".!?":
-            title += "."
-        label = date_label(day)
-        author = writer(post)
-        fresh.append({
-            "id": story_id(url),
-            "url": url,
-            "title": title,
-            "date": day,
-            "dateLabel": label,
-            "author": author,
-            "image": picture(post),
-            "text": blurb(author, label),
-            "color": COLORS[used % len(COLORS)],
-        })
-        used += 1
-        known.add(canon(url))
+    page = 1
+    while page <= 5:
+        batch = fetch(API % page)
+        if not batch:
+            break
+        for post in batch:
+            url = (post.get("link") or "").split("?")[0]
+            day = (post.get("date") or "")[:10]
+            if not url or not day or canon(url) in known or slug(url) in known:
+                continue
+            newer = day >= floor
+            if not newer and room <= 0:
+                continue
+            packed = pack(post, used)
+            if not packed:
+                continue
+            fresh.append(packed)
+            used += 1
+            if not newer:
+                room -= 1
+            known.add(canon(url))
+            known.add(slug(url))
+        if room <= 0 and all((post.get("date") or "")[:10] < floor for post in batch):
+            break
+        page += 1
     fresh.sort(key=lambda post: post["date"])
     if not fresh:
         print("unchanged")

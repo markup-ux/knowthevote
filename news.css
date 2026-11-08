@@ -187,6 +187,40 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   max-height: 560px;
   overflow: auto;
 }
+#weekly .more-pieces { margin: 0 0 18px; }
+#weekly .more-pieces summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 4px 0 8px;
+}
+#weekly .more-pieces summary:focus-visible {
+  outline: 2px solid var(--mako);
+  outline-offset: 2px;
+}
+#weekly .story > .when .who {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  vertical-align: baseline;
+}
+#weekly .story > .when .who .face { display: none; }
+#weekly .story > .when .who[aria-expanded="true"] {
+  background: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+.story .fine {
+  color: color-mix(in srgb, var(--ink) 72%, transparent);
+  font-size: 14px;
+}
 @media (max-width: 640px) {
   #feed .item-pick { max-height: 70vh; }
 }
@@ -598,7 +632,7 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   border: 0;
   padding: 0;
 }
-.story .when {
+.story > .when {
   display: block;
   align-self: flex-start;
   margin-top: -4px;
@@ -610,7 +644,7 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-#journal .story .when {
+#journal .story > .when {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
@@ -624,7 +658,7 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   letter-spacing: 0.16em;
   line-height: 1.2;
 }
-#journal .story .when::after {
+#journal .story > .when::after {
   content: "";
   width: 32px;
   height: 2px;
