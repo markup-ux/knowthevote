@@ -2,8 +2,8 @@
   "source": "https://results.elections.org.za/dashboards/lge/MapsJason/2026/EEID1887LiteMapsNational.js",
   "partySource": "https://results.elections.org.za/dashboards/lge/MapsJason/2016/PartyList.js",
   "eventId": 1887,
-  "reportDate": "2026-11-08T17:30:46.995712+02:00",
-  "fetchedAt": "2026-11-08T15:34:21+00:00",
+  "reportDate": "2026-11-08T21:53:56.5219656+02:00",
+  "fetchedAt": "2026-11-08T19:55:44+00:00",
   "progress": {
     "vdComplete": 23694,
     "vdExpected": 23696,
@@ -92,31 +92,31 @@
   "national": [
     {
       "id": 7,
-      "votes": 9160574,
+      "votes": 9160691,
       "percent": 30.76,
       "order": 1
     },
     {
       "id": 52,
-      "votes": 7337313,
+      "votes": 7339294,
       "percent": 24.64,
       "order": 2
     },
     {
       "id": 1748,
-      "votes": 2910204,
+      "votes": 2910914,
       "percent": 9.77,
       "order": 3
     },
     {
       "id": 3,
-      "votes": 1397121,
+      "votes": 1396919,
       "percent": 4.69,
       "order": 4
     },
     {
       "id": 957,
-      "votes": 588334,
+      "votes": 588333,
       "percent": 1.98,
       "order": 5
     },
@@ -134,19 +134,19 @@
     },
     {
       "id": -2,
-      "votes": 2657570,
+      "votes": 2657435,
       "percent": 8.63,
       "order": 8
     },
     {
       "id": 945,
-      "votes": 1851949,
+      "votes": 1851983,
       "percent": 6.22,
       "order": 9
     },
     {
       "id": 1511,
-      "votes": 1689296,
+      "votes": 1689385,
       "percent": 5.67,
       "order": 10
     },
@@ -158,13 +158,13 @@
     },
     {
       "id": 4,
-      "votes": 890197,
+      "votes": 890264,
       "percent": 2.99,
       "order": 12
     },
     {
       "id": 1318,
-      "votes": 291846,
+      "votes": 291920,
       "percent": 0.98,
       "order": 13
     },
@@ -1204,12 +1204,12 @@
     {
       "code": "ETH",
       "name": "eThekwini",
-      "votes": 772107,
+      "votes": 773052,
       "rows": [
         {
           "id": 1748,
-          "votes": 772107,
-          "percent": 38.33
+          "votes": 773052,
+          "percent": 38.29
         }
       ],
       "leader": "MKP",
@@ -1374,12 +1374,12 @@
     {
       "code": "KZN225",
       "name": "Msunduzi",
-      "votes": 156743,
+      "votes": 156508,
       "rows": [
         {
           "id": 1748,
-          "votes": 156743,
-          "percent": 38.63
+          "votes": 156508,
+          "percent": 38.74
         }
       ],
       "leader": "MKP",
