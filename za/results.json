@@ -2,10 +2,10 @@
   "source": "https://results.elections.org.za/dashboards/lge/MapsJason/2026/EEID1887LiteMapsNational.js",
   "partySource": "https://results.elections.org.za/dashboards/lge/MapsJason/2016/PartyList.js",
   "eventId": 1887,
-  "reportDate": "2026-11-09T04:44:02.6221626+02:00",
-  "fetchedAt": "2026-11-09T02:50:21+00:00",
+  "reportDate": "2026-11-09T12:39:12.9017239+02:00",
+  "fetchedAt": "2026-11-09T10:40:31+00:00",
   "progress": {
-    "vdComplete": 23694,
+    "vdComplete": 23693,
     "vdExpected": 23696,
     "wardsComplete": 4484,
     "wardsExpected": 4485,
@@ -92,13 +92,13 @@
   "national": [
     {
       "id": 7,
-      "votes": 9160691,
+      "votes": 9160614,
       "percent": 30.76,
       "order": 1
     },
     {
       "id": 52,
-      "votes": 7339294,
+      "votes": 7338553,
       "percent": 24.64,
       "order": 2
     },
@@ -116,7 +116,7 @@
     },
     {
       "id": 957,
-      "votes": 588333,
+      "votes": 588331,
       "percent": 1.98,
       "order": 5
     },
@@ -134,37 +134,37 @@
     },
     {
       "id": -2,
-      "votes": 2657435,
+      "votes": 2657412,
       "percent": 8.63,
       "order": 8
     },
     {
       "id": 945,
-      "votes": 1851983,
+      "votes": 1851954,
       "percent": 6.22,
       "order": 9
     },
     {
       "id": 1511,
-      "votes": 1689385,
+      "votes": 1689369,
       "percent": 5.67,
       "order": 10
     },
     {
       "id": 445,
-      "votes": 709116,
+      "votes": 709104,
       "percent": 2.38,
       "order": 11
     },
     {
       "id": 4,
-      "votes": 890264,
+      "votes": 890081,
       "percent": 2.99,
       "order": 12
     },
     {
       "id": 1318,
-      "votes": 291920,
+      "votes": 291919,
       "percent": 0.98,
       "order": 13
     },
@@ -842,12 +842,12 @@
     {
       "code": "FS184",
       "name": "Matjhabeng",
-      "votes": 73253,
+      "votes": 73176,
       "rows": [
         {
           "id": 7,
-          "votes": 73253,
-          "percent": 35.54
+          "votes": 73176,
+          "percent": 35.69
         }
       ],
       "leader": "ANC",
