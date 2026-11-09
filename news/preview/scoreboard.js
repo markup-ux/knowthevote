@@ -72,7 +72,10 @@
     fitSplit();
     if (!panel.hidden) placeDrawer();
   });
-  opener.addEventListener("click", showScoreboard);
+  opener.addEventListener("click", function () {
+    if (panel.hidden) showScoreboard();
+    else hideScoreboard();
+  });
   closer.addEventListener("click", hideScoreboard);
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && !panel.hidden) hideScoreboard();
