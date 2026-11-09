@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t);var raw=localStorage.getItem("leaders-look");if(raw){var o=JSON.parse(raw),el=document.documentElement,css="",st=document.createElement("style");function hex(v){return typeof v==="string"&&/^#[0-9a-fA-F]{6}$/.test(v)?v:""}function lum(h){var n=parseInt(h.slice(1),16);return (((n>>16)&255)*3+((n>>8)&255)*6+(n&255))/10}function face(v){return typeof v==="string"&&v.length>0&&v.length<80?v:""}var body=face(o.body),display=face(o.display),paper=hex(o.paper),ink=hex(o.ink),bar=hex(o.bar),stripe=hex(o.stripe);if(body){el.style.setProperty("--look-body",body);el.classList.add("look-body");css+="html.look-body body{font-family:var(--look-body)}"}if(display){el.style.setProperty("--look-display",display);el.classList.add("look-display");css+="html.look-display h1,html.look-display h2,html.look-display h3,html.look-display .brand{font-family:var(--look-display)}"}if(paper){el.style.setProperty("--look-paper",paper);el.classList.add("look-paper");css+="html.look-paper{--paper:var(--look-paper)}"}if(ink){el.style.setProperty("--look-ink",ink);el.classList.add("look-ink");css+="html.look-ink{--ink:var(--look-ink)}"}if(bar){el.style.setProperty("--look-bar",bar);el.style.setProperty("--look-bar-ink",lum(bar)>150?"#1c1915":"#f4f7fb");el.classList.add("look-bar");css+="html.look-bar body{--bar:var(--look-bar);--bar-ink:var(--look-bar-ink)}"}if(stripe){el.style.setProperty("--look-stripe",stripe);el.classList.add("look-stripe");css+="html.look-stripe body{--bar-stripe:var(--look-stripe);--bar-hover:var(--look-stripe)}"}if(css){st.textContent=css;document.head.appendChild(st)}}}catch(e){}</script>
-<script src="theme.js?v=39" defer></script>
+<script src="theme.js?v=40" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote · News</title>
-<meta name="description" content="American Scientist, POCIT Weekly, and The Edge, Dr. Martha Boeckenfeld's public notes.">
+<meta name="description" content="American Scientist, POCIT Weekly, Magnolia Lookbooks, Nyle, and The Edge, Dr. Martha Boeckenfeld's public notes.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="guide.css?v=life19">
-<link rel="stylesheet" href="news.css?v=55">
+<link rel="stylesheet" href="news.css?v=65">
 <link rel="icon" href="https://leaders.vote/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -63,14 +63,100 @@
     </nav>
   </div>
 </header>
+<nav class="pub-dock" aria-label="Other publications" aria-hidden="true">
+  <button type="button" data-source="all" aria-pressed="true"><span>All</span></button>
+  <button type="button" data-source="note" aria-pressed="false"><span>Publisher</span></button>
+  <button type="button" data-source="weekly" aria-pressed="false"><span>POCIT</span></button>
+  <button type="button" data-source="look" aria-pressed="false"><span>Magnolia</span></button>
+  <button type="button" data-source="nyle" aria-pressed="false"><span>Nyle</span></button>
+  <button type="button" data-source="feed" aria-pressed="false"><span>Edge</span></button>
+  <button type="button" data-source="journal" aria-pressed="false"><span>Scientist</span></button>
+</nav>
 <main class="nr">
   <div class="wrap nr-wrap">
     <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
+    <div class="sources sources-top" role="group" aria-label="Publication">
+      <button type="button" data-source="all" aria-pressed="true">All</button>
+      <button type="button" data-source="weekly" aria-pressed="false">POCIT Weekly</button>
+      <button type="button" data-source="look" aria-pressed="false">Magnolia Lookbooks</button>
+      <button type="button" data-source="nyle" aria-pressed="false">Nyle</button>
+      <button type="button" data-source="feed" aria-pressed="false">The Edge</button>
+      <button type="button" data-source="journal" aria-pressed="false">American Scientist</button>
+    </div>
     <div class="mast">
       <p class="kicker">Newsroom · <time id="today"></time></p>
       <h1>News.</h1>
-      <p class="deck">American Scientist is Sigma Xi's magazine, science written by the researchers who did the work. The November–December 2026 issue is in their reader, and every page turns here. POCIT Weekly is the letter from People of Color in Tech. <button type="button" class="who" data-color="blue" aria-expanded="false" aria-controls="card-michael"><img class="face" src="https://peopleofcolorintech.com/wp-content/uploads/2015/08/25f79ff-2.jpg" alt="">Michael Berhane</button> and <button type="button" class="who" data-color="purple" aria-expanded="false" aria-controls="card-ruth"><img class="face" src="https://peopleofcolorintech.com/wp-content/uploads/2015/08/Screen-Shot-2015-09-03-at-3.43.50-PM-e1442407954357-254x253.png" alt="">Ruth Mesfun</button> started it in 2015. The Edge is <button type="button" class="who" data-color="red" aria-expanded="false" aria-controls="card-martha"><img class="face" src="https://media.licdn.com/dms/image/v2/D4E03AQHx26CwJFPbpw/profile-displayphoto-scale_400_400/B4EZtw01VBIMAg-/0/1767124457390?e=2147483647&amp;v=beta&amp;t=eobj6XgC6bJIK7lCMFhfBFK4nW89cchOOMNqS1nWy4Y" alt="">Dr. Martha Boeckenfeld</button>'s public notes from Walchwil. She writes about the research, including times when a machine is involved and a person still has to decide. Leaders.vote did not write these pieces and does not endorse them.</p>
+      <div class="roster">
+        <article class="beat" data-desk="note">
+          <div class="copy">
+            <h2>From the publisher</h2>
+            <p>Letters from Mark Ryan Wilson. The questions are his. Where a connection has not been established, he says so.</p>
+            <a class="latest" href="#n-colors-we-can-no-longer-process"><img src="news/preview/rainbow-flag-bertron.jpg" alt=""><span>Are We Being Taught to Hate Colors We Can No Longer Process?</span></a>
+          </div>
+          <div class="faces">
+            <button type="button" class="who" data-color="brown" aria-expanded="false" aria-controls="card-publisher"><img class="face face-mark" src="news/preview/mark-ryan-wilson.jpg?v=12" alt=""><span>Mark Ryan Wilson</span></button>
+          </div>
+        </article>
+        <article class="beat" data-desk="weekly">
+          <div class="copy">
+            <h2>POCIT Weekly</h2>
+            <p>The letter from People of Color in Tech. Michael Berhane and Ruth Mesfun started it in 2015.</p>
+            <a class="latest" href="#n-deloitte-s-21-5-million-settlement"><img src="https://peopleofcolorintech.com/wp-content/uploads/2026/08/Deloitte.png" alt=""><span>Deloitte's $21.5 million settlement.</span></a>
+          </div>
+          <div class="faces">
+            <button type="button" class="who" data-color="blue" aria-expanded="false" aria-controls="card-michael"><img class="face" src="https://peopleofcolorintech.com/wp-content/uploads/2015/08/25f79ff-2.jpg" alt=""><span>Michael Berhane</span></button>
+            <button type="button" class="who" data-color="purple" aria-expanded="false" aria-controls="card-ruth"><img class="face" src="https://peopleofcolorintech.com/wp-content/uploads/2015/08/Screen-Shot-2015-09-03-at-3.43.50-PM-e1442407954357-254x253.png" alt=""><span>Ruth Mesfun</span></button>
+          </div>
+        </article>
+        <article class="beat" data-desk="look">
+          <div class="copy">
+            <h2>Magnolia Lookbooks</h2>
+            <p>Seasonal catalogues Magnolia publishes for the home. Chip Gaines and Joanna Gaines founded the company. The portraits are the ones on Magnolia's page about them.</p>
+            <a class="latest" href="#n-magnolia-gift-guide"><img src="https://magnolia.com/cdn/shop/files/image_15.png?v=1789753032&amp;width=1000" alt=""><span>Gift Guide.</span></a>
+          </div>
+          <div class="faces">
+            <button type="button" class="who" data-color="brown" aria-expanded="false" aria-controls="card-chip"><img class="face face-chip" src="https://magnolia.com/cdn/shop/files/article_about-chip-and-joanna_bf7fb413-127f-401a-b994-6779b90875aa.jpg?v=1749227141&amp;width=800" alt=""><span>Chip Gaines</span></button>
+            <button type="button" class="who" data-color="yellow" aria-expanded="false" aria-controls="card-joanna"><img class="face face-jo" src="https://magnolia.com/cdn/shop/files/article_about-chip-and-joanna_932d86ce-e3fa-4d32-8e2f-31d058d06719.jpg?v=1749227141&amp;width=800" alt=""><span>Joanna Gaines</span></button>
+          </div>
+        </article>
+        <article class="beat" data-desk="nyle">
+          <div class="copy">
+            <h2>Nyle</h2>
+            <p>An Africa-focused advisory and investor community. Kanessa Muluneh founded it. The portrait is the one on nyle.africa.</p>
+            <a class="latest" href="#n-nyle-off-grid-solar"><img src="https://media.licdn.com/dms/image/v2/D5622AQEz6J80nuTjQw/feedshare-image-high-res/B56aGgPqyaK4AU-/0/1793689824674?e=2147483647&amp;v=beta&amp;t=wPosShV6oY6nfqsWH7yIQmpPytZOOIQwWboIUFF0AP8" alt=""><span>Off-grid solar, as business infrastructure.</span></a>
+          </div>
+          <div class="faces">
+            <button type="button" class="who" data-color="orange" aria-expanded="false" aria-controls="card-kanessa"><img class="face" src="https://us-ms.gr-cdn.com/getresponse-Islfs/photos/284e1041-bb7a-4ae2-924e-34d23ddddc03.png" alt=""><span>Kanessa Muluneh</span></button>
+          </div>
+        </article>
+        <article class="beat" data-desk="feed">
+          <div class="copy">
+            <h2>The Edge</h2>
+            <p>Dr. Martha Boeckenfeld's public notes from Walchwil. She writes about the research, including times when a machine is involved and a person still has to decide.</p>
+            <a class="latest" href="#n-a-seed-32-000-years-in-the-ice"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHyL6nrm4HnMA/feedshare-image-high-res/B4EaGtcAdXJgAQ-/0/1793911163030?e=2147483647&amp;v=beta&amp;t=LbmblZ3Qeh2TQoKHrXRIMrjCDRW_0WMeA4iSpiEubgM" alt=""><span>A seed, 32,000 years in the ice.</span></a>
+          </div>
+          <div class="faces">
+            <button type="button" class="who" data-color="red" aria-expanded="false" aria-controls="card-martha"><img class="face" src="https://media.licdn.com/dms/image/v2/D4E03AQHx26CwJFPbpw/profile-displayphoto-scale_400_400/B4EZtw01VBIMAg-/0/1767124457390?e=2147483647&amp;v=beta&amp;t=eobj6XgC6bJIK7lCMFhfBFK4nW89cchOOMNqS1nWy4Y" alt=""><span>Dr. Martha Boeckenfeld</span></button>
+          </div>
+        </article>
+        <article class="beat" data-desk="journal">
+          <div class="copy">
+            <h2>American Scientist</h2>
+            <p>Sigma Xi's magazine. Science written by the researchers who did the work. The November–December 2026 issue is in the reader, and every page turns here. The reader needs a membership.</p>
+            <a class="latest" href="#n-november-december-2026-cellular-portraits"><img src="https://www.americanscientist.org/sites/americanscientist.org/files/2026-114-6-cover-natural.jpg" alt=""><span>November–December 2026. Cellular Portraits.</span></a>
+          </div>
+        </article>
+      </div>
       <div class="contacts">
+        <article class="card" id="card-publisher" data-color="brown" hidden>
+          <img class="face-mark" src="news/preview/mark-ryan-wilson.jpg?v=12" alt="">
+          <div>
+            <p class="card-name">Mark Ryan Wilson</p>
+            <p class="when">Publisher, Leaders.vote · Chicago</p>
+            <p>He publishes Leaders.vote from Chicago and is a member of Sigma Xi. The letters are his. Where a connection has not been established, he says so. The portrait is a professional redraw of his own photograph.</p>
+            <p class="src"><a href="mailto:markup.ux@gmail.com">markup.ux@gmail.com</a> <a href="https://leaders.vote/">leaders.vote</a></p>
+          </div>
+        </article>
         <article class="card" id="card-michael" data-color="blue" hidden>
           <img src="https://peopleofcolorintech.com/wp-content/uploads/2015/08/25f79ff-2.jpg" alt="">
           <div>
@@ -98,17 +184,457 @@
             <p class="src"><a href="https://www.linkedin.com/in/drmarthaboeckenfeld/" target="_blank" rel="noopener noreferrer">Her LinkedIn</a></p>
           </div>
         </article>
+        <article class="card" id="card-chip" data-color="brown" hidden>
+          <img class="face-chip" src="https://magnolia.com/cdn/shop/files/article_about-chip-and-joanna_bf7fb413-127f-401a-b994-6779b90875aa.jpg?v=1749227141&amp;width=800" alt="">
+          <div>
+            <p class="card-name">Chip Gaines</p>
+            <p class="when">Co-founder, Magnolia · Waco</p>
+            <p>The portrait is the one on Magnolia's page about Chip and Joanna, published October 15, 2024. That page calls him co-owner and co-founder. In "20 Years of Magnolia," published January 20, 2023, he writes that they opened the shop in Waco in 2003.</p>
+            <p class="src"><a href="https://magnolia.com/blogs/article/about-chip-and-joanna" data-kind="web" target="_blank" rel="noopener noreferrer">About Chip and Joanna</a> <a href="https://magnolia.com/blogs/article/20-years-of-magnolia" data-kind="web" target="_blank" rel="noopener noreferrer">20 Years of Magnolia</a></p>
+          </div>
+        </article>
+        <article class="card" id="card-joanna" data-color="yellow" hidden>
+          <img class="face-jo" src="https://magnolia.com/cdn/shop/files/article_about-chip-and-joanna_932d86ce-e3fa-4d32-8e2f-31d058d06719.jpg?v=1749227141&amp;width=800" alt="">
+          <div>
+            <p class="card-name">Joanna Gaines</p>
+            <p class="when">Co-founder, Magnolia · Waco</p>
+            <p>The portrait is the one on that same page. Magnolia calls her co-owner and co-founder, a New York Times bestselling author, and editor in chief of Magnolia Journal. The page says an internship in New York led her to open a shop of her own in Waco.</p>
+            <p class="src"><a href="https://magnolia.com/blogs/article/about-chip-and-joanna" data-kind="web" target="_blank" rel="noopener noreferrer">About Chip and Joanna</a> <a href="https://magnolia.com/pages/about" data-kind="web" target="_blank" rel="noopener noreferrer">About Magnolia</a></p>
+          </div>
+        </article>
+        <article class="card" id="card-kanessa" data-color="orange" hidden>
+          <img src="https://us-ms.gr-cdn.com/getresponse-Islfs/photos/284e1041-bb7a-4ae2-924e-34d23ddddc03.png" alt="">
+          <div>
+            <p class="card-name">Kanessa Muluneh</p>
+            <p class="when">Founder, Nyle</p>
+            <p>The portrait is the one on nyle.africa. That page says she leads Nyle's vision, strategic direction, investor relationships, and long-term partnerships across Africa and the diaspora. The site lists invest@nyle.africa as the address for the company, and Addis Ababa as the future headquarters.</p>
+            <p class="src"><a href="mailto:invest@nyle.africa">invest@nyle.africa</a> <a href="https://nyle.africa/" data-kind="web" target="_blank" rel="noopener noreferrer">nyle.africa</a> <a href="https://www.linkedin.com/company/nyle-africa/" target="_blank" rel="noopener noreferrer">Nyle on LinkedIn</a></p>
+          </div>
+        </article>
       </div>
+      <p class="fine">Leaders.vote did not write these pieces and does not endorse them.</p>
     </div>
     <div class="sources" role="group" aria-label="Publication">
       <button type="button" data-source="all" aria-pressed="true">All</button>
-      <button type="button" data-source="journal" aria-pressed="false">American Scientist</button>
       <button type="button" data-source="weekly" aria-pressed="false">POCIT Weekly</button>
+      <button type="button" data-source="look" aria-pressed="false">Magnolia Lookbooks</button>
+      <button type="button" data-source="nyle" aria-pressed="false">Nyle</button>
       <button type="button" data-source="feed" aria-pressed="false">The Edge</button>
+      <button type="button" data-source="journal" aria-pressed="false">American Scientist</button>
     </div>
     <p id="news-empty" hidden>Nothing in this publication.</p>
 
-    <section class="stage" id="reader" aria-label="Reader">
+    <section class="desk" id="weekly">
+      <h2>POCIT Weekly.</h2>
+      <p class="deck">Stories from the weekly letter and the POCIT site, the same number as The Edge. Newer pieces stay open. Earlier ones are in the list below. Each card has the date, a short account, and the writer. Open a name for the contact they publish. The article stays on their site. <a href="https://newsletter.peopleofcolorintech.com/" target="_blank" rel="noopener noreferrer">Get the weekly letter</a>. <a href="https://peopleofcolorintech.com/" target="_blank" rel="noopener noreferrer">Read the site</a>.</p>
+      <div class="author-cards">
+        <article class="card" id="card-habiba-katsha" data-color="green" hidden>
+          <img src="https://peopleofcolorintech.com/wp-content/uploads/2025/01/IMG_1269-scaled-e1736165302631.jpeg" alt="">
+          <div>
+            <p class="card-name">Habiba Katsha</p>
+            <p class="when">Tech reporter, People of Color in Tech</p>
+            <p>POCIT's author page says she is a journalist writing about race, gender, and the internet, and that she is a tech reporter there. The portrait is the one on that page.</p>
+            <p class="src"><a href="https://peopleofcolorintech.com/author/habiba-katsha/" target="_blank" rel="noopener noreferrer">Her pieces at POCIT</a> <a href="https://www.habibakatsha.com/" target="_blank" rel="noopener noreferrer">habibakatsha.com</a></p>
+          </div>
+        </article>
+        <article class="card" id="card-samara-linton" data-color="blue" hidden>
+          <img src="https://peopleofcolorintech.com/wp-content/uploads/2022/05/photo.jpeg" alt="">
+          <div>
+            <p class="card-name">Samara Linton</p>
+            <p class="when">Head of community and content, People of Color in Tech</p>
+            <p>POCIT's author page lists her as head of community and content. It also names her as co-editor of The Colour of Madness (2022) and co-author of Diane Abbott: The Authorised Biography (2020). The portrait is the one on that page.</p>
+            <p class="src"><a href="https://peopleofcolorintech.com/author/samara-linton/" target="_blank" rel="noopener noreferrer">Her pieces at POCIT</a></p>
+          </div>
+        </article>
+      </div>
+      <div class="desk-list">
+        <article class="story" data-source="weekly" data-color="red" data-caption="Deloitte" id="n-deloitte-s-21-5-million-settlement">
+          <p class="tag">POCIT Weekly</p>
+          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2026/08/Deloitte.png" alt=""></figure>
+          <h3>Deloitte's $21.5 million settlement.</h3>
+          <p class="when"><time datetime="2026-08-27">August 27, 2026</time> · Habiba Katsha</p>
+          <p>POCIT reports that Deloitte agreed to pay $21.5 million to settle Justice Department claims that its diversity goals broke federal antidiscrimination rules for government contractors. The piece quotes Attorney General Todd Blanche via HR Dive and notes a companion claim from Edward Blum's group.</p>
+          <p class="src"><a href="https://peopleofcolorintech.com/articles/deloitte-to-pay-21-5m-to-settle-claims-its-dei-programs-violated-civil-rights-law/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
+        </article>
+        <article class="story" data-source="weekly" data-color="orange" data-caption="Jamie Dimon and Judith Dimon" id="n-12-million-from-the-dimons-to-twelve-hbcus">
+          <p class="tag">POCIT Weekly</p>
+          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2026/08/Jamie-Dimon-and-Judith-Dimon.png" alt=""></figure>
+          <h3>$12 million from the Dimons to twelve HBCUs.</h3>
+          <p class="when"><time datetime="2026-08-26">August 26, 2026</time> · Habiba Katsha</p>
+          <p>Jamie Dimon and Judith K. Dimon, with UNCF, are giving $12 million to twelve historically Black colleges, POCIT reports. Each school receives $1 million in endowment capital aimed at programs that train educators and nurses. The list runs from Benedict and Dillard to Tuskegee and Voorhees.</p>
+          <p class="src"><a href="https://peopleofcolorintech.com/articles/jpmorgan-chase-ceo-jamie-dimon-and-wife-donate-12m-to-hbcus/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
+        </article>
+        <article class="story" data-source="weekly" data-color="yellow" data-caption="Moses West, Founder and CEO of AWG Consulting" id="n-water-from-air-after-hurricane-melissa">
+          <p class="tag">POCIT Weekly</p>
+          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2025/11/Moses_West_Founder_and_CEO_of_AWG_Consulting-scaled.jpeg" alt=""></figure>
+          <h3>Water from air, after Hurricane Melissa.</h3>
+          <p class="when"><time datetime="2025-11-17">November 17, 2025</time> · Samara Linton</p>
+          <p>After Hurricane Melissa hit Jamaica on October 28, POCIT reports that a solar atmospheric water generator in Accompong kept making nearly 400 gallons a day. Moses West of AWG Contracting built it. The machine was flipped by the wind and brought back within 48 hours.</p>
+          <p class="src"><a href="https://peopleofcolorintech.com/articles/this-engineers-solar-tech-has-kept-clean-water-flowing-after-hurricane-melissa/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
+        </article>
+        <article class="story" data-source="weekly" data-color="green" data-caption="Elly Savatia" id="n-terp-360-and-a-prize-for-sign-language">
+          <p class="tag">POCIT Weekly</p>
+          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2025/10/Elly-Savatia.jpg" alt=""></figure>
+          <h3>Terp 360, and a prize for sign language.</h3>
+          <p class="when"><time datetime="2025-10-22">October 22, 2025</time> · Habiba Katsha</p>
+          <p>Elly Savatia won the Royal Academy of Engineering's Africa prize for Terp 360, an app that turns speech into sign with 3D avatars. POCIT says his company, Signvrse, recorded more than 2,300 signs with deaf and hard-of-hearing Kenyans so the avatar would move less like a machine. The grant is £50,000.</p>
+          <p class="src"><a href="https://peopleofcolorintech.com/founders/kenyan-innovator-wins-prestigous-engineering-prize-for-sign-language-translation-app/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
+        </article>
+        <article class="story" data-source="weekly" data-color="blue" id="n-a-medical-drone-drawn-at-16">
+          <p class="tag">POCIT Weekly</p>
+          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2025/06/IMG_0625-scaled.jpg" alt=""></figure>
+          <h3>A medical drone, drawn at 16.</h3>
+          <p class="when"><time datetime="2025-06-23">June 23, 2025</time> · Samara Linton</p>
+          <p>Kande Sill won an Arkwright Engineering Scholarship for a drone container meant to carry vaccines and blood without being easily stolen. POCIT notes that she also writes novels as Kande S. Summers and has represented Jamaica at Expo 2020 Dubai.</p>
+          <p class="src"><a href="https://peopleofcolorintech.com/articles/teen-wins-top-uk-scholarship-for-innovative-medical-drone-design/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
+        </article>
+        <article class="story" data-source="weekly" data-color="purple" data-caption="Starlink" id="n-a-phone-that-reaches-a-satellite-in-congo">
+          <p class="tag">POCIT Weekly</p>
+          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2026/08/evgeny-opanasenko-mjKt6ReBB-I-unsplash-scaled.jpg" alt=""></figure>
+          <h3>A phone that reaches a satellite in Congo.</h3>
+          <p class="when"><time datetime="2026-08-20">August 20, 2026</time> · Habiba Katsha</p>
+          <p>POCIT reports that Airtel Africa and Starlink switched on a satellite-to-phone service in the Democratic Republic of the Congo on August 14. At launch it covers light use, such as WhatsApp and SMS, not streaming. Airtel says it wants the same reach in the other African markets where it operates.</p>
+          <p class="src"><a href="https://peopleofcolorintech.com/articles/airtel-africa-and-starlink-launch-satellite-to-phone-service-in-drc/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
+        </article>
+        <article class="story" data-source="weekly" data-color="pink" data-caption="Beyonce" id="n-sirdavis-now-hers-outright">
+          <p class="tag">POCIT Weekly</p>
+          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2026/07/Beyonce.png" alt=""></figure>
+          <h3>SirDavis, now hers outright.</h3>
+          <p class="when"><time datetime="2026-07-30">July 30, 2026</time> · Habiba Katsha</p>
+          <p>Beyoncé took full ownership of SirDavis American Whisky after launching it with Moët Hennessy, POCIT reports. The brand is named for her paternal great-grandfather, a farmer and moonshiner in the South during Prohibition.</p>
+          <p class="src"><a href="https://peopleofcolorintech.com/articles/beyonce-takes-full-ownership-of-sirdavis-making-the-whisky-brand-black-owned/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
+        </article>
+      </div>
+    </section>
+
+    
+<section class="desk" id="look">
+      <h2><button type="button" class="who who-mark" data-color="brown" aria-expanded="false" aria-controls="card-chip" aria-label="Chip Gaines"><img class="byline face-chip" src="https://magnolia.com/cdn/shop/files/article_about-chip-and-joanna_bf7fb413-127f-401a-b994-6779b90875aa.jpg?v=1749227141&amp;width=800" alt=""></button><button type="button" class="who who-mark" data-color="yellow" aria-expanded="false" aria-controls="card-joanna" aria-label="Joanna Gaines"><img class="byline face-jo" src="https://magnolia.com/cdn/shop/files/article_about-chip-and-joanna_932d86ce-e3fa-4d32-8e2f-31d058d06719.jpg?v=1749227141&amp;width=800" alt=""></button>Magnolia Lookbooks.</h2>
+      <p class="deck">Seasonal catalogues from Magnolia. Chip Gaines and Joanna Gaines founded the company. Each card is a book on their lookbooks page, with the picture and the line they print beside it. The date is the one in the reader title. The link opens their reader. Open a name for what Magnolia prints about them. <a href="https://magnolia.com/pages/magnolia-lookbooks" target="_blank" rel="noopener noreferrer">All lookbooks</a>.</p>
+      <div class="desk-list">
+        <article class="story lead" data-source="look" data-color="yellow" id="n-magnolia-holiday-collection">
+          <p class="tag">Magnolia Lookbooks</p>
+          <figure class="shot"><img src="https://magnolia.com/cdn/shop/files/Image_Banner_1_1.jpg?v=1788536461&amp;width=1600" alt="Magnolia, Our New Holiday Collection"></figure>
+          <h3>Our New Holiday Collection.</h3>
+          <p class="when"><time datetime="2026-09-09">September 9, 2026</time></p>
+          <p>Magnolia's line on the lookbooks page: "Find inspiration for joyful preparations, festive gatherings, and the scenes you set each year." The picture is the banner on that page. The reader is theirs.</p>
+          <p class="src"><a href="https://view.publitas.com/magnolia-gyz3v6__gpxp/magnolia-lookbook_holiday-collection_9-9-26" target="_blank" rel="noopener noreferrer">Open this lookbook</a></p>
+        </article>
+        <article class="story" data-source="look" data-color="orange" id="n-magnolia-thanksgiving-table">
+          <p class="tag">Magnolia Lookbooks</p>
+          <figure class="shot"><img src="https://magnolia.com/cdn/shop/files/Thanksgiving_Lookbook.jpg?v=1789502545&amp;width=1600" alt="Magnolia, The Thanksgiving Table"></figure>
+          <h3>The Thanksgiving Table.</h3>
+          <p class="when"><time datetime="2026-09-16">September 16, 2026</time></p>
+          <p>Their line: "For many, this meal signals the start of the holiday season, where anticipation turns to celebration at last. Enjoy the process, step by step, as you make room..." The sentence ends in an ellipsis on their page.</p>
+          <p class="src"><a href="https://view.publitas.com/magnolia-gyz3v6__gpxp/magnolia-lookbook_thanksgiving_9-16-26/" target="_blank" rel="noopener noreferrer">Open this lookbook</a></p>
+        </article>
+        <article class="story" data-source="look" data-color="red" id="n-magnolia-gift-guide">
+          <p class="tag">Magnolia Lookbooks</p>
+          <figure class="shot"><img src="https://magnolia.com/cdn/shop/files/image_15.png?v=1789753032&amp;width=1000" alt="Magnolia Gift Guide"></figure>
+          <h3>Gift Guide.</h3>
+          <p class="when"><time datetime="2026-09-18">September 18, 2026</time></p>
+          <p>Their line: "A merry mix for everyone you're celebrating this holiday season." The picture is the one Magnolia uses for this guide on a phone. The desktop banner on the same page is a short graphic.</p>
+          <p class="src"><a href="https://view.publitas.com/magnolia-gyz3v6__gpxp/lookbook-_-holiday-gift-guide_9-18-26/" target="_blank" rel="noopener noreferrer">Open this lookbook</a></p>
+        </article>
+        <article class="story" data-source="look" data-color="green" id="n-magnolia-fall-collection">
+          <p class="tag">Magnolia Lookbooks</p>
+          <figure class="shot"><img src="https://magnolia.com/cdn/shop/files/Bedding_Overall_20017_1.jpg?v=1784746291&amp;width=1600" alt="Magnolia, Our Fall Collection"></figure>
+          <h3>Our Fall Collection.</h3>
+          <p class="when"><time datetime="2026-07-24">July 24, 2026</time></p>
+          <p>Their line: "Find inspiration in our lookbook to slow down and settle into the moments you want to last...morning, afternoon, or night."</p>
+          <p class="src"><a href="https://view.publitas.com/magnolia-gyz3v6__gpxp/ecomm_5053_q2_2026_fall-collection-lookbook" target="_blank" rel="noopener noreferrer">Open this lookbook</a></p>
+        </article>
+        <article class="story" data-source="look" data-color="brown" id="n-magnolia-decade-of-design">
+          <p class="tag">Magnolia Lookbooks</p>
+          <figure class="shot"><img src="https://magnolia.com/cdn/shop/files/New_Rugs_Fall_2026.jpg?v=1789162264&amp;width=1600" alt="Magnolia Home by Joanna Gaines and Loloi, A Decade of Design"></figure>
+          <h3>A Decade of Design.</h3>
+          <p class="when"><time datetime="2026-09-14">September 14, 2026</time></p>
+          <p>Magnolia Home by Joanna Gaines and Loloi. Their line: "Explore seven new collections that can help add a layer of beauty, dimension, and a story to your favorite spaces." The picture is the rug banner on the lookbooks page. The reader title is Loloi Rug Launch.</p>
+          <p class="src"><a href="https://view.publitas.com/magnolia-gyz3v6__gpxp/magnolia-lookbook_loloi-rug-launch_9-14-26" target="_blank" rel="noopener noreferrer">Open this lookbook</a></p>
+        </article>
+        <article class="story" data-source="look" data-color="pink" id="n-magnolia-jos-classics">
+          <p class="tag">Magnolia Lookbooks</p>
+          <figure class="shot"><img src="https://magnolia.com/cdn/shop/files/Rectangle_12_2.jpg?v=1780070192&amp;width=1600" alt="Magnolia, Jo's Favorite Classics"></figure>
+          <h3>Jo's Favorite Classics.</h3>
+          <p class="when"><time datetime="2026-06-01">June 1, 2026</time></p>
+          <p>Their line: "This visual guide walks you through options to mix, match, and layer - setting the table for life's beautiful moments." The reader title is Everyday Classics.</p>
+          <p class="src"><a href="https://view.publitas.com/magnolia-gyz3v6__gpxp/magnolia-lookbook_everyday-classics_6-1-26" target="_blank" rel="noopener noreferrer">Open this lookbook</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="desk" id="nyle">
+      <h2><button type="button" class="who who-mark" data-color="orange" aria-expanded="false" aria-controls="card-kanessa" aria-label="Kanessa Muluneh"><img class="byline" src="https://us-ms.gr-cdn.com/getresponse-Islfs/photos/284e1041-bb7a-4ae2-924e-34d23ddddc03.png" alt=""></button>Nyle.</h2>
+      <p class="deck">Public posts from the company page, newest first. The picture is the one posted with the note. Two of the notes are videos, and the picture is the frame on the video. Open her name for what nyle.africa says about her. <a href="https://www.linkedin.com/company/nyle-africa/posts/?feedView=all" target="_blank" rel="noopener noreferrer">All posts</a>.</p>
+      <div class="desk-list">
+        <article class="story lead" data-source="nyle" data-color="orange" data-posted="2026-11-08" id="n-nyle-off-grid-solar">
+          <p class="tag">Nyle</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D5622AQEz6J80nuTjQw/feedshare-image-high-res/B56aGgPqyaK4AU-/0/1793689824674?e=2147483647&amp;v=beta&amp;t=wPosShV6oY6nfqsWH7yIQmpPytZOOIQwWboIUFF0AP8" alt=""></figure>
+          <h3>Off-grid solar, as business infrastructure.</h3>
+          <p class="when"><time datetime="2026-11-08">November 8, 2026</time> · 1 reaction</p>
+          <p>The graphic on the post says off-grid solar could reach 398 million more people, and that $11.4 billion is needed between 2027 and 2030. Nyle writes that the opening runs past selling panels, into financing, distribution, maintenance, agriculture, and power for small businesses. It cites the World Bank and GOGLA, and asks whether the opening is in homes, businesses, agriculture, or mini-grids.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/nyle-africa_energy-access-is-also-a-business-infrastructure-activity-7525044791529746432-k4Ed" target="_blank" rel="noopener noreferrer">Read the post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="nyle" data-color="blue" data-posted="2026-11-06" id="n-nyle-private-infrastructure">
+          <p class="tag">Nyle</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D5622AQHt4myI2T11WQ/feedshare-shrink_1280/B56aGgN5myJcAM-/0/1793689361083?e=2147483647&amp;v=beta&amp;t=zHCNHyR2ZcIL-4dY1M3N78Jr5UfGXC--76rCiyeSjcs" alt=""></figure>
+          <h3>Private capital in public infrastructure.</h3>
+          <p class="when"><time datetime="2026-11-06">November 6, 2026</time> · 1 reaction</p>
+          <p>The post asks which African infrastructure sector needs more private investment: energy, transport, water, or digital. Nyle writes that a road, a power plant, or a public project does not have to be financed and operated by government alone, and that a public-private partnership works only when the structure, the risk, and the contract are sound.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/nyle-africa_which-african-infrastructure-sector-needs-activity-7524289613893513217-KPzQ" target="_blank" rel="noopener noreferrer">Read the post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="nyle" data-color="green" data-posted="2026-11-05" id="n-nyle-demand-and-the-gap">
+          <p class="tag">Nyle</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D5605AQEYNgZkPnCwxA/videocover-high/B56aGgLjQQIABI-/0/1793688747172?e=2147483647&amp;v=beta&amp;t=kpgMKHDKBXkRXSa1lhh8gGyV3OqBnw286hTxeHmu94I" alt=""></figure>
+          <h3>Strong demand, and the next gap.</h3>
+          <p class="when"><time datetime="2026-11-05">November 5, 2026</time></p>
+          <p>This note is a video. The frame shows a woman who worked in retail buying in Tanzania and is back home in Senegal. Nyle writes that a business can have strong demand and still be blocked from the next stage of growth, and that experience in retail, logistics, finance, compliance, or distribution can be as useful as the capital. The question it asks is where the gap is: product, funding, or market access.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/nyle-africa_a-business-can-have-strong-demand-and-still-activity-7523972377215668224-l1rg" target="_blank" rel="noopener noreferrer">Read the post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="nyle" data-color="red" data-posted="2026-11-04" id="n-nyle-ethiopian-herald">
+          <p class="tag">Nyle</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D5622AQHv_0jz0rsiGg/feedshare-shrink_800/B56aGgKI2kJcAc-/0/1793688375107?e=2147483647&amp;v=beta&amp;t=FYi1ANp9EVzAlSS4NLVD5EOtq_2hE-fa1vFqA2WkUwk" alt=""></figure>
+          <h3>Pakistan and Ethiopia, in the Herald.</h3>
+          <p class="when"><time datetime="2026-11-04">November 4, 2026</time> · 4 reactions</p>
+          <p>Nyle points to a feature in The Ethiopian Herald on the business relationship between Pakistan and Ethiopia, and on the work of connecting companies, markets, and investment. The post says the next step is turning that interest into partnerships that can actually be carried out.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/nyle-africa_business-connections-only-matter-when-they-activity-7523670387130335233-A3FA" target="_blank" rel="noopener noreferrer">Read the post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="nyle" data-color="purple" data-posted="2026-11-03" id="n-nyle-748-million">
+          <p class="tag">Nyle</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D5622AQGgr1r2-_GV3A/feedshare-shrink_1280/B56aGgI5kNJsAU-/0/1793688050263?e=2147483647&amp;v=beta&amp;t=iZlRgoD25OZD8Hi3KgB5K35nfWcjVp5KqYx-d7m4jrY" alt=""></figure>
+          <h3>748 million more city residents.</h3>
+          <p class="when"><time datetime="2026-11-03">November 3, 2026</time> · 1 reaction</p>
+          <p>Citing the World Bank, Nyle writes that cities in sub-Saharan Africa could add about 748 million residents by 2050, and that the demand runs through housing, transport, food, logistics, services, and jobs. The post says the question for an investor is which cities become more productive, connected, and investable.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/nyle-africa_where-people-move-markets-move-too-sub-activity-7523308348256120832-gTSA" target="_blank" rel="noopener noreferrer">Read the post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="nyle" data-color="yellow" data-posted="2026-11-01" id="n-nyle-start-or-invest">
+          <p class="tag">Nyle</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D5605AQHct5gks1ILjw/videocover-high/B56aF9j32BJMBI-/0/1793107920820?e=2147483647&amp;v=beta&amp;t=pw9h7EBEUuSupyhaaVm7-YAJW3FXlWsXbsqeKwR3Ec4" alt=""></figure>
+          <h3>Start from zero, or buy in.</h3>
+          <p class="when"><time datetime="2026-11-01">November 1, 2026</time> · 2 reactions</p>
+          <p>This note is a video. The frame shows John, who worked in logistics in London. Nyle writes that starting a company is only one way into African business, and describes another route for diaspora investors: growth capital, relevant experience, and an ownership stake, while the founder keeps operating.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/nyle-africa_starting-a-company-is-only-one-way-to-participate-activity-7522507847788707840-Q0Gr" target="_blank" rel="noopener noreferrer">Read the post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="nyle" data-color="brown" data-posted="2026-10-31" id="n-nyle-trade-finance">
+          <p class="tag">Nyle</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D5622AQELR_gJcK8YYQ/feedshare-image-high-res/B56aF9jQYWIAAU-/0/1793107756883?e=2147483647&amp;v=beta&amp;t=DkzoxI_LtARmJrh3nV0xAt-v4gBJahyKBzbIawGO--Y" alt=""></figure>
+          <h3>A $92 billion trade-finance gap.</h3>
+          <p class="when"><time datetime="2026-10-31">October 31, 2026</time> · 3 reactions</p>
+          <p>Nyle cites the African Development Bank: the continent's trade-finance gap is as much as $92 billion, which limits how easily a business can buy inputs, fill orders, and enter a new market. The post says the opening is sometimes not more demand, but the financing that lets existing demand be served.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/nyle-africa_africa-does-not-have-a-shortage-of-businesses-activity-7522281958887026688-Cjf_" target="_blank" rel="noopener noreferrer">Read the post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="nyle" data-color="pink" data-posted="2026-10-28" id="n-nyle-abidjan-lagos">
+          <p class="tag">Nyle</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D5622AQHhNNwH-6NGeQ/feedshare-shrink_1280/B56aF9i2REH0AQ-/0/1793107649903?e=2147483647&amp;v=beta&amp;t=WOV5dksJ9UgI-bmDf5Zx8VMFnofdfknNrbWb1af1Wus" alt=""></figure>
+          <h3>The Abidjan–Lagos corridor.</h3>
+          <p class="when"><time datetime="2026-10-28">October 28, 2026</time> · 1 reaction</p>
+          <p>Nyle writes that the African Development Bank and ECOWAS have agreed new actions on regional projects in West Africa, including the Abidjan–Lagos Corridor. The post says better cross-border infrastructure can mean goods that move more easily, larger markets, and stronger regional trade. It cites the African Development Bank Group.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/nyle-africa_regional-growth-becomes-more-powerful-when-activity-7521133776249200641-ytE6" target="_blank" rel="noopener noreferrer">Read the post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="nyle" data-color="orange" data-posted="2026-10-27" id="n-nyle-an-investable-business">
+          <p class="tag">Nyle</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D5622AQEJls3rwxEOrA/feedshare-shrink_1280/B56aF9g8_BJYAM-/0/1793107153149?e=2147483647&amp;v=beta&amp;t=MfcVtxZcHuw-p_-HXdQUjXvkcOC4RLtdVJSYFE7nlWY" alt=""></figure>
+          <h3>Demand is not the same as investable.</h3>
+          <p class="when"><time datetime="2026-10-27">October 27, 2026</time> · 2 reactions</p>
+          <p>Nyle writes that a growing business can still struggle to raise capital. Strong demand matters, it says, and so do cash flow, financial records, management, and a clear use for the money. Those are the signals it names for telling a busy business from an investable one.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/nyle-africa_a-growing-business-can-still-struggle-to-activity-7520847771755671553-oy3W" target="_blank" rel="noopener noreferrer">Read the post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="nyle" data-color="blue" data-posted="2026-10-26" id="n-nyle-birthday">
+          <p class="tag">Nyle</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D5622AQEzdFlsSae5Aw/feedshare-shrink_800/B56aF3JhNCH4Ac-/0/1793000346827?e=2147483647&amp;v=beta&amp;t=itgUYDVaY02w8TGeWrtHsuw1gkI9zepbjPXIRq0irgY" alt=""></figure>
+          <h3>A birthday note for Kanessa Muluneh.</h3>
+          <p class="when"><time datetime="2026-10-26">October 26, 2026</time> · 348 reactions</p>
+          <p>The company posted a birthday note to its founder and chief executive, Kanessa Muluneh. The picture is the one on that post.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/nyle-africa_happy-birthday-to-our-founder-ceo-kanessa-activity-7520393899547410432-koFT" target="_blank" rel="noopener noreferrer">Read the post on LinkedIn</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="desk" id="feed">
+      <h2><button type="button" class="who who-mark" data-color="red" aria-expanded="false" aria-controls="card-martha" aria-label="Dr. Martha Boeckenfeld"><img class="byline" src="https://media.licdn.com/dms/image/v2/D4E03AQHx26CwJFPbpw/profile-displayphoto-scale_400_400/B4EZtw01VBIMAg-/0/1767124457390?e=2147483647&amp;v=beta&amp;t=eobj6XgC6bJIK7lCMFhfBFK4nW89cchOOMNqS1nWy4Y" alt=""></button>The Edge.</h2>
+      <p class="deck">New notes are added as she posts them, newest first. Previous posts are the earlier public notes. She hosts The Edge of Tomorrow. The picture is the one posted with the note. Figures are the ones she gives. <a href="https://www.linkedin.com/in/drmarthaboeckenfeld/" target="_blank" rel="noopener noreferrer">Her profile</a>.</p>
+      <p><button type="button" id="earlier" aria-pressed="false">Previous posts</button></p>
+      <div class="desk-list">
+        <article class="story lead" data-source="feed" data-color="red" data-posted="2026-11-06" id="n-a-seed-32-000-years-in-the-ice">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHyL6nrm4HnMA/feedshare-image-high-res/B4EaGtcAdXJgAQ-/0/1793911163030?e=2147483647&amp;v=beta&amp;t=LbmblZ3Qeh2TQoKHrXRIMrjCDRW_0WMeA4iSpiEubgM" alt=""></figure>
+          <h3>A seed, 32,000 years in the ice.</h3>
+          <p class="when"><time datetime="2026-11-06">November 6, 2026</time> · 69 comments</p>
+          <p>She writes that a seed frozen 124 feet down for about 32,000 years grew into a white flower, from a squirrel burrow beside woolly mammoth bones. After David Gilichinsky's team opened 70 fossil chambers on the Kolyma River and found the mature seeds damaged, Svetlana Yashina cultured placental tissue from unripe fruit. Figures she gives: 31,800 years near −7°C, and second-generation seeds that germinated. She cites Yashina and colleagues, PNAS, 2012.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-seed-frozen-124-feet-beneath-the-ice-for-activity-7524357556744417280-95od" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="blue" data-posted="2026-11-05" id="n-the-agent-that-moved-the-money">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E03AQHx26CwJFPbpw/profile-displayphoto-scale_400_400/B4EZtw01VBIMAg-/0/1767124457390?e=2147483647&amp;v=beta&amp;t=eobj6XgC6bJIK7lCMFhfBFK4nW89cchOOMNqS1nWy4Y" alt=""></figure>
+          <h3>The agent that moved the money.</h3>
+          <p class="when"><time datetime="2026-11-05">November 5, 2026</time> · 74 comments</p>
+          <p>She describes $100,000 leaving a corporate account after an assistant reset a password and changed the wire list. The bank was not breached, she writes. The customer had shared the login. She says teams at major U.S. banks saw agents inside accounts in October 2026. Figures she gives include $1.6 trillion in deposits at JPMorgan, Bank of America, and Wells Fargo, and agreements that treat a customer-authorized agent's instruction as the customer's own. She names her Human Parity Principle: identity, limits, and a sign-off before money moves.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_the-ai-agent-that-moves-your-money-activity-7523995351112916994-qgsO" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="green" data-posted="2026-11-04" id="n-eight-million-products-and-no-petroleum-plastic">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQEqiAiJ3_SaLQ/thumbnail-with-play-button-overlay-high/B4EaGjKLmKG8C8-/0/1793738725815?e=2147483647&amp;v=beta&amp;t=LbZUs22LVuCYIw5CEJFc60vDwrCNoTClu2ajs1H1wcU" alt=""></figure>
+          <h3>Eight million products, and no petroleum plastic.</h3>
+          <p class="when"><time datetime="2026-11-04">November 4, 2026</time></p>
+          <p>She writes about Insiya Jafferjee, who left Apple manufacturing in 2017, and Amir Afshar. Lobster-shell trials showed the chemistry and did not scale. They fermented used cooking oil into a PHA they call VIVOMER. Figures she gives: more than 8 million products, 240 tonnes of petroleum plastic diverted, a $15 million Series A, and a material that runs on existing factory machines. She names Unilever's Wild, Sonsie, Tesco, Boots, and Whole Foods.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_over-8-million-products-shipped-zero-grams-activity-7523632704173625344-yImq" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="red" data-posted="2026-11-03" id="n-a-phone-a-health-worker-and-the-decision">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQFQedhkxAuVJQ/thumbnail-with-play-button-overlay-high/B4EaGd.UVBKkC0-/0/1793651723040?e=2147483647&amp;v=beta&amp;t=-mdvM2Gv8FBj6ByidAMfE9EPPUBnQ3ueXG2Off96lz4" alt=""></figure>
+          <h3>A phone, a health worker, and the decision.</h3>
+          <p class="when"><time datetime="2026-11-03">November 3, 2026</time></p>
+          <p>Her post starts from a $40 phone, a health worker without a medical degree, and a patient more than 100 kilometers from a specialist. She describes Meditron, an open-source medical model from EPFL, and argues that the caregiver still carries the decision. The same note says the Influencer Magazine Awards named her Tech Influencer of the Year that week.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-40-smartphone-a-health-worker-without-activity-7523272240440750083-niI4" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="orange" id="n-a-clay-bench-and-a-cooler-street">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQHY7yw5Ul_wlA/thumbnail-with-play-button-overlay-high/B4EaGa92OOIgC0-/0/1793601271277?e=2147483647&amp;v=beta&amp;t=tmwOrvqLBu2iJJWpLk9dBHsAg7gkRle29ASt6V3Zl1g" alt=""></figure>
+          <h3>A clay bench, and a cooler street.</h3>
+          <p class="when"><time datetime="2026-11-02">November 2, 2026</time> · 774 reactions, 76 comments</p>
+          <p>She writes that city asphalt runs hotter than the air, and that a 3D-printed clay bench from two Zurich University of the Arts students, Andrin Stocker and Luc Schweizer, cools the spot around it by evaporating water through porous terracotta. No grid power. She asks when a public place in a heat wave last felt built for a body.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_city-asphalt-bakes-at-8c-above-ambient-air-activity-7522909016772149248-qR75" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="purple" id="n-from-a-garage-airplane-to-the-night-sky">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQGQgBhgBxblgg/feedshare-shrink_800/B4EaGTGff_I8Ag-/0/1793469315421?e=2147483647&amp;v=beta&amp;t=-gJ_ggD7-31wvNv87-sG1G9wDZXRdrahiqWZA_2Fnc4" alt=""></figure>
+          <h3>From a garage airplane to the night sky.</h3>
+          <p class="when"><time datetime="2026-11-01">November 1, 2026</time> · 277 reactions, 37 comments</p>
+          <p>Her post follows Sabrina Gonzalez Pasterski from an FAA-approved airplane built as a teenager to celestial holography: an attempt to relate gravity and quantum theory in a universe shaped more like ours than the curved toy models physicists often use.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-14-year-old-built-an-faa-approved-aircraft-activity-7522545498709327872-n6zL" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="pink" id="n-a-mask-a-breath-four-cancers">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHaxK573Piaxg/feedshare-image-high-res/B4EaGJPzESJkAU-/0/1793303982721?e=2147483647&amp;v=beta&amp;t=yZvyUN27RWxO18wwG76LA5UMiXMo54FfVgr_HDOn7eY" alt=""></figure>
+          <h3>A mask, a breath, four cancers.</h3>
+          <p class="when"><time datetime="2026-10-30">October 30, 2026</time> · 391 reactions, 50 comments</p>
+          <p>She describes a three-minute breath into an ordinary mask, paired with trained beagles and sensors, that her post says detected four solid cancers with 94.8% early-stage sensitivity. The account she gives is of Dr. Shlomi Madar's work on scent and cancer, set against how few U.S. diagnoses come from routine screening.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-three-minute-breath-into-an-ordinary-mask-activity-7521813324213194752--Tle" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="green" id="n-he-stood-after-a-complete-spinal-injury">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQGYFt0DNcBjGA/feedshare-image-high-res/B4EaGD4QnYJoAU-/0/1793213926460?e=2147483647&amp;v=beta&amp;t=X88PvG0WFWP2QJAGZWNosYqGhaibR9uudcdxVgezyck" alt=""></figure>
+          <h3>He stood, after a complete spinal injury.</h3>
+          <p class="when"><time datetime="2026-10-29">October 29, 2026</time> · 809 reactions, 69 comments</p>
+          <p>Her post is about a first-in-human trial at Keio University. Professors Hideyuki Okano and Masaya Nakamura transplanted stem cells into four patients with complete cervical spinal injuries. She reports no serious cell-related harm in the follow-up she cites, and one person who could stand and start walking rehabilitation.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-man-paralyzed-from-the-neck-down-just-stood-activity-7521458333459861504-z-My" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="blue" id="n-a-bacterium-from-a-tree-frog">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQG0w4IqsftgBQ/thumbnail-with-play-button-overlay-high/B4EaF_EZD1IYDI-/0/1793133222305?e=2147483647&amp;v=beta&amp;t=rpiKscH0e_HQd2trnAbBI4NpLsLY2KNMaLBs6HiC5cs" alt=""></figure>
+          <h3>A bacterium from a tree frog.</h3>
+          <p class="when"><time datetime="2026-10-28">October 28, 2026</time> · 954 reactions, 86 comments</p>
+          <p>She writes about preclinical work at the Japan Advanced Institute of Science and Technology. Professor Eijiro Miyako's group screened bacteria from amphibians and reptiles and, in her account, one strain cleared colorectal tumors in the animal models they tested. This is an animal result, not a treatment.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_in-preclinical-trials-a-gut-bacterium-isolated-activity-7521095973398388736-sInG" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="brown" id="n-a-chair-a-tremor-40-hertz">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E03AQHx26CwJFPbpw/profile-displayphoto-scale_400_400/B4EZtw01VBIMAg-/0/1767124457390?e=2147483647&amp;v=beta&amp;t=eobj6XgC6bJIK7lCMFhfBFK4nW89cchOOMNqS1nWy4Y" alt=""></figure>
+          <h3>A chair, a tremor, 40 hertz.</h3>
+          <p class="when"><time datetime="2026-10-27">October 27, 2026</time> · 118 reactions, 63 comments</p>
+          <p>Her post describes a man with Parkinson's whose tremor stopped in a chair that passed 40 Hz vibration through his body. She cites trials in which motor scores moved, and a meta-analysis, and treats the result as biophysics rather than a gadget claim.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_frequency-can-heal-activity-7520733595800510464-liB5" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="yellow" id="n-reset-the-cell-instead-of-poisoning-it">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQFSAHPXIjd5Bg/feedshare-shrink_1280/B4EaF1HrA8HoAM-/0/1792966308251?e=2147483647&amp;v=beta&amp;t=fO8pBglTqDhyrMPeRsPWI0sDBpmr0v1TyUlhM47biiI" alt=""></figure>
+          <h3>Reset the cell, instead of poisoning it.</h3>
+          <p class="when"><time datetime="2026-10-26">October 26, 2026</time> · 877 reactions, 106 comments</p>
+          <p>She tells the story of Kwang-Hyun Cho, an electrical engineer at KAIST who treats a cancer cell as a control system that can be steered back, not only killed. The post is about digital twins of gene networks and the idea that malignancy is a stuck instruction.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_in-1999-an-electrical-engineer-walked-away-activity-7520372244192284672-mUHG" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="red" id="n-a-beam-that-follows-the-breath">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHm8eSfbcyMwA/feedshare-shrink_800/B4EaFlc1w1HoAk-/0/1792703421763?e=2147483647&amp;v=beta&amp;t=ympH-mTkh39vKlTZZCih3IBfGsWrwwT74dp_OW23fJQ" alt=""></figure>
+          <h3>A beam that follows the breath.</h3>
+          <p class="when"><time datetime="2026-10-23">October 23, 2026</time> · 193 reactions, 30 comments</p>
+          <p>A tumor in the lower lung moves with each breath, she writes, while the radiation team is aiming inside a much smaller margin. From GTC Berlin she picks out an exploratory collaboration between Siemens Healthineers and NVIDIA on real-time adaptive radiotherapy.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-lung-cancer-patient-lies-on-a-radiation-activity-7519279510828097536-hUd9" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="orange" id="n-the-abilities-you-can-t-hand-off">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E03AQHx26CwJFPbpw/profile-displayphoto-scale_400_400/B4EZtw01VBIMAg-/0/1767124457390?e=2147483647&amp;v=beta&amp;t=eobj6XgC6bJIK7lCMFhfBFK4nW89cchOOMNqS1nWy4Y" alt=""></figure>
+          <h3>The abilities you can't hand off.</h3>
+          <p class="when"><time datetime="2026-10-22">October 22, 2026</time> · 76 reactions, 17 comments</p>
+          <p>She describes Audrey van der Meer at NTNU, who compared handwriting with typing under an EEG cap. In the account, handwriting recruited more of the learning-related rhythm, and typing did not. The post points to Diana Wu David's question: which human skills fade when software does them.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_the-abilities-you-cant-afford-to-outsource-activity-7519072768911499264-1qFm" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="purple" id="n-who-verifies-who-authorizes-who-answers">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQFPOLFObbcjfw/feedshare-shrink_800/B4EaFf4MFYKsAg-/0/1792609927830?e=2147483647&amp;v=beta&amp;t=Or8uSNOoUjd6u8rihQT1WRsSskx_PVHmqqsmbIOmZVU" alt=""></figure>
+          <h3>Who verifies, who authorizes, who answers.</h3>
+          <p class="when"><time datetime="2026-10-22">October 22, 2026</time> · 132 reactions, 109 comments</p>
+          <p>Two years ago, she writes, a generated hand still gave the picture away. Her 2026 point is that cloned voices and agents no longer do. She lists the three jobs a board cannot automate: who checks the output, who allows the instruction, and who is legally responsible when it fails.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_two-years-ago-ai-could-barely-render-five-activity-7518908198330871808-D0eD" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="pink" id="n-bleached-coral-touching-came-back">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQE-mMH-gV3aPQ/feedshare-shrink_800/B4EaFbKVKaKsAo-/0/1792530797646?e=2147483647&amp;v=beta&amp;t=H4E_fw5XZ6WPtYfotsdWqPnxwQIQ4JJ2PFgnINK5ywg" alt=""></figure>
+          <h3>Bleached coral, touching, came back.</h3>
+          <p class="when"><time datetime="2026-10-21">October 21, 2026</time> · 516 reactions, 42 comments</p>
+          <p>Her post is about cauliflower coral at Stanford's Hopkins Marine Station. Steve Palumbi noticed color returning where a healthy fragment touched a bleached one. Danny Collins's trial, as she reports it, saw the touching fragments recover and the separated ones die.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_bleached-corals-were-considered-dead-tissue-activity-7518544194571792384-eza1" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="green" id="n-take-the-model-away-and-the-thinking-drops">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHoSy4XtuKCpQ/feedshare-shrink_800/B4EaFVCprmH0Ac-/0/1792428121155?e=2147483647&amp;v=beta&amp;t=eGzlrW9k1szixeTNO6rmsdxdSUIkivNo-0wosGEfmiE" alt=""></figure>
+          <h3>Take the model away, and the thinking drops.</h3>
+          <p class="when"><time datetime="2026-10-20">October 20, 2026</time> · 69 reactions, 45 comments</p>
+          <p>She summarizes a setup in which 1,222 people worked logic problems, some with ChatGPT and some without. After the model was removed, the assisted group had a harder time continuing. She pairs it with an SAT reading trial and with what GPS did to memory for routes.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_1222-people-were-given-a-series-of-basic-activity-7518184756224913408-17dd" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="blue" id="n-three-switches-in-a-colon-cancer-cell">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQGUvpYhzLKdiQ/feedshare-shrink_800/B4EaFQHK2RJgAc-/0/1792345420003?e=2147483647&amp;v=beta&amp;t=Dt4DKJXqF-i95WgXNnuZtUqDMt5MO_8j34DCksTEaRs" alt=""></figure>
+          <h3>Three switches in a colon cancer cell.</h3>
+          <p class="when"><time datetime="2026-10-19">October 19, 2026</time> · 71 reactions, 33 comments</p>
+          <p>Researchers at KAIST, she writes, mapped colon cancer cells and named three molecular switches, MYB, HDAC2, and FOXA2. Silencing them did not kill the cells in the account she gives. The cells started behaving more like healthy intestinal tissue.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_this-will-change-your-mind-about-cancer-treatments-activity-7517820892119445504-g-nx" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="brown" data-earlier="true" data-posted="2026-10-07" hidden id="n-forty-years-of-dark-then-a-nobel">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQEuhbsym0JFtg/thumbnail-with-play-button-overlay-high/B4EaETSbrtK4C0-/0/1791324963143?e=2147483647&amp;v=beta&amp;t=WYxEk8yERk1iF3UGeLXFc1QUaQri8NCJx5TWIrD8SUQ" alt=""></figure>
+          <h3>Forty years of dark, then a Nobel.</h3>
+          <p class="when"><time datetime="2026-10-07">October 7, 2026</time></p>
+          <p>She writes about a man who, after 40 years without sight, reached for an object he could see. On October 5, 2026, the Nobel Prize in Physiology or Medicine went to the work behind that moment. She traces it to Peter Hegemann, Georg Nagel, and channelrhodopsin in pond algae, and mentions a retinitis pigmentosa treatment under FDA review.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_after-40-years-living-in-complete-darkness-activity-7513470807839506432-zpgw" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="purple" data-earlier="true" data-posted="2026-09-29" hidden id="n-the-algorithm-does-not-lose-its-license">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQH-ChIgBLFBUA/thumbnail-with-play-button-overlay-high/B4EaDrp.WqJMC0-/0/1790660048596?e=2147483647&amp;v=beta&amp;t=PrwPGr-p7DZ2owAyu9_QTy0W63RrhjONlh7k1xWulP4" alt=""></figure>
+          <h3>The algorithm does not lose its license.</h3>
+          <p class="when"><time datetime="2026-09-29">September 29, 2026</time></p>
+          <p>If a doctor follows an AI diagnosis and the patient dies, she writes, the license that is lost is the doctor's. She applies the same rule to the executive. Figures she gives: 60% of directors using AI for board work sit on boards with no formal AI policy, and 83% of S&amp;P 500 companies disclose AI as a risk while 8% of a broader sample disclose board-level oversight.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_if-a-doctor-follows-an-ai-diagnosis-and-the-activity-7510572633994960896-LvgK" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="pink" data-earlier="true" data-posted="2026-09-23" hidden id="n-two-infusions-after-three-failed-lines">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHlG1kXph-ZMQ/feedshare-image-high-res/B4EaDLBXIDHQAU-/0/1790112527532?e=2147483647&amp;v=beta&amp;t=F3c8uU3PpYsmCvGRh1cyqDb0uZSE7t8kRtykOjpR8QA" alt=""></figure>
+          <h3>Two infusions, after three failed lines.</h3>
+          <p class="when"><time datetime="2026-09-23">September 23, 2026</time></p>
+          <p>A 3-year-old with an 11 cm liver tumor that had spread to his lungs, she writes, had failed three lines of high-dose chemotherapy. In a first-in-human trial reported in The New England Journal of Medicine by Steffin and colleagues, his own T cells were engineered to recognize GPC3. Two outpatient infusions. She reports a complete radiographic regression lasting more than 12 months, and says this is one patient.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-3-year-old-boy-had-an-11-cm-liver-tumor-activity-7508397641723015168-VvMy" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="orange" data-earlier="true" data-posted="2026-09-22" hidden id="n-a-vaccine-built-for-one-tumor">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQFZqxGWdp5PvA/feedshare-image-high-res/B4EaDFsHZfJ8AU-/0/1790023071961?e=2147483647&amp;v=beta&amp;t=CMJ3racU4-NkXqjpgofMlI4Escf4qTt18IQi0wyWjb8" alt=""></figure>
+          <h3>A vaccine built for one tumor.</h3>
+          <p class="when"><time datetime="2026-09-22">September 22, 2026</time></p>
+          <p>She writes about Gary Keblish and the KEYNOTE-942 trial at NYU Langone: his tumor sequenced, up to 34 mutations, an individualized mRNA vaccine, and five years later still cancer-free in the account she gives. She cites a later trial of 1,137 patients and KEYNOTE-942 figures of a 49% lower risk of recurrence or death.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-custom-cancer-vaccine-built-in-6-weeks-activity-7508036388949319680-ryYS" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+        <article class="story" data-source="feed" data-color="yellow" data-earlier="true" data-posted="2026-09-17" hidden id="n-children-who-will-not-remember-a-world-without-agents">
+          <p class="tag">The Edge</p>
+          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQG_9n7-6Yh9yg/feedshare-shrink_800/B4EaCrDld.JoAc-/0/1789576239452?e=2147483647&amp;v=beta&amp;t=b37KytX_BvoK01xnT5G3ccoZ650A6T80FSJGDQXNTuk" alt=""></figure>
+          <h3>Children who will not remember a world without agents.</h3>
+          <p class="when"><time datetime="2026-09-17">September 17, 2026</time></p>
+          <p>She writes that children born now will ask an agent instead of searching. Australia, in her account, switched off 4.7 million teenage social media accounts in 30 days, and 81% of those children were still online. She points to a youth summit on September 19 and a digital code of conduct the young ambassadors wrote themselves.</p>
+          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_children-born-today-will-never-know-life-activity-7506223198750040065-0cId" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
+        </article>
+      </div>
+    </section>
+
+<section class="stage" id="reader" aria-label="Reader">
       <div class="stage-tools" id="page-tools">
         <span id="issue-pick">
           <label for="reader-issue">Issue</label>
@@ -1818,279 +2344,11 @@
     </section>
 
     
-<section class="desk" id="weekly">
-      <h2>POCIT Weekly.</h2>
-      <p class="deck">Stories from the weekly letter and the POCIT site, the same number as The Edge. Newer pieces stay open. Earlier ones are in the list below. Each card has the date, a short account, and the writer. Open a name for the contact they publish. The article stays on their site. <a href="https://newsletter.peopleofcolorintech.com/" target="_blank" rel="noopener noreferrer">Get the weekly letter</a>. <a href="https://peopleofcolorintech.com/" target="_blank" rel="noopener noreferrer">Read the site</a>.</p>
-      <div class="author-cards">
-        <article class="card" id="card-habiba-katsha" data-color="green" hidden>
-          <img src="https://peopleofcolorintech.com/wp-content/uploads/2025/01/IMG_1269-scaled-e1736165302631.jpeg" alt="">
-          <div>
-            <p class="card-name">Habiba Katsha</p>
-            <p class="when">Tech reporter, People of Color in Tech</p>
-            <p>POCIT's author page says she is a journalist writing about race, gender, and the internet, and that she is a tech reporter there. The portrait is the one on that page.</p>
-            <p class="src"><a href="https://peopleofcolorintech.com/author/habiba-katsha/" target="_blank" rel="noopener noreferrer">Her pieces at POCIT</a> <a href="https://www.habibakatsha.com/" target="_blank" rel="noopener noreferrer">habibakatsha.com</a></p>
-          </div>
-        </article>
-        <article class="card" id="card-samara-linton" data-color="blue" hidden>
-          <img src="https://peopleofcolorintech.com/wp-content/uploads/2022/05/photo.jpeg" alt="">
-          <div>
-            <p class="card-name">Samara Linton</p>
-            <p class="when">Head of community and content, People of Color in Tech</p>
-            <p>POCIT's author page lists her as head of community and content. It also names her as co-editor of The Colour of Madness (2022) and co-author of Diane Abbott: The Authorised Biography (2020). The portrait is the one on that page.</p>
-            <p class="src"><a href="https://peopleofcolorintech.com/author/samara-linton/" target="_blank" rel="noopener noreferrer">Her pieces at POCIT</a></p>
-          </div>
-        </article>
-      </div>
-      <div class="desk-list">
-        <article class="story" data-source="weekly" data-color="red" data-caption="Deloitte" id="n-deloitte-s-21-5-million-settlement">
-          <p class="tag">POCIT Weekly</p>
-          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2026/08/Deloitte.png" alt=""></figure>
-          <h3>Deloitte's $21.5 million settlement.</h3>
-          <p class="when"><time datetime="2026-08-27">August 27, 2026</time> · Habiba Katsha</p>
-          <p>POCIT reports that Deloitte agreed to pay $21.5 million to settle Justice Department claims that its diversity goals broke federal antidiscrimination rules for government contractors. The piece quotes Attorney General Todd Blanche via HR Dive and notes a companion claim from Edward Blum's group.</p>
-          <p class="src"><a href="https://peopleofcolorintech.com/articles/deloitte-to-pay-21-5m-to-settle-claims-its-dei-programs-violated-civil-rights-law/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
-        </article>
-        <article class="story" data-source="weekly" data-color="orange" data-caption="Jamie Dimon and Judith Dimon" id="n-12-million-from-the-dimons-to-twelve-hbcus">
-          <p class="tag">POCIT Weekly</p>
-          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2026/08/Jamie-Dimon-and-Judith-Dimon.png" alt=""></figure>
-          <h3>$12 million from the Dimons to twelve HBCUs.</h3>
-          <p class="when"><time datetime="2026-08-26">August 26, 2026</time> · Habiba Katsha</p>
-          <p>Jamie Dimon and Judith K. Dimon, with UNCF, are giving $12 million to twelve historically Black colleges, POCIT reports. Each school receives $1 million in endowment capital aimed at programs that train educators and nurses. The list runs from Benedict and Dillard to Tuskegee and Voorhees.</p>
-          <p class="src"><a href="https://peopleofcolorintech.com/articles/jpmorgan-chase-ceo-jamie-dimon-and-wife-donate-12m-to-hbcus/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
-        </article>
-        <article class="story" data-source="weekly" data-color="yellow" data-caption="Moses West, Founder and CEO of AWG Consulting" id="n-water-from-air-after-hurricane-melissa">
-          <p class="tag">POCIT Weekly</p>
-          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2025/11/Moses_West_Founder_and_CEO_of_AWG_Consulting-scaled.jpeg" alt=""></figure>
-          <h3>Water from air, after Hurricane Melissa.</h3>
-          <p class="when"><time datetime="2025-11-17">November 17, 2025</time> · Samara Linton</p>
-          <p>After Hurricane Melissa hit Jamaica on October 28, POCIT reports that a solar atmospheric water generator in Accompong kept making nearly 400 gallons a day. Moses West of AWG Contracting built it. The machine was flipped by the wind and brought back within 48 hours.</p>
-          <p class="src"><a href="https://peopleofcolorintech.com/articles/this-engineers-solar-tech-has-kept-clean-water-flowing-after-hurricane-melissa/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
-        </article>
-        <article class="story" data-source="weekly" data-color="green" data-caption="Elly Savatia" id="n-terp-360-and-a-prize-for-sign-language">
-          <p class="tag">POCIT Weekly</p>
-          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2025/10/Elly-Savatia.jpg" alt=""></figure>
-          <h3>Terp 360, and a prize for sign language.</h3>
-          <p class="when"><time datetime="2025-10-22">October 22, 2025</time> · Habiba Katsha</p>
-          <p>Elly Savatia won the Royal Academy of Engineering's Africa prize for Terp 360, an app that turns speech into sign with 3D avatars. POCIT says his company, Signvrse, recorded more than 2,300 signs with deaf and hard-of-hearing Kenyans so the avatar would move less like a machine. The grant is £50,000.</p>
-          <p class="src"><a href="https://peopleofcolorintech.com/founders/kenyan-innovator-wins-prestigous-engineering-prize-for-sign-language-translation-app/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
-        </article>
-        <article class="story" data-source="weekly" data-color="blue" id="n-a-medical-drone-drawn-at-16">
-          <p class="tag">POCIT Weekly</p>
-          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2025/06/IMG_0625-scaled.jpg" alt=""></figure>
-          <h3>A medical drone, drawn at 16.</h3>
-          <p class="when"><time datetime="2025-06-23">June 23, 2025</time> · Samara Linton</p>
-          <p>Kande Sill won an Arkwright Engineering Scholarship for a drone container meant to carry vaccines and blood without being easily stolen. POCIT notes that she also writes novels as Kande S. Summers and has represented Jamaica at Expo 2020 Dubai.</p>
-          <p class="src"><a href="https://peopleofcolorintech.com/articles/teen-wins-top-uk-scholarship-for-innovative-medical-drone-design/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
-        </article>
-        <article class="story" data-source="weekly" data-color="purple" data-caption="Starlink" id="n-a-phone-that-reaches-a-satellite-in-congo">
-          <p class="tag">POCIT Weekly</p>
-          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2026/08/evgeny-opanasenko-mjKt6ReBB-I-unsplash-scaled.jpg" alt=""></figure>
-          <h3>A phone that reaches a satellite in Congo.</h3>
-          <p class="when"><time datetime="2026-08-20">August 20, 2026</time> · Habiba Katsha</p>
-          <p>POCIT reports that Airtel Africa and Starlink switched on a satellite-to-phone service in the Democratic Republic of the Congo on August 14. At launch it covers light use, such as WhatsApp and SMS, not streaming. Airtel says it wants the same reach in the other African markets where it operates.</p>
-          <p class="src"><a href="https://peopleofcolorintech.com/articles/airtel-africa-and-starlink-launch-satellite-to-phone-service-in-drc/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
-        </article>
-        <article class="story" data-source="weekly" data-color="pink" data-caption="Beyonce" id="n-sirdavis-now-hers-outright">
-          <p class="tag">POCIT Weekly</p>
-          <figure class="shot"><img src="https://peopleofcolorintech.com/wp-content/uploads/2026/07/Beyonce.png" alt=""></figure>
-          <h3>SirDavis, now hers outright.</h3>
-          <p class="when"><time datetime="2026-07-30">July 30, 2026</time> · Habiba Katsha</p>
-          <p>Beyoncé took full ownership of SirDavis American Whisky after launching it with Moët Hennessy, POCIT reports. The brand is named for her paternal great-grandfather, a farmer and moonshiner in the South during Prohibition.</p>
-          <p class="src"><a href="https://peopleofcolorintech.com/articles/beyonce-takes-full-ownership-of-sirdavis-making-the-whisky-brand-black-owned/" target="_blank" rel="noopener noreferrer">Read it at POCIT</a></p>
-        </article>
-      </div>
-    </section>
-
-    
-<section class="desk" id="feed">
-      <h2><button type="button" class="who who-mark" data-color="red" aria-expanded="false" aria-controls="card-martha" aria-label="Dr. Martha Boeckenfeld"><img class="byline" src="https://media.licdn.com/dms/image/v2/D4E03AQHx26CwJFPbpw/profile-displayphoto-scale_400_400/B4EZtw01VBIMAg-/0/1767124457390?e=2147483647&amp;v=beta&amp;t=eobj6XgC6bJIK7lCMFhfBFK4nW89cchOOMNqS1nWy4Y" alt=""></button>The Edge.</h2>
-      <p class="deck">New notes are added as she posts them, newest first. Previous posts are the earlier public notes. She hosts The Edge of Tomorrow. The picture is the one posted with the note. Figures are the ones she gives. <a href="https://www.linkedin.com/in/drmarthaboeckenfeld/" target="_blank" rel="noopener noreferrer">Her profile</a>.</p>
-      <p><button type="button" id="earlier" aria-pressed="false">Previous posts</button></p>
-      <div class="desk-list">
-        <article class="story lead" data-source="feed" data-color="red" data-posted="2026-11-06" id="n-a-seed-32-000-years-in-the-ice">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHyL6nrm4HnMA/feedshare-image-high-res/B4EaGtcAdXJgAQ-/0/1793911163030?e=2147483647&amp;v=beta&amp;t=LbmblZ3Qeh2TQoKHrXRIMrjCDRW_0WMeA4iSpiEubgM" alt=""></figure>
-          <h3>A seed, 32,000 years in the ice.</h3>
-          <p class="when"><time datetime="2026-11-06">November 6, 2026</time> · 69 comments</p>
-          <p>She writes that a seed frozen 124 feet down for about 32,000 years grew into a white flower, from a squirrel burrow beside woolly mammoth bones. After David Gilichinsky's team opened 70 fossil chambers on the Kolyma River and found the mature seeds damaged, Svetlana Yashina cultured placental tissue from unripe fruit. Figures she gives: 31,800 years near −7°C, and second-generation seeds that germinated. She cites Yashina and colleagues, PNAS, 2012.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-seed-frozen-124-feet-beneath-the-ice-for-activity-7524357556744417280-95od" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="blue" data-posted="2026-11-05" id="n-the-agent-that-moved-the-money">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E03AQHx26CwJFPbpw/profile-displayphoto-scale_400_400/B4EZtw01VBIMAg-/0/1767124457390?e=2147483647&amp;v=beta&amp;t=eobj6XgC6bJIK7lCMFhfBFK4nW89cchOOMNqS1nWy4Y" alt=""></figure>
-          <h3>The agent that moved the money.</h3>
-          <p class="when"><time datetime="2026-11-05">November 5, 2026</time> · 74 comments</p>
-          <p>She describes $100,000 leaving a corporate account after an assistant reset a password and changed the wire list. The bank was not breached, she writes. The customer had shared the login. She says teams at major U.S. banks saw agents inside accounts in October 2026. Figures she gives include $1.6 trillion in deposits at JPMorgan, Bank of America, and Wells Fargo, and agreements that treat a customer-authorized agent's instruction as the customer's own. She names her Human Parity Principle: identity, limits, and a sign-off before money moves.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_the-ai-agent-that-moves-your-money-activity-7523995351112916994-qgsO" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="green" data-posted="2026-11-04" id="n-eight-million-products-and-no-petroleum-plastic">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQEqiAiJ3_SaLQ/thumbnail-with-play-button-overlay-high/B4EaGjKLmKG8C8-/0/1793738725815?e=2147483647&amp;v=beta&amp;t=LbZUs22LVuCYIw5CEJFc60vDwrCNoTClu2ajs1H1wcU" alt=""></figure>
-          <h3>Eight million products, and no petroleum plastic.</h3>
-          <p class="when"><time datetime="2026-11-04">November 4, 2026</time></p>
-          <p>She writes about Insiya Jafferjee, who left Apple manufacturing in 2017, and Amir Afshar. Lobster-shell trials showed the chemistry and did not scale. They fermented used cooking oil into a PHA they call VIVOMER. Figures she gives: more than 8 million products, 240 tonnes of petroleum plastic diverted, a $15 million Series A, and a material that runs on existing factory machines. She names Unilever's Wild, Sonsie, Tesco, Boots, and Whole Foods.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_over-8-million-products-shipped-zero-grams-activity-7523632704173625344-yImq" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="red" data-posted="2026-11-03" id="n-a-phone-a-health-worker-and-the-decision">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQFQedhkxAuVJQ/thumbnail-with-play-button-overlay-high/B4EaGd.UVBKkC0-/0/1793651723040?e=2147483647&amp;v=beta&amp;t=-mdvM2Gv8FBj6ByidAMfE9EPPUBnQ3ueXG2Off96lz4" alt=""></figure>
-          <h3>A phone, a health worker, and the decision.</h3>
-          <p class="when"><time datetime="2026-11-03">November 3, 2026</time></p>
-          <p>Her post starts from a $40 phone, a health worker without a medical degree, and a patient more than 100 kilometers from a specialist. She describes Meditron, an open-source medical model from EPFL, and argues that the caregiver still carries the decision. The same note says the Influencer Magazine Awards named her Tech Influencer of the Year that week.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-40-smartphone-a-health-worker-without-activity-7523272240440750083-niI4" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="orange" id="n-a-clay-bench-and-a-cooler-street">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQHY7yw5Ul_wlA/thumbnail-with-play-button-overlay-high/B4EaGa92OOIgC0-/0/1793601271277?e=2147483647&amp;v=beta&amp;t=tmwOrvqLBu2iJJWpLk9dBHsAg7gkRle29ASt6V3Zl1g" alt=""></figure>
-          <h3>A clay bench, and a cooler street.</h3>
-          <p class="when"><time datetime="2026-11-02">November 2, 2026</time> · 774 reactions, 76 comments</p>
-          <p>She writes that city asphalt runs hotter than the air, and that a 3D-printed clay bench from two Zurich University of the Arts students, Andrin Stocker and Luc Schweizer, cools the spot around it by evaporating water through porous terracotta. No grid power. She asks when a public place in a heat wave last felt built for a body.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_city-asphalt-bakes-at-8c-above-ambient-air-activity-7522909016772149248-qR75" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="purple" id="n-from-a-garage-airplane-to-the-night-sky">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQGQgBhgBxblgg/feedshare-shrink_800/B4EaGTGff_I8Ag-/0/1793469315421?e=2147483647&amp;v=beta&amp;t=-gJ_ggD7-31wvNv87-sG1G9wDZXRdrahiqWZA_2Fnc4" alt=""></figure>
-          <h3>From a garage airplane to the night sky.</h3>
-          <p class="when"><time datetime="2026-11-01">November 1, 2026</time> · 277 reactions, 37 comments</p>
-          <p>Her post follows Sabrina Gonzalez Pasterski from an FAA-approved airplane built as a teenager to celestial holography: an attempt to relate gravity and quantum theory in a universe shaped more like ours than the curved toy models physicists often use.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-14-year-old-built-an-faa-approved-aircraft-activity-7522545498709327872-n6zL" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="pink" id="n-a-mask-a-breath-four-cancers">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHaxK573Piaxg/feedshare-image-high-res/B4EaGJPzESJkAU-/0/1793303982721?e=2147483647&amp;v=beta&amp;t=yZvyUN27RWxO18wwG76LA5UMiXMo54FfVgr_HDOn7eY" alt=""></figure>
-          <h3>A mask, a breath, four cancers.</h3>
-          <p class="when"><time datetime="2026-10-30">October 30, 2026</time> · 391 reactions, 50 comments</p>
-          <p>She describes a three-minute breath into an ordinary mask, paired with trained beagles and sensors, that her post says detected four solid cancers with 94.8% early-stage sensitivity. The account she gives is of Dr. Shlomi Madar's work on scent and cancer, set against how few U.S. diagnoses come from routine screening.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-three-minute-breath-into-an-ordinary-mask-activity-7521813324213194752--Tle" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="green" id="n-he-stood-after-a-complete-spinal-injury">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQGYFt0DNcBjGA/feedshare-image-high-res/B4EaGD4QnYJoAU-/0/1793213926460?e=2147483647&amp;v=beta&amp;t=X88PvG0WFWP2QJAGZWNosYqGhaibR9uudcdxVgezyck" alt=""></figure>
-          <h3>He stood, after a complete spinal injury.</h3>
-          <p class="when"><time datetime="2026-10-29">October 29, 2026</time> · 809 reactions, 69 comments</p>
-          <p>Her post is about a first-in-human trial at Keio University. Professors Hideyuki Okano and Masaya Nakamura transplanted stem cells into four patients with complete cervical spinal injuries. She reports no serious cell-related harm in the follow-up she cites, and one person who could stand and start walking rehabilitation.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-man-paralyzed-from-the-neck-down-just-stood-activity-7521458333459861504-z-My" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="blue" id="n-a-bacterium-from-a-tree-frog">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQG0w4IqsftgBQ/thumbnail-with-play-button-overlay-high/B4EaF_EZD1IYDI-/0/1793133222305?e=2147483647&amp;v=beta&amp;t=rpiKscH0e_HQd2trnAbBI4NpLsLY2KNMaLBs6HiC5cs" alt=""></figure>
-          <h3>A bacterium from a tree frog.</h3>
-          <p class="when"><time datetime="2026-10-28">October 28, 2026</time> · 954 reactions, 86 comments</p>
-          <p>She writes about preclinical work at the Japan Advanced Institute of Science and Technology. Professor Eijiro Miyako's group screened bacteria from amphibians and reptiles and, in her account, one strain cleared colorectal tumors in the animal models they tested. This is an animal result, not a treatment.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_in-preclinical-trials-a-gut-bacterium-isolated-activity-7521095973398388736-sInG" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="brown" id="n-a-chair-a-tremor-40-hertz">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E03AQHx26CwJFPbpw/profile-displayphoto-scale_400_400/B4EZtw01VBIMAg-/0/1767124457390?e=2147483647&amp;v=beta&amp;t=eobj6XgC6bJIK7lCMFhfBFK4nW89cchOOMNqS1nWy4Y" alt=""></figure>
-          <h3>A chair, a tremor, 40 hertz.</h3>
-          <p class="when"><time datetime="2026-10-27">October 27, 2026</time> · 118 reactions, 63 comments</p>
-          <p>Her post describes a man with Parkinson's whose tremor stopped in a chair that passed 40 Hz vibration through his body. She cites trials in which motor scores moved, and a meta-analysis, and treats the result as biophysics rather than a gadget claim.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_frequency-can-heal-activity-7520733595800510464-liB5" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="yellow" id="n-reset-the-cell-instead-of-poisoning-it">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQFSAHPXIjd5Bg/feedshare-shrink_1280/B4EaF1HrA8HoAM-/0/1792966308251?e=2147483647&amp;v=beta&amp;t=fO8pBglTqDhyrMPeRsPWI0sDBpmr0v1TyUlhM47biiI" alt=""></figure>
-          <h3>Reset the cell, instead of poisoning it.</h3>
-          <p class="when"><time datetime="2026-10-26">October 26, 2026</time> · 877 reactions, 106 comments</p>
-          <p>She tells the story of Kwang-Hyun Cho, an electrical engineer at KAIST who treats a cancer cell as a control system that can be steered back, not only killed. The post is about digital twins of gene networks and the idea that malignancy is a stuck instruction.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_in-1999-an-electrical-engineer-walked-away-activity-7520372244192284672-mUHG" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="red" id="n-a-beam-that-follows-the-breath">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHm8eSfbcyMwA/feedshare-shrink_800/B4EaFlc1w1HoAk-/0/1792703421763?e=2147483647&amp;v=beta&amp;t=ympH-mTkh39vKlTZZCih3IBfGsWrwwT74dp_OW23fJQ" alt=""></figure>
-          <h3>A beam that follows the breath.</h3>
-          <p class="when"><time datetime="2026-10-23">October 23, 2026</time> · 193 reactions, 30 comments</p>
-          <p>A tumor in the lower lung moves with each breath, she writes, while the radiation team is aiming inside a much smaller margin. From GTC Berlin she picks out an exploratory collaboration between Siemens Healthineers and NVIDIA on real-time adaptive radiotherapy.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-lung-cancer-patient-lies-on-a-radiation-activity-7519279510828097536-hUd9" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="orange" id="n-the-abilities-you-can-t-hand-off">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E03AQHx26CwJFPbpw/profile-displayphoto-scale_400_400/B4EZtw01VBIMAg-/0/1767124457390?e=2147483647&amp;v=beta&amp;t=eobj6XgC6bJIK7lCMFhfBFK4nW89cchOOMNqS1nWy4Y" alt=""></figure>
-          <h3>The abilities you can't hand off.</h3>
-          <p class="when"><time datetime="2026-10-22">October 22, 2026</time> · 76 reactions, 17 comments</p>
-          <p>She describes Audrey van der Meer at NTNU, who compared handwriting with typing under an EEG cap. In the account, handwriting recruited more of the learning-related rhythm, and typing did not. The post points to Diana Wu David's question: which human skills fade when software does them.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_the-abilities-you-cant-afford-to-outsource-activity-7519072768911499264-1qFm" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="purple" id="n-who-verifies-who-authorizes-who-answers">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQFPOLFObbcjfw/feedshare-shrink_800/B4EaFf4MFYKsAg-/0/1792609927830?e=2147483647&amp;v=beta&amp;t=Or8uSNOoUjd6u8rihQT1WRsSskx_PVHmqqsmbIOmZVU" alt=""></figure>
-          <h3>Who verifies, who authorizes, who answers.</h3>
-          <p class="when"><time datetime="2026-10-22">October 22, 2026</time> · 132 reactions, 109 comments</p>
-          <p>Two years ago, she writes, a generated hand still gave the picture away. Her 2026 point is that cloned voices and agents no longer do. She lists the three jobs a board cannot automate: who checks the output, who allows the instruction, and who is legally responsible when it fails.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_two-years-ago-ai-could-barely-render-five-activity-7518908198330871808-D0eD" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="pink" id="n-bleached-coral-touching-came-back">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQE-mMH-gV3aPQ/feedshare-shrink_800/B4EaFbKVKaKsAo-/0/1792530797646?e=2147483647&amp;v=beta&amp;t=H4E_fw5XZ6WPtYfotsdWqPnxwQIQ4JJ2PFgnINK5ywg" alt=""></figure>
-          <h3>Bleached coral, touching, came back.</h3>
-          <p class="when"><time datetime="2026-10-21">October 21, 2026</time> · 516 reactions, 42 comments</p>
-          <p>Her post is about cauliflower coral at Stanford's Hopkins Marine Station. Steve Palumbi noticed color returning where a healthy fragment touched a bleached one. Danny Collins's trial, as she reports it, saw the touching fragments recover and the separated ones die.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_bleached-corals-were-considered-dead-tissue-activity-7518544194571792384-eza1" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="green" id="n-take-the-model-away-and-the-thinking-drops">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHoSy4XtuKCpQ/feedshare-shrink_800/B4EaFVCprmH0Ac-/0/1792428121155?e=2147483647&amp;v=beta&amp;t=eGzlrW9k1szixeTNO6rmsdxdSUIkivNo-0wosGEfmiE" alt=""></figure>
-          <h3>Take the model away, and the thinking drops.</h3>
-          <p class="when"><time datetime="2026-10-20">October 20, 2026</time> · 69 reactions, 45 comments</p>
-          <p>She summarizes a setup in which 1,222 people worked logic problems, some with ChatGPT and some without. After the model was removed, the assisted group had a harder time continuing. She pairs it with an SAT reading trial and with what GPS did to memory for routes.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_1222-people-were-given-a-series-of-basic-activity-7518184756224913408-17dd" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="blue" id="n-three-switches-in-a-colon-cancer-cell">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQGUvpYhzLKdiQ/feedshare-shrink_800/B4EaFQHK2RJgAc-/0/1792345420003?e=2147483647&amp;v=beta&amp;t=Dt4DKJXqF-i95WgXNnuZtUqDMt5MO_8j34DCksTEaRs" alt=""></figure>
-          <h3>Three switches in a colon cancer cell.</h3>
-          <p class="when"><time datetime="2026-10-19">October 19, 2026</time> · 71 reactions, 33 comments</p>
-          <p>Researchers at KAIST, she writes, mapped colon cancer cells and named three molecular switches, MYB, HDAC2, and FOXA2. Silencing them did not kill the cells in the account she gives. The cells started behaving more like healthy intestinal tissue.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_this-will-change-your-mind-about-cancer-treatments-activity-7517820892119445504-g-nx" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="brown" data-earlier="true" data-posted="2026-10-07" hidden id="n-forty-years-of-dark-then-a-nobel">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQEuhbsym0JFtg/thumbnail-with-play-button-overlay-high/B4EaETSbrtK4C0-/0/1791324963143?e=2147483647&amp;v=beta&amp;t=WYxEk8yERk1iF3UGeLXFc1QUaQri8NCJx5TWIrD8SUQ" alt=""></figure>
-          <h3>Forty years of dark, then a Nobel.</h3>
-          <p class="when"><time datetime="2026-10-07">October 7, 2026</time></p>
-          <p>She writes about a man who, after 40 years without sight, reached for an object he could see. On October 5, 2026, the Nobel Prize in Physiology or Medicine went to the work behind that moment. She traces it to Peter Hegemann, Georg Nagel, and channelrhodopsin in pond algae, and mentions a retinitis pigmentosa treatment under FDA review.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_after-40-years-living-in-complete-darkness-activity-7513470807839506432-zpgw" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="purple" data-earlier="true" data-posted="2026-09-29" hidden id="n-the-algorithm-does-not-lose-its-license">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://dms.licdn.com/playlist/vid/v2/D4E05AQH-ChIgBLFBUA/thumbnail-with-play-button-overlay-high/B4EaDrp.WqJMC0-/0/1790660048596?e=2147483647&amp;v=beta&amp;t=PrwPGr-p7DZ2owAyu9_QTy0W63RrhjONlh7k1xWulP4" alt=""></figure>
-          <h3>The algorithm does not lose its license.</h3>
-          <p class="when"><time datetime="2026-09-29">September 29, 2026</time></p>
-          <p>If a doctor follows an AI diagnosis and the patient dies, she writes, the license that is lost is the doctor's. She applies the same rule to the executive. Figures she gives: 60% of directors using AI for board work sit on boards with no formal AI policy, and 83% of S&amp;P 500 companies disclose AI as a risk while 8% of a broader sample disclose board-level oversight.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_if-a-doctor-follows-an-ai-diagnosis-and-the-activity-7510572633994960896-LvgK" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="pink" data-earlier="true" data-posted="2026-09-23" hidden id="n-two-infusions-after-three-failed-lines">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHlG1kXph-ZMQ/feedshare-image-high-res/B4EaDLBXIDHQAU-/0/1790112527532?e=2147483647&amp;v=beta&amp;t=F3c8uU3PpYsmCvGRh1cyqDb0uZSE7t8kRtykOjpR8QA" alt=""></figure>
-          <h3>Two infusions, after three failed lines.</h3>
-          <p class="when"><time datetime="2026-09-23">September 23, 2026</time></p>
-          <p>A 3-year-old with an 11 cm liver tumor that had spread to his lungs, she writes, had failed three lines of high-dose chemotherapy. In a first-in-human trial reported in The New England Journal of Medicine by Steffin and colleagues, his own T cells were engineered to recognize GPC3. Two outpatient infusions. She reports a complete radiographic regression lasting more than 12 months, and says this is one patient.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-3-year-old-boy-had-an-11-cm-liver-tumor-activity-7508397641723015168-VvMy" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="orange" data-earlier="true" data-posted="2026-09-22" hidden id="n-a-vaccine-built-for-one-tumor">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQFZqxGWdp5PvA/feedshare-image-high-res/B4EaDFsHZfJ8AU-/0/1790023071961?e=2147483647&amp;v=beta&amp;t=CMJ3racU4-NkXqjpgofMlI4Escf4qTt18IQi0wyWjb8" alt=""></figure>
-          <h3>A vaccine built for one tumor.</h3>
-          <p class="when"><time datetime="2026-09-22">September 22, 2026</time></p>
-          <p>She writes about Gary Keblish and the KEYNOTE-942 trial at NYU Langone: his tumor sequenced, up to 34 mutations, an individualized mRNA vaccine, and five years later still cancer-free in the account she gives. She cites a later trial of 1,137 patients and KEYNOTE-942 figures of a 49% lower risk of recurrence or death.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_a-custom-cancer-vaccine-built-in-6-weeks-activity-7508036388949319680-ryYS" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-        <article class="story" data-source="feed" data-color="yellow" data-earlier="true" data-posted="2026-09-17" hidden id="n-children-who-will-not-remember-a-world-without-agents">
-          <p class="tag">The Edge</p>
-          <figure class="shot"><img src="https://media.licdn.com/dms/image/v2/D4E22AQG_9n7-6Yh9yg/feedshare-shrink_800/B4EaCrDld.JoAc-/0/1789576239452?e=2147483647&amp;v=beta&amp;t=b37KytX_BvoK01xnT5G3ccoZ650A6T80FSJGDQXNTuk" alt=""></figure>
-          <h3>Children who will not remember a world without agents.</h3>
-          <p class="when"><time datetime="2026-09-17">September 17, 2026</time></p>
-          <p>She writes that children born now will ask an agent instead of searching. Australia, in her account, switched off 4.7 million teenage social media accounts in 30 days, and 81% of those children were still online. She points to a youth summit on September 19 and a digital code of conduct the young ambassadors wrote themselves.</p>
-          <p class="src"><a href="https://www.linkedin.com/posts/drmarthaboeckenfeld_children-born-today-will-never-know-life-activity-7506223198750040065-0cId" target="_blank" rel="noopener noreferrer">Read her post on LinkedIn</a></p>
-        </article>
-      </div>
-    </section>
-
       </div>
 </main>
 <footer>
   <div class="wrap">
-    <p>The newsroom links out. Dr. Martha Boeckenfeld's notes are her public LinkedIn posts. POCIT Weekly is People of Color in Tech. American Scientist is published by Sigma Xi; the frame is their digital edition. Leaders.vote is not those publishers, and this page is not an endorsement.</p>
+    <p>The newsroom links out. Dr. Martha Boeckenfeld's notes are her public LinkedIn posts. POCIT Weekly is People of Color in Tech. American Scientist is published by Sigma Xi; the frame is their digital edition. Magnolia Lookbooks are Magnolia's catalogues. Nyle's notes are its public LinkedIn posts. Leaders.vote is not those publishers, and this page is not an endorsement.</p>
   </div>
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
@@ -2106,7 +2364,7 @@
 })();
 </script>
 <script src="news/researchers.js?v=6" defer></script>
-<script src="news.js?v=69" defer></script>
+<script src="news.js?v=76" defer></script>
 <script src="lang.js?v=6"></script>
 </body>
 </html>

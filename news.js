@@ -213,19 +213,83 @@
       section.hidden = !any;
       if (any) shown += 1;
     });
-    if (reader) reader.hidden = source === "weekly" || source === "feed" || source === "note";
+    if (reader) reader.hidden = source === "weekly" || source === "feed" || source === "note" || source === "look" || source === "nyle";
     if (empty) empty.hidden = shown > 0;
   }
 
-  var sourceBar = document.querySelector(".sources");
-  if (sourceBar) sourceBar.addEventListener("click", function (event) {
-    var button = event.target.closest && event.target.closest("button[data-source]");
-    if (!button || !sourceBar.contains(button)) return;
-    source = button.getAttribute("data-source");
-    sourceBar.querySelectorAll("button").forEach(function (other) {
-      other.setAttribute("aria-pressed", other === button ? "true" : "false");
+  function sectionForSource(name) {
+    if (name === "journal") return document.getElementById("journal") || document.getElementById("reader");
+    if (name === "all" || name === "note") return document.getElementById("note") || document.getElementById("weekly");
+    return document.getElementById(name);
+  }
+
+  function scrollToNode(node) {
+    if (!node) return;
+    var header = document.querySelector("header");
+    var dock = document.querySelector(".pub-dock");
+    var offset = (header ? header.getBoundingClientRect().height : 96) + 16;
+    if (dock && dock.classList.contains("is-on") && dock.classList.contains("is-top")) offset += dock.offsetHeight + 10;
+    var top = node.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo(0, Math.max(0, top));
+  }
+
+  function paintSources(name) {
+    document.querySelectorAll(".sources button[data-source], .pub-dock button[data-source]").forEach(function (other) {
+      other.setAttribute("aria-pressed", other.getAttribute("data-source") === name ? "true" : "false");
     });
-    apply();
+  }
+
+  function mountDock() {
+    var dock = document.querySelector(".pub-dock");
+    var mast = document.querySelector(".mast");
+    var bars = document.querySelectorAll(".sources");
+    var lower = bars[bars.length - 1];
+    var wrap = document.querySelector(".nr-wrap");
+    if (!dock || !mast || !lower || !wrap) return;
+    function layout() {
+      var header = document.querySelector("header");
+      var room = wrap.getBoundingClientRect().left;
+      var side = room >= 118;
+      dock.classList.toggle("is-side", side);
+      dock.classList.toggle("is-top", !side);
+      if (side) {
+        var edge = wrap.getBoundingClientRect().left;
+        dock.style.top = "";
+        dock.style.left = "auto";
+        dock.style.right = (window.innerWidth - edge + 18) + "px";
+        dock.style.width = "";
+      } else {
+        dock.style.width = "";
+        dock.style.right = "";
+        dock.style.left = "";
+        dock.style.top = ((header ? header.getBoundingClientRect().height : 96) + 10) + "px";
+      }
+    }
+    function visibility() {
+      var header = document.querySelector("header");
+      var head = header ? header.getBoundingClientRect().height : 0;
+      var past = mast.getBoundingClientRect().bottom < head + 4;
+      var box = lower.getBoundingClientRect();
+      var lowerOn = box.top < window.innerHeight - 12 && box.bottom > head + 8;
+      var on = past && !lowerOn;
+      dock.classList.toggle("is-on", on);
+      dock.setAttribute("aria-hidden", on ? "false" : "true");
+    }
+    layout();
+    visibility();
+    window.addEventListener("scroll", visibility, { passive: true });
+    window.addEventListener("resize", function () { layout(); visibility(); });
+  }
+
+  document.querySelectorAll(".sources, .pub-dock").forEach(function (sourceBar) {
+    sourceBar.addEventListener("click", function (event) {
+      var button = event.target.closest && event.target.closest("button[data-source]");
+      if (!button || !sourceBar.contains(button)) return;
+      source = button.getAttribute("data-source");
+      paintSources(source);
+      apply();
+      scrollToNode(sectionForSource(source));
+    });
   });
 
   document.addEventListener("click", function (event) {
@@ -904,6 +968,11 @@
     if (!node) return;
     var story = node.classList.contains("story") ? node : (node.closest && node.closest(".story"));
     var section = story && story.closest(".desk");
+    if (section && section.hidden) {
+      source = "all";
+      paintSources("all");
+      apply();
+    }
     if (story && section && section.classList.contains("picking")) openItem(section, story.id, false);
     var details = node.closest && node.closest("details");
     if (details) details.open = true;
@@ -1088,7 +1157,8 @@
   window.addEventListener("hashchange", revealHash);
 
   var preview = document.createElement("script");
-  preview.src = "news/preview/note.js?v=41";
+  preview.src = "news/preview/note.js?v=43";
+  mountDock();
   preview.onload = function () {
     var card = document.getElementById("card-mark");
     if (card) markLinks(card);

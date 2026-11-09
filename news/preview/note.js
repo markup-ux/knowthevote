@@ -1,7 +1,6 @@
 (function () {
-  var bar = document.querySelector(".sources");
   var reader = document.getElementById("reader");
-  if (!bar || !reader || document.getElementById("note")) return;
+  if (!document.querySelector(".sources") || !reader || document.getElementById("note")) return;
 
   var style = document.createElement("style");
   style.textContent = [
@@ -95,14 +94,17 @@
   ].join("\n");
   document.head.appendChild(style);
 
-  var all = bar.querySelector('button[data-source="all"]');
-  var button = document.createElement("button");
-  button.type = "button";
-  button.setAttribute("data-source", "note");
-  button.setAttribute("aria-pressed", "false");
-  button.textContent = "From the publisher";
-  if (all) all.after(button);
-  else bar.appendChild(button);
+  document.querySelectorAll(".sources").forEach(function (bar) {
+    if (bar.querySelector('button[data-source="note"]')) return;
+    var all = bar.querySelector('button[data-source="all"]');
+    var button = document.createElement("button");
+    button.type = "button";
+    button.setAttribute("data-source", "note");
+    button.setAttribute("aria-pressed", "false");
+    button.textContent = "From the publisher";
+    if (all) all.after(button);
+    else bar.appendChild(button);
+  });
 
   function fig(file, alt, caption, diagram) {
     return '<figure class="section-fig' + (diagram ? " is-diagram" : "") + '"><img src="news/preview/' + file + '" alt="' + alt + '"><figcaption>' + caption + '</figcaption></figure>';
@@ -435,7 +437,9 @@
     '</article>',
     '</div>'
   ].join("");
-  reader.parentNode.insertBefore(section, reader);
+  var weekly = document.getElementById("weekly");
+  if (weekly) weekly.parentNode.insertBefore(section, weekly);
+  else reader.parentNode.insertBefore(section, reader);
   section.querySelectorAll(".rest").forEach(function (rest) {
     var summary = rest.querySelector("summary");
     rest.addEventListener("toggle", function () {
