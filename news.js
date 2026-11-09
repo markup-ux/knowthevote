@@ -213,7 +213,7 @@
       section.hidden = !any;
       if (any) shown += 1;
     });
-    if (reader) reader.hidden = source === "weekly" || source === "feed" || source === "note" || source === "look" || source === "nyle";
+    if (reader) reader.hidden = source === "weekly" || source === "feed" || source === "note" || source === "look" || source === "nyle" || source === "better";
     if (empty) empty.hidden = shown > 0;
   }
 
@@ -798,6 +798,7 @@
     if (lead) lead.classList.add("lead");
     apply();
     mountResearchers();
+    mountItemPick(document.getElementById("journal"));
     refreshLatest("journal");
   }
 
@@ -1108,8 +1109,31 @@
   }
 
   function openItem(section, id, scroll) {
+    var button = null;
+    if (scroll) {
+      section.querySelectorAll(".item-pick button").forEach(function (btn) {
+        if (!button && btn.getAttribute("data-item") === id) button = btn;
+      });
+    }
+    var stay = button ? pin(button) : null;
+    var openHere = button && button.nextElementSibling && button.nextElementSibling.id === id && button.nextElementSibling.classList.contains("is-open");
+    if (openHere) {
+      var list = section.querySelector(":scope > .desk-list");
+      section.querySelectorAll(".story").forEach(function (story) {
+        if (story.id) story.classList.remove("is-open");
+      });
+      section.querySelectorAll(".item-pick button").forEach(function (btn) {
+        btn.setAttribute("aria-pressed", "false");
+      });
+      section.querySelectorAll(".item-pick > .story").forEach(function (story) {
+        if (list) list.appendChild(story);
+      });
+      if (stay) stay();
+      return false;
+    }
     var opened = null;
-    section.querySelectorAll(".desk-list > .story").forEach(function (story) {
+    section.querySelectorAll(".story").forEach(function (story) {
+      if (!story.id) return;
       var on = story.id === id;
       story.classList.toggle("is-open", on);
       if (on) {
@@ -1120,16 +1144,22 @@
     section.querySelectorAll(".item-pick button").forEach(function (btn) {
       btn.setAttribute("aria-pressed", btn.getAttribute("data-item") === id ? "true" : "false");
     });
-    if (scroll && opened) {
-      document.documentElement.style.scrollBehavior = "auto";
-      opened.scrollIntoView({ block: "start" });
+    if (button && opened) {
+      var list = section.querySelector(":scope > .desk-list");
+      section.querySelectorAll(".item-pick > .story").forEach(function (story) {
+        if (story !== opened && list) list.appendChild(story);
+      });
+      button.after(opened);
     }
+    if (stay) stay();
+    return true;
   }
 
   function mountItemPick(section) {
     if (!section) return;
-    section.querySelectorAll(".item-pick, .more-pieces").forEach(function (node) { node.remove(); });
-    var stories = [].slice.call(section.querySelectorAll(".desk-list > .story"));
+    section.querySelectorAll(":scope > .item-pick, :scope > .more-pieces").forEach(function (node) { node.remove(); });
+    var list = section.querySelector(":scope > .desk-list");
+    var stories = list ? [].slice.call(list.querySelectorAll(":scope > .story")) : [];
     if (stories.length < 2) return;
     var heading = section.querySelector("h2");
     var nav = document.createElement("nav");
@@ -1184,8 +1214,10 @@
         btn.appendChild(detailEl);
       }
       btn.addEventListener("click", function () {
-        openItem(section, story.id, true);
-        if (story.id && history.replaceState) history.replaceState(null, "", "#" + story.id);
+        var opened = openItem(section, story.id, true);
+        if (!history.replaceState) return;
+        if (opened && story.id) history.replaceState(null, "", "#" + story.id);
+        else history.replaceState(null, "", location.pathname + location.search);
       });
       nav.appendChild(btn);
     });
@@ -1219,6 +1251,12 @@
     }
     var openId = (hashedStory && hashedStory.id) || (fallback && fallback.id) || stories[0].id;
     openItem(section, openId, false);
+  }
+
+  function mountPicks() {
+    ["note", "weekly", "better", "look", "nyle", "feed", "journal"].forEach(function (id) {
+      mountItemPick(document.getElementById(id));
+    });
   }
 
   window.mountItemPick = mountItemPick;
@@ -1257,6 +1295,7 @@
   var authorCards = document.querySelector("#weekly .author-cards");
   if (authorCards) markLinks(authorCards);
   prepareWeekly();
+  refreshLatest("better");
   refreshLatest("look");
   refreshLatest("nyle");
   refreshLatest("feed");
@@ -1272,12 +1311,11 @@
   var preview = document.createElement("script");
   preview.src = "news/preview/note.js?v=43";
   mountDock();
+  mountPicks();
   preview.onload = function () {
     var card = document.getElementById("card-mark");
     if (card) markLinks(card);
-    mountItemPick(document.getElementById("note"));
-    mountItemPick(document.getElementById("weekly"));
-    mountItemPick(document.getElementById("feed"));
+    mountPicks();
     refreshLatest("note");
     revealHash();
   };

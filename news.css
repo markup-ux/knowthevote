@@ -141,6 +141,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 .mast .beat[data-desk="feed"] { --beat: var(--see-pink); }
 .mast .beat[data-desk="look"] { --beat: var(--see-yellow); }
 .mast .beat[data-desk="nyle"] { --beat: var(--see-orange); }
+.mast .beat[data-desk="better"] { --beat: var(--see-purple); }
 .mast .beat p {
   margin: 0;
   max-width: 62ch;
@@ -236,6 +237,8 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 .mast .who[data-color="blue"][aria-expanded="true"] { color: var(--name-blue); }
 .mast .who[data-color="purple"],
 .mast .who[data-color="purple"][aria-expanded="true"] { color: var(--name-purple); }
+.mast .who[data-color="green"],
+.mast .who[data-color="green"][aria-expanded="true"] { color: var(--see-green); }
 .mast .who[data-color="orange"],
 .mast .who[data-color="orange"][aria-expanded="true"] { color: var(--see-orange); }
 .mast .who[data-color="yellow"],
@@ -305,6 +308,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 .pub-dock button[data-source="note"] { --pip: var(--c-brown); }
 .pub-dock button[data-source="journal"] { --pip: var(--c-blue); }
 .pub-dock button[data-source="weekly"] { --pip: var(--c-green); }
+.pub-dock button[data-source="better"] { --pip: var(--c-purple); }
 .pub-dock button[data-source="look"] { --pip: var(--c-yellow); }
 .pub-dock button[data-source="nyle"] { --pip: var(--c-orange); }
 .pub-dock button[data-source="feed"] { --pip: var(--c-pink); }
@@ -359,6 +363,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 .sources button[data-source="note"] { --pip: var(--c-brown); }
 .sources button[data-source="journal"] { --pip: var(--c-blue); }
 .sources button[data-source="weekly"] { --pip: var(--c-green); }
+.sources button[data-source="better"] { --pip: var(--c-purple); }
 .sources button[data-source="look"] { --pip: var(--c-yellow); }
 .sources button[data-source="nyle"] { --pip: var(--c-orange); }
 .sources button[data-source="feed"] { --pip: var(--c-pink); }
@@ -514,10 +519,16 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   outline: 2px solid var(--mako);
   outline-offset: 2px;
 }
-.desk.picking .desk-list > .story { display: none; }
-.desk.picking .desk-list > .story.is-open { display: flex; }
-.desk.picking .desk-list > .story.is-open .shot { height: auto; }
-.desk.picking .desk-list > .story.is-open .shot img { max-height: 420px; }
+.desk.picking { overflow-anchor: none; }
+.desk.picking > .desk-list > .story { display: none; }
+.desk.picking > .desk-list > .story.is-open { display: flex; }
+.item-pick > .story { display: none; grid-column: 1 / -1; }
+.item-pick > .story.is-open { display: flex; }
+.item-pick > .story.is-open .shot,
+.desk.picking > .desk-list > .story.is-open .shot { height: auto; }
+.item-pick > .story.is-open .shot img,
+.desk.picking > .desk-list > .story.is-open .shot img { max-height: 420px; }
+#feed .item-pick:has(> .story.is-open) { max-height: none; overflow: visible; }
 
 .sources button:focus-visible, .read-here:focus-visible,
 .tabs button:focus-visible, .stage-tools button:focus-visible, .books button:focus-visible,
@@ -763,6 +774,9 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
 .researcher[aria-expanded="true"] .mono.sigma { background: #fff; }
 .card.person .open-page.with-mark { text-align: left; }
 #weekly { --desk: var(--c-green); }
+#better { --desk: var(--c-purple); }
+#better h2::before { display: none; }
+#better .byline { border-color: var(--c-purple); }
 #look { --desk: var(--c-yellow); }
 #look h2::before { display: none; }
 #look .byline { border-color: var(--c-yellow); }
