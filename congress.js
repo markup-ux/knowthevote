@@ -60,6 +60,9 @@
   var searchIntroLimit = 100;
   var searchPeopleLimit = 80;
   var checking = false;
+  var fileRefresh = false;
+  var summariesBytes = 0;
+  var slipsUpdated = "";
   var slipChecking = false;
   var slipNote = "";
   var STATE_CODE = {};
@@ -2907,6 +2910,48 @@
     } catch (error) { /* Ignore a broken saved check. */ }
   }
 
+  var liveTimer = 0;
+
+  function scheduleLive(wait) {
+    clearTimeout(liveTimer);
+    liveTimer = setTimeout(function () { checkLive(false); }, wait);
+  }
+
+  function finishLiveCheck() {
+    try { sessionStorage.setItem("lv-congress-checked", String(Date.now())); } catch (error) { /* ignore */ }
+  }
+
+  function takeRolls(rows) {
+    var batch = rows.slice(0, 4);
+    var pending = 0;
+    var added = [];
+    if (!batch.length) return Promise.resolve(added);
+    return new Promise(function (resolve, reject) {
+      function next() {
+        if (pending >= batch.length) {
+          resolve(added);
+          return;
+        }
+        var row = batch[pending];
+        pending += 1;
+        var year = (row.startDate || "").slice(0, 4);
+        api("/house-vote/119/" + row.sessionNumber + "/" + row.rollCallNumber + "/members").then(function (response) {
+          if (!response.ok) throw new Error(String(response.status));
+          return response.json();
+        }).then(function (body) {
+          var vote = liveVote(body);
+          vote.live = true;
+          if (!haveRoll(vote.year, vote.n)) {
+            data.votes.push(vote);
+            added.push(vote);
+          }
+          setTimeout(next, 400);
+        }).catch(reject);
+      }
+      next();
+    });
+  }
+
   function checkLive(manual) {
     if (checking) return;
     var last = 0;
@@ -2920,35 +2965,26 @@
         return year && row.rollCallNumber && !haveRoll(year, row.rollCallNumber);
       });
       if (!missing.length) {
-        try { sessionStorage.setItem("lv-congress-checked", String(Date.now())); } catch (error) { /* ignore */ }
+        finishLiveCheck();
         checking = false;
         renderStatus("Congress.gov lists no House roll call newer than this copy.");
         return;
       }
-      return Promise.all(missing.slice(0, 8).map(function (row) {
-        var year = (row.startDate || "").slice(0, 4);
-        return api("/house-vote/119/" + row.sessionNumber + "/" + row.rollCallNumber + "/members").then(function (response) {
-          if (!response.ok) throw new Error(String(response.status));
-          return response.json();
-        }).then(liveVote);
-      })).then(function (votes) {
-        votes.forEach(function (vote) {
-          vote.live = true;
-          if (!haveRoll(vote.year, vote.n)) data.votes.push(vote);
-        });
-        storeLive();
-        try { sessionStorage.setItem("lv-congress-checked", String(Date.now())); } catch (error) { /* ignore */ }
+      return takeRolls(missing).then(function (votes) {
+        if (votes.length) storeLive();
         checking = false;
         if (!selected && votes[0]) selected = votes[0].id;
-        render();
-        renderStatus("Added " + votes.length + " House roll call" + (votes.length === 1 ? "" : "s") + " from Congress.gov.");
+        if (votes.length) keepPlace(function () { render(); });
+        if (missing.length > votes.length) scheduleLive(2000);
+        else finishLiveCheck();
+        if (votes.length) renderStatus("Added " + votes.length + " House roll call" + (votes.length === 1 ? "" : "s") + " from Congress.gov.");
       });
     }).catch(function (error) {
       checking = false;
       var message = String(error && error.message || "");
-      renderStatus(message === "429" || message === "403"
-        ? "Congress.gov is busy."
-        : "Congress.gov did not answer.");
+      var busy = message === "429" || message === "403";
+      renderStatus(busy ? "Congress.gov is busy." : "Congress.gov did not answer.");
+      scheduleLive(busy ? 90 * 1000 : 3 * 60 * 1000);
     });
   }
 
@@ -3202,10 +3238,96 @@
     setInterval(function () { checkLive(false); }, 20 * 60 * 1000);
     setTimeout(checkSlips, 8000);
     setInterval(checkSlips, 20 * 60 * 1000);
+    setInterval(refreshPublished, 10 * 60 * 1000);
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) refreshPublished();
+    });
+  }
+
+  function mergeMembers(extra) {
+    var seen = {};
+    data.members.forEach(function (member) { seen[member[0]] = true; });
+    (extra || []).forEach(function (member) {
+      if (!seen[member[0]]) data.members.push(member);
+    });
+    indexMembers();
+  }
+
+  function applyVotes(payload) {
+    if (!data || !payload || !payload.updated || payload.updated === data.updated) return false;
+    var senateMembers = (data.senate && data.senate.members) || [];
+    var live = (data.votes || []).filter(function (vote) { return vote.live; });
+    data.members = payload.members || data.members;
+    data.votes = payload.votes || [];
+    data.floor = payload.floor || data.floor;
+    data.updated = payload.updated;
+    mergeMembers(senateMembers);
+    live.forEach(function (vote) {
+      if (!haveRoll(vote.year, vote.n)) data.votes.push(vote);
+    });
+    indexWords();
+    indexBills();
+    return true;
+  }
+
+  function applySenate(senate) {
+    if (!data || !senate || !senate.votes) return false;
+    if (data.senate && senate.updated && data.senate.updated === senate.updated) return false;
+    data.senate = senate;
+    data.senateVotes = senate.votes || [];
+    mergeMembers(senate.members);
+    return true;
+  }
+
+  function applySlips(extra) {
+    if (!extra || !extra.slips) return false;
+    if (extra.updated && extra.updated === slipsUpdated) return false;
+    slips = extra.slips;
+    slipsUpdated = extra.updated || "";
+    indexWords();
+    return true;
+  }
+
+  function refreshPublished() {
+    if (fileRefresh || !data || document.hidden) return;
+    fileRefresh = true;
+    var changed = false;
+    fetch(published("congress/votes.json")).then(function (response) {
+      return response.ok ? response.json() : null;
+    }).then(function (payload) {
+      if (applyVotes(payload)) changed = true;
+      return fetch(published("congress/senate.json"));
+    }).then(function (response) {
+      return response && response.ok ? response.json() : null;
+    }).then(function (senate) {
+      if (applySenate(senate)) changed = true;
+      return fetch(published("congress/slips.json"));
+    }).then(function (response) {
+      return response && response.ok ? response.json() : null;
+    }).then(function (extra) {
+      if (applySlips(extra)) changed = true;
+      return fetch(published("congress/summaries.json"));
+    }).then(function (response) {
+      return response && response.ok ? response.text() : "";
+    }).then(function (text) {
+      if (text && text.length !== summariesBytes) {
+        summariesBytes = text.length;
+        summaries = JSON.parse(text);
+        indexSummaries();
+        changed = true;
+      }
+      if (changed) keepPlace(function () { render(); renderStatus(""); });
+    }).catch(function () { /* The copy already on the page stays. */ }).then(function () {
+      fileRefresh = false;
+    });
   }
 
   function published(path) {
-    return path + (path.indexOf("?") < 0 ? "?" : "&") + "t=" + Math.floor(Date.now() / 3600000);
+    var host = location.hostname;
+    var base = host === "leaders.vote" || host === "www.leaders.vote"
+      ? "https://raw.githubusercontent.com/markup-ux/knowthevote/main/" + path
+      : path;
+    return base + (base.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now();
   }
   fetch(published("congress/votes.json?v=1")).then(function (response) {
     if (!response.ok) throw new Error(String(response.status));
@@ -3213,8 +3335,10 @@
   }).then(function (payload) {
     return fetch(published("congress/summaries.json?v=4")).then(function (response) {
       if (!response.ok) throw new Error(String(response.status));
-      return response.json();
-    }).then(function (extra) {
+      return response.text();
+    }).then(function (text) {
+      summariesBytes = text.length;
+      var extra = JSON.parse(text);
       summaries = extra || {};
         return fetch(published("congress/money.json?v=1")).then(function (response) {
         if (!response.ok) return {};
@@ -3247,6 +3371,7 @@
               return { slips: [] };
             }).then(function (extraSlips) {
               slips = (extraSlips && extraSlips.slips) || [];
+              slipsUpdated = (extraSlips && extraSlips.updated) || "";
               return fetch(published("congress/presidents.json?v=1")).then(function (response) {
                 if (!response.ok) return { people: [] };
                 return response.json();

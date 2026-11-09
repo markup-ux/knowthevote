@@ -1,0 +1,37 @@
+name: Update House and Senate records
+
+on:
+  schedule:
+    - cron: "15 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: published-records
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Copy the House and Senate files
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          python congress/build.py
+          python congress/senate_build.py
+          python congress/slips_build.py
+          git add -- congress/votes.json congress/summaries.json congress/senate.json congress/slips.json
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Update House roll calls, the floor list, Senate roll calls, and blue slips."
+            git push
+          fi
