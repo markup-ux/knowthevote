@@ -1476,7 +1476,8 @@
       var day = d.getDate();
       var hour = d.getHours();
       var minute = d.getMinutes();
-      var stamp = y + "-" + m + "-" + day + "-" + hour + "-" + minute;
+      var compact = window.matchMedia("(max-width: 640px)").matches;
+      var stamp = y + "-" + m + "-" + day + "-" + hour + "-" + minute + (compact ? "-s" : "-l");
       if (stamp === shownMinute) return;
       shownMinute = stamp;
       var h12 = hour % 12 || 12;
@@ -1486,7 +1487,10 @@
       var abs = Math.abs(off);
       var zone = zoneName(d);
       el.dateTime = y + "-" + pad(m + 1) + "-" + pad(day) + "T" + pad(hour) + ":" + pad(minute) + ":" + pad(d.getSeconds()) + sign + pad(Math.floor(abs / 60)) + ":" + pad(abs % 60);
-      el.textContent = days[d.getDay()] + ", " + months[m] + " " + day + ", " + y + " · " + h12 + ":" + pad(minute) + " " + ap + (zone ? " " + zone : "");
+      var when = h12 + ":" + pad(minute) + " " + ap + (zone ? " " + zone : "");
+      el.textContent = compact
+        ? months[m].slice(0, 3) + " " + day + " · " + when
+        : days[d.getDay()] + ", " + months[m] + " " + day + ", " + y + " · " + when;
     }
     function keepTime() {
       show();
