@@ -421,6 +421,79 @@
     return article;
   }
 
+  var MONTHS = { january: 1, february: 2, march: 3, april: 4, may: 5, june: 6, july: 7, august: 8, september: 9, october: 10, november: 11, december: 12 };
+
+  function issueKey(text) {
+    var match = String(text || "").match(/([A-Za-z]+)(?:\s*[–—-]\s*([A-Za-z]+))?\s+(\d{4})/);
+    if (!match) return "";
+    var start = MONTHS[match[1].toLowerCase()];
+    var end = match[2] ? MONTHS[match[2].toLowerCase()] : start;
+    if (!start || !end) return "";
+    var month = Math.max(start, end);
+    return match[3] + "-" + (month < 10 ? "0" : "") + month;
+  }
+
+  function storyDate(story) {
+    var time = story.querySelector("time[datetime]");
+    var stamped = time && time.getAttribute("datetime");
+    if (stamped) return stamped;
+    var posted = story.getAttribute("data-posted");
+    if (posted) return posted;
+    var heading = story.querySelector("h3");
+    return heading ? issueKey(heading.textContent) : "";
+  }
+
+  function storyDateLabel(story) {
+    var time = story.querySelector("time");
+    if (time && time.textContent.trim()) return time.textContent.trim();
+    var heading = story.querySelector("h3");
+    var text = heading ? heading.textContent.replace(/\s+/g, " ").trim() : "";
+    var match = text.match(/^(.+?\d{4})/);
+    return match ? match[1].trim() : "";
+  }
+
+  function storyTitle(story) {
+    var heading = story.querySelector("h3");
+    if (!heading) return "";
+    var text = heading.textContent.replace(/\s+/g, " ").trim();
+    var match = text.match(/^(.+?\d{4})\.\s*(.+)$/);
+    return match ? match[2].trim() : text;
+  }
+
+  function storyImage(story) {
+    var img = story.querySelector("figure.shot img, figure.essay-fig img, figure img");
+    return img ? img.getAttribute("src") || "" : "";
+  }
+
+  function refreshLatest(only) {
+    document.querySelectorAll(".mast .beat[data-desk]").forEach(function (beat) {
+      var desk = beat.getAttribute("data-desk");
+      if (only && desk !== only) return;
+      var section = document.getElementById(desk);
+      var link = beat.querySelector("a.latest");
+      if (!section || !link) return;
+      var newest = null;
+      section.querySelectorAll(".story").forEach(function (story) {
+        if (!story.id || !storyDate(story)) return;
+        if (!newest || storyDate(story) > storyDate(newest)) newest = story;
+      });
+      if (!newest) return;
+      link.setAttribute("href", "#" + newest.id);
+      var img = link.querySelector("img");
+      var src = storyImage(newest);
+      if (img && src) img.setAttribute("src", src);
+      var title = link.querySelector(".latest-text > span");
+      var name = storyTitle(newest);
+      if (title && name) title.textContent = name;
+      var when = link.querySelector("time");
+      var label = storyDateLabel(newest);
+      if (when && label) {
+        when.textContent = label;
+        when.setAttribute("datetime", storyDate(newest));
+      }
+    });
+  }
+
   function takeNew(data) {
     var list = document.querySelector("#feed .desk-list");
     if (!list || !data || !data.posts) return;
@@ -439,6 +512,7 @@
     if (first) first.classList.add("lead");
     apply();
     mountItemPick(document.getElementById("feed"));
+    refreshLatest("feed");
   }
 
   fetch("news/edge.json", { cache: "no-store" }).then(function (response) {
@@ -645,6 +719,7 @@
     prepareWeekly();
     apply();
     mountItemPick(document.getElementById("weekly"));
+    refreshLatest("weekly");
   }
 
   fetch("news/pocit.json", { cache: "no-store" }).then(function (response) {
@@ -723,6 +798,7 @@
     if (lead) lead.classList.add("lead");
     apply();
     mountResearchers();
+    refreshLatest("journal");
   }
 
   fetch("news/scientist.json", { cache: "no-store" }).then(function (response) {
@@ -956,9 +1032,42 @@
   function focusCard(card) {
     card.tabIndex = -1;
     requestAnimationFrame(function () {
-      card.scrollIntoView({ block: "start" });
+      card.scrollIntoView({ block: "nearest" });
       card.focus({ preventScroll: true });
     });
+  }
+
+  function placeCard(button, card) {
+    var beat = button.closest(".beat");
+    if (beat && beat.closest(".mast")) {
+      beat.appendChild(card);
+      return;
+    }
+    var story = button.closest(".story");
+    var when = story && story.querySelector(":scope > .when");
+    if (when) {
+      when.after(card);
+      return;
+    }
+    var heading = button.closest("h2");
+    if (heading) {
+      heading.after(card);
+      return;
+    }
+    button.after(card);
+  }
+
+  function pin(button) {
+    var top = button.getBoundingClientRect().top;
+    return function () {
+      var drift = button.getBoundingClientRect().top - top;
+      if (Math.abs(drift) < 1) return;
+      var root = document.documentElement;
+      var previous = root.style.scrollBehavior;
+      root.style.scrollBehavior = "auto";
+      window.scrollBy(0, drift);
+      root.style.scrollBehavior = previous;
+    };
   }
 
   function revealHash() {
@@ -1148,6 +1257,10 @@
   var authorCards = document.querySelector("#weekly .author-cards");
   if (authorCards) markLinks(authorCards);
   prepareWeekly();
+  refreshLatest("look");
+  refreshLatest("nyle");
+  refreshLatest("feed");
+  refreshLatest("journal");
 
   paintFrame();
   apply();
@@ -1165,6 +1278,7 @@
     mountItemPick(document.getElementById("note"));
     mountItemPick(document.getElementById("weekly"));
     mountItemPick(document.getElementById("feed"));
+    refreshLatest("note");
     revealHash();
   };
   document.body.appendChild(preview);
@@ -1175,19 +1289,22 @@
     var id = button.getAttribute("aria-controls");
     var card = id && document.getElementById(id);
     var open = button.getAttribute("aria-expanded") === "true";
+    var stay = pin(button);
     document.querySelectorAll(".who").forEach(function (other) {
       other.setAttribute("aria-expanded", "false");
     });
-    document.querySelectorAll(".contacts .card, .author-cards .card, .story > .card").forEach(function (other) {
+    document.querySelectorAll(".contacts .card, .author-cards .card, .story > .card, .beat > .card, .desk > .card").forEach(function (other) {
       other.hidden = true;
     });
     if (!open && card) {
-      var story = button.closest(".story");
-      var when = story && story.querySelector(":scope > .when");
-      if (when) when.after(card);
+      placeCard(button, card);
       button.setAttribute("aria-expanded", "true");
       card.hidden = false;
-      focusCard(card);
+      card.tabIndex = -1;
+      stay();
+      card.focus({ preventScroll: true });
+    } else {
+      stay();
     }
   });
 })();
