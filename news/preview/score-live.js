@@ -33,15 +33,32 @@
       var note = document.querySelector("#" + meta.id + " .note");
       if (note) note.textContent = "Updating scores";
     });
+    stampBoard();
     refresh(true);
+    refreshStart();
     setInterval(function () {
       if (document.hidden) return;
+      stampBoard();
       refresh(false);
+      refreshStart();
     }, 60000);
     setInterval(function () {
       if (document.hidden) return;
       refresh(true);
     }, 600000);
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) return;
+      stampBoard();
+      refresh(false);
+      refreshStart();
+    });
+  }
+
+  function stampBoard() {
+    var kicker = document.getElementById("score-kicker");
+    if (!kicker) return;
+    var date = new Date();
+    kicker.textContent = "Scoreboard \u00b7 " + MONTHS[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
   }
 
   function refresh(full) {
@@ -478,6 +495,110 @@
       }
       pump();
     });
+  }
+
+  var START_KEY = "MmU4YjZmZWY1MTIxMjA1ZjgyOGVhOGZkMDM4NWYxNmQ0NDdkZDg1NjZhMDJkNTk4ZTU4Y2IxNDA5N2FmMDIxOGZpbHRlcnM9cHVibGlzaGVkJTNBdHJ1ZStBTkQrdGVzdE1vZGUlM0FmYWxzZStBTkQrc2FuZGJveE1vZGUlM0FmYWxzZStBTkQrYXBwcm92ZWQlM0F0cnVlJmF0dHJpYnV0ZXNUb1JldHJpZXZlPSU1QiUyMnByb2ZpbGVUeXBlJTIyJTJDJTIycHJvZmlsZUlkJTIyJTVE";
+
+  function refreshStart() {
+    var list = document.getElementById("startgg-list");
+    if (!list) return;
+    var params = [
+      "query=",
+      "hitsPerPage=5",
+      "filters=" + encodeURIComponent("profileType:tournament"),
+      "attributesToHighlight=" + encodeURIComponent("name,city,addrState,countryCode,timezone,startAt,endAt,numAttendees,registrationClosesAt,state,events"),
+      "attributesToRetrieve=profileId"
+    ].join("&");
+    fetch("https://UYV40OSM89-dsn.algolia.net/1/indexes/*/queries", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Algolia-Application-Id": "UYV40OSM89",
+        "X-Algolia-API-Key": START_KEY
+      },
+      body: JSON.stringify({ requests: [{ indexName: "omnisearch", params: params }] })
+    }).then(function (res) {
+      return res.json();
+    }).then(function (data) {
+      var hits = data && data.results && data.results[0] && data.results[0].hits;
+      if (!hits || !hits.length) return;
+      list.innerHTML = hits.map(startRow).join("");
+      var asof = document.getElementById("startgg-asof");
+      if (asof) asof.textContent = "Updated " + new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+      if (window.applyScoreSearch) window.applyScoreSearch();
+    }).catch(function () {});
+  }
+
+  function startRow(hit) {
+    var field = hit._highlightResult || {};
+    var name = plain(field.name);
+    var game = firstGame(field.events);
+    var start = Number(plain(field.startAt));
+    var end = Number(plain(field.endAt));
+    var close = Number(plain(field.registrationClosesAt));
+    var attendees = Number(plain(field.numAttendees));
+    var when = start ? whenInZone(start, plain(field.timezone)) : null;
+    var bits = [];
+    if (game) bits.push(escapeHtml(game));
+    bits.push(escapeHtml(placeText(field)));
+    if (when) bits.push("<time datetime=\"" + escapeHtml(when.iso) + "\">" + escapeHtml(when.text) + "</time>");
+    if (attendees > 0) bits.push(escapeHtml(attendees.toLocaleString("en-US")) + "\u00a0in");
+    return "<li><span class=\"nm\">" + escapeHtml(name) + "</span><span class=\"game\">" + bits.join(" \u00b7 ") + "</span><span class=\"amt\">" + escapeHtml(startStatus(close, start, end)) + "</span></li>";
+  }
+
+  function firstGame(events) {
+    if (!events || !events.length) return "";
+    var game = events[0].videogame || {};
+    var display = plain(game.displayName);
+    var name = plain(game.name);
+    if (name.length > display.length) return name;
+    return display || name;
+  }
+
+  function placeText(field) {
+    var city = plain(field.city);
+    if (!city) return "Online";
+    var state = plain(field.addrState);
+    var country = plain(field.countryCode);
+    if (/^[A-Z]{2}$/.test(state)) return city + ", " + state;
+    if (country && country !== "US") return city + ", " + country;
+    return city;
+  }
+
+  function whenInZone(seconds, zone) {
+    var date = new Date(seconds * 1000);
+    var options = { month: "short", day: "numeric", year: "numeric" };
+    if (zone) options.timeZone = zone;
+    var parts;
+    try {
+      parts = new Intl.DateTimeFormat("en-US", options).formatToParts(date);
+    } catch (error) {
+      delete options.timeZone;
+      parts = new Intl.DateTimeFormat("en-US", options).formatToParts(date);
+    }
+    var month = "";
+    var day = "";
+    var year = "";
+    parts.forEach(function (part) {
+      if (part.type === "month") month = part.value;
+      if (part.type === "day") day = part.value;
+      if (part.type === "year") year = part.value;
+    });
+    var text = month + " " + day;
+    if (String(new Date().getFullYear()) !== year) text += ", " + year;
+    return { text: text, iso: date.toISOString() };
+  }
+
+  function plain(node) {
+    if (!node || node.value == null) return "";
+    return String(node.value).replace(/<[^>]+>/g, "");
+  }
+
+  function startStatus(close, start, end) {
+    var now = Date.now() / 1000;
+    if (close > now) return close - now < 7 * 24 * 3600 ? "Closes soon" : "Open";
+    if (start && end && start <= now && now <= end) return "On now";
+    return "";
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);

@@ -1562,10 +1562,10 @@
     css.href = root + "news/preview/scoreboard.css?v=6";
     document.head.appendChild(css);
     var board = document.createElement("script");
-    board.src = root + "news/preview/scoreboard.js?v=12";
+    board.src = root + "news/preview/scoreboard.js?v=13";
     board.onload = function () {
       var live = document.createElement("script");
-      live.src = root + "news/preview/score-live.js?v=4";
+      live.src = root + "news/preview/score-live.js?v=6";
       document.body.appendChild(live);
     };
     document.body.appendChild(board);
