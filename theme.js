@@ -1540,4 +1540,33 @@
       if (document.visibilityState === "visible") pullWatched();
     });
   }
+
+  function loadScoreboard() {
+    if (document.getElementById("score-open")) return;
+    var root = "";
+    var nodes = document.getElementsByTagName("script");
+    for (var i = nodes.length - 1; i >= 0; i--) {
+      var src = nodes[i].getAttribute("src") || "";
+      var at = src.indexOf("theme.js");
+      if (at >= 0) {
+        root = src.slice(0, at);
+        break;
+      }
+    }
+    var css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = root + "news/preview/scoreboard.css?v=6";
+    document.head.appendChild(css);
+    var board = document.createElement("script");
+    board.src = root + "news/preview/scoreboard.js?v=10";
+    board.onload = function () {
+      var live = document.createElement("script");
+      live.src = root + "news/preview/score-live.js?v=4";
+      document.body.appendChild(live);
+    };
+    document.body.appendChild(board);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", loadScoreboard);
+  else loadScoreboard();
+
 })();
