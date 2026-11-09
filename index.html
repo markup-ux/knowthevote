@@ -9,6 +9,10 @@
 <meta name="description" content="Leaders.vote is an independent, nonpartisan guide to the leaders we vote for.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1915'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23f4f0e6'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="guide.css?v=life30">
+<style>
+.state-fold { margin: 12px 0 0; }
+.state-fold summary { cursor: pointer; width: fit-content; font-size: 18px; }
+</style>
 
 <!-- seo -->
 <link rel="canonical" href="https://leaders.vote/">
@@ -776,6 +780,8 @@ through fiscal year 2022</p>
       <button type="submit">Find this address</button>
     </form>
     <div id="home-where-result" aria-live="polite"></div>
+    <details class="state-fold">
+      <summary>States</summary>
     <div class="state-list"><a href="al.html" data-code="AL">Alabama</a>
 <a href="ak.html" data-code="AK">Alaska</a>
 <a href="az.html" data-code="AZ">Arizona</a>
@@ -827,6 +833,7 @@ through fiscal year 2022</p>
 <a href="wv.html" data-code="WV">West Virginia</a>
 <a href="wi.html" data-code="WI">Wisconsin</a>
 <a href="wy.html" data-code="WY">Wyoming</a></div>
+    </details>
     <div class="page-notes">
     <p class="deck">You can also enter your street address to access your state's official election-office lookup. Your address is never stored on Leaders.vote.</p>
     <p class="deck">Independent. Informational. No endorsements. Leaders.vote is not affiliated with any government agency.</p>

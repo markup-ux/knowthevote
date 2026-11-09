@@ -54,6 +54,8 @@
   cursor: pointer;
 }
 #census-states button.is-on, #crime-states button.is-on { border-bottom-color: #1c1915; background: #e4d8c4; }
+.state-fold { margin: 12px 0 0; }
+.state-fold summary { cursor: pointer; width: fit-content; font-size: 18px; }
 #census-detail { scroll-margin-top: 120px; }
 #census-detail h2, #crime-detail h2 { margin-top: 8px; }
 .census-actions { margin: 18px 0 0; }
@@ -402,7 +404,10 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
     <p id="census-blurb" class="sub"></p>
     <div id="census-legend" class="result-legend"></div>
     <p id="census-status" class="note" aria-live="polite"></p>
-    <div id="census-states" class="state-list"></div>
+    <details class="state-fold">
+      <summary>States</summary>
+      <div id="census-states" class="state-list"></div>
+    </details>
     <div id="census-detail"></div>
     <section class="where" id="crime">
       <h2>Crime</h2>
@@ -416,7 +421,10 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
       <p id="crime-blurb" class="sub"></p>
       <div id="crime-legend" class="result-legend"></div>
       <p id="crime-status" class="note" aria-live="polite"></p>
-      <div id="crime-states" class="state-list"></div>
+      <details class="state-fold">
+        <summary>States</summary>
+        <div id="crime-states" class="state-list"></div>
+      </details>
       <div class="sheet-switch" id="crime-sort" role="group" aria-label="Sort states">
         <button type="button" data-sort="rate" data-dir="-1" aria-pressed="true">Highest rate</button>
         <button type="button" data-sort="rate" data-dir="1" aria-pressed="false">Lowest rate</button>
