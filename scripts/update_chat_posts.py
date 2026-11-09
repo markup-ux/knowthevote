@@ -5,10 +5,11 @@ congress-legislators social file. Every other account is a link on the
 campaign site already stored for that person. Posts are read from the public
 feeds those networks provide: X, Mastodon, Bluesky, and Truth Social.
 Facebook, Instagram, and YouTube are linked, because they do not publish a
-post feed this page can copy. The live site runs this every ten minutes.
-X allows about 30 account reads every 15 minutes, so each run reads the
-leaders who posted recently first, then continues through the rest. A failed
-refresh keeps the previous posts for that account.
+post feed this page can copy. GitHub often starts the schedule hours late,
+so on the live site this keeps copying for about six hours. X allows about
+30 account reads every 15 minutes, so each pass reads the leaders who posted
+recently first, then continues through the rest. A failed refresh keeps the
+previous posts for that account.
 """
 import html
 import json
@@ -120,7 +121,10 @@ def publish_chat():
         )
         pushed = subprocess.run(["git", "push", "origin", "HEAD"], cwd=ROOT)
         if pushed.returncode != 0:
-            subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=ROOT, check=True)
+            pulled = subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=ROOT)
+            if pulled.returncode != 0:
+                subprocess.run(["git", "rebase", "--abort"], cwd=ROOT)
+                raise RuntimeError("rebase failed")
             subprocess.run(["git", "push", "origin", "HEAD"], cwd=ROOT, check=True)
         print("published", flush=True)
     except Exception as error:
@@ -927,5 +931,39 @@ def main():
     print("accounts", account_count, "people with accounts", people_count, "posts", post_count, "feeds ok", ok, flush=True)
 
 
+# GitHub's own limit for one job is six hours. Stop short of that so the
+# last push can finish, and leave a queued run to take the next shift.
+RUN_MINUTES = 350
+PAUSE_SECONDS = 180
+
+
+def run_window():
+    """Keep copying until the next scheduled run can take over."""
+    raw = os.environ.get("CHAT_POSTS_RUN_MINUTES") or ""
+    try:
+        minutes = float(raw) if raw else (RUN_MINUTES if os.environ.get("GITHUB_ACTIONS") == "true" else 0)
+    except ValueError:
+        minutes = 0
+    if minutes <= 0:
+        main()
+        return
+    deadline = time.time() + minutes * 60
+    while True:
+        started = time.time()
+        try:
+            main()
+        except Exception as error:
+            print("copy failed", error, flush=True)
+        if time.time() >= deadline:
+            return
+        pause = PAUSE_SECONDS - (time.time() - started)
+        if pause < 30:
+            pause = 30
+        if time.time() + pause > deadline:
+            return
+        print("next copy in", int(pause), "seconds", flush=True)
+        time.sleep(pause)
+
+
 if __name__ == "__main__":
-    main()
+    run_window()

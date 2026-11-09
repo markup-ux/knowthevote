@@ -2,8 +2,8 @@ name: Update Group Chat posts
 
 on:
   schedule:
-    # GitHub's shortest schedule is five minutes. Ten minutes leaves room
-    # for one batch of X reads, which allows about 30 accounts per 15 minutes.
+    # GitHub often starts this hours late. The job itself keeps copying for
+    # about six hours, and a queued run takes the next shift.
     - cron: "*/10 * * * *"
   workflow_dispatch:
 
@@ -17,7 +17,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 360
     env:
       CHAT_POSTS_BUDGET_MINUTES: "8"
     steps:
