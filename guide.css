@@ -1011,3 +1011,85 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) #sex-hood-base::after {
 .spark polyline { fill: none; stroke: var(--life); stroke-width: 2; }
 .spark circle { fill: var(--life); }
 .spark text { fill: currentColor; font-size: 9px; font-family: "Segoe UI", "Helvetica Neue", sans-serif; }
+html {
+  --mark-navy: var(--c-blue, #0a3161);
+  --mark-blue: color-mix(in srgb, var(--c-blue, #1e4d7b) 72%, #000);
+  --mark-deep: color-mix(in srgb, var(--c-blue, #071a33) 42%, #000);
+  --mark-metal: var(--c-brown, #c4922a);
+  --mark-gold: var(--c-yellow, #e6b422);
+  --mark-map: color-mix(in srgb, var(--c-yellow, #f6d56a) 62%, #fff);
+  --mark-red: var(--c-red, #bf0a30);
+  --mark-rose: color-mix(in srgb, var(--c-red, #8d3232) 72%, #000);
+  --mark-no: var(--c-pink, #8d2344);
+  --mark-yes: var(--c-green, #0e6a38);
+  --mark-paper: var(--paper, #fffaf2);
+  --mark-on: var(--on-blue, #f4f7fb);
+  --mark-ink: var(--ink, #1c1915);
+  --mark-wash: color-mix(in srgb, var(--c-blue, #8eafd4) 34%, var(--paper, #fff));
+  --mark-parcel: color-mix(in srgb, var(--c-blue, #8eafd4) 52%, #fff);
+  --mark-sky: color-mix(in srgb, var(--c-blue, #c5d7ec) 28%, var(--paper, #fff));
+  --mark-fold: color-mix(in srgb, var(--c-brown, #e7dcc8) 32%, var(--paper, #fff));
+  --mark-crease: color-mix(in srgb, var(--c-brown, #c9bba4) 55%, var(--paper, #fff));
+}
+.nav-prints {
+  display: block;
+  width: 100%;
+  margin: 2px 0 8px;
+  padding: 0;
+  background: transparent;
+}
+.nav-prints-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px 22px;
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
+}
+.nav-prints a {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--bar-ink);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+.nav-prints a:hover,
+.nav-prints a[aria-current="page"],
+.nav-prints a[aria-current="page"]:hover {
+  box-shadow: none;
+  text-decoration: none;
+}
+.nav-prints .mark {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex: none;
+  aspect-ratio: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--mark-paper);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bar-ink) 32%, transparent);
+}
+.nav-prints a:hover span,
+.nav-prints a[aria-current="page"] span {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: var(--bar-stripe);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.nav-prints a:focus-visible { outline: 2px solid var(--bar-ink); outline-offset: 3px; }
+html[data-theme="bw"] .nav-prints .mark,
+html[data-theme="bw-dark"] .nav-prints .mark { filter: grayscale(1); }
