@@ -1231,7 +1231,7 @@
     var deck = section.querySelector(".deck");
     if (deck) deck.after(nav);
     else section.insertBefore(nav, section.firstChild);
-    if (section.id === "weekly") {
+    if (section.id === "weekly" || section.id === "better" || section.id === "nyle") {
       var earlyButtons = [].slice.call(nav.querySelectorAll("button")).filter(function (btn) {
         var story = document.getElementById(btn.getAttribute("data-item"));
         return story && story.getAttribute("data-earlier") === "true";
@@ -1243,7 +1243,7 @@
         summary.textContent = earlyButtons.length + (earlyButtons.length === 1 ? " earlier piece" : " earlier pieces");
         var more = document.createElement("nav");
         more.className = "item-pick";
-        more.setAttribute("aria-label", "Earlier POCIT pieces");
+        more.setAttribute("aria-label", "Earlier pieces");
         earlyButtons.forEach(function (btn) { more.appendChild(btn); });
         details.appendChild(summary);
         details.appendChild(more);

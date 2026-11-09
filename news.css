@@ -396,13 +396,13 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   max-height: 560px;
   overflow: auto;
 }
-#weekly .more-pieces { margin: 0 0 18px; }
-#weekly .more-pieces summary {
+.more-pieces { margin: 0 0 18px; }
+.more-pieces summary {
   cursor: pointer;
   font-weight: 700;
   padding: 4px 0 8px;
 }
-#weekly .more-pieces summary:focus-visible {
+.more-pieces summary:focus-visible {
   outline: 2px solid var(--mako);
   outline-offset: 2px;
 }
