@@ -859,13 +859,60 @@
     return best;
   }
 
+  var saved = {};
+  var fileRefresh = false;
+
+  function published(path) {
+    var host = location.hostname;
+    var base = host === "leaders.vote" || host === "www.leaders.vote"
+      ? "https://raw.githubusercontent.com/markup-ux/knowthevote/main/" + path
+      : path;
+    return base + (base.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now();
+  }
+
+  function readFile(path) {
+    return fetch(published(path)).then(function (response) {
+      if (!response.ok) throw new Error(path);
+      return response.text();
+    });
+  }
+
+  function refreshWater() {
+    if (fileRefresh || !water || document.hidden) return;
+    fileRefresh = true;
+    var changed = false;
+    readFile("census/water.json").catch(function () { return ""; }).then(function (text) {
+      if (text && text !== saved.water) {
+        water = JSON.parse(text);
+        saved.water = text;
+        indexSystems();
+        changed = true;
+      }
+      return readFile("census/neighborhoods.json").catch(function () { return ""; });
+    }).then(function (text) {
+      if (text && text !== saved.hoods) {
+        hoods = JSON.parse(text);
+        saved.hoods = text;
+        hoodPromise = Promise.resolve(hoods);
+        if (water) buildDots();
+        changed = true;
+      }
+      if (changed) {
+        render();
+        if (mapCanvas) drawMap();
+      }
+    }).catch(function () {}).then(function () {
+      fileRefresh = false;
+    });
+  }
+
   function loadHoods() {
     if (hoods) return Promise.resolve(hoods);
     if (hoodPromise) return hoodPromise;
-    hoodPromise = fetch("census/neighborhoods.json")
-      .then(function (response) { return response.json(); })
-      .then(function (payload) {
-        hoods = payload;
+    hoodPromise = readFile("census/neighborhoods.json")
+      .then(function (text) {
+        saved.hoods = text;
+        hoods = JSON.parse(text);
         if (water) buildDots();
         return hoods;
       });
@@ -955,8 +1002,11 @@
     resizeMap();
   }
 
-  fetch("census/water.json?t=" + Math.floor(Date.now() / 3600000))
-    .then(function (response) { return response.json(); })
+  readFile("census/water.json")
+    .then(function (text) {
+      saved.water = text;
+      return JSON.parse(text);
+    })
     .then(function (payload) {
       water = payload;
       indexSystems();
@@ -985,4 +1035,8 @@
       if (!water) note.textContent = "The water file did not load.";
       else if (readout) readout.textContent = "The neighborhood file did not load.";
     });
+  setInterval(refreshWater, 10 * 60 * 1000);
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) refreshWater();
+  });
 })();

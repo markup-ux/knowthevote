@@ -35,9 +35,11 @@ jobs:
           python scripts/build_crime.py
           python scripts/build_arrests.py
           python scripts/build_offenses.py
+          python scripts/build_crime_cities.py
+          python scripts/build_water.py
           python scripts/build_search.py
           set -e
-          git add -- life.json congress/votes.json congress/summaries.json congress/senate.json congress/slips.json census/us.json census/crime.json census/arrests.json census/offenses.json search.json
+          git add -- life.json congress/votes.json congress/summaries.json congress/senate.json congress/slips.json census/us.json census/crime.json census/arrests.json census/offenses.json census/crime-cities.json census/water.json search.json
           if git diff --cached --quiet; then
             echo unchanged
           else

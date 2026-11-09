@@ -1854,18 +1854,103 @@
   }
 
 
+  var saved = {};
+  var fileRefresh = false;
+
+  function published(path) {
+    var host = location.hostname;
+    var base = host === "leaders.vote" || host === "www.leaders.vote"
+      ? "https://raw.githubusercontent.com/markup-ux/knowthevote/main/" + path
+      : path;
+    return base + (base.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now();
+  }
+
+  function readFile(path) {
+    return fetch(published(path)).then(function (response) {
+      if (!response.ok) throw new Error(path);
+      return response.text();
+    });
+  }
+
+  function keepState(current) {
+    var code = current && current.code;
+    return code ? data.states.filter(function (state) { return state.code === code; })[0] || null : null;
+  }
+
+  function refreshCrime() {
+    if (fileRefresh || !data || document.hidden) return;
+    fileRefresh = true;
+    Promise.all([
+      readFile("census/crime.json").catch(function () { return ""; }),
+      readFile("census/arrests.json").catch(function () { return ""; }),
+      readFile("census/crime-cities.json").catch(function () { return ""; }),
+      readFile("census/offenses.json").catch(function () { return ""; }),
+      readFile("census/homicide-pairs.json").catch(function () { return ""; })
+    ]).then(function (parts) {
+      var crimeChanged = parts[0] && parts[0] !== saved.crime;
+      var arrestsChanged = parts[1] && parts[1] !== saved.arrests;
+      var citiesChanged = parts[2] && parts[2] !== saved.cities;
+      var offensesChanged = parts[3] && parts[3] !== saved.offenses;
+      var pairsChanged = parts[4] && parts[4] !== saved.pairs;
+      if (crimeChanged) {
+        data = JSON.parse(parts[0]);
+        saved.crime = parts[0];
+        selected = keepState(selected);
+        sexSelected = keepState(sexSelected);
+        render();
+      }
+      if (arrestsChanged) {
+        arrests = JSON.parse(parts[1]);
+        saved.arrests = parts[1];
+      }
+      if ((crimeChanged || arrestsChanged) && sexSvg) {
+        renderSex();
+        renderRace();
+      }
+      if (citiesChanged) {
+        var cities = JSON.parse(parts[2]);
+        saved.cities = parts[2];
+        if (cityData) {
+          cityData = cities;
+          drawHoods();
+          renderHoodList();
+        } else setupHoods(cities);
+      }
+      if (offensesChanged) {
+        var offenses = JSON.parse(parts[3]);
+        saved.offenses = parts[3];
+        if (offenseData) {
+          offenseData = offenses;
+          renderOffenses();
+        } else setupOffenses(offenses);
+      }
+      if (pairsChanged) {
+        var pairs = JSON.parse(parts[4]);
+        saved.pairs = parts[4];
+        if (pairData) {
+          pairData = pairs;
+          renderPairs();
+        } else setupPairs(pairs);
+      }
+    }).catch(function () {}).then(function () {
+      fileRefresh = false;
+    });
+  }
+
   buildMeasures();
   status.textContent = "Reading the FBI estimates.";
   Promise.all([
-    fetch("census/crime.json?t=" + Math.floor(Date.now() / 3600000)).then(function (response) { if (!response.ok) throw new Error("json"); return response.json(); }),
+    readFile("census/crime.json"),
     fetch("preview/us.svg").then(function (response) { if (!response.ok) throw new Error("map"); return response.text(); }),
-    fetch("census/arrests.json?v=2").then(function (response) { if (!response.ok) throw new Error("arrests"); return response.json(); }).catch(function () { return null; }),
-    fetch("census/crime-cities.json").then(function (response) { if (!response.ok) throw new Error("cities"); return response.json(); }).catch(function () { return null; }),
-    fetch("census/offenses.json").then(function (response) { if (!response.ok) throw new Error("offenses"); return response.json(); }).catch(function () { return null; }),
-    fetch("census/homicide-pairs.json").then(function (response) { if (!response.ok) throw new Error("pairs"); return response.json(); }).catch(function () { return null; })
+    readFile("census/arrests.json").catch(function () { return ""; }),
+    readFile("census/crime-cities.json").catch(function () { return ""; }),
+    readFile("census/offenses.json").catch(function () { return ""; }),
+    readFile("census/homicide-pairs.json").catch(function () { return ""; })
   ]).then(function (parts) {
-    data = parts[0];
-    arrests = parts[2];
+    saved.crime = parts[0];
+    data = JSON.parse(parts[0]);
+    saved.arrests = parts[2];
+    arrests = parts[2] ? JSON.parse(parts[2]) : null;
     var markup = parts[1];
     var start = markup.indexOf("<svg");
     slot.innerHTML = start >= 0 ? markup.slice(start) : "";
@@ -1893,10 +1978,17 @@
         renderSex();
       });
     }
-    setupHoods(parts[3]);
-    setupOffenses(parts[4]);
-    setupPairs(parts[5]);
+    saved.cities = parts[3];
+    setupHoods(parts[3] ? JSON.parse(parts[3]) : null);
+    saved.offenses = parts[4];
+    setupOffenses(parts[4] ? JSON.parse(parts[4]) : null);
+    saved.pairs = parts[5];
+    setupPairs(parts[5] ? JSON.parse(parts[5]) : null);
   }).catch(function () {
     status.textContent = "The crime file did not load.";
+  });
+  setInterval(refreshCrime, 10 * 60 * 1000);
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) refreshCrime();
   });
 })();

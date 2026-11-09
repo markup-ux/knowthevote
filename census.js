@@ -587,13 +587,49 @@
     });
   }
 
+  var fileText = "";
+  var fileRefresh = false;
+
+  function published(path) {
+    var host = location.hostname;
+    var base = host === "leaders.vote" || host === "www.leaders.vote"
+      ? "https://raw.githubusercontent.com/markup-ux/knowthevote/main/" + path
+      : path;
+    return base + (base.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now();
+  }
+
+  function readFile(path) {
+    return fetch(published(path)).then(function (response) {
+      if (!response.ok) throw new Error(path);
+      return response.text();
+    });
+  }
+
+  function refreshCensus() {
+    if (fileRefresh || !data || document.hidden) return;
+    fileRefresh = true;
+    readFile("census/us.json").then(function (text) {
+      if (!text || text === fileText) return;
+      fileText = text;
+      var code = selected && selected.code;
+      var county = selectedCounty;
+      data = JSON.parse(text);
+      selected = code ? data.states.filter(function (state) { return state.code === code; })[0] || null : null;
+      selectedCounty = selected ? county : null;
+      renderDetail();
+    }).catch(function () {}).then(function () {
+      fileRefresh = false;
+    });
+  }
+
   buildMeasures();
   status.textContent = "Reading the Census Bureau counts.";
   Promise.all([
-    fetch("census/us.json?t=" + Math.floor(Date.now() / 3600000)).then(function (response) { if (!response.ok) throw new Error("json"); return response.json(); }),
+    readFile("census/us.json"),
     fetch("preview/us.svg").then(function (response) { if (!response.ok) throw new Error("map"); return response.text(); })
   ]).then(function (parts) {
-    data = parts[0];
+    fileText = parts[0];
+    data = JSON.parse(parts[0]);
     var markup = parts[1];
     var start = markup.indexOf("<svg");
     slot.innerHTML = start >= 0 ? markup.slice(start) : "";
@@ -614,6 +650,10 @@
     else renderDetail();
   }).catch(function () {
     status.textContent = "The census file did not load.";
+  });
+  setInterval(refreshCensus, 10 * 60 * 1000);
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) refreshCensus();
   });
   new MutationObserver(function () {
     if (!data) return;

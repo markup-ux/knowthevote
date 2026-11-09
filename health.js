@@ -1954,10 +1954,69 @@
 
   window.addEventListener("resize", resize);
 
-  fetch("census/health.json?t=" + Math.floor(Date.now() / 3600000))
-    .then(function (res) {
-      if (!res.ok) throw new Error(String(res.status));
-      return res.json();
+  var saved = {};
+  var fileRefresh = false;
+
+  function published(path) {
+    var host = location.hostname;
+    var base = host === "leaders.vote" || host === "www.leaders.vote"
+      ? "https://raw.githubusercontent.com/markup-ux/knowthevote/main/" + path
+      : path;
+    return base + (base.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now();
+  }
+
+  function readFile(path) {
+    return fetch(published(path)).then(function (response) {
+      if (!response.ok) throw new Error(path);
+      return response.text();
+    });
+  }
+
+  function applyHealth(text) {
+    data = JSON.parse(text);
+    saved.health = text;
+    data.chemicals = data.chemicals.concat(EXTRA_CHEMICALS);
+    var select = document.getElementById("hood-brand");
+    if (select) select.textContent = "";
+    renderBrands();
+    renderChemicals();
+    renderCenters();
+    describe();
+    draw();
+    if (hoods) renderHoods();
+  }
+
+  function applyHoods(text) {
+    var payload = JSON.parse(text);
+    if (!payload.placeArea || payload.placeArea.length !== data.places.length) {
+      document.getElementById("hood-note").textContent = "The neighborhood file does not match the restaurant map.";
+      return;
+    }
+    hoods = payload;
+    saved.hoods = text;
+    hoodOf = payload.placeArea;
+    renderHoods();
+    describe();
+    draw();
+  }
+
+  function refreshHealth() {
+    if (fileRefresh || !data || document.hidden) return;
+    fileRefresh = true;
+    readFile("census/health.json").catch(function () { return ""; }).then(function (text) {
+      if (text && text !== saved.health) applyHealth(text);
+      return readFile("census/neighborhoods.json").catch(function () { return ""; });
+    }).then(function (text) {
+      if (text && text !== saved.hoods) applyHoods(text);
+    }).catch(function () {}).then(function () {
+      fileRefresh = false;
+    });
+  }
+
+  readFile("census/health.json")
+    .then(function (text) {
+      saved.health = text;
+      return JSON.parse(text);
     })
     .then(function (payload) {
       data = payload;
@@ -2006,10 +2065,10 @@
       renderCenters();
       describe();
       resize();
-      fetch("census/neighborhoods.json")
-        .then(function (res) {
-          if (!res.ok) throw new Error(String(res.status));
-          return res.json();
+      readFile("census/neighborhoods.json")
+        .then(function (text) {
+          saved.hoods = text;
+          return JSON.parse(text);
         })
         .then(function (payload) {
           if (!payload.placeArea || payload.placeArea.length !== data.places.length) {
@@ -2043,4 +2102,8 @@
     .catch(function () {
       readout.textContent = "The health file did not load.";
     });
+  setInterval(refreshHealth, 10 * 60 * 1000);
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) refreshHealth();
+  });
 })();

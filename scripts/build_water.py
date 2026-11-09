@@ -1,6 +1,6 @@
 """Build census/water.json from EPA's Drinking Water System Search.
 
-The zip is downloaded separately and is not part of the site.
+The script downloads the system-search zip and the quarterly violations zip.
 Active community systems are the ones that serve homes.
 A city token is the served-city name with a parenthetical
 and a trailing numeric code removed, so "NEW YORK (C)" matches
@@ -10,11 +10,17 @@ import csv
 import json
 import os
 import re
+import tempfile
+import urllib.request
 import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIP_PATH = os.path.join(os.environ["TEMP"], "leaders-vote-water", "sdwa.zip")
-VIOL_PATH = os.path.join(os.environ["TEMP"], "leaders-vote-water", "sdwa_latest.zip")
+CACHE = os.path.join(tempfile.gettempdir(), "leaders-vote-water")
+ZIP_PATH = os.path.join(CACHE, "sdwa.zip")
+VIOL_PATH = os.path.join(CACHE, "sdwa_latest.zip")
+ZIP_URL = "https://echo.epa.gov/files/echodownloads/SDWA_system_search_download.zip"
+VIOL_URL = "https://echo.epa.gov/files/echodownloads/SDWA_latest_downloads.zip"
+UA = {"User-Agent": "Leaders.vote census build"}
 OUT = os.path.join(ROOT, "census", "water.json")
 QUARTER = "2026Q3"
 OPEN_STATUS = {"Unaddressed", "Addressed"}
@@ -146,7 +152,23 @@ def attach_violations(systems):
     return chemicals
 
 
+def download(url, path):
+    if os.path.exists(path) and os.path.getsize(path) > 1000:
+        return path
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    req = urllib.request.Request(url, headers=UA)
+    with urllib.request.urlopen(req, timeout=180) as res, open(path, "wb") as out:
+        while True:
+            chunk = res.read(1024 * 256)
+            if not chunk:
+                break
+            out.write(chunk)
+    return path
+
+
 def main():
+    download(ZIP_URL, ZIP_PATH)
+    download(VIOL_URL, VIOL_PATH)
     systems = []
     with zipfile.ZipFile(ZIP_PATH) as zipped:
         raw = zipped.open("SDWA_SYSTEM_SEARCH.csv")
