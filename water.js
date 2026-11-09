@@ -228,7 +228,6 @@
   function showChems(on) {
     document.getElementById("water-sort-rows").hidden = on;
     document.getElementById("water-sort-chems").hidden = !on;
-    document.getElementById("water-legend").hidden = on;
     document.getElementById("water-scale-note").hidden = on;
     document.getElementById("water-chem-note").hidden = !on;
     document.getElementById("water-body-legend").hidden = !on;

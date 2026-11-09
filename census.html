@@ -22,7 +22,7 @@
   pointer-events: none;
 }
 #census-map text.map-code.on-dark, #crime-map text.map-code.on-dark, #sex-map text.map-code.on-dark { fill: #f4f7fb; }
-#crime, #crime-detail, #sexual-assault, #sex-detail, #sex-neighborhoods, #crime-neighborhoods, #arrests-by-race, #other-offenses, #murder-pairs, #fbi-tables { scroll-margin-top: 160px; }
+#census, #crime, #crime-detail, #sexual-assault, #sex-detail, #sex-neighborhoods, #crime-neighborhoods, #arrests-by-race, #other-offenses, #murder-pairs { scroll-margin-top: 160px; }
 #crime-hood-list button, #sex-hood-list button { display: block; width: 100%; text-align: left; font: inherit; color: inherit; background: transparent; border: 0; border-bottom: 1px solid var(--line); padding: 6px 0; cursor: pointer; }
 #crime-hood-list button.is-on, #sex-hood-list button.is-on { background: #e4d8c4; }
 .race-block { margin: 0 0 18px; }
@@ -73,8 +73,10 @@
 #county-slot { margin-top: 18px; }
 .census-topic { margin: 12px 0 16px; font-size: 18px; }
 .census-topic a { color: inherit; }
+footer ul.sources { margin: 0; padding: 0; list-style: none; max-width: 78ch; }
+footer ul.sources li { margin: 0 0 8px; }
 #water { scroll-margin-top: 120px; }
-#water-legend[hidden], #water-sort-rows[hidden], #water-sort-chems[hidden], #water-scale-note[hidden], #water-chem-note[hidden], #water-body-legend[hidden] { display: none; }
+#water-sort-rows[hidden], #water-sort-chems[hidden], #water-scale-note[hidden], #water-chem-note[hidden], #water-body-legend[hidden] { display: none; }
 .water-row { display: grid; grid-template-columns: 28ch minmax(0, 1fr) 42ch; gap: 10px; align-items: center; margin: 6px 0; }
 .water-track { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; height: 16px; }
 .water-track i { display: block; height: 16px; background: #c5e4ec; }
@@ -390,10 +392,10 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
 <main>
   <div class="wrap hero">
     <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
-    <p class="kicker">United States · Census Bureau · July 1, 2025</p>
-    <p class="census-topic"><a href="#crime">Crime</a> · <a href="#sexual-assault">Sexual assault</a> · <a href="#arrests-by-race">Arrests by race</a> · <a href="#fbi-tables">Tables</a> · <a href="#health">Health</a> · <a href="#water">Water</a></p>
+    <p class="kicker" id="census">United States · Census Bureau · July 1, 2025</p>
+    <p class="census-topic"><a href="#census">Census</a> · <a href="#crime">Crime</a> · <a href="#sexual-assault">Sexual assault</a> · <a href="#arrests-by-race">Arrests by race</a> · <a href="#health">Health</a> · <a href="#water">Water</a></p>
     <h1>National figures.</h1>
-    <p class="deck">Counts from the U.S. Census Bureau for the states, the District of Columbia, and each county. Open a state for the parishes, boroughs, cities, and other areas in the Bureau's county file. Purple is a count. A darker purple is a larger count. On the change map, brown is a drop and green is a rise.</p>
+    <p class="deck">Counts from the U.S. Census Bureau for the states, the District of Columbia, and each county. Open a state for the parishes, boroughs, cities, and other areas in the Bureau's county file.</p>
     <p class="deck">Change is the July 1, 2025 estimate minus the April 1, 2020 estimates base. That base begins with the 2020 census. Age and median age use the same July 1 estimates. House seats are the ones the 2020 census assigned.</p>
     <div class="sheet-switch" id="census-measures" role="group" aria-label="Census measure"></div>
     <div id="census-slot"></div>
@@ -404,10 +406,9 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
     <div id="census-detail"></div>
     <section class="where" id="crime">
       <h2>Crime</h2>
-      <p class="deck" id="fbi-tables">The FBI tables are on the <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Crime Data Explorer</a>. <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Persons Arrested, 2025</a> contains Table 69, Table 29, and Table 43. <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Offenses Known to Law Enforcement, 2025</a> contains Table 8. <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Expanded Homicide Tables, 2025</a> contains Table 4 and Table 6.</p>
-      <p class="deck">These maps are drawn on this page. The numbers are the FBI's. The map opens on fraud arrests from Crime in the United States, 2025, <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 69</a>: arrests by state for agencies that sent 12 months of data. Indigo measures are the FBI's estimated offenses known to law enforcement in 2025, for the 50 states and the District of Columbia. That file is the Summary Reporting System estimates on the Crime Data Explorer, last modified August 2026. A darker indigo is a higher offense rate. On the population map above, purple is a count. A darker orange is a higher arrest rate.</p>
-      <p class="deck">The rate is the count divided by the population for that state, times 100,000, for 2025. On an orange map, that population is the one printed for the state in Table 69. On an indigo map, it is the population printed on the FBI's offense row. The population map above uses the Census Bureau's July 1, 2025 estimate.</p>
-      <p class="deck">Violent crime is murder and nonnegligent manslaughter, rape, robbery, and aggravated assault. Property crime is burglary, larceny-theft, and motor vehicle theft. Rape uses the definition the FBI adopted in 2013. Arson has no estimate in this file. Fraud, forgery and counterfeiting, and embezzlement are the first measures. Those three maps are Table 69 arrests, in orange. The other measures are estimated offenses, in indigo. Where an agency sent 3 to 11 months, the FBI estimated the missing months from that agency's reports. Where an agency sent fewer than 3 months, the FBI estimated from similar places in the state. The count on an indigo map is offenses known to law enforcement.</p>
+      <p class="deck">These are the FBI's numbers for 2025. The map opens on fraud arrests from <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 69</a>: arrests by state for agencies that sent 12 months of data. Orange is a Table 69 arrest rate. Indigo is an estimated offense rate, offenses known to law enforcement.</p>
+      <p class="deck">The rate is the count divided by the population for that state, times 100,000. On an orange map, that population is the one printed for the state in Table 69. On an indigo map, it is the population printed on the FBI's offense row. On a neighborhood map, a city population of a few hundred people can produce a high rate from a small count.</p>
+      <p class="deck">Violent crime is murder and nonnegligent manslaughter, rape, robbery, and aggravated assault. Property crime is burglary, larceny-theft, and motor vehicle theft. Arson has no estimate in this file. Fraud, forgery and counterfeiting, and embezzlement are the first measures. Where an agency sent 3 to 11 months, the FBI estimated the missing months from that agency's reports. Where an agency sent fewer than 3 months, the FBI estimated from similar places in the state.</p>
       <p class="deck">The FBI's summary of this release says estimated violent crime fell 9.3 percent from 2024 to 2025, and estimated property crime fell 12.4 percent. It says 17,075 agencies sent data, covering 96.2 percent of the population, and that the figures are as of April 2, 2026. The 2024 figures in the file were updated for this release. The file notes that limited data for 2025 were available for Florida and North Dakota. The District of Columbia row includes offenses reported by the Metro Transit Police and the District of Columbia Fire and Emergency Medical Services Arson Investigation Unit.</p>
       <div class="sheet-switch" id="crime-measures" role="group" aria-label="Crime measure"></div>
       <div class="health-tools" id="crime-zoom" role="group" aria-label="Crime map zoom"></div>
@@ -425,8 +426,8 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
       <div id="crime-detail"></div>
       <section class="where" id="crime-neighborhoods">
         <h2>Crime by neighborhood</h2>
-        <p class="deck">Each dot is a neighborhood, suburb, or quarter from the same OpenStreetMap names as the restaurant list. The color is a 2025 rate for that neighborhood's city in FBI <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 8</a>, Offenses Known to Law Enforcement, except the three white-collar measures. Those are the state's Table 69 arrest rate, because Table 8 does not publish fraud, forgery, or embezzlement by city. A rate is the count divided by the population printed on that row, times 100,000. It is not a count inside the neighborhood. A neighborhood whose city is not in Table 8 is not drawn. All crime is the city's violent-crime count plus its property-crime count. Arson is not in that sum. Indigo is a Table 8 rate. Orange is a Table 69 arrest rate. A darker shade is a higher rate. A city population of a few hundred people can produce a high rate from a small count.</p>
-        <p class="deck">Four Table 8 rows use a longer agency name. Charlotte-Mecklenburg is used for Charlotte, Athens-Clarke County for Athens, Louisville Metro for Louisville, and Metropolitan Nashville Police Department for Nashville. Florida and North Dakota cities carry the FBI's limited-data note.</p>
+        <p class="deck">Each dot is a neighborhood, suburb, or quarter from the same OpenStreetMap names as the restaurant list. The color is the 2025 rate for that neighborhood's city in FBI <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 8</a>, except fraud, forgery, and embezzlement. Those use the state's Table 69 arrest rate, because Table 8 does not publish them by city. It is not a count inside the neighborhood. A neighborhood whose city is not in Table 8 is not drawn. All crime is the city's violent-crime count plus its property-crime count. Arson is not in that sum.</p>
+        <p class="deck">Four Table 8 rows use a longer agency name. Charlotte-Mecklenburg is used for Charlotte, Athens-Clarke County for Athens, Louisville Metro for Louisville, and Metropolitan Nashville Police Department for Nashville.</p>
         <div class="sheet-switch" id="crime-hood-measures" role="group" aria-label="Neighborhood crime measure"></div>
         <div id="crime-hood-wrap">
           <div id="crime-hood-base"></div>
@@ -447,7 +448,7 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
     </section>
     <section class="where" id="sexual-assault">
       <h2>Sexual assault</h2>
-      <p class="deck">Rape in these FBI tables uses the definition the FBI adopted in 2013. Rose is the estimated rape rate per 100,000 people in 2025, from the same offense file as the crime map. A darker rose is a higher rate. Orange is rape arrests per 100,000 people in 2025, from <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 69</a> of Crime in the United States: arrests by state for agencies that sent 12 months of data. A darker orange is a higher rate. That table is not a national estimate.</p>
+      <p class="deck">Rape in these FBI tables uses the definition the FBI adopted in 2013. The offense map uses the same file as the crime map. The arrest map is <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 69</a>, agencies that sent 12 months of data. That table is not a national estimate.</p>
       <p class="deck">The FBI estimates 123,332 rape offenses in the United States in 2025, and 18,729 rape arrests. The arrest estimate is Table 29. An arrest in the Uniform Crime Reporting program is an arrest, a citation, or a summons. The sheet for arrests by race titles a column Offense charged. That is the offense on the arrest. It is not a charge a prosecutor filed, and it is not a conviction.</p>
       <p class="deck">The estimated offense file has no race. Table 43 records the race an agency wrote down for a person who was arrested. It does not record the race of people in reports that did not end in an arrest. These tables cannot show that one group is reported and another is arrested. A bar longer than the Census mark is a difference between an arrest share and a Census race-alone share. It is not a measure of who commits an offense.</p>
       <div class="sheet-switch" id="sex-measures" role="group" aria-label="Sexual assault measure"></div>
@@ -466,8 +467,8 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
       <div id="sex-detail"></div>
       <section class="where" id="sex-neighborhoods">
         <h2>Sexual assault by neighborhood</h2>
-        <p class="deck">Each dot is a neighborhood on a street map. The color is the 2025 rape rate for that neighborhood's city in FBI Table 8, Offenses Known to Law Enforcement. The rate is the city's rape count divided by the population printed on that row, times 100,000. Neighborhoods in one city share that city's rate. It is not a count inside the neighborhood, and it is not an arrest. A neighborhood whose city is not in Table 8 is not drawn. A darker rose is a higher rape rate among the cities in this table. The list can be ordered by that rate or by the number of reports. A city population of a few hundred people can produce a high rate from a small count.</p>
-        <p class="deck">Table 8 publishes rape. It does not publish the other sex-offense category by city. Florida and North Dakota cities carry the FBI's limited-data note.</p>
+        <p class="deck">Each dot is a neighborhood on a street map. The color is the 2025 rape rate for that neighborhood's city in FBI Table 8. Neighborhoods in one city share that city's rate. It is not a count inside the neighborhood, and it is not an arrest. A neighborhood whose city is not in Table 8 is not drawn.</p>
+        <p class="deck">Table 8 publishes rape. It does not publish the other sex-offense category by city.</p>
         <div id="sex-hood-wrap">
           <div id="sex-hood-base"></div>
           <canvas id="sex-hood-map" aria-label="Neighborhoods colored by the city rape rate"></canvas>
@@ -523,11 +524,9 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
     </section>
     <section class="where" id="health">
       <h2>Health</h2>
-      <p class="deck">Chemicals measured in fast food, and drinking water.</p>
-      <p class="deck">These are chemicals measured in fast food that brands advertise. One study measured fluorinated chemicals in the packaging, not in the food. The point is those chemicals, and the effects described for them in the body. Healthcare is one of the largest questions in this election. The measurements are here so that question includes what has been found. A later table covers studies of aggression, irritability, and hyperactivity.</p>
+      <p class="deck">These are chemicals measured in fast food that brands advertise. The point is those chemicals, and the effects described for them in the body. Healthcare is one of the largest questions in this election. The measurements are here so that question includes what has been found.</p>
       <p class="deck">The number beside a brand is its published U.S. restaurant count. McDonald's is 13,706 restaurants at December 31, 2025, from its annual report. The other published counts are year-end 2024 U.S. units from QSR Magazine's 2025 QSR 50. Where that report estimated a figure, the detail says so. The map draws OpenStreetMap points, which is fewer than the published count. A number marked tagged has no separate published total here.</p>
-      <p class="deck">Each restaurant mark is a drawing of a food the brand sells, placed on an OpenStreetMap point. Roads, cities, and neighborhoods are on the same map. Zoom in. Sort the brands by the published count, or by name, and choose one brand to draw only those places.</p>
-      <p class="deck">A 2021 study measured plasticizers in hamburgers, fries, chicken burritos, cheese pizza, chicken nuggets, and plain patties. An FDA survey measured acrylamide in restaurant fries. A 2017 study measured fluorinated chemicals in packaging, not in the food. Choose a chemical under the map. The drawing beside the name is the effect described for that chemical. A later list shows the highest and lowest amounts in each published comparison. The list is not every chemical that can be in fast food. Distribution centers are addresses one McDonald's supplier publishes. Their mark is a factory drawing. The address is a distribution center, and no delivery route is published.</p>
+      <p class="deck">A 2021 study measured plasticizers in hamburgers, fries, chicken burritos, cheese pizza, chicken nuggets, and plain patties. An FDA survey measured acrylamide in restaurant fries. A 2017 study measured fluorinated chemicals in packaging, not in the food. The drawing beside the name is the effect described for that chemical. A later list shows the highest and lowest amounts in each published comparison. Distribution centers are addresses one McDonald's supplier publishes. Their mark is a factory drawing.</p>
       <div class="health-layout">
         <div>
           <div class="health-tools" role="group" aria-label="Map view">
@@ -558,7 +557,7 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
       </div>
       <section class="where" id="neighborhoods">
         <h2>Neighborhoods</h2>
-        <p class="deck">A restaurant is counted with the nearest named neighborhood, suburb, or quarter in OpenStreetMap, when one is within 2 kilometers. The city is the nearest named city or town in the same state. Choose a brand to rank these places by that brand. The rank uses the restaurants drawn on this map.</p>
+        <p class="deck">A restaurant is counted with the nearest named neighborhood, suburb, or quarter in OpenStreetMap, when one is within 2 kilometers. The city is the nearest named city or town in the same state. The rank uses the restaurants drawn on this map.</p>
         <div class="sheet-switch" role="group" aria-label="Sort neighborhoods">
           <button type="button" id="hood-count" aria-pressed="true">Most locations</button>
           <button type="button" id="hood-variety">Most brands</button>
@@ -640,7 +639,7 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
       <section class="where" id="water">
       <h2>Water</h2>
       <p class="deck">These are active community water systems in EPA's Drinking Water System Search. A community system serves homes. The number is EPA's count of quarters with a Safe Drinking Water Act violation over the past three years. That count includes monitoring and reporting violations. It is not a measurement from one tap, and it is not a score this page calculated.</p>
-      <p class="deck">A health-based flag means EPA currently marks a violation of a maximum contaminant level, a maximum residual disinfectant level, or a treatment technique. Neighborhoods use the same OpenStreetMap names as the restaurant list. A neighborhood is matched to the community system that serves the most people among systems whose served city matches that neighborhood's city and state. EPA does not publish a separate result for the neighborhood.</p>
+      <p class="deck">A health-based flag means EPA currently marks a violation of a maximum contaminant level, a maximum residual disinfectant level, or a treatment technique. Neighborhoods use the same OpenStreetMap names as the restaurant list. A neighborhood is matched to the community system that serves the most people among systems whose served city matches that neighborhood's city and state. A neighborhood with no matching served city is not drawn. EPA does not publish a separate result for the neighborhood.</p>
       <div id="water-map-wrap">
         <div id="water-basemap"></div>
         <canvas id="water-map" aria-label="Neighborhoods colored by quarters with a drinking-water violation"></canvas>
@@ -659,7 +658,6 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
         <span><i class="swatch" style="background:#14627a"></i>7–9</span>
         <span><i class="swatch" style="background:#0c3d4e"></i>10–12</span>
       </div>
-      <p class="note">Cyan is the number of quarters with a violation. A lighter cyan is fewer quarters. A darker cyan is more. Each dot is a neighborhood. The color is the community system that serves the most people in that city and state. A neighborhood with no matching served city is not drawn. The dot is not a sample from a tap.</p>
       <p id="water-readout" class="note" aria-live="polite"></p>
       <p class="note map-attrib">Roads and cities: <a href="https://openfreemap.org/">OpenFreeMap</a>, <a href="https://openmaptiles.org/">OpenMapTiles</a>, <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.</p>
       <div class="sheet-switch" role="group" aria-label="Water list">
@@ -679,16 +677,9 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
         <button type="button" id="chem-tt" aria-pressed="false">Treatment technique</button>
         <button type="button" id="chem-name" aria-pressed="false">Name</button>
       </div>
-      <div class="result-legend" id="water-legend">
-        <span><i class="swatch" style="background:#c5e4ec"></i>0</span>
-        <span><i class="swatch" style="background:#5eb8cc"></i>1–3</span>
-        <span><i class="swatch" style="background:#1d8eab"></i>4–6</span>
-        <span><i class="swatch" style="background:#14627a"></i>7–9</span>
-        <span><i class="swatch" style="background:#0c3d4e"></i>10–12</span>
-      </div>
-      <p class="note" id="water-scale-note">Each block is one quarter in this count, up to 12. Cyan fills one block for each quarter with a violation. The cyan darkens as that count rises.</p>
+      <p class="note" id="water-scale-note">Each block is one quarter in this count, up to 12. Cyan fills one block for each quarter with a violation.</p>
       <div class="result-legend" id="water-body-legend" hidden></div>
-      <p class="note" id="water-chem-note" hidden>A chemical appears here when EPA names it on a current health-based violation. Current means the violation is unaddressed or addressed in the 2026Q3 snapshot. Resolved and archived violations are not listed. Above a limit means a maximum contaminant level: EPA recorded that contaminant above the allowed amount. That is not a sample from one tap, and a missed test is not included. A treatment technique is a required process, not a chemical measured in the water. EPA does not publish a ranking of which contaminant is most harmful, and this page does not calculate one. Health goal of zero means EPA's public-health goal is no amount of that contaminant. The sentence is EPA's description of exposure above the limit, from the National Primary Drinking Water Regulations.</p>
+      <p class="note" id="water-chem-note" hidden>A chemical appears here when EPA names it on a current health-based violation. Current means the violation is unaddressed or addressed in the 2026Q3 snapshot. Resolved and archived violations are not listed. Above a limit means a maximum contaminant level: EPA recorded that contaminant above the allowed amount. A missed test is not included. A treatment technique is a required process, not a chemical measured in the water. EPA does not publish a ranking of which contaminant is most harmful, and this page does not calculate one. Health goal of zero means EPA's public-health goal is no amount of that contaminant. The sentence is EPA's description of exposure above the limit, from the National Primary Drinking Water Regulations.</p>
       <div id="water-list" class="census-scroll"></div>
       <p id="water-note" class="note"></p>
     </section>
@@ -698,11 +689,14 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
 </main>
 <footer>
   <div class="wrap">
-    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Purple on the population map is a Census Bureau count. Brown and green on that map are a drop and a rise since 2020. Indigo on the crime map is an FBI offense rate per 100,000 people in 2025. Rose is the estimated rape rate per 100,000 people in 2025, and orange is a rape-arrest rate per 100,000 people in 2025. Olive is a share of a murder row. Yellow-green in Health is a count or a measured amount. Cyan in Water is quarters with a violation.</p>
-    <p>Population, change, age, and median age are from the Census Bureau's <a href="https://www.census.gov/programs-surveys/popest.html">Population Estimates Program</a>, vintage 2025. House seats are from the <a href="https://www.census.gov/data/tables/2020/dec/2020-apportionment-data.html">2020 census apportionment</a>. Leaders.vote copies those published figures.</p>
-    <p>Crime counts are copied from the FBI <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Crime Data Explorer</a> file of Summary Reporting System estimates, estimated_crimes_1979_2025, last modified August 2026. The national percent changes, the agency count, and the April 2, 2026 date are from the FBI's <a href="https://cde.ucr.cjis.gov/LATEST/resources/reports/UCR_Summary_of_Reported_Crimes_in_the_Nation_2025.pdf">UCR Summary of Reported Crimes in the Nation, 2025</a>. An indigo state is an estimated offense rate. A rose state is the estimated rape rate. An orange state is a Table 69 arrest rate. A neighborhood dot uses the city rate in <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 8</a>, Offenses Known to Law Enforcement by State by City, 2025. All crime on that map is the city's violent-crime count plus its property-crime count. Fraud, forgery, and embezzlement dots use the state's Table 69 arrest rate. Rose dots are the rape rate.</p>
-    <p>Rape arrests by state are <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 69</a> of the FBI's Crime in the United States, 2025, in Persons Arrested, 2025, on the Crime Data Explorer. The national arrest estimates are <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 29</a>, including fraud, embezzlement, forgery and counterfeiting, and the other offense categories in that table. Arrests by race and Hispanic origin are <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 43</a>. The victim-and-offender murder table is <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Expanded Homicide Data Table 6</a>, and the situation counts are <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 4</a>. The race-alone population shares and the Hispanic share are the Census Bureau's July 1, 2025 estimates in sc-est2025-alldata6.</p>
-    <p>Water quarters and health-based flags are copied from EPA's <a href="https://echo.epa.gov/tools/data-downloads">Drinking Water System Search</a>. The file is dated October 23, 2026. Chemicals named on a current health-based violation are copied from the violations table in EPA's quarterly download listed October 13, 2026, snapshot quarter 2026Q3. The sentence for the body is from EPA's <a href="https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations">National Primary Drinking Water Regulations</a>.</p>
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency.</p>
+    <ul class="sources">
+      <li>Population, change, age, and median age: the Census Bureau's <a href="https://www.census.gov/programs-surveys/popest.html">Population Estimates Program</a>, vintage 2025. House seats: the <a href="https://www.census.gov/data/tables/2020/dec/2020-apportionment-data.html">2020 census apportionment</a>.</li>
+      <li>Offense rates: the FBI <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Crime Data Explorer</a> file of Summary Reporting System estimates, estimated_crimes_1979_2025, last modified August 2026. The national percent changes, the agency count, and the April 2, 2026 date: the FBI's <a href="https://cde.ucr.cjis.gov/LATEST/resources/reports/UCR_Summary_of_Reported_Crimes_in_the_Nation_2025.pdf">UCR Summary of Reported Crimes in the Nation, 2025</a>.</li>
+      <li><a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Persons Arrested, 2025</a> contains Table 69, Table 29, and Table 43. <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Offenses Known to Law Enforcement, 2025</a> contains Table 8. <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Expanded Homicide Tables, 2025</a> contains Table 4 and Table 6.</li>
+      <li>Race-alone shares and the Hispanic share: the Census Bureau's July 1, 2025 estimates in sc-est2025-alldata6.</li>
+      <li>Water quarters and health-based flags: EPA's <a href="https://echo.epa.gov/tools/data-downloads">Drinking Water System Search</a>, file dated October 23, 2026. Chemicals named on a current health-based violation: the violations table in EPA's quarterly download listed October 13, 2026, snapshot quarter 2026Q3. The sentence for the body: EPA's <a href="https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations">National Primary Drinking Water Regulations</a>.</li>
+    </ul>
   </div>
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
@@ -711,7 +705,7 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
 <script src="crime.js?v=26"></script>
-<script src="water.js?v=13"></script>
+<script src="water.js?v=14"></script>
 <script src="health.js?v=43"></script>
 </body>
 </html>
