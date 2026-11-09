@@ -38,6 +38,8 @@ div.floor-row { cursor: default; }
 .swatch.yes-scale { width: 48px; background: linear-gradient(90deg, #cfe8d6, #0e6a38); }
 .swatch.no-scale { width: 48px; background: linear-gradient(90deg, #f6d0d6, #8d2344); }
 .swatch.gold { background: #e6b422; }
+.swatch.money-pale { background: #f6e4b8; }
+.swatch.money-deep { background: #6b2b0f; }
 .swatch.stone { background: #c8c0b4; }
 .swatch.present { background: #3d4f86; }
 .swatch.tie { background: #6a4a78; }
@@ -160,22 +162,8 @@ body { padding-bottom: 84px; }
 }
 .jump a.jump-slip { background: var(--j-slip, #0e6fa8); color: var(--j-slip-ink, #f4f8fb); border-color: var(--j-slip-line, #0e6fa8); }
 .jump a.jump-people { background: var(--j-people, #d9c8b4); color: var(--j-people-ink, #1c1915); border-color: var(--j-people-line, #d9c8b4); }
-.census-topic { margin: 12px 0 16px; font-size: 18px; }
-.census-topic a { color: inherit; }
-.census-topic a[href="#floor"] { color: #e6b422; }
-.census-topic a[href="#taxpayer"] { color: #c4924a; }
-.census-topic a[href="#introduced"] { color: #8a7d68; }
-.census-topic a[href="#roll-calls"],
-.census-topic a[href="#senate-votes"] {
-  color: #0e6a38;
-  background-image: linear-gradient(90deg, #0e6a38 0 50%, #8d2344 50% 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.census-topic a[href="#blue-slips"] { color: var(--slip-ink, #0e6fa8); }
-.census-topic a[href="#presidents"],
-.census-topic a[href="#senators"] { color: #8a7360; }
+footer ul.sources { margin: 0; padding: 0; list-style: none; max-width: 78ch; }
+footer ul.sources li { margin: 0 0 8px; }
 #taxpayer > h2 { color: #c4924a; }
 #floor > h2 { color: #e6b422; }
 #introduced > h2 { color: #8a7d68; }
@@ -747,27 +735,39 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
   <div class="wrap hero">
     <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
     <p class="kicker">United States · 119th Congress</p>
-    <p class="census-topic"><a href="#floor">Floor list</a> · <a href="#taxpayer">Taxpayer money</a> · <a href="#introduced">Introduced</a> · <a href="#roll-calls">Roll calls</a> · <a href="#senate-votes">Senate roll calls</a> · <a href="#blue-slips">Blue slips</a> · <a href="#presidents">Presidents</a> · <a href="#senators">Senators</a></p>
     <h1>The House.</h1>
-    <p class="deck">What the House voted on, who voted yes, who voted no, and how to reach the member. Bills and resolutions introduced in this Congress are listed too, with a portrait of the person who introduced each one. The floor list is the latest week the House has published. A roll call published later is added while this page is open.</p>
-    <p class="deck">The <a href="https://live.house.gov/">House floor</a> is live on FloorCast when the House is in session. Each roll call links to that day's floor recording. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's channel</a> posts a floor video when one is published.</p>
-    <p class="deck">Under a roll call, a short account says what the measure does. Read the full summary on this page, or read the full bill or the full resolution. When a measure names taxpayer money, the amount is marked beside the title. A paler brass mark is a smaller amount. A deeper bronze mark is a larger amount. Those measures are listed together, largest amount first. The bar at the bottom of the screen matches the theme. On Day it is navy, with a red stripe and a white stripe. On a phone, the top bar and that bar step aside when the page is still, and they return when you scroll. Ink returns to the top. Teal opens the search. Brass opens taxpayer money, the same brass as the mark beside a title. Gold opens the floor list. Parchment opens bills that were introduced. A green and rose edge opens a roll call. Blue opens the blue slips. A deeper blue means both home-state senators returned the paper for a district judge. A paler blue means that return is not on this record. The portrait tone opens the presidents and the senators.</p>
+    <p class="deck">What the House voted on, who voted yes, who voted no, and how to reach the member. Bills and resolutions introduced in this Congress are listed with a portrait of the sponsor.</p>
+    <p class="deck">The <a href="https://live.house.gov/">House floor</a> is live on FloorCast when the House is in session. Each roll call links to that day's recording. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's channel</a> posts a floor video when one is published.</p>
     <div class="result-legend" id="congress-legend">
       <span><i class="swatch yes-scale"></i> Yes. A darker green is a larger yes share.</span>
       <span><i class="swatch no-scale"></i> No. A darker rose is a larger no share.</span>
       <span><i class="swatch present"></i> Present</span>
       <span><i class="swatch stone"></i> Did not vote</span>
-      <span><i class="swatch gold"></i> On the floor list, with no roll call that week</span>
       <span><i class="swatch tie"></i> A state tied yes and no</span>
-      <span><i class="swatch d"></i> Democratic, in the name</span>
-      <span><i class="swatch r"></i> Republican, in the name</span>
-      <span><i class="swatch o"></i> Another party, in the name</span>
-      <span><i class="swatch slip-back"></i> Both blue slips returned for a district judge</span>
-      <span><i class="swatch slip-out"></i> Blue slip sent. The return is not on this record</span>
-      <span><i class="swatch slip-note"></i> Circuit court. The slip is sent, and it does not decide the hearing</span>
     </div>
     <p id="congress-status" class="note" aria-live="polite">Loading the roll calls.</p>
     <p class="congress-actions"><button type="button" id="congress-check">Check for new roll calls</button></p>
+
+    <section id="floor">
+      <h2>Floor list</h2>
+      <div class="result-legend">
+        <span><i class="swatch gold"></i> On the floor list, with no roll call that week</span>
+      </div>
+      <p id="floor-blurb" class="deck"></p>
+      <div id="floor-list"></div>
+    </section>
+
+    <section id="roll-calls">
+      <h2>House roll calls</h2>
+      <p id="vote-count" class="sub"></p>
+      <div id="vote-list" class="vote-scroll"></div>
+      <div id="open-vote"></div>
+      <section id="pending" hidden>
+        <h2>No roll call yet</h2>
+        <p class="deck">The Clerk has no House roll call for these bills.</p>
+        <div id="pending-list"></div>
+      </section>
+    </section>
 
     <form id="congress-find" class="congress-tools" role="search">
       <label>Search
@@ -811,41 +811,27 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
 
     <section id="taxpayer">
       <h2>Taxpayer money</h2>
-      <p class="deck">Each measure here names an amount of taxpayer money in its title or in the short account. The mark is the largest amount named. A paler brass mark is a smaller amount. A deeper bronze mark is a larger amount. A measure that spends money without naming an amount there is not in this list. The full text can name other amounts.</p>
+      <p class="deck">The mark is the largest amount named in the title or the short account. A measure with no amount there is left out.</p>
+      <div class="result-legend">
+        <span><i class="swatch money-pale"></i> Smaller amount</span>
+        <span><i class="swatch money-deep"></i> Larger amount</span>
+      </div>
       <p id="taxpayer-count" class="sub"></p>
       <div id="taxpayer-list" class="vote-scroll"></div>
     </section>
 
-    <section id="floor">
-      <h2>Floor list</h2>
-      <p id="floor-blurb" class="deck"></p>
-      <div id="floor-list"></div>
-    </section>
-
     <section id="introduced">
       <h2>Introduced</h2>
-      <p class="deck">Bills and resolutions introduced in this Congress. A senator, a representative, a delegate, or the Resident Commissioner can introduce one. A measure with no roll call has no yes or no to show. Read the full bill, or the full resolution, from the link under its title.</p>
+      <p class="deck">Bills and resolutions introduced in this Congress. A measure with no roll call has no yes or no to show.</p>
       <p id="introduced-count" class="sub"></p>
       <div id="introduced-list" class="vote-scroll"></div>
       <p class="congress-actions"><button type="button" id="introduced-more" hidden>Show earlier introductions</button></p>
       <div id="open-intro"></div>
     </section>
 
-    <section id="roll-calls">
-      <h2>House roll calls</h2>
-      <p id="vote-count" class="sub"></p>
-      <div id="vote-list" class="vote-scroll"></div>
-      <div id="open-vote"></div>
-      <section id="pending" hidden>
-        <h2>No roll call yet</h2>
-        <p class="deck">These bills are in the bill status file. The Clerk has no House roll call for them, so there is no yes or no to show.</p>
-        <div id="pending-list"></div>
-      </section>
-    </section>
-
     <section id="senate-votes">
       <h2>Senate roll calls</h2>
-      <p class="deck">Each senator's yes or no is listed here. The Senate site does not offer these files to this page, so the roll calls are copied from <a href="https://voteview.com/data">Voteview</a>, which records the Senate's roll calls. A vote taken by unanimous consent has no senator-by-senator yes or no.</p>
+      <p class="deck">Each senator's yes or no is listed here. The roll calls are copied from <a href="https://voteview.com/data">Voteview</a>. The Senate site does not offer these files to this page. A vote taken by unanimous consent has no senator-by-senator yes or no.</p>
       <p id="senate-count" class="sub"></p>
       <div id="senate-list" class="vote-scroll"></div>
       <div id="open-senate"></div>
@@ -853,7 +839,12 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
 
     <section id="blue-slips">
       <h2>Blue slips</h2>
-      <p class="deck">A blue slip is the paper the <a href="https://www.judiciary.senate.gov/nominations/judicial">Senate Judiciary Committee</a> sends to the two senators from a nominee's home state. The president nominates the judge. Those senators return the paper if they will let the committee take up that nomination. For a district court, the committee does not hold a hearing unless both senators return the slip. That returned paper is what assigns the judge a hearing. A circuit nomination can be heard without the slips. The committee does not publish each paper. A hearing, a place on the Executive Calendar, or a confirmation is the public sign that both district-court slips came back. A deeper blue means both slips came back. A paler blue means the return is not on this record. An outline means a circuit nomination. Blue is this paper only. It is not a party, and it is not a yes or a no.</p>
+      <p class="deck">A blue slip is the paper the <a href="https://www.judiciary.senate.gov/nominations/judicial">Senate Judiciary Committee</a> sends to the two senators from a nominee's home state. The president nominates the judge. Those senators return the paper if they will let the committee take up that nomination. For a district court, the committee does not hold a hearing unless both senators return the slip. A circuit nomination can be heard without the slips. The committee does not publish each paper. A hearing, a place on the Executive Calendar, or a confirmation is the public sign that both district-court slips came back. Blue is this paper only. It is not a party, and it is not a yes or a no.</p>
+      <div class="result-legend">
+        <span><i class="swatch slip-back"></i> Both blue slips returned for a district judge</span>
+        <span><i class="swatch slip-out"></i> Blue slip sent. The return is not on this record</span>
+        <span><i class="swatch slip-note"></i> Circuit court. The slip is sent, and it does not decide the hearing</span>
+      </div>
       <p id="slip-count" class="sub" aria-live="polite"></p>
       <div id="slip-list" class="vote-scroll"></div>
       <div id="open-slip"></div>
@@ -861,7 +852,7 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
 
     <section id="presidents">
       <h2>Presidents</h2>
-      <p class="deck">These are the living presidents. The current president is first. A former president stays on this list. The name, the party, and the term are copied from the <a href="https://unitedstates.github.io/congress-legislators/executive.json">congress-legislators executive file</a>. A person is left off when <a href="https://www.wikidata.org/">Wikidata</a> records a date of death. The current president’s office site is the White House. The executive file does not list a phone number. A state filter does not hide this list.</p>
+      <p class="deck">These are the living presidents. The current president is first. A former president stays on this list. The name, the party, and the term are copied from the <a href="https://unitedstates.github.io/congress-legislators/executive.json">congress-legislators executive file</a>. A person is left off when <a href="https://www.wikidata.org/">Wikidata</a> records a date of death.</p>
       <div id="president-list"></div>
     </section>
 
@@ -874,17 +865,31 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
 </main>
 <footer>
   <div class="wrap">
-    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency. Green is a yes. A darker green is a larger yes share. Rose is a no. A darker rose is a larger no share. Indigo is present. Stone is a member who did not vote. Gold is on the House floor list and has no roll call that week. A bar sits at the bottom of the screen. On a phone, the top bar and that bar step aside when the page is still, and they return when you scroll. The bar matches the theme. On Day it is navy, with a red stripe and a white stripe along the top. Ink returns to the top. Teal opens the search. Brass opens the measures that name taxpayer money. Gold opens the floor list. Parchment opens bills that were introduced. A green and rose edge opens House roll calls and Senate roll calls. Blue opens the blue slips. A deeper blue means both home-state senators returned the paper for a district judge. A paler blue means that return is not on this record. An outline is a circuit nomination: the slip is sent, and it does not decide the hearing. The portrait tone opens the presidents and the senators. A brass mark beside a title is taxpayer money named in the measure. Paler brass is a smaller amount. Deeper bronze is a larger amount. Plum on the map is a tie between yes and no. A blue name is Democratic, a red name is Republican, and an olive or brown name is another party.</p>
-    <p>House roll calls are copied from the <a href="https://clerk.house.gov/evs">Clerk of the House</a> for 2025 and 2026. The question, the description, and the counts are the Clerk's. While this page is open it asks <a href="https://api.congress.gov/">Congress.gov</a> for a House roll call newer than that copy. The floor list is the latest week in the House file at <a href="https://docs.house.gov/floor/">docs.house.gov</a>. Office phone, room, and website are copied from the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators</a> file for the current Congress. Portraits are public-domain photographs from the Congressional Pictorial Directory, through the <a href="https://unitedstates.github.io/images/congress/225x275/">congress images</a> collection, and from the <a href="https://bioguide.congress.gov/">Biographical Directory</a> when that collection has no photograph. A floor recording is the House <a href="https://live.house.gov/">FloorCast</a> for the day of the roll call. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's YouTube channel</a> posts a floor video when one is published. A short account of a measure is the <a href="https://www.govinfo.gov/bulkdata/BILLSUM/119">Congressional Research Service summary</a> published by GovInfo. When that short account leads with dollar amounts, the amount and the office or program named with it are copied from that summary or from the measure's text on GovInfo. The line gives the largest amounts, not every amount in the measure. The full text is that measure's text page on <a href="https://www.congress.gov/">Congress.gov</a>. The sponsor is the member named in the <a href="https://www.govinfo.gov/bulkdata/BILLSTATUS/119">GovInfo bill status file</a>. Bills and resolutions that were introduced are copied from that same file. The introducer, the introduction date, the title, and the latest action are the file's. Senate roll calls are copied from <a href="https://voteview.com/data">Voteview</a>'s record of the Senate, because the <a href="https://www.senate.gov/legislative/votes_new.htm">Senate</a> site does not offer those files to this page. The question, the description, and each senator's yes or no are Voteview's. When the bill status file says the Senate passed a measure by unanimous consent, this page says so, because that action has no senator-by-senator vote. Blue slips are copied from the <a href="https://www.judiciary.senate.gov/nominations/judicial">Senate Judiciary Committee's list of judicial nominations</a>. While this page is open it asks <a href="https://api.congress.gov/">Congress.gov</a> for a judicial nomination newer than that copy. The committee does not publish each slip. For a district court, a hearing, a place on the Executive Calendar, or a confirmation is the public sign that both home-state senators returned the slip, because the committee does not take up that nomination unless both slips come back. A circuit nomination can move without that return, so a circuit hearing is not shown as a returned slip. A portrait of a nominee is a public judicial photograph from the <a href="https://free.law/projects/judge-pics/">Free Law Project</a> when that file has one, or a freely licensed photograph from <a href="https://www.wikipedia.org/">Wikipedia</a>. A letter is shown when neither file has a photograph. Living presidents are copied from the <a href="https://unitedstates.github.io/congress-legislators/executive.json">congress-legislators executive file</a>. A person is left off when <a href="https://www.wikidata.org/">Wikidata</a> records a date of death. A portrait is a public-domain photograph from <a href="https://commons.wikimedia.org/">Wikimedia Commons</a> when that file has one.</p>
+    <p>Leaders.vote is an independent voter guide. It is not a campaign, not an endorsement, and not a site of any government agency.</p>
+    <ul class="sources">
+      <li>House roll calls, 2025 and 2026: the <a href="https://clerk.house.gov/evs">Clerk of the House</a>. The question, the description, and the counts are the Clerk's.</li>
+      <li>A newer House roll call, while this page is open: <a href="https://api.congress.gov/">Congress.gov</a>.</li>
+      <li>Floor list: <a href="https://docs.house.gov/floor/">docs.house.gov</a>.</li>
+      <li>Office phone, room, and website: the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators</a> file for the current Congress.</li>
+      <li>Portraits: the Congressional Pictorial Directory, through the <a href="https://unitedstates.github.io/images/congress/225x275/">congress images</a> collection, or the <a href="https://bioguide.congress.gov/">Biographical Directory</a> when that collection has no photograph.</li>
+      <li>Floor recording: <a href="https://live.house.gov/">FloorCast</a> for the day of the roll call.</li>
+      <li>Short account: the <a href="https://www.govinfo.gov/bulkdata/BILLSUM/119">Congressional Research Service summary</a> on GovInfo.</li>
+      <li>Amounts: that summary, or the measure's text on GovInfo. Full text: the measure's page on <a href="https://www.congress.gov/">Congress.gov</a>.</li>
+      <li>Sponsor and introduced bills: the <a href="https://www.govinfo.gov/bulkdata/BILLSTATUS/119">GovInfo bill status file</a>.</li>
+      <li>Senate roll calls: <a href="https://voteview.com/data">Voteview</a>.</li>
+      <li>Blue slips: the <a href="https://www.judiciary.senate.gov/nominations/judicial">Senate Judiciary Committee's list of judicial nominations</a>. A newer nomination, while this page is open: <a href="https://api.congress.gov/">Congress.gov</a>.</li>
+      <li>Nominee portraits: the <a href="https://free.law/projects/judge-pics/">Free Law Project</a>, or <a href="https://www.wikipedia.org/">Wikipedia</a>. A letter is shown when neither file has a photograph.</li>
+      <li>President portraits: <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.</li>
+    </ul>
   </div>
 </footer>
 <nav class="jump" aria-label="On this page">
   <a class="jump-top" href="#top">Top</a>
+  <a class="jump-floor" href="#floor">Floor list</a>
+  <a class="jump-house" href="#roll-calls">Roll calls</a>
   <a class="jump-search" href="#congress-find">Search</a>
   <a class="jump-money" href="#taxpayer">Taxpayer money</a>
-  <a class="jump-floor" href="#floor">Floor list</a>
   <a class="jump-introduced" href="#introduced">Introduced</a>
-  <a class="jump-house" href="#roll-calls">Roll calls</a>
   <a class="jump-senate" href="#senate-votes">Senate roll calls</a>
   <a class="jump-slip" href="#blue-slips">Blue slips</a>
   <a class="jump-people" href="#presidents">Presidents</a>
@@ -893,6 +898,6 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js?v=6"></script>
 <script src="logos.js?v=4"></script>
-<script src="congress.js?v=63"></script>
+<script src="congress.js?v=66"></script>
 </body>
 </html>

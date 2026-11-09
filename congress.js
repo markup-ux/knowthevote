@@ -1005,8 +1005,8 @@
     var first = votes[0];
     var last = votes[votes.length - 1];
     var line = data.votes.length + " House roll calls";
-    if (first && last) line += ", from " + formatDate(first.date) + " through " + formatDate(last.date);
-    line += ". The floor list is the week of " + formatDate(data.floor.week) + ".";
+    if (first && last) line += ", " + formatDate(first.date) + " through " + formatDate(last.date);
+    line += ". Floor list: week of " + formatDate(data.floor.week) + ".";
     if (extra) line += " " + extra;
     document.getElementById("congress-status").textContent = line;
   }
@@ -1029,8 +1029,8 @@
     var ahead = weekDate.getTime() > today.getTime();
     var blurb = document.getElementById("floor-blurb");
     blurb.textContent = ahead
-      ? "The House published this list for the week of " + formatDate(week) + ". Gold means the item is scheduled and this record has no roll call on or after that Monday. A roll call dated that week replaces the gold bar."
-      : "The latest floor list in this copy is the week of " + formatDate(week) + ". That Monday has passed. Gold means no roll call in this record is dated on or after that Monday.";
+      ? "Gold means the item is scheduled and this record has no roll call on or after " + formatDate(week) + ". A roll call dated that week replaces the gold bar."
+      : "Gold means no roll call in this record is dated on or after " + formatDate(week) + ".";
     if (data.floor.updated) blurb.textContent += " The House file was last updated " + formatDate(data.floor.updated.slice(0, 10)) + ".";
     var list = document.getElementById("floor-list");
     list.innerHTML = "";
@@ -2702,8 +2702,8 @@
     }).catch(function (error) {
       var message = String(error && error.message || "");
       finishSlips(message === "429" || message === "403"
-        ? "Congress.gov asked this browser to wait. The saved copy is on the page."
-        : "Congress.gov did not answer. The saved copy is on the page.", false);
+        ? "Congress.gov is busy."
+        : "Congress.gov did not answer.", false);
     });
   }
 
@@ -2947,8 +2947,8 @@
       checking = false;
       var message = String(error && error.message || "");
       renderStatus(message === "429" || message === "403"
-        ? "Congress.gov asked this browser to wait. The saved copy is on the page."
-        : "Congress.gov did not answer. The saved copy is on the page.");
+        ? "Congress.gov is busy."
+        : "Congress.gov did not answer.");
     });
   }
 
