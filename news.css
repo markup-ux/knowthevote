@@ -564,7 +564,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   height: 46px;
   object-fit: cover;
   object-position: center top;
-  border-radius: 0;
+  border-radius: 50%;
   border: 1px solid var(--c-red);
   box-shadow: 0 0 0 1px var(--mako);
   flex: none;
@@ -590,7 +590,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 .who .face {
   width: 28px;
   height: 28px;
-  border-radius: 0;
+  border-radius: 50%;
   object-fit: cover;
   object-position: center top;
   display: block;
@@ -602,7 +602,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   padding: 0;
   border: 0;
   background: transparent;
-  border-radius: 0;
+  border-radius: 50%;
 }
 .who-mark[aria-expanded="true"] { background: transparent; color: inherit; box-shadow: 0 0 0 1px var(--mako); }
 .card {
@@ -636,6 +636,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   object-fit: cover;
   object-position: center top;
   display: block;
+  border-radius: 50%;
   box-shadow: 0 0 0 1px var(--mako);
 }
 .card .card-name { margin: 0 0 4px; color: var(--plate-ink); font-size: 22px; font-weight: 650; }
@@ -648,6 +649,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   place-items: center;
   width: 100%;
   aspect-ratio: 1;
+  border-radius: 50%;
   background: var(--desk);
   color: var(--on);
   font-size: 28px;
@@ -676,7 +678,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 .researcher .mono {
   width: 28px;
   height: 28px;
-  border-radius: 0;
+  border-radius: 50%;
   display: grid;
   place-items: center;
   flex: none;
@@ -738,7 +740,7 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   aspect-ratio: auto;
   object-fit: cover;
   object-position: center top;
-  border-radius: 0;
+  border-radius: 50%;
   box-shadow: 0 0 0 1px var(--mako);
   background: var(--well);
 }

@@ -14,6 +14,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HTML = os.path.join(ROOT, "news.html")
 OUT = os.path.join(ROOT, "news", "pocit.json")
 API = "https://peopleofcolorintech.com/wp-json/wp/v2/posts?per_page=20&_embed=1&page=%d"
+MAIN = "https://peopleofcolorintech.com/wp-json/wp/v2/posts?categories=86&per_page=1&_embed=1"
 UA = {"User-Agent": "LeadersVoteNews/1.0 (markup.ux@gmail.com)"}
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown"]
 
@@ -156,8 +157,24 @@ def pack(post, used):
     }
 
 
+def featured_lead():
+    try:
+        batch = fetch(MAIN)
+    except Exception:
+        return None
+    if not batch:
+        return None
+    packed = pack(batch[0], 0)
+    if not packed:
+        return None
+    return {"id": packed["id"], "url": packed["url"], "post": packed}
+
+
 def main():
     posts = load_posts()
+    stored = {}
+    if os.path.isfile(OUT):
+        stored = json.loads(open(OUT, encoding="utf-8").read()).get("featured") or {}
     known = known_urls(posts)
     floor = newest_date(posts)
     room = edge_total() - weekly_total(posts)
@@ -188,20 +205,28 @@ def main():
         if room <= 0 and all((post.get("date") or "")[:10] < floor for post in batch):
             break
         page += 1
+    lead = featured_lead()
+    if lead and canon(lead["url"]) not in known and slug(lead["url"]) not in known:
+        fresh.append(lead["post"])
+        known.add(canon(lead["url"]))
+        known.add(slug(lead["url"]))
     fresh.sort(key=lambda post: post["date"])
-    if not fresh:
+    featured = {"id": lead["id"], "url": lead["url"]} if lead else stored
+    same_feature = canon(featured.get("url")) == canon(stored.get("url"))
+    if not fresh and same_feature:
         print("unchanged")
         return
     posts.extend(fresh)
     posts.sort(key=lambda post: post.get("date") or "")
     payload = {
         "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "featured": featured,
         "posts": posts,
     }
     with open(OUT, "w", encoding="utf-8", newline="\n") as handle:
         json.dump(payload, handle, indent=2, ensure_ascii=False)
         handle.write("\n")
-    print("added", len(fresh))
+    print("added", len(fresh), "featured", featured.get("url", ""))
 
 
 if __name__ == "__main__":

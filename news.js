@@ -472,8 +472,8 @@
       var section = document.getElementById(desk);
       var link = beat.querySelector("a.latest");
       if (!section || !link) return;
-      var newest = null;
-      section.querySelectorAll(".story").forEach(function (story) {
+      var newest = desk === "weekly" ? section.querySelector('.story[data-featured="true"]') : null;
+      if (!newest) section.querySelectorAll(".story").forEach(function (story) {
         if (!story.id || !storyDate(story)) return;
         if (!newest || storyDate(story) > storyDate(newest)) newest = story;
       });
@@ -604,7 +604,7 @@
     role.className = "when";
     role.textContent = "People of Color in Tech";
     var note = document.createElement("p");
-    note.textContent = "The portrait is the one on POCIT's author page.";
+    note.textContent = "Writes for People of Color in Tech.";
     var src = document.createElement("p");
     src.className = "src";
     var page = document.createElement("a");
@@ -714,6 +714,13 @@
     fresh.sort(function (a, b) { return String(a.date || "").localeCompare(String(b.date || "")); });
     fresh.forEach(function (post) {
       list.insertBefore(weeklyCard(post), list.firstChild);
+    });
+    var featuredUrl = data.featured && canonUrl(data.featured.url || "");
+    list.querySelectorAll(".story").forEach(function (story) {
+      var link = story.querySelector(".src a");
+      var href = link ? canonUrl(link.getAttribute("href")) : "";
+      if (featuredUrl && href === featuredUrl) story.setAttribute("data-featured", "true");
+      else story.removeAttribute("data-featured");
     });
     foldWeekly();
     prepareWeekly();
@@ -861,7 +868,7 @@
     spotify: "<circle cx='16' cy='16' r='14' fill='var(--c-brown)'/><circle cx='16' cy='16' r='11' fill='none' stroke='var(--c-red)' stroke-width='1.7'/><circle cx='16' cy='16' r='8.2' fill='none' stroke='var(--c-orange)' stroke-width='1.7'/><circle cx='16' cy='16' r='5.5' fill='var(--c-yellow)'/><circle cx='16' cy='16' r='3.3' fill='var(--c-green)'/><circle cx='16' cy='16' r='1.5' fill='var(--c-blue)'/><circle cx='23' cy='7.5' r='1.6' fill='var(--c-purple)'/><circle cx='9' cy='24.5' r='1.6' fill='var(--c-pink)'/>",
     youtube: "<rect x='2' y='7' width='28' height='16' rx='4' fill='var(--c-red)'/><rect x='4' y='9' width='24' height='10' rx='2' fill='var(--c-brown)'/><path d='M13 11.2 L21 14 L13 16.8 Z' fill='var(--c-yellow)'/><rect x='5' y='24' width='4' height='2' fill='var(--c-orange)'/><rect x='10' y='24' width='4' height='2' fill='var(--c-green)'/><rect x='15' y='24' width='4' height='2' fill='var(--c-blue)'/><rect x='20' y='24' width='4' height='2' fill='var(--c-purple)'/><circle cx='27' cy='10' r='1.4' fill='var(--c-pink)'/>",
     pieces: "<rect x='3' y='4' width='22' height='26' rx='1' fill='var(--c-brown)'/><rect x='5' y='6' width='18' height='22' fill='var(--c-yellow)'/><rect x='5' y='6' width='18' height='5' fill='var(--c-red)'/><rect x='8' y='14' width='12' height='2' fill='var(--c-blue)'/><rect x='8' y='18' width='9' height='2' fill='var(--c-green)'/><rect x='8' y='22' width='6' height='2' fill='var(--c-purple)'/><path d='M18 17 L26 8 L28.2 10.2 L20.2 19.2 Z' fill='var(--c-orange)'/><circle cx='26.6' cy='8.4' r='1.5' fill='var(--c-pink)'/>",
-    web: "<rect x='2' y='2' width='28' height='28' rx='3' fill='var(--c-brown)'/><path d='M6 16 L16 7 L26 16 Z' fill='var(--c-red)'/><rect x='9' y='16' width='14' height='11' fill='var(--c-yellow)'/><rect x='14' y='20' width='4' height='7' fill='var(--c-blue)'/><rect x='10.5' y='18' width='3' height='3' fill='var(--c-green)'/><rect x='18.5' y='18' width='3' height='3' fill='var(--c-purple)'/><rect x='15' y='6' width='2.2' height='4' fill='var(--c-orange)'/><circle cx='24' cy='9' r='1.7' fill='var(--c-pink)'/>"
+    web: "<circle cx='16' cy='16' r='13.3' fill='var(--c-blue)'/><circle cx='16' cy='16' r='13.3' fill='none' stroke='var(--c-brown)' stroke-width='2'/><path d='M16 2.7 a19.3 19.3 0 0 0 0 26.6 a19.3 19.3 0 0 0 0-26.6' fill='none' stroke='var(--c-yellow)' stroke-width='2'/><path d='M2.7 16 h26.6' fill='none' stroke='var(--c-red)' stroke-width='2' stroke-linecap='round'/><path d='M5.2 11.2 h21.6' fill='none' stroke='var(--c-orange)' stroke-width='1.6' stroke-linecap='round'/><path d='M5.2 20.8 h21.6' fill='none' stroke='var(--c-green)' stroke-width='1.6' stroke-linecap='round'/><circle cx='10.6' cy='13.2' r='1.5' fill='var(--c-purple)'/><circle cx='21' cy='18.8' r='1.5' fill='var(--c-pink)'/>"
   };
 
   function markIcon(kind) {
@@ -1273,11 +1280,14 @@
     if (/spotify\.com/i.test(href)) return "spotify";
     if (/youtube\.com|youtu\.be/i.test(href)) return "youtube";
     if (/github\.com/i.test(href)) return "github";
-    if (/leaders\.vote/i.test(href)) return "site";
     if (/peopleofcolorintech\.com\/author\//i.test(href)) return "pieces";
     var asked = link.getAttribute("data-kind");
-    if (asked && marks[asked]) return asked;
-    if (/habibakatsha\.com/i.test(href)) return "web";
+    if (asked && asked !== "web" && marks[asked]) return asked;
+    if (/^https?:/i.test(href)) {
+      var path = href.replace(/^https?:\/\/[^/]+/i, "").split(/[?#]/)[0];
+      if (!path || path === "/") return "web";
+      return "page";
+    }
     return "";
   }
 
@@ -1309,7 +1319,7 @@
   window.addEventListener("hashchange", revealHash);
 
   var preview = document.createElement("script");
-  preview.src = "news/preview/note.js?v=43";
+  preview.src = "news/preview/note.js?v=44";
   mountDock();
   mountPicks();
   preview.onload = function () {
