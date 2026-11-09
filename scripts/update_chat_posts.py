@@ -161,7 +161,13 @@ point_live.previous = ""
 
 
 def mirror_main():
-    """Put the same posts on the site branch for the search index and fallback."""
+    """Put the same posts on the site branch for the search index and fallback.
+
+    The open page does not wait for this. Rebuilding the whole site on every
+    post knocks the publish over, so the site copy waits ten minutes.
+    """
+    if time.time() < mirror_main.next_at:
+        return
     tree = os.path.join(os.environ.get("RUNNER_TEMP") or "/tmp", "leaders-chat-site")
     if not os.path.exists(os.path.join(tree, ".git")):
         subprocess.check_call(["git", "fetch", "origin", "main"], cwd=ROOT)
@@ -184,7 +190,12 @@ def mirror_main():
         subprocess.check_call(["git", "fetch", "origin", "main"], cwd=tree)
         subprocess.check_call(["git", "rebase", "origin/main"], cwd=tree)
         subprocess.check_call(["git", "push", "origin", "HEAD:main"], cwd=tree)
+    mirror_main.next_at = time.time() + 10 * 60
     print("mirrored", flush=True)
+
+
+# Let the site finish publishing this program before the next site copy.
+mirror_main.next_at = time.time() + 10 * 60
 
 
 def publish_chat():
