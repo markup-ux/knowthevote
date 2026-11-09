@@ -6,15 +6,18 @@ campaign site already stored for that person. Posts are read from the public
 feeds those networks provide: X, Mastodon, Bluesky, and Truth Social.
 Facebook, Instagram, and YouTube are linked, because they do not publish a
 post feed this page can copy. GitHub often starts the schedule hours late,
-so on the live site this keeps copying for about six hours. X allows about
-30 account reads every 15 minutes, so each pass reads the leaders who posted
-recently first, then continues through the rest. A failed refresh keeps the
-previous posts for that account.
+so on the live site this keeps copying for about six hours. Each pass that
+finds a new post is published at a new address, which the page reads without
+waiting for a full site rebuild. X allows about 30 account reads every 15
+minutes, so each pass reads the leaders who posted recently first, then
+continues through the rest. A failed refresh keeps the previous posts for
+that account.
 """
 import html
 import json
 import os
 import re
+import shutil
 import subprocess
 import time
 import urllib.error
@@ -101,31 +104,118 @@ def save(path, data):
     os.replace(temporary, path)
 
 
+LIVE_STEP = 15
+CHAT_FILES = ["chat/posts.json", "chat/accounts.json", "chat/feeds.json"]
+
+
+def on_actions():
+    return os.environ.get("GITHUB_ACTIONS") == "true"
+
+
+def use_chat_branch():
+    """Keep the live copies off the site branch so a new post is not a rebuild."""
+    subprocess.check_call(["git", "fetch", "origin"], cwd=ROOT)
+    found = subprocess.run(["git", "rev-parse", "--verify", "--quiet", "origin/chat"], cwd=ROOT)
+    if found.returncode == 0:
+        subprocess.check_call(["git", "checkout", "-B", "chat", "origin/chat"], cwd=ROOT)
+    else:
+        subprocess.check_call(["git", "checkout", "-B", "chat"], cwd=ROOT)
+    subprocess.check_call(["git", "checkout", "origin/main", "--", "chat/messages.json", "guides"], cwd=ROOT)
+    subprocess.check_call(["git", "reset", "-q", "HEAD", "--", "chat/messages.json", "guides"], cwd=ROOT)
+
+
+def point_live():
+    """Publish the current commit at a new address.
+
+    Raw GitHub keeps one address for about five minutes. A new name is a
+    cache miss, which is how the open page sees a post within seconds.
+    """
+    bucket = int(time.time() // LIVE_STEP) * LIVE_STEP
+    name = "c%d" % bucket
+    if name == point_live.previous:
+        return
+    pushed = subprocess.run(["git", "push", "origin", "HEAD:refs/heads/" + name], cwd=ROOT)
+    if pushed.returncode != 0:
+        print("live address failed", name, flush=True)
+        return
+    point_live.previous = name
+    print("live", name, flush=True)
+    listed = subprocess.run(
+        ["git", "ls-remote", "--heads", "origin", "refs/heads/c*"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    cutoff = bucket - 40 * LIVE_STEP
+    stale = []
+    for line in (listed.stdout or "").splitlines():
+        ref = line.split()[-1]
+        short = ref.rsplit("/", 1)[-1]
+        if short.startswith("c") and short[1:].isdigit() and int(short[1:]) < cutoff:
+            stale.append(":" + ref)
+    if stale:
+        subprocess.run(["git", "push", "origin"] + stale, cwd=ROOT)
+
+
+point_live.previous = ""
+
+
+def mirror_main():
+    """Put the same posts on the site branch for the search index and fallback."""
+    tree = os.path.join(os.environ.get("RUNNER_TEMP") or "/tmp", "leaders-chat-site")
+    if not os.path.exists(os.path.join(tree, ".git")):
+        subprocess.check_call(["git", "fetch", "origin", "main"], cwd=ROOT)
+        subprocess.check_call(["git", "worktree", "add", "--detach", tree, "origin/main"], cwd=ROOT)
+    else:
+        subprocess.check_call(["git", "fetch", "origin", "main"], cwd=tree)
+        subprocess.check_call(["git", "checkout", "--detach", "--force", "origin/main"], cwd=tree)
+    for name in ("posts.json", "accounts.json", "feeds.json"):
+        shutil.copy2(os.path.join(CHAT, name), os.path.join(tree, "chat", name))
+    subprocess.check_call(["git", "add", "--"] + CHAT_FILES, cwd=tree)
+    quiet = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=tree)
+    if quiet.returncode == 0:
+        return
+    subprocess.check_call(
+        ["git", "commit", "-m", "Update Group Chat with the latest official social posts."],
+        cwd=tree,
+    )
+    pushed = subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=tree)
+    if pushed.returncode != 0:
+        subprocess.check_call(["git", "fetch", "origin", "main"], cwd=tree)
+        subprocess.check_call(["git", "rebase", "origin/main"], cwd=tree)
+        subprocess.check_call(["git", "push", "origin", "HEAD:main"], cwd=tree)
+    print("mirrored", flush=True)
+
+
 def publish_chat():
     """Push a finished batch when this copy is running on GitHub."""
-    if os.environ.get("GITHUB_ACTIONS") != "true":
+    if not on_actions():
         return
     try:
-        subprocess.run(
-            ["git", "add", "--", "chat/posts.json", "chat/accounts.json", "chat/feeds.json"],
-            cwd=ROOT,
-            check=True,
-        )
+        subprocess.run(["git", "add", "--"] + CHAT_FILES, cwd=ROOT, check=True)
         quiet = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT)
+        posts_changed = subprocess.run(
+            ["git", "diff", "--cached", "--quiet", "--", "chat/posts.json"],
+            cwd=ROOT,
+        ).returncode != 0
         if quiet.returncode == 0:
+            point_live()
             return
         subprocess.run(
             ["git", "commit", "-m", "Update Group Chat with the latest official social posts."],
             cwd=ROOT,
             check=True,
         )
-        pushed = subprocess.run(["git", "push", "origin", "HEAD"], cwd=ROOT)
+        pushed = subprocess.run(["git", "push", "origin", "HEAD:chat"], cwd=ROOT)
         if pushed.returncode != 0:
-            pulled = subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=ROOT)
+            pulled = subprocess.run(["git", "pull", "--rebase", "origin", "chat"], cwd=ROOT)
             if pulled.returncode != 0:
                 subprocess.run(["git", "rebase", "--abort"], cwd=ROOT)
                 raise RuntimeError("rebase failed")
-            subprocess.run(["git", "push", "origin", "HEAD"], cwd=ROOT, check=True)
+            subprocess.run(["git", "push", "origin", "HEAD:chat"], cwd=ROOT, check=True)
+        point_live()
+        if posts_changed:
+            mirror_main()
         print("published", flush=True)
     except Exception as error:
         print("publish failed", error, flush=True)
@@ -324,20 +414,26 @@ def feed_due(account, row, moment):
     latest = parsed(latest_post(row))
     hot = latest is not None and moment - latest <= HOT_WINDOW
     if account["net"] != "x":
-        return age >= (timedelta(minutes=12) if hot else timedelta(hours=2))
+        if hot:
+            return age >= timedelta(seconds=15)
+        if latest is not None and latest.strftime("%Y-%m-%d") >= SINCE_DAY:
+            return age >= timedelta(seconds=45)
+        return age >= timedelta(minutes=3)
+    # X allows about 30 reads every 15 minutes. Ask again as soon as that
+    # window has room, with the most recent voices first.
     if hot:
-        return age >= timedelta(minutes=12)
+        return age >= timedelta(seconds=20)
     if latest is not None and latest.strftime("%Y-%m-%d") >= SINCE_DAY:
-        return age >= timedelta(minutes=45)
-    return age >= timedelta(hours=6)
+        return age >= timedelta(minutes=5)
+    return age >= timedelta(minutes=30)
 
 
 def choose_x(feeds, accounts, moment):
     """Read recent voices first, and keep a few reads for everyone else.
 
-    Thirty reads is the whole X allowance for about 15 minutes. Twelve of
-    them follow leaders who posted in the last 18 hours, twelve follow
-    leaders who have posted since November 3, and six rotate through the
+    Thirty reads is the whole X allowance for about 15 minutes. Twenty of
+    them follow leaders who posted in the last 18 hours, seven follow
+    leaders who have posted since November 3, and three rotate through the
     remaining accounts. Leftover reads continue down that same order.
     """
     groups = [[], [], []]
@@ -367,9 +463,9 @@ def choose_x(feeds, accounts, moment):
             chosen.append(account)
             count -= 1
 
-    take(0, 12)
-    take(1, 12)
-    take(2, 6)
+    take(0, 20)
+    take(1, 7)
+    take(2, 3)
     for bucket in (0, 1, 2):
         take(bucket, X_EACH_RUN)
     return chosen
@@ -809,7 +905,7 @@ def person_accounts(person, sites, congress, pages):
     return found
 
 
-def main():
+def load_context():
     messages = load(os.path.join(CHAT, "messages.json"))
     sites = guide_sites()
     print("reading the official member list", flush=True)
@@ -862,7 +958,24 @@ def main():
     for url, cached in stored_pages.items():
         pages.setdefault(url, cached)
     save(ACCOUNTS_PATH, {"updated": now(), "pages": pages})
+    return {"roster": roster, "sites": sites, "congress": congress, "pages": pages}
 
+
+def rate_resume(reset):
+    try:
+        moment = float(reset)
+    except (TypeError, ValueError):
+        return time.time() + 15 * 60
+    if moment > time.time():
+        return moment + 1
+    return time.time() + 15 * 60
+
+
+def refresh(context):
+    roster = context["roster"]
+    sites = context["sites"]
+    congress = context["congress"]
+    pages = context["pages"]
     feeds = load(FEEDS_PATH)
     needed = {}
     for person in roster:
@@ -876,20 +989,22 @@ def main():
         if feed_due(account, feeds.get(feed_key) or {}, moment):
             due.append(account)
     fast = [account for account in due if account["net"] != "x"]
-    slow = choose_x(feeds, [account for account in due if account["net"] == "x"], moment)
+    if time.time() < refresh.x_resume:
+        slow = []
+    else:
+        slow = choose_x(feeds, [account for account in due if account["net"] == "x"], moment)
     print("feeds to read", len(fast) + len(slow), "of", len(needed), "x", len(slow), flush=True)
     done = 0
-    with ThreadPoolExecutor(max_workers=6) as pool:
+    with ThreadPoolExecutor(max_workers=12) as pool:
         futures = {pool.submit(fetch_feed, account): account for account in fast}
         for future in as_completed(futures):
             store_feed(feeds, futures[future], future.result())
             done += 1
-            if done % 100 == 0 or done == len(fast):
+            if done % 20 == 0 or done == len(fast):
+                save(FEEDS_PATH, feeds)
+                write_posts(roster, sites, congress, pages, feeds)
+                publish_chat()
                 print("feeds", done, "/", len(fast), flush=True)
-    if fast:
-        save(FEEDS_PATH, feeds)
-        write_posts(roster, sites, congress, pages, feeds)
-        publish_chat()
     index = 0
     missed = 0
     raw_budget = os.environ.get("CHAT_POSTS_BUDGET_MINUTES") or ""
@@ -905,25 +1020,25 @@ def main():
         try:
             found = fetch_feed(account)
         except RateLimit:
-            print("X allows 30 reads at a time. Publishing what was copied and continuing next run.", flush=True)
+            refresh.x_resume = rate_resume(x_posts.reset)
+            print("X allows 30 reads at a time. The other networks keep copying.", flush=True)
             break
         if found is None:
             missed += 1
         store_feed(feeds, account, found)
         index += 1
-        if index % 10 == 0 or index == len(slow):
-            save(FEEDS_PATH, feeds)
-            counts = write_posts(roster, sites, congress, pages, feeds)
-            print("x", index, "/", len(slow), "posts", counts[2], "missed", missed, flush=True)
-            publish_chat()
+        save(FEEDS_PATH, feeds)
+        counts = write_posts(roster, sites, congress, pages, feeds)
+        publish_chat()
+        print("x", index, "/", len(slow), "posts", counts[2], "missed", missed, flush=True)
         try:
             remaining = int(x_posts.remaining)
         except (TypeError, ValueError):
             remaining = None
         if remaining is not None and remaining <= 1:
-            print("X allows 30 reads at a time. Publishing what was copied and continuing next run.", flush=True)
+            refresh.x_resume = rate_resume(x_posts.reset)
+            print("X allows 30 reads at a time. The other networks keep copying.", flush=True)
             break
-        time.sleep(1)
     save(FEEDS_PATH, feeds)
     account_count, people_count, post_count = write_posts(roster, sites, congress, pages, feeds)
     publish_chat()
@@ -931,38 +1046,50 @@ def main():
     print("accounts", account_count, "people with accounts", people_count, "posts", post_count, "feeds ok", ok, flush=True)
 
 
+refresh.x_resume = 0
+
+
+def main():
+    refresh(load_context())
+
+
 # GitHub's own limit for one job is six hours. Stop short of that so the
 # last push can finish, and leave a queued run to take the next shift.
 RUN_MINUTES = 350
-PAUSE_SECONDS = 180
+ROSTER_EVERY = 30 * 60
 
 
 def run_window():
     """Keep copying until the next scheduled run can take over."""
     raw = os.environ.get("CHAT_POSTS_RUN_MINUTES") or ""
     try:
-        minutes = float(raw) if raw else (RUN_MINUTES if os.environ.get("GITHUB_ACTIONS") == "true" else 0)
+        minutes = float(raw) if raw else (RUN_MINUTES if on_actions() else 0)
     except ValueError:
         minutes = 0
     if minutes <= 0:
         main()
         return
+    use_chat_branch()
     deadline = time.time() + minutes * 60
+    context = load_context()
+    prepared = time.time()
     while True:
+        if time.time() - prepared >= ROSTER_EVERY:
+            try:
+                context = load_context()
+            except Exception as error:
+                print("roster refresh failed", error, flush=True)
+            prepared = time.time()
         started = time.time()
         try:
-            main()
+            refresh(context)
         except Exception as error:
             print("copy failed", error, flush=True)
         if time.time() >= deadline:
             return
-        pause = PAUSE_SECONDS - (time.time() - started)
-        if pause < 30:
-            pause = 30
-        if time.time() + pause > deadline:
-            return
-        print("next copy in", int(pause), "seconds", flush=True)
-        time.sleep(pause)
+        pause = LIVE_STEP - (time.time() - started)
+        if pause > 0:
+            time.sleep(min(pause, deadline - time.time()))
 
 
 if __name__ == "__main__":

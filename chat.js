@@ -852,6 +852,31 @@
     });
   }
 
+  function readLivePosts() {
+    var step = 15;
+    var start = Math.floor(Date.now() / 1000 / step) * step;
+    var urls = [];
+    var i;
+    for (i = 0; i < 12; i++) {
+      urls.push("https://raw.githubusercontent.com/markup-ux/knowthevote/c" + (start - i * step) + "/chat/posts.json");
+    }
+    urls.push("https://raw.githubusercontent.com/markup-ux/knowthevote/chat/chat/posts.json");
+    urls.push("chat/posts.json");
+
+    function attempt(index) {
+      if (index >= urls.length) return Promise.resolve({});
+      var url = urls[index];
+      var local = url.indexOf("https://") !== 0;
+      return fetch(local ? url + "?t=" + Date.now() : url, { cache: "no-store" }).then(function (response) {
+        if (!response.ok) throw new Error("miss");
+        return response.json();
+      }).catch(function () {
+        return attempt(index + 1);
+      });
+    }
+    return attempt(0);
+  }
+
   function readJsonRetry(url) {
     return readJson(url).catch(function () { return readJson(url); }).catch(function () { return {}; });
   }
@@ -861,7 +886,7 @@
     if (!seen.ready) status.textContent = "Checking for records since November 3.";
     Promise.all([
       readJsonRetry("chat/messages.json"),
-      readJsonRetry("chat/posts.json"),
+      readLivePosts(),
       readJsonRetry("chat/official.json"),
       readJsonRetry("chat/contacts.json")
     ]).then(function (files) {
@@ -909,5 +934,5 @@
   });
 
   pull();
-  setInterval(pull, 60000);
+  setInterval(pull, 15000);
 })();
