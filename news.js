@@ -1320,7 +1320,7 @@
   window.addEventListener("hashchange", revealHash);
 
   var preview = document.createElement("script");
-  preview.src = "news/preview/note.js?v=45";
+  preview.src = "news/preview/note.js?v=58";
   mountDock();
   mountPicks();
   preview.onload = function () {
