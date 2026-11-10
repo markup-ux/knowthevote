@@ -814,6 +814,99 @@
     return response.json();
   }).then(takeJournal).catch(function () {});
 
+  function deskCard(post, source, tag, linkLabel) {
+    var article = document.createElement("article");
+    article.className = "story";
+    article.setAttribute("data-source", source);
+    article.setAttribute("data-color", post.color || "brown");
+    if (post.date) article.setAttribute("data-posted", post.date);
+    if (post.id) article.id = post.id;
+    var label = document.createElement("p");
+    label.className = "tag";
+    label.textContent = tag;
+    var title = document.createElement("h3");
+    title.textContent = post.title || "A new story.";
+    var when = document.createElement("p");
+    when.className = "when";
+    var time = document.createElement("time");
+    time.setAttribute("datetime", post.date || "");
+    time.textContent = post.dateLabel || post.date || "";
+    when.appendChild(time);
+    if (post.author) when.appendChild(document.createTextNode(" · " + post.author));
+    if (post.meta) when.appendChild(document.createTextNode(" · " + post.meta));
+    var body = document.createElement("p");
+    body.textContent = post.text || "";
+    var src = document.createElement("p");
+    src.className = "src";
+    var link = document.createElement("a");
+    link.href = post.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = linkLabel;
+    src.appendChild(link);
+    article.appendChild(label);
+    if (post.image) {
+      var figure = document.createElement("figure");
+      figure.className = "shot";
+      var img = document.createElement("img");
+      img.src = post.image;
+      img.alt = "";
+      figure.appendChild(img);
+      article.appendChild(figure);
+    }
+    article.appendChild(title);
+    article.appendChild(when);
+    article.appendChild(body);
+    article.appendChild(src);
+    return article;
+  }
+
+  function restoreList(section) {
+    var list = section.querySelector(":scope > .desk-list");
+    if (!list) return null;
+    section.querySelectorAll(".item-pick .story, .more-pieces .story").forEach(function (story) {
+      list.appendChild(story);
+    });
+    return list;
+  }
+
+  function takeDesk(sectionId, data, source, tag, linkLabel) {
+    var section = document.getElementById(sectionId);
+    var list = section && restoreList(section);
+    if (!list || !data || !data.posts) return;
+    var known = {};
+    section.querySelectorAll(".src a").forEach(function (link) {
+      known[canonUrl(link.getAttribute("href"))] = true;
+    });
+    var fresh = data.posts.filter(function (post) {
+      return post && post.url && !known[canonUrl(post.url)];
+    });
+    fresh.sort(function (a, b) { return String(a.date || "").localeCompare(String(b.date || "")); });
+    fresh.forEach(function (post) {
+      list.insertBefore(deskCard(post, source, tag, linkLabel), list.firstChild);
+    });
+    if (!fresh.length) return;
+    list.querySelectorAll(".story.lead").forEach(function (story) { story.classList.remove("lead"); });
+    var first = list.querySelector(".story:not([data-earlier])");
+    if (first) first.classList.add("lead");
+    apply();
+    mountItemPick(section);
+    refreshLatest(sectionId);
+  }
+
+  function loadDesk(file, sectionId, source, tag, linkLabel) {
+    fetch(file, { cache: "no-store" }).then(function (response) {
+      if (!response.ok) return null;
+      return response.json();
+    }).then(function (data) {
+      takeDesk(sectionId, data, source, tag, linkLabel);
+    }).catch(function () {});
+  }
+
+  loadDesk("news/better.json", "better", "better", "The Better India", "Read it at The Better India");
+  loadDesk("news/look.json", "look", "look", "Magnolia Lookbooks", "Open this lookbook");
+  loadDesk("news/nyle.json", "nyle", "nyle", "Nyle", "Read the post on LinkedIn");
+
   function initials(name) {
     var parts = String(name).replace(/\./g, "").split(/\s+/).filter(Boolean);
     if (!parts.length) return "";
@@ -1320,7 +1413,7 @@
   window.addEventListener("hashchange", revealHash);
 
   var preview = document.createElement("script");
-  preview.src = "news/preview/note.js?v=58";
+  preview.src = "news/preview/note.js?v=59";
   mountDock();
   mountPicks();
   preview.onload = function () {

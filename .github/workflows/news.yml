@@ -1,0 +1,40 @@
+name: Update news desks
+
+on:
+  schedule:
+    - cron: "15 16 * * *"
+    - cron: "15 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-desks
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Add stories published since the last check
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          python scripts/update_publications.py
+          files=
+          for f in news/better.json news/look.json news/nyle.json news/edge.json; do
+            if [ -f "$f" ]; then files="$files $f"; fi
+          done
+          git add -- $files
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Add stories The Better India, Magnolia, Nyle, and The Edge have published."
+            git push
+          fi
