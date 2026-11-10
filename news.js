@@ -228,7 +228,6 @@
     var header = document.querySelector("header");
     var dock = document.querySelector(".pub-dock");
     var offset = (header ? header.getBoundingClientRect().height : 96) + 16;
-    if (dock && dock.classList.contains("is-on") && dock.classList.contains("is-top")) offset += dock.offsetHeight + 10;
     var top = node.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo(0, Math.max(0, top));
   }
@@ -237,6 +236,12 @@
     document.querySelectorAll(".sources button[data-source], .pub-dock button[data-source]").forEach(function (other) {
       other.setAttribute("aria-pressed", other.getAttribute("data-source") === name ? "true" : "false");
     });
+    var dock = document.querySelector(".pub-dock");
+    var current = dock && dock.querySelector('button[aria-pressed="true"]');
+    if (dock && current && dock.classList.contains("is-top")) {
+      var place = current.offsetLeft - (dock.clientWidth - current.offsetWidth) / 2;
+      dock.scrollLeft = Math.max(0, place);
+    }
   }
 
   function mountDock() {
@@ -247,7 +252,6 @@
     var wrap = document.querySelector(".nr-wrap");
     if (!dock || !mast || !lower || !wrap) return;
     function layout() {
-      var header = document.querySelector("header");
       var room = wrap.getBoundingClientRect().left;
       var side = room >= 118;
       dock.classList.toggle("is-side", side);
@@ -255,14 +259,21 @@
       if (side) {
         var edge = wrap.getBoundingClientRect().left;
         dock.style.top = "";
+        dock.style.bottom = "";
         dock.style.left = "auto";
         dock.style.right = (window.innerWidth - edge + 18) + "px";
         dock.style.width = "";
       } else {
-        dock.style.width = "";
-        dock.style.right = "";
+        dock.style.top = "";
+        dock.style.bottom = "";
         dock.style.left = "";
-        dock.style.top = ((header ? header.getBoundingClientRect().height : 96) + 10) + "px";
+        dock.style.right = "";
+        dock.style.width = "";
+        var current = dock.querySelector('button[aria-pressed="true"]');
+        if (current) {
+          var place = current.offsetLeft - (dock.clientWidth - current.offsetWidth) / 2;
+          dock.scrollLeft = Math.max(0, place);
+        }
       }
     }
     function visibility() {
@@ -270,7 +281,8 @@
       var head = header ? header.getBoundingClientRect().height : 0;
       var past = mast.getBoundingClientRect().bottom < head + 4;
       var box = lower.getBoundingClientRect();
-      var lowerOn = box.top < window.innerHeight - 12 && box.bottom > head + 8;
+      var cover = dock.classList.contains("is-top") ? dock.offsetHeight : 0;
+      var lowerOn = box.top < window.innerHeight - cover - 12 && box.bottom > head + 8;
       var on = past && !lowerOn;
       dock.classList.toggle("is-on", on);
       dock.setAttribute("aria-hidden", on ? "false" : "true");
