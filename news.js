@@ -213,7 +213,7 @@
       section.hidden = !any;
       if (any) shown += 1;
     });
-    if (reader) reader.hidden = source === "weekly" || source === "feed" || source === "note" || source === "look" || source === "nyle" || source === "better";
+    if (reader) reader.hidden = source === "weekly" || source === "feed" || source === "note" || source === "look" || source === "nyle" || source === "better" || source === "spotlight";
     if (empty) empty.hidden = shown > 0;
   }
 
@@ -1261,7 +1261,7 @@
   }
 
   function mountPicks() {
-    ["note", "weekly", "better", "look", "nyle", "feed", "journal"].forEach(function (id) {
+    ["note", "spotlight", "weekly", "better", "look", "nyle", "feed", "journal"].forEach(function (id) {
       mountItemPick(document.getElementById(id));
     });
   }
@@ -1305,6 +1305,7 @@
   var authorCards = document.querySelector("#weekly .author-cards");
   if (authorCards) markLinks(authorCards);
   prepareWeekly();
+  refreshLatest("spotlight");
   refreshLatest("better");
   refreshLatest("look");
   refreshLatest("nyle");
@@ -1319,7 +1320,7 @@
   window.addEventListener("hashchange", revealHash);
 
   var preview = document.createElement("script");
-  preview.src = "news/preview/note.js?v=44";
+  preview.src = "news/preview/note.js?v=45";
   mountDock();
   mountPicks();
   preview.onload = function () {

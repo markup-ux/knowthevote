@@ -12,6 +12,26 @@
 <style>
 .state-fold { margin: 12px 0 0; }
 .state-fold summary { cursor: pointer; width: fit-content; font-size: 18px; }
+.spotlight {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  margin: 4px 0 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+.spotlight img { width: 100%; height: 112px; object-fit: cover; display: block; }
+.spotlight .kicker { margin-bottom: 4px; }
+.spotlight h2 { margin: 0 0 6px; font-size: 26px; }
+.spotlight p { margin: 0; max-width: 62ch; }
+.spotlight .more { margin-top: 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+@media (max-width: 640px) {
+  .spotlight { grid-template-columns: 1fr; }
+  .spotlight img { height: 180px; }
+}
 </style>
 
 <!-- seo -->
@@ -257,6 +277,15 @@
       });
     })();
     </script>
+    <a class="spotlight" href="news.html#n-corn-cobs">
+      <img src="https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/uploads/2015/09/lalita_f.png" alt="">
+      <div>
+        <p class="kicker">Spotlight</p>
+        <h2>Corn cobs, used to clean water.</h2>
+        <p>The Better India reports that Lalita Prasida Sripada Srisai, then 13, used dried waste corn cobs to take contaminants out of wastewater.</p>
+        <p class="more">In Spotlight</p>
+      </div>
+    </a>
     <section class="life" aria-labelledby="life-heading">
       <h2 id="life-heading">National averages</h2>
       <div class="life-grid">

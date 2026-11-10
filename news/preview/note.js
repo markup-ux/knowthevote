@@ -436,8 +436,8 @@
     '</article>',
     '</div>'
   ].join("");
-  var weekly = document.getElementById("weekly");
-  if (weekly) weekly.parentNode.insertBefore(section, weekly);
+  var anchor = document.getElementById("spotlight") || document.getElementById("weekly");
+  if (anchor) anchor.parentNode.insertBefore(section, anchor);
   else reader.parentNode.insertBefore(section, reader);
   section.querySelectorAll(".rest").forEach(function (rest) {
     var summary = rest.querySelector("summary");

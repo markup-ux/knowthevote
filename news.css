@@ -136,6 +136,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   background: currentColor;
 }
 .mast .beat[data-desk="note"] { --beat: var(--see-brown); }
+.mast .beat[data-desk="spotlight"] { --beat: var(--see-brown); }
 .mast .beat[data-desk="journal"] { --beat: var(--see-blue); }
 .mast .beat[data-desk="weekly"] { --beat: var(--see-green); }
 .mast .beat[data-desk="feed"] { --beat: var(--see-pink); }
@@ -306,6 +307,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 }
 .pub-dock button[data-source="all"] { --pip: var(--c-red); }
 .pub-dock button[data-source="note"] { --pip: var(--c-brown); }
+.pub-dock button[data-source="spotlight"] { --pip: var(--c-brown); }
 .pub-dock button[data-source="journal"] { --pip: var(--c-blue); }
 .pub-dock button[data-source="weekly"] { --pip: var(--c-green); }
 .pub-dock button[data-source="better"] { --pip: var(--c-purple); }
@@ -361,6 +363,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 }
 .sources button[data-source="all"] { --pip: var(--c-red); }
 .sources button[data-source="note"] { --pip: var(--c-brown); }
+.sources button[data-source="spotlight"] { --pip: var(--c-brown); }
 .sources button[data-source="journal"] { --pip: var(--c-blue); }
 .sources button[data-source="weekly"] { --pip: var(--c-green); }
 .sources button[data-source="better"] { --pip: var(--c-purple); }
@@ -406,7 +409,7 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   outline: 2px solid var(--mako);
   outline-offset: 2px;
 }
-#weekly .story > .when .who {
+.story > .when .who {
   display: inline;
   margin: 0;
   padding: 0;
@@ -420,8 +423,8 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
   text-underline-offset: 0.18em;
   vertical-align: baseline;
 }
-#weekly .story > .when .who .face { display: none; }
-#weekly .story > .when .who[aria-expanded="true"] {
+.story > .when .who .face { display: none; }
+.story > .when .who[aria-expanded="true"] {
   background: transparent;
   color: inherit;
   box-shadow: none;
@@ -647,14 +650,17 @@ html.look-display .nr .issue-date { font-family: var(--look-display); }
 .card > .mono {
   display: grid;
   place-items: center;
-  width: 100%;
-  aspect-ratio: 1;
+  align-self: start;
+  width: 112px;
+  height: 112px;
   border-radius: 50%;
   background: var(--desk);
   color: var(--on);
   font-size: 28px;
   font-weight: 700;
 }
+.card[data-color="purple"] > .mono { background: var(--c-purple); color: var(--on-purple); }
+.card[data-color="purple"] > .mono { background: var(--c-purple); color: var(--on-purple); }
 .pieces { display: flex; flex-direction: column; gap: 8px; margin: 0 0 8px; }
 .piece-title { margin: 0; font-weight: 650; }
 .piece { margin: 0; }
@@ -775,6 +781,7 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
 .story .researcher .mono.sigma,
 .researcher[aria-expanded="true"] .mono.sigma { background: #fff; }
 .card.person .open-page.with-mark { text-align: left; }
+#spotlight { --desk: var(--c-brown); }
 #weekly { --desk: var(--c-green); }
 #better { --desk: var(--c-purple); }
 #better h2::before { display: none; }
@@ -1208,6 +1215,7 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
     width: 84px;
     margin: 0 14px 8px 0;
   }
+  .card > .mono { height: 84px; }
   .card.person .portrait,
   .card.person .portrait-letter,
   .card.person > img { width: 64px; height: 64px; }

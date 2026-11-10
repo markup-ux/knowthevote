@@ -9,7 +9,7 @@
 <meta name="description" content="American Scientist, POCIT Weekly, Magnolia Lookbooks, Nyle, and The Edge, Dr. Martha Boeckenfeld's public notes.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="guide.css?v=life30">
-<link rel="stylesheet" href="news.css?v=80">
+<link rel="stylesheet" href="news.css?v=84">
 <link rel="icon" href="https://leaders.vote/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -199,6 +199,7 @@
 <nav class="pub-dock" aria-label="Other publications" aria-hidden="true">
   <button type="button" data-source="all" aria-pressed="true"><span>All</span></button>
   <button type="button" data-source="note" aria-pressed="false"><span>Publisher</span></button>
+  <button type="button" data-source="spotlight" aria-pressed="false"><span>Spotlight</span></button>
   <button type="button" data-source="weekly" aria-pressed="false"><span>POCIT</span></button>
   <button type="button" data-source="better" aria-pressed="false"><span>Better India</span></button>
   <button type="button" data-source="look" aria-pressed="false"><span>Magnolia</span></button>
@@ -211,6 +212,7 @@
     <p id="lang-note" class="lang-note" hidden>Automatic translation. Printed names stay as printed. A translation can change a sentence, so the English page is the record.</p>
     <div class="sources sources-top" role="group" aria-label="Publication">
       <button type="button" data-source="all" aria-pressed="true">All</button>
+      <button type="button" data-source="spotlight" aria-pressed="false">Spotlight</button>
       <button type="button" data-source="weekly" aria-pressed="false">POCIT Weekly</button>
       <button type="button" data-source="better" aria-pressed="false">The Better India</button>
       <button type="button" data-source="look" aria-pressed="false">Magnolia Lookbooks</button>
@@ -230,6 +232,13 @@
           </div>
           <div class="faces">
             <button type="button" class="who" data-color="brown" aria-expanded="false" aria-controls="card-publisher"><img class="face face-mark" src="news/preview/mark-ryan-wilson.jpg?v=12" alt=""><span class="who-id"><span class="who-name">Mark Ryan Wilson</span><span class="who-role">Publisher</span></span></button>
+          </div>
+        </article>
+        <article class="beat" data-desk="spotlight">
+          <div class="copy">
+            <h2>Spotlight</h2>
+            <p>Stories the publisher is pointing to. The reporting stays with the publication that wrote it.</p>
+            <a class="latest" href="#n-corn-cobs"><img src="https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/uploads/2015/09/lalita_f.png" alt=""><span class="latest-text"><span>Corn cobs, used to clean water.</span><time datetime="2015-09-23">September 23, 2015</time></span></a>
           </div>
         </article>
         <article class="beat" data-desk="weekly">
@@ -366,6 +375,15 @@
             <p class="src"><a href="https://thebetterindia.com/about/" target="_blank" rel="noopener noreferrer">About The Better India</a> <a href="https://thebetterindia.com/" target="_blank" rel="noopener noreferrer">thebetterindia.com</a></p>
           </div>
         </article>
+        <article class="card" id="card-tanaya" data-color="purple" hidden>
+          <p class="mono" aria-hidden="true">T</p>
+          <div>
+            <p class="card-name">Tanaya Singh</p>
+            <p class="when">Writer, The Better India</p>
+            <p>She wrote this piece for The Better India in 2015. She later served as its chief editor for English, through May 2025. Before that, she was executive editor at Youth Ki Awaaz.</p>
+            <p class="src"><a href="https://thebetterindia.com/author/tanayasingh" target="_blank" rel="noopener noreferrer" data-kind="pieces">Her pieces</a> <a href="https://www.linkedin.com/in/tanayasingh" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+          </div>
+        </article>
         <article class="card" id="card-kanessa" data-color="orange" hidden>
           <img src="https://us-ms.gr-cdn.com/getresponse-Islfs/photos/284e1041-bb7a-4ae2-924e-34d23ddddc03.png" alt="">
           <div>
@@ -380,6 +398,7 @@
     </div>
     <div class="sources" role="group" aria-label="Publication">
       <button type="button" data-source="all" aria-pressed="true">All</button>
+      <button type="button" data-source="spotlight" aria-pressed="false">Spotlight</button>
       <button type="button" data-source="weekly" aria-pressed="false">POCIT Weekly</button>
       <button type="button" data-source="better" aria-pressed="false">The Better India</button>
       <button type="button" data-source="look" aria-pressed="false">Magnolia Lookbooks</button>
@@ -388,6 +407,21 @@
       <button type="button" data-source="journal" aria-pressed="false">American Scientist</button>
     </div>
     <p id="news-empty" hidden>Nothing in this publication.</p>
+
+    <section class="desk" id="spotlight">
+      <h2>Spotlight.</h2>
+      <p class="deck">Stories the publisher is pointing to. The reporting stays with the publication that wrote it.</p>
+      <div class="desk-list">
+        <article class="story" data-source="spotlight" data-color="purple" id="n-corn-cobs">
+          <p class="tag">The Better India</p>
+          <figure class="shot"><img src="https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/uploads/2015/09/lalita_f.png" alt=""></figure>
+          <h3>Corn cobs, used to clean water.</h3>
+          <p class="when"><time datetime="2015-09-23">September 23, 2015</time> · <button type="button" class="who" data-color="purple" aria-expanded="false" aria-controls="card-tanaya" aria-label="Tanaya Singh, contact">Tanaya Singh</button></p>
+          <p>The Better India reports that Lalita Prasida Sripada Srisai, then 13 and in Class 9 at Delhi Public School in Damanjodi, Koraput, Odisha, used dried waste corn cobs to take contaminants out of wastewater. The layers were long pieces, small pieces, powdered cobs, charcoal made from the cobs, and fine sand. The piece quotes the Google Science Fair account: that stack separated more than 70–80% of contaminants, including suspended particles. She won the Community Impact Award at the 2015 fair, in the 13–15 age group, and $10,000.</p>
+          <p class="src"><a href="https://www.thebetterindia.com/34688/lalita-from-odisha-wins-at-google-science-fair/" target="_blank" rel="noopener noreferrer">Read the piece</a></p>
+        </article>
+      </div>
+    </section>
 
     <section class="desk" id="weekly">
       <h2>POCIT Weekly.</h2>
@@ -2712,7 +2746,7 @@
 })();
 </script>
 <script src="news/researchers.js?v=6" defer></script>
-<script src="news.js?v=97" defer></script>
+<script src="news.js?v=98" defer></script>
 <script src="lang.js?v=6"></script>
 </body>
 </html>
