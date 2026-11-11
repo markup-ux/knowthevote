@@ -3082,6 +3082,20 @@
     restoreLiveSlips();
     fillStates();
     var votes = sortedVotes();
+    window.addEventListener("hashchange", function () {
+      var next = location.hash.replace(/^#/, "");
+      if (!data || !next) return;
+      if (next.indexOf("executive-") === 0) {
+        showExecutive(next.slice("executive-".length), true);
+        return;
+      }
+      if (next.indexOf("president-") === 0) {
+        showPresident(next.slice("president-".length), true);
+        return;
+      }
+      if (data.votes.some(function (vote) { return vote.id === next; })) choose(next, true);
+      else if ((data.senateVotes || []).some(function (vote) { return vote.id === next; })) chooseSenate(next, true);
+    });
     var hash = location.hash.replace(/^#/, "");
     selected = votes.some(function (vote) { return vote.id === hash; }) ? hash : (votes[0] ? votes[0].id : "");
     selectedSenate = data.senateVotes.some(function (vote) { return vote.id === hash; }) ? hash : (data.senateVotes[0] ? data.senateVotes[0].id : "");

@@ -421,7 +421,11 @@
       if (page) return;
     });
     list.addEventListener("mousedown", function (event) {
+      var link = event.target.closest && event.target.closest("a");
+      if (!link) return;
       event.preventDefault();
+      var href = link.getAttribute("href");
+      if (href) location.href = href;
     });
   }
 
