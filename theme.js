@@ -402,10 +402,10 @@
   var style = document.createElement("style");
   style.textContent = [
     "header .lang { display: flex; align-items: center; gap: 8px; }",
-    "header .now { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0; color: var(--bar-ink, #f4f7fb); font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }",
+    "header .now { display: flex; align-items: center; flex: 1 1 auto; flex-wrap: wrap; min-width: 0; gap: 6px; margin: 0; color: var(--bar-ink, #f4f7fb); font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }",
     ":root { --clock-face: #f4f0e6; --clock-rim: #bf0a30; --clock-mark: #1c1915; --clock-hour: #0a3161; --clock-minute: #c4922a; --clock-pin: #1e4d7b; }",
     ".clock { width: 1.45em; height: 1.45em; display: inline-block; vertical-align: -0.28em; margin-right: 0.4em; flex: none; }",
-    "header .now .clock { width: 22px; height: 22px; margin: 0; }",
+    "header .now .clock { width: 18px; height: 18px; margin: 0; }",
     ".clock-rim { fill: var(--clock-rim); } .clock-face { fill: var(--clock-face); }",
     ".clock-marks { fill: none; stroke: var(--clock-mark); stroke-width: 1.35; stroke-linecap: round; }",
     ".clock-hour { fill: none; stroke: var(--clock-hour); stroke-width: 2.2; stroke-linecap: round; }",
