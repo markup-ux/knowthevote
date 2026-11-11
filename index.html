@@ -32,6 +32,17 @@
   .spotlight { grid-template-columns: 1fr; }
   .spotlight img { height: 180px; }
 }
+.birthdays { margin: 4px 0 22px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.birthdays h2 { margin: 0 0 6px; font-size: 22px; }
+.birthdays .deck { margin-top: 0; }
+.birthday-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.birthday-list a { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 10px; align-items: center; color: inherit; text-decoration: none; }
+.birthday-list img { width: 72px; height: 90px; object-fit: cover; object-position: center top; display: block; }
+.birthday-list strong { display: block; font-size: 18px; }
+.birthday-list .birthday-line { display: block; margin-top: 2px; }
+@media (max-width: 800px) {
+  .birthday-list { grid-template-columns: 1fr; }
+}
 </style>
 
 <!-- seo -->
@@ -277,6 +288,36 @@
       });
     })();
     </script>
+    <section class="birthdays" id="birthdays" aria-labelledby="birthdays-heading">
+      <h2 id="birthdays-heading">Born on this day</h2>
+      <p class="deck">Three members of the House were born on November 11. The date is the one in the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators file</a>.</p>
+      <ul class="birthday-list">
+        <li><a href="ok.html#district-5-stephanie-bice">
+          <img src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OK_H05_R_S_BICE.png" alt="">
+          <span>
+            <strong class="notranslate" translate="no">Stephanie Bice</strong>
+            <span class="birthday-line">Republican · Oklahoma · House district 5</span>
+            <span class="birthday-line">Turns <span data-born="1973">53</span>.</span>
+          </span>
+        </a></li>
+        <li><a href="tx.html#district-15-monica-de-la-cruz">
+          <img src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H15_R_M_DELACRUZ.png" alt="">
+          <span>
+            <strong class="notranslate" translate="no">Monica De La Cruz</strong>
+            <span class="birthday-line">Republican · Texas · House district 15</span>
+            <span class="birthday-line">Turns <span data-born="1974">52</span>.</span>
+          </span>
+        </a></li>
+        <li><a href="ny.html#district-11-nicole-malliotakis">
+          <img src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H11_R_N_MALLIOTAKIS.png" alt="">
+          <span>
+            <strong class="notranslate" translate="no">Nicole Malliotakis</strong>
+            <span class="birthday-line">Republican · New York · House district 11</span>
+            <span class="birthday-line">Turns <span data-born="1980">46</span>.</span>
+          </span>
+        </a></li>
+      </ul>
+    </section>
     <a class="spotlight" href="news/corn-cobs/">
       <img src="https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/uploads/2015/09/lalita_f.png" alt="">
       <div>
@@ -286,6 +327,26 @@
         <p class="more">In Spotlight</p>
       </div>
     </a>
+    <script>
+    (function () {
+      var birthdays = document.getElementById("birthdays");
+      if (!birthdays) return;
+      function showBirthdays() {
+        var now = new Date();
+        var onThisDay = now.getMonth() === 10 && now.getDate() === 11;
+        birthdays.hidden = !onThisDay;
+        if (!onThisDay) return;
+        birthdays.querySelectorAll("[data-born]").forEach(function (node) {
+          var year = parseInt(node.getAttribute("data-born"), 10);
+          if (year) node.textContent = String(now.getFullYear() - year);
+        });
+      }
+      showBirthdays();
+      document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "visible") showBirthdays();
+      });
+    })();
+    </script>
     <section class="life" aria-labelledby="life-heading">
       <h2 id="life-heading">National averages</h2>
       <div class="life-grid">
