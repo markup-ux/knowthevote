@@ -47,6 +47,8 @@
   var pinned = "";
   var pinnedAt = "";
   var presidents = [];
+  var executive = [];
+  var openExecutive = "";
   var openPresident = "";
   var party = "all";
   var stateCode = "all";
@@ -814,6 +816,7 @@
     });
     data.members.forEach(function (member) { add(memberBlob(member)); });
     presidents.forEach(function (person) { add(presidentBlob(person)); });
+    executive.forEach(function (person) { add(executiveBlob(person)); });
     (data.floor && data.floor.items || []).forEach(function (item) {
       add(item.title);
       add(item.legis);
@@ -1439,7 +1442,9 @@
     var peopleShown = people.slice(0, searchPeopleLimit);
     var slipRows = slips.filter(slipPasses);
     var presidentHits = matchedPresidents();
+    var executiveHits = matchedExecutive();
     if (presidentHits.length) count += " " + presidentHits.length + (presidentHits.length === 1 ? " president." : " presidents.");
+    if (executiveHits.length) count += " " + executiveHits.length + (executiveHits.length === 1 ? " executive officer." : " executive officers.");
     if (people.length) count += " " + people.length + (people.length === 1 ? " member." : " members.");
     if (intros.length) count += " " + intros.length + " introduced.";
     if (slipRows.length) count += " " + slipRows.length + (slipRows.length === 1 ? " blue slip." : " blue slips.");
@@ -1448,6 +1453,9 @@
     countEl.textContent = count;
     presidentHits.forEach(function (person) {
       list.appendChild(presidentEntry(person));
+    });
+    executiveHits.forEach(function (person) {
+      list.appendChild(executiveEntry(person));
     });
     peopleShown.forEach(function (member) {
       var row = el("button", "person-row " + partyClass(member[2]) + (member[0] === searchPerson ? " is-on" : ""));
@@ -1506,7 +1514,7 @@
       if (item.status) row.appendChild(el("p", "", item.status));
       list.appendChild(row);
     });
-    if (!votes.length && !pending.length && !senateVotes.length && !intros.length && !floorItems.length && !people.length && !slipRows.length) {
+    if (!votes.length && !pending.length && !senateVotes.length && !intros.length && !floorItems.length && !people.length && !slipRows.length && !presidentHits.length && !executiveHits.length) {
       var miss = "Nothing on this page matches this search.";
       countEl.textContent = spellNote ? spellNote + " " + miss : miss;
       list.appendChild(el("p", "note", miss));
@@ -2063,6 +2071,65 @@
     people.forEach(function (person) {
       list.appendChild(presidentEntry(person));
     });
+  }
+
+  function executiveBlob(person) {
+    return [person.name, person.partyName || partyWord(person.party), person.role || "", person.current ? "in office white house" : "", person.line || ""].join(" ");
+  }
+
+  function matchedExecutive() {
+    var q = interpretedQuery();
+    return executive.filter(function (person) {
+      if (!passesParty([null, null, person.party])) return false;
+      if (!q) return true;
+      return textMatches(executiveBlob(person), q);
+    });
+  }
+
+  function executiveEntry(person) {
+    var open = person.id === openExecutive;
+    var row = el("button", "person-row " + partyClass(person.party) + (open ? " is-on" : ""));
+    row.type = "button";
+    row.setAttribute("data-executive", person.id);
+    row.setAttribute("aria-expanded", open ? "true" : "false");
+    row.appendChild(presidentFace(person, false));
+    var copy = el("div", "");
+    copy.appendChild(el("strong", partyClass(person.party), person.name));
+    var meta = [person.partyName || partyWord(person.party), person.role || "Executive"];
+    if (person.current) meta.push("In office");
+    copy.appendChild(el("p", "person-meta", meta.join(" · ")));
+    row.appendChild(copy);
+    var shell = el("div", "person-drop " + partyClass(person.party) + (open ? " is-on" : ""));
+    if (open) shell.setAttribute("data-executive-card", person.id);
+    shell.appendChild(row);
+    if (open) shell.appendChild(presidentMore(person));
+    return shell;
+  }
+
+  function renderExecutive() {
+    var list = document.getElementById("executive-list");
+    if (!list) return;
+    list.innerHTML = "";
+    var people = matchedExecutive();
+    if (!people.length) {
+      list.appendChild(el("p", "note", executive.length ? "No one in the executive file matches this search." : "The executive file did not load."));
+      return;
+    }
+    people.forEach(function (person) {
+      list.appendChild(executiveEntry(person));
+    });
+  }
+
+  function showExecutive(id, scroll) {
+    openExecutive = id || "";
+    if (history.replaceState) history.replaceState(null, "", openExecutive ? "#executive-" + openExecutive : "#executive");
+    keepPlace(function () {
+      renderExecutive();
+      if (document.getElementById("search-results") && !document.getElementById("search-results").hidden) renderSearchPanel();
+    });
+    if (!scroll || !openExecutive) return;
+    var card = document.querySelector("[data-executive-card='" + openExecutive + "']");
+    if (card) showPersonCard(card);
   }
 
   function senatorMore(member) {
@@ -2733,6 +2800,7 @@
     renderSenateDetail();
     renderSlips();
     renderPresidents();
+    renderExecutive();
     renderSenators();
     loadMap();
   }
@@ -2749,6 +2817,7 @@
     renderSenateDetail();
     renderSlips();
     renderPresidents();
+    renderExecutive();
     renderSenators();
   }
 
@@ -2990,6 +3059,13 @@
 
   function boot(payload) {
     data = payload;
+    var params = new URLSearchParams(location.search);
+    var query = (params.get("q") || "").trim();
+    if (query) {
+      appliedQuery = query.toLowerCase();
+      var box = document.getElementById("congress-q");
+      if (box) box.value = query;
+    }
     data.senateVotes = (payload.senate && payload.senate.votes) || [];
     var seenMember = {};
     data.members.forEach(function (member) { seenMember[member[0]] = true; });
@@ -3012,11 +3088,15 @@
     if (hash.indexOf("i-") === 0 && introduced[hash.slice(2)]) selectedIntro = hash.slice(2);
     if (hash.indexOf("slip-") === 0 && slips.some(function (item) { return item.id === hash.slice(5); })) selectedSlip = hash.slice(5);
     if (hash.indexOf("p-") === 0 && memberById(hash.slice(2))) searchPerson = hash.slice(2);
+    if (hash.indexOf("executive-") === 0) openExecutive = hash.slice("executive-".length);
     var hashedPresident = presidentByHash(hash);
     if (hashedPresident) openPresident = hashedPresident.id;
     renderStatus("");
     render();
-    if (openPresident) {
+    if (openExecutive) {
+      var executiveCard = document.querySelector("[data-executive-card='" + openExecutive + "']");
+      if (executiveCard) showPersonCard(executiveCard);
+    } else if (openPresident) {
       var presidentCardNode = document.querySelector("[data-president-card='" + openPresident + "']");
       if (presidentCardNode) showPersonCard(presidentCardNode);
     } else if (searchPerson) {
@@ -3125,6 +3205,12 @@
         showPresident(openPresident === picked ? "" : picked, false);
         return;
       }
+      var officer = event.target.closest("button[data-executive]");
+      if (officer) {
+        var officerId = officer.getAttribute("data-executive");
+        showExecutive(openExecutive === officerId ? "" : officerId, false);
+        return;
+      }
       var person = event.target.closest("button[data-person]");
       if (person) {
         var found = person.getAttribute("data-person");
@@ -3185,6 +3271,13 @@
       if (!button) return;
       var id = button.getAttribute("data-president");
       showPresident(openPresident === id ? "" : id, false);
+    });
+    var executiveList = document.getElementById("executive-list");
+    if (executiveList) executiveList.addEventListener("click", function (event) {
+      var button = event.target.closest("button[data-executive]");
+      if (!button) return;
+      var id = button.getAttribute("data-executive");
+      showExecutive(openExecutive === id ? "" : id, false);
     });
     document.getElementById("senate-list").addEventListener("click", function (event) {
       var button = event.target.closest("button[data-vote]");
@@ -3396,7 +3489,15 @@
                 return { people: [] };
               }).then(function (extraPresidents) {
                 presidents = (extraPresidents && extraPresidents.people) || [];
-                return ready;
+                return fetch(published("congress/executive.json?v=1")).then(function (response) {
+                  if (!response.ok) return { people: [] };
+                  return response.json();
+                }).catch(function () {
+                  return { people: [] };
+                }).then(function (extraExecutive) {
+                  executive = (extraExecutive && extraExecutive.people) || [];
+                  return ready;
+                });
               });
             });
           });

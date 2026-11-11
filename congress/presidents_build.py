@@ -8,6 +8,7 @@ domain portrait is saved when Wikimedia Commons has one.
 import json
 import os
 import re
+import sys
 import urllib.parse
 import urllib.request
 from datetime import date, datetime, timezone
@@ -353,6 +354,114 @@ def sync_chat(people):
     print("chat roster", len(roster), flush=True)
 
 
+def roster_name(person):
+    name = person.get("name") or {}
+    official = (name.get("official_full") or "").strip()
+    if official:
+        return official
+    full = " ".join(part for part in (name.get("first"), name.get("middle"), name.get("last"), name.get("suffix")) if part)
+    if full:
+        return full
+    return display_name(person)
+
+
+def roster_party(raw):
+    text = (raw or "").strip()
+    low = text.lower()
+    if low in ("democrat", "democratic"):
+        return "D"
+    if low == "republican":
+        return "R"
+    if low.startswith("independent"):
+        return "I"
+    return "O"
+
+
+def write_executive():
+    """Every person in the congress-legislators executive file, including past terms."""
+    executive = load_executive()
+    photos = {}
+    urls = {}
+    try:
+        saved = json.load(open(OUT, encoding="utf-8"))
+    except (OSError, ValueError):
+        saved = {}
+    for person in saved.get("people") or []:
+        photo = person.get("photo") or ""
+        url = person.get("url") or ""
+        for key in (fold(person.get("name")), person.get("bioguide") or "", person.get("id") or ""):
+            if not key:
+                continue
+            if photo:
+                photos[key] = photo
+            if url:
+                urls[key] = url
+    today = AS_OF.isoformat()
+    rows = []
+    for person in executive:
+        terms = [term for term in (person.get("terms") or []) if term.get("start")]
+        if not terms:
+            continue
+        terms.sort(key=lambda term: term.get("start") or "")
+        name = roster_name(person)
+        ident = person.get("id") or {}
+        bioguide = (ident.get("bioguide") or "").strip()
+        govtrack = ident.get("govtrack")
+        stable = bioguide or ("g" + str(govtrack) if govtrack else fold(name))
+        bits = []
+        current = False
+        current_role = ""
+        for term in terms:
+            office = {"prez": "President", "viceprez": "Vice President"}.get(term.get("type") or "", "Office")
+            start = term.get("start") or ""
+            end = term.get("end") or ""
+            in_office = start <= today and (not end or today <= end)
+            if in_office:
+                current = True
+                current_role = office
+                bits.append("%s, in office since %s" % (office, written(start)))
+            elif end:
+                bits.append("%s, from %s to %s" % (office, written(start), written(end)))
+            else:
+                bits.append("%s, from %s" % (office, written(start)))
+        latest = terms[-1]
+        role = current_role or {"prez": "President", "viceprez": "Vice President"}.get(latest.get("type") or "", "Office")
+        key_name = fold(name)
+        also = fold(display_name(person))
+        party_name = (latest.get("party") or "").strip()
+        rows.append({
+            "id": stable,
+            "bioguide": bioguide,
+            "name": name,
+            "party": roster_party(party_name),
+            "partyName": party_name,
+            "current": current,
+            "role": role,
+            "line": ". ".join(bits) + ("." if bits else ""),
+            "url": urls.get(bioguide) or urls.get(key_name) or urls.get(also) or urls.get(stable) or "",
+            "photo": photos.get(bioguide) or photos.get(key_name) or photos.get(also) or photos.get(stable) or "",
+            "start": latest.get("start") or "",
+        })
+    rows.sort(key=lambda row: row["start"], reverse=True)
+    rows.sort(key=lambda row: not row["current"])
+    for row in rows:
+        row.pop("start", None)
+    payload = {
+        "updated": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+        "asOf": AS_OF.isoformat(),
+        "source": EXECUTIVE_URLS[0],
+        "people": rows,
+    }
+    dest = os.path.join(ROOT, "congress", "executive.json")
+    with open(dest, "w", encoding="utf-8", newline="\n") as handle:
+        json.dump(payload, handle, ensure_ascii=False, indent=2)
+        handle.write("\n")
+    print("executive", len(rows), "current", sum(1 for row in rows if row["current"]), flush=True)
+    for row in rows:
+        if row["current"]:
+            print(row["name"], row["role"], row["line"], flush=True)
+
+
 def main():
     people = living_presidents()
     payload = {
@@ -374,4 +483,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if "--executive" in sys.argv:
+        write_executive()
+    else:
+        main()
+        write_executive()

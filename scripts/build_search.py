@@ -119,7 +119,11 @@ class Index:
         if page == "chat.html" and re.fullmatch(r"c[0-9a-f]+", anchor):
             return True
         # A president hash opens that person's contact card after the page loads.
-        if page == "house.html" and re.fullmatch(r"president-[A-Za-z0-9]+", anchor):
+        if page == "house.html" and (
+            re.fullmatch(r"president-[A-Za-z0-9]+", anchor)
+            or re.fullmatch(r"executive-[A-Za-z0-9]+", anchor)
+            or re.fullmatch(r"h-\d{4}-\d+", anchor)
+        ):
             return True
         if page == "census.html" and (
             re.fullmatch(r"[A-Z]{2}(?:\.\d+)?", anchor)
@@ -589,6 +593,57 @@ def chat_since(value):
     return isinstance(value, str) and len(value) >= 10 and value[:10] >= "2026-11-03"
 
 
+def add_executive(index):
+    path = os.path.join(ROOT, "congress", "executive.json")
+    if not os.path.isfile(path):
+        return
+    payload = load_json(path)
+    for person in payload.get("people") or []:
+        name = person.get("name") or ""
+        line = person.get("line") or ""
+        role = person.get("role") or "Executive"
+        photo = person.get("photo") or (name[:1] or "?")
+        ident = person.get("id") or ""
+        href = "house.html#executive-" + ident if ident else "house.html#executive"
+        detail = role + " · The House"
+        if person.get("current"):
+            detail = role + " · In office · The House"
+        index.add(name, detail, href, 1, line, photo)
+
+
+def add_house_votes(index):
+    path = os.path.join(ROOT, "congress", "votes.json")
+    if not os.path.isfile(path):
+        return
+    months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December",
+    ]
+    payload = load_json(path)
+    for vote in payload.get("votes") or []:
+        ident = vote.get("id") or ""
+        if not ident:
+            continue
+        question = clean(vote.get("question") or "")
+        desc = clean(vote.get("desc") or "")
+        legis = clean(vote.get("legis") or "")
+        name = desc or question or legis or ("Roll call %s" % vote.get("n"))
+        if len(name) > 180:
+            name = name[:177].rstrip() + "..."
+        when = vote.get("date") or ""
+        match = re.match(r"(\d{4})-(\d{2})-(\d{2})", when)
+        if match:
+            when = "%s %d, %s" % (months[int(match.group(2)) - 1], int(match.group(3)), match.group(1))
+        detail = " · ".join(part for part in (
+            "The House",
+            "Roll call %s" % vote.get("n") if vote.get("n") else "",
+            when,
+            vote.get("result") or "",
+        ) if part)
+        extra = clean(" ".join(part for part in (question, desc, legis, vote.get("result") or "") if part))
+        index.add(name, detail, "house.html#" + ident, 2, extra)
+
+
 def add_presidents(index):
     path = os.path.join(ROOT, "congress", "presidents.json")
     if not os.path.isfile(path):
@@ -747,6 +802,8 @@ def main():
     add_water_text(index)
     add_health_text(index)
     add_presidents(index)
+    add_executive(index)
+    add_house_votes(index)
     add_chat(index)
     add_news(index)
     index.rows.sort(key=lambda row: (row[3], row[0].lower(), row[2]))

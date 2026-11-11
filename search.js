@@ -12,8 +12,10 @@
   style.id = "site-search-style";
   style.textContent = [
     ".bar-top { flex-wrap: wrap; }",
-    ".site-search { position: relative; flex: 1 1 180px; max-width: 340px; min-width: 0; margin: 0 12px; }",
-    ".site-search input { width: 100%; font: inherit; font-size: 15px; color: var(--bar-ink); background: transparent; border: 1px solid var(--bar-ink); padding: 6px 10px; }",
+    ".site-search { position: relative; display: flex; flex-wrap: wrap; align-items: stretch; gap: 6px; flex: 1 1 220px; max-width: 460px; min-width: 0; margin: 0 12px; }",
+    ".site-search select, .site-search input { font: inherit; font-size: 15px; color: var(--bar-ink); background: transparent; border: 1px solid var(--bar-ink); padding: 6px 10px; }",
+    ".site-search select { flex: none; }",
+    ".site-search input { flex: 1 1 140px; width: auto; min-width: 0; }",
     ".site-search input::placeholder { color: var(--bar-ink); opacity: 0.75; }",
     ".site-search input:focus-visible { outline: 2px solid var(--bar-line); outline-offset: 2px; }",
     ".site-search-list { position: absolute; z-index: 5; left: 0; right: 0; top: calc(100% + 8px); margin: 0; padding: 0; list-style: none; background: var(--paper); color: var(--ink); border: 1px solid var(--ink); max-height: min(360px, 60vh); overflow: auto; }",
@@ -41,6 +43,12 @@
   form.setAttribute("role", "search");
   form.action = base + "search.html";
   form.method = "get";
+  var scope = document.createElement("select");
+  scope.id = "site-scope";
+  scope.name = "scope";
+  scope.setAttribute("aria-label", "Where to search");
+  scope.appendChild(new Option("All", "all"));
+  scope.appendChild(new Option("The House", "house"));
   var label = document.createElement("label");
   label.className = "visually-hidden";
   label.htmlFor = "site-q";
@@ -65,6 +73,7 @@
   list.setAttribute("role", "listbox");
   list.hidden = true;
   form.appendChild(label);
+  form.appendChild(scope);
   form.appendChild(input);
   form.appendChild(list);
   if (bar) {
@@ -211,9 +220,15 @@
     };
   }
 
+  function inScope(item) {
+    if (!scope || scope.value !== "house") return true;
+    return String(item[2] || "").indexOf("house.html") === 0;
+  }
+
   function search(query) {
     var hits = [];
     (items || []).forEach(function (item) {
+      if (!inScope(item)) return;
       var hit = scoreItem(item, query);
       if (hit) hits.push(hit);
     });
@@ -339,7 +354,7 @@
 
   function load() {
     if (pending) return pending;
-    pending = fetch(base + "search.json?v=11")
+    pending = fetch(base + "search.json?v=12")
       .then(function (response) {
         if (!response.ok) throw new Error("search");
         return response.json();
@@ -374,6 +389,9 @@
 
   if (input) {
     input.addEventListener("input", onType);
+    scope.addEventListener("change", function () {
+      if (input.value) onType({ target: input });
+    });
     input.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
         closeList();
@@ -394,7 +412,12 @@
         location.href = options[active].href;
       }
     });
-    form.addEventListener("submit", function () {
+    form.addEventListener("submit", function (event) {
+      if (scope && scope.value === "house") {
+        event.preventDefault();
+        location.href = base + "house.html?q=" + encodeURIComponent(input.value.trim());
+        return;
+      }
       if (page) return;
     });
     list.addEventListener("mousedown", function (event) {
@@ -426,6 +449,7 @@
   });
 
   var params = new URLSearchParams(location.search);
+  if (params.get("scope") === "house") scope.value = "house";
   var initial = params.get("q") || "";
   if (initial && input) input.value = initial;
   if (initial && pageInput) pageInput.value = initial;
