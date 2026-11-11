@@ -354,7 +354,7 @@
 
   function load() {
     if (pending) return pending;
-    pending = fetch(base + "search.json?v=12")
+    pending = fetch(base + "search.json?v=13")
       .then(function (response) {
         if (!response.ok) throw new Error("search");
         return response.json();
@@ -422,10 +422,19 @@
     });
     list.addEventListener("mousedown", function (event) {
       var link = event.target.closest && event.target.closest("a");
-      if (!link) return;
+      if (!link || !link.href) return;
       event.preventDefault();
-      var href = link.getAttribute("href");
-      if (href) location.href = href;
+      var url = new URL(link.href, location.href);
+      var same = url.pathname === location.pathname;
+      if (same && url.hash) {
+        if (location.hash !== url.hash) location.hash = url.hash;
+        var notice = null;
+        try { notice = new HashChangeEvent("hashchange"); }
+        catch (error) { notice = new Event("hashchange"); }
+        window.dispatchEvent(notice);
+        return;
+      }
+      location.href = link.href;
     });
   }
 

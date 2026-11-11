@@ -377,9 +377,49 @@ def roster_party(raw):
     return "O"
 
 
+def legislator_contacts():
+    """Last House or Senate office on file, current members first."""
+    found = {}
+    today = AS_OF.isoformat()
+    urls = [
+        "https://unitedstates.github.io/congress-legislators/legislators-current.json",
+        "https://unitedstates.github.io/congress-legislators/legislators-historical.json",
+    ]
+    for url in urls:
+        try:
+            people = json.loads(fetch(url))
+        except Exception as exc:
+            print("legislators", url, type(exc).__name__, flush=True)
+            continue
+        for person in people:
+            bioguide = ((person.get("id") or {}).get("bioguide") or "").strip()
+            if not bioguide or bioguide in found:
+                continue
+            terms = [
+                term for term in (person.get("terms") or [])
+                if term.get("type") in ("sen", "rep") and term.get("start")
+            ]
+            if not terms:
+                continue
+            terms.sort(key=lambda term: term.get("start") or "")
+            term = terms[-1]
+            end = term.get("end") or ""
+            found[bioguide] = {
+                "phone": (term.get("phone") or "").strip(),
+                "office": (term.get("office") or term.get("address") or "").strip(),
+                "url": (term.get("url") or "").strip(),
+                "contact": (term.get("contact_form") or "").strip(),
+                "end": end if end and end < today else "",
+                "chamber": "Senate" if term.get("type") == "sen" else "House",
+            }
+        print("legislators", url, len(found), flush=True)
+    return found
+
+
 def write_executive():
     """Every person in the congress-legislators executive file, including past terms."""
     executive = load_executive()
+    contacts = legislator_contacts()
     photos = {}
     urls = {}
     try:
@@ -429,6 +469,13 @@ def write_executive():
         key_name = fold(name)
         also = fold(display_name(person))
         party_name = (latest.get("party") or "").strip()
+        contact = contacts.get(bioguide) or {}
+        photo = photos.get(bioguide) or photos.get(key_name) or photos.get(also) or photos.get(stable) or ""
+        if not photo and bioguide:
+            photo = "https://unitedstates.github.io/images/congress/225x275/" + bioguide + ".jpg"
+        note = ""
+        if contact.get("end") and any(contact.get(field) for field in ("phone", "office", "url", "contact")):
+            note = "%s office on file through %s." % (contact["chamber"], written(contact["end"]))
         rows.append({
             "id": stable,
             "bioguide": bioguide,
@@ -438,8 +485,12 @@ def write_executive():
             "current": current,
             "role": role,
             "line": ". ".join(bits) + ("." if bits else ""),
-            "url": urls.get(bioguide) or urls.get(key_name) or urls.get(also) or urls.get(stable) or "",
-            "photo": photos.get(bioguide) or photos.get(key_name) or photos.get(also) or photos.get(stable) or "",
+            "url": urls.get(bioguide) or urls.get(key_name) or urls.get(also) or urls.get(stable) or contact.get("url") or "",
+            "phone": contact.get("phone") or "",
+            "office": contact.get("office") or "",
+            "contact": contact.get("contact") or "",
+            "contactNote": note,
+            "photo": photo,
             "start": latest.get("start") or "",
         })
     rows.sort(key=lambda row: row["start"], reverse=True)

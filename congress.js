@@ -1952,6 +1952,7 @@
   function matchedPresidents() {
     var q = interpretedQuery();
     return presidents.filter(function (person) {
+      if (person.id === openPresident) return true;
       if (!passesParty([null, null, person.party])) return false;
       if (!q) return true;
       return textMatches(presidentBlob(person), q);
@@ -2007,9 +2008,10 @@
       if (document.getElementById("search-results") && !document.getElementById("search-results").hidden) renderSearchPanel();
     });
     if (!scroll || !openPresident) return;
-    var card = document.querySelector("#search-list [data-president-card='" + openPresident + "']")
-      || document.querySelector("#president-list [data-president-card='" + openPresident + "']");
-    if (card) showPersonCard(card);
+    requestAnimationFrame(function () {
+      revealPerson(document.querySelector("#search-list [data-president-card='" + openPresident + "']")
+        || document.querySelector("#president-list [data-president-card='" + openPresident + "']"));
+    });
   }
 
   function markLink(href, markName, label, aria) {
@@ -2024,13 +2026,31 @@
   function presidentMore(person) {
     var more = el("div", "person-more");
     if (person.line) more.appendChild(el("p", "card-seat", person.line));
-    if (person.url && person.url.indexOf("https://") === 0) {
-      var sites = el("p", "card-gov");
-      sites.appendChild(markLink(person.url, "gov", host(person.url), "Official website " + host(person.url)));
-      more.appendChild(sites);
-    } else {
-      more.appendChild(el("p", "card-note", "No office website is in the executive file for this name."));
+    if (person.contactNote) more.appendChild(el("p", "card-note", person.contactNote));
+    var added = false;
+    if (person.phone) {
+      var phone = el("p", "card-phone");
+      phone.appendChild(markLink("tel:" + person.phone.replace(/[^\d+]/g, ""), "phone", person.phone, "Phone " + person.phone));
+      more.appendChild(phone);
+      added = true;
     }
+    if (person.office) {
+      var room = el("p", "card-room");
+      if (window.leadersMark) room.appendChild(leadersMark("office", person.office));
+      room.appendChild(el("span", "", person.office));
+      more.appendChild(room);
+      added = true;
+    }
+    var site = person.url && (person.url.indexOf("https://") === 0 || person.url.indexOf("http://") === 0);
+    var form = person.contact && (person.contact.indexOf("https://") === 0 || person.contact.indexOf("http://") === 0);
+    if (site || form) {
+      var sites = el("p", "card-gov");
+      if (site) sites.appendChild(markLink(person.url, "gov", host(person.url), "Official website " + host(person.url)));
+      if (form) sites.appendChild(markLink(person.contact, "form", "Contact form", "Contact form"));
+      more.appendChild(sites);
+      added = true;
+    }
+    if (!added) more.appendChild(el("p", "card-note", "No office phone or website is in the executive file for this name."));
     return more;
   }
 
@@ -2080,6 +2100,7 @@
   function matchedExecutive() {
     var q = interpretedQuery();
     return executive.filter(function (person) {
+      if (person.id === openExecutive) return true;
       if (!passesParty([null, null, person.party])) return false;
       if (!q) return true;
       return textMatches(executiveBlob(person), q);
@@ -2128,8 +2149,9 @@
       if (document.getElementById("search-results") && !document.getElementById("search-results").hidden) renderSearchPanel();
     });
     if (!scroll || !openExecutive) return;
-    var card = document.querySelector("[data-executive-card='" + openExecutive + "']");
-    if (card) showPersonCard(card);
+    requestAnimationFrame(function () {
+      revealPerson(document.querySelector("[data-executive-card='" + openExecutive + "']"));
+    });
   }
 
   function senatorMore(member) {
@@ -2318,6 +2340,16 @@
     fn();
     restore();
     requestAnimationFrame(restore);
+  }
+
+  function revealPerson(card) {
+    if (!card) return;
+    var scroller = card.closest(".people-scroll");
+    if (scroller) {
+      var delta = card.getBoundingClientRect().top - scroller.getBoundingClientRect().top;
+      scroller.scrollTop += delta - 8;
+    }
+    showPersonCard(scroller || card);
   }
 
   function showPersonCard(card) {
@@ -3108,11 +3140,9 @@
     renderStatus("");
     render();
     if (openExecutive) {
-      var executiveCard = document.querySelector("[data-executive-card='" + openExecutive + "']");
-      if (executiveCard) showPersonCard(executiveCard);
+      revealPerson(document.querySelector("[data-executive-card='" + openExecutive + "']"));
     } else if (openPresident) {
-      var presidentCardNode = document.querySelector("[data-president-card='" + openPresident + "']");
-      if (presidentCardNode) showPersonCard(presidentCardNode);
+      revealPerson(document.querySelector("[data-president-card='" + openPresident + "']"));
     } else if (searchPerson) {
       var foundPerson = document.getElementById("search-results");
       if (foundPerson) foundPerson.scrollIntoView({ block: "start" });

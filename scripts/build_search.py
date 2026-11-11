@@ -221,7 +221,11 @@ def portrait_src(url):
         and "undefined" not in url
         and "generated_" not in url.lower()
     )
-    if local or nbc:
+    congress = (
+        url.startswith("https://unitedstates.github.io/images/congress/")
+        or url.startswith("https://bioguide.congress.gov/bioguide/photo/")
+    )
+    if local or nbc or congress:
         return url
     if len(url) == 1:
         return url.upper()
