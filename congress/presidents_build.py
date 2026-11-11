@@ -105,8 +105,9 @@ def parse_day(value):
         return None
 
 
-def wikidata():
-    url = "https://query.wikidata.org/sparql?format=json&query=" + urllib.parse.quote(SPARQL)
+def wikidata(office="Q11696"):
+    query = SPARQL.replace("wd:Q11696", "wd:" + office)
+    url = "https://query.wikidata.org/sparql?format=json&query=" + urllib.parse.quote(query)
     request = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/sparql-results+json"})
     with urllib.request.urlopen(request, timeout=90) as response:
         payload = json.loads(response.read())
@@ -116,7 +117,7 @@ def wikidata():
         qid = person.rsplit("/", 1)[-1]
         if not qid.startswith("Q"):
             continue
-        item = people.setdefault(qid, {"id": qid, "names": set(), "death": None, "image": "", "sites": []})
+        item = people.setdefault(qid, {"id": qid, "names": set(), "death": None, "image": "", "images": [], "sites": []})
         for field in ("personLabel", "alt"):
             label = (row.get(field) or {}).get("value") or ""
             token = fold(label)
@@ -126,6 +127,8 @@ def wikidata():
         if death and (item["death"] is None or death < item["death"]):
             item["death"] = death
         image = (row.get("image") or {}).get("value") or ""
+        if image and image not in item["images"]:
+            item["images"].append(image)
         if image and not item["image"]:
             item["image"] = image
         site = (row.get("site") or {}).get("value") or ""
@@ -143,6 +146,13 @@ def match_person(person, catalog):
     hits = [item for item in catalog.values() if item["names"] & keys]
     if len(hits) == 1:
         return hits[0]
+    ranked = []
+    for item in hits:
+        overlap = keys & item["names"]
+        ranked.append((max((len(token) for token in overlap), default=0), item["id"], item))
+    ranked.sort(key=lambda pair: pair[0], reverse=True)
+    if ranked and (len(ranked) == 1 or ranked[0][0] > ranked[1][0]):
+        return ranked[0][2]
     return None
 
 
@@ -268,6 +278,29 @@ def save_portrait(name, image):
         handle.write(body)
     print("portrait", rel, len(body), flush=True)
     return rel
+
+
+def url_ok(url):
+    request = urllib.request.Request(url, method="HEAD", headers={"User-Agent": UA})
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            return response.status == 200
+    except Exception:
+        return False
+
+
+def directory_portrait(bioguide):
+    """A Congressional directory photo when that file actually has one."""
+    if not bioguide:
+        return ""
+    urls = [
+        "https://unitedstates.github.io/images/congress/225x275/" + bioguide + ".jpg",
+        "https://bioguide.congress.gov/bioguide/photo/" + bioguide[0] + "/" + bioguide + ".jpg",
+    ]
+    for url in urls:
+        if url_ok(url):
+            return url
+    return ""
 
 
 def gov_site(sites):
@@ -420,21 +453,33 @@ def write_executive():
     """Every person in the congress-legislators executive file, including past terms."""
     executive = load_executive()
     contacts = legislator_contacts()
+    catalogs = {}
+
+    def catalog_for(kind):
+        office = "Q11696" if kind == "prez" else "Q11699"
+        if office not in catalogs:
+            catalogs[office] = wikidata(office)
+        return catalogs[office]
     photos = {}
     urls = {}
     try:
         saved = json.load(open(OUT, encoding="utf-8"))
     except (OSError, ValueError):
         saved = {}
-    for person in saved.get("people") or []:
+    previous_rows = list(saved.get("people") or [])
+    try:
+        previous_rows.extend(json.load(open(os.path.join(ROOT, "congress", "executive.json"), encoding="utf-8")).get("people") or [])
+    except (OSError, ValueError):
+        pass
+    for person in previous_rows:
         photo = person.get("photo") or ""
         url = person.get("url") or ""
         for key in (fold(person.get("name")), person.get("bioguide") or "", person.get("id") or ""):
             if not key:
                 continue
-            if photo:
+            if photo and key not in photos:
                 photos[key] = photo
-            if url:
+            if url and key not in urls:
                 urls[key] = url
     today = AS_OF.isoformat()
     rows = []
@@ -471,8 +516,27 @@ def write_executive():
         party_name = (latest.get("party") or "").strip()
         contact = contacts.get(bioguide) or {}
         photo = photos.get(bioguide) or photos.get(key_name) or photos.get(also) or photos.get(stable) or ""
+        if photo.startswith("https://unitedstates.github.io/images/congress/") or photo.startswith("https://bioguide.congress.gov/"):
+            photo = ""
         if not photo and bioguide:
-            photo = "https://unitedstates.github.io/images/congress/225x275/" + bioguide + ".jpg"
+            photo = directory_portrait(bioguide)
+        if not photo:
+            record = None
+            kinds = []
+            for term in terms:
+                kind = term.get("type") or ""
+                if kind in ("prez", "viceprez") and kind not in kinds:
+                    kinds.append(kind)
+            for kind in (["prez"] if "prez" in kinds else []) + (["viceprez"] if "viceprez" in kinds else []):
+                found = match_person(person, catalog_for(kind))
+                if found and found.get("image"):
+                    record = found
+                    break
+            if record:
+                for image in record.get("images") or ([record["image"]] if record.get("image") else []):
+                    photo = save_portrait(name, image)
+                    if photo:
+                        break
         note = ""
         if contact.get("end") and any(contact.get(field) for field in ("phone", "office", "url", "contact")):
             note = "%s office on file through %s." % (contact["chamber"], written(contact["end"]))

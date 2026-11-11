@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T15:53:20+00:00",
+  "updated": "2026-11-11T16:06:43+00:00",
   "asOf": "2026-11-11",
   "source": "https://unitedstates.github.io/congress-legislators/executive.json",
   "people": [
@@ -113,7 +113,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/C000344.jpg"
+      "photo": "photos/presidents/richard-bruce-cheney.jpg"
     },
     {
       "id": "g412375",
@@ -145,7 +145,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/G000321.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/G/G000321.jpg"
     },
     {
       "id": "g412374",
@@ -177,7 +177,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/Q000007.jpg"
+      "photo": "photos/presidents/james-danforth-quayle.jpg"
     },
     {
       "id": "B001166",
@@ -193,7 +193,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/B001166.jpg"
+      "photo": "photos/presidents/george-h-w-bush.jpg"
     },
     {
       "id": "g412372",
@@ -209,7 +209,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": ""
+      "photo": "photos/presidents/ronald-wilson-reagan.jpg"
     },
     {
       "id": "M000851",
@@ -225,7 +225,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/M000851.jpg"
+      "photo": "photos/presidents/walter-frederick-mondale.jpg"
     },
     {
       "id": "g412371",
@@ -241,7 +241,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": ""
+      "photo": "photos/presidents/james-earl-carter.jpg"
     },
     {
       "id": "R000363",
@@ -257,7 +257,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/R000363.jpg"
+      "photo": "photos/presidents/nelson-aldrich-rockefeller.jpg"
     },
     {
       "id": "F000260",
@@ -273,7 +273,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/F000260.jpg"
+      "photo": "photos/presidents/gerald-rudolph-ford-jr.jpg"
     },
     {
       "id": "A000059",
@@ -289,7 +289,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/A000059.jpg"
+      "photo": "photos/presidents/spiro-theodore-agnew.jpg"
     },
     {
       "id": "N000116",
@@ -305,7 +305,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/N000116.jpg"
+      "photo": "photos/presidents/richard-milhous-nixon.jpg"
     },
     {
       "id": "H000953",
@@ -321,7 +321,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/H000953.jpg"
+      "photo": "photos/presidents/hubert-horatio-humphrey-jr.jpg"
     },
     {
       "id": "J000160",
@@ -337,7 +337,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/J000160.jpg"
+      "photo": "photos/presidents/lyndon-baines-johnson.jpg"
     },
     {
       "id": "K000107",
@@ -353,7 +353,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/K000107.jpg"
+      "photo": "photos/presidents/john-fitzgerald-kennedy.jpg"
     },
     {
       "id": "g412366",
@@ -369,7 +369,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": ""
+      "photo": "photos/presidents/dwight-david-eisenhower.jpg"
     },
     {
       "id": "B000145",
@@ -385,7 +385,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/B000145.jpg"
+      "photo": "photos/presidents/alben-william-barkley.jpg"
     },
     {
       "id": "T000387",
@@ -401,7 +401,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/T000387.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/T/T000387.jpg"
     },
     {
       "id": "g412364",
@@ -433,7 +433,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/W000077.jpg"
+      "photo": "photos/presidents/henry-agard-wallace.jpg"
     },
     {
       "id": "G000074",
@@ -449,7 +449,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/G000074.jpg"
+      "photo": "photos/presidents/john-nance-garner.png"
     },
     {
       "id": "C001008",
@@ -465,7 +465,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/C001008.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/C/C001008.jpg"
     },
     {
       "id": "g412363",
@@ -481,7 +481,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": ""
+      "photo": "photos/presidents/herbert-clark-hoover.jpg"
     },
     {
       "id": "D000147",
@@ -497,7 +497,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/D000147.jpg"
+      "photo": "photos/presidents/charles-gates-dawes.jpg"
     },
     {
       "id": "C000738",
@@ -513,7 +513,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/C000738.jpg"
+      "photo": "photos/presidents/calvin-coolidge.jpg"
     },
     {
       "id": "H000192",
@@ -529,7 +529,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/H000192.jpg"
+      "photo": "photos/presidents/warren-gamaliel-harding.jpg"
     },
     {
       "id": "M000164",
@@ -545,7 +545,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/M000164.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/M/M000164.jpg"
     },
     {
       "id": "g412360",
@@ -561,7 +561,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": ""
+      "photo": "photos/presidents/woodrow-wilson.jpg"
     },
     {
       "id": "S000345",
@@ -577,7 +577,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/S000345.jpg"
+      "photo": "photos/presidents/james-schoolcraft-sherman.jpg"
     },
     {
       "id": "g412359",
@@ -593,7 +593,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": ""
+      "photo": "photos/presidents/william-howard-taft.jpg"
     },
     {
       "id": "F000003",
@@ -609,7 +609,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/F000003.jpg"
+      "photo": "photos/presidents/charles-warren-fairbanks.jpg"
     },
     {
       "id": "R000429",
@@ -625,7 +625,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/R000429.jpg"
+      "photo": "photos/presidents/theodore-roosevelt.jpg"
     },
     {
       "id": "M000522",
@@ -641,7 +641,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/M000522.jpg"
+      "photo": "photos/presidents/william-mckinley-jr.jpg"
     },
     {
       "id": "H000660",
@@ -657,7 +657,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/H000660.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/H/H000660.jpg"
     },
     {
       "id": "S000889",
@@ -673,7 +673,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/S000889.jpg"
+      "photo": "photos/presidents/adlai-ewing-stevenson.jpg"
     },
     {
       "id": "g412354",
@@ -689,7 +689,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": ""
+      "photo": "photos/presidents/grover-cleveland.jpg"
     },
     {
       "id": "M001018",
@@ -705,7 +705,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/M001018.jpg"
+      "photo": "photos/presidents/levi-parsons-morton.jpg"
     },
     {
       "id": "H000263",
@@ -721,7 +721,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/H000263.jpg"
+      "photo": "photos/presidents/benjamin-harrison.jpg"
     },
     {
       "id": "H000493",
@@ -737,7 +737,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/H000493.jpg"
+      "photo": "photos/presidents/thomas-andrews-hendricks.jpg"
     },
     {
       "id": "A000303",
@@ -753,7 +753,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/A000303.jpg"
+      "photo": "photos/presidents/chester-alan-arthur.jpg"
     },
     {
       "id": "G000063",
@@ -769,7 +769,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/G000063.jpg"
+      "photo": "photos/presidents/james-a-garfield.jpg"
     },
     {
       "id": "W000341",
@@ -785,7 +785,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/W000341.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/W/W000341.jpg"
     },
     {
       "id": "H000393",
@@ -801,7 +801,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/H000393.jpg"
+      "photo": "photos/presidents/rutherford-birchard-hayes.jpg"
     },
     {
       "id": "W000585",
@@ -817,7 +817,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/W000585.jpg"
+      "photo": "photos/presidents/henry-wilson.jpg"
     },
     {
       "id": "g412350",
@@ -833,7 +833,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": ""
+      "photo": "photos/presidents/ulysses-simpson-grant.jpg"
     },
     {
       "id": "C000626",
@@ -849,7 +849,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/C000626.jpg"
+      "photo": "photos/presidents/schuyler-colfax.jpg"
     },
     {
       "id": "J000116",
@@ -865,7 +865,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/J000116.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/J/J000116.jpg"
     },
     {
       "id": "L000313",
@@ -881,7 +881,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/L000313.jpg"
+      "photo": "photos/presidents/abraham-lincoln.jpg"
     },
     {
       "id": "H000121",
@@ -897,7 +897,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/H000121.jpg"
+      "photo": "photos/presidents/hannibal-hamlin.jpg"
     },
     {
       "id": "B000789",
@@ -913,7 +913,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/B000789.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/B/B000789.jpg"
     },
     {
       "id": "B001005",
@@ -929,7 +929,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/B001005.jpg"
+      "photo": "photos/presidents/james-buchanan.jpg"
     },
     {
       "id": "K000217",
@@ -945,7 +945,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/K000217.jpg"
+      "photo": "photos/presidents/william-rufus-de-vane-king.jpg"
     },
     {
       "id": "P000333",
@@ -961,7 +961,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/P000333.jpg"
+      "photo": "photos/presidents/franklin-pierce.jpg"
     },
     {
       "id": "F000115",
@@ -977,7 +977,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/F000115.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/F/F000115.jpg"
     },
     {
       "id": "g412344",
@@ -993,7 +993,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": ""
+      "photo": "photos/presidents/zachary-taylor.jpg"
     },
     {
       "id": "D000011",
@@ -1009,7 +1009,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/D000011.jpg"
+      "photo": "photos/presidents/george-mifflin-dallas.jpg"
     },
     {
       "id": "P000409",
@@ -1025,7 +1025,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/P000409.jpg"
+      "photo": "photos/presidents/james-knox-polk.jpg"
     },
     {
       "id": "T000450",
@@ -1041,7 +1041,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/T000450.jpg"
+      "photo": "photos/presidents/john-tyler.jpg"
     },
     {
       "id": "H000279",
@@ -1057,7 +1057,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/H000279.jpg"
+      "photo": "photos/presidents/william-henry-harrison.jpg"
     },
     {
       "id": "J000170",
@@ -1073,7 +1073,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/J000170.jpg"
+      "photo": "photos/presidents/richard-mentor-johnson.jpg"
     },
     {
       "id": "V000009",
@@ -1089,7 +1089,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/V000009.jpg"
+      "photo": "photos/presidents/martin-van-buren.jpg"
     },
     {
       "id": "J000005",
@@ -1105,7 +1105,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/J000005.jpg"
+      "photo": "photos/presidents/andrew-jackson.jpg"
     },
     {
       "id": "C000044",
@@ -1121,7 +1121,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/C000044.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/C/C000044.jpg"
     },
     {
       "id": "A000041",
@@ -1137,7 +1137,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/A000041.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/A/A000041.jpg"
     },
     {
       "id": "T000306",
@@ -1153,7 +1153,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/T000306.jpg"
+      "photo": "photos/presidents/daniel-d-tompkins.jpg"
     },
     {
       "id": "M000858",
@@ -1169,7 +1169,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/M000858.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/M/M000858.jpg"
     },
     {
       "id": "G000139",
@@ -1185,7 +1185,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/G000139.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/G/G000139.jpg"
     },
     {
       "id": "M000043",
@@ -1201,7 +1201,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/M000043.jpg"
+      "photo": "photos/presidents/james-madison.jpg"
     },
     {
       "id": "C000527",
@@ -1217,7 +1217,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/C000527.jpg"
+      "photo": "photos/presidents/george-clinton.jpg"
     },
     {
       "id": "J000069",
@@ -1233,7 +1233,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/J000069.jpg"
+      "photo": "https://bioguide.congress.gov/bioguide/photo/J/J000069.jpg"
     },
     {
       "id": "B001133",
@@ -1249,7 +1249,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/B001133.jpg"
+      "photo": "photos/presidents/aaron-burr-jr.jpg"
     },
     {
       "id": "A000039",
@@ -1265,7 +1265,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/A000039.jpg"
+      "photo": "photos/presidents/john-adams.jpg"
     },
     {
       "id": "W000178",
@@ -1281,7 +1281,7 @@
       "office": "",
       "contact": "",
       "contactNote": "",
-      "photo": "https://unitedstates.github.io/images/congress/225x275/W000178.jpg"
+      "photo": "photos/presidents/george-washington.jpg"
     }
   ]
 }
