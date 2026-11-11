@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "posts": [
     {
       "id": "n-better-smart-water-management-buildings-water-saving-earthfokus-startup",
@@ -77,6 +77,94 @@
       "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/06/elrhino-2026-11-06-16-09-36.png",
       "text": "Discover how Assam's Mahesh Bora and his daughter turn elephant and rhino dung into handmade paper, creating rural jobs and reducing reliance on wood pulp.",
       "color": "red"
+    },
+    {
+      "id": "n-better-jaipur-grid-plan-before-google-maps-12789617",
+      "url": "https://thebetterindia.com/culture/jaipur-grid-plan-before-google-maps-12789617",
+      "title": "Why Do Jaipur’s Streets Run in Straight Lines? A King & a Scholar Planned It 300 Years Ago.",
+      "date": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "author": "Avantika Krishna",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/06/1-2026-11-06-17-08-28.png",
+      "text": "Jaipur predates Google Maps by 278 years, yet its nine sectors and right-angled streets still define the walled city. Water shortages and a scholar king drove the plan.",
+      "color": "pink"
+    },
+    {
+      "id": "n-better-pushkar-fair-rajasthan-cultural-events-folk-dance-traditional-games",
+      "url": "https://thebetterindia.com/travel/pushkar-fair-rajasthan-cultural-events-folk-dance-traditional-games-12789682",
+      "title": "Moustache Contests, Decorated Camels & Village Games: What Awaits You at Pushkar Fair 2026.",
+      "date": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "author": "Sriroopa Dutta",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/06/glowg-2026-11-06-17-25-26.png",
+      "text": "Pushkar Fair 2026 runs from 17 to 24 November. Find out which cultural contests, village games and local crafts make this Rajasthan celebration memorable for visitors.",
+      "color": "purple"
+    },
+    {
+      "id": "n-better-ias-officer-ai-maths-learning-353-government-schools-tonk-rajasthan",
+      "url": "https://thebetterindia.com/web-stories/civil-servants/ias-officer-ai-maths-learning-353-government-schools-tonk-rajasthan-12800318",
+      "title": "To Help Rajasthan Students Struggling With Maths, This IAS Officer Brought AI Tutors to 353 Schools.",
+      "date": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "author": "Avantika Krishna",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/11/avantika-ws-poster-image-template-4-2026-11-11-11-55-56.png",
+      "text": "Rajasthan’s Tonk recorded a 96.4% mathematics pass rate in 2025. An AI-powered initiative by IAS officer Saumya Jha is helping government school students tackle maths anxiety.",
+      "color": "blue"
+    },
+    {
+      "id": "n-better-delhi-air-pollution-balcony-gardens-how-to-take-care-of-plants-dust",
+      "url": "https://thebetterindia.com/gardening/delhi-air-pollution-balcony-gardens-how-to-take-care-of-plants-dust-changing-weather-12800610",
+      "title": "Delhi’s AQI Has Crossed 300. What Does It Mean for Your Balcony Garden?",
+      "date": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "author": "Raajwrita Dutta",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/11/delhi-air-pollution-and-plants-2026-11-11-13-07-02.png",
+      "text": "Can balcony plants withstand Delhi’s polluted air? Understand how particulate matter affects plant health and what gardeners should consider during winter.",
+      "color": "green"
+    },
+    {
+      "id": "n-better-sharad-kale-nisargruna-kitchen-waste-composting-bicholim-goa-12800983",
+      "url": "https://thebetterindia.com/technology/sharad-kale-nisargruna-kitchen-waste-composting-bicholim-goa-12800983",
+      "title": "This Scientist Showed a Goa Town How to Turn 1 Tonne of Kitchen Scraps Into Compost in 2 Days.",
+      "date": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "author": "Nishtha Kawrani",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/11/nisargruna-technology-2026-11-11-15-51-02.png",
+      "text": "See how kitchen waste composting works in Bicholim, Goa, from sorting and shredding food scraps to the role that microbes and added air play as the scraps break down.",
+      "color": "yellow"
+    },
+    {
+      "id": "n-better-winter-fog-india-indo-gangetic-plains-deccan-plateau-12801183",
+      "url": "https://thebetterindia.com/conservation/nature/winter-fog-india-indo-gangetic-plains-deccan-plateau-12801183",
+      "title": "Why Does Winter Fog Blanket Delhi but Rarely Bengaluru? The Science Behind India’s Changing Morning Skies.",
+      "date": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "author": "Sriroopa Dutta",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/11/glowg-2026-11-11-17-10-12.png",
+      "text": "Why does Delhi experience frequent winter fog while Bengaluru sees far fewer fog events? Explore the science behind India's regional fog patterns, from the Indo-Gangetic Plains to the Deccan Plateau.",
+      "color": "orange"
+    },
+    {
+      "id": "n-better-bengaluru-digital-twin-plan-testing-traffic-and-transport-changes",
+      "url": "https://thebetterindia.com/web-stories/innovation/bengaluru-digital-twin-plan-testing-traffic-and-transport-changes-12801496",
+      "title": "Stuck in Bengaluru Traffic Again? Now a Digital Twin of the City Could Cut Travel Time by 30%.",
+      "date": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "author": "Vaishali Gautam",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/11/red-shirted-speaker-and-bengaluru-traffic-2026-11-11-18-41-10.png",
+      "text": "Bharat1.ai wants to build a computer model of how people move through Bengaluru. By bringing road, bus and Metro data together, it hopes to show where journeys repeatedly slow down and give planners a way to compare possible fixes.",
+      "color": "red"
+    },
+    {
+      "id": "n-better-baby-tracheostomy-care-parenting-journey-bengaluru-12801460",
+      "url": "https://thebetterindia.com/parenting/baby-tracheostomy-care-parenting-journey-bengaluru-12801460",
+      "title": "A Premature Birth, 35 Lakh in Medical Bills & Months of Care: How This Bengaluru Baby Pulled Through.",
+      "date": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "author": "Nishtha Kawrani",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/11/baby-care-2026-11-11-18-25-33.png",
+      "text": "Baby tracheostomy care changed life for Bengaluru parents Gouthami and Sharan. After months of home care, their daughter Chikoo's tube was removed.",
+      "color": "brown"
     }
   ]
 }
