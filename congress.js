@@ -3238,9 +3238,12 @@
     setInterval(function () { checkLive(false); }, 20 * 60 * 1000);
     setTimeout(checkSlips, 8000);
     setInterval(checkSlips, 20 * 60 * 1000);
+    setInterval(refreshVotes, 60 * 1000);
     setInterval(refreshPublished, 10 * 60 * 1000);
     document.addEventListener("visibilitychange", function () {
-      if (!document.hidden) refreshPublished();
+      if (document.hidden) return;
+      refreshVotes();
+      refreshPublished();
     });
   }
 
@@ -3286,6 +3289,20 @@
     slipsUpdated = extra.updated || "";
     indexWords();
     return true;
+  }
+
+  var voteRefresh = false;
+
+  function refreshVotes() {
+    if (voteRefresh || !data || document.hidden) return;
+    voteRefresh = true;
+    fetch(published("congress/votes.json")).then(function (response) {
+      return response.ok ? response.json() : null;
+    }).then(function (payload) {
+      if (applyVotes(payload)) keepPlace(function () { render(); renderStatus(""); });
+    }).catch(function () { /* The copy already on the page stays. */ }).then(function () {
+      voteRefresh = false;
+    });
   }
 
   function refreshPublished() {

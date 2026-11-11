@@ -8,11 +8,12 @@ this script. Senator offices still come from the congress-legislators file.
 
 import json
 import re
+import sys
 import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 import xml.etree.ElementTree as ET
@@ -775,10 +776,10 @@ def parse_roll(year, number, body):
     return vote, seen
 
 
-def download_year(year):
+def download_year(year, start=1):
     # Roll numbers can skip. Stop only after several confirmed gaps in a row.
     bodies = {}
-    number = 1
+    number = max(1, int(start))
     gap = 0
     while number < 2000 and gap < 15:
         batch = list(range(number, min(number + 10, 2000)))
@@ -978,7 +979,91 @@ def publish_votes():
     return votes, floor, payload["members"]
 
 
+def publish_new():
+    """Read roll calls newer than the saved file, and leave the file alone when nothing changed."""
+    if not OUT.exists():
+        print("no saved house file, copying the full record", flush=True)
+        publish_votes()
+        return
+    saved = json.loads(OUT.read_text(encoding="utf-8"))
+    members = saved.get("members") or []
+    index = {}
+    for position, row in enumerate(members):
+        if row and row[0]:
+            index[row[0]] = position
+    newest = {}
+    for vote in saved.get("votes") or []:
+        year = vote.get("year")
+        number = vote.get("n") or 0
+        if year and number > newest.get(year, 0):
+            newest[year] = number
+    years = []
+    this_year = date.today().year
+    if date.today().month == 1 and (this_year - 1) in newest:
+        years.append(this_year - 1)
+    years.append(this_year)
+    fresh_votes = []
+    for year in years:
+        start = 1 if year not in newest else max(1, newest[year] - 7)
+        print("checking", year, "from", start, flush=True)
+        year_votes, seen = download_year(year, start)
+        for bioguide, person in seen.items():
+            if bioguide in index:
+                continue
+            members.append([
+                bioguide,
+                person["name"] or bioguide,
+                person["party"],
+                person["state"],
+                None,
+                "house",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                None,
+            ])
+            index[bioguide] = len(members) - 1
+        fresh_votes.extend(year_votes)
+    width = len(members)
+    for vote in saved.get("votes") or []:
+        cast = vote.get("cast")
+        if isinstance(cast, str) and len(cast) < width:
+            vote["cast"] = cast + ("-" * (width - len(cast)))
+    by_id = {vote.get("id"): vote for vote in saved.get("votes") or []}
+    for vote in fresh_votes:
+        cast_map = vote.get("cast") or {}
+        if isinstance(cast_map, dict):
+            coded = ["-"] * width
+            for bioguide, code in cast_map.items():
+                position = index.get(bioguide)
+                if position is not None:
+                    coded[position] = code
+            vote["cast"] = "".join(coded)
+        current = by_id.get(vote["id"])
+        if current is None:
+            saved.setdefault("votes", []).append(vote)
+            by_id[vote["id"]] = vote
+            print("added", vote["id"], vote.get("date"), vote.get("question"), flush=True)
+            continue
+        for key in ("question", "desc", "result", "yea", "nay", "present", "notVoting", "cast", "legis", "bill", "date", "time", "type", "parties"):
+            if current.get(key) != vote.get(key):
+                print("updated", vote["id"], key, flush=True)
+                current[key] = vote.get(key)
+    print("floor", flush=True)
+    saved["floor"] = current_floor()
+    saved["members"] = members
+    saved["updated"] = datetime.now(timezone.utc).replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
+    wrote = write_if_changed(OUT, saved)
+    print("house file", "updated" if wrote else "unchanged", flush=True)
+
+
 def main():
+    if "--new" in sys.argv:
+        publish_new()
+        return
     votes, floor, members = publish_votes()
     write_summaries(votes, floor)
     write_sponsors(votes, floor, members)
