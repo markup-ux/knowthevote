@@ -90,7 +90,16 @@
   letter-spacing: -0.03em;
 }
 .birthday-cake { width: 46px; height: 46px; flex: none; }
-.birthday-flame { transform-box: fill-box; transform-origin: center; animation: birthday-flicker .4s ease-in-out infinite; }
+.birthday-cake .cake-base { fill: var(--bar); }
+.birthday-cake .cake-icing { fill: var(--bar-stripe); }
+.birthday-cake .cake-wave { fill: none; stroke: var(--paper); stroke-width: 1.2; }
+.birthday-cake .cake-candle { fill: var(--ink); }
+.birthday-flame { fill: var(--map-on); transform-box: fill-box; transform-origin: center; animation: birthday-flicker .4s ease-in-out infinite; }
+html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-cake .cake-base { fill: var(--bar-stripe); }
+html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-cake .cake-icing { fill: var(--bar-ink); }
+html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-cake .cake-wave { stroke: var(--paper); }
+html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-cake .cake-candle { fill: var(--bar); stroke: var(--bar-ink); stroke-width: 0.7; }
+html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-flame { fill: var(--map-on); }
 @keyframes birthday-flicker {
   50% { transform: scale(.8, 1.18) translateY(-.6px); }
 }
@@ -106,6 +115,10 @@
 .birthday-balloon:first-child { margin-left: 0; }
 .birthday-balloon:nth-child(2) { color: var(--bar-stripe); animation-delay: .45s; }
 .birthday-balloon:nth-child(3) { color: var(--map-on); animation-delay: .9s; }
+html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-balloon { color: var(--bar-stripe); }
+html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-balloon:nth-child(2) { color: var(--map-on); }
+html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-balloon:nth-child(3) { color: var(--bar-ink); }
+html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-balloon ellipse { stroke: var(--paper); stroke-width: 0.8; }
 @keyframes birthday-bob {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-7px); }
@@ -418,7 +431,7 @@
         <span class="birthday-spark" style="right:8%;top:46%;animation-delay:-1.4s"></span>
       </div>
       <div class="birthday-head">
-        <h2 id="birthdays-heading"><svg class="birthday-cake" viewBox="0 0 36 36" aria-hidden="true"><rect x="6" y="18" width="24" height="12" rx="2" fill="var(--bar)"/><rect x="8" y="13" width="20" height="7" rx="1" fill="var(--bar-stripe)"/><path d="M10 18c1.4-2 2.6-2 4 0s2.6 2 4 0 2.6-2 4 0 2.6 2 4 0" fill="none" stroke="var(--paper)" stroke-width="1.2"/><rect x="17" y="6" width="2" height="8" fill="var(--ink)"/><ellipse class="birthday-flame" cx="18" cy="4.6" rx="2.1" ry="2.8" fill="var(--map-on)"/></svg>Happy Birthday!</h2>
+        <h2 id="birthdays-heading"><svg class="birthday-cake" viewBox="0 0 36 36" aria-hidden="true"><rect class="cake-base" x="6" y="18" width="24" height="12" rx="2"/><rect class="cake-icing" x="8" y="13" width="20" height="7" rx="1"/><path class="cake-wave" d="M10 18c1.4-2 2.6-2 4 0s2.6 2 4 0 2.6-2 4 0 2.6 2 4 0"/><rect class="cake-candle" x="17" y="6" width="2" height="8"/><ellipse class="birthday-flame" cx="18" cy="4.6" rx="2.1" ry="2.8"/></svg>Happy Birthday!</h2>
         <div class="birthday-balloons" aria-hidden="true">
           <svg class="birthday-balloon" viewBox="0 0 24 36"><ellipse cx="12" cy="11" rx="8" ry="10"/><path d="M12 21c1.6 2.2-.2 4.2 0 6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M10 27.2h4L12 31z"/></svg>
           <svg class="birthday-balloon" viewBox="0 0 24 36"><ellipse cx="12" cy="11" rx="8" ry="10"/><path d="M12 21c1.6 2.2-.2 4.2 0 6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M10 27.2h4L12 31z"/></svg>
