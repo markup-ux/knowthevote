@@ -111,7 +111,8 @@
   50% { transform: translateY(-7px); }
 }
 .birthdays .deck { margin: 6px auto 0; max-width: 40em; text-align: center; }
-.birthday-list { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.birthday-list { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
+.birthday-list li { flex: 1 1 200px; max-width: 280px; }
 .birthday-list a {
   display: flex;
   flex-direction: column;
@@ -139,11 +140,12 @@
 .birthday-list .birthday-flag { display: block; height: 18px; width: auto; max-width: 30px; margin: 2px 0 0; border: 1px solid var(--line); background: var(--paper); }
 .birthday-list strong { display: block; font-size: 18px; line-height: 1.2; }
 .birthday-list .birthday-line { display: block; margin-top: 1px; color: var(--muted); }
+.birthday-letter { display: flex; align-items: center; justify-content: center; font-family: Georgia, "Palatino Linotype", serif; font-size: 32px; }
 @media (max-width: 800px) {
   .birthdays h2 { font-size: 26px; }
   .birthday-head { grid-template-columns: 1fr; justify-items: center; }
   .birthday-balloons { justify-self: center; }
-  .birthday-list { grid-template-columns: 1fr; }
+  .birthday-list li { flex-basis: 100%; max-width: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .birthday-bit, .birthday-spark, .birthday-balloon, .birthday-flame { animation: none; }
@@ -393,7 +395,7 @@
       });
     })();
     </script>
-    <section class="birthdays" id="birthdays" aria-labelledby="birthdays-heading">
+    <section class="birthdays" id="birthdays" hidden aria-labelledby="birthdays-heading">
       <div class="birthday-card">
       <div class="birthday-sky" aria-hidden="true">
         <span class="birthday-bit" style="left:4%;animation-delay:-.4s"></span>
@@ -422,36 +424,8 @@
           <svg class="birthday-balloon" viewBox="0 0 24 36"><ellipse cx="12" cy="11" rx="8" ry="10"/><path d="M12 21c1.6 2.2-.2 4.2 0 6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M10 27.2h4L12 31z"/></svg>
         </div>
       </div>
-      <p class="deck">Three members of the House were born on November 11. Dates from the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators file</a>.</p>
-      <ul class="birthday-list">
-        <li><a href="ok.html#district-5-stephanie-bice">
-          <img class="birthday-photo" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OK_H05_R_S_BICE.png" alt="">
-          <span>
-            <img class="birthday-flag" src="flags/ok.svg" alt="">
-            <strong class="notranslate" translate="no">Stephanie Bice</strong>
-            <span class="birthday-line">Republican · Oklahoma</span>
-            <span class="birthday-line">House district 5</span>
-          </span>
-        </a></li>
-        <li><a href="tx.html#district-15-monica-de-la-cruz">
-          <img class="birthday-photo" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H15_R_M_DELACRUZ.png" alt="">
-          <span>
-            <img class="birthday-flag" src="flags/tx.svg" alt="">
-            <strong class="notranslate" translate="no">Monica De La Cruz</strong>
-            <span class="birthday-line">Republican · Texas</span>
-            <span class="birthday-line">House district 15</span>
-          </span>
-        </a></li>
-        <li><a href="ny.html#district-11-nicole-malliotakis">
-          <img class="birthday-photo" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H11_R_N_MALLIOTAKIS.png" alt="">
-          <span>
-            <img class="birthday-flag" src="flags/ny.svg" alt="">
-            <strong class="notranslate" translate="no">Nicole Malliotakis</strong>
-            <span class="birthday-line">Republican · New York</span>
-            <span class="birthday-line">House district 11</span>
-          </span>
-        </a></li>
-      </ul>
+      <p class="deck"><span id="birthday-count"></span> Dates from the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators file</a>.</p>
+      <ul class="birthday-list" id="birthday-list"></ul>
       </div>
     </section>
     <a class="spotlight" href="news/corn-cobs/">
@@ -465,16 +439,142 @@
     </a>
     <script>
     (function () {
-      var birthdays = document.getElementById("birthdays");
-      if (!birthdays) return;
-      function showBirthdays() {
-        var now = new Date();
-        var onThisDay = now.getMonth() === 10 && now.getDate() === 11;
-        birthdays.hidden = !onThisDay;
+      var section = document.getElementById("birthdays");
+      var list = document.getElementById("birthday-list");
+      var count = document.getElementById("birthday-count");
+      if (!section || !list || !count) return;
+      var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      var roster = null;
+      var loadedFor = "";
+
+      function pad(n) { return (n < 10 ? "0" : "") + n; }
+      function dayKey(now) { return pad(now.getMonth() + 1) + "-" + pad(now.getDate()); }
+      function leap(year) { return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0); }
+
+      function joinAnd(parts) {
+        if (parts.length < 2) return parts[0] || "";
+        if (parts.length === 2) return parts[0] + " and " + parts[1];
+        return parts.slice(0, -1).join(", ") + ", and " + parts[parts.length - 1];
       }
-      showBirthdays();
+
+      function sentence(people, now) {
+        var tally = { president: 0, vice: 0, senate: 0, house: 0, other: 0 };
+        people.forEach(function (person) {
+          var role = tally.hasOwnProperty(person.role) ? person.role : "other";
+          tally[role] += 1;
+        });
+        var parts = [];
+        var words = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+        function add(n, one, many) {
+          if (n === 1) parts.push(one);
+          else if (n > 1) parts.push((words[n] || n) + " " + many);
+        }
+        add(tally.president, "the president", "presidents");
+        add(tally.vice, "the vice president", "vice presidents");
+        add(tally.senate, "one senator", "senators");
+        add(tally.house, "one member of the House", "members of the House");
+        add(tally.other, "one federal officer", "federal officers");
+        var who = joinAnd(parts);
+        var when = MONTHS[now.getMonth()] + " " + now.getDate();
+        return who.charAt(0).toUpperCase() + who.slice(1) + (people.length === 1 ? " was" : " were") + " born on " + when + ".";
+      }
+
+      function letterFor(img, name) {
+        var face = document.createElement("span");
+        face.className = "birthday-photo birthday-letter";
+        face.setAttribute("aria-hidden", "true");
+        face.textContent = (name || "?").charAt(0);
+        img.replaceWith(face);
+      }
+
+      function render() {
+        var now = new Date();
+        var key = dayKey(now);
+        if (!roster) return;
+        var people = roster.filter(function (person) {
+          if (person.date !== key) return false;
+          if (person.date === "02-29" && !leap(now.getFullYear())) return false;
+          return true;
+        });
+        var rank = { president: 0, vice: 1, senate: 2, house: 3, other: 4 };
+        people.sort(function (a, b) {
+          return (rank[a.role] - rank[b.role]) || a.name.localeCompare(b.name);
+        });
+        list.textContent = "";
+        if (!people.length) {
+          section.hidden = true;
+          return;
+        }
+        count.textContent = sentence(people, now);
+        people.forEach(function (person) {
+          var item = document.createElement("li");
+          var link = document.createElement("a");
+          link.href = person.href || "house.html";
+          var photo = document.createElement("img");
+          photo.className = "birthday-photo";
+          photo.alt = "";
+          photo.src = person.photo || "";
+          photo.addEventListener("error", function () { letterFor(photo, person.name); });
+          link.appendChild(photo);
+          var copy = document.createElement("span");
+          if (person.flag) {
+            var flag = document.createElement("img");
+            flag.className = "birthday-flag";
+            flag.alt = "";
+            flag.src = person.flag;
+            copy.appendChild(flag);
+          }
+          var name = document.createElement("strong");
+          name.className = "notranslate";
+          name.setAttribute("translate", "no");
+          name.textContent = person.name;
+          copy.appendChild(name);
+          [person.partyLine, person.office].forEach(function (text) {
+            if (!text) return;
+            var line = document.createElement("span");
+            line.className = "birthday-line";
+            line.textContent = text;
+            copy.appendChild(line);
+          });
+          link.appendChild(copy);
+          item.appendChild(link);
+          list.appendChild(item);
+        });
+        section.hidden = false;
+      }
+
+      function load() {
+        var now = new Date();
+        var stamp = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
+        if (roster && loadedFor === stamp) {
+          render();
+          return;
+        }
+        fetch("birthdays.json?d=" + stamp).then(function (response) {
+          if (!response.ok) throw new Error(String(response.status));
+          return response.json();
+        }).then(function (data) {
+          roster = (data && data.people) || [];
+          loadedFor = stamp;
+          render();
+        }).catch(function () {
+          section.hidden = true;
+        });
+      }
+
+      function waitForNextDay() {
+        var now = new Date();
+        var next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+        setTimeout(function () {
+          load();
+          waitForNextDay();
+        }, next - now + 1000);
+      }
+
+      load();
+      waitForNextDay();
       document.addEventListener("visibilitychange", function () {
-        if (document.visibilityState === "visible") showBirthdays();
+        if (document.visibilityState === "visible") load();
       });
     })();
     </script>

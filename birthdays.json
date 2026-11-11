@@ -1,0 +1,5396 @@
+{
+  "updated": "2026-11-11",
+  "source": "https://unitedstates.github.io/congress-legislators/legislators-current.json",
+  "people": [
+    {
+      "date": "01-01",
+      "name": "Diana Harshbarger",
+      "role": "house",
+      "partyLine": "Republican · Tennessee",
+      "office": "House district 1",
+      "href": "tn.html#district-1-diana-harshbarger",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TN_H01_R_D_HARSHBARGER.png",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "01-01",
+      "name": "Terri Sewell",
+      "role": "house",
+      "partyLine": "Democratic · Alabama",
+      "office": "House district 7",
+      "href": "al.html#district-7-terri-sewell",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AL_H07_D_T_SEWELL.png",
+      "flag": "flags/al.svg"
+    },
+    {
+      "date": "01-03",
+      "name": "Eli Crane",
+      "role": "house",
+      "partyLine": "Republican · Arizona",
+      "office": "House district 2",
+      "href": "az.html#district-2-eli-crane",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AZ_H02_R_E_CRANE.png",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "01-03",
+      "name": "Marc Veasey",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 33",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/V000131.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "01-04",
+      "name": "Emilia Sykes",
+      "role": "house",
+      "partyLine": "Democratic · Ohio",
+      "office": "House district 13",
+      "href": "oh.html#district-13-emilia-sykes",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H13_D_E_SYKES.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "01-06",
+      "name": "Frank Lucas",
+      "role": "house",
+      "partyLine": "Republican · Oklahoma",
+      "office": "House district 3",
+      "href": "ok.html#district-3-frank-lucas",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OK_H03_R_F_LUCAS.png",
+      "flag": "flags/ok.svg"
+    },
+    {
+      "date": "01-06",
+      "name": "Robert Onder, Jr.",
+      "role": "house",
+      "partyLine": "Republican · Missouri",
+      "office": "House district 3",
+      "href": "mo.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/O000177.jpg",
+      "flag": "flags/mo.svg"
+    },
+    {
+      "date": "01-07",
+      "name": "Jonathan Jackson",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 1",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/J000309.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "01-07",
+      "name": "John Thune",
+      "role": "senate",
+      "partyLine": "Republican · South Dakota",
+      "office": "Senate",
+      "href": "sd.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/T000250.jpg",
+      "flag": "flags/sd.svg"
+    },
+    {
+      "date": "01-07",
+      "name": "Rand Paul",
+      "role": "senate",
+      "partyLine": "Republican · Kentucky",
+      "office": "Senate",
+      "href": "ky.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/P000603.jpg",
+      "flag": "flags/ky.svg"
+    },
+    {
+      "date": "01-10",
+      "name": "Chris Van Hollen",
+      "role": "senate",
+      "partyLine": "Democratic · Maryland",
+      "office": "Senate",
+      "href": "md.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/V000128.jpg",
+      "flag": "flags/md.svg"
+    },
+    {
+      "date": "01-11",
+      "name": "Aisha Wahab",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 14",
+      "href": "ca.html#district-14-aisha-wahab",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H14_D_A_WAHAB.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "01-11",
+      "name": "Michael Turner",
+      "role": "house",
+      "partyLine": "Republican · Ohio",
+      "office": "House district 10",
+      "href": "oh.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/T000463.jpg",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "01-12",
+      "name": "Cliff Bentz",
+      "role": "house",
+      "partyLine": "Republican · Oregon",
+      "office": "House district 2",
+      "href": "or.html#district-2-cliff-bentz",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OR_H02_R_C_BENTZ.png",
+      "flag": "flags/or.svg"
+    },
+    {
+      "date": "01-13",
+      "name": "Thomas Massie",
+      "role": "house",
+      "partyLine": "Republican · Kentucky",
+      "office": "House district 4",
+      "href": "ky.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001184.jpg",
+      "flag": "flags/ky.svg"
+    },
+    {
+      "date": "01-14",
+      "name": "Michael McCaul",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 10",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001157.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "01-14",
+      "name": "Randy Feenstra",
+      "role": "house",
+      "partyLine": "Republican · Iowa",
+      "office": "House district 4",
+      "href": "ia.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/F000446.jpg",
+      "flag": "flags/ia.svg"
+    },
+    {
+      "date": "01-16",
+      "name": "Troy Balderson",
+      "role": "house",
+      "partyLine": "Republican · Ohio",
+      "office": "House district 12",
+      "href": "oh.html#district-12-troy-balderson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H12_R_T_BALDERSON.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "01-17",
+      "name": "Carlos Gimenez",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 28",
+      "href": "fl.html#district-28-carlos-gimenez",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H28_R_C_GIMENEZ.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "01-17",
+      "name": "Maxwell Frost",
+      "role": "house",
+      "partyLine": "Democratic · Florida",
+      "office": "House district 10",
+      "href": "fl.html#district-10-maxwell-frost",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H10_D_M_FROST.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "01-21",
+      "name": "Addison McDowell",
+      "role": "house",
+      "partyLine": "Republican · North Carolina",
+      "office": "House district 6",
+      "href": "nc.html#district-6-addison-mcdowell",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H06_R_A_MCDOWELL.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "01-21",
+      "name": "Josh Riley",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 19",
+      "href": "ny.html#district-19-josh-riley",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H19_D_J_RILEY.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "01-21",
+      "name": "Kevin Cramer",
+      "role": "senate",
+      "partyLine": "Republican · North Dakota",
+      "office": "Senate",
+      "href": "nd.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001096.jpg",
+      "flag": "flags/nd.svg"
+    },
+    {
+      "date": "01-22",
+      "name": "Rick Crawford",
+      "role": "house",
+      "partyLine": "Republican · Arkansas",
+      "office": "House district 1",
+      "href": "ar.html#district-1-rick-crawford",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AR_H01_R_R_CRAWFORD.png",
+      "flag": "flags/ar.svg"
+    },
+    {
+      "date": "01-23",
+      "name": "Derek Schmidt",
+      "role": "house",
+      "partyLine": "Republican · Kansas",
+      "office": "House district 2",
+      "href": "ks.html#district-2-derek-schmidt",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KS_H02_R_D_SCHMIDT.png",
+      "flag": "flags/ks.svg"
+    },
+    {
+      "date": "01-23",
+      "name": "Lloyd Smucker",
+      "role": "house",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "House district 11",
+      "href": "pa.html#district-11-lloyd-smucker",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H11_R_L_SMUCKER.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "01-24",
+      "name": "Jake Ellzey",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 6",
+      "href": "tx.html#district-6-jake-ellzey",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H06_R_J_ELLZEY.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "01-24",
+      "name": "John Garamendi",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 8",
+      "href": "ca.html#district-8-john-garamendi",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H08_D_J_GARAMENDI.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "01-24",
+      "name": "Luis Correa",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 46",
+      "href": "ca.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001110.jpg",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "01-24",
+      "name": "Mike Thompson",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 4",
+      "href": "ca.html#district-4-mike-thompson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H04_D_M_THOMPSON.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "01-25",
+      "name": "Aaron Bean",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 4",
+      "href": "fl.html#district-4-aaron-bean",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H04_R_A_BEAN.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "01-25",
+      "name": "Andy Harris",
+      "role": "house",
+      "partyLine": "Republican · Maryland",
+      "office": "House district 1",
+      "href": "md.html#district-1-andy-harris",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MD_H01_R_A_HARRIS.png",
+      "flag": "flags/md.svg"
+    },
+    {
+      "date": "01-28",
+      "name": "Bennie Thompson",
+      "role": "house",
+      "partyLine": "Democratic · Mississippi",
+      "office": "House district 2",
+      "href": "ms.html#district-2-bennie-thompson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MS_H02_D_B_THOMPSON.png",
+      "flag": "flags/ms.svg"
+    },
+    {
+      "date": "01-28",
+      "name": "Jeff Crank",
+      "role": "house",
+      "partyLine": "Republican · Colorado",
+      "office": "House district 5",
+      "href": "co.html#district-5-jeff-crank",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CO_H05_R_J_CRANK.png",
+      "flag": "flags/co.svg"
+    },
+    {
+      "date": "01-28",
+      "name": "Linda Sánchez",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 38",
+      "href": "ca.html#district-41-linda-sánchez",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H41_D_L_SA_NCHEZ.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "01-28",
+      "name": "Jeanne Shaheen",
+      "role": "senate",
+      "partyLine": "Democratic · New Hampshire",
+      "office": "Senate",
+      "href": "nh.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001181.jpg",
+      "flag": "flags/nh.svg"
+    },
+    {
+      "date": "01-29",
+      "name": "Jake Auchincloss",
+      "role": "house",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "House district 4",
+      "href": "ma.html#district-4-jake-auchincloss",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MA_H04_D_J_AUCHINCLOSS.png",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "01-29",
+      "name": "Lateefah Simon",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 12",
+      "href": "ca.html#district-12-lateefah-simon",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H12_D_L_SIMON.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "01-30",
+      "name": "Herbert Conaway, Jr.",
+      "role": "house",
+      "partyLine": "Democratic · New Jersey",
+      "office": "House district 3",
+      "href": "nj.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001136.jpg",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "01-30",
+      "name": "Kevin Kiley",
+      "role": "house",
+      "partyLine": "Independent · California",
+      "office": "House district 3",
+      "href": "ca.html#district-6-kevin-kiley",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H06_I_K_KILEY.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "01-30",
+      "name": "Mike Johnson",
+      "role": "house",
+      "partyLine": "Republican · Louisiana",
+      "office": "House district 4",
+      "href": "la.html#district-4-mike-johnson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H04_R_M_JOHNSON.png",
+      "flag": "flags/la.svg"
+    },
+    {
+      "date": "01-31",
+      "name": "Bill Huizenga",
+      "role": "house",
+      "partyLine": "Republican · Michigan",
+      "office": "House district 4",
+      "href": "mi.html#district-4-bill-huizenga",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MI_H04_R_B_HUIZENGA.png",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "01-31",
+      "name": "Janelle Bynum",
+      "role": "house",
+      "partyLine": "Democratic · Oregon",
+      "office": "House district 5",
+      "href": "or.html#district-5-janelle-bynum",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OR_H05_D_J_BYNUM.png",
+      "flag": "flags/or.svg"
+    },
+    {
+      "date": "01-31",
+      "name": "Melanie Stansbury",
+      "role": "house",
+      "partyLine": "Democratic · New Mexico",
+      "office": "House district 1",
+      "href": "nm.html#district-1-melanie-stansbury",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NM_H01_D_M_STANSBURY.png",
+      "flag": "flags/nm.svg"
+    },
+    {
+      "date": "01-31",
+      "name": "Russell Fry",
+      "role": "house",
+      "partyLine": "Republican · South Carolina",
+      "office": "House district 7",
+      "href": "sc.html#district-7-russell-fry",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/SC_H07_R_R_FRY.png",
+      "flag": "flags/sc.svg"
+    },
+    {
+      "date": "02-01",
+      "name": "Sara Jacobs",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 51",
+      "href": "ca.html#district-51-sara-jacobs",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H51_D_S_JACOBS.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "02-02",
+      "name": "Jack Bergman",
+      "role": "house",
+      "partyLine": "Republican · Michigan",
+      "office": "House district 1",
+      "href": "mi.html#district-1-jack-bergman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MI_H01_R_J_BERGMAN.png",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "02-02",
+      "name": "Kelly Morrison",
+      "role": "house",
+      "partyLine": "Democratic · Minnesota",
+      "office": "House district 3",
+      "href": "mn.html#district-3-kelly-morrison",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MN_H03_D_K_MORRISON.png",
+      "flag": "flags/mn.svg"
+    },
+    {
+      "date": "02-02",
+      "name": "Mike Kennedy",
+      "role": "house",
+      "partyLine": "Republican · Utah",
+      "office": "House district 3",
+      "href": "ut.html#district-4-mike-kennedy",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/UT_H04_R_M_KENNEDY.png",
+      "flag": "flags/ut.svg"
+    },
+    {
+      "date": "02-02",
+      "name": "John Cornyn",
+      "role": "senate",
+      "partyLine": "Republican · Texas",
+      "office": "Senate",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001056.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "02-02",
+      "name": "Katie Boyd Britt",
+      "role": "senate",
+      "partyLine": "Republican · Alabama",
+      "office": "Senate",
+      "href": "al.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001319.jpg",
+      "flag": "flags/al.svg"
+    },
+    {
+      "date": "02-03",
+      "name": "Ayanna Pressley",
+      "role": "house",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "House district 7",
+      "href": "ma.html#district-7-ayanna-pressley",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MA_H07_D_A_PRESSLEY.png",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "02-03",
+      "name": "Robert Wittman",
+      "role": "house",
+      "partyLine": "Republican · Virginia",
+      "office": "House district 1",
+      "href": "va.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/W000804.jpg",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "02-04",
+      "name": "Claudia Tenney",
+      "role": "house",
+      "partyLine": "Republican · New York",
+      "office": "House district 24",
+      "href": "ny.html#district-24-claudia-tenney",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H24_R_C_TENNEY.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "02-04",
+      "name": "Michael Guest",
+      "role": "house",
+      "partyLine": "Republican · Mississippi",
+      "office": "House district 3",
+      "href": "ms.html#district-3-michael-guest",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MS_H03_R_M_GUEST.png",
+      "flag": "flags/ms.svg"
+    },
+    {
+      "date": "02-04",
+      "name": "Sanford Bishop",
+      "role": "house",
+      "partyLine": "Democratic · Georgia",
+      "office": "House district 2",
+      "href": "ga.html#district-2-sanford-bishop",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_H02_D_S_BISHOP.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "02-06",
+      "name": "Bonnie Watson Coleman",
+      "role": "house",
+      "partyLine": "Democratic · New Jersey",
+      "office": "House district 12",
+      "href": "nj.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/W000822.jpg",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "02-06",
+      "name": "Brendan Boyle",
+      "role": "house",
+      "partyLine": "Democratic · Pennsylvania",
+      "office": "House district 2",
+      "href": "pa.html#district-2-brendan-boyle",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H02_D_B_BOYLE.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "02-06",
+      "name": "Luz Rivas",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 29",
+      "href": "ca.html#district-29-luz-rivas",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H29_D_L_RIVAS.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "02-07",
+      "name": "John Hickenlooper",
+      "role": "senate",
+      "partyLine": "Democratic · Colorado",
+      "office": "Senate",
+      "href": "co.html#senate-john-hickenlooper",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CO_S00_D_J_HICKENLOOPER.png",
+      "flag": "flags/co.svg"
+    },
+    {
+      "date": "02-08",
+      "name": "Gus Bilirakis",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 12",
+      "href": "fl.html#district-12-gus-bilirakis",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H12_R_G_BILIRAKIS.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "02-08",
+      "name": "John Joyce",
+      "role": "house",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "House district 13",
+      "href": "pa.html#district-13-john-joyce",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H13_R_J_JOYCE.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "02-10",
+      "name": "Daniel Meuser",
+      "role": "house",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "House district 9",
+      "href": "pa.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001204.jpg",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "02-10",
+      "name": "Lisa Blunt Rochester",
+      "role": "senate",
+      "partyLine": "Democratic · Delaware",
+      "office": "Senate",
+      "href": "de.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001303.jpg",
+      "flag": "flags/de.svg"
+    },
+    {
+      "date": "02-11",
+      "name": "Tammy Baldwin",
+      "role": "senate",
+      "partyLine": "Democratic · Wisconsin",
+      "office": "Senate",
+      "href": "wi.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001230.jpg",
+      "flag": "flags/wi.svg"
+    },
+    {
+      "date": "02-12",
+      "name": "Gilbert Ray Cisneros, Jr.",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 31",
+      "href": "ca.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001123.jpg",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "02-13",
+      "name": "Lizzie Fletcher",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 7",
+      "href": "tx.html#district-7-lizzie-fletcher",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H07_D_L_FLETCHER.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "02-13",
+      "name": "Richard Blumenthal",
+      "role": "senate",
+      "partyLine": "Democratic · Connecticut",
+      "office": "Senate",
+      "href": "ct.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001277.jpg",
+      "flag": "flags/ct.svg"
+    },
+    {
+      "date": "02-14",
+      "name": "Angie Craig",
+      "role": "house",
+      "partyLine": "Democratic · Minnesota",
+      "office": "House district 2",
+      "href": "mn.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001119.jpg",
+      "flag": "flags/mn.svg"
+    },
+    {
+      "date": "02-14",
+      "name": "Richard Neal",
+      "role": "house",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "House district 1",
+      "href": "ma.html#district-1-richard-neal",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MA_H01_D_R_NEAL.png",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "02-14",
+      "name": "Val Hoyle",
+      "role": "house",
+      "partyLine": "Democratic · Oregon",
+      "office": "House district 4",
+      "href": "or.html#district-4-val-hoyle",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OR_H04_D_V_HOYLE.png",
+      "flag": "flags/or.svg"
+    },
+    {
+      "date": "02-14",
+      "name": "Bernie Moreno",
+      "role": "senate",
+      "partyLine": "Republican · Ohio",
+      "office": "Senate",
+      "href": "oh.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001242.jpg",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "02-16",
+      "name": "David Rouzer",
+      "role": "house",
+      "partyLine": "Republican · North Carolina",
+      "office": "House district 7",
+      "href": "nc.html#district-7-david-rouzer",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H07_R_D_ROUZER.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "02-16",
+      "name": "Kat Cammack",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 3",
+      "href": "fl.html#district-3-kat-cammack",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H03_R_K_CAMMACK.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "02-16",
+      "name": "Neal Dunn",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 2",
+      "href": "fl.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/D000628.jpg",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "02-16",
+      "name": "Jon Ossoff",
+      "role": "senate",
+      "partyLine": "Democratic · Georgia",
+      "office": "Senate",
+      "href": "ga.html#senate-jon-ossoff",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_S00_D_J_OSSOFF.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "02-17",
+      "name": "Brian Jack",
+      "role": "house",
+      "partyLine": "Republican · Georgia",
+      "office": "House district 3",
+      "href": "ga.html#district-3-brian-jack",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_H03_R_B_JACK.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "02-17",
+      "name": "Jim Jordan",
+      "role": "house",
+      "partyLine": "Republican · Ohio",
+      "office": "House district 4",
+      "href": "oh.html#district-4-jim-jordan",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H04_R_J_JORDAN.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "02-17",
+      "name": "Suzan DelBene",
+      "role": "house",
+      "partyLine": "Democratic · Washington",
+      "office": "House district 1",
+      "href": "wa.html#district-1-suzan-delbene",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H01_D_S_DELBENE.png",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "02-18",
+      "name": "Brett Guthrie",
+      "role": "house",
+      "partyLine": "Republican · Kentucky",
+      "office": "House district 2",
+      "href": "ky.html#district-2-brett-guthrie",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H02_R_B_GUTHRIE.png",
+      "flag": "flags/ky.svg"
+    },
+    {
+      "date": "02-18",
+      "name": "Jared Huffman",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 2",
+      "href": "ca.html#district-2-jared-huffman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H02_D_J_HUFFMAN.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "02-18",
+      "name": "Steve Womack",
+      "role": "house",
+      "partyLine": "Republican · Arkansas",
+      "office": "House district 3",
+      "href": "ar.html#district-3-steve-womack",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AR_H03_R_S_WOMACK.png",
+      "flag": "flags/ar.svg"
+    },
+    {
+      "date": "02-20",
+      "name": "Mitch McConnell",
+      "role": "senate",
+      "partyLine": "Republican · Kentucky",
+      "office": "Senate",
+      "href": "ky.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M000355.jpg",
+      "flag": "flags/ky.svg"
+    },
+    {
+      "date": "02-21",
+      "name": "Scott DesJarlais",
+      "role": "house",
+      "partyLine": "Republican · Tennessee",
+      "office": "House district 4",
+      "href": "tn.html#district-4-scott-desjarlais",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TN_H04_R_S_DESJARLAIS.png",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "02-21",
+      "name": "Mark Kelly",
+      "role": "senate",
+      "partyLine": "Democratic · Arizona",
+      "office": "Senate",
+      "href": "az.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000377.jpg",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "02-22",
+      "name": "Hillary Scholten",
+      "role": "house",
+      "partyLine": "Democratic · Michigan",
+      "office": "House district 3",
+      "href": "mi.html#district-3-hillary-scholten",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MI_H03_D_H_SCHOLTEN.png",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "02-22",
+      "name": "Shri Thanedar",
+      "role": "house",
+      "partyLine": "Democratic · Michigan",
+      "office": "House district 13",
+      "href": "mi.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/T000488.jpg",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "02-23",
+      "name": "Jefferson Van Drew",
+      "role": "house",
+      "partyLine": "Republican · New Jersey",
+      "office": "House district 2",
+      "href": "nj.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/V000133.jpg",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "02-23",
+      "name": "John Rose",
+      "role": "house",
+      "partyLine": "Republican · Tennessee",
+      "office": "House district 6",
+      "href": "tn.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/R000612.jpg",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "02-23",
+      "name": "Mike Flood",
+      "role": "house",
+      "partyLine": "Republican · Nebraska",
+      "office": "House district 1",
+      "href": "ne.html#district-1-mike-flood",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NE_H01_R_M_FLOOD.png",
+      "flag": "flags/ne.svg"
+    },
+    {
+      "date": "02-23",
+      "name": "Angela Alsobrooks",
+      "role": "senate",
+      "partyLine": "Democratic · Maryland",
+      "office": "Senate",
+      "href": "md.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/A000382.jpg",
+      "flag": "flags/md.svg"
+    },
+    {
+      "date": "02-24",
+      "name": "Rudy Yakym",
+      "role": "house",
+      "partyLine": "Republican · Indiana",
+      "office": "House district 2",
+      "href": "in.html#district-2-rudy-yakym",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/IN_H02_R_R_YAKYM.png",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "02-25",
+      "name": "Darren Soto",
+      "role": "house",
+      "partyLine": "Democratic · Florida",
+      "office": "House district 9",
+      "href": "fl.html#district-9-darren-soto",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H09_D_D_SOTO.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "02-26",
+      "name": "Brandon Gill",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 26",
+      "href": "tx.html#district-26-brandon-gill",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H26_R_B_GILL.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "02-26",
+      "name": "Daniel Goldman",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 10",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/G000599.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "02-26",
+      "name": "Tim Kaine",
+      "role": "senate",
+      "partyLine": "Democratic · Virginia",
+      "office": "Senate",
+      "href": "va.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000384.jpg",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "02-27",
+      "name": "Glenn Ivey",
+      "role": "house",
+      "partyLine": "Democratic · Maryland",
+      "office": "House district 4",
+      "href": "md.html#district-4-glenn-ivey",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MD_H04_D_G_IVEY.png",
+      "flag": "flags/md.svg"
+    },
+    {
+      "date": "02-27",
+      "name": "Nicholas Langworthy",
+      "role": "house",
+      "partyLine": "Republican · New York",
+      "office": "House district 23",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000600.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "02-27",
+      "name": "Margaret Wood Hassan",
+      "role": "senate",
+      "partyLine": "Democratic · New Hampshire",
+      "office": "Senate",
+      "href": "nh.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/H001076.jpg",
+      "flag": "flags/nh.svg"
+    },
+    {
+      "date": "02-29",
+      "name": "Ben Cline",
+      "role": "house",
+      "partyLine": "Republican · Virginia",
+      "office": "House district 6",
+      "href": "va.html#district-6-ben-cline",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H06_R_B_CLINE.png",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "03-01",
+      "name": "Trent Kelly",
+      "role": "house",
+      "partyLine": "Republican · Mississippi",
+      "office": "House district 1",
+      "href": "ms.html#district-1-trent-kelly",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MS_H01_R_T_KELLY.png",
+      "flag": "flags/ms.svg"
+    },
+    {
+      "date": "03-01",
+      "name": "Warren Davidson",
+      "role": "house",
+      "partyLine": "Republican · Ohio",
+      "office": "House district 8",
+      "href": "oh.html#district-8-warren-davidson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H08_R_W_DAVIDSON.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "03-01",
+      "name": "Deb Fischer",
+      "role": "senate",
+      "partyLine": "Republican · Nebraska",
+      "office": "Senate",
+      "href": "ne.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/F000463.jpg",
+      "flag": "flags/ne.svg"
+    },
+    {
+      "date": "03-02",
+      "name": "Ami Bera",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 6",
+      "href": "ca.html#district-3-ami-bera",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H03_D_A_BERA.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "03-02",
+      "name": "Rosa DeLauro",
+      "role": "house",
+      "partyLine": "Democratic · Connecticut",
+      "office": "House district 3",
+      "href": "ct.html#district-3-rosa-delauro",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CT_H03_D_R_DELAURO.png",
+      "flag": "flags/ct.svg"
+    },
+    {
+      "date": "03-03",
+      "name": "David Schweikert",
+      "role": "house",
+      "partyLine": "Republican · Arizona",
+      "office": "House district 1",
+      "href": "az.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001183.jpg",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "03-03",
+      "name": "George Whitesides",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 27",
+      "href": "ca.html#district-27-george-whitesides",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H27_D_G_WHITESIDES.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "03-03",
+      "name": "Tom Emmer",
+      "role": "house",
+      "partyLine": "Republican · Minnesota",
+      "office": "House district 6",
+      "href": "mn.html#district-6-tom-emmer",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MN_H06_R_T_EMMER.png",
+      "flag": "flags/mn.svg"
+    },
+    {
+      "date": "03-04",
+      "name": "Christopher Smith",
+      "role": "house",
+      "partyLine": "Republican · New Jersey",
+      "office": "House district 4",
+      "href": "nj.html#district-4-christopher-smith",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NJ_H04_R_C_SMITH.png",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "03-04",
+      "name": "Troy Downing",
+      "role": "house",
+      "partyLine": "Republican · Montana",
+      "office": "House district 2",
+      "href": "mt.html#district-2-troy-downing",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MT_H02_R_T_DOWNING.png",
+      "flag": "flags/mt.svg"
+    },
+    {
+      "date": "03-04",
+      "name": "James Lankford",
+      "role": "senate",
+      "partyLine": "Republican · Oklahoma",
+      "office": "Senate",
+      "href": "ok.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000575.jpg",
+      "flag": "flags/ok.svg"
+    },
+    {
+      "date": "03-04",
+      "name": "Tina Smith",
+      "role": "senate",
+      "partyLine": "Democratic · Minnesota",
+      "office": "Senate",
+      "href": "mn.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001203.jpg",
+      "flag": "flags/mn.svg"
+    },
+    {
+      "date": "03-05",
+      "name": "Dave Min",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 47",
+      "href": "ca.html#district-47-dave-min",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H47_D_D_MIN.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "03-05",
+      "name": "Gregory Murphy",
+      "role": "house",
+      "partyLine": "Republican · North Carolina",
+      "office": "House district 3",
+      "href": "nc.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001210.jpg",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "03-07",
+      "name": "James Gallagher",
+      "role": "house",
+      "partyLine": "Republican · California",
+      "office": "House district 1",
+      "href": "ca.html#district-1-james-gallagher",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H01_R_J_GALLAGHER.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "03-07",
+      "name": "Juan Vargas",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 52",
+      "href": "ca.html#district-52-juan-vargas",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H52_D_J_VARGAS.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "03-08",
+      "name": "Greg Stanton",
+      "role": "house",
+      "partyLine": "Democratic · Arizona",
+      "office": "House district 4",
+      "href": "az.html#district-4-greg-stanton",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AZ_H04_D_G_STANTON.png",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "03-08",
+      "name": "Jahana Hayes",
+      "role": "house",
+      "partyLine": "Democratic · Connecticut",
+      "office": "House district 5",
+      "href": "ct.html#district-5-jahana-hayes",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CT_H05_D_J_HAYES.png",
+      "flag": "flags/ct.svg"
+    },
+    {
+      "date": "03-08",
+      "name": "Josh Gottheimer",
+      "role": "house",
+      "partyLine": "Democratic · New Jersey",
+      "office": "House district 5",
+      "href": "nj.html#district-5-josh-gottheimer",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NJ_H05_D_J_GOTTHEIMER.png",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "03-09",
+      "name": "Jodey Arrington",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 19",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/A000375.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "03-09",
+      "name": "Russ Fulcher",
+      "role": "house",
+      "partyLine": "Republican · Idaho",
+      "office": "House district 1",
+      "href": "id.html#district-1-russ-fulcher",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/ID_H01_R_R_FULCHER.png",
+      "flag": "flags/id.svg"
+    },
+    {
+      "date": "03-11",
+      "name": "Michael Rulli",
+      "role": "house",
+      "partyLine": "Republican · Ohio",
+      "office": "House district 6",
+      "href": "oh.html#district-6-michael-rulli",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H06_R_M_RULLI.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "03-11",
+      "name": "Nikki Budzinski",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 13",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001315.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "03-12",
+      "name": "Joyce Beatty",
+      "role": "house",
+      "partyLine": "Democratic · Ohio",
+      "office": "House district 3",
+      "href": "oh.html#district-3-joyce-beatty",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H03_D_J_BEATTY.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "03-12",
+      "name": "Ritchie Torres",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 15",
+      "href": "ny.html#district-15-ritchie-torres",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H15_D_R_TORRES.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "03-12",
+      "name": "Tammy Duckworth",
+      "role": "senate",
+      "partyLine": "Democratic · Illinois",
+      "office": "Senate",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/D000622.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "03-13",
+      "name": "Mike Carey",
+      "role": "house",
+      "partyLine": "Republican · Ohio",
+      "office": "House district 15",
+      "href": "oh.html#district-15-mike-carey",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H15_R_M_CAREY.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "03-13",
+      "name": "John Hoeven",
+      "role": "senate",
+      "partyLine": "Republican · North Dakota",
+      "office": "Senate",
+      "href": "nd.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/H001061.jpg",
+      "flag": "flags/nd.svg"
+    },
+    {
+      "date": "03-14",
+      "name": "Dan Crenshaw",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 2",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001120.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "03-15",
+      "name": "Jason Crow",
+      "role": "house",
+      "partyLine": "Democratic · Colorado",
+      "office": "House district 6",
+      "href": "co.html#district-6-jason-crow",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CO_H06_D_J_CROW.png",
+      "flag": "flags/co.svg"
+    },
+    {
+      "date": "03-15",
+      "name": "Mike Haridopolos",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 8",
+      "href": "fl.html#district-8-mike-haridopolos",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H08_R_M_HARIDOPOLOS.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "03-15",
+      "name": "Morgan Griffith",
+      "role": "house",
+      "partyLine": "Republican · Virginia",
+      "office": "House district 9",
+      "href": "va.html#district-9-morgan-griffith",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H09_R_M_GRIFFITH.png",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "03-16",
+      "name": "Julia Letlow",
+      "role": "house",
+      "partyLine": "Republican · Louisiana",
+      "office": "House district 5",
+      "href": "la.html#senate-julia-letlow",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_S00_R_J_LETLOW.png",
+      "flag": "flags/la.svg"
+    },
+    {
+      "date": "03-17",
+      "name": "David Joyce",
+      "role": "house",
+      "partyLine": "Republican · Ohio",
+      "office": "House district 14",
+      "href": "oh.html#district-14-david-joyce",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H14_R_D_JOYCE.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "03-18",
+      "name": "Eric Sorensen",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 17",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001225.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "03-20",
+      "name": "Keith Self",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 3",
+      "href": "tx.html#district-3-keith-self",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H03_R_K_SELF.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "03-22",
+      "name": "Pete Sessions",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 17",
+      "href": "tx.html#district-17-pete-sessions",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H17_R_P_SESSIONS.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "03-22",
+      "name": "Alex Padilla",
+      "role": "senate",
+      "partyLine": "Democratic · California",
+      "office": "Senate",
+      "href": "ca.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/P000145.jpg",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "03-23",
+      "name": "Brian Babin",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 36",
+      "href": "tx.html#district-36-brian-babin",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H36_R_B_BABIN.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "03-26",
+      "name": "Laurel Lee",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 15",
+      "href": "fl.html#district-15-laurel-lee",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H15_R_L_LEE.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "03-26",
+      "name": "Nancy Pelosi",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 11",
+      "href": "ca.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/P000197.jpg",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "03-28",
+      "name": "Jill Tokuda",
+      "role": "house",
+      "partyLine": "Democratic · Hawaii",
+      "office": "House district 2",
+      "href": "hi.html#district-2-jill-tokuda",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/HI_H02_D_J_TOKUDA.png",
+      "flag": "flags/hi.svg"
+    },
+    {
+      "date": "03-28",
+      "name": "Nydia Velázquez",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 7",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/V000081.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "03-28",
+      "name": "Patrick Ryan",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 18",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/R000579.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "03-28",
+      "name": "Sheri Biggs",
+      "role": "house",
+      "partyLine": "Republican · South Carolina",
+      "office": "House district 3",
+      "href": "sc.html#district-3-sheri-biggs",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/SC_H03_R_S_BIGGS.png",
+      "flag": "flags/sc.svg"
+    },
+    {
+      "date": "03-29",
+      "name": "Jasmine Crockett",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 30",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001130.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "03-29",
+      "name": "Matt Van Epps",
+      "role": "house",
+      "partyLine": "Republican · Tennessee",
+      "office": "House district 7",
+      "href": "tn.html#district-7-matt-van-epps",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TN_H07_R_M_VANEPPS.png",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "03-29",
+      "name": "Ted Lieu",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 36",
+      "href": "ca.html#district-36-ted-lieu",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H36_D_T_LIEU.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "03-29",
+      "name": "Catherine Cortez Masto",
+      "role": "senate",
+      "partyLine": "Democratic · Nevada",
+      "office": "Senate",
+      "href": "nv.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001113.jpg",
+      "flag": "flags/nv.svg"
+    },
+    {
+      "date": "03-30",
+      "name": "Bryan Steil",
+      "role": "house",
+      "partyLine": "Republican · Wisconsin",
+      "office": "House district 1",
+      "href": "wi.html#district-1-bryan-steil",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WI_H01_R_B_STEIL.png",
+      "flag": "flags/wi.svg"
+    },
+    {
+      "date": "03-31",
+      "name": "Mark DeSaulnier",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 10",
+      "href": "ca.html#district-10-mark-desaulnier",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H10_D_M_DESAULNIER.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "03-31",
+      "name": "Stephen Lynch",
+      "role": "house",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "House district 8",
+      "href": "ma.html#district-8-stephen-lynch",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MA_H08_D_S_LYNCH.png",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "03-31",
+      "name": "Angus King, Jr.",
+      "role": "senate",
+      "partyLine": "Independent · Maine",
+      "office": "Senate",
+      "href": "me.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000383.jpg",
+      "flag": "flags/me.svg"
+    },
+    {
+      "date": "04-02",
+      "name": "Chellie Pingree",
+      "role": "house",
+      "partyLine": "Democratic · Maine",
+      "office": "House district 1",
+      "href": "me.html#district-1-chellie-pingree",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/ME_H01_D_C_PINGREE.png",
+      "flag": "flags/me.svg"
+    },
+    {
+      "date": "04-04",
+      "name": "Norma Torres",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 35",
+      "href": "ca.html#district-35-norma-torres",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H35_D_N_TORRES.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "04-06",
+      "name": "Joe Courtney",
+      "role": "house",
+      "partyLine": "Democratic · Connecticut",
+      "office": "House district 2",
+      "href": "ct.html#district-2-joe-courtney",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CT_H02_D_J_COURTNEY.png",
+      "flag": "flags/ct.svg"
+    },
+    {
+      "date": "04-06",
+      "name": "Mike Ezell",
+      "role": "house",
+      "partyLine": "Republican · Mississippi",
+      "office": "House district 4",
+      "href": "ms.html#district-4-mike-ezell",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MS_H04_R_M_EZELL.png",
+      "flag": "flags/ms.svg"
+    },
+    {
+      "date": "04-07",
+      "name": "Lisa McClain",
+      "role": "house",
+      "partyLine": "Republican · Michigan",
+      "office": "House district 9",
+      "href": "mi.html#district-9-lisa-mcclain",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MI_H09_R_L_MCCLAIN.png",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "04-07",
+      "name": "Troy Nehls",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 22",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/N000026.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "04-07",
+      "name": "Yassamin Ansari",
+      "role": "house",
+      "partyLine": "Democratic · Arizona",
+      "office": "House district 3",
+      "href": "az.html#district-3-yassamin-ansari",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AZ_H03_D_Y_ANSARI.png",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "04-08",
+      "name": "Ron Johnson",
+      "role": "senate",
+      "partyLine": "Republican · Wisconsin",
+      "office": "Senate",
+      "href": "wi.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/J000293.jpg",
+      "flag": "flags/wi.svg"
+    },
+    {
+      "date": "04-09",
+      "name": "Clay Fuller",
+      "role": "house",
+      "partyLine": "Republican · Georgia",
+      "office": "House district 14",
+      "href": "ga.html#district-14-clay-fuller",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_H14_R_C_FULLER.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "04-10",
+      "name": "Kimberlyn King-Hinds",
+      "role": "house",
+      "partyLine": "Republican · Northern Mariana Islands",
+      "office": "House",
+      "href": "house.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000404.jpg",
+      "flag": "flags/us.svg"
+    },
+    {
+      "date": "04-12",
+      "name": "Jesús \"Chuy\" García",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 4",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/G000586.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "04-12",
+      "name": "Tim Walberg",
+      "role": "house",
+      "partyLine": "Republican · Michigan",
+      "office": "House district 5",
+      "href": "mi.html#district-5-tim-walberg",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MI_H05_R_T_WALBERG.png",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "04-13",
+      "name": "Jim Costa",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 21",
+      "href": "ca.html#district-21-jim-costa",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H21_D_J_COSTA.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "04-13",
+      "name": "Jimmy Patronis",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 1",
+      "href": "fl.html#district-1-jimmy-patronis",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H01_R_J_PATRONIS.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "04-14",
+      "name": "David Valadao",
+      "role": "house",
+      "partyLine": "Republican · California",
+      "office": "House district 22",
+      "href": "ca.html#district-22-david-valadao",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H22_R_D_VALADAO.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "04-16",
+      "name": "Frank Mrvan",
+      "role": "house",
+      "partyLine": "Democratic · Indiana",
+      "office": "House district 1",
+      "href": "in.html#district-1-frank-mrvan",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/IN_H01_D_F_MRVAN.png",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "04-16",
+      "name": "Sam Liccardo",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 16",
+      "href": "ca.html#district-16-sam-liccardo",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H16_D_S_LICCARDO.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "04-17",
+      "name": "Brad Knott",
+      "role": "house",
+      "partyLine": "Republican · North Carolina",
+      "office": "House district 13",
+      "href": "nc.html#district-13-brad-knott",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H13_R_B_KNOTT.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "04-17",
+      "name": "Guy Reschenthaler",
+      "role": "house",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "House district 14",
+      "href": "pa.html#district-14-guy-reschenthaler",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H14_R_G_RESCHENTHALER.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "04-18",
+      "name": "Christian Menefee",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 18",
+      "href": "tx.html#district-18-christian-menefee",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H18_D_C_MENEFEE.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "04-18",
+      "name": "Gwen Moore",
+      "role": "house",
+      "partyLine": "Democratic · Wisconsin",
+      "office": "House district 4",
+      "href": "wi.html#district-4-gwen-moore",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WI_H04_D_G_MOORE.png",
+      "flag": "flags/wi.svg"
+    },
+    {
+      "date": "04-18",
+      "name": "Robert Latta",
+      "role": "house",
+      "partyLine": "Republican · Ohio",
+      "office": "House district 5",
+      "href": "oh.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000566.jpg",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "04-20",
+      "name": "Randy Fine",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 6",
+      "href": "fl.html#district-6-randy-fine",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H06_R_R_FINE.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "04-22",
+      "name": "Robert Bresnahan, Jr.",
+      "role": "house",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "House district 8",
+      "href": "pa.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001327.jpg",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "04-23",
+      "name": "Everton Blair Jr.",
+      "role": "house",
+      "partyLine": "Democratic · Georgia",
+      "office": "House district 13",
+      "href": "ga.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001328.jpg",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "04-24",
+      "name": "Mark Harris",
+      "role": "house",
+      "partyLine": "Republican · North Carolina",
+      "office": "House district 8",
+      "href": "nc.html#district-8-mark-harris",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H08_R_M_HARRIS.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "04-27",
+      "name": "Daniel Webster",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 11",
+      "href": "fl.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/W000806.jpg",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "04-27",
+      "name": "Cory Booker",
+      "role": "senate",
+      "partyLine": "Democratic · New Jersey",
+      "office": "Senate",
+      "href": "nj.html#senate-cory-booker",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NJ_S00_D_C_BOOKER.png",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "04-27",
+      "name": "James Justice",
+      "role": "senate",
+      "partyLine": "Republican · West Virginia",
+      "office": "Senate",
+      "href": "wv.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/J000312.jpg",
+      "flag": "flags/wv.svg"
+    },
+    {
+      "date": "04-28",
+      "name": "Tom Cole",
+      "role": "house",
+      "partyLine": "Republican · Oklahoma",
+      "office": "House district 4",
+      "href": "ok.html#district-4-tom-cole",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OK_H04_R_T_COLE.png",
+      "flag": "flags/ok.svg"
+    },
+    {
+      "date": "04-29",
+      "name": "Joseph Morelle",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 25",
+      "href": "ny.html#district-25-joseph-morelle",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H25_D_J_MORELLE.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "04-29",
+      "name": "Steven Horsford",
+      "role": "house",
+      "partyLine": "Democratic · Nevada",
+      "office": "House district 4",
+      "href": "nv.html#district-4-steven-horsford",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NV_H04_D_S_HORSFORD.png",
+      "flag": "flags/nv.svg"
+    },
+    {
+      "date": "04-30",
+      "name": "Bobby Scott",
+      "role": "house",
+      "partyLine": "Democratic · Virginia",
+      "office": "House district 3",
+      "href": "va.html#district-3-bobby-scott",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H03_D_B_SCOTT.png",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "04-30",
+      "name": "Robin Kelly",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 2",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000385.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "04-30",
+      "name": "Tom Barrett",
+      "role": "house",
+      "partyLine": "Republican · Michigan",
+      "office": "House district 7",
+      "href": "mi.html#district-7-tom-barrett",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MI_H07_R_T_BARRETT.png",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "04-30",
+      "name": "William Timmons",
+      "role": "house",
+      "partyLine": "Republican · South Carolina",
+      "office": "House district 4",
+      "href": "sc.html#district-4-william-timmons",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/SC_H04_R_W_TIMMONS.png",
+      "flag": "flags/sc.svg"
+    },
+    {
+      "date": "05-02",
+      "name": "Julie Johnson",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 32",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/J000310.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "05-02",
+      "name": "Peter Welch",
+      "role": "senate",
+      "partyLine": "Democratic · Vermont",
+      "office": "Senate",
+      "href": "vt.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/W000800.jpg",
+      "flag": "flags/vt.svg"
+    },
+    {
+      "date": "05-03",
+      "name": "Tony Wied",
+      "role": "house",
+      "partyLine": "Republican · Wisconsin",
+      "office": "House district 8",
+      "href": "wi.html#district-8-tony-wied",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WI_H08_R_T_WIED.png",
+      "flag": "flags/wi.svg"
+    },
+    {
+      "date": "05-03",
+      "name": "James Risch",
+      "role": "senate",
+      "partyLine": "Republican · Idaho",
+      "office": "Senate",
+      "href": "id.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/R000584.jpg",
+      "flag": "flags/id.svg"
+    },
+    {
+      "date": "05-03",
+      "name": "Ron Wyden",
+      "role": "senate",
+      "partyLine": "Democratic · Oregon",
+      "office": "Senate",
+      "href": "or.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/W000779.jpg",
+      "flag": "flags/or.svg"
+    },
+    {
+      "date": "05-04",
+      "name": "Becca Balint",
+      "role": "house",
+      "partyLine": "Democratic · Vermont",
+      "office": "House",
+      "href": "vt.html#district-1-becca-balint",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VT_H01_D_B_BALINT.png",
+      "flag": "flags/vt.svg"
+    },
+    {
+      "date": "05-04",
+      "name": "Greg Casar",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 35",
+      "href": "tx.html#district-37-greg-casar",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H37_D_G_CASAR.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "05-04",
+      "name": "Ronny Jackson",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 13",
+      "href": "tx.html#district-13-ronny-jackson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H13_R_R_JACKSON.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "05-04",
+      "name": "Zachary Nunn",
+      "role": "house",
+      "partyLine": "Republican · Iowa",
+      "office": "House district 3",
+      "href": "ia.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/N000193.jpg",
+      "flag": "flags/ia.svg"
+    },
+    {
+      "date": "05-06",
+      "name": "Anna Paulina Luna",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 13",
+      "href": "fl.html#district-13-anna-paulina-luna",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H13_R_A_LUNA.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "05-07",
+      "name": "Valerie Foushee",
+      "role": "house",
+      "partyLine": "Democratic · North Carolina",
+      "office": "House district 4",
+      "href": "nc.html#district-4-valerie-foushee",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H04_D_V_FOUSHEE.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "05-08",
+      "name": "Dale Strong",
+      "role": "house",
+      "partyLine": "Republican · Alabama",
+      "office": "House district 5",
+      "href": "al.html#district-5-dale-strong",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AL_H05_R_D_STRONG.png",
+      "flag": "flags/al.svg"
+    },
+    {
+      "date": "05-08",
+      "name": "John Moolenaar",
+      "role": "house",
+      "partyLine": "Republican · Michigan",
+      "office": "House district 2",
+      "href": "mi.html#district-2-john-moolenaar",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MI_H02_R_J_MOOLENAAR.png",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "05-08",
+      "name": "Vern Buchanan",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 16",
+      "href": "fl.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001260.jpg",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "05-10",
+      "name": "Mike Kelly",
+      "role": "house",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "House district 16",
+      "href": "pa.html#district-16-mike-kelly",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H16_R_M_KELLY.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "05-10",
+      "name": "Pete Stauber",
+      "role": "house",
+      "partyLine": "Republican · Minnesota",
+      "office": "House district 8",
+      "href": "mn.html#district-8-pete-stauber",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MN_H08_R_P_STAUBER.png",
+      "flag": "flags/mn.svg"
+    },
+    {
+      "date": "05-10",
+      "name": "Cindy Hyde-Smith",
+      "role": "senate",
+      "partyLine": "Republican · Mississippi",
+      "office": "Senate",
+      "href": "ms.html#senate-cindy-hyde-smith",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MS_S00_R_C_HYDESMITH.png",
+      "flag": "flags/ms.svg"
+    },
+    {
+      "date": "05-10",
+      "name": "John Curtis",
+      "role": "senate",
+      "partyLine": "Republican · Utah",
+      "office": "Senate",
+      "href": "ut.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001114.jpg",
+      "flag": "flags/ut.svg"
+    },
+    {
+      "date": "05-11",
+      "name": "Pablo José Hernández",
+      "role": "house",
+      "partyLine": "Democratic · Puerto Rico",
+      "office": "House",
+      "href": "house.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/H001103.jpg",
+      "flag": "flags/us.svg"
+    },
+    {
+      "date": "05-13",
+      "name": "Joe Neguse",
+      "role": "house",
+      "partyLine": "Democratic · Colorado",
+      "office": "House district 2",
+      "href": "co.html#district-2-joe-neguse",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CO_H02_D_J_NEGUSE.png",
+      "flag": "flags/co.svg"
+    },
+    {
+      "date": "05-13",
+      "name": "Michael Cloud",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 27",
+      "href": "tx.html#district-27-michael-cloud",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H27_R_M_CLOUD.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "05-13",
+      "name": "Stacey Plaskett",
+      "role": "house",
+      "partyLine": "Democratic · U.S. Virgin Islands",
+      "office": "House",
+      "href": "house.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/P000610.jpg",
+      "flag": "flags/us.svg"
+    },
+    {
+      "date": "05-13",
+      "name": "Tom Cotton",
+      "role": "senate",
+      "partyLine": "Republican · Arkansas",
+      "office": "Senate",
+      "href": "ar.html#senate-tom-cotton",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AR_S00_R_T_COTTON.png",
+      "flag": "flags/ar.svg"
+    },
+    {
+      "date": "05-14",
+      "name": "Gary Palmer",
+      "role": "house",
+      "partyLine": "Republican · Alabama",
+      "office": "House district 6",
+      "href": "al.html#district-6-gary-palmer",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AL_H06_R_G_PALMER.png",
+      "flag": "flags/al.svg"
+    },
+    {
+      "date": "05-15",
+      "name": "Abraham Hamadeh",
+      "role": "house",
+      "partyLine": "Republican · Arizona",
+      "office": "House district 8",
+      "href": "az.html#district-8-abraham-hamadeh",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AZ_H08_R_A_HAMADEH.png",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "05-16",
+      "name": "Dwight Evans",
+      "role": "house",
+      "partyLine": "Democratic · Pennsylvania",
+      "office": "House district 3",
+      "href": "pa.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/E000296.jpg",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "05-16",
+      "name": "Lois Frankel",
+      "role": "house",
+      "partyLine": "Democratic · Florida",
+      "office": "House district 22",
+      "href": "fl.html#district-23-lois-frankel",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H23_D_L_FRANKEL.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "05-19",
+      "name": "Gregory Steube",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 17",
+      "href": "fl.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001214.jpg",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "05-20",
+      "name": "Nellie Pou",
+      "role": "house",
+      "partyLine": "Democratic · New Jersey",
+      "office": "House district 9",
+      "href": "nj.html#district-9-nellie-pou",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NJ_H09_D_N_POU.png",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "05-20",
+      "name": "Mike Crapo",
+      "role": "senate",
+      "partyLine": "Republican · Idaho",
+      "office": "Senate",
+      "href": "id.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C000880.jpg",
+      "flag": "flags/id.svg"
+    },
+    {
+      "date": "05-22",
+      "name": "Celeste Maloy",
+      "role": "house",
+      "partyLine": "Republican · Utah",
+      "office": "House district 2",
+      "href": "ut.html#district-3-celeste-maloy",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/UT_H03_R_C_MALOY.png",
+      "flag": "flags/ut.svg"
+    },
+    {
+      "date": "05-22",
+      "name": "Sharice Davids",
+      "role": "house",
+      "partyLine": "Democratic · Kansas",
+      "office": "House district 3",
+      "href": "ks.html#district-3-sharice-davids",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KS_H03_D_S_DAVIDS.png",
+      "flag": "flags/ks.svg"
+    },
+    {
+      "date": "05-22",
+      "name": "Lisa Murkowski",
+      "role": "senate",
+      "partyLine": "Republican · Alaska",
+      "office": "Senate",
+      "href": "ak.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001153.jpg",
+      "flag": "flags/ak.svg"
+    },
+    {
+      "date": "05-23",
+      "name": "Dina Titus",
+      "role": "house",
+      "partyLine": "Democratic · Nevada",
+      "office": "House district 1",
+      "href": "nv.html#district-1-dina-titus",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NV_H01_D_D_TITUS.png",
+      "flag": "flags/nv.svg"
+    },
+    {
+      "date": "05-24",
+      "name": "Steve Cohen",
+      "role": "house",
+      "partyLine": "Democratic · Tennessee",
+      "office": "House district 9",
+      "href": "tn.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001068.jpg",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "05-25",
+      "name": "Amy Klobuchar",
+      "role": "senate",
+      "partyLine": "Democratic · Minnesota",
+      "office": "Senate",
+      "href": "mn.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000367.jpg",
+      "flag": "flags/mn.svg"
+    },
+    {
+      "date": "05-26",
+      "name": "Janice Schakowsky",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 9",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001145.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "05-27",
+      "name": "Alma Adams",
+      "role": "house",
+      "partyLine": "Democratic · North Carolina",
+      "office": "House district 12",
+      "href": "nc.html#district-12-alma-adams",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H12_D_A_ADAMS.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "05-27",
+      "name": "Scott Perry",
+      "role": "house",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "House district 10",
+      "href": "pa.html#district-10-scott-perry",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H10_R_S_PERRY.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "05-28",
+      "name": "April McClain Delaney",
+      "role": "house",
+      "partyLine": "Democratic · Maryland",
+      "office": "House district 6",
+      "href": "md.html#district-6-april-mcclain-delaney",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MD_H06_D_A_MCCLAINDELANEY.png",
+      "flag": "flags/md.svg"
+    },
+    {
+      "date": "05-29",
+      "name": "Jerry Moran",
+      "role": "senate",
+      "partyLine": "Republican · Kansas",
+      "office": "Senate",
+      "href": "ks.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M000934.jpg",
+      "flag": "flags/ks.svg"
+    },
+    {
+      "date": "05-30",
+      "name": "Brad Finstad",
+      "role": "house",
+      "partyLine": "Republican · Minnesota",
+      "office": "House district 1",
+      "href": "mn.html#district-1-brad-finstad",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MN_H01_R_B_FINSTAD.png",
+      "flag": "flags/mn.svg"
+    },
+    {
+      "date": "06-01",
+      "name": "Lucy McBath",
+      "role": "house",
+      "partyLine": "Democratic · Georgia",
+      "office": "House district 6",
+      "href": "ga.html#district-6-lucy-mcbath",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_H06_D_L_MCBATH.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "06-02",
+      "name": "Delia Ramirez",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 3",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/R000617.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "06-04",
+      "name": "Chris Pappas",
+      "role": "house",
+      "partyLine": "Democratic · New Hampshire",
+      "office": "House district 1",
+      "href": "nh.html#senate-chris-pappas",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NH_S00_D_C_PAPPAS.png",
+      "flag": "flags/nh.svg"
+    },
+    {
+      "date": "06-04",
+      "name": "James Baird",
+      "role": "house",
+      "partyLine": "Republican · Indiana",
+      "office": "House district 4",
+      "href": "in.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001307.jpg",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "06-04",
+      "name": "Mike Lee",
+      "role": "senate",
+      "partyLine": "Republican · Utah",
+      "office": "Senate",
+      "href": "ut.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000577.jpg",
+      "flag": "flags/ut.svg"
+    },
+    {
+      "date": "06-05",
+      "name": "Chrissy Houlahan",
+      "role": "house",
+      "partyLine": "Democratic · Pennsylvania",
+      "office": "House district 6",
+      "href": "pa.html#district-6-chrissy-houlahan",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H06_D_C_HOULAHAN.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "06-06",
+      "name": "Eugene Vindman",
+      "role": "house",
+      "partyLine": "Democratic · Virginia",
+      "office": "House district 7",
+      "href": "va.html#district-7-eugene-vindman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H07_D_E_VINDMAN.png",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "06-06",
+      "name": "Madeleine Dean",
+      "role": "house",
+      "partyLine": "Democratic · Pennsylvania",
+      "office": "House district 4",
+      "href": "pa.html#district-4-madeleine-dean",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H04_D_M_DEAN.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "06-06",
+      "name": "Marie Gluesenkamp Perez",
+      "role": "house",
+      "partyLine": "Democratic · Washington",
+      "office": "House district 3",
+      "href": "wa.html#district-3-marie-gluesenkamp-perez",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H03_D_M_GLUESENKAMPPEREZ.png",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "06-06",
+      "name": "Marsha Blackburn",
+      "role": "senate",
+      "partyLine": "Republican · Tennessee",
+      "office": "Senate",
+      "href": "tn.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001243.jpg",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "06-07",
+      "name": "Ben Ray Lujan",
+      "role": "senate",
+      "partyLine": "Democratic · New Mexico",
+      "office": "Senate",
+      "href": "nm.html#senate-ben-ray-lujan",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NM_S00_D_B_LUJAN.png",
+      "flag": "flags/nm.svg"
+    },
+    {
+      "date": "06-08",
+      "name": "John James",
+      "role": "house",
+      "partyLine": "Republican · Michigan",
+      "office": "House district 10",
+      "href": "mi.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/J000307.jpg",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "06-08",
+      "name": "Ken Calvert",
+      "role": "house",
+      "partyLine": "Republican · California",
+      "office": "House district 41",
+      "href": "ca.html#district-40-ken-calvert",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H40_R_K_CALVERT.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "06-12",
+      "name": "Mark Amodei",
+      "role": "house",
+      "partyLine": "Republican · Nevada",
+      "office": "House district 2",
+      "href": "nv.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/A000369.jpg",
+      "flag": "flags/nv.svg"
+    },
+    {
+      "date": "06-12",
+      "name": "Darline Graham",
+      "role": "senate",
+      "partyLine": "Republican · South Carolina",
+      "office": "Senate",
+      "href": "sc.html#senate-darline-graham",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/SC_S00_R_D_GRAHAM.png",
+      "flag": "flags/sc.svg"
+    },
+    {
+      "date": "06-13",
+      "name": "Eleanor Holmes Norton",
+      "role": "house",
+      "partyLine": "Democratic · District of Columbia",
+      "office": "House",
+      "href": "dc.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/N000147.jpg",
+      "flag": "flags/dc.svg"
+    },
+    {
+      "date": "06-13",
+      "name": "Jerrold Nadler",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 12",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/N000002.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "06-14",
+      "name": "Steny Hoyer",
+      "role": "house",
+      "partyLine": "Democratic · Maryland",
+      "office": "House district 5",
+      "href": "md.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/H000874.jpg",
+      "flag": "flags/md.svg"
+    },
+    {
+      "date": "06-14",
+      "name": "Donald J. Trump",
+      "role": "president",
+      "partyLine": "Republican",
+      "office": "President",
+      "href": "house.html#executive-g412733",
+      "photo": "photos/presidents/donald-trump.jpg",
+      "flag": "flags/us.svg"
+    },
+    {
+      "date": "06-15",
+      "name": "Adam Smith",
+      "role": "house",
+      "partyLine": "Democratic · Washington",
+      "office": "House district 9",
+      "href": "wa.html#district-9-adam-smith",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H09_D_A_SMITH.png",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "06-15",
+      "name": "Kevin Mullin",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 15",
+      "href": "ca.html#district-15-kevin-mullin",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H15_D_K_MULLIN.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "06-15",
+      "name": "Rick Larsen",
+      "role": "house",
+      "partyLine": "Democratic · Washington",
+      "office": "House district 2",
+      "href": "wa.html#district-2-rick-larsen",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H02_D_R_LARSEN.png",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "06-16",
+      "name": "Jason Smith",
+      "role": "house",
+      "partyLine": "Republican · Missouri",
+      "office": "House district 8",
+      "href": "mo.html#district-8-jason-smith",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H08_R_J_SMITH.png",
+      "flag": "flags/mo.svg"
+    },
+    {
+      "date": "06-17",
+      "name": "Marcy Kaptur",
+      "role": "house",
+      "partyLine": "Democratic · Ohio",
+      "office": "House district 9",
+      "href": "oh.html#district-9-marcy-kaptur",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H09_D_M_KAPTUR.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "06-17",
+      "name": "Scott Peters",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 50",
+      "href": "ca.html#district-50-scott-peters",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H50_D_S_PETERS.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "06-18",
+      "name": "Andrew Ogles",
+      "role": "house",
+      "partyLine": "Republican · Tennessee",
+      "office": "House district 5",
+      "href": "tn.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/O000175.jpg",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "06-18",
+      "name": "Jennifer Kiggans",
+      "role": "house",
+      "partyLine": "Republican · Virginia",
+      "office": "House district 2",
+      "href": "va.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000399.jpg",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "06-18",
+      "name": "Paul Tonko",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 20",
+      "href": "ny.html#district-20-paul-tonko",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H20_D_P_TONKO.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "06-19",
+      "name": "Josh Brecheen",
+      "role": "house",
+      "partyLine": "Republican · Oklahoma",
+      "office": "House district 2",
+      "href": "ok.html#district-2-josh-brecheen",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OK_H02_R_J_BRECHEEN.png",
+      "flag": "flags/ok.svg"
+    },
+    {
+      "date": "06-19",
+      "name": "Pete Aguilar",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 33",
+      "href": "ca.html#district-33-pete-aguilar",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H33_D_P_AGUILAR.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "06-20",
+      "name": "Deborah Ross",
+      "role": "house",
+      "partyLine": "Democratic · North Carolina",
+      "office": "House district 2",
+      "href": "nc.html#district-2-deborah-ross",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H02_D_D_ROSS.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "06-20",
+      "name": "Donald Beyer Jr.",
+      "role": "house",
+      "partyLine": "Democratic · Virginia",
+      "office": "House district 8",
+      "href": "va.html#district-8-donald-beyer-jr",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H08_D_D_BEYER.png",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "06-20",
+      "name": "LaMonica McIver",
+      "role": "house",
+      "partyLine": "Democratic · New Jersey",
+      "office": "House district 10",
+      "href": "nj.html#district-10-lamonica-mciver",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NJ_H10_D_L_MCIVER.png",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "06-20",
+      "name": "Ralph Norman",
+      "role": "house",
+      "partyLine": "Republican · South Carolina",
+      "office": "House district 5",
+      "href": "sc.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/N000190.jpg",
+      "flag": "flags/sc.svg"
+    },
+    {
+      "date": "06-20",
+      "name": "Eric Schmitt",
+      "role": "senate",
+      "partyLine": "Republican · Missouri",
+      "office": "Senate",
+      "href": "mo.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001227.jpg",
+      "flag": "flags/mo.svg"
+    },
+    {
+      "date": "06-21",
+      "name": "Pat Harrigan",
+      "role": "house",
+      "partyLine": "Republican · North Carolina",
+      "office": "House district 10",
+      "href": "nc.html#district-10-pat-harrigan",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H10_R_P_HARRIGAN.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "06-22",
+      "name": "Blake Moore",
+      "role": "house",
+      "partyLine": "Republican · Utah",
+      "office": "House district 1",
+      "href": "ut.html#district-2-blake-moore",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/UT_H02_R_B_MOORE.png",
+      "flag": "flags/ut.svg"
+    },
+    {
+      "date": "06-22",
+      "name": "Adam Schiff",
+      "role": "senate",
+      "partyLine": "Democratic · California",
+      "office": "Senate",
+      "href": "ca.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001150.jpg",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "06-22",
+      "name": "Elizabeth Warren",
+      "role": "senate",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "Senate",
+      "href": "ma.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/W000817.jpg",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "06-23",
+      "name": "Nick LaLota",
+      "role": "house",
+      "partyLine": "Republican · New York",
+      "office": "House district 1",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000598.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "06-24",
+      "name": "Haley Stevens",
+      "role": "house",
+      "partyLine": "Democratic · Michigan",
+      "office": "House district 11",
+      "href": "mi.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001215.jpg",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "06-24",
+      "name": "Shontel Brown",
+      "role": "house",
+      "partyLine": "Democratic · Ohio",
+      "office": "House district 11",
+      "href": "oh.html#district-11-shontel-brown",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H11_D_S_BROWN.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "06-27",
+      "name": "Ashley Hinson",
+      "role": "house",
+      "partyLine": "Republican · Iowa",
+      "office": "House district 2",
+      "href": "ia.html#senate-ashley-hinson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/IA_S00_R_A_HINSON.png",
+      "flag": "flags/ia.svg"
+    },
+    {
+      "date": "06-29",
+      "name": "Virginia Foxx",
+      "role": "house",
+      "partyLine": "Republican · North Carolina",
+      "office": "House district 5",
+      "href": "nc.html#district-5-virginia-foxx",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H05_R_V_FOXX.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "07-01",
+      "name": "Riley Moore",
+      "role": "house",
+      "partyLine": "Republican · West Virginia",
+      "office": "House district 2",
+      "href": "wv.html#district-2-riley-moore",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WV_H02_R_R_MOORE.png",
+      "flag": "flags/wv.svg"
+    },
+    {
+      "date": "07-01",
+      "name": "Teresa Leger Fernandez",
+      "role": "house",
+      "partyLine": "Democratic · New Mexico",
+      "office": "House district 3",
+      "href": "nm.html#district-3-teresa-leger-fernandez",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NM_H03_D_T_LEGERFERNANDEZ.png",
+      "flag": "flags/nm.svg"
+    },
+    {
+      "date": "07-01",
+      "name": "Joni Ernst",
+      "role": "senate",
+      "partyLine": "Republican · Iowa",
+      "office": "Senate",
+      "href": "ia.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/E000295.jpg",
+      "flag": "flags/ia.svg"
+    },
+    {
+      "date": "07-02",
+      "name": "Elise Stefanik",
+      "role": "house",
+      "partyLine": "Republican · New York",
+      "office": "House district 21",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001196.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "07-02",
+      "name": "Mike Collins",
+      "role": "house",
+      "partyLine": "Republican · Georgia",
+      "office": "House district 10",
+      "href": "ga.html#senate-mike-collins",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_S00_R_M_COLLINS.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "07-02",
+      "name": "Randy Weber",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 14",
+      "href": "tx.html#district-14-randy-weber",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H14_R_R_WEBER.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "07-03",
+      "name": "Glenn Grothman",
+      "role": "house",
+      "partyLine": "Republican · Wisconsin",
+      "office": "House district 6",
+      "href": "wi.html#district-6-glenn-grothman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WI_H06_R_G_GROTHMAN.png",
+      "flag": "flags/wi.svg"
+    },
+    {
+      "date": "07-05",
+      "name": "Darin LaHood",
+      "role": "house",
+      "partyLine": "Republican · Illinois",
+      "office": "House district 16",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000585.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "07-05",
+      "name": "Jim Himes",
+      "role": "house",
+      "partyLine": "Democratic · Connecticut",
+      "office": "House district 4",
+      "href": "ct.html#district-4-jim-himes",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CT_H04_D_J_HIMES.png",
+      "flag": "flags/ct.svg"
+    },
+    {
+      "date": "07-05",
+      "name": "Roger Wicker",
+      "role": "senate",
+      "partyLine": "Republican · Mississippi",
+      "office": "Senate",
+      "href": "ms.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/W000437.jpg",
+      "flag": "flags/ms.svg"
+    },
+    {
+      "date": "07-07",
+      "name": "Judy Chu",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 28",
+      "href": "ca.html#district-28-judy-chu",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H28_D_J_CHU.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "07-08",
+      "name": "John Mannion",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 22",
+      "href": "ny.html#district-22-john-mannion",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H22_D_J_MANNION.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "07-10",
+      "name": "Brian Mast",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 21",
+      "href": "fl.html#district-21-brian-mast",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H21_R_B_MAST.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "07-10",
+      "name": "Dan Newhouse",
+      "role": "house",
+      "partyLine": "Republican · Washington",
+      "office": "House district 4",
+      "href": "wa.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/N000189.jpg",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "07-10",
+      "name": "Laura Gillen",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 4",
+      "href": "ny.html#district-4-laura-gillen",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H04_D_L_GILLEN.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "07-10",
+      "name": "Tom McClintock",
+      "role": "house",
+      "partyLine": "Republican · California",
+      "office": "House district 5",
+      "href": "ca.html#district-5-tom-mcclintock",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H05_R_T_MCCLINTOCK.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "07-10",
+      "name": "Elissa Slotkin",
+      "role": "senate",
+      "partyLine": "Democratic · Michigan",
+      "office": "Senate",
+      "href": "mi.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001208.jpg",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "07-11",
+      "name": "Kristen McDonald Rivet",
+      "role": "house",
+      "partyLine": "Democratic · Michigan",
+      "office": "House district 8",
+      "href": "mi.html#district-8-kristen-mcdonald-rivet",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MI_H08_D_K_MCDONALDRIVET.png",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "07-11",
+      "name": "Alan Armstrong",
+      "role": "senate",
+      "partyLine": "Republican · Oklahoma",
+      "office": "Senate",
+      "href": "ok.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/A000383.jpg",
+      "flag": "flags/ok.svg"
+    },
+    {
+      "date": "07-11",
+      "name": "Ed Markey",
+      "role": "senate",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "Senate",
+      "href": "ma.html#senate-ed-markey",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MA_S00_D_E_MARKEY.png",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "07-12",
+      "name": "Betty McCollum",
+      "role": "house",
+      "partyLine": "Democratic · Minnesota",
+      "office": "House district 4",
+      "href": "mn.html#district-4-betty-mccollum",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MN_H04_D_B_MCCOLLUM.png",
+      "flag": "flags/mn.svg"
+    },
+    {
+      "date": "07-12",
+      "name": "Robert Menendez",
+      "role": "house",
+      "partyLine": "Democratic · New Jersey",
+      "office": "House district 8",
+      "href": "nj.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001226.jpg",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "07-12",
+      "name": "Andy Kim",
+      "role": "senate",
+      "partyLine": "Democratic · New Jersey",
+      "office": "Senate",
+      "href": "nj.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000394.jpg",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "07-13",
+      "name": "Chris Deluzio",
+      "role": "house",
+      "partyLine": "Democratic · Pennsylvania",
+      "office": "House district 17",
+      "href": "pa.html#district-17-chris-deluzio",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H17_D_C_DELUZIO.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "07-16",
+      "name": "Mike Rogers",
+      "role": "house",
+      "partyLine": "Republican · Alabama",
+      "office": "House district 3",
+      "href": "al.html#district-3-mike-rogers",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AL_H03_R_M_ROGERS.png",
+      "flag": "flags/al.svg"
+    },
+    {
+      "date": "07-16",
+      "name": "Jim Banks",
+      "role": "senate",
+      "partyLine": "Republican · Indiana",
+      "office": "Senate",
+      "href": "in.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001299.jpg",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "07-17",
+      "name": "Katherine Clark",
+      "role": "house",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "House district 5",
+      "href": "ma.html#district-5-katherine-clark",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MA_H05_D_K_CLARK.png",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "07-18",
+      "name": "James Moylan",
+      "role": "house",
+      "partyLine": "Republican · Guam",
+      "office": "House",
+      "href": "house.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001219.jpg",
+      "flag": "flags/us.svg"
+    },
+    {
+      "date": "07-19",
+      "name": "Raja Krishnamoorthi",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 8",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000391.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "07-19",
+      "name": "Ron Estes",
+      "role": "house",
+      "partyLine": "Republican · Kansas",
+      "office": "House district 4",
+      "href": "ks.html#district-4-ron-estes",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KS_H04_R_R_ESTES.png",
+      "flag": "flags/ks.svg"
+    },
+    {
+      "date": "07-20",
+      "name": "Sydney Kamlager-Dove",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 37",
+      "href": "ca.html#district-37-sydney-kamlager-dove",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H37_D_S_KAMLAGERDOVE.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "07-21",
+      "name": "Jim Clyburn",
+      "role": "house",
+      "partyLine": "Democratic · South Carolina",
+      "office": "House district 6",
+      "href": "sc.html#district-6-jim-clyburn",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/SC_H06_D_J_CLYBURN.png",
+      "flag": "flags/sc.svg"
+    },
+    {
+      "date": "07-21",
+      "name": "John Barrasso",
+      "role": "senate",
+      "partyLine": "Republican · Wyoming",
+      "office": "Senate",
+      "href": "wy.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001261.jpg",
+      "flag": "flags/wy.svg"
+    },
+    {
+      "date": "07-22",
+      "name": "John Larson",
+      "role": "house",
+      "partyLine": "Democratic · Connecticut",
+      "office": "House district 1",
+      "href": "ct.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000557.jpg",
+      "flag": "flags/ct.svg"
+    },
+    {
+      "date": "07-22",
+      "name": "Nathaniel Moran",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 1",
+      "href": "tx.html#district-1-nathaniel-moran",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H01_R_N_MORAN.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "07-22",
+      "name": "Robert Aderholt",
+      "role": "house",
+      "partyLine": "Republican · Alabama",
+      "office": "House district 4",
+      "href": "al.html#district-4-robert-aderholt",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AL_H04_R_R_ADERHOLT.png",
+      "flag": "flags/al.svg"
+    },
+    {
+      "date": "07-22",
+      "name": "Seth Magaziner",
+      "role": "house",
+      "partyLine": "Democratic · Rhode Island",
+      "office": "House district 2",
+      "href": "ri.html#district-2-seth-magaziner",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/RI_H02_D_S_MAGAZINER.png",
+      "flag": "flags/ri.svg"
+    },
+    {
+      "date": "07-23",
+      "name": "Raphael Warnock",
+      "role": "senate",
+      "partyLine": "Democratic · Georgia",
+      "office": "Senate",
+      "href": "ga.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/W000790.jpg",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "07-24",
+      "name": "Andy Barr",
+      "role": "house",
+      "partyLine": "Republican · Kentucky",
+      "office": "House district 6",
+      "href": "ky.html#senate-andy-barr",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_S00_R_A_BARR.png",
+      "flag": "flags/ky.svg"
+    },
+    {
+      "date": "07-24",
+      "name": "Rashida Tlaib",
+      "role": "house",
+      "partyLine": "Democratic · Michigan",
+      "office": "House district 12",
+      "href": "mi.html#district-12-rashida-tlaib",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MI_H12_D_R_TLAIB.png",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "07-25",
+      "name": "Jared Golden",
+      "role": "house",
+      "partyLine": "Democratic · Maine",
+      "office": "House district 2",
+      "href": "me.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/G000592.jpg",
+      "flag": "flags/me.svg"
+    },
+    {
+      "date": "07-27",
+      "name": "Glenn Thompson",
+      "role": "house",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "House district 15",
+      "href": "pa.html#district-15-glenn-thompson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H15_R_G_THOMPSON.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "07-28",
+      "name": "Gabe Evans",
+      "role": "house",
+      "partyLine": "Republican · Colorado",
+      "office": "House district 8",
+      "href": "co.html#district-8-gabe-evans",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CO_H08_R_G_EVANS.png",
+      "flag": "flags/co.svg"
+    },
+    {
+      "date": "07-29",
+      "name": "Diana DeGette",
+      "role": "house",
+      "partyLine": "Democratic · Colorado",
+      "office": "House district 1",
+      "href": "co.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/D000197.jpg",
+      "flag": "flags/co.svg"
+    },
+    {
+      "date": "07-30",
+      "name": "Cory Mills",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 7",
+      "href": "fl.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001216.jpg",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "07-30",
+      "name": "Nikema Williams",
+      "role": "house",
+      "partyLine": "Democratic · Georgia",
+      "office": "House district 5",
+      "href": "ga.html#district-5-nikema-williams",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_H05_D_N_WILLIAMS.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "07-31",
+      "name": "Joe Wilson",
+      "role": "house",
+      "partyLine": "Republican · South Carolina",
+      "office": "House district 2",
+      "href": "sc.html#district-2-joe-wilson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/SC_H02_R_J_WILSON.png",
+      "flag": "flags/sc.svg"
+    },
+    {
+      "date": "08-01",
+      "name": "Josh Harder",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 9",
+      "href": "ca.html#district-9-josh-harder",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H09_D_J_HARDER.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "08-02",
+      "name": "Burgess Owens",
+      "role": "house",
+      "partyLine": "Republican · Utah",
+      "office": "House district 4",
+      "href": "ut.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/O000086.jpg",
+      "flag": "flags/ut.svg"
+    },
+    {
+      "date": "08-02",
+      "name": "Jacky Rosen",
+      "role": "senate",
+      "partyLine": "Democratic · Nevada",
+      "office": "Senate",
+      "href": "nv.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/R000608.jpg",
+      "flag": "flags/nv.svg"
+    },
+    {
+      "date": "08-02",
+      "name": "J.D. Vance",
+      "role": "vice",
+      "partyLine": "Republican",
+      "office": "Vice President",
+      "href": "house.html#executive-V000137",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/V000137.jpg",
+      "flag": "flags/us.svg"
+    },
+    {
+      "date": "08-03",
+      "name": "Gabe Vasquez",
+      "role": "house",
+      "partyLine": "Democratic · New Mexico",
+      "office": "House district 2",
+      "href": "nm.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/V000136.jpg",
+      "flag": "flags/nm.svg"
+    },
+    {
+      "date": "08-03",
+      "name": "Ryan Mackenzie",
+      "role": "house",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "House district 7",
+      "href": "pa.html#district-7-ryan-mackenzie",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H07_R_R_MACKENZIE.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "08-03",
+      "name": "Christopher Murphy",
+      "role": "senate",
+      "partyLine": "Democratic · Connecticut",
+      "office": "Senate",
+      "href": "ct.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001169.jpg",
+      "flag": "flags/ct.svg"
+    },
+    {
+      "date": "08-04",
+      "name": "Hakeem Jeffries",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 8",
+      "href": "ny.html#district-8-hakeem-jeffries",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H08_D_H_JEFFRIES.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "08-07",
+      "name": "Chip Roy",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 21",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/R000614.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "08-09",
+      "name": "Sarah McBride",
+      "role": "house",
+      "partyLine": "Democratic · Delaware",
+      "office": "House",
+      "href": "de.html#district-1-sarah-mcbride",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/DE_H01_D_S_MCBRIDE.png",
+      "flag": "flags/de.svg"
+    },
+    {
+      "date": "08-09",
+      "name": "Roger Marshall",
+      "role": "senate",
+      "partyLine": "Republican · Kansas",
+      "office": "Senate",
+      "href": "ks.html#senate-roger-marshall",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KS_S00_R_R_MARSHALL.png",
+      "flag": "flags/ks.svg"
+    },
+    {
+      "date": "08-14",
+      "name": "Mark Pocan",
+      "role": "house",
+      "partyLine": "Democratic · Wisconsin",
+      "office": "House district 2",
+      "href": "wi.html#district-2-mark-pocan",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WI_H02_D_M_POCAN.png",
+      "flag": "flags/wi.svg"
+    },
+    {
+      "date": "08-14",
+      "name": "Bill Hagerty",
+      "role": "senate",
+      "partyLine": "Republican · Tennessee",
+      "office": "Senate",
+      "href": "tn.html#senate-bill-hagerty",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TN_S00_R_B_HAGERTY.png",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "08-15",
+      "name": "Jeff Hurd",
+      "role": "house",
+      "partyLine": "Republican · Colorado",
+      "office": "House district 3",
+      "href": "co.html#district-3-jeff-hurd",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CO_H03_R_J_HURD.png",
+      "flag": "flags/co.svg"
+    },
+    {
+      "date": "08-15",
+      "name": "Maxine Waters",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 43",
+      "href": "ca.html#district-43-maxine-waters",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H43_D_M_WATERS.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "08-15",
+      "name": "John Fetterman",
+      "role": "senate",
+      "partyLine": "Democratic · Pennsylvania",
+      "office": "Senate",
+      "href": "pa.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/F000479.jpg",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "08-16",
+      "name": "Don Bacon",
+      "role": "house",
+      "partyLine": "Republican · Nebraska",
+      "office": "House district 2",
+      "href": "ne.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001298.jpg",
+      "flag": "flags/ne.svg"
+    },
+    {
+      "date": "08-17",
+      "name": "David McCormick",
+      "role": "senate",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "Senate",
+      "href": "pa.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001243.jpg",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "08-18",
+      "name": "Jay Obernolte",
+      "role": "house",
+      "partyLine": "Republican · California",
+      "office": "House district 23",
+      "href": "ca.html#district-23-jay-obernolte",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H23_R_J_OBERNOLTE.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "08-19",
+      "name": "Analilia Mejia",
+      "role": "house",
+      "partyLine": "Democratic · New Jersey",
+      "office": "House district 11",
+      "href": "nj.html#district-11-analilia-mejia",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NJ_H11_D_A_MEJIA.png",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "08-19",
+      "name": "James Comer",
+      "role": "house",
+      "partyLine": "Republican · Kentucky",
+      "office": "House district 1",
+      "href": "ky.html#district-1-james-comer",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H01_R_J_COMER.png",
+      "flag": "flags/ky.svg"
+    },
+    {
+      "date": "08-19",
+      "name": "Pete Ricketts",
+      "role": "senate",
+      "partyLine": "Republican · Nebraska",
+      "office": "Senate",
+      "href": "ne.html#senate-pete-ricketts",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NE_S00_R_P_RICKETTS.png",
+      "flag": "flags/ne.svg"
+    },
+    {
+      "date": "08-20",
+      "name": "Bradley Scott Schneider",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 10",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001190.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "08-20",
+      "name": "Kathy Castor",
+      "role": "house",
+      "partyLine": "Democratic · Florida",
+      "office": "House district 14",
+      "href": "fl.html#district-14-kathy-castor",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H14_D_K_CASTOR.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "08-20",
+      "name": "Steve Daines",
+      "role": "senate",
+      "partyLine": "Republican · Montana",
+      "office": "Senate",
+      "href": "mt.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/D000618.jpg",
+      "flag": "flags/mt.svg"
+    },
+    {
+      "date": "08-23",
+      "name": "Kim Schrier",
+      "role": "house",
+      "partyLine": "Democratic · Washington",
+      "office": "House district 8",
+      "href": "wa.html#district-8-kim-schrier",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H08_D_K_SCHRIER.png",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "08-23",
+      "name": "Scott Franklin",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 18",
+      "href": "fl.html#district-18-scott-franklin",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H18_R_S_FRANKLIN.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "08-24",
+      "name": "Clay Higgins",
+      "role": "house",
+      "partyLine": "Republican · Louisiana",
+      "office": "House district 3",
+      "href": "la.html#district-3-clay-higgins",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H03_R_C_HIGGINS.png",
+      "flag": "flags/la.svg"
+    },
+    {
+      "date": "08-24",
+      "name": "John McGuire III",
+      "role": "house",
+      "partyLine": "Republican · Virginia",
+      "office": "House district 5",
+      "href": "va.html#district-5-john-mcguire-iii",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H05_R_J_MCGUIRE.png",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "08-24",
+      "name": "Todd Young",
+      "role": "senate",
+      "partyLine": "Republican · Indiana",
+      "office": "Senate",
+      "href": "in.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/Y000064.jpg",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "08-25",
+      "name": "Raul Ruiz",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 25",
+      "href": "ca.html#district-25-raul-ruiz",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H25_D_R_RUIZ.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "08-25",
+      "name": "Tim Burchett",
+      "role": "house",
+      "partyLine": "Republican · Tennessee",
+      "office": "House district 2",
+      "href": "tn.html#district-2-tim-burchett",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TN_H02_R_T_BURCHETT.png",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "08-27",
+      "name": "Mary Miller",
+      "role": "house",
+      "partyLine": "Republican · Illinois",
+      "office": "House district 15",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001211.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "08-28",
+      "name": "Julia Brownley",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 26",
+      "href": "ca.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001285.jpg",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "08-29",
+      "name": "Donald Davis",
+      "role": "house",
+      "partyLine": "Democratic · North Carolina",
+      "office": "House district 1",
+      "href": "nc.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/D000230.jpg",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "08-30",
+      "name": "Juan Ciscomani",
+      "role": "house",
+      "partyLine": "Republican · Arizona",
+      "office": "House district 6",
+      "href": "az.html#district-6-juan-ciscomani",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AZ_H06_R_J_CISCOMANI.png",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "08-30",
+      "name": "Mary Gay Scanlon",
+      "role": "house",
+      "partyLine": "Democratic · Pennsylvania",
+      "office": "House district 5",
+      "href": "pa.html#district-5-mary-gay-scanlon",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H05_D_M_SCANLON.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "08-30",
+      "name": "Thom Tillis",
+      "role": "senate",
+      "partyLine": "Republican · North Carolina",
+      "office": "Senate",
+      "href": "nc.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/T000476.jpg",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "08-31",
+      "name": "Marlin Stutzman",
+      "role": "house",
+      "partyLine": "Republican · Indiana",
+      "office": "House district 3",
+      "href": "in.html#district-3-marlin-stutzman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/IN_H03_R_M_STUTZMAN.png",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "08-31",
+      "name": "Thomas Suozzi",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 3",
+      "href": "ny.html#district-3-thomas-suozzi",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H03_D_T_SUOZZI.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "09-01",
+      "name": "Al Green",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 9",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/G000553.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "09-02",
+      "name": "John Rutherford",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 5",
+      "href": "fl.html#district-5-john-rutherford",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H05_R_J_RUTHERFORD.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "09-03",
+      "name": "Shomari Figures",
+      "role": "house",
+      "partyLine": "Democratic · Alabama",
+      "office": "House district 2",
+      "href": "al.html#district-2-shomari-figures",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AL_H02_D_S_FIGURES.png",
+      "flag": "flags/al.svg"
+    },
+    {
+      "date": "09-04",
+      "name": "Vicente Gonzalez",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 34",
+      "href": "tx.html#district-34-vicente-gonzalez",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H34_D_V_GONZALEZ.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "09-05",
+      "name": "Thomas Kean Jr.",
+      "role": "house",
+      "partyLine": "Republican · New Jersey",
+      "office": "House district 7",
+      "href": "nj.html#district-7-thomas-kean-jr",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NJ_H07_R_T_KEANJR.png",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "09-06",
+      "name": "Danny Davis",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 7",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/D000096.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "09-06",
+      "name": "Earl \"Buddy\" Carter",
+      "role": "house",
+      "partyLine": "Republican · Georgia",
+      "office": "House district 1",
+      "href": "ga.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001103.jpg",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "09-06",
+      "name": "Mariannette Miller-Meeks",
+      "role": "house",
+      "partyLine": "Republican · Iowa",
+      "office": "House district 1",
+      "href": "ia.html#district-1-mariannette-miller-meeks",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/IA_H01_R_M_MILLERMEEKS.png",
+      "flag": "flags/ia.svg"
+    },
+    {
+      "date": "09-06",
+      "name": "Sylvia Garcia",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 29",
+      "href": "tx.html#district-29-sylvia-garcia",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H29_D_S_GARCIA.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "09-06",
+      "name": "William Keating",
+      "role": "house",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "House district 9",
+      "href": "ma.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000375.jpg",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "09-08",
+      "name": "Mike Simpson",
+      "role": "house",
+      "partyLine": "Republican · Idaho",
+      "office": "House district 2",
+      "href": "id.html#district-2-mike-simpson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/ID_H02_R_M_SIMPSON.png",
+      "flag": "flags/id.svg"
+    },
+    {
+      "date": "09-08",
+      "name": "Bernard Sanders",
+      "role": "senate",
+      "partyLine": "Independent · Vermont",
+      "office": "Senate",
+      "href": "vt.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S000033.jpg",
+      "flag": "flags/vt.svg"
+    },
+    {
+      "date": "09-09",
+      "name": "Michael Lawler",
+      "role": "house",
+      "partyLine": "Republican · New York",
+      "office": "House district 17",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000599.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "09-09",
+      "name": "Sarah Elfreth",
+      "role": "house",
+      "partyLine": "Democratic · Maryland",
+      "office": "House district 3",
+      "href": "md.html#district-3-sarah-elfreth",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MD_H03_D_S_ELFRETH.png",
+      "flag": "flags/md.svg"
+    },
+    {
+      "date": "09-09",
+      "name": "Christopher Coons",
+      "role": "senate",
+      "partyLine": "Democratic · Delaware",
+      "office": "Senate",
+      "href": "de.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001088.jpg",
+      "flag": "flags/de.svg"
+    },
+    {
+      "date": "09-10",
+      "name": "Johnny Olszewski Jr.",
+      "role": "house",
+      "partyLine": "Democratic · Maryland",
+      "office": "House district 2",
+      "href": "md.html#district-2-johnny-olszewski-jr",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MD_H02_D_J_OLSZEWSKIJR.png",
+      "flag": "flags/md.svg"
+    },
+    {
+      "date": "09-10",
+      "name": "Cynthia Lummis",
+      "role": "senate",
+      "partyLine": "Republican · Wyoming",
+      "office": "Senate",
+      "href": "wy.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000571.jpg",
+      "flag": "flags/wy.svg"
+    },
+    {
+      "date": "09-13",
+      "name": "Ann Wagner",
+      "role": "house",
+      "partyLine": "Republican · Missouri",
+      "office": "House district 2",
+      "href": "mo.html#district-2-ann-wagner",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H02_R_A_WAGNER.png",
+      "flag": "flags/mo.svg"
+    },
+    {
+      "date": "09-13",
+      "name": "Chuck Edwards",
+      "role": "house",
+      "partyLine": "Republican · North Carolina",
+      "office": "House district 11",
+      "href": "nc.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/E000246.jpg",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "09-13",
+      "name": "Ro Khanna",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 17",
+      "href": "ca.html#district-17-ro-khanna",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H17_D_R_KHANNA.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "09-13",
+      "name": "Roger Williams",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 25",
+      "href": "tx.html#district-25-roger-williams",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H25_R_R_WILLIAMS.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "09-15",
+      "name": "Derrick Van Orden",
+      "role": "house",
+      "partyLine": "Republican · Wisconsin",
+      "office": "House district 3",
+      "href": "wi.html#district-3-derrick-van-orden",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WI_H03_R_D_VANORDEN.png",
+      "flag": "flags/wi.svg"
+    },
+    {
+      "date": "09-15",
+      "name": "Nanette Barragan",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 44",
+      "href": "ca.html#district-44-nanette-barragan",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H44_D_N_BARRAGAN.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "09-15",
+      "name": "Veronica Escobar",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 16",
+      "href": "tx.html#district-16-veronica-escobar",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H16_D_V_ESCOBAR.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "09-16",
+      "name": "Joaquin Castro",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 20",
+      "href": "tx.html#district-20-joaquin-castro",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H20_D_J_CASTRO.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "09-17",
+      "name": "Chuck Grassley",
+      "role": "senate",
+      "partyLine": "Republican · Iowa",
+      "office": "Senate",
+      "href": "ia.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/G000386.jpg",
+      "flag": "flags/ia.svg"
+    },
+    {
+      "date": "09-18",
+      "name": "Tommy Tuberville",
+      "role": "senate",
+      "partyLine": "Republican · Alabama",
+      "office": "Senate",
+      "href": "al.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/T000278.jpg",
+      "flag": "flags/al.svg"
+    },
+    {
+      "date": "09-19",
+      "name": "Henry Cuellar",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 28",
+      "href": "tx.html#district-28-henry-cuellar",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H28_D_H_CUELLAR.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "09-19",
+      "name": "Tim Scott",
+      "role": "senate",
+      "partyLine": "Republican · South Carolina",
+      "office": "Senate",
+      "href": "sc.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001184.jpg",
+      "flag": "flags/sc.svg"
+    },
+    {
+      "date": "09-21",
+      "name": "Pramila Jayapal",
+      "role": "house",
+      "partyLine": "Democratic · Washington",
+      "office": "House district 7",
+      "href": "wa.html#district-7-pramila-jayapal",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H07_D_P_JAYAPAL.png",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "09-23",
+      "name": "Adam Gray",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 13",
+      "href": "ca.html#district-13-adam-gray",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H13_D_A_GRAY.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "09-24",
+      "name": "Erin Houchin",
+      "role": "house",
+      "partyLine": "Republican · Indiana",
+      "office": "House district 9",
+      "href": "in.html#district-9-erin-houchin",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/IN_H09_R_E_HOUCHIN.png",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "09-24",
+      "name": "Jefferson Shreve",
+      "role": "house",
+      "partyLine": "Republican · Indiana",
+      "office": "House district 6",
+      "href": "in.html#district-6-jefferson-shreve",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/IN_H06_R_J_SHREVE.png",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "09-25",
+      "name": "Doris Matsui",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 7",
+      "href": "ca.html#district-7-doris-matsui",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H07_D_D_MATSUI.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "09-25",
+      "name": "Gregory Meeks",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 5",
+      "href": "ny.html#district-5-gregory-meeks",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H05_D_G_MEEKS.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "09-25",
+      "name": "Marilyn Strickland",
+      "role": "house",
+      "partyLine": "Democratic · Washington",
+      "office": "House district 10",
+      "href": "wa.html#district-10-marilyn-strickland",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H10_D_M_STRICKLAND.png",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "09-25",
+      "name": "Mario Diaz-Balart",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 26",
+      "href": "fl.html#district-26-mario-diaz-balart",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H26_R_M_DIAZBALART.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "09-26",
+      "name": "Barry Moore",
+      "role": "house",
+      "partyLine": "Republican · Alabama",
+      "office": "House district 1",
+      "href": "al.html#senate-barry-moore",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AL_S00_R_B_MOORE.png",
+      "flag": "flags/al.svg"
+    },
+    {
+      "date": "09-26",
+      "name": "Suhas Subramanyam",
+      "role": "house",
+      "partyLine": "Democratic · Virginia",
+      "office": "House district 10",
+      "href": "va.html#district-10-suhas-subramanyam",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H10_D_S_SUBRAMANYAM.png",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "09-27",
+      "name": "Adriano Espaillat",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 13",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/E000297.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "09-27",
+      "name": "Andrew Garbarino",
+      "role": "house",
+      "partyLine": "Republican · New York",
+      "office": "House district 2",
+      "href": "ny.html#district-2-andrew-garbarino",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H02_R_A_GARBARINO.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "09-27",
+      "name": "Debbie Wasserman Schultz",
+      "role": "house",
+      "partyLine": "Democratic · Florida",
+      "office": "House district 25",
+      "href": "fl.html#district-20-debbie-wasserman-schultz",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H20_D_D_WASSERMANSCHULTZ.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "09-27",
+      "name": "Ed Case",
+      "role": "house",
+      "partyLine": "Democratic · Hawaii",
+      "office": "House district 1",
+      "href": "hi.html#district-1-ed-case",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/HI_H01_D_E_CASE.png",
+      "flag": "flags/hi.svg"
+    },
+    {
+      "date": "09-28",
+      "name": "Julie Fedorchak",
+      "role": "house",
+      "partyLine": "Republican · North Dakota",
+      "office": "House",
+      "href": "nd.html#district-1-julie-fedorchak",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/ND_H01_R_J_FEDORCHAK.png",
+      "flag": "flags/nd.svg"
+    },
+    {
+      "date": "09-28",
+      "name": "Bill Cassidy",
+      "role": "senate",
+      "partyLine": "Republican · Louisiana",
+      "office": "Senate",
+      "href": "la.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001075.jpg",
+      "flag": "flags/la.svg"
+    },
+    {
+      "date": "09-30",
+      "name": "Dusty Johnson",
+      "role": "house",
+      "partyLine": "Republican · South Dakota",
+      "office": "House",
+      "href": "sd.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/J000301.jpg",
+      "flag": "flags/sd.svg"
+    },
+    {
+      "date": "10-01",
+      "name": "Grace Meng",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 6",
+      "href": "ny.html#district-6-grace-meng",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H06_D_G_MENG.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "10-01",
+      "name": "Jimmy Panetta",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 19",
+      "href": "ca.html#district-19-jimmy-panetta",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H19_D_J_PANETTA.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "10-02",
+      "name": "Eric Burlison",
+      "role": "house",
+      "partyLine": "Republican · Missouri",
+      "office": "House district 7",
+      "href": "mo.html#district-7-eric-burlison",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H07_R_E_BURLISON.png",
+      "flag": "flags/mo.svg"
+    },
+    {
+      "date": "10-02",
+      "name": "Henry \"Hank\" Johnson, Jr.",
+      "role": "house",
+      "partyLine": "Democratic · Georgia",
+      "office": "House district 4",
+      "href": "ga.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/J000288.jpg",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "10-02",
+      "name": "Tim Moore",
+      "role": "house",
+      "partyLine": "Republican · North Carolina",
+      "office": "House district 14",
+      "href": "nc.html#district-14-tim-moore",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H14_R_T_MOORE.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "10-03",
+      "name": "Craig Goldman",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 12",
+      "href": "tx.html#district-12-craig-goldman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H12_R_C_GOLDMAN.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "10-04",
+      "name": "Ilhan Omar",
+      "role": "house",
+      "partyLine": "Democratic · Minnesota",
+      "office": "House district 5",
+      "href": "mn.html#district-5-ilhan-omar",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MN_H05_D_I_OMAR.png",
+      "flag": "flags/mn.svg"
+    },
+    {
+      "date": "10-04",
+      "name": "Lauren Underwood",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 14",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/U000040.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "10-04",
+      "name": "Mark Alford",
+      "role": "house",
+      "partyLine": "Republican · Missouri",
+      "office": "House district 4",
+      "href": "mo.html#district-4-mark-alford",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H04_R_M_ALFORD.png",
+      "flag": "flags/mo.svg"
+    },
+    {
+      "date": "10-06",
+      "name": "Lloyd Doggett",
+      "role": "house",
+      "partyLine": "Democratic · Texas",
+      "office": "House district 37",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/D000399.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "10-06",
+      "name": "Steve Scalise",
+      "role": "house",
+      "partyLine": "Republican · Louisiana",
+      "office": "House district 1",
+      "href": "la.html#district-1-steve-scalise",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/LA_H01_R_S_SCALISE.png",
+      "flag": "flags/la.svg"
+    },
+    {
+      "date": "10-06",
+      "name": "Victoria Spartz",
+      "role": "house",
+      "partyLine": "Republican · Indiana",
+      "office": "House district 5",
+      "href": "in.html#district-5-victoria-spartz",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/IN_H05_R_V_SPARTZ.png",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "10-07",
+      "name": "Bill Foster",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 11",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/F000454.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "10-07",
+      "name": "Rich McCormick",
+      "role": "house",
+      "partyLine": "Republican · Georgia",
+      "office": "House district 7",
+      "href": "ga.html#district-7-rich-mccormick",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_H07_R_R_MCCORMICK.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "10-08",
+      "name": "David Kustoff",
+      "role": "house",
+      "partyLine": "Republican · Tennessee",
+      "office": "House district 8",
+      "href": "tn.html#district-8-david-kustoff",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TN_H08_R_D_KUSTOFF.png",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "10-11",
+      "name": "Chuck Fleischmann",
+      "role": "house",
+      "partyLine": "Republican · Tennessee",
+      "office": "House district 3",
+      "href": "tn.html#district-3-chuck-fleischmann",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TN_H03_R_C_FLEISCHMANN.png",
+      "flag": "flags/tn.svg"
+    },
+    {
+      "date": "10-11",
+      "name": "Patty Murray",
+      "role": "senate",
+      "partyLine": "Democratic · Washington",
+      "office": "Senate",
+      "href": "wa.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001111.jpg",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "10-13",
+      "name": "Alexandria Ocasio-Cortez",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 14",
+      "href": "ny.html#district-14-alexandria-ocasio-cortez",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H14_D_A_OCASIOCORTEZ.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "10-13",
+      "name": "Maria Cantwell",
+      "role": "senate",
+      "partyLine": "Democratic · Washington",
+      "office": "Senate",
+      "href": "wa.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C000127.jpg",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "10-14",
+      "name": "Suzanne Bonamici",
+      "role": "house",
+      "partyLine": "Democratic · Oregon",
+      "office": "House district 1",
+      "href": "or.html#district-1-suzanne-bonamici",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OR_H01_D_S_BONAMICI.png",
+      "flag": "flags/or.svg"
+    },
+    {
+      "date": "10-16",
+      "name": "André Carson",
+      "role": "house",
+      "partyLine": "Democratic · Indiana",
+      "office": "House district 7",
+      "href": "in.html#district-7-andré-carson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/IN_H07_D_A_CARSON.png",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "10-17",
+      "name": "Mike Quigley",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 5",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/Q000023.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "10-17",
+      "name": "Martin Heinrich",
+      "role": "senate",
+      "partyLine": "Democratic · New Mexico",
+      "office": "Senate",
+      "href": "nm.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/H001046.jpg",
+      "flag": "flags/nm.svg"
+    },
+    {
+      "date": "10-18",
+      "name": "Harriet Hageman",
+      "role": "house",
+      "partyLine": "Republican · Wyoming",
+      "office": "House",
+      "href": "wy.html#senate-harriet-hageman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WY_S00_R_H_HAGEMAN.png",
+      "flag": "flags/wy.svg"
+    },
+    {
+      "date": "10-18",
+      "name": "Young Kim",
+      "role": "house",
+      "partyLine": "Republican · California",
+      "office": "House district 40",
+      "href": "ca.html#district-40-young-kim",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H40_R_Y_KIM.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "10-20",
+      "name": "Timothy Kennedy",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 26",
+      "href": "ny.html#district-26-timothy-kennedy",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H26_D_T_KENNEDY.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "10-20",
+      "name": "Brian Schatz",
+      "role": "senate",
+      "partyLine": "Democratic · Hawaii",
+      "office": "Senate",
+      "href": "hi.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001194.jpg",
+      "flag": "flags/hi.svg"
+    },
+    {
+      "date": "10-20",
+      "name": "Sheldon Whitehouse",
+      "role": "senate",
+      "partyLine": "Democratic · Rhode Island",
+      "office": "Senate",
+      "href": "ri.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/W000802.jpg",
+      "flag": "flags/ri.svg"
+    },
+    {
+      "date": "10-21",
+      "name": "Nicholas Begich III",
+      "role": "house",
+      "partyLine": "Republican · Alaska",
+      "office": "House",
+      "href": "ak.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001323.jpg",
+      "flag": "flags/ak.svg"
+    },
+    {
+      "date": "10-21",
+      "name": "Ted Budd",
+      "role": "senate",
+      "partyLine": "Republican · North Carolina",
+      "office": "Senate",
+      "href": "nc.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001305.jpg",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "10-22",
+      "name": "James Walkinshaw",
+      "role": "house",
+      "partyLine": "Democratic · Virginia",
+      "office": "House district 11",
+      "href": "va.html#district-11-james-walkinshaw",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H11_D_J_WALKINSHAW.png",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "10-24",
+      "name": "Brad Sherman",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 32",
+      "href": "ca.html#district-32-brad-sherman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H32_D_B_SHERMAN.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "10-24",
+      "name": "Kweisi Mfume",
+      "role": "house",
+      "partyLine": "Democratic · Maryland",
+      "office": "House district 7",
+      "href": "md.html#district-7-kweisi-mfume",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MD_H07_D_K_MFUME.png",
+      "flag": "flags/md.svg"
+    },
+    {
+      "date": "10-24",
+      "name": "Seth Moulton",
+      "role": "house",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "House district 6",
+      "href": "ma.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M001196.jpg",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "10-24",
+      "name": "Vince Fong",
+      "role": "house",
+      "partyLine": "Republican · California",
+      "office": "House district 20",
+      "href": "ca.html#district-20-vince-fong",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H20_R_V_FONG.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "10-24",
+      "name": "Jeff Merkley",
+      "role": "senate",
+      "partyLine": "Democratic · Oregon",
+      "office": "Senate",
+      "href": "or.html#senate-jeff-merkley",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OR_S00_D_J_MERKLEY.png",
+      "flag": "flags/or.svg"
+    },
+    {
+      "date": "10-24",
+      "name": "Mike Rounds",
+      "role": "senate",
+      "partyLine": "Republican · South Dakota",
+      "office": "Senate",
+      "href": "sd.html#senate-mike-rounds",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/SD_S00_R_M_ROUNDS.png",
+      "flag": "flags/sd.svg"
+    },
+    {
+      "date": "10-26",
+      "name": "Emanuel Cleaver",
+      "role": "house",
+      "partyLine": "Democratic · Missouri",
+      "office": "House district 5",
+      "href": "mo.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001061.jpg",
+      "flag": "flags/mo.svg"
+    },
+    {
+      "date": "10-26",
+      "name": "Troy Carter",
+      "role": "house",
+      "partyLine": "Democratic · Louisiana",
+      "office": "House district 2",
+      "href": "la.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001125.jpg",
+      "flag": "flags/la.svg"
+    },
+    {
+      "date": "10-27",
+      "name": "Lori Trahan",
+      "role": "house",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "House district 3",
+      "href": "ma.html#district-3-lori-trahan",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MA_H03_D_L_TRAHAN.png",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "10-28",
+      "name": "Byron Donalds",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 19",
+      "href": "fl.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/D000032.jpg",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "10-28",
+      "name": "Mike Levin",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 49",
+      "href": "ca.html#district-49-mike-levin",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H49_D_M_LEVIN.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "10-30",
+      "name": "Adelita Grijalva",
+      "role": "house",
+      "partyLine": "Democratic · Arizona",
+      "office": "House district 7",
+      "href": "az.html#district-7-adelita-grijalva",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AZ_H07_D_A_GRIJALVA.png",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "10-30",
+      "name": "Emily Randall",
+      "role": "house",
+      "partyLine": "Democratic · Washington",
+      "office": "House district 6",
+      "href": "wa.html#district-6-emily-randall",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H06_D_E_RANDALL.png",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "10-30",
+      "name": "Frank Pallone Jr.",
+      "role": "house",
+      "partyLine": "Democratic · New Jersey",
+      "office": "House district 6",
+      "href": "nj.html#district-6-frank-pallone-jr",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NJ_H06_D_F_PALLONE.png",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "11-01",
+      "name": "Darrell Issa",
+      "role": "house",
+      "partyLine": "Republican · California",
+      "office": "House district 48",
+      "href": "ca.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/I000056.jpg",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "11-01",
+      "name": "Maria Elvira Salazar",
+      "role": "house",
+      "partyLine": "Republican · Florida",
+      "office": "House district 27",
+      "href": "fl.html#district-27-maria-elvira-salazar",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H27_R_M_SALAZAR.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "11-01",
+      "name": "Ryan Zinke",
+      "role": "house",
+      "partyLine": "Republican · Montana",
+      "office": "House district 1",
+      "href": "mt.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/Z000018.jpg",
+      "flag": "flags/mt.svg"
+    },
+    {
+      "date": "11-03",
+      "name": "Michelle Fischbach",
+      "role": "house",
+      "partyLine": "Republican · Minnesota",
+      "office": "House district 7",
+      "href": "mn.html#district-7-michelle-fischbach",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MN_H07_R_M_FISCHBACH.png",
+      "flag": "flags/mn.svg"
+    },
+    {
+      "date": "11-03",
+      "name": "Mazie Hirono",
+      "role": "senate",
+      "partyLine": "Democratic · Hawaii",
+      "office": "Senate",
+      "href": "hi.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/H001042.jpg",
+      "flag": "flags/hi.svg"
+    },
+    {
+      "date": "11-04",
+      "name": "Carol Miller",
+      "role": "house",
+      "partyLine": "Republican · West Virginia",
+      "office": "House district 1",
+      "href": "wv.html#district-1-carol-miller",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WV_H01_R_C_MILLER.png",
+      "flag": "flags/wv.svg"
+    },
+    {
+      "date": "11-04",
+      "name": "Maggie Goodlander",
+      "role": "house",
+      "partyLine": "Democratic · New Hampshire",
+      "office": "House district 2",
+      "href": "nh.html#district-2-maggie-goodlander",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NH_H02_D_M_GOODLANDER.png",
+      "flag": "flags/nh.svg"
+    },
+    {
+      "date": "11-04",
+      "name": "Richard Hudson",
+      "role": "house",
+      "partyLine": "Republican · North Carolina",
+      "office": "House district 9",
+      "href": "nc.html#district-9-richard-hudson",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NC_H09_R_R_HUDSON.png",
+      "flag": "flags/nc.svg"
+    },
+    {
+      "date": "11-05",
+      "name": "Frederica Wilson",
+      "role": "house",
+      "partyLine": "Democratic · Florida",
+      "office": "House district 24",
+      "href": "fl.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/W000808.jpg",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "11-05",
+      "name": "Wesley Bell",
+      "role": "house",
+      "partyLine": "Democratic · Missouri",
+      "office": "House district 1",
+      "href": "mo.html#district-1-wesley-bell",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MO_H01_D_W_BELL.png",
+      "flag": "flags/mo.svg"
+    },
+    {
+      "date": "11-06",
+      "name": "John Carter",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 31",
+      "href": "tx.html#district-31-john-carter",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H31_R_J_CARTER.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "11-07",
+      "name": "Andy Biggs",
+      "role": "house",
+      "partyLine": "Republican · Arizona",
+      "office": "House district 5",
+      "href": "az.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001302.jpg",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "11-07",
+      "name": "Morgan Luttrell",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 8",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000603.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "11-07",
+      "name": "Rick Allen",
+      "role": "house",
+      "partyLine": "Republican · Georgia",
+      "office": "House district 12",
+      "href": "ga.html#district-12-rick-allen",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_H12_R_R_ALLEN.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "11-07",
+      "name": "Sam Graves",
+      "role": "house",
+      "partyLine": "Republican · Missouri",
+      "office": "House district 6",
+      "href": "mo.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/G000546.jpg",
+      "flag": "flags/mo.svg"
+    },
+    {
+      "date": "11-07",
+      "name": "Susie Lee",
+      "role": "house",
+      "partyLine": "Democratic · Nevada",
+      "office": "House district 3",
+      "href": "nv.html#district-3-susie-lee",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NV_H03_D_S_LEE.png",
+      "flag": "flags/nv.svg"
+    },
+    {
+      "date": "11-11",
+      "name": "Monica De La Cruz",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 15",
+      "href": "tx.html#district-15-monica-de-la-cruz",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H15_R_M_DELACRUZ.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "11-11",
+      "name": "Nicole Malliotakis",
+      "role": "house",
+      "partyLine": "Republican · New York",
+      "office": "House district 11",
+      "href": "ny.html#district-11-nicole-malliotakis",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H11_R_N_MALLIOTAKIS.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "11-11",
+      "name": "Stephanie Bice",
+      "role": "house",
+      "partyLine": "Republican · Oklahoma",
+      "office": "House district 5",
+      "href": "ok.html#district-5-stephanie-bice",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OK_H05_R_S_BICE.png",
+      "flag": "flags/ok.svg"
+    },
+    {
+      "date": "11-12",
+      "name": "Jack Reed",
+      "role": "senate",
+      "partyLine": "Democratic · Rhode Island",
+      "office": "Senate",
+      "href": "ri.html#senate-jack-reed",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/RI_S00_D_J_REED.png",
+      "flag": "flags/ri.svg"
+    },
+    {
+      "date": "11-13",
+      "name": "Max Miller",
+      "role": "house",
+      "partyLine": "Republican · Ohio",
+      "office": "House district 7",
+      "href": "oh.html#district-7-max-miller",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H07_R_M_MILLER.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "11-13",
+      "name": "Wesley Hunt",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 38",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/H001095.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "11-13",
+      "name": "Dan Sullivan",
+      "role": "senate",
+      "partyLine": "Republican · Alaska",
+      "office": "Senate",
+      "href": "ak.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001198.jpg",
+      "flag": "flags/ak.svg"
+    },
+    {
+      "date": "11-16",
+      "name": "Beth Van Duyne",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 24",
+      "href": "tx.html#district-24-beth-van-duyne",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H24_R_B_VANDUYNE.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "11-16",
+      "name": "David Taylor",
+      "role": "house",
+      "partyLine": "Republican · Ohio",
+      "office": "House district 2",
+      "href": "oh.html#district-2-david-taylor",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H02_R_D_TAYLOR.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "11-16",
+      "name": "Scott Fitzgerald",
+      "role": "house",
+      "partyLine": "Republican · Wisconsin",
+      "office": "House district 5",
+      "href": "wi.html#district-5-scott-fitzgerald",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WI_H05_R_S_FITZGERALD.png",
+      "flag": "flags/wi.svg"
+    },
+    {
+      "date": "11-18",
+      "name": "Bruce Westerman",
+      "role": "house",
+      "partyLine": "Republican · Arkansas",
+      "office": "House district 4",
+      "href": "ar.html#district-4-bruce-westerman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AR_H04_R_B_WESTERMAN.png",
+      "flag": "flags/ar.svg"
+    },
+    {
+      "date": "11-18",
+      "name": "Salud Carbajal",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 24",
+      "href": "ca.html#district-24-salud-carbajal",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H24_D_S_CARBAJAL.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "11-18",
+      "name": "Tim Sheehy",
+      "role": "senate",
+      "partyLine": "Republican · Montana",
+      "office": "Senate",
+      "href": "mt.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001232.jpg",
+      "flag": "flags/mt.svg"
+    },
+    {
+      "date": "11-20",
+      "name": "James McGovern",
+      "role": "house",
+      "partyLine": "Democratic · Massachusetts",
+      "office": "House district 2",
+      "href": "ma.html#district-2-james-mcgovern",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MA_H02_D_J_MCGOVERN.png",
+      "flag": "flags/ma.svg"
+    },
+    {
+      "date": "11-20",
+      "name": "Ruben Gallego",
+      "role": "senate",
+      "partyLine": "Democratic · Arizona",
+      "office": "Senate",
+      "href": "az.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/G000574.jpg",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "11-21",
+      "name": "Yvette Clarke",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 9",
+      "href": "ny.html#district-9-yvette-clarke",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H09_D_Y_CLARKE.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "11-21",
+      "name": "John Kennedy",
+      "role": "senate",
+      "partyLine": "Republican · Louisiana",
+      "office": "Senate",
+      "href": "la.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/K000393.jpg",
+      "flag": "flags/la.svg"
+    },
+    {
+      "date": "11-21",
+      "name": "Richard Durbin",
+      "role": "senate",
+      "partyLine": "Democratic · Illinois",
+      "office": "Senate",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/D000563.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "11-22",
+      "name": "Andrew Clyde",
+      "role": "house",
+      "partyLine": "Republican · Georgia",
+      "office": "House district 9",
+      "href": "ga.html#district-9-andrew-clyde",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_H09_R_A_CLYDE.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "11-22",
+      "name": "Cleo Fields",
+      "role": "house",
+      "partyLine": "Democratic · Louisiana",
+      "office": "House district 6",
+      "href": "la.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/F000110.jpg",
+      "flag": "flags/la.svg"
+    },
+    {
+      "date": "11-22",
+      "name": "George Latimer",
+      "role": "house",
+      "partyLine": "Democratic · New York",
+      "office": "House district 16",
+      "href": "ny.html#district-16-george-latimer",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H16_D_G_LATIMER.png",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "11-22",
+      "name": "Paul Gosar",
+      "role": "house",
+      "partyLine": "Republican · Arizona",
+      "office": "House district 9",
+      "href": "az.html#district-9-paul-gosar",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AZ_H09_R_P_GOSAR.png",
+      "flag": "flags/az.svg"
+    },
+    {
+      "date": "11-23",
+      "name": "Debbie Dingell",
+      "role": "house",
+      "partyLine": "Democratic · Michigan",
+      "office": "House district 6",
+      "href": "mi.html#district-6-debbie-dingell",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MI_H06_D_D_DINGELL.png",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "11-23",
+      "name": "Sean Casten",
+      "role": "house",
+      "partyLine": "Democratic · Illinois",
+      "office": "House district 6",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001117.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "11-23",
+      "name": "Charles Schumer",
+      "role": "senate",
+      "partyLine": "Democratic · New York",
+      "office": "Senate",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S000148.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "11-25",
+      "name": "Jimmy Gomez",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 34",
+      "href": "ca.html#district-34-jimmy-gomez",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H34_D_J_GOMEZ.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "11-26",
+      "name": "Summer Lee",
+      "role": "house",
+      "partyLine": "Democratic · Pennsylvania",
+      "office": "House district 12",
+      "href": "pa.html#district-12-summer-lee",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H12_D_S_LEE.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "11-26",
+      "name": "Shelley Moore Capito",
+      "role": "senate",
+      "partyLine": "Republican · West Virginia",
+      "office": "Senate",
+      "href": "wv.html#senate-shelley-moore-capito",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WV_S00_R_S_MOORECAPITO.png",
+      "flag": "flags/wv.svg"
+    },
+    {
+      "date": "11-28",
+      "name": "Michael Bennet",
+      "role": "senate",
+      "partyLine": "Democratic · Colorado",
+      "office": "Senate",
+      "href": "co.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001267.jpg",
+      "flag": "flags/co.svg"
+    },
+    {
+      "date": "12-01",
+      "name": "Lance Gooden",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 5",
+      "href": "tx.html#district-5-lance-gooden",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H05_R_L_GOODEN.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "12-01",
+      "name": "Gary Peters",
+      "role": "senate",
+      "partyLine": "Democratic · Michigan",
+      "office": "Senate",
+      "href": "mi.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/P000595.jpg",
+      "flag": "flags/mi.svg"
+    },
+    {
+      "date": "12-01",
+      "name": "Rick Scott",
+      "role": "senate",
+      "partyLine": "Republican · Florida",
+      "office": "Senate",
+      "href": "fl.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/S001217.jpg",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "12-02",
+      "name": "Robert Garcia",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 42",
+      "href": "ca.html#district-42-robert-garcia",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H42_D_R_GARCIA.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "12-03",
+      "name": "Laura Friedman",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 30",
+      "href": "ca.html#district-30-laura-friedman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H30_D_L_FRIEDMAN.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "12-04",
+      "name": "Greg Landsman",
+      "role": "house",
+      "partyLine": "Democratic · Ohio",
+      "office": "House district 1",
+      "href": "oh.html#district-1-greg-landsman",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OH_H01_D_G_LANDSMAN.png",
+      "flag": "flags/oh.svg"
+    },
+    {
+      "date": "12-04",
+      "name": "Kevin Hern",
+      "role": "house",
+      "partyLine": "Republican · Oklahoma",
+      "office": "House district 1",
+      "href": "ok.html#senate-kevin-hern",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OK_S00_R_K_HERN.png",
+      "flag": "flags/ok.svg"
+    },
+    {
+      "date": "12-04",
+      "name": "Nancy Mace",
+      "role": "house",
+      "partyLine": "Republican · South Carolina",
+      "office": "House district 1",
+      "href": "sc.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/M000194.jpg",
+      "flag": "flags/sc.svg"
+    },
+    {
+      "date": "12-05",
+      "name": "French Hill",
+      "role": "house",
+      "partyLine": "Republican · Arkansas",
+      "office": "House district 2",
+      "href": "ar.html#district-2-french-hill",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/AR_H02_R_F_HILL.png",
+      "flag": "flags/ar.svg"
+    },
+    {
+      "date": "12-05",
+      "name": "Maxine Dexter",
+      "role": "house",
+      "partyLine": "Democratic · Oregon",
+      "office": "House district 3",
+      "href": "or.html#district-3-maxine-dexter",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OR_H03_D_M_DEXTER.png",
+      "flag": "flags/or.svg"
+    },
+    {
+      "date": "12-06",
+      "name": "Andrea Salinas",
+      "role": "house",
+      "partyLine": "Democratic · Oregon",
+      "office": "House district 6",
+      "href": "or.html#district-6-andrea-salinas",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OR_H06_D_A_SALINAS.png",
+      "flag": "flags/or.svg"
+    },
+    {
+      "date": "12-06",
+      "name": "Brittany Pettersen",
+      "role": "house",
+      "partyLine": "Democratic · Colorado",
+      "office": "House district 7",
+      "href": "co.html#district-7-brittany-pettersen",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CO_H07_D_B_PETTERSEN.png",
+      "flag": "flags/co.svg"
+    },
+    {
+      "date": "12-07",
+      "name": "Susan Collins",
+      "role": "senate",
+      "partyLine": "Republican · Maine",
+      "office": "Senate",
+      "href": "me.html#senate-susan-collins",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/ME_S00_R_S_COLLINS.png",
+      "flag": "flags/me.svg"
+    },
+    {
+      "date": "12-09",
+      "name": "Kirsten Gillibrand",
+      "role": "senate",
+      "partyLine": "Democratic · New York",
+      "office": "Senate",
+      "href": "ny.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/G000555.jpg",
+      "flag": "flags/ny.svg"
+    },
+    {
+      "date": "12-10",
+      "name": "Austin Scott",
+      "role": "house",
+      "partyLine": "Republican · Georgia",
+      "office": "House district 8",
+      "href": "ga.html#district-8-austin-scott",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/GA_H08_R_A_SCOTT.png",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "12-10",
+      "name": "Mark Takano",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 39",
+      "href": "ca.html#district-39-mark-takano",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H39_D_M_TAKANO.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "12-10",
+      "name": "John Boozman",
+      "role": "senate",
+      "partyLine": "Republican · Arkansas",
+      "office": "Senate",
+      "href": "ar.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001236.jpg",
+      "flag": "flags/ar.svg"
+    },
+    {
+      "date": "12-11",
+      "name": "Gabe Amo",
+      "role": "house",
+      "partyLine": "Democratic · Rhode Island",
+      "office": "House district 1",
+      "href": "ri.html#district-1-gabe-amo",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/RI_H01_D_G_AMO.png",
+      "flag": "flags/ri.svg"
+    },
+    {
+      "date": "12-13",
+      "name": "Donald Norcross",
+      "role": "house",
+      "partyLine": "Democratic · New Jersey",
+      "office": "House district 1",
+      "href": "nj.html#district-1-donald-norcross",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NJ_H01_D_D_NORCROSS.png",
+      "flag": "flags/nj.svg"
+    },
+    {
+      "date": "12-13",
+      "name": "Jamie Raskin",
+      "role": "house",
+      "partyLine": "Democratic · Maryland",
+      "office": "House district 8",
+      "href": "md.html#district-8-jamie-raskin",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/MD_H08_D_J_RASKIN.png",
+      "flag": "flags/md.svg"
+    },
+    {
+      "date": "12-13",
+      "name": "Michael Baumgartner",
+      "role": "house",
+      "partyLine": "Republican · Washington",
+      "office": "House district 5",
+      "href": "wa.html#district-5-michael-baumgartner",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/WA_H05_R_M_BAUMGARTNER.png",
+      "flag": "flags/wa.svg"
+    },
+    {
+      "date": "12-15",
+      "name": "Lauren Boebert",
+      "role": "house",
+      "partyLine": "Republican · Colorado",
+      "office": "House district 4",
+      "href": "co.html#district-4-lauren-boebert",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CO_H04_R_L_BOEBERT.png",
+      "flag": "flags/co.svg"
+    },
+    {
+      "date": "12-15",
+      "name": "Mark Warner",
+      "role": "senate",
+      "partyLine": "Democratic · Virginia",
+      "office": "Senate",
+      "href": "va.html#senate-mark-warner",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_S00_D_M_WARNER.png",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "12-16",
+      "name": "Mark Messmer",
+      "role": "house",
+      "partyLine": "Republican · Indiana",
+      "office": "House district 8",
+      "href": "in.html#district-8-mark-messmer",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/IN_H08_R_M_MESSMER.png",
+      "flag": "flags/in.svg"
+    },
+    {
+      "date": "12-17",
+      "name": "Brian Fitzpatrick",
+      "role": "house",
+      "partyLine": "Republican · Pennsylvania",
+      "office": "House district 1",
+      "href": "pa.html#district-1-brian-fitzpatrick",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/PA_H01_R_B_FITZPATRICK.png",
+      "flag": "flags/pa.svg"
+    },
+    {
+      "date": "12-17",
+      "name": "Tracey Mann",
+      "role": "house",
+      "partyLine": "Republican · Kansas",
+      "office": "House district 1",
+      "href": "ks.html#district-1-tracey-mann",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KS_H01_R_T_MANN.png",
+      "flag": "flags/ks.svg"
+    },
+    {
+      "date": "12-18",
+      "name": "Jared Moskowitz",
+      "role": "house",
+      "partyLine": "Democratic · Florida",
+      "office": "House district 23",
+      "href": "fl.html#district-25-jared-moskowitz",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/FL_H25_D_J_MOSKOWITZ.png",
+      "flag": "flags/fl.svg"
+    },
+    {
+      "date": "12-19",
+      "name": "Adrian Smith",
+      "role": "house",
+      "partyLine": "Republican · Nebraska",
+      "office": "House district 3",
+      "href": "ne.html#district-3-adrian-smith",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NE_H03_R_A_SMITH.png",
+      "flag": "flags/ne.svg"
+    },
+    {
+      "date": "12-19",
+      "name": "Pat Fallon",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 4",
+      "href": "tx.html#district-4-pat-fallon",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H04_R_P_FALLON.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "12-21",
+      "name": "Zoe Lofgren",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 18",
+      "href": "ca.html#district-18-zoe-lofgren",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H18_D_Z_LOFGREN.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "12-22",
+      "name": "Barry Loudermilk",
+      "role": "house",
+      "partyLine": "Republican · Georgia",
+      "office": "House district 11",
+      "href": "ga.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/L000583.jpg",
+      "flag": "flags/ga.svg"
+    },
+    {
+      "date": "12-22",
+      "name": "Derek Tran",
+      "role": "house",
+      "partyLine": "Democratic · California",
+      "office": "House district 45",
+      "href": "ca.html#district-45-derek-tran",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/CA_H45_D_D_TRAN.png",
+      "flag": "flags/ca.svg"
+    },
+    {
+      "date": "12-22",
+      "name": "Ted Cruz",
+      "role": "senate",
+      "partyLine": "Republican · Texas",
+      "office": "Senate",
+      "href": "tx.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/C001098.jpg",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "12-23",
+      "name": "Morgan McGarvey",
+      "role": "house",
+      "partyLine": "Democratic · Kentucky",
+      "office": "House district 3",
+      "href": "ky.html#district-3-morgan-mcgarvey",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H03_D_M_MCGARVEY.png",
+      "flag": "flags/ky.svg"
+    },
+    {
+      "date": "12-28",
+      "name": "August Pfluger",
+      "role": "house",
+      "partyLine": "Republican · Texas",
+      "office": "House district 11",
+      "href": "tx.html#district-11-august-pfluger",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H11_R_A_PFLUGER.png",
+      "flag": "flags/tx.svg"
+    },
+    {
+      "date": "12-28",
+      "name": "Jennifer McClellan",
+      "role": "house",
+      "partyLine": "Democratic · Virginia",
+      "office": "House district 4",
+      "href": "va.html#district-4-jennifer-mcclellan",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/VA_H04_D_J_MCCLELLAN.png",
+      "flag": "flags/va.svg"
+    },
+    {
+      "date": "12-29",
+      "name": "Aumua Amata Coleman Radewagen",
+      "role": "house",
+      "partyLine": "Republican · American Samoa",
+      "office": "House",
+      "href": "house.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/R000600.jpg",
+      "flag": "flags/us.svg"
+    },
+    {
+      "date": "12-30",
+      "name": "Mike Bost",
+      "role": "house",
+      "partyLine": "Republican · Illinois",
+      "office": "House district 12",
+      "href": "illinois.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/B001295.jpg",
+      "flag": "flags/il.svg"
+    },
+    {
+      "date": "12-30",
+      "name": "Thomas Tiffany",
+      "role": "house",
+      "partyLine": "Republican · Wisconsin",
+      "office": "House district 7",
+      "href": "wi.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/T000165.jpg",
+      "flag": "flags/wi.svg"
+    },
+    {
+      "date": "12-31",
+      "name": "Hal Rogers",
+      "role": "house",
+      "partyLine": "Republican · Kentucky",
+      "office": "House district 5",
+      "href": "ky.html#district-5-hal-rogers",
+      "photo": "https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/KY_H05_R_H_ROGERS.png",
+      "flag": "flags/ky.svg"
+    },
+    {
+      "date": "12-31",
+      "name": "Josh Hawley",
+      "role": "senate",
+      "partyLine": "Republican · Missouri",
+      "office": "Senate",
+      "href": "mo.html",
+      "photo": "https://unitedstates.github.io/images/congress/225x275/H001089.jpg",
+      "flag": "flags/mo.svg"
+    }
+  ]
+}

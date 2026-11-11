@@ -1,0 +1,35 @@
+name: Update birthday roster
+
+on:
+  schedule:
+    - cron: "20 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: birthday-roster
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh who has a birthday
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          python scripts/build_birthdays.py
+          git add -- birthdays.json
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Update the birthday roster from the congress-legislators files."
+            git push
+          fi
