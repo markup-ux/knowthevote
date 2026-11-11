@@ -72,14 +72,19 @@ def notify(key, location, batch):
         headers={**UA, "Content-Type": "application/json; charset=utf-8"},
         method="POST",
     )
-    try:
-        status, _ = get_response(request)
-    except urllib.error.HTTPError as error:
-        detail = error.read(300).decode("utf-8", "replace")
-        raise SystemExit("IndexNow returned %s. %s" % (error.code, detail))
-    if status not in (200, 202):
-        raise SystemExit("IndexNow returned %s." % status)
-    return status
+    for attempt in range(12):
+        try:
+            status, _ = get_response(request)
+        except urllib.error.HTTPError as error:
+            detail = error.read(300).decode("utf-8", "replace")
+            if error.code == 403 and "SiteVerificationNotCompleted" in detail and attempt < 11:
+                time.sleep(20)
+                continue
+            raise SystemExit("IndexNow returned %s. %s" % (error.code, detail))
+        if status not in (200, 202):
+            raise SystemExit("IndexNow returned %s." % status)
+        return status
+    raise SystemExit("IndexNow has not finished checking the key.")
 
 
 def get_response(request):
