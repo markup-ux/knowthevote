@@ -32,17 +32,41 @@
   .spotlight { grid-template-columns: 1fr; }
   .spotlight img { height: 180px; }
 }
-.birthdays { margin: 4px 0 22px; }
-.birthdays h2 { margin: 0 0 6px; font-size: 22px; }
+.birthdays { position: relative; margin: 4px 0 22px; }
+.birthday-sky { position: absolute; inset: 0 0 -8px; overflow: hidden; pointer-events: none; z-index: 0; }
+.birthdays > :not(.birthday-sky) { position: relative; z-index: 1; }
+.birthday-bit {
+  position: absolute;
+  top: -10px;
+  width: 7px;
+  height: 7px;
+  background: var(--bar);
+  animation: birthday-fall 7.5s linear infinite;
+}
+.birthday-bit:nth-child(3n) { border-radius: 50%; background: var(--bar-stripe); }
+.birthday-bit:nth-child(3n+1) { width: 5px; height: 9px; background: var(--map-on); }
+.birthday-bit:nth-child(3n+2) { clip-path: polygon(50% 0, 61% 35%, 100% 38%, 70% 59%, 79% 100%, 50% 75%, 21% 100%, 30% 59%, 0 38%, 39% 35%); width: 10px; height: 10px; background: var(--map-tint, var(--bar)); }
+@keyframes birthday-fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  12% { opacity: 1; }
+  100% { transform: translateY(260px) rotate(200deg); opacity: 0; }
+}
+.birthdays h2 { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; font-size: 22px; }
+.birthday-cake { width: 32px; height: 32px; flex: none; }
+.birthday-flame { transform-box: fill-box; transform-origin: center; animation: birthday-flicker .4s ease-in-out infinite; }
+@keyframes birthday-flicker {
+  50% { transform: scale(.8, 1.18) translateY(-.6px); }
+}
 .birthdays .deck { margin-top: 0; }
 .birthday-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .birthday-list a {
+  position: relative;
   display: grid;
   grid-template-columns: 72px minmax(0, 1fr);
   gap: 12px;
   align-items: center;
   height: 100%;
-  padding: 16px 14px 14px;
+  padding: 18px 14px 14px;
   color: var(--ink);
   text-decoration: none;
   background:
@@ -50,6 +74,23 @@
     linear-gradient(var(--bar), var(--bar)) top 5px left / 100% 3px no-repeat,
     var(--chip);
   border: 1px solid var(--line);
+}
+.birthday-balloon {
+  position: absolute;
+  z-index: 1;
+  left: 54px;
+  top: 8px;
+  width: 18px;
+  height: 28px;
+  color: var(--bar);
+  fill: currentColor;
+  animation: birthday-bob 2.6s ease-in-out infinite;
+}
+.birthday-list li:nth-child(2) .birthday-balloon { color: var(--bar-stripe); animation-delay: .45s; }
+.birthday-list li:nth-child(3) .birthday-balloon { color: var(--map-on); animation-delay: .9s; }
+@keyframes birthday-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 .birthday-list a:hover,
 .birthday-list a:focus-visible { outline: 2px solid var(--bar); outline-offset: 2px; }
@@ -59,6 +100,9 @@
 .birthday-list .birthday-line { display: block; margin-top: 2px; color: var(--muted); }
 @media (max-width: 800px) {
   .birthday-list { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .birthday-bit, .birthday-balloon, .birthday-flame { animation: none; }
 }
 </style>
 
@@ -306,10 +350,25 @@
     })();
     </script>
     <section class="birthdays" id="birthdays" aria-labelledby="birthdays-heading">
-      <h2 id="birthdays-heading">Born on this day</h2>
+      <div class="birthday-sky" aria-hidden="true">
+        <span class="birthday-bit" style="left:4%;animation-delay:-.4s"></span>
+        <span class="birthday-bit" style="left:12%;animation-delay:-2.1s"></span>
+        <span class="birthday-bit" style="left:21%;animation-delay:-4.6s"></span>
+        <span class="birthday-bit" style="left:29%;animation-delay:-1.2s"></span>
+        <span class="birthday-bit" style="left:38%;animation-delay:-5.4s"></span>
+        <span class="birthday-bit" style="left:46%;animation-delay:-3.1s"></span>
+        <span class="birthday-bit" style="left:55%;animation-delay:-.8s"></span>
+        <span class="birthday-bit" style="left:63%;animation-delay:-6.2s"></span>
+        <span class="birthday-bit" style="left:71%;animation-delay:-2.8s"></span>
+        <span class="birthday-bit" style="left:79%;animation-delay:-4.1s"></span>
+        <span class="birthday-bit" style="left:88%;animation-delay:-1.7s"></span>
+        <span class="birthday-bit" style="left:95%;animation-delay:-5.8s"></span>
+      </div>
+      <h2 id="birthdays-heading"><svg class="birthday-cake" viewBox="0 0 36 36" aria-hidden="true"><rect x="6" y="18" width="24" height="12" rx="2" fill="var(--bar)"/><rect x="8" y="13" width="20" height="7" rx="1" fill="var(--bar-stripe)"/><path d="M10 18c1.4-2 2.6-2 4 0s2.6 2 4 0 2.6-2 4 0 2.6 2 4 0" fill="none" stroke="var(--paper)" stroke-width="1.2"/><rect x="17" y="6" width="2" height="8" fill="var(--ink)"/><ellipse class="birthday-flame" cx="18" cy="4.6" rx="2.1" ry="2.8" fill="var(--map-on)"/></svg>Born on this day</h2>
       <p class="deck">Three members of the House were born on November 11. The date is the one in the <a href="https://unitedstates.github.io/congress-legislators/legislators-current.json">congress-legislators file</a>.</p>
       <ul class="birthday-list">
         <li><a href="ok.html#district-5-stephanie-bice">
+          <svg class="birthday-balloon" viewBox="0 0 24 36" aria-hidden="true"><ellipse cx="12" cy="11" rx="8" ry="10"/><path d="M12 21c1.6 2.2-.2 4.2 0 6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M10 27.2h4L12 31z"/></svg>
           <img class="birthday-photo" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/OK_H05_R_S_BICE.png" alt="">
           <span>
             <img class="birthday-flag" src="flags/ok.svg" alt="">
@@ -319,6 +378,7 @@
           </span>
         </a></li>
         <li><a href="tx.html#district-15-monica-de-la-cruz">
+          <svg class="birthday-balloon" viewBox="0 0 24 36" aria-hidden="true"><ellipse cx="12" cy="11" rx="8" ry="10"/><path d="M12 21c1.6 2.2-.2 4.2 0 6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M10 27.2h4L12 31z"/></svg>
           <img class="birthday-photo" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/TX_H15_R_M_DELACRUZ.png" alt="">
           <span>
             <img class="birthday-flag" src="flags/tx.svg" alt="">
@@ -328,6 +388,7 @@
           </span>
         </a></li>
         <li><a href="ny.html#district-11-nicole-malliotakis">
+          <svg class="birthday-balloon" viewBox="0 0 24 36" aria-hidden="true"><ellipse cx="12" cy="11" rx="8" ry="10"/><path d="M12 21c1.6 2.2-.2 4.2 0 6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M10 27.2h4L12 31z"/></svg>
           <img class="birthday-photo" src="https://media-cldnry.s-nbcnews.com/image/upload/v7/firecracker/headshots/2026/NY_H11_R_N_MALLIOTAKIS.png" alt="">
           <span>
             <img class="birthday-flag" src="flags/ny.svg" alt="">
