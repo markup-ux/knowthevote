@@ -477,6 +477,14 @@
     return img ? img.getAttribute("src") || "" : "";
   }
 
+  function storyHref(story) {
+    var link = story.querySelector("h1 a[href], h3 a[href]");
+    var href = link && link.getAttribute("href");
+    if (href && href.charAt(0) !== "#") return href;
+    if (story.id) return "news/" + story.id.replace(/^n-/, "") + "/";
+    return "";
+  }
+
   function refreshLatest(only) {
     document.querySelectorAll(".mast .beat[data-desk]").forEach(function (beat) {
       var desk = beat.getAttribute("data-desk");
@@ -490,7 +498,8 @@
         if (!newest || storyDate(story) > storyDate(newest)) newest = story;
       });
       if (!newest) return;
-      link.setAttribute("href", "#" + newest.id);
+      var href = storyHref(newest);
+      if (href) link.setAttribute("href", href);
       var img = link.querySelector("img");
       var src = storyImage(newest);
       if (img && src) img.setAttribute("src", src);
@@ -1326,10 +1335,8 @@
         btn.appendChild(detailEl);
       }
       btn.addEventListener("click", function () {
-        var opened = openItem(section, story.id, true);
-        if (!history.replaceState) return;
-        if (opened && story.id) history.replaceState(null, "", "#" + story.id);
-        else history.replaceState(null, "", location.pathname + location.search);
+        var href = storyHref(story);
+        if (href) location.href = href;
       });
       nav.appendChild(btn);
     });
