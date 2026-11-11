@@ -1855,7 +1855,7 @@
         var swatch = el("span", "mini-bar");
         var piece = document.createElement("i");
         piece.style.width = "100%";
-        piece.style.background = entry.code === "Y" ? sideColor("Y", share) : entry.code === "N" ? sideColor("N", share) : entry.code === "P" ? "#3d4f86" : "#c8c0b4";
+        piece.style.background = entry.code === "Y" ? sideColor("Y", share) : entry.code === "N" ? sideColor("N", share) : entry.code === "P" ? "var(--tone-present, #3d4f86)" : "var(--tone-absent, #c8c0b4)";
         swatch.appendChild(piece);
         copy.appendChild(swatch);
         row.appendChild(copy);
@@ -1891,7 +1891,7 @@
       var fill = mapHex();
       var label = stateName(code) + ". No yes or no on this roll call.";
       if (yn && row.Y === row.N) {
-        fill = "#6a4a78";
+        fill = "color-mix(in srgb, var(--tone-pass, #0e6a38) 46%, var(--tone-fail, #8d2344))";
         label = stateName(code) + ". Yes " + row.Y + ", no " + row.N + ". Tie.";
       } else if (row.Y > row.N) {
         fill = sideColor("Y", row.Y / yn);
@@ -1900,7 +1900,7 @@
         fill = sideColor("N", row.N / yn);
         label = stateName(code) + ". Yes " + row.Y + ", no " + row.N + ".";
       } else if (row.P) {
-        fill = "#3d4f86";
+        fill = "var(--tone-present, #3d4f86)";
         label = stateName(code) + ". Present, with no yes or no.";
       }
       path.style.fill = fill;

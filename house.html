@@ -35,14 +35,14 @@ div.floor-row { cursor: default; }
 .vote-bar, .mini-bar { display: flex; width: 100%; height: 18px; background: var(--chip); margin: 8px 0 4px; }
 .mini-bar { height: 12px; max-width: 280px; }
 .vote-bar i, .mini-bar i { display: block; height: 100%; }
-.swatch.yes-scale { width: 48px; background: linear-gradient(90deg, #cfe8d6, #0e6a38); }
-.swatch.no-scale { width: 48px; background: linear-gradient(90deg, #f6d0d6, #8d2344); }
-.swatch.gold { background: #e6b422; }
+.swatch.yes-scale { width: 48px; background: linear-gradient(90deg, var(--tone-yes-soft, #cfe8d6), var(--tone-pass, #0e6a38)); }
+.swatch.no-scale { width: 48px; background: linear-gradient(90deg, var(--tone-no-soft, #f6d0d6), var(--tone-fail, #8d2344)); }
+.swatch.gold { background: var(--tone-open, #e6b422); }
 .swatch.money-pale { background: #f6e4b8; }
 .swatch.money-deep { background: #6b2b0f; }
-.swatch.stone { background: #c8c0b4; }
-.swatch.present { background: #3d4f86; }
-.swatch.tie { background: #6a4a78; }
+.swatch.stone { background: var(--tone-absent, #c8c0b4); }
+.swatch.present { background: var(--tone-present, #3d4f86); }
+.swatch.tie { background: color-mix(in srgb, var(--tone-pass, #0e6a38) 46%, var(--tone-fail, #8d2344)); }
 .swatch.slip-back { background: var(--slip-deep, #0e6fa8); }
 .swatch.slip-out { background: var(--slip-pale, #d5eaf8); }
 .swatch.slip-note { background: var(--paper); box-shadow: inset 0 0 0 3px var(--slip-ink, #0e6fa8); }
@@ -739,8 +739,8 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
     <p class="deck">What the House voted on, who voted yes, who voted no, and how to reach the member. Bills and resolutions introduced in this Congress are listed with a portrait of the sponsor.</p>
     <p class="deck">The <a href="https://live.house.gov/">House floor</a> is live on FloorCast when the House is in session. Each roll call links to that day's recording. The <a href="https://www.youtube.com/@USHouseClerk">Clerk's channel</a> posts a floor video when one is published.</p>
     <div class="result-legend" id="congress-legend">
-      <span><i class="swatch yes-scale"></i> Yes. A darker green is a larger yes share.</span>
-      <span><i class="swatch no-scale"></i> No. A darker rose is a larger no share.</span>
+      <span><i class="swatch yes-scale"></i> Yes. A darker shade is a larger yes share.</span>
+      <span><i class="swatch no-scale"></i> No. A darker shade is a larger no share.</span>
       <span><i class="swatch present"></i> Present</span>
       <span><i class="swatch stone"></i> Did not vote</span>
       <span><i class="swatch tie"></i> A state tied yes and no</span>
@@ -905,6 +905,6 @@ html:is([data-theme$="-dark"], [data-theme].theme-mix-dark) body {
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js?v=10"></script>
 <script src="logos.js?v=4"></script>
-<script src="congress.js?v=71"></script>
+<script src="congress.js?v=72"></script>
 </body>
 </html>
