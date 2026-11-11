@@ -238,13 +238,55 @@ def roll_calls(votes, senate, by_state):
     return people, used, missed
 
 
+def row_ok(row):
+    url = str(row.get("url") or "")
+    at = str(row.get("at") or "")
+    if at[:10] < "2026-11-03":
+        return False
+    return url.startswith("https://") or url.startswith("house.html#")
+
+
+def row_key(row):
+    return "\n".join((
+        str(row.get("url") or ""),
+        str(row.get("at") or ""),
+        str(row.get("time") or ""),
+        str(row.get("source") or ""),
+    ))
+
+
+def merge_rows(previous, found):
+    """Keep a record already copied, and let a new copy refresh its text."""
+    by_key = {}
+    for row in previous or []:
+        if isinstance(row, dict) and row_ok(row):
+            by_key[row_key(row)] = row
+    for row in found or []:
+        if isinstance(row, dict) and row_ok(row):
+            by_key[row_key(row)] = row
+    rows = list(by_key.values())
+    rows.sort(key=lambda row: (row.get("at") or "", row.get("time") or ""))
+    return rows
+
+
+def merge_people(previous, found):
+    merged = {}
+    for ident in set((previous or {}).keys()) | set((found or {}).keys()):
+        rows = merge_rows((previous or {}).get(ident), (found or {}).get(ident))
+        if rows:
+            merged[ident] = rows
+    return merged
+
+
 def main():
     messages = load(os.path.join(CHAT, "messages.json"))
     votes = load(os.path.join(ROOT, "congress", "votes.json"))
     senate = load(os.path.join(ROOT, "congress", "senate.json"))
-    releases = white_house()
-    floor = floor_items(votes)
+    previous = load(OUT)
+    releases = merge_rows(previous.get("whitehouse"), white_house())
+    floor = merge_rows(previous.get("floor"), floor_items(votes))
     people, used, missed = roll_calls(votes, senate, roster(messages))
+    people = merge_people(previous.get("people"), people)
     payload = {
         "updated": now(),
         "since": "2026-11-03",

@@ -36,6 +36,10 @@ CURRENT_URL = "https://unitedstates.github.io/congress-legislators/legislators-c
 SOCIAL_URL = "https://unitedstates.github.io/congress-legislators/legislators-social-media.json"
 BROWSER = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 CONGRESS_OFFICES = {"U.S. House", "Senate", "U.S. Senate"}
+# Group Chat starts November 3, 2026. A post from that day on is kept. A later
+# refresh can add a post, and it does not drop one already copied.
+SINCE = "2026-11-03"
+FETCH_KEEP = 40
 X_SKIP = {
     "share", "intent", "home", "search", "hashtag", "privacy", "tos", "widgets",
     "i", "jobs", "about", "login", "signup", "explore", "settings", "compose",
@@ -528,7 +532,7 @@ def x_posts(handle):
             "context": x_context(tweet),
             "counts": tweet_counts(tweet),
         })
-        if len(posts) == 3:
+        if len([post for post in posts if since_day(post.get("at"))]) >= FETCH_KEEP:
             break
     return posts
 
@@ -545,7 +549,7 @@ def mastodon_posts(handle):
     if not account.get("id"):
         return None
     status, raw, _headers = read_url(
-        "https://" + host + "/api/v1/accounts/" + account["id"] + "/statuses?limit=8&exclude_reblogs=true",
+        "https://" + host + "/api/v1/accounts/" + account["id"] + "/statuses?limit=40&exclude_reblogs=true",
         20,
     )
     if status != 200 or not raw:
@@ -571,14 +575,14 @@ def mastodon_posts(handle):
             "context": mastodon_context(host, row),
             "counts": pack_counts(row.get("replies_count"), row.get("reblogs_count"), row.get("favourites_count")),
         })
-        if len(posts) == 3:
+        if len([post for post in posts if since_day(post.get("at"))]) >= FETCH_KEEP:
             break
     return posts
 
 
 def bluesky_posts(handle):
     status, raw, _headers = read_url(
-        "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=" + urllib.parse.quote(handle) + "&limit=8",
+        "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=" + urllib.parse.quote(handle) + "&limit=40",
         20,
     )
     if status != 200 or not raw:
@@ -607,7 +611,7 @@ def bluesky_posts(handle):
             "context": bluesky_context(item),
             "counts": pack_counts(post.get("replyCount"), post.get("repostCount"), post.get("likeCount")),
         })
-        if len(posts) == 3:
+        if len([post for post in posts if since_day(post.get("at"))]) >= FETCH_KEEP:
             break
     return posts
 
@@ -623,7 +627,7 @@ def truth_posts(handle):
     if not account.get("id"):
         return []
     status, raw, _headers = read_url(
-        "https://truthsocial.com/api/v1/accounts/" + str(account["id"]) + "/statuses?limit=5&exclude_reblogs=true",
+        "https://truthsocial.com/api/v1/accounts/" + str(account["id"]) + "/statuses?limit=40&exclude_reblogs=true",
         15,
         BROWSER,
     )
@@ -648,7 +652,7 @@ def truth_posts(handle):
             "context": mastodon_context("truthsocial.com", row),
             "counts": pack_counts(row.get("replies_count"), row.get("reblogs_count"), row.get("favourites_count")),
         })
-        if len(posts) == 3:
+        if len([post for post in posts if since_day(post.get("at"))]) >= FETCH_KEEP:
             break
     return posts
 
@@ -808,13 +812,41 @@ def missing_context(account, row):
     return False
 
 
+def since_day(value):
+    return str(value or "")[:10] >= SINCE
+
+
+def merge_posts(previous, found):
+    """Keep every post already stored since November 3, and add new ones."""
+    by_url = {}
+    for post in list(previous or []) + list(found or []):
+        if not isinstance(post, dict):
+            continue
+        url = str(post.get("url") or "")
+        if not url.startswith("https://") or not since_day(post.get("at")):
+            continue
+        current = by_url.get(url)
+        if current is None:
+            by_url[url] = post
+            continue
+        merged = dict(current)
+        for field in ("text", "at", "handle", "net", "counts", "context"):
+            if post.get(field):
+                merged[field] = post[field]
+        by_url[url] = merged
+    rows = list(by_url.values())
+    rows.sort(key=lambda post: post.get("at") or "")
+    return rows
+
+
 def store_feed(feeds, account, found):
     feed_key = account["net"] + ":" + account["handle"].lower()
     previous = feeds.get(feed_key) or {}
+    kept = merge_posts(previous.get("posts"), [] if found is None else found)
     feeds[feed_key] = {
         "at": now(),
         "ok": found is not None,
-        "posts": (previous.get("posts") or []) if found is None else found,
+        "posts": kept,
         "context": True if found is not None else bool(previous.get("context")),
         "counts": True if found is not None else bool(previous.get("counts")),
         "views": True if found is not None else bool(previous.get("views")),
@@ -823,6 +855,7 @@ def store_feed(feeds, account, found):
 
 def write_posts(roster, sites, congress, pages, feeds):
     people, post_count, account_count = {}, 0, 0
+    previous_people = load(POSTS_PATH).get("people") or {}
     for person in roster:
         accounts = person_accounts(person, sites, congress, pages)
         if not accounts:
@@ -835,11 +868,19 @@ def write_posts(roster, sites, congress, pages, feeds):
                     continue
                 seen.add(post["url"])
                 posts.append(post)
-        posts.sort(key=lambda post: post.get("at") or "")
-        posts = posts[-4:]
+        old = (previous_people.get(person["id"]) or {}).get("posts") or []
+        posts = merge_posts(old, posts)
         people[person["id"]] = {"accounts": accounts, "posts": posts}
         post_count += len(posts)
         account_count += len(accounts)
+    for ident, row in previous_people.items():
+        if ident in people or not isinstance(row, dict):
+            continue
+        posts = merge_posts(row.get("posts"), [])
+        if not posts:
+            continue
+        people[ident] = {"accounts": row.get("accounts") or [], "posts": posts}
+        post_count += len(posts)
     previous = load(POSTS_PATH)
     if previous.get("people") == people:
         return account_count, len(people), post_count

@@ -881,17 +881,46 @@
     return readJson(url).catch(function () { return readJson(url); }).catch(function () { return {}; });
   }
 
+  function mergePostFiles(live, saved) {
+    var people = {};
+    function absorb(file) {
+      var rows = (file && file.people) || {};
+      Object.keys(rows).forEach(function (id) {
+        var row = rows[id] || {};
+        var dest = people[id] || { accounts: [], posts: [] };
+        var seenPosts = {};
+        dest.posts.forEach(function (post) {
+          if (post && post.url) seenPosts[post.url] = post;
+        });
+        (row.posts || []).forEach(function (post) {
+          if (!post || !post.url || String(post.url).indexOf("https://") !== 0) return;
+          var current = seenPosts[post.url];
+          if (!current) seenPosts[post.url] = post;
+          else if (post.counts && !current.counts) seenPosts[post.url] = post;
+        });
+        dest.posts = Object.keys(seenPosts).map(function (url) { return seenPosts[url]; });
+        if ((row.accounts || []).length > dest.accounts.length) dest.accounts = row.accounts;
+        people[id] = dest;
+      });
+    }
+    absorb(saved);
+    absorb(live);
+    return { updated: (live && live.updated) || (saved && saved.updated) || "", people: people };
+  }
+
   function pull() {
     var rolled = openDay && todayKey() !== openDay;
     if (!seen.ready) status.textContent = "Checking for records since November 3.";
     Promise.all([
       readJsonRetry("chat/messages.json"),
       readLivePosts(),
+      readJsonRetry("chat/posts.json"),
       readJsonRetry("chat/official.json"),
       readJsonRetry("chat/contacts.json")
     ]).then(function (files) {
-      var postsStamp = files[1].updated || "";
-      var officialStamp = files[2].updated || "";
+      var postsFile = mergePostFiles(files[1], files[2]);
+      var postsStamp = (files[1].updated || "") + "|" + (files[2].updated || "");
+      var officialStamp = files[3].updated || "";
       if (!seen.ready || postsStamp !== seen.posts || officialStamp !== seen.official || rolled) {
         var place = null;
         if (seen.ready && window.scrollY > 280) {
@@ -908,7 +937,7 @@
         seen.posts = postsStamp;
         seen.official = officialStamp;
         try {
-          render(files[0], files[1], files[2], files[3]);
+          render(files[0], postsFile, files[3], files[4]);
           if (place && place.id) {
             var kept = document.getElementById(place.id);
             if (kept) window.scrollBy(0, kept.getBoundingClientRect().top - place.top);
