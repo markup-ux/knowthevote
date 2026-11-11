@@ -1017,15 +1017,28 @@
     document.getElementById("congress-status").textContent = line;
   }
 
+  function plainTitle(raw) {
+    return (raw || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+  }
+
   function floorVote(item) {
     var key = billKey(item.legis);
-    if (!key) return null;
+    var title = plainTitle(item.title);
     var found = null;
     data.votes.forEach(function (vote) {
-      if (billKey(vote.legis) !== key || vote.date < item.week) return;
+      if (vote.date < item.week) return;
+      var sameBill = key && billKey(vote.legis) === key;
+      var sameTitle = !key && title && plainTitle(vote.desc) === title;
+      if (!sameBill && !sameTitle) return;
       if (!found || vote.date > found.date || (vote.date === found.date && vote.n > found.n)) found = vote;
     });
     return found;
+  }
+
+  function floorLegis(item, vote) {
+    if (billKey(item.legis)) return item.legis;
+    if (vote && vote.legis) return vote.legis;
+    return item.legis || "";
   }
 
   function renderFloor() {
@@ -1049,17 +1062,18 @@
       list.appendChild(el("h3", "", category));
       items.filter(function (item) { return item.category === category; }).forEach(function (item) {
         var vote = floorVote(item);
+        var legis = floorLegis(item, vote);
         var row = el(vote ? "button" : "div", "floor-row vote-" + (vote ? resultTone(vote.result) : "open") + (vote && vote.id === selected ? " is-on" : ""));
         if (vote) {
           row.type = "button";
           row.setAttribute("data-vote", vote.id);
         }
         var titleNode = el("strong", "with-money");
-        titleNode.appendChild(document.createTextNode(item.title || item.legis || "Scheduled item"));
-        addMoneyChip(titleNode, item.legis);
+        titleNode.appendChild(document.createTextNode(item.title || legis || "Scheduled item"));
+        addMoneyChip(titleNode, legis);
         row.appendChild(titleNode);
-        if (item.legis) row.appendChild(el("p", "card-bill", item.legis));
-        row.appendChild(el("p", vote ? "card-when" : "card-result", vote ? "Roll call " + vote.n + " · " + formatDate(vote.date) : "Scheduled"));
+        if (legis) row.appendChild(el("p", "card-bill", legis));
+        row.appendChild(el("p", vote ? "card-when" : "card-result", vote ? "Roll call " + vote.n + " · " + formatDate(vote.date) + (vote.question ? " · " + vote.question : "") : "Scheduled"));
         if (vote) row.appendChild(makeBar(vote.yea, vote.nay, vote.present, vote.notVoting));
         else {
           var bar = el("span", "vote-bar");
@@ -1074,11 +1088,11 @@
         else row.appendChild(el("p", "card-result", "No roll call on or after " + formatDate(item.week)));
         if (vote) {
           var sentenceNode = el("p", "act-line card-about");
-          var cash = moneyLine(item.legis);
+          var cash = moneyLine(legis);
           if (cash) sentenceNode.appendChild(paintMoney(cash));
-          else sentenceNode.textContent = actSentence(item.legis);
+          else sentenceNode.textContent = actSentence(legis);
           if (sentenceNode.textContent || sentenceNode.childNodes.length) row.appendChild(sentenceNode);
-          var introduced = sponsorLine(item.legis);
+          var introduced = sponsorLine(legis);
           if (introduced) row.appendChild(el("p", "act-line card-who", introduced));
         } else {
           var note = actBlock(item.legis, item.bill);
@@ -1485,17 +1499,18 @@
     }
     floorItems.forEach(function (item) {
       var vote = floorVote(item);
+      var legis = floorLegis(item, vote);
       var row = el(vote ? "button" : "div", "floor-row");
       if (vote) {
         row.type = "button";
         row.setAttribute("data-vote", vote.id);
       }
       var titleNode = el("strong", "with-money");
-      titleNode.appendChild(document.createTextNode(item.title || item.legis || "Scheduled item"));
-      addMoneyChip(titleNode, item.legis);
+      titleNode.appendChild(document.createTextNode(item.title || legis || "Scheduled item"));
+      addMoneyChip(titleNode, legis);
       row.appendChild(titleNode);
       var meta = "On the floor list";
-      if (item.legis) meta += " · " + item.legis;
+      if (legis) meta += " · " + legis;
       if (item.category) meta += " · " + item.category;
       row.appendChild(el("p", "vote-meta", meta));
       list.appendChild(row);
