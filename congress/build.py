@@ -8,6 +8,7 @@ this script. Senator offices still come from the congress-legislators file.
 
 import json
 import re
+import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -89,9 +90,9 @@ PARTY = {
 }
 
 
-def fetch(url):
+def fetch(url, timeout=50):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
-    with urllib.request.urlopen(req, timeout=50) as response:
+    with urllib.request.urlopen(req, timeout=timeout) as response:
         return response.read()
 
 
@@ -678,16 +679,36 @@ def load_members():
     return members
 
 
-def roll_exists(year, number):
+def fetch_roll(year, number):
+    """Return the roll XML, None when the Clerk has no such roll, or raise.
+
+    A blocked or incomplete response is not the same as a roll that does not
+    exist. Treating it as a gap made the scan stop and drop the rest of the year.
+    """
     url = "https://clerk.house.gov/evs/%s/roll%03d.xml" % (year, number)
-    for _ in range(2):
+    last = "no response"
+    for attempt in range(4):
         try:
-            body = fetch(url)
-        except Exception:
-            body = None
-        if body is not None and body.lstrip().startswith(b"<?xml"):
-            return body
-    return None
+            body = fetch(url, timeout=30)
+        except urllib.error.HTTPError as error:
+            if error.code == 404:
+                return None
+            last = "HTTP %s" % error.code
+        except Exception as error:
+            last = str(error)
+        else:
+            if body.lstrip().startswith(b"<?xml") and b"<rollcall-vote" in body[:800]:
+                return body
+            if b"Error sanitizing file" in body:
+                last = "missing"
+            else:
+                last = "not a roll call"
+        if last == "missing" and attempt >= 1:
+            return None
+        time.sleep(0.4 * (attempt + 1))
+    if last == "missing":
+        return None
+    raise RuntimeError("House roll %s %s could not be read (%s)" % (year, number, last))
 
 
 def parse_roll(year, number, body):
@@ -755,27 +776,29 @@ def parse_roll(year, number, body):
 
 
 def download_year(year):
-    # Roll numbers can skip. Keep reading until several numbers in a row are missing.
+    # Roll numbers can skip. Stop only after several confirmed gaps in a row.
     bodies = {}
     number = 1
-    misses = 0
-    while number < 2000 and misses < 12:
-        batch = list(range(number, number + 20))
-        found_in_batch = False
-        with ThreadPoolExecutor(max_workers=8) as pool:
-            futures = {pool.submit(roll_exists, year, item): item for item in batch}
+    gap = 0
+    while number < 2000 and gap < 15:
+        batch = list(range(number, min(number + 10, 2000)))
+        found = {}
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            futures = {pool.submit(fetch_roll, year, item): item for item in batch}
             for future in as_completed(futures):
-                item = futures[future]
-                body = future.result()
-                if body is not None:
-                    bodies[item] = body
-                    found_in_batch = True
-        if found_in_batch:
-            misses = 0
-        else:
-            misses += len(batch)
-        number += 20
+                found[futures[future]] = future.result()
+        for item in batch:
+            body = found[item]
+            if body is None:
+                gap += 1
+            else:
+                gap = 0
+                bodies[item] = body
+            if gap >= 15:
+                break
+        number += len(batch)
         print("scanning", year, "through", number - 1, "kept", len(bodies), flush=True)
+        time.sleep(0.15)
     votes = []
     seen = {}
     for number in sorted(bodies):
@@ -785,8 +808,40 @@ def download_year(year):
     return votes, seen
 
 
+def saved_floor():
+    empty = {"week": "", "updated": "", "source": "https://docs.house.gov/floor/", "items": []}
+    if not OUT.exists():
+        return empty
+    try:
+        old = json.loads(OUT.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return empty
+    floor = old.get("floor")
+    if not isinstance(floor, dict):
+        return empty
+    floor.setdefault("items", [])
+    floor.setdefault("source", "https://docs.house.gov/floor/")
+    return floor
+
+
+def current_floor():
+    try:
+        week = latest_floor_week()
+    except Exception as error:
+        print("floor feed failed, keeping the saved list:", error, flush=True)
+        return saved_floor()
+    if not week:
+        print("floor feed empty, keeping the saved list", flush=True)
+        return saved_floor()
+    try:
+        return load_floor(week)
+    except Exception as error:
+        print("floor list failed, keeping the saved list:", error, flush=True)
+        return saved_floor()
+
+
 def latest_floor_week():
-    raw = fetch("https://docs.house.gov/BillsThisWeek-RSS.xml")
+    raw = fetch("https://docs.house.gov/BillsThisWeek-RSS.xml", timeout=20)
     text = raw.decode("utf-8", "replace")
     found = sorted(set(re.findall(r"billsthisweek/(\d{8})/", text)))
     # The feed lists old weeks. Keep the newest week that is still this Congress.
@@ -797,7 +852,7 @@ def latest_floor_week():
 
 
 def load_floor(week_stamp):
-    raw = fetch("https://docs.house.gov/floor/Download.aspx?file=/billsthisweek/%s/%s.xml" % (week_stamp, week_stamp))
+    raw = fetch("https://docs.house.gov/floor/Download.aspx?file=/billsthisweek/%s/%s.xml" % (week_stamp, week_stamp), timeout=20)
     root = ET.fromstring(raw)
     items = []
     for category in root.findall("category"):
@@ -835,13 +890,35 @@ def member_sort_key(member):
     )
 
 
-def main():
+def saved_vote_counts():
+    counts = {}
+    if not OUT.exists():
+        return counts
+    try:
+        old = json.loads(OUT.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return counts
+    for vote in old.get("votes") or []:
+        year = vote.get("year")
+        counts[year] = counts.get(year, 0) + 1
+    return counts
+
+
+def publish_votes():
     print("members", flush=True)
     members = load_members()
     by_id = {member["id"]: member for member in members}
+    previous_counts = saved_vote_counts()
     votes = []
     for year in (2025, 2026):
         year_votes, seen = download_year(year)
+        kept = len(year_votes)
+        saved = previous_counts.get(year, 0)
+        if kept + 2 < saved:
+            raise RuntimeError(
+                "House %s returned %s roll calls and the saved file has %s. Not replacing it."
+                % (year, kept, saved)
+            )
         votes.extend(year_votes)
         for bioguide, person in seen.items():
             if bioguide not in by_id:
@@ -868,8 +945,7 @@ def main():
             coded[index[bioguide]] = code
         vote["cast"] = "".join(coded)
     print("floor", flush=True)
-    week = latest_floor_week()
-    floor = load_floor(week) if week else {"week": "", "updated": "", "source": "", "items": []}
+    floor = current_floor()
     payload = {
         "updated": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
         "congress": 119,
@@ -899,9 +975,14 @@ def main():
     print("votes", len(votes), "members", len(members), "floor", len(floor["items"]), "week", floor.get("week"))
     print("dates", min(dates) if dates else None, max(dates) if dates else None)
     print("bytes", OUT.stat().st_size)
+    return votes, floor, payload["members"]
+
+
+def main():
+    votes, floor, members = publish_votes()
     write_summaries(votes, floor)
-    write_sponsors(votes, floor, payload["members"])
-    write_actions(votes, floor, payload["members"])
+    write_sponsors(votes, floor, members)
+    write_actions(votes, floor, members)
 
 
 if __name__ == "__main__":
