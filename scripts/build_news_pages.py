@@ -238,14 +238,17 @@ def absolute_from_news(url):
 
 def flatten_who(markup):
     def repl(match):
+        attrs = match.group(1)
         inner = match.group(2)
+        classes = re.search(r'\bclass="([^"]*)"', attrs)
+        class_attr = (' class="%s"' % classes.group(1)) if classes else ""
         text = visible_text(inner)
         if text:
-            return "<span>%s</span>" % inner
-        label = re.search(r'aria-label="([^"]*)"', match.group(1))
+            return "<span%s>%s</span>" % (class_attr, inner)
+        label = re.search(r'aria-label="([^"]*)"', attrs)
         if not label:
-            return "<span>%s</span>" % inner
-        return "<span>%s</span>" % html.escape(html.unescape(label.group(1)))
+            return "<span%s>%s</span>" % (class_attr, inner)
+        return "<span%s>%s</span>" % (class_attr, html.escape(html.unescape(label.group(1))))
     return re.sub(r"<button\b([^>]*(?:\bwho\b|byline-face)[^>]*)>(.*?)</button>", repl, markup, flags=re.S)
 
 

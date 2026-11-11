@@ -1274,7 +1274,7 @@ body.article-page .story { height: auto; max-width: 760px; }
 }
 #note .essay .byline-face { display: inline-flex; align-items: center; gap: 8px; color: var(--name-orange); font-weight: 700; text-decoration: none; background: none; border: 0; padding: 0; font: inherit; cursor: pointer; text-align: left; }
 #note .essay .byline-face:hover, #note .essay .byline-face:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
-#note .essay .byline-face img { width: 36px; height: 36px; border-radius: 0; object-fit: cover; object-position: center 18%; box-shadow: 0 0 0 1px var(--c-orange); }
+#note .essay .byline-face img, #note .essay .letter-by img { width: 36px; height: 36px; border-radius: 0; object-fit: cover; object-position: center 18%; box-shadow: 0 0 0 1px var(--c-orange); }
 #note .essay .role { color: var(--plate-mute); }
 #note .essay .essay-fig, #note .essay .cover-pair { margin: 0 0 22px; }
 #note .essay .essay-fig img { display: block; width: 100%; height: auto; }
