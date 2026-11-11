@@ -376,6 +376,22 @@
     });
   }
 
+  function readMinutes(text) {
+    var words = String(text || "").trim().split(/\s+/).filter(Boolean);
+    if (!words.length) return 0;
+    return Math.max(1, Math.round(words.length / 200));
+  }
+
+  function appendRead(when, text) {
+    var minutes = readMinutes(text);
+    if (!minutes) return;
+    when.appendChild(document.createTextNode(" · "));
+    var read = document.createElement("span");
+    read.className = "read";
+    read.textContent = minutes + " min read";
+    when.appendChild(read);
+  }
+
   function activityId(url) {
     var match = String(url).match(/activity[:-](\d+)/);
     return match ? match[1] : String(url);
@@ -413,6 +429,7 @@
     time.setAttribute("datetime", post.date || "");
     time.textContent = post.dateLabel || post.date || "";
     when.appendChild(time);
+    appendRead(when, (post.title || "") + " " + (post.text || ""));
     if (post.meta) when.appendChild(document.createTextNode(" · " + post.meta));
     var body = document.createElement("p");
     body.textContent = post.text || "";
@@ -562,6 +579,7 @@
     time.setAttribute("datetime", post.date || "");
     time.textContent = post.dateLabel || post.date || "";
     when.appendChild(time);
+    appendRead(when, (post.title || "") + " " + (post.text || ""));
     if (post.author) when.appendChild(document.createTextNode(" · " + post.author));
     if (post.caption) article.setAttribute("data-caption", post.caption);
     var body = document.createElement("p");
@@ -673,16 +691,22 @@
   function wireWhen(story) {
     var when = story.querySelector(":scope > .when");
     if (!when || when.querySelector(".who")) return;
-    var parts = when.textContent.split("·");
+    var parts = when.textContent.split("·").map(function (part) { return part.trim(); }).filter(Boolean);
+    parts = parts.filter(function (part) { return !/^\d+\s+min\s+read$/i.test(part); });
     if (parts.length < 2) return;
-    var name = parts[parts.length - 1].trim();
+    var name = parts[parts.length - 1];
     if (!name || name === "POCIT") return;
     var button = authorButton(name);
     if (!button) return;
     var time = when.querySelector("time");
+    var read = when.querySelector(".read");
     when.textContent = "";
     if (time) when.appendChild(time);
-    when.appendChild(document.createTextNode(time ? " · " : ""));
+    if (read) {
+      when.appendChild(document.createTextNode(" · "));
+      when.appendChild(read);
+    }
+    when.appendChild(document.createTextNode((time || read) ? " · " : ""));
     when.appendChild(button);
     if (story.querySelector(":scope > .fine")) return;
     var fine = document.createElement("p");
@@ -769,6 +793,7 @@
     var when = document.createElement("p");
     when.className = "when";
     if (issue.volume && issue.number) when.textContent = "Volume " + issue.volume + ", number " + issue.number;
+    appendRead(when, (issue.label || "") + " " + (typeof issue.pieces === "string" ? issue.pieces : ""));
     var body = document.createElement("p");
     body.textContent = issue.pieces || "Sigma Xi lists this issue on their site.";
     var src = document.createElement("p");
@@ -853,6 +878,7 @@
     time.setAttribute("datetime", post.date || "");
     time.textContent = post.dateLabel || post.date || "";
     when.appendChild(time);
+    appendRead(when, (post.title || "") + " " + (post.text || ""));
     if (post.author) when.appendChild(document.createTextNode(" · " + post.author));
     if (post.meta) when.appendChild(document.createTextNode(" · " + post.meta));
     var body = document.createElement("p");

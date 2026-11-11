@@ -107,6 +107,134 @@ def visible_text(fragment):
     return " ".join(text.split())
 
 
+READ_SKIP = {"tag", "when", "src", "actions", "letter-by", "letterhead", "fine", "read", "crumb"}
+READ_VOID = {"img", "br", "hr", "input", "source", "meta", "link", "wbr"}
+
+
+class ReadCounter(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack = []
+        self.parts = []
+
+    def handle_starttag(self, tag, attrs):
+        classes = set((dict(attrs).get("class") or "").split())
+        skip = tag in ("script", "style", "figcaption") or bool(classes & READ_SKIP)
+        if self.stack and self.stack[-1]:
+            skip = True
+        if tag not in READ_VOID:
+            self.stack.append(skip)
+
+    def handle_endtag(self, tag):
+        if tag in READ_VOID:
+            return
+        if self.stack:
+            self.stack.pop()
+
+    def handle_data(self, data):
+        if not self.stack or not self.stack[-1]:
+            self.parts.append(data)
+
+
+def reading_minutes(markup):
+    counter = ReadCounter()
+    try:
+        counter.feed(markup)
+        counter.close()
+    except Exception:
+        return 0
+    words = [part for part in " ".join(counter.parts).split() if part]
+    if not words:
+        return 0
+    return max(1, int(round(len(words) / 200.0)))
+
+
+def _with_read(inner, placed):
+    if "</time>" in inner:
+        return inner.replace("</time>", "</time>" + placed, 1)
+    if visible_text(inner):
+        return inner + placed
+    return None
+
+
+def stamp_read_time(markup):
+    """Put a reading time on the date line. A later pass refreshes the number."""
+    markup = re.sub(
+        r'\n?[ \t]*<p class="when">\s*<span class="read">.*?</span>\s*</p>',
+        "",
+        markup,
+        count=1,
+        flags=re.S,
+    )
+    markup = re.sub(r"\s*·\s*<span class=\"read\">.*?</span>", "", markup, count=1, flags=re.S)
+    minutes = reading_minutes(markup)
+    if not minutes:
+        return markup
+    placed = ' · <span class="read">%d min read</span>' % minutes
+    dated = []
+    volume = None
+    for match in re.finditer(r'(<p class="(?:when|tag)"[^>]*>)(.*?)(</p>)', markup, re.S):
+        inner = match.group(2)
+        if "</time>" in inner:
+            dated.append(match)
+            continue
+        if match.group(1).startswith('<p class="when"') and visible_text(inner).lower().startswith("volume"):
+            volume = match
+    found = dated[0] if dated else volume
+    if found:
+        updated = _with_read(found.group(2), placed)
+        if updated is not None:
+            return markup[:found.start(2)] + updated + markup[found.end(2):]
+    heading = re.search(r"</h[13]>", markup)
+    if not heading:
+        return markup
+    line = '\n          <p class="when"><span class="read">%d min read</span></p>' % minutes
+    return markup[:heading.end()] + line + markup[heading.end():]
+
+
+def stamp_stories(text):
+    changed = text
+    count = 0
+    for markup, attrs in extract_stories(text):
+        stamped = stamp_read_time(markup)
+        if stamped == markup:
+            continue
+        if markup not in changed:
+            raise SystemExit("could not stamp " + (attrs.get("id") or ""))
+        changed = changed.replace(markup, stamped, 1)
+        count += 1
+    return changed, count
+
+
+def _load(path):
+    raw = open(path, "rb").read()
+    newline = "\r\n" if b"\r\n" in raw else "\n"
+    return raw.decode("utf-8").replace("\r\n", "\n"), newline
+
+
+def _save(path, text, newline):
+    data = text.replace("\n", newline).encode("utf-8")
+    open(path, "wb").write(data)
+
+
+def stamp_existing():
+    news, newline = _load(NEWS)
+    updated, count = stamp_stories(news)
+    if updated != news:
+        _save(NEWS, updated, newline)
+    pages = 0
+    for name in os.listdir(NEWS_DIR):
+        path = os.path.join(NEWS_DIR, name, "index.html")
+        if not os.path.isfile(path):
+            continue
+        text, page_nl = _load(path)
+        revised, n = stamp_stories(text)
+        if revised != text:
+            _save(path, revised, page_nl)
+            pages += n
+    print("news stories", count, "article pages", pages)
+
+
 def clip(text, limit=155):
     text = " ".join((text or "").split())
     if len(text) <= limit:
@@ -161,6 +289,7 @@ def author_name(markup):
     block = re.sub(r"<time\b[^>]*>.*?</time>", " ", match.group(1), flags=re.S)
     text = visible_text(block)
     parts = [part.strip(" .") for part in text.split("·") if part.strip(" .")]
+    parts = [part for part in parts if not re.fullmatch(r"\d+\s+min\s+read", part, re.I)]
     if not parts:
         return ""
     name = parts[-1]
@@ -279,7 +408,7 @@ def article_body(markup, title):
     body = re.sub(r"(<h1\b[^>]*>)\s*<a\b[^>]*>(.*?)</a>\s*(</h1>)", r"\1\2\3", body, count=1, flags=re.S)
     body = re.sub(r"^(<article\b[^>]*?)\s+hidden\b", r"\1", body, count=1)
     body = re.sub(r"<details\b(?![^>]*\bopen\b)", "<details open", body)
-    return body
+    return stamp_read_time(body)
 
 
 def json_script(graph):
@@ -547,7 +676,7 @@ def render_page(text, markup, attrs):
         "</main>",
         footer(text),
         '<div id="google_translate_element" aria-hidden="true"></div>',
-        '<script src="../../lang.js?v=6"></script>',
+        '<script src="../../lang.js?v=10"></script>',
         "</body>",
         "</html>",
         "",
@@ -709,7 +838,7 @@ def story_markup(post, source, tag, link_label, lead=False):
         % (html.escape(post.get("url") or "", quote=True), html.escape(link_label, quote=False))
     )
     lines.append("        </article>")
-    return "\n".join(lines)
+    return stamp_read_time("\n".join(lines))
 
 
 def prepend_desk(text, section_id, block, move_lead):
