@@ -57,6 +57,8 @@
 .state-fold { margin: 12px 0 0; }
 .state-fold summary { cursor: pointer; width: fit-content; font-size: 18px; }
 #census-detail { scroll-margin-top: 120px; }
+#census-fallback { margin-top: 18px; }
+#census-fallback[hidden] { display: none !important; }
 #census-detail h2, #crime-detail h2 { margin-top: 8px; }
 .census-actions { margin: 18px 0 0; }
 .census-actions button, .linkish {
@@ -207,6 +209,9 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
 <link rel="icon" href="https://leaders.vote/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://leaders.vote/#website","name":"Leaders.vote","url":"https://leaders.vote/","description":"Leaders.vote is an independent, nonpartisan voter guide for every U.S. state on November 3, 2026. Candidates, offices, sample ballots, and unofficial results. No endorsements.","inLanguage":"en","publisher":{"@id":"https://leaders.vote/#publisher"}},{"@type":"Organization","@id":"https://leaders.vote/#publisher","name":"Leaders.vote","url":"https://leaders.vote/","description":"Independent, nonpartisan voter guide. Not a campaign and not a government site.","logo":{"@type":"ImageObject","url":"https://leaders.vote/favicon.svg"}},{"@type":"WebPage","@id":"https://leaders.vote/census.html#webpage","url":"https://leaders.vote/census.html","name":"Leaders.vote · Census","description":"National figures for the United States, including Census Bureau population estimates, FBI crime estimates, rape offenses and arrests, and a health map of fast-food locations.","isPartOf":{"@id":"https://leaders.vote/#website"},"breadcrumb":{"@id":"https://leaders.vote/census.html#breadcrumb"},"inLanguage":"en","isAccessibleForFree":true,"primaryImageOfPage":{"@type":"ImageObject","url":"https://leaders.vote/social/census-map.png"}},{"@type":"BreadcrumbList","@id":"https://leaders.vote/census.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Leaders.vote","item":"https://leaders.vote/"},{"@type":"ListItem","position":2,"name":"Census","item":"https://leaders.vote/census.html"}]}]}</script>
 <!-- /seo -->
+<!-- census-dataset -->
+<script type="application/ld+json" id="census-dataset">{"@context":"https://schema.org","@type":"Dataset","@id":"https://leaders.vote/census.html#population-2025","name":"United States population estimates, July 1, 2025","description":"Census Bureau population estimates for the 50 states and the District of Columbia on July 1, 2025 (341,784,857 people), the April 1, 2020 estimates base, the population age 18 and older, median age, and U.S. House seats assigned by the 2020 census.","url":"https://leaders.vote/census.html","creator":{"@type":"Organization","name":"U.S. Census Bureau","url":"https://www.census.gov/programs-surveys/popest.html"},"isBasedOn":"https://www.census.gov/programs-surveys/popest.html","temporalCoverage":"2020-04-01/2025-07-01","spatialCoverage":{"@type":"Place","name":"United States"},"variableMeasured":["population","population change since April 1, 2020","population age 18 and older","median age","House seats"],"dateModified":"2026-11-05","isAccessibleForFree":true,"publisher":{"@id":"https://leaders.vote/#publisher"}}</script>
+<!-- /census-dataset -->
 </head>
 <body>
 <svg id="site-marks" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -409,6 +414,68 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
       <div id="census-states" class="state-list"></div>
     </details>
     <div id="census-detail"></div>
+<!-- census-table -->
+<div id="census-fallback">
+<h2>The states and the District of Columbia</h2>
+<p>The Census Bureau estimates 341,784,857 people lived in the 50 states and the District of Columbia on July 1, 2025. That is 10,268,744 more than the April 1, 2020 estimates base of 331,516,113. The Bureau estimates 269,763,509 of those people were 18 or older. The median age was 39.4. The 2020 census assigned 435 seats in the House of Representatives.</p>
+<p>Source: the Census Bureau's <a href="https://www.census.gov/programs-surveys/popest.html">Population Estimates Program</a>, vintage 2025, and the <a href="https://www.census.gov/data/tables/2020/dec/2020-apportionment-data.html">2020 census apportionment</a>. Change is the July 1, 2025 estimate minus the April 1, 2020 estimates base. The map and the sortable table replace this list when the page can run its scripts.</p>
+<table class="totals notranslate" id="population-table" translate="no">
+<caption>Population estimates for July 1, 2025. House seats are the ones the 2020 census assigned.</caption>
+<thead><tr><th scope="col">State</th><th class="num" scope="col">Population</th><th class="num" scope="col">Change</th><th class="num" scope="col">Age 18 and older</th><th class="num" scope="col">Median age</th><th class="num" scope="col">House seats</th></tr></thead>
+<tbody>
+<tr><td class="notranslate" translate="no">California</td><td class="num">39,355,309</td><td class="num">−200,394</td><td class="num">31,180,511</td><td class="num">38.7</td><td class="num">52</td></tr>
+<tr><td class="notranslate" translate="no">Texas</td><td class="num">31,709,821</td><td class="num">+2,560,323</td><td class="num">24,109,307</td><td class="num">36.0</td><td class="num">38</td></tr>
+<tr><td class="notranslate" translate="no">Florida</td><td class="num">23,462,518</td><td class="num">+1,924,311</td><td class="num">19,019,796</td><td class="num">43.1</td><td class="num">28</td></tr>
+<tr><td class="notranslate" translate="no">New York</td><td class="num">20,002,427</td><td class="num">−201,269</td><td class="num">16,097,036</td><td class="num">39.8</td><td class="num">26</td></tr>
+<tr><td class="notranslate" translate="no">Pennsylvania</td><td class="num">13,059,432</td><td class="num">+56,679</td><td class="num">10,488,801</td><td class="num">41.4</td><td class="num">17</td></tr>
+<tr><td class="notranslate" translate="no">Illinois</td><td class="num">12,719,141</td><td class="num">−102,600</td><td class="num">10,100,540</td><td class="num">39.7</td><td class="num">17</td></tr>
+<tr><td class="notranslate" translate="no">Ohio</td><td class="num">11,900,510</td><td class="num">+101,065</td><td class="num">9,368,603</td><td class="num">40.1</td><td class="num">15</td></tr>
+<tr><td class="notranslate" translate="no">Georgia</td><td class="num">11,302,748</td><td class="num">+588,887</td><td class="num">8,796,778</td><td class="num">38.2</td><td class="num">14</td></tr>
+<tr><td class="notranslate" translate="no">North Carolina</td><td class="num">11,197,968</td><td class="num">+756,576</td><td class="num">8,838,026</td><td class="num">39.5</td><td class="num">14</td></tr>
+<tr><td class="notranslate" translate="no">Michigan</td><td class="num">10,127,884</td><td class="num">+48,522</td><td class="num">8,065,114</td><td class="num">40.7</td><td class="num">13</td></tr>
+<tr><td class="notranslate" translate="no">New Jersey</td><td class="num">9,548,215</td><td class="num">+259,191</td><td class="num">7,557,289</td><td class="num">40.1</td><td class="num">12</td></tr>
+<tr><td class="notranslate" translate="no">Virginia</td><td class="num">8,880,107</td><td class="num">+248,688</td><td class="num">7,019,802</td><td class="num">39.4</td><td class="num">11</td></tr>
+<tr><td class="notranslate" translate="no">Washington</td><td class="num">8,001,020</td><td class="num">+293,501</td><td class="num">6,366,184</td><td class="num">38.8</td><td class="num">10</td></tr>
+<tr><td class="notranslate" translate="no">Arizona</td><td class="num">7,623,818</td><td class="num">+465,714</td><td class="num">6,026,503</td><td class="num">39.4</td><td class="num">9</td></tr>
+<tr><td class="notranslate" translate="no">Tennessee</td><td class="num">7,315,076</td><td class="num">+402,757</td><td class="num">5,739,349</td><td class="num">39.2</td><td class="num">9</td></tr>
+<tr><td class="notranslate" translate="no">Massachusetts</td><td class="num">7,154,084</td><td class="num">+120,972</td><td class="num">5,826,510</td><td class="num">40.4</td><td class="num">9</td></tr>
+<tr><td class="notranslate" translate="no">Indiana</td><td class="num">6,973,333</td><td class="num">+186,728</td><td class="num">5,397,168</td><td class="num">38.6</td><td class="num">9</td></tr>
+<tr><td class="notranslate" translate="no">Missouri</td><td class="num">6,270,541</td><td class="num">+115,628</td><td class="num">4,910,413</td><td class="num">39.6</td><td class="num">8</td></tr>
+<tr><td class="notranslate" translate="no">Maryland</td><td class="num">6,265,347</td><td class="num">+83,707</td><td class="num">4,928,480</td><td class="num">39.8</td><td class="num">8</td></tr>
+<tr><td class="notranslate" translate="no">Colorado</td><td class="num">6,012,561</td><td class="num">+237,235</td><td class="num">4,792,358</td><td class="num">38.0</td><td class="num">8</td></tr>
+<tr><td class="notranslate" translate="no">Wisconsin</td><td class="num">5,972,787</td><td class="num">+78,464</td><td class="num">4,750,680</td><td class="num">41.0</td><td class="num">8</td></tr>
+<tr><td class="notranslate" translate="no">Minnesota</td><td class="num">5,830,405</td><td class="num">+123,672</td><td class="num">4,547,092</td><td class="num">39.4</td><td class="num">8</td></tr>
+<tr><td class="notranslate" translate="no">South Carolina</td><td class="num">5,570,274</td><td class="num">+452,024</td><td class="num">4,421,834</td><td class="num">41.1</td><td class="num">7</td></tr>
+<tr><td class="notranslate" translate="no">Alabama</td><td class="num">5,193,088</td><td class="num">+167,651</td><td class="num">4,075,161</td><td class="num">39.8</td><td class="num">7</td></tr>
+<tr><td class="notranslate" translate="no">Louisiana</td><td class="num">4,618,189</td><td class="num">−39,705</td><td class="num">3,568,234</td><td class="num">39.0</td><td class="num">6</td></tr>
+<tr><td class="notranslate" translate="no">Kentucky</td><td class="num">4,606,864</td><td class="num">+100,577</td><td class="num">3,590,081</td><td class="num">39.5</td><td class="num">6</td></tr>
+<tr><td class="notranslate" translate="no">Oregon</td><td class="num">4,273,586</td><td class="num">+36,304</td><td class="num">3,461,772</td><td class="num">41.1</td><td class="num">6</td></tr>
+<tr><td class="notranslate" translate="no">Oklahoma</td><td class="num">4,123,288</td><td class="num">+163,934</td><td class="num">3,165,587</td><td class="num">37.7</td><td class="num">5</td></tr>
+<tr><td class="notranslate" translate="no">Connecticut</td><td class="num">3,688,496</td><td class="num">+80,746</td><td class="num">2,970,201</td><td class="num">41.4</td><td class="num">5</td></tr>
+<tr><td class="notranslate" translate="no">Utah</td><td class="num">3,538,904</td><td class="num">+267,303</td><td class="num">2,616,637</td><td class="num">32.6</td><td class="num">4</td></tr>
+<tr><td class="notranslate" translate="no">Nevada</td><td class="num">3,282,188</td><td class="num">+176,595</td><td class="num">2,603,663</td><td class="num">39.6</td><td class="num">4</td></tr>
+<tr><td class="notranslate" translate="no">Iowa</td><td class="num">3,238,387</td><td class="num">+47,805</td><td class="num">2,518,739</td><td class="num">39.3</td><td class="num">4</td></tr>
+<tr><td class="notranslate" translate="no">Arkansas</td><td class="num">3,114,791</td><td class="num">+103,261</td><td class="num">2,416,023</td><td class="num">39.0</td><td class="num">4</td></tr>
+<tr><td class="notranslate" translate="no">Kansas</td><td class="num">2,977,220</td><td class="num">+39,234</td><td class="num">2,294,452</td><td class="num">38.1</td><td class="num">4</td></tr>
+<tr><td class="notranslate" translate="no">Mississippi</td><td class="num">2,954,160</td><td class="num">−7,104</td><td class="num">2,295,720</td><td class="num">39.6</td><td class="num">4</td></tr>
+<tr><td class="notranslate" translate="no">New Mexico</td><td class="num">2,125,498</td><td class="num">+8,006</td><td class="num">1,686,046</td><td class="num">40.1</td><td class="num">3</td></tr>
+<tr><td class="notranslate" translate="no">Idaho</td><td class="num">2,029,733</td><td class="num">+190,610</td><td class="num">1,557,631</td><td class="num">37.9</td><td class="num">2</td></tr>
+<tr><td class="notranslate" translate="no">Nebraska</td><td class="num">2,018,006</td><td class="num">+56,026</td><td class="num">1,538,757</td><td class="num">37.5</td><td class="num">3</td></tr>
+<tr><td class="notranslate" translate="no">West Virginia</td><td class="num">1,766,147</td><td class="num">−27,612</td><td class="num">1,421,798</td><td class="num">43.2</td><td class="num">2</td></tr>
+<tr><td class="notranslate" translate="no">Hawaii</td><td class="num">1,432,820</td><td class="num">−22,447</td><td class="num">1,151,103</td><td class="num">42.1</td><td class="num">2</td></tr>
+<tr><td class="notranslate" translate="no">New Hampshire</td><td class="num">1,415,342</td><td class="num">+37,769</td><td class="num">1,170,277</td><td class="num">44.1</td><td class="num">2</td></tr>
+<tr><td class="notranslate" translate="no">Maine</td><td class="num">1,414,874</td><td class="num">+51,656</td><td class="num">1,170,629</td><td class="num">44.9</td><td class="num">2</td></tr>
+<tr><td class="notranslate" translate="no">Montana</td><td class="num">1,144,694</td><td class="num">+60,473</td><td class="num">913,041</td><td class="num">41.2</td><td class="num">2</td></tr>
+<tr><td class="notranslate" translate="no">Rhode Island</td><td class="num">1,114,521</td><td class="num">+17,164</td><td class="num">916,867</td><td class="num">41.2</td><td class="num">2</td></tr>
+<tr><td class="notranslate" translate="no">Delaware</td><td class="num">1,059,952</td><td class="num">+70,002</td><td class="num">849,963</td><td class="num">42.3</td><td class="num">1</td></tr>
+<tr><td class="notranslate" translate="no">South Dakota</td><td class="num">935,094</td><td class="num">+48,438</td><td class="num">714,952</td><td class="num">38.4</td><td class="num">1</td></tr>
+<tr><td class="notranslate" translate="no">North Dakota</td><td class="num">799,358</td><td class="num">+20,222</td><td class="num">616,388</td><td class="num">36.5</td><td class="num">1</td></tr>
+<tr><td class="notranslate" translate="no">Alaska</td><td class="num">737,270</td><td class="num">+3,887</td><td class="num">565,570</td><td class="num">36.7</td><td class="num">1</td></tr>
+<tr><td class="notranslate" translate="no">District of Columbia</td><td class="num">693,645</td><td class="num">+4,101</td><td class="num">569,575</td><td class="num">35.0</td><td class="num">Delegate</td></tr>
+<tr><td class="notranslate" translate="no">Vermont</td><td class="num">644,663</td><td class="num">+1,586</td><td class="num">535,049</td><td class="num">44.4</td><td class="num">1</td></tr>
+<tr><td class="notranslate" translate="no">Wyoming</td><td class="num">588,753</td><td class="num">+11,881</td><td class="num">461,419</td><td class="num">40.2</td><td class="num">1</td></tr>
+</tbody></table></div>
+<!-- /census-table -->
     <section class="where" id="crime">
       <h2>Crime</h2>
       <p class="deck">These are the FBI's numbers for 2025. The map opens on fraud arrests from <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads">Table 69</a>: arrests by state for agencies that sent 12 months of data. Orange is a Table 69 arrest rate. Indigo is an estimated offense rate, offenses known to law enforcement.</p>
@@ -709,7 +776,7 @@ html:is([data-theme="dark"], [data-theme$="-dark"]) .pair-table td.on-dark { col
 </footer>
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js?v=6"></script>
-<script src="census.js?v=8"></script>
+<script src="census.js?v=9"></script>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
 <script src="crime.js?v=27"></script>

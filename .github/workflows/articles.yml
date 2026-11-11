@@ -1,0 +1,39 @@
+name: Publish article pages
+
+on:
+  push:
+    paths:
+      - "news.html"
+      - "news/preview/note.js"
+      - "news/*.json"
+      - "scripts/build_news_pages.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: article-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Give each story a page and a sitemap entry
+        run: |
+          git config user.name "leaders-results"
+          git config user.email "actions@leaders.vote"
+          python scripts/build_news_pages.py
+          git add -- news.html index.html search.json sitemap.xml robots.txt news
+          if git diff --cached --quiet; then
+            echo unchanged
+          else
+            git commit -m "Publish article pages and update the sitemap."
+            git push
+          fi

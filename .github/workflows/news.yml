@@ -27,11 +27,8 @@ jobs:
           git config user.name "leaders-results"
           git config user.email "actions@leaders.vote"
           python scripts/update_publications.py
-          files=
-          for f in news/better.json news/look.json news/nyle.json news/edge.json; do
-            if [ -f "$f" ]; then files="$files $f"; fi
-          done
-          git add -- $files
+          python scripts/build_news_pages.py
+          git add -- news.html index.html search.json sitemap.xml robots.txt news
           if git diff --cached --quiet; then
             echo unchanged
           else

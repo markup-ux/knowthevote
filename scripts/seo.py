@@ -73,6 +73,10 @@ def canonical(rel):
     rel = rel.replace("\\", "/").lstrip("/")
     if rel in ("", "index.html"):
         return ORIGIN + "/"
+    # Article pages live in a directory so the public URL has no .html.
+    # Other index.html files, including country guides, keep their path.
+    if rel.startswith("news/") and rel.endswith("/index.html"):
+        return ORIGIN + "/" + rel[: -len("index.html")]
     return ORIGIN + "/" + rel
 
 

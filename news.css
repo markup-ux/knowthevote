@@ -867,7 +867,8 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.story h3 {
+.story h3,
+.story h1 {
   margin: 0 14px;
   padding: 0;
   border: 0;
@@ -878,6 +879,15 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   line-height: 1.2;
   text-wrap: balance;
 }
+.story h1 { font-size: 32px; }
+.story h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.story h3 a:hover,
+.story h3 a:focus-visible { text-decoration: underline; }
+body.article-page .story { height: auto; max-width: 760px; }
+.crumb { margin: 18px 0 12px; }
 .story p { margin: 0 14px; color: var(--plate-ink); }
 .story > p:not(.tag):not(.when):not(.src):not(.actions) {
   align-self: stretch;
@@ -1229,4 +1239,109 @@ span.pg { cursor: default; text-decoration: none; color: var(--plate-mute); }
   .card.person > img { width: 64px; height: 64px; }
   .card.person .portrait-letter { font-size: 22px; }
   .frame-hold iframe { min-height: 420px; }
+}
+
+/* Publisher letters. The same rules note.js adds when it runs. */
+#note .essay.story {
+  justify-self: center; width: min(42rem, 100%); max-width: 42rem;
+  align-items: stretch; gap: 0; padding: 18px 18px 28px;
+  color: var(--plate-ink);
+}
+#note .essay > * { margin: 0; }
+#note .essay a { color: var(--plate-ink); }
+#note .essay .letterhead {
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  margin: 0 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--bar-stripe);
+  color: var(--name-brown); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+}
+#note .essay .letterhead .tag { color: var(--name-blue); }
+#note .essay .letterhead p { margin: 0; border: 0; padding: 0; }
+#note .essay .tag, #note .essay .when {
+  display: inline; margin: 0; padding: 0; border: 0; background: none;
+  color: inherit; font-size: inherit; font-weight: inherit; letter-spacing: inherit; text-transform: inherit;
+}
+#note .essay .essay-title {
+  margin: 0 0 12px; padding: 0; border: 0; color: var(--plate-ink);
+  font-size: 40px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.08;
+}
+#note .essay .standfirst {
+  margin: 0 0 16px; padding: 0 0 16px; border: 0; border-bottom: 1px solid var(--plate-edge);
+  font-size: 20px; font-style: italic; font-weight: 400; line-height: 1.35;
+}
+#note .essay .letter-by {
+  display: flex; align-items: center; gap: 10px; margin: 0 0 18px; border: 0; padding: 0;
+  font-size: 15px;
+}
+#note .essay .byline-face { display: inline-flex; align-items: center; gap: 8px; color: var(--name-orange); font-weight: 700; text-decoration: none; background: none; border: 0; padding: 0; font: inherit; cursor: pointer; text-align: left; }
+#note .essay .byline-face:hover, #note .essay .byline-face:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+#note .essay .byline-face img { width: 36px; height: 36px; border-radius: 0; object-fit: cover; object-position: center 18%; box-shadow: 0 0 0 1px var(--c-orange); }
+#note .essay .role { color: var(--plate-mute); }
+#note .essay .essay-fig, #note .essay .cover-pair { margin: 0 0 22px; }
+#note .essay .essay-fig img { display: block; width: 100%; height: auto; }
+#note .essay .cover-pair .covers { display: flex; justify-content: center; align-items: center; gap: 18px; }
+#note .essay .cover-pair .covers img { display: block; width: auto; max-width: calc(50% - 9px); max-height: 440px; height: auto; object-fit: contain; background: transparent; }
+#note .essay .essay-fig figcaption, #note .essay .cover-pair figcaption, #note .essay .section-fig figcaption {
+  margin-top: 6px; color: var(--plate-mute); font-size: 13px; line-height: 1.45;
+}
+#note .essay .body { align-self: stretch; }
+#note .essay .body p, #note .essay .body li {
+  margin: 0 0 0.95em; border: 0; padding: 0;
+  font-size: 18px; line-height: 1.65;
+}
+#note .essay .lede { font-size: 20px; line-height: 1.5; }
+#note .essay .pull {
+  margin: 1.15em 0 1.25em; padding: 2px 0 2px 16px;
+  border-left: 3px solid var(--bar-stripe);
+}
+#note .essay .pull p {
+  margin: 0;
+  font-size: 22px; font-weight: 600; line-height: 1.35;
+}
+#note .essay .in-note {
+  margin: 0.4em 0 1.2em; color: var(--plate-mute); font-size: 15px; line-height: 1.5;
+}
+#note .essay .in-note strong { color: var(--plate-ink); letter-spacing: 0.04em; text-transform: uppercase; font-size: 12px; }
+#note .essay .sign-label {
+  margin: 1.4em 0 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+}
+#note .essay .card { margin: 0 0 8px; align-self: stretch; }
+#note .essay .byline-card { margin: 0 0 18px; }
+#note .essay h4 {
+  margin: 1.8em 0 0.45em; padding-top: 0.85em; border-top: 1px solid var(--plate-edge);
+  font-size: 24px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2;
+}
+#note .essay h4 .num {
+  display: block; margin-bottom: 4px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--plate-mute);
+}
+#note .essay .section-fig { margin: 0 0 14px; }
+#note .essay .section-fig img { display: block; width: 100%; max-height: 320px; object-fit: cover; object-position: center; background: var(--well); }
+#note .essay .section-fig.is-diagram { text-align: center; }
+#note .essay .section-fig.is-diagram img { width: auto; max-width: 100%; max-height: 340px; object-fit: contain; background: transparent; margin: 0 auto; }
+#note .essay .section-fig.is-map img { max-height: 560px; }
+#note .essay.newsletter .tally {
+  margin: 0 0 1.15em; padding: 4px 0 2px; border-top: 2px solid var(--bar-stripe); border-bottom: 1px solid var(--plate-edge);
+}
+#note .essay.newsletter .tally p { margin: 0; padding: 9px 0; border-bottom: 1px solid var(--plate-edge); font-size: 17px; line-height: 1.4; }
+#note .essay.newsletter .tally p:last-child { border-bottom: 0; }
+#note .essay.newsletter .tally strong { display: inline-block; min-width: 7.2em; font-variant-numeric: tabular-nums; }
+#note .essay.newsletter h4 {
+  margin: 1.5em 0 0.4em; padding-top: 0.15em; border-top: 0; border-bottom: 0;
+  font-size: 26px; font-weight: 700; letter-spacing: -0.02em; text-transform: none; line-height: 1.25;
+}
+#note .essay.newsletter h4 .num { display: none; }
+#note .essay.newsletter .signoff { margin: 1.3em 0 0.4em; font-size: 18px; line-height: 1.45; }
+#note .essay .body ul { margin: 0 0 1em; padding-left: 1.2em; }
+#note .essay .body li { margin: 0 0 0.4em; }
+html, body { overflow-anchor: none; }
+#note .essay .rest, #note .essay .rest * { overflow-anchor: none; }
+#note .essay .rest { margin-top: 4px; border-top: 1px solid var(--plate-edge); }
+#note .essay .rest::details-content { overflow-anchor: none; }
+#note .essay .rest > summary { cursor: pointer; font-weight: 700; letter-spacing: 0.04em; padding: 12px 0; color: var(--plate-ink); }
+#note .essay .rest > summary:focus-visible { outline: 2px solid var(--plate-ink); outline-offset: 2px; }
+html.look-display #note .essay .essay-title, html.look-display #note .essay h4, html.look-display #note .essay .pull p, html.look-display #note .essay .standfirst { font-family: var(--look-display); }
+html.look-body #note .essay, html.look-body #note .essay .body, html.look-body #note .essay .body p, html.look-body #note .essay .body li { font-family: var(--look-body); }
+@media (max-width: 640px) {
+  #note .essay .essay-title { font-size: 32px; }
+  #note .essay .pull p { font-size: 20px; }
 }

@@ -26,7 +26,8 @@ jobs:
           git config user.name "leaders-results"
           git config user.email "actions@leaders.vote"
           python scripts/update_pocit.py
-          git add -- news/pocit.json
+          python scripts/build_news_pages.py
+          git add -- news.html index.html search.json sitemap.xml robots.txt news
           if git diff --cached --quiet; then
             echo unchanged
           else

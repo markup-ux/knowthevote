@@ -366,6 +366,8 @@
   }
 
   function renderDetail() {
+    var fallback = document.getElementById("census-fallback");
+    if (fallback) fallback.hidden = true;
     detail.innerHTML = "";
     if (!selected) {
       var nation = data.nation;

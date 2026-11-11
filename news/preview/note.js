@@ -1,6 +1,6 @@
 (function () {
   var reader = document.getElementById("reader");
-  if (!document.querySelector(".sources") || !reader || document.getElementById("note")) return;
+  if (!document.querySelector(".sources") || !reader) return;
 
   var style = document.createElement("style");
   style.textContent = [
@@ -138,7 +138,11 @@
     return '<blockquote class="pull"><p>' + text + '</p></blockquote>';
   }
 
-  var section = document.createElement("section");
+  var section = document.getElementById("note");
+  // The letters are also in news.html so they can be read without this script.
+  // After editing a letter here, put the same section back in news.html and run scripts/build_news_pages.py.
+  if (!section) {
+  section = document.createElement("section");
   section.className = "desk";
   section.id = "note";
   section.innerHTML = [
@@ -584,6 +588,7 @@
   var anchor = document.getElementById("spotlight") || document.getElementById("weekly");
   if (anchor) anchor.parentNode.insertBefore(section, anchor);
   else reader.parentNode.insertBefore(section, reader);
+  }
   section.querySelectorAll(".rest").forEach(function (rest) {
     var summary = rest.querySelector("summary");
     summary.addEventListener("click", function (event) {

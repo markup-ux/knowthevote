@@ -666,6 +666,11 @@ def add_chat(index):
         emit("House floor", "Group Chat · House floor", row.get("url") or "", row.get("text") or "", "H")
 
 
+def news_href(ident):
+    import build_news_pages
+    return build_news_pages.article_href(ident)
+
+
 def add_news(index):
     body = index.text("news.html")
     if not body:
@@ -685,7 +690,7 @@ def add_news(index):
             if text and text != name:
                 bits.append(text)
         stories.setdefault(label, ident)
-        index.add(name, detail, "news.html#" + ident, 2, " ".join(bits))
+        index.add(name, detail, news_href(ident), 2, " ".join(bits))
     path = os.path.join(ROOT, "news", "researchers.js")
     if not os.path.isfile(path):
         return
@@ -699,7 +704,7 @@ def add_news(index):
         ident = stories.get(label)
         if not ident:
             continue
-        href = "news.html#" + ident
+        href = news_href(ident)
         for piece in issue.get("pieces") or []:
             title = piece.get("title") or ""
             page = piece.get("page")
