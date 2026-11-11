@@ -264,12 +264,12 @@ def header(title_nav, code, label):
     return """<header>
   <div class="wrap bar">
     <div class="bar-top">
-      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      <a class="brand notranslate" href="/" translate="no">Leaders.vote</a>
       <div class="lang notranslate" translate="no">%s</div>
     </div>
     %s
     <nav>
-      <a href="index.html">All states</a>
+      <a href="/">All states</a>
       <a href="countries.html">Countries</a>%s
     </nav>
   </div>

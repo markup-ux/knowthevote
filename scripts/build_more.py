@@ -316,7 +316,7 @@ def shell(spec, here, nav, body, place=""):
 <header>
   <div class="wrap bar">
     <div class="bar-top">
-      <a class="brand notranslate" href="${root}index.html" translate="no">Leaders.vote</a>
+      <a class="brand notranslate" href="/" translate="no">Leaders.vote</a>
       <div class="lang notranslate" translate="no">$lang</div>
     </div>
     <p class="here notranslate" translate="no"><img src="${root}flags/$flag" alt=""><span>$here</span></p>
@@ -404,14 +404,14 @@ def write_pages(spec, shapes, data):
         esc(spec["list_note"]),
         "\n".join(links),
     )
-    nav = '<a href="../countries.html">Countries</a>\n      <a href="../index.html">United States</a>'
+    nav = '<a href="../countries.html">Countries</a>\n      <a href="/">United States</a>'
     open(os.path.join(folder, "index.html"), "w", encoding="utf-8", newline="\n").write(
         shell(spec, spec["country"], nav, body)
     )
     nav = (
         '<a href="../../countries.html">Countries</a>\n'
         '      <a href="../index.html">%s</a>\n'
-        '      <a href="../../index.html">United States</a>' % esc(spec["country"])
+        '      <a href="/">United States</a>' % esc(spec["country"])
     )
     child = dict(spec, root="../../", local="../")
     for shape in shapes:
@@ -1548,7 +1548,7 @@ def country_card(code, fallback):
 def write_countries():
     menu = lang_menu()
     cards = """
-      <a href="index.html"><img src="flags/us.svg" alt=""><strong>United States</strong><span>Countrywide election on 3 November 2026. Open a state, then see its counties. A state is colored only where reported votes have one party ahead.</span></a>
+      <a href="/"><img src="flags/us.svg" alt=""><strong>United States</strong><span>Countrywide election on 3 November 2026. Open a state, then see its counties. A state is colored only where reported votes have one party ahead.</span></a>
       <a href="za/index.html"><img src="flags/za.svg" alt=""><strong>South Africa</strong><span>Local councils on 4 November 2026. A municipality stays blank until the Commission reports votes there.</span></a>
       <a href="br/index.html"><img src="flags/br.svg" alt=""><strong>Brazil</strong><span>Presidential runoff on 25 October 2026. The court's file marks the count finished. A state is colored from the votes reported there.</span></a>
       <a href="ch/index.html"><img src="flags/ch.svg" alt=""><strong>Switzerland</strong><span>%s</span></a>
@@ -1610,7 +1610,7 @@ def write_countries():
         )),
     )
     nav = """
-      <a href="index.html">United States</a>
+      <a href="/">United States</a>
       <a href="za/index.html">South Africa</a>
       <a href="br/index.html">Brazil</a>
       <a href="ch/index.html">Switzerland</a>
@@ -1642,7 +1642,7 @@ def write_countries():
 <header>
   <div class="wrap bar">
     <div class="bar-top">
-      <a class="brand notranslate" href="index.html" translate="no">Leaders.vote</a>
+      <a class="brand notranslate" href="/" translate="no">Leaders.vote</a>
       <div class="lang notranslate" translate="no">%s</div>
     </div>
     <p class="here notranslate" translate="no"><span>Countries</span></p>

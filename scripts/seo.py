@@ -5,12 +5,15 @@ structured data. robots.txt and sitemap.xml list the same pages. The home
 title and the countries description live here so a later rebuild keeps them.
 
 Files under data/ and scripts/ are left alone. preview.html, health.html,
-and visits.html are marked noindex and left out of the sitemap.
+visits.html, and search.html are marked noindex and left out of the sitemap.
+News article pages under news/ keep the head written by build_news_pages.py.
 """
 import html
 import json
 import os
 import re
+from datetime import datetime, timezone
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ORIGIN = "https://leaders.vote"
@@ -28,16 +31,21 @@ CENSUS_IMAGE = (
 ICON = ORIGIN + "/favicon.svg"
 HOME_TITLE = "Leaders.vote — Know who you're voting for."
 HOME_DESCRIPTION = (
-    "Leaders.vote is an independent, nonpartisan voter guide for every U.S. state "
-    "on November 3, 2026. Candidates, offices, sample ballots, and unofficial results. "
-    "No endorsements."
+    "Leaders.vote is an independent, nonpartisan guide to the leaders we vote for."
+)
+HOME_IMAGE = (
+    ORIGIN + "/social/site-ad.png",
+    "image/png",
+    "2160",
+    "2700",
+    "Leaders.vote. Know who you're voting for. All states, Census, The House, News, Group Chat, Trivia, Countries, and Gallery. Independent and nonpartisan. No endorsements.",
 )
 COUNTRIES_DESCRIPTION = (
     "Election guides on Leaders.vote for the United States and other countries. "
     "A place is colored only from reported vote totals. Not an endorsement."
 )
 INDEX_ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-NOINDEX = {"preview.html", "health.html", "visits.html"}
+NOINDEX = {"preview.html", "health.html", "visits.html", "search.html"}
 SKIP_DIRS = {"data", "scripts", "preview", ".git", ".github"}
 COUNTRIES = {
     "au": "Australia",
@@ -101,14 +109,21 @@ def breadcrumb(rel, title, url):
 def page_image(rel):
     if rel == "census.html":
         return CENSUS_IMAGE
+    if rel == "index.html":
+        return HOME_IMAGE
     return (IMAGE, "image/jpeg", IMAGE_WIDTH, IMAGE_HEIGHT, IMAGE_ALT)
 
 
-def structured_data(rel, title, description, url):
+def is_news_article(rel):
+    return rel.startswith("news/") and rel.endswith(".html")
+
+
+def structured_data(rel, title, description, url, source=""):
     website = {
         "@type": "WebSite",
         "@id": ORIGIN + "/#website",
         "name": "Leaders.vote",
+        "alternateName": "leaders.vote",
         "url": ORIGIN + "/",
         "description": HOME_DESCRIPTION,
         "inLanguage": "en",
@@ -126,6 +141,7 @@ def structured_data(rel, title, description, url):
             "@type": "Organization",
             "@id": ORIGIN + "/#publisher",
             "name": "Leaders.vote",
+            "alternateName": "leaders.vote",
             "url": ORIGIN + "/",
             "description": "Independent, nonpartisan voter guide. Not a campaign and not a government site.",
             "logo": {"@type": "ImageObject", "url": ICON},
@@ -144,11 +160,16 @@ def structured_data(rel, title, description, url):
         },
         breadcrumb(rel, title, url),
     ]
+    if rel == "news.html" and source:
+        import build_news_pages
+        listing = build_news_pages.item_list(source)
+        if listing:
+            graph.append(listing)
     payload = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
     return payload.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
 
 
-def block(rel, title, description, robots):
+def block(rel, title, description, robots, source=""):
     url = canonical(rel)
     image, image_type, image_width, image_height, image_alt = page_image(rel)
     lines = [
@@ -172,7 +193,7 @@ def block(rel, title, description, robots):
         '<meta name="twitter:description" content="%s">' % attr(description),
         '<meta name="twitter:image" content="%s">' % image,
         '<link rel="icon" href="%s" type="image/svg+xml">' % ICON,
-        '<script type="application/ld+json">%s</script>' % structured_data(rel, title, description, url),
+        '<script type="application/ld+json">%s</script>' % structured_data(rel, title, description, url, source),
         "<!-- /seo -->",
     ]
     return "\n".join(lines)
@@ -234,7 +255,7 @@ def prepare(rel, text):
     description = DESC_RE.search(text)
     description = html.unescape(description.group(1)).strip() if description else title
     robots = "noindex, follow" if rel in NOINDEX else INDEX_ROBOTS
-    return insert_block(text, block(rel, title, description, robots))
+    return insert_block(text, block(rel, title, description, robots, text))
 
 
 def iter_pages():
@@ -247,6 +268,11 @@ def iter_pages():
 
 def write_robots():
     body = "\n".join([
+        "# Public voter-guide pages are crawlable.",
+        "# User-agent: * allows major search engines. It also allows AI search",
+        "# and AI training crawlers. Training-crawler blocks are not set.",
+        "# Change that only with an explicit policy decision.",
+        "# /data/ and /scripts/ stay out of the crawl.",
         "User-agent: *",
         "Allow: /",
         "Disallow: /data/",
@@ -263,14 +289,30 @@ def write_robots():
     return False
 
 
+def lastmod(rel):
+    path = os.path.join(ROOT, rel.replace("/", os.sep))
+    stamp = os.path.getmtime(path)
+    return datetime.fromtimestamp(stamp, timezone.utc).strftime("%Y-%m-%d")
+
+
+def indexable(rel, text):
+    if rel in NOINDEX:
+        return False
+    if "<title>" not in text.lower():
+        return False
+    if 'content="noindex' in text:
+        return False
+    return True
+
+
 def write_sitemap(rels):
-    locs = [canonical(rel) for rel in rels]
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ]
-    for loc in locs:
-        lines.append("<url><loc>%s</loc></url>" % loc.replace("&", "&amp;"))
+    for rel in rels:
+        loc = quote(canonical(rel), safe=":/").replace("&", "&amp;")
+        lines.append("<url><loc>%s</loc><lastmod>%s</lastmod></url>" % (loc, lastmod(rel)))
     lines.append("</urlset>")
     lines.append("")
     body = "\n".join(lines)
@@ -282,19 +324,42 @@ def write_sitemap(rels):
     return False
 
 
+def list_indexable():
+    listed = []
+    for path in iter_pages():
+        rel = os.path.relpath(path, ROOT).replace("\\", "/")
+        text = open(path, encoding="utf-8").read()
+        if indexable(rel, text):
+            listed.append(rel)
+    listed.sort(key=lambda rel: (rel != "index.html", rel))
+    return listed
+
+
+def refresh_sitemap():
+    listed = list_indexable()
+    write_sitemap(listed)
+    write_robots()
+    return listed
+
+
 def publish():
     import build_search
+    import build_news_pages
     build_search.main()
+    build_news_pages.write_articles(refresh=False)
     changed = 0
     listed = []
     for path in iter_pages():
         rel = os.path.relpath(path, ROOT).replace("\\", "/")
         original = open(path, encoding="utf-8").read()
-        updated = prepare(rel, original)
-        if updated != original:
-            open(path, "w", encoding="utf-8", newline="\n").write(updated)
-            changed += 1
-        if rel not in NOINDEX and "<title>" in updated.lower() and 'content="noindex' not in updated:
+        if is_news_article(rel):
+            updated = original
+        else:
+            updated = prepare(rel, original)
+            if updated != original:
+                open(path, "w", encoding="utf-8", newline="\n").write(updated)
+                changed += 1
+        if indexable(rel, updated):
             listed.append(rel)
     listed.sort(key=lambda rel: (rel != "index.html", rel))
     robots_changed = write_robots()

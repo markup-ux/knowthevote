@@ -1,3 +1,8 @@
+# Public voter-guide pages are crawlable.
+# User-agent: * allows major search engines. It also allows AI search
+# and AI training crawlers. Training-crawler blocks are not set.
+# Change that only with an explicit policy decision.
+# /data/ and /scripts/ stay out of the crawl.
 User-agent: *
 Allow: /
 Disallow: /data/

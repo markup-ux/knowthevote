@@ -340,7 +340,7 @@ def shell(title, description, root, local, here, nav, body, place=""):
 <header>
   <div class="wrap bar">
     <div class="bar-top">
-      <a class="brand notranslate" href="%sindex.html" translate="no">Leaders.vote</a>
+      <a class="brand notranslate" href="/" translate="no">Leaders.vote</a>
       <div class="lang notranslate" translate="no">%s</div>
     </div>
     <p class="here notranslate" translate="no"><img src="%sflags/za.svg" alt=""><span>%s</span></p>
@@ -375,7 +375,6 @@ def shell(title, description, root, local, here, nav, body, place=""):
         root,
         local,
         place_attr,
-        root,
         lang_menu(),
         root,
         esc(here),
@@ -409,7 +408,7 @@ def write_html(catalog):
     <h2 id="municipalities">The %d municipalities</h2>
     <p class="deck">These names are the same places as the map, listed from A to Z. Each name is a council, not a candidate. It may be a city, such as Cape Town, a rural area, or a person the council is named for. Open a name to see that council. When two councils share a name, the province is added so they stay separate. Emalahleni in the Eastern Cape is not Emalahleni in Mpumalanga.</p>
     <div class="state-list">%s</div>""" % (len(catalog), len(catalog), "\n".join(links))
-    nav = '<a href="../countries.html">Countries</a>\n      <a href="../index.html">United States</a>'
+    nav = '<a href="../countries.html">Countries</a>\n      <a href="/">United States</a>'
     page = shell(
         "Leaders.vote · South Africa, 4 November 2026",
         "Leaders.vote guide to South Africa's 4 November 2026 local government elections. Municipality colors come only from reported Electoral Commission totals.",
@@ -424,7 +423,7 @@ def write_html(catalog):
     nav = (
         '<a href="../../countries.html">Countries</a>\n'
         '      <a href="../index.html">South Africa</a>\n'
-        '      <a href="../../index.html">United States</a>'
+        '      <a href="/">United States</a>'
     )
     for item in catalog:
         province = item["province"] or "South Africa"
