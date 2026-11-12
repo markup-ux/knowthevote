@@ -215,6 +215,14 @@
   browseBtn.addEventListener("click", function () {
     setBrowsing(!browsing);
   });
+  var adjustBtn = document.getElementById("wall-adjust");
+  adjustBtn.addEventListener("click", function () {
+    var on = !panel.classList.contains("is-adjusted");
+    panel.classList.toggle("is-adjusted", on);
+    adjustBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    adjustBtn.setAttribute("aria-expanded", on ? "true" : "false");
+    measure();
+  });
   sheet.addEventListener("scroll", function () {
     if (!browsing || gridTo >= photos.length) return;
     if (sheet.scrollTop + sheet.clientHeight < sheet.scrollHeight - 280) return;
@@ -836,7 +844,9 @@
   }
 
   function measure() {
+    var header = document.querySelector("header");
     stage.style.setProperty("--dock", panel.offsetHeight + "px");
+    if (header) stage.style.setProperty("--head", header.offsetHeight + "px");
     redraw();
   }
 

@@ -192,7 +192,7 @@
     z-index: 7;
     left: 12px;
     right: 12px;
-    top: 88px;
+    top: calc(var(--head, 88px) + 8px);
     bottom: calc(var(--dock) + 12px);
     overflow: auto;
     padding: 10px;
@@ -229,10 +229,108 @@
     text-transform: uppercase;
   }
   #wall-grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  @media (max-width: 720px) {
-    #wall-panel h1 { font-size: 26px; }
+  @media (min-width: 901px), (min-width: 721px) and (min-height: 521px) {
+    #wall-adjust { display: none; }
+  }
+  @media (max-width: 720px), (max-width: 900px) and (max-height: 520px) {
+    #wall-panel {
+      max-height: none;
+      padding: 10px 12px 12px;
+    }
+    #wall-panel.is-adjusted { max-height: 58vh; }
+    #wall-panel .kicker,
+    #wall-panel h1,
+    #wall-panel > .deck {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+    }
+    #wall-subjects {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      gap: 0 16px;
+      margin: 0 0 8px;
+      padding-bottom: 2px;
+      scrollbar-width: none;
+      mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent);
+    }
+    #wall-subjects::-webkit-scrollbar { display: none; }
+    #wall-subjects button {
+      flex: none;
+      white-space: nowrap;
+      font-size: 15px;
+      padding: 8px 0;
+    }
+    #wall-panel .wall-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin: 0;
+    }
+    #wall-panel .wall-actions button {
+      min-height: 44px;
+      padding: 8px 6px;
+      font-size: 15px;
+      line-height: 1.2;
+      text-align: center;
+    }
+    #wall-prev { order: 1; }
+    #wall-next { order: 2; }
+    #wall-map-toggle { order: 3; }
+    #wall-browse { order: 4; }
+    #wall-adjust { order: 5; grid-column: 1 / -1; }
+    #wall-hold { order: 6; }
+    #wall-full { order: 7; }
+    #wall-panel .wall-actions label:has(#wall-map-pick) { order: 8; }
+    #wall-panel .wall-actions label:has(#wall-sort) { order: 9; }
+    #wall-panel:not(.is-adjusted) .wall-secondary,
+    #wall-panel:not(.is-adjusted) .wall-sliders,
+    #wall-panel:not(.is-adjusted) > .note { display: none; }
+    #wall-panel.is-adjusted .wall-pick {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      grid-column: 1 / -1;
+      margin: 0;
+    }
+    #wall-panel.is-adjusted .wall-pick select {
+      flex: 1 1 auto;
+      min-width: 0;
+      margin: 0;
+      font-size: 16px;
+    }
     #wall-panel .wall-sliders { grid-template-columns: 1fr; }
+    #wall-panel.is-adjusted > .note { font-size: 14px; }
+    #wall-credit { font-size: 13px; padding: 5px 8px; }
+    #wall-notes { left: 10px; right: 10px; }
+    #wall-sheet { left: 8px; right: 8px; padding: 8px; }
     #wall-map { width: min(92vw, 1000px); height: min(58vh, 760px); }
+  }
+  @media (max-width: 900px) and (max-height: 520px) {
+    #wall-panel { padding: 6px 10px 8px; }
+    #wall-subjects { margin-bottom: 4px; }
+    #wall-subjects button { padding: 2px 0; }
+    #wall-panel .wall-actions {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      gap: 6px;
+    }
+    #wall-panel .wall-actions::-webkit-scrollbar { display: none; }
+    #wall-panel .wall-actions button {
+      flex: 0 0 auto;
+      width: auto;
+      min-height: 36px;
+      padding: 6px 12px;
+    }
+    #wall-panel.is-adjusted .wall-actions { flex-wrap: wrap; }
+    #wall-panel.is-adjusted .wall-pick { flex: 1 0 100%; }
+    #wall-panel.is-adjusted { max-height: 68vh; }
   }
   @media (prefers-reduced-motion: reduce) {
     body.wall header,
@@ -463,13 +561,13 @@
     <div id="wall-subjects" role="group" aria-label="Subject"></div>
     <div class="wall-actions">
       <button type="button" id="wall-map-toggle" aria-pressed="false">Show the map</button>
-      <label class="wall-pick">Election map
+      <label class="wall-pick wall-secondary">Election map
         <select id="wall-map-pick"></select>
       </label>
-      <button type="button" id="wall-hold" aria-pressed="false">Hold</button>
+      <button type="button" id="wall-hold" class="wall-secondary" aria-pressed="false">Hold</button>
       <button type="button" id="wall-prev">Previous</button>
       <button type="button" id="wall-next">Next</button>
-      <label class="wall-pick">Sort
+      <label class="wall-pick wall-secondary">Sort
         <select id="wall-sort">
           <option value="subject">Subject</option>
           <option value="photographer">Photographer</option>
@@ -477,7 +575,8 @@
         </select>
       </label>
       <button type="button" id="wall-browse" aria-pressed="false" aria-expanded="false">Browse</button>
-      <button type="button" id="wall-full">Fill the screen</button>
+      <button type="button" id="wall-full" class="wall-secondary">Fill the screen</button>
+      <button type="button" id="wall-adjust" aria-pressed="false" aria-expanded="false">Settings</button>
     </div>
     <div class="wall-sliders">
       <label>Picture transparency <span id="wall-photo-alpha-val">100%</span>
@@ -505,6 +604,6 @@
 <div id="google_translate_element" aria-hidden="true"></div>
 <script src="lang.js?v=10"></script>
 <script src="live.js?v=16"></script>
-<script src="gallery.js?v=11"></script>
+<script src="gallery.js?v=13"></script>
 </body>
 </html>
