@@ -2,8 +2,7 @@ name: Update news desks
 
 on:
   schedule:
-    - cron: "15 16 * * *"
-    - cron: "15 22 * * *"
+    - cron: "15 */2 * * *"
   workflow_dispatch:
 
 permissions:
