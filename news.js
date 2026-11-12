@@ -542,6 +542,7 @@
     fresh.sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
     fresh.forEach(function (post) {
       var node = cardFrom(post);
+      markLinks(node);
       if (post.earlier) list.appendChild(node);
       else list.insertBefore(node, list.firstChild);
     });
@@ -758,7 +759,9 @@
     });
     fresh.sort(function (a, b) { return String(a.date || "").localeCompare(String(b.date || "")); });
     fresh.forEach(function (post) {
-      list.insertBefore(weeklyCard(post), list.firstChild);
+      var node = weeklyCard(post);
+      markLinks(node);
+      list.insertBefore(node, list.firstChild);
     });
     var featuredUrl = data.featured && canonUrl(data.featured.url || "");
     list.querySelectorAll(".story").forEach(function (story) {
@@ -841,6 +844,7 @@
     });
     fresh.forEach(function (issue) {
       var node = journalCard(issue);
+      markLinks(node);
       list.insertBefore(node, list.firstChild);
       bindReadHere(node);
     });
@@ -930,7 +934,9 @@
     });
     fresh.sort(function (a, b) { return String(a.date || "").localeCompare(String(b.date || "")); });
     fresh.forEach(function (post) {
-      list.insertBefore(deskCard(post, source, tag, linkLabel), list.firstChild);
+      var node = deskCard(post, source, tag, linkLabel);
+      markLinks(node);
+      list.insertBefore(node, list.firstChild);
     });
     if (!fresh.length) return;
     list.querySelectorAll(".story.lead").forEach(function (story) { story.classList.remove("lead"); });
@@ -1014,6 +1020,8 @@
   function markIcon(kind) {
     var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("viewBox", "0 0 32 32");
+    svg.setAttribute("width", "28");
+    svg.setAttribute("height", "28");
     svg.setAttribute("class", "mark");
     svg.setAttribute("aria-hidden", "true");
     svg.innerHTML = marks[kind];
@@ -1439,9 +1447,7 @@
     });
   }
 
-  markLinks(document.querySelector(".contacts") || document);
-  var authorCards = document.querySelector("#weekly .author-cards");
-  if (authorCards) markLinks(authorCards);
+  markLinks(document.querySelector("main") || document);
   prepareWeekly();
   refreshLatest("spotlight");
   refreshLatest("better");
@@ -1462,8 +1468,7 @@
   mountDock();
   mountPicks();
   preview.onload = function () {
-    var card = document.getElementById("card-mark");
-    if (card) markLinks(card);
+    markLinks(document.querySelector("main") || document);
     mountPicks();
     refreshLatest("note");
     revealHash();
