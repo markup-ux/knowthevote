@@ -926,7 +926,7 @@
     var list = section && restoreList(section);
     if (!list || !data || !data.posts) return;
     var known = {};
-    section.querySelectorAll(".src a").forEach(function (link) {
+    document.querySelectorAll(".src a").forEach(function (link) {
       known[canonUrl(link.getAttribute("href"))] = true;
     });
     var fresh = data.posts.filter(function (post) {
