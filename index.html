@@ -3,6 +3,7 @@
 <head>
 <script>try{var t=localStorage.getItem("leaders-theme");if(t&&t!=="light")document.documentElement.setAttribute("data-theme",t);var raw=localStorage.getItem("leaders-look");if(raw){var o=JSON.parse(raw),el=document.documentElement,css="",st=document.createElement("style");function hex(v){return typeof v==="string"&&/^#[0-9a-fA-F]{6}$/.test(v)?v:""}function lum(h){var n=parseInt(h.slice(1),16);return (((n>>16)&255)*3+((n>>8)&255)*6+(n&255))/10}function face(v){return typeof v==="string"&&v.length>0&&v.length<80?v:""}var body=face(o.body),display=face(o.display),paper=hex(o.paper),ink=hex(o.ink),bar=hex(o.bar),stripe=hex(o.stripe);if(body){el.style.setProperty("--look-body",body);el.classList.add("look-body");css+="html.look-body body{font-family:var(--look-body)}"}if(display){el.style.setProperty("--look-display",display);el.classList.add("look-display");css+="html.look-display h1,html.look-display h2,html.look-display h3,html.look-display .brand{font-family:var(--look-display)}"}if(paper){el.style.setProperty("--look-paper",paper);el.classList.add("look-paper");css+="html.look-paper{--paper:var(--look-paper)}"}if(ink){el.style.setProperty("--look-ink",ink);el.classList.add("look-ink");css+="html.look-ink{--ink:var(--look-ink)}"}if(bar){el.style.setProperty("--look-bar",bar);el.style.setProperty("--look-bar-ink",lum(bar)>150?"#1c1915":"#f4f7fb");el.classList.add("look-bar");css+="html.look-bar body{--bar:var(--look-bar);--bar-ink:var(--look-bar-ink)}"}if(stripe){el.style.setProperty("--look-stripe",stripe);el.classList.add("look-stripe");css+="html.look-stripe body{--bar-stripe:var(--look-stripe);--bar-hover:var(--look-stripe)}"}if(css){st.textContent=css;document.head.appendChild(st)}}}catch(e){}</script>
 <script src="theme.js?v=55" defer></script>
+<script>if(Date.now()>=Date.parse("2026-11-17T05:00:00.000Z"))document.documentElement.classList.add("sale-ended");</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaders.vote — Know who you&#x27;re voting for.</title>
@@ -294,6 +295,15 @@ html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-b
     <rect x="88" y="54" width="6" height="24" fill="var(--mark-paper, #fffaf2)"/>
     <rect x="60" y="78" width="38" height="4" fill="var(--mark-gold, #e6b422)"/>
   </symbol>
+  <symbol id="mark-shop" viewBox="0 0 120 104">
+    <path d="M38 32 L50 18 H70 L82 32 L76 42 L68 36 V88 H52 V36 L44 42 Z" fill="var(--mark-navy, #0a3161)"/>
+    <path d="M50 18 Q60 32 70 18 V30 H50 Z" fill="var(--mark-paper, #fffaf2)" stroke="var(--mark-navy, #0a3161)" stroke-width="1.2"/>
+    <circle cx="60" cy="58" r="10" fill="var(--mark-gold, #e6b422)" stroke="var(--mark-ink, #1c1915)" stroke-width="1"/>
+    <path d="M50 54 H70" fill="none" stroke="var(--mark-ink, #1c1915)" stroke-width="3.2" stroke-linecap="round"/>
+    <circle cx="55" cy="56" r="1.5" fill="var(--mark-paper, #fffaf2)"/>
+    <circle cx="65" cy="56" r="1.5" fill="var(--mark-paper, #fffaf2)"/>
+    <ellipse cx="60" cy="63" rx="2.2" ry="1.6" fill="var(--mark-ink, #1c1915)"/>
+  </symbol>
 </svg>
 <header>
   <div class="wrap bar">
@@ -368,6 +378,10 @@ html:is([data-theme="dark"], [data-theme$="-dark"], .theme-mix-dark) .birthday-b
     <a href="gallery.html">
       <svg class="mark" viewBox="0 0 120 104" aria-hidden="true"><use href="#mark-gallery"/></svg>
       <span>Gallery</span>
+    </a>
+    <a href="shop.html">
+      <svg class="mark" viewBox="0 0 120 104" aria-hidden="true"><use href="#mark-shop"/></svg>
+      <span>Shop</span>
     </a>
   </div>
 </nav>
@@ -1177,6 +1191,9 @@ through fiscal year 2022</p>
     <p class="deck">The <a href="census.html">census</a> maps the Census Bureau's July 1, 2025 population estimates, the House seats the 2020 census assigned, and a health section on the same page.</p>
     <p class="deck"><a href="house.html">The House</a> lists each roll call in the 119th Congress, the yes and no of each member, a phone and office for the member, and the blue slips home-state senators return for a federal judge. Green is a yes. Rose is a no. Gold is on the floor list. Blue is a blue slip.</p>
     <p class="deck">The <a href="gallery.html">gallery</a> is photographs from Unsplash, drawn to fill the screen. Filter them by subject, or open the grid. New photographs are added as Unsplash publishes them. An election map can sit on top of a photograph.</p>
+    <p class="deck sale-only">The <a href="shop.html">shop</a> is a preview. The Trashed Panda line is sold on Bonfire until Monday, November 16, 2026, at 11:00 p.m. Central, and that sale goes to <a href="https://www.hanovercounty.gov/172/Animal-Protection-and-Shelter" target="_blank" rel="noopener noreferrer">Hanover County Animal Protection and Shelter</a>. Leaders.vote designs are not for sale yet.</p>
+    <p class="deck sale-after">The <a href="shop.html">shop</a> is a preview. Leaders.vote designs are not for sale yet.</p>
+    <style>.sale-after{display:none}html.sale-ended .sale-only{display:none}html.sale-ended .sale-after{display:block}</style>
     </div>
   </div>
 </main>

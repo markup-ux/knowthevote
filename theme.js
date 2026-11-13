@@ -214,13 +214,14 @@
       var sub = row[3] ? themeStack(row[3]) : display;
       var b = 'html[data-theme="' + id + '"] body, html[data-theme="' + id + '-dark"] body';
       var title = 'html[data-theme="' + id + '"] h1, html[data-theme="' + id + '"] h2, html[data-theme="' + id + '"] .brand, html[data-theme="' + id + '-dark"] h1, html[data-theme="' + id + '-dark"] h2, html[data-theme="' + id + '-dark"] .brand';
+      var clock = 'html[data-theme="' + id + '"] .sale-clock-face b, html[data-theme="' + id + '"] .sale-clock-fallback, html[data-theme="' + id + '-dark"] .sale-clock-face b, html[data-theme="' + id + '-dark"] .sale-clock-fallback';
       var h3 = 'html[data-theme="' + id + '"] h3, html[data-theme="' + id + '-dark"] h3, html[data-theme="' + id + '"] .nr .piece-title, html[data-theme="' + id + '-dark"] .nr .piece-title, html[data-theme="' + id + '"] .nr .card-name, html[data-theme="' + id + '-dark"] .nr .card-name, html[data-theme="' + id + '"] .nr .issue-date, html[data-theme="' + id + '-dark"] .nr .issue-date';
-      if (body === display && sub === display) rules.push(b + ", " + title + ", " + h3 + " { font-family: " + body + "; }");
+      if (body === display && sub === display) rules.push(b + ", " + title + ", " + h3 + ", " + clock + " { font-family: " + body + "; }");
       else {
         rules.push(b + " { font-family: " + body + "; }");
-        if (display === sub) rules.push(title + ", " + h3 + " { font-family: " + display + "; }");
+        if (display === sub) rules.push(title + ", " + h3 + ", " + clock + " { font-family: " + display + "; }");
         else {
-          rules.push(title + " { font-family: " + display + "; }");
+          rules.push(title + ", " + clock + " { font-family: " + display + "; }");
           rules.push(h3 + " { font-family: " + sub + "; }");
         }
       }
@@ -585,7 +586,7 @@
     "html.theme-mix body { --bar: var(--mix-bar); --bar-stripe: var(--mix-bar-stripe); --bar-line: var(--mix-bar-line); --bar-ink: var(--mix-bar-ink); --bar-hover: var(--mix-bar-hover); --bar-hover-ink: var(--mix-bar-hover-ink); background: var(--mix-bg); }",
     "html.theme-mix header, html.theme-mix footer, html.theme-mix .lang-menu { background: var(--mix-header); color: var(--bar-ink); }",
     "html.look-body body, html.look-body button, html.look-body input, html.look-body select, html.look-body textarea { font-family: var(--look-body); }",
-    "html.look-display h1, html.look-display h2, html.look-display h3, html.look-display .brand { font-family: var(--look-display); }",
+    "html.look-display h1, html.look-display h2, html.look-display h3, html.look-display .brand, html.look-display .sale-clock-face b, html.look-display .sale-clock-fallback { font-family: var(--look-display); }",
     "html.look-paper { --paper: var(--look-paper); --chip: var(--look-chip); }",
     "html.look-ink { --ink: var(--look-ink); --muted: var(--look-muted); --line: var(--look-line); }",
     "html.look-bar body { --bar: var(--look-bar); --bar-ink: var(--look-bar-ink); --bar-line: var(--look-bar-line); }",
