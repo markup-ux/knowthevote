@@ -1,14 +1,14 @@
 {
-  "updated": "2026-11-10T19:52:29Z",
+  "updated": "2026-11-17T21:06:14Z",
   "source": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPMR_PTE_NUS_DPG&f=W",
   "gasLive": {
     "year": 2026,
-    "month": "November 9",
-    "value": 3.995,
-    "ago": 3.056,
-    "unit": "per gallon, week of November 9",
-    "label": "November 9, 2026",
-    "what": "Energy Information Administration weekly U.S. retail price for regular gasoline, $4.00 for the week of November 9, 2026. This is the latest week in the file. It is not a full-year average. The bar runs from $0 to $5. The tick is $3.06, about a year earlier.",
+    "month": "November 16",
+    "value": 3.805,
+    "ago": 3.062,
+    "unit": "per gallon, week of November 16",
+    "label": "November 16, 2026",
+    "what": "Energy Information Administration weekly U.S. retail price for regular gasoline, $3.81 for the week of November 16, 2026. This is the latest week in the file. It is not a full-year average. The bar runs from $0 to $5. The tick is $3.06, about a year earlier.",
     "href": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPMR_PTE_NUS_DPG&f=W",
     "name": "EIA weekly U.S. regular gasoline"
   },
