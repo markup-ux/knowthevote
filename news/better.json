@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "posts": [
     {
       "id": "n-better-smart-water-management-buildings-water-saving-earthfokus-startup",
@@ -649,6 +649,50 @@
       "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/18/archival-portraits_-military-and-scholar-2026-11-18-19-35-08.png",
       "text": "Long before public health videos and mobile phones, Kishori Mohan Bandyopadhyay was bringing practical malaria advice to Bengal's villages. His work grew from laboratory research into a community effort to keep people safe.",
       "color": "pink"
+    },
+    {
+      "id": "n-better-village-manifesto-gram-pradhan-local-governance-12820689",
+      "url": "https://thebetterindia.com/governance/village-manifesto-gram-pradhan-local-governance-12820689",
+      "title": "From Sanitation to Solar Power, What Should Your Village Prioritise? This IAS Officer’s 25-Point Manifesto Makes People Part of the Plan.",
+      "date": "2026-11-19",
+      "dateLabel": "November 19, 2026",
+      "author": "Avantika Krishna",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/18/1-2026-11-18-17-43-04.png",
+      "text": "From unresolved local disputes to clean water and solar power, village needs go far beyond roads and schools. Could a 25-point manifesto help people shape local governance?",
+      "color": "pink"
+    },
+    {
+      "id": "n-better-grow-beetroots-in-pots-at-home-gardener-tips-beginners-12820901",
+      "url": "https://thebetterindia.com/web-stories/gardening/grow-beetroots-in-pots-at-home-gardener-tips-beginners-12820901",
+      "title": "Grow Your Own Beetroot in Pots: Bengaluru Woman Who Grows 200+ Plants Shares Her Method.",
+      "date": "2026-11-19",
+      "dateLabel": "November 19, 2026",
+      "author": "Raajwrita Dutta",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/18/grow-beetroots-in-pots-2026-11-18-18-15-50.jpeg",
+      "text": "You don’t need a farm to grow your own beetroot. Bengaluru gardener Swati Dwivedi shares how beginners can grow this winter vegetable at home with a few simple steps.",
+      "color": "purple"
+    },
+    {
+      "id": "n-better-bengaluru-ward-level-climate-action-plans-drainage-urban-greening",
+      "url": "https://thebetterindia.com/governance/bengaluru-ward-level-climate-action-plans-drainage-urban-greening-12822275",
+      "title": "Better Drains, Rainwater Harvesting and Urban Greening: Bengaluru's Plan for Five Neighbourhoods.",
+      "date": "2026-11-19",
+      "dateLabel": "November 19, 2026",
+      "author": "Sriroopa Dutta",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/19/feature-7-2026-11-19-11-08-36.png",
+      "text": "Bengaluru's Greater Bengaluru Authority has prepared ward-level Climate Action Plans for five neighbourhoods, focusing on drainage, rainwater management, urban greening and climate resilience.",
+      "color": "blue"
+    },
+    {
+      "id": "n-better-iit-guwahati-drone-based-traffic-analysis-12816248",
+      "url": "https://thebetterindia.com/innovation/iit-guwahati-drone-based-traffic-analysis-12816248",
+      "title": "Drones Track 36,000 Vehicles as IIT Guwahati Builds Smarter Models for Indian Roads.",
+      "date": "2026-11-19",
+      "dateLabel": "November 19, 2026",
+      "author": "Nishtha Kawrani",
+      "image": "https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/2026/11/17/iit-guwahati-2026-11-17-12-15-00.png",
+      "text": "IIT Guwahati researchers used drones and AI to study 36,818 vehicles, helping build traffic models that better reflect the complexities of Indian roads.",
+      "color": "green"
     }
   ]
 }
